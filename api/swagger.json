@@ -600,6 +600,9 @@
                     "experimentation": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberExperimentation"
                     },
+                    "fairy_soul": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberFairySoul"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -1476,6 +1479,20 @@
                         "type": "integer"
                     },
                     "last_claimed": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberFairySoul": {
+                "properties": {
+                    "fairy_exchanges": {
+                        "type": "integer"
+                    },
+                    "total_collected": {
+                        "type": "integer"
+                    },
+                    "unspent_souls": {
                         "type": "integer"
                     }
                 },

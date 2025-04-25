@@ -208,6 +208,7 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberExperimentationNumbers](docs/SkyBlockProfileMemberExperimentationNumbers.md)
  - [SkyBlockProfileMemberExperimentationPairings](docs/SkyBlockProfileMemberExperimentationPairings.md)
  - [SkyBlockProfileMemberExperimentationSimon](docs/SkyBlockProfileMemberExperimentationSimon.md)
+ - [SkyBlockProfileMemberFairySoul](docs/SkyBlockProfileMemberFairySoul.md)
  - [SkyBlockProfileMemberRift](docs/SkyBlockProfileMemberRift.md)
  - [SkyBlockProfileMemberRiftBlackLagoon](docs/SkyBlockProfileMemberRiftBlackLagoon.md)
  - [SkyBlockProfileMemberRiftDeadCats](docs/SkyBlockProfileMemberRiftDeadCats.md)

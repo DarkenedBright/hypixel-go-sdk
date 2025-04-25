@@ -26,6 +26,7 @@ type SkyBlockProfileMember struct {
 	Dungeons            *SkyBlockProfileMemberDungeons            `json:"dungeons,omitempty"`
 	Events              *SkyBlockProfileMemberEvents              `json:"events,omitempty"`
 	Experimentation     *SkyBlockProfileMemberExperimentation     `json:"experimentation,omitempty"`
+	FairySoul           *SkyBlockProfileMemberFairySoul           `json:"fairy_soul,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -271,6 +272,38 @@ func (o *SkyBlockProfileMember) SetExperimentation(v SkyBlockProfileMemberExperi
 	o.Experimentation = &v
 }
 
+// GetFairySoul returns the FairySoul field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetFairySoul() SkyBlockProfileMemberFairySoul {
+	if o == nil || IsNil(o.FairySoul) {
+		var ret SkyBlockProfileMemberFairySoul
+		return ret
+	}
+	return *o.FairySoul
+}
+
+// GetFairySoulOk returns a tuple with the FairySoul field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetFairySoulOk() (*SkyBlockProfileMemberFairySoul, bool) {
+	if o == nil || IsNil(o.FairySoul) {
+		return nil, false
+	}
+	return o.FairySoul, true
+}
+
+// HasFairySoul returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasFairySoul() bool {
+	if o != nil && !IsNil(o.FairySoul) {
+		return true
+	}
+
+	return false
+}
+
+// SetFairySoul gets a reference to the given SkyBlockProfileMemberFairySoul and assigns it to the FairySoul field.
+func (o *SkyBlockProfileMember) SetFairySoul(v SkyBlockProfileMemberFairySoul) {
+	o.FairySoul = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -365,6 +398,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Experimentation) {
 		toSerialize["experimentation"] = o.Experimentation
+	}
+	if !IsNil(o.FairySoul) {
+		toSerialize["fairy_soul"] = o.FairySoul
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId

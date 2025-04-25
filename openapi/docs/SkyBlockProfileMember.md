@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Dungeons** | Pointer to [**SkyBlockProfileMemberDungeons**](SkyBlockProfileMemberDungeons.md) |  | [optional] 
 **Events** | Pointer to [**SkyBlockProfileMemberEvents**](SkyBlockProfileMemberEvents.md) |  | [optional] 
 **Experimentation** | Pointer to [**SkyBlockProfileMemberExperimentation**](SkyBlockProfileMemberExperimentation.md) |  | [optional] 
+**FairySoul** | Pointer to [**SkyBlockProfileMemberFairySoul**](SkyBlockProfileMemberFairySoul.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -207,6 +208,31 @@ SetExperimentation sets Experimentation field to given value.
 `func (o *SkyBlockProfileMember) HasExperimentation() bool`
 
 HasExperimentation returns a boolean if a field has been set.
+
+### GetFairySoul
+
+`func (o *SkyBlockProfileMember) GetFairySoul() SkyBlockProfileMemberFairySoul`
+
+GetFairySoul returns the FairySoul field if non-nil, zero value otherwise.
+
+### GetFairySoulOk
+
+`func (o *SkyBlockProfileMember) GetFairySoulOk() (*SkyBlockProfileMemberFairySoul, bool)`
+
+GetFairySoulOk returns a tuple with the FairySoul field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFairySoul
+
+`func (o *SkyBlockProfileMember) SetFairySoul(v SkyBlockProfileMemberFairySoul)`
+
+SetFairySoul sets FairySoul field to given value.
+
+### HasFairySoul
+
+`func (o *SkyBlockProfileMember) HasFairySoul() bool`
+
+HasFairySoul returns a boolean if a field has been set.
 
 ### GetPlayerId
 
