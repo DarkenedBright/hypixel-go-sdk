@@ -23,6 +23,7 @@ type SkyBlockProfileMember struct {
 	Bestiary            *SkyBlockProfileMemberBestiary            `json:"bestiary,omitempty"`
 	Collection          *map[string]int64                         `json:"collection,omitempty"`
 	Currencies          *SkyBlockProfileMemberCurrencies          `json:"currencies,omitempty"`
+	Dungeons            *SkyBlockProfileMemberDungeons            `json:"dungeons,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -172,6 +173,38 @@ func (o *SkyBlockProfileMember) SetCurrencies(v SkyBlockProfileMemberCurrencies)
 	o.Currencies = &v
 }
 
+// GetDungeons returns the Dungeons field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetDungeons() SkyBlockProfileMemberDungeons {
+	if o == nil || IsNil(o.Dungeons) {
+		var ret SkyBlockProfileMemberDungeons
+		return ret
+	}
+	return *o.Dungeons
+}
+
+// GetDungeonsOk returns a tuple with the Dungeons field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetDungeonsOk() (*SkyBlockProfileMemberDungeons, bool) {
+	if o == nil || IsNil(o.Dungeons) {
+		return nil, false
+	}
+	return o.Dungeons, true
+}
+
+// HasDungeons returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasDungeons() bool {
+	if o != nil && !IsNil(o.Dungeons) {
+		return true
+	}
+
+	return false
+}
+
+// SetDungeons gets a reference to the given SkyBlockProfileMemberDungeons and assigns it to the Dungeons field.
+func (o *SkyBlockProfileMember) SetDungeons(v SkyBlockProfileMemberDungeons) {
+	o.Dungeons = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -257,6 +290,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Currencies) {
 		toSerialize["currencies"] = o.Currencies
+	}
+	if !IsNil(o.Dungeons) {
+		toSerialize["dungeons"] = o.Dungeons
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId

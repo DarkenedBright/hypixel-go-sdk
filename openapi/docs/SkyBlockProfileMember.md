@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Bestiary** | Pointer to [**SkyBlockProfileMemberBestiary**](SkyBlockProfileMemberBestiary.md) |  | [optional] 
 **Collection** | Pointer to **map[string]int64** |  | [optional] 
 **Currencies** | Pointer to [**SkyBlockProfileMemberCurrencies**](SkyBlockProfileMemberCurrencies.md) |  | [optional] 
+**Dungeons** | Pointer to [**SkyBlockProfileMemberDungeons**](SkyBlockProfileMemberDungeons.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -129,6 +130,31 @@ SetCurrencies sets Currencies field to given value.
 `func (o *SkyBlockProfileMember) HasCurrencies() bool`
 
 HasCurrencies returns a boolean if a field has been set.
+
+### GetDungeons
+
+`func (o *SkyBlockProfileMember) GetDungeons() SkyBlockProfileMemberDungeons`
+
+GetDungeons returns the Dungeons field if non-nil, zero value otherwise.
+
+### GetDungeonsOk
+
+`func (o *SkyBlockProfileMember) GetDungeonsOk() (*SkyBlockProfileMemberDungeons, bool)`
+
+GetDungeonsOk returns a tuple with the Dungeons field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDungeons
+
+`func (o *SkyBlockProfileMember) SetDungeons(v SkyBlockProfileMemberDungeons)`
+
+SetDungeons sets Dungeons field to given value.
+
+### HasDungeons
+
+`func (o *SkyBlockProfileMember) HasDungeons() bool`
+
+HasDungeons returns a boolean if a field has been set.
 
 ### GetPlayerId
 

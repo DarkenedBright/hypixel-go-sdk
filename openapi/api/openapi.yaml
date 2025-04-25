@@ -798,23 +798,23 @@ components:
           key:
             rift:
               wizard_tower:
-                wizard_quest_step: 3
-                crumbs_laid_out: 3
+                wizard_quest_step: 9
+                crumbs_laid_out: 8
               enigma:
                 found_souls:
-                - BACK2BASICS
-                - BACK2BASICS
+                - found_souls
+                - found_souls
                 bought_cloak: true
-                claimed_bonus_index: 8
+                claimed_bonus_index: 4
               black_lagoon:
                 received_science_paper: true
                 delivered_science_paper: true
-                completed_step: 9
+                completed_step: 0
                 talked_to_edwin: true
               dead_cats:
                 unlocked_pet: true
                 montezuma:
-                  tier: COMMON
+                  tier: tier
                   heldItem:
                     category: CHESTPLATE
                     color: "255,215,0"
@@ -838,57 +838,197 @@ components:
                       HEALTH: 20
                     tier: RARE
                   active: true
-                  exp: 6.683562403749608
-                  type: FRACTURED_MONTEZUMA_SOUL
+                  exp: 5.507386964179881
+                  type: type
                   uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                  candyUsed: 9
+                  candyUsed: 7
                   uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                 found_cats:
-                - eight
-                - eight
+                - found_cats
+                - found_cats
                 picked_up_detector: true
                 talked_to_jacquelle: true
               village_plaza:
                 murder:
-                  step_index_pt3: 5
-                  step_index: 6
-                  step_index_pt2: 6
+                  step_index_pt3: 6
+                  step_index: 1
+                  step_index_pt2: 8
                   room_clues:
-                  - blood
-                  - blood
+                  - room_clues
+                  - room_clues
                 cowboy:
-                  stage: 1
-                  hay_eaten: 6
+                  stage: 0
+                  hay_eaten: 3
                   rabbit_name: rabbit_name
                 barter_bank: "{}"
                 got_scammed: true
                 seraphine:
-                  step_index: 6
+                  step_index: 4
                 lonely:
                   seconds_sitting: 2
                 barry_center:
                   first_talk_to_barry: true
                   convinced:
-                  - creed
-                  - creed
+                  - convinced
+                  - convinced
                   received_reward: true
               wither_cage:
                 killed_eyes:
-                - castle
-                - castle
+                - killed_eyes
+                - killed_eyes
               gallery:
                 sent_trophy_dialogues:
                 - sent_trophy_dialogues
                 - sent_trophy_dialogues
-                elise_step: 9
+                elise_step: 6
                 secured_trophies:
-                - visits: 3
-                  type: chicken_n_egg
-                  timestamp: 6
-                - visits: 3
-                  type: chicken_n_egg
-                  timestamp: 6
+                - visits: 4
+                  type: type
+                  timestamp: 8
+                - visits: 4
+                  type: type
+                  timestamp: 8
             player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            dungeons:
+              selected_dungeon_class: selected_dungeon_class
+              dungeon_types:
+                key:
+                  best_score:
+                    key: 3
+                  tier_completions:
+                    key: 4
+                  fastest_time_s_plus:
+                    key: 7
+                  most_damage_tank:
+                    key: 7.04836565559697
+                  watcher_kills:
+                    key: 6
+                  times_played:
+                    key: 0
+                  experience: 3.0937452626664474
+                  milestone_completions:
+                    key: 0
+                  most_damage_berserk:
+                    key: 7.740351818741173
+                  most_damage_healer:
+                    key: 3.0205796992916243
+                  most_mobs_killed:
+                    key: 3
+                  fastest_time:
+                    key: 7
+                  most_damage_mage:
+                    key: 3.0576100241049344
+                  most_damage_archer:
+                    key: 8.969578798196912
+                  fastest_time_s:
+                    key: 0
+                  most_healing:
+                    key: 5.533258397034986
+                  best_runs:
+                    key:
+                    - damage_dealt: 8.762042012749001
+                      damage_mitigated: 9.018348186070783
+                      ally_healing: 6.683562403749608
+                      score_skill: 6
+                      score_exploration: 2
+                      dungeon_class: dungeon_class
+                      score_bonus: 1
+                      teammates:
+                      - teammates
+                      - teammates
+                      score_speed: 6
+                      elapsed_time: 3
+                      mobs_killed: 6
+                      secrets_found: 5
+                      deaths: 6
+                      timestamp: 6
+                    - damage_dealt: 8.762042012749001
+                      damage_mitigated: 9.018348186070783
+                      ally_healing: 6.683562403749608
+                      score_skill: 6
+                      score_exploration: 2
+                      dungeon_class: dungeon_class
+                      score_bonus: 1
+                      teammates:
+                      - teammates
+                      - teammates
+                      score_speed: 6
+                      elapsed_time: 3
+                      mobs_killed: 6
+                      secrets_found: 5
+                      deaths: 6
+                      timestamp: 6
+                  mobs_killed:
+                    key: 4
+                  highest_tier_completed: 6
+              player_classes:
+                key:
+                  experience: 4.258773108174356
+              dungeon_journal:
+                unlocked_journals:
+                - unlocked_journals
+                - unlocked_journals
+              dungeon_hub_race_settings:
+                selected_race: selected_race
+                runback: true
+                selected_setting: selected_setting
+              last_dungeon_run: last_dungeon_run
+              daily_runs:
+                completed_runs_count: 9
+                current_day_stamp: 9
+              treasures:
+                chests:
+                - run_id: run_id
+                  paid: true
+                  chest_id: chest_id
+                  rerolls: 7
+                  treasure_type: treasure_type
+                  shiny_eligible: true
+                  rewards:
+                    rewards:
+                    - rewards
+                    - rewards
+                    rolled_rng_meter_randomly: true
+                  quality: 4
+                - run_id: run_id
+                  paid: true
+                  chest_id: chest_id
+                  rerolls: 7
+                  treasure_type: treasure_type
+                  shiny_eligible: true
+                  rewards:
+                    rewards:
+                    - rewards
+                    - rewards
+                    rolled_rng_meter_randomly: true
+                  quality: 4
+                runs:
+                - run_id: run_id
+                  dungeon_tier: 0
+                  completion_ts: 9
+                  dungeon_type: dungeon_type
+                  participants:
+                  - class_milestone: 9
+                    display_name: display_name
+                    player_uuid: player_uuid
+                  - class_milestone: 9
+                    display_name: display_name
+                    player_uuid: player_uuid
+                - run_id: run_id
+                  dungeon_tier: 0
+                  completion_ts: 9
+                  dungeon_type: dungeon_type
+                  participants:
+                  - class_milestone: 9
+                    display_name: display_name
+                    player_uuid: player_uuid
+                  - class_milestone: 9
+                    display_name: display_name
+                    player_uuid: player_uuid
+              dungeons_blah_blah:
+              - dungeons_blah_blah
+              - dungeons_blah_blah
+              secrets: 1
             bestiary:
               kills:
                 last_killed_mob: last_killed_mob
@@ -950,8 +1090,8 @@ components:
                   intelligence: 7
               bag_upgrades_purchased: 5
               unlocked_powers:
-              - adept
-              - adept
+              - unlocked_powers
+              - unlocked_powers
               selected_power: selected_power
               highest_magical_power: 5
             collection:
@@ -1010,23 +1150,23 @@ components:
       example:
         rift:
           wizard_tower:
-            wizard_quest_step: 3
-            crumbs_laid_out: 3
+            wizard_quest_step: 9
+            crumbs_laid_out: 8
           enigma:
             found_souls:
-            - BACK2BASICS
-            - BACK2BASICS
+            - found_souls
+            - found_souls
             bought_cloak: true
-            claimed_bonus_index: 8
+            claimed_bonus_index: 4
           black_lagoon:
             received_science_paper: true
             delivered_science_paper: true
-            completed_step: 9
+            completed_step: 0
             talked_to_edwin: true
           dead_cats:
             unlocked_pet: true
             montezuma:
-              tier: COMMON
+              tier: tier
               heldItem:
                 category: CHESTPLATE
                 color: "255,215,0"
@@ -1050,57 +1190,197 @@ components:
                   HEALTH: 20
                 tier: RARE
               active: true
-              exp: 6.683562403749608
-              type: FRACTURED_MONTEZUMA_SOUL
+              exp: 5.507386964179881
+              type: type
               uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              candyUsed: 9
+              candyUsed: 7
               uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             found_cats:
-            - eight
-            - eight
+            - found_cats
+            - found_cats
             picked_up_detector: true
             talked_to_jacquelle: true
           village_plaza:
             murder:
-              step_index_pt3: 5
-              step_index: 6
-              step_index_pt2: 6
+              step_index_pt3: 6
+              step_index: 1
+              step_index_pt2: 8
               room_clues:
-              - blood
-              - blood
+              - room_clues
+              - room_clues
             cowboy:
-              stage: 1
-              hay_eaten: 6
+              stage: 0
+              hay_eaten: 3
               rabbit_name: rabbit_name
             barter_bank: "{}"
             got_scammed: true
             seraphine:
-              step_index: 6
+              step_index: 4
             lonely:
               seconds_sitting: 2
             barry_center:
               first_talk_to_barry: true
               convinced:
-              - creed
-              - creed
+              - convinced
+              - convinced
               received_reward: true
           wither_cage:
             killed_eyes:
-            - castle
-            - castle
+            - killed_eyes
+            - killed_eyes
           gallery:
             sent_trophy_dialogues:
             - sent_trophy_dialogues
             - sent_trophy_dialogues
-            elise_step: 9
+            elise_step: 6
             secured_trophies:
-            - visits: 3
-              type: chicken_n_egg
-              timestamp: 6
-            - visits: 3
-              type: chicken_n_egg
-              timestamp: 6
+            - visits: 4
+              type: type
+              timestamp: 8
+            - visits: 4
+              type: type
+              timestamp: 8
         player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        dungeons:
+          selected_dungeon_class: selected_dungeon_class
+          dungeon_types:
+            key:
+              best_score:
+                key: 3
+              tier_completions:
+                key: 4
+              fastest_time_s_plus:
+                key: 7
+              most_damage_tank:
+                key: 7.04836565559697
+              watcher_kills:
+                key: 6
+              times_played:
+                key: 0
+              experience: 3.0937452626664474
+              milestone_completions:
+                key: 0
+              most_damage_berserk:
+                key: 7.740351818741173
+              most_damage_healer:
+                key: 3.0205796992916243
+              most_mobs_killed:
+                key: 3
+              fastest_time:
+                key: 7
+              most_damage_mage:
+                key: 3.0576100241049344
+              most_damage_archer:
+                key: 8.969578798196912
+              fastest_time_s:
+                key: 0
+              most_healing:
+                key: 5.533258397034986
+              best_runs:
+                key:
+                - damage_dealt: 8.762042012749001
+                  damage_mitigated: 9.018348186070783
+                  ally_healing: 6.683562403749608
+                  score_skill: 6
+                  score_exploration: 2
+                  dungeon_class: dungeon_class
+                  score_bonus: 1
+                  teammates:
+                  - teammates
+                  - teammates
+                  score_speed: 6
+                  elapsed_time: 3
+                  mobs_killed: 6
+                  secrets_found: 5
+                  deaths: 6
+                  timestamp: 6
+                - damage_dealt: 8.762042012749001
+                  damage_mitigated: 9.018348186070783
+                  ally_healing: 6.683562403749608
+                  score_skill: 6
+                  score_exploration: 2
+                  dungeon_class: dungeon_class
+                  score_bonus: 1
+                  teammates:
+                  - teammates
+                  - teammates
+                  score_speed: 6
+                  elapsed_time: 3
+                  mobs_killed: 6
+                  secrets_found: 5
+                  deaths: 6
+                  timestamp: 6
+              mobs_killed:
+                key: 4
+              highest_tier_completed: 6
+          player_classes:
+            key:
+              experience: 4.258773108174356
+          dungeon_journal:
+            unlocked_journals:
+            - unlocked_journals
+            - unlocked_journals
+          dungeon_hub_race_settings:
+            selected_race: selected_race
+            runback: true
+            selected_setting: selected_setting
+          last_dungeon_run: last_dungeon_run
+          daily_runs:
+            completed_runs_count: 9
+            current_day_stamp: 9
+          treasures:
+            chests:
+            - run_id: run_id
+              paid: true
+              chest_id: chest_id
+              rerolls: 7
+              treasure_type: treasure_type
+              shiny_eligible: true
+              rewards:
+                rewards:
+                - rewards
+                - rewards
+                rolled_rng_meter_randomly: true
+              quality: 4
+            - run_id: run_id
+              paid: true
+              chest_id: chest_id
+              rerolls: 7
+              treasure_type: treasure_type
+              shiny_eligible: true
+              rewards:
+                rewards:
+                - rewards
+                - rewards
+                rolled_rng_meter_randomly: true
+              quality: 4
+            runs:
+            - run_id: run_id
+              dungeon_tier: 0
+              completion_ts: 9
+              dungeon_type: dungeon_type
+              participants:
+              - class_milestone: 9
+                display_name: display_name
+                player_uuid: player_uuid
+              - class_milestone: 9
+                display_name: display_name
+                player_uuid: player_uuid
+            - run_id: run_id
+              dungeon_tier: 0
+              completion_ts: 9
+              dungeon_type: dungeon_type
+              participants:
+              - class_milestone: 9
+                display_name: display_name
+                player_uuid: player_uuid
+              - class_milestone: 9
+                display_name: display_name
+                player_uuid: player_uuid
+          dungeons_blah_blah:
+          - dungeons_blah_blah
+          - dungeons_blah_blah
+          secrets: 1
         bestiary:
           kills:
             last_killed_mob: last_killed_mob
@@ -1162,8 +1442,8 @@ components:
               intelligence: 7
           bag_upgrades_purchased: 5
           unlocked_powers:
-          - adept
-          - adept
+          - unlocked_powers
+          - unlocked_powers
           selected_power: selected_power
           highest_magical_power: 5
         collection:
@@ -1185,6 +1465,8 @@ components:
           type: object
         currencies:
           $ref: '#/components/schemas/SkyBlockProfileMemberCurrencies'
+        dungeons:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeons'
         player_id:
           format: uuid
           type: string
@@ -1242,8 +1524,8 @@ components:
             intelligence: 7
         bag_upgrades_purchased: 5
         unlocked_powers:
-        - adept
-        - adept
+        - unlocked_powers
+        - unlocked_powers
         selected_power: selected_power
         highest_magical_power: 5
       properties:
@@ -1257,28 +1539,6 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuning'
         unlocked_powers:
           items:
-            enum:
-            - adept
-            - bizarre
-            - bloody
-            - bubba
-            - crumbly
-            - demonic
-            - forceful
-            - frozen
-            - healthy
-            - hurtful
-            - itchy
-            - mythical
-            - pleasant
-            - sanguisuge
-            - scorching
-            - shaded
-            - sighted
-            - silky
-            - slender
-            - strong
-            - sweet
             type: string
           type: array
       type: object
@@ -1390,15 +1650,42 @@ components:
             type: integer
           type: object
         kills:
-          $ref: '#/components/schemas/SkyBlockProfileMemberBestiary_kills'
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiaryKills'
         migrated_stats:
           type: boolean
         migration:
           type: boolean
         milestone:
-          $ref: '#/components/schemas/SkyBlockProfileMemberBestiary_milestone'
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiaryMilestone'
         miscellaneous:
-          $ref: '#/components/schemas/SkyBlockProfileMemberBestiary_miscellaneous'
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiaryMiscellaneous'
+      type: object
+    SkyBlockProfileMemberBestiaryDeaths:
+      additionalProperties:
+        type: integer
+      type: object
+    SkyBlockProfileMemberBestiaryKills:
+      additionalProperties:
+        type: integer
+      example:
+        last_killed_mob: last_killed_mob
+      properties:
+        last_killed_mob:
+          type: string
+      type: object
+    SkyBlockProfileMemberBestiaryMilestone:
+      example:
+        last_claimed_milestone: 6
+      properties:
+        last_claimed_milestone:
+          type: integer
+      type: object
+    SkyBlockProfileMemberBestiaryMiscellaneous:
+      example:
+        max_kills_visible: true
+      properties:
+        max_kills_visible:
+          type: boolean
       type: object
     SkyBlockProfileMemberCollection:
       additionalProperties:
@@ -1416,31 +1703,588 @@ components:
           type: number
         essence:
           additionalProperties:
-            $ref: '#/components/schemas/SkyBlockProfileMemberCurrencies_essence_value'
+            $ref: '#/components/schemas/SkyBlockProfileMemberCurrenciesEssence_value'
           type: object
         motes_purse:
           type: number
       type: object
+    SkyBlockProfileMemberCurrenciesEssence:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberCurrenciesEssence_value'
+      type: object
+    SkyBlockProfileMemberDungeons:
+      example:
+        selected_dungeon_class: selected_dungeon_class
+        dungeon_types:
+          key:
+            best_score:
+              key: 3
+            tier_completions:
+              key: 4
+            fastest_time_s_plus:
+              key: 7
+            most_damage_tank:
+              key: 7.04836565559697
+            watcher_kills:
+              key: 6
+            times_played:
+              key: 0
+            experience: 3.0937452626664474
+            milestone_completions:
+              key: 0
+            most_damage_berserk:
+              key: 7.740351818741173
+            most_damage_healer:
+              key: 3.0205796992916243
+            most_mobs_killed:
+              key: 3
+            fastest_time:
+              key: 7
+            most_damage_mage:
+              key: 3.0576100241049344
+            most_damage_archer:
+              key: 8.969578798196912
+            fastest_time_s:
+              key: 0
+            most_healing:
+              key: 5.533258397034986
+            best_runs:
+              key:
+              - damage_dealt: 8.762042012749001
+                damage_mitigated: 9.018348186070783
+                ally_healing: 6.683562403749608
+                score_skill: 6
+                score_exploration: 2
+                dungeon_class: dungeon_class
+                score_bonus: 1
+                teammates:
+                - teammates
+                - teammates
+                score_speed: 6
+                elapsed_time: 3
+                mobs_killed: 6
+                secrets_found: 5
+                deaths: 6
+                timestamp: 6
+              - damage_dealt: 8.762042012749001
+                damage_mitigated: 9.018348186070783
+                ally_healing: 6.683562403749608
+                score_skill: 6
+                score_exploration: 2
+                dungeon_class: dungeon_class
+                score_bonus: 1
+                teammates:
+                - teammates
+                - teammates
+                score_speed: 6
+                elapsed_time: 3
+                mobs_killed: 6
+                secrets_found: 5
+                deaths: 6
+                timestamp: 6
+            mobs_killed:
+              key: 4
+            highest_tier_completed: 6
+        player_classes:
+          key:
+            experience: 4.258773108174356
+        dungeon_journal:
+          unlocked_journals:
+          - unlocked_journals
+          - unlocked_journals
+        dungeon_hub_race_settings:
+          selected_race: selected_race
+          runback: true
+          selected_setting: selected_setting
+        last_dungeon_run: last_dungeon_run
+        daily_runs:
+          completed_runs_count: 9
+          current_day_stamp: 9
+        treasures:
+          chests:
+          - run_id: run_id
+            paid: true
+            chest_id: chest_id
+            rerolls: 7
+            treasure_type: treasure_type
+            shiny_eligible: true
+            rewards:
+              rewards:
+              - rewards
+              - rewards
+              rolled_rng_meter_randomly: true
+            quality: 4
+          - run_id: run_id
+            paid: true
+            chest_id: chest_id
+            rerolls: 7
+            treasure_type: treasure_type
+            shiny_eligible: true
+            rewards:
+              rewards:
+              - rewards
+              - rewards
+              rolled_rng_meter_randomly: true
+            quality: 4
+          runs:
+          - run_id: run_id
+            dungeon_tier: 0
+            completion_ts: 9
+            dungeon_type: dungeon_type
+            participants:
+            - class_milestone: 9
+              display_name: display_name
+              player_uuid: player_uuid
+            - class_milestone: 9
+              display_name: display_name
+              player_uuid: player_uuid
+          - run_id: run_id
+            dungeon_tier: 0
+            completion_ts: 9
+            dungeon_type: dungeon_type
+            participants:
+            - class_milestone: 9
+              display_name: display_name
+              player_uuid: player_uuid
+            - class_milestone: 9
+              display_name: display_name
+              player_uuid: player_uuid
+        dungeons_blah_blah:
+        - dungeons_blah_blah
+        - dungeons_blah_blah
+        secrets: 1
+      properties:
+        daily_runs:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDailyRuns'
+        dungeon_hub_race_settings:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonHubRaceSettings'
+        dungeon_journal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonJournal'
+        dungeon_types:
+          additionalProperties:
+            $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonTypesType'
+          type: object
+        dungeons_blah_blah:
+          items:
+            type: string
+          type: array
+        last_dungeon_run:
+          type: string
+        player_classes:
+          additionalProperties:
+            $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsPlayerClasses_value'
+          type: object
+        secrets:
+          type: integer
+        selected_dungeon_class:
+          type: string
+        treasures:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsTreasures'
+      type: object
+    SkyBlockProfileMemberDungeonsDailyRuns:
+      example:
+        completed_runs_count: 9
+        current_day_stamp: 9
+      properties:
+        completed_runs_count:
+          type: integer
+        current_day_stamp:
+          type: integer
+      type: object
+    SkyBlockProfileMemberDungeonsDungeonHubRaceSettings:
+      example:
+        selected_race: selected_race
+        runback: true
+        selected_setting: selected_setting
+      properties:
+        runback:
+          type: boolean
+        selected_race:
+          type: string
+        selected_setting:
+          type: string
+      type: object
+    SkyBlockProfileMemberDungeonsDungeonJournal:
+      example:
+        unlocked_journals:
+        - unlocked_journals
+        - unlocked_journals
+      properties:
+        unlocked_journals:
+          items:
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberDungeonsDungeonTypes:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonTypesType'
+      type: object
+    SkyBlockProfileMemberDungeonsDungeonTypesType:
+      example:
+        best_score:
+          key: 3
+        tier_completions:
+          key: 4
+        fastest_time_s_plus:
+          key: 7
+        most_damage_tank:
+          key: 7.04836565559697
+        watcher_kills:
+          key: 6
+        times_played:
+          key: 0
+        experience: 3.0937452626664474
+        milestone_completions:
+          key: 0
+        most_damage_berserk:
+          key: 7.740351818741173
+        most_damage_healer:
+          key: 3.0205796992916243
+        most_mobs_killed:
+          key: 3
+        fastest_time:
+          key: 7
+        most_damage_mage:
+          key: 3.0576100241049344
+        most_damage_archer:
+          key: 8.969578798196912
+        fastest_time_s:
+          key: 0
+        most_healing:
+          key: 5.533258397034986
+        best_runs:
+          key:
+          - damage_dealt: 8.762042012749001
+            damage_mitigated: 9.018348186070783
+            ally_healing: 6.683562403749608
+            score_skill: 6
+            score_exploration: 2
+            dungeon_class: dungeon_class
+            score_bonus: 1
+            teammates:
+            - teammates
+            - teammates
+            score_speed: 6
+            elapsed_time: 3
+            mobs_killed: 6
+            secrets_found: 5
+            deaths: 6
+            timestamp: 6
+          - damage_dealt: 8.762042012749001
+            damage_mitigated: 9.018348186070783
+            ally_healing: 6.683562403749608
+            score_skill: 6
+            score_exploration: 2
+            dungeon_class: dungeon_class
+            score_bonus: 1
+            teammates:
+            - teammates
+            - teammates
+            score_speed: 6
+            elapsed_time: 3
+            mobs_killed: 6
+            secrets_found: 5
+            deaths: 6
+            timestamp: 6
+        mobs_killed:
+          key: 4
+        highest_tier_completed: 6
+      properties:
+        best_runs:
+          additionalProperties:
+            items:
+              $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonTypesBestRuns'
+            type: array
+          type: object
+        best_score:
+          additionalProperties:
+            type: integer
+          type: object
+        experience:
+          type: number
+        fastest_time:
+          additionalProperties:
+            type: integer
+          type: object
+        fastest_time_s:
+          additionalProperties:
+            type: integer
+          type: object
+        fastest_time_s_plus:
+          additionalProperties:
+            type: integer
+          type: object
+        highest_tier_completed:
+          type: integer
+        milestone_completions:
+          additionalProperties:
+            type: integer
+          type: object
+        mobs_killed:
+          additionalProperties:
+            type: integer
+          type: object
+        most_damage_archer:
+          additionalProperties:
+            type: number
+          type: object
+        most_damage_berserk:
+          additionalProperties:
+            type: number
+          type: object
+        most_damage_healer:
+          additionalProperties:
+            type: number
+          type: object
+        most_damage_mage:
+          additionalProperties:
+            type: number
+          type: object
+        most_damage_tank:
+          additionalProperties:
+            type: number
+          type: object
+        most_healing:
+          additionalProperties:
+            type: number
+          type: object
+        most_mobs_killed:
+          additionalProperties:
+            type: integer
+          type: object
+        tier_completions:
+          additionalProperties:
+            type: integer
+          type: object
+        times_played:
+          additionalProperties:
+            type: integer
+          type: object
+        watcher_kills:
+          additionalProperties:
+            type: integer
+          type: object
+      type: object
+    SkyBlockProfileMemberDungeonsDungeonTypesBestRuns:
+      example:
+        damage_dealt: 8.762042012749001
+        damage_mitigated: 9.018348186070783
+        ally_healing: 6.683562403749608
+        score_skill: 6
+        score_exploration: 2
+        dungeon_class: dungeon_class
+        score_bonus: 1
+        teammates:
+        - teammates
+        - teammates
+        score_speed: 6
+        elapsed_time: 3
+        mobs_killed: 6
+        secrets_found: 5
+        deaths: 6
+        timestamp: 6
+      properties:
+        ally_healing:
+          type: number
+        damage_dealt:
+          type: number
+        damage_mitigated:
+          type: number
+        deaths:
+          type: integer
+        dungeon_class:
+          type: string
+        elapsed_time:
+          type: integer
+        mobs_killed:
+          type: integer
+        score_bonus:
+          type: integer
+        score_exploration:
+          type: integer
+        score_skill:
+          type: integer
+        score_speed:
+          type: integer
+        secrets_found:
+          type: integer
+        teammates:
+          items:
+            type: string
+          type: array
+        timestamp:
+          type: integer
+      type: object
+    SkyBlockProfileMemberDungeonsPlayerClasses:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsPlayerClasses_value'
+      type: object
+    SkyBlockProfileMemberDungeonsTreasures:
+      example:
+        chests:
+        - run_id: run_id
+          paid: true
+          chest_id: chest_id
+          rerolls: 7
+          treasure_type: treasure_type
+          shiny_eligible: true
+          rewards:
+            rewards:
+            - rewards
+            - rewards
+            rolled_rng_meter_randomly: true
+          quality: 4
+        - run_id: run_id
+          paid: true
+          chest_id: chest_id
+          rerolls: 7
+          treasure_type: treasure_type
+          shiny_eligible: true
+          rewards:
+            rewards:
+            - rewards
+            - rewards
+            rolled_rng_meter_randomly: true
+          quality: 4
+        runs:
+        - run_id: run_id
+          dungeon_tier: 0
+          completion_ts: 9
+          dungeon_type: dungeon_type
+          participants:
+          - class_milestone: 9
+            display_name: display_name
+            player_uuid: player_uuid
+          - class_milestone: 9
+            display_name: display_name
+            player_uuid: player_uuid
+        - run_id: run_id
+          dungeon_tier: 0
+          completion_ts: 9
+          dungeon_type: dungeon_type
+          participants:
+          - class_milestone: 9
+            display_name: display_name
+            player_uuid: player_uuid
+          - class_milestone: 9
+            display_name: display_name
+            player_uuid: player_uuid
+      properties:
+        chests:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsTreasuresChest'
+          type: array
+        runs:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsTreasuresRun'
+          type: array
+      type: object
+    SkyBlockProfileMemberDungeonsTreasuresChest:
+      example:
+        run_id: run_id
+        paid: true
+        chest_id: chest_id
+        rerolls: 7
+        treasure_type: treasure_type
+        shiny_eligible: true
+        rewards:
+          rewards:
+          - rewards
+          - rewards
+          rolled_rng_meter_randomly: true
+        quality: 4
+      properties:
+        chest_id:
+          type: string
+        paid:
+          type: boolean
+        quality:
+          type: integer
+        rerolls:
+          type: integer
+        rewards:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsTreasuresChestRewards'
+        run_id:
+          type: string
+        shiny_eligible:
+          type: boolean
+        treasure_type:
+          type: string
+      type: object
+    SkyBlockProfileMemberDungeonsTreasuresRun:
+      example:
+        run_id: run_id
+        dungeon_tier: 0
+        completion_ts: 9
+        dungeon_type: dungeon_type
+        participants:
+        - class_milestone: 9
+          display_name: display_name
+          player_uuid: player_uuid
+        - class_milestone: 9
+          display_name: display_name
+          player_uuid: player_uuid
+      properties:
+        completion_ts:
+          type: integer
+        dungeon_tier:
+          type: integer
+        dungeon_type:
+          type: string
+        participants:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsTreasuresRunParticipant'
+          type: array
+        run_id:
+          type: string
+      type: object
+    SkyBlockProfileMemberDungeonsTreasuresRunParticipant:
+      example:
+        class_milestone: 9
+        display_name: display_name
+        player_uuid: player_uuid
+      properties:
+        class_milestone:
+          type: integer
+        display_name:
+          type: string
+        player_uuid:
+          type: string
+      type: object
+    SkyBlockProfileMemberDungeonsTreasuresChestRewards:
+      example:
+        rewards:
+        - rewards
+        - rewards
+        rolled_rng_meter_randomly: true
+      properties:
+        rewards:
+          items:
+            type: string
+          type: array
+        rolled_rng_meter_randomly:
+          type: boolean
+      type: object
     SkyBlockProfileMemberRift:
       example:
         wizard_tower:
-          wizard_quest_step: 3
-          crumbs_laid_out: 3
+          wizard_quest_step: 9
+          crumbs_laid_out: 8
         enigma:
           found_souls:
-          - BACK2BASICS
-          - BACK2BASICS
+          - found_souls
+          - found_souls
           bought_cloak: true
-          claimed_bonus_index: 8
+          claimed_bonus_index: 4
         black_lagoon:
           received_science_paper: true
           delivered_science_paper: true
-          completed_step: 9
+          completed_step: 0
           talked_to_edwin: true
         dead_cats:
           unlocked_pet: true
           montezuma:
-            tier: COMMON
+            tier: tier
             heldItem:
               category: CHESTPLATE
               color: "255,215,0"
@@ -1464,56 +2308,56 @@ components:
                 HEALTH: 20
               tier: RARE
             active: true
-            exp: 6.683562403749608
-            type: FRACTURED_MONTEZUMA_SOUL
+            exp: 5.507386964179881
+            type: type
             uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            candyUsed: 9
+            candyUsed: 7
             uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           found_cats:
-          - eight
-          - eight
+          - found_cats
+          - found_cats
           picked_up_detector: true
           talked_to_jacquelle: true
         village_plaza:
           murder:
-            step_index_pt3: 5
-            step_index: 6
-            step_index_pt2: 6
+            step_index_pt3: 6
+            step_index: 1
+            step_index_pt2: 8
             room_clues:
-            - blood
-            - blood
+            - room_clues
+            - room_clues
           cowboy:
-            stage: 1
-            hay_eaten: 6
+            stage: 0
+            hay_eaten: 3
             rabbit_name: rabbit_name
           barter_bank: "{}"
           got_scammed: true
           seraphine:
-            step_index: 6
+            step_index: 4
           lonely:
             seconds_sitting: 2
           barry_center:
             first_talk_to_barry: true
             convinced:
-            - creed
-            - creed
+            - convinced
+            - convinced
             received_reward: true
         wither_cage:
           killed_eyes:
-          - castle
-          - castle
+          - killed_eyes
+          - killed_eyes
         gallery:
           sent_trophy_dialogues:
           - sent_trophy_dialogues
           - sent_trophy_dialogues
-          elise_step: 9
+          elise_step: 6
           secured_trophies:
-          - visits: 3
-            type: chicken_n_egg
-            timestamp: 6
-          - visits: 3
-            type: chicken_n_egg
-            timestamp: 6
+          - visits: 4
+            type: type
+            timestamp: 8
+          - visits: 4
+            type: type
+            timestamp: 8
       properties:
         black_lagoon:
           $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
@@ -1534,7 +2378,7 @@ components:
       example:
         received_science_paper: true
         delivered_science_paper: true
-        completed_step: 9
+        completed_step: 0
         talked_to_edwin: true
       properties:
         completed_step:
@@ -1550,7 +2394,7 @@ components:
       example:
         unlocked_pet: true
         montezuma:
-          tier: COMMON
+          tier: tier
           heldItem:
             category: CHESTPLATE
             color: "255,215,0"
@@ -1574,29 +2418,19 @@ components:
               HEALTH: 20
             tier: RARE
           active: true
-          exp: 6.683562403749608
-          type: FRACTURED_MONTEZUMA_SOUL
+          exp: 5.507386964179881
+          type: type
           uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          candyUsed: 9
+          candyUsed: 7
           uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         found_cats:
-        - eight
-        - eight
+        - found_cats
+        - found_cats
         picked_up_detector: true
         talked_to_jacquelle: true
       properties:
         found_cats:
           items:
-            enum:
-            - eight
-            - fifth
-            - first
-            - fourth
-            - ninth
-            - second
-            - seventh
-            - sixth
-            - third
             type: string
           type: array
         montezuma:
@@ -1610,7 +2444,7 @@ components:
       type: object
     SkyBlockProfileMemberRiftDeadCatsMontezuma:
       example:
-        tier: COMMON
+        tier: tier
         heldItem:
           category: CHESTPLATE
           color: "255,215,0"
@@ -1634,10 +2468,10 @@ components:
             HEALTH: 20
           tier: RARE
         active: true
-        exp: 6.683562403749608
-        type: FRACTURED_MONTEZUMA_SOUL
+        exp: 5.507386964179881
+        type: type
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        candyUsed: 9
+        candyUsed: 7
         uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         active:
@@ -1651,17 +2485,8 @@ components:
         skin:
           $ref: '#/components/schemas/SkyBlockItem'
         tier:
-          enum:
-          - COMMON
-          - EPIC
-          - LEGENDARY
-          - MYTHIC
-          - RARE
-          - UNCOMMON
           type: string
         type:
-          enum:
-          - FRACTURED_MONTEZUMA_SOUL
           type: string
         uniqueId:
           format: uuid
@@ -1673,10 +2498,10 @@ components:
     SkyBlockProfileMemberRiftEnigma:
       example:
         found_souls:
-        - BACK2BASICS
-        - BACK2BASICS
+        - found_souls
+        - found_souls
         bought_cloak: true
-        claimed_bonus_index: 8
+        claimed_bonus_index: 4
       properties:
         bought_cloak:
           type: boolean
@@ -1684,53 +2509,6 @@ components:
           type: integer
         found_souls:
           items:
-            enum:
-            - BACK2BASICS
-            - BARK_TREE
-            - BEANSTALK
-            - BETWEEN_BRANCHES
-            - buttons_soul
-            - CASTLE_BALLOONS
-            - CASTLE_FLOWERS
-            - CASTLE_MIDAIR
-            - CASTLE_PHANTOM
-            - COLOSSEUM_PILLARS
-            - DOLPHIN_PARKOUR
-            - FAIRY_TOWER_SOUL
-            - FARM_BALLOONS
-            - FROG_JUMP_PAD
-            - HORSING_AROUND
-            - HOT_DOG_SOUL
-            - LAGOON_PARKOUR
-            - LAGOON_SHOP_SOUL
-            - LEAP_OF_FAITH
-            - LIVING_CAVE_WALL
-            - LONELY_SOUL
-            - LONG_SHROOM
-            - MOUNTAIN_IKRUS
-            - MOUNTAIN_UBIK_BOXES
-            - MOUNTAIN_UBIK_TATS
-            - PIECE_TREE
-            - PLAZA_BALLOONS
-            - PLAZA_MIDAIR
-            - PLAZA_PHANTOM
-            - RABBIT_HAT_SOUL
-            - RIFT_1
-            - RIFT_CAKE
-            - RIFT_CAKE_2
-            - ROCKS_GAME_SOUL
-            - SAY_HI
-            - SCAMMER_SOUL
-            - SOUL_IN_A_BOX
-            - STANDING_THERE
-            - TELKAR
-            - TREE_LAUNCH
-            - TWO_PLAYERS_SOUL
-            - WEST_VILLAGE_KAT
-            - WEST_VILLAGE_MIDAIR
-            - WOODS_FLOWER_POT
-            - WOODS_PHANTOM
-            - WOODS_WATER_SOUL
             type: string
           type: array
       type: object
@@ -1739,14 +2517,14 @@ components:
         sent_trophy_dialogues:
         - sent_trophy_dialogues
         - sent_trophy_dialogues
-        elise_step: 9
+        elise_step: 6
         secured_trophies:
-        - visits: 3
-          type: chicken_n_egg
-          timestamp: 6
-        - visits: 3
-          type: chicken_n_egg
-          timestamp: 6
+        - visits: 4
+          type: type
+          timestamp: 8
+        - visits: 4
+          type: type
+          timestamp: 8
       properties:
         elise_step:
           type: integer
@@ -1762,27 +2540,27 @@ components:
     SkyBlockProfileMemberRiftVillagePlaza:
       example:
         murder:
-          step_index_pt3: 5
-          step_index: 6
-          step_index_pt2: 6
+          step_index_pt3: 6
+          step_index: 1
+          step_index_pt2: 8
           room_clues:
-          - blood
-          - blood
+          - room_clues
+          - room_clues
         cowboy:
-          stage: 1
-          hay_eaten: 6
+          stage: 0
+          hay_eaten: 3
           rabbit_name: rabbit_name
         barter_bank: "{}"
         got_scammed: true
         seraphine:
-          step_index: 6
+          step_index: 4
         lonely:
           seconds_sitting: 2
         barry_center:
           first_talk_to_barry: true
           convinced:
-          - creed
-          - creed
+          - convinced
+          - convinced
           received_reward: true
       properties:
         barry_center:
@@ -1805,20 +2583,12 @@ components:
       example:
         first_talk_to_barry: true
         convinced:
-        - creed
-        - creed
+        - convinced
+        - convinced
         received_reward: true
       properties:
         convinced:
           items:
-            enum:
-            - creed
-            - dust
-            - frankie
-            - harriette
-            - soma
-            - stain
-            - violetta
             type: string
           type: array
         first_talk_to_barry:
@@ -1831,8 +2601,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaCowboy:
       example:
-        stage: 1
-        hay_eaten: 6
+        stage: 0
+        hay_eaten: 3
         rabbit_name: rabbit_name
       properties:
         hay_eaten:
@@ -1851,24 +2621,15 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaMurder:
       example:
-        step_index_pt3: 5
-        step_index: 6
-        step_index_pt2: 6
+        step_index_pt3: 6
+        step_index: 1
+        step_index_pt2: 8
         room_clues:
-        - blood
-        - blood
+        - room_clues
+        - room_clues
       properties:
         room_clues:
           items:
-            enum:
-            - blood
-            - flowers
-            - fridge
-            - letter
-            - painting_1
-            - painting_2
-            - ring
-            - window
             type: string
           type: array
         step_index:
@@ -1880,7 +2641,7 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaSeraphine:
       example:
-        step_index: 6
+        step_index: 4
       properties:
         step_index:
           type: integer
@@ -1888,26 +2649,18 @@ components:
     SkyBlockProfileMemberRiftWitherCage:
       example:
         killed_eyes:
-        - castle
-        - castle
+        - killed_eyes
+        - killed_eyes
       properties:
         killed_eyes:
           items:
-            enum:
-            - castle
-            - colosseum
-            - dreadfarm
-            - fisherman_hut
-            - mountaintop
-            - plaza
-            - wizard_tower
             type: string
           type: array
       type: object
     SkyBlockProfileMemberRiftWizardTower:
       example:
-        wizard_quest_step: 3
-        crumbs_laid_out: 3
+        wizard_quest_step: 9
+        crumbs_laid_out: 8
       properties:
         crumbs_laid_out:
           type: integer
@@ -2425,23 +3178,23 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 3
-                  crumbs_laid_out: 3
+                  wizard_quest_step: 9
+                  crumbs_laid_out: 8
                 enigma:
                   found_souls:
-                  - BACK2BASICS
-                  - BACK2BASICS
+                  - found_souls
+                  - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 8
+                  claimed_bonus_index: 4
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 9
+                  completed_step: 0
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
                   montezuma:
-                    tier: COMMON
+                    tier: tier
                     heldItem:
                       category: CHESTPLATE
                       color: "255,215,0"
@@ -2465,57 +3218,197 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 6.683562403749608
-                    type: FRACTURED_MONTEZUMA_SOUL
+                    exp: 5.507386964179881
+                    type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 9
+                    candyUsed: 7
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
-                  - eight
-                  - eight
+                  - found_cats
+                  - found_cats
                   picked_up_detector: true
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 5
-                    step_index: 6
-                    step_index_pt2: 6
+                    step_index_pt3: 6
+                    step_index: 1
+                    step_index_pt2: 8
                     room_clues:
-                    - blood
-                    - blood
+                    - room_clues
+                    - room_clues
                   cowboy:
-                    stage: 1
-                    hay_eaten: 6
+                    stage: 0
+                    hay_eaten: 3
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 6
+                    step_index: 4
                   lonely:
                     seconds_sitting: 2
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
-                    - creed
-                    - creed
+                    - convinced
+                    - convinced
                     received_reward: true
                 wither_cage:
                   killed_eyes:
-                  - castle
-                  - castle
+                  - killed_eyes
+                  - killed_eyes
                 gallery:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 9
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 3
-                    type: chicken_n_egg
-                    timestamp: 6
-                  - visits: 3
-                    type: chicken_n_egg
-                    timestamp: 6
+                  - visits: 4
+                    type: type
+                    timestamp: 8
+                  - visits: 4
+                    type: type
+                    timestamp: 8
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              dungeons:
+                selected_dungeon_class: selected_dungeon_class
+                dungeon_types:
+                  key:
+                    best_score:
+                      key: 3
+                    tier_completions:
+                      key: 4
+                    fastest_time_s_plus:
+                      key: 7
+                    most_damage_tank:
+                      key: 7.04836565559697
+                    watcher_kills:
+                      key: 6
+                    times_played:
+                      key: 0
+                    experience: 3.0937452626664474
+                    milestone_completions:
+                      key: 0
+                    most_damage_berserk:
+                      key: 7.740351818741173
+                    most_damage_healer:
+                      key: 3.0205796992916243
+                    most_mobs_killed:
+                      key: 3
+                    fastest_time:
+                      key: 7
+                    most_damage_mage:
+                      key: 3.0576100241049344
+                    most_damage_archer:
+                      key: 8.969578798196912
+                    fastest_time_s:
+                      key: 0
+                    most_healing:
+                      key: 5.533258397034986
+                    best_runs:
+                      key:
+                      - damage_dealt: 8.762042012749001
+                        damage_mitigated: 9.018348186070783
+                        ally_healing: 6.683562403749608
+                        score_skill: 6
+                        score_exploration: 2
+                        dungeon_class: dungeon_class
+                        score_bonus: 1
+                        teammates:
+                        - teammates
+                        - teammates
+                        score_speed: 6
+                        elapsed_time: 3
+                        mobs_killed: 6
+                        secrets_found: 5
+                        deaths: 6
+                        timestamp: 6
+                      - damage_dealt: 8.762042012749001
+                        damage_mitigated: 9.018348186070783
+                        ally_healing: 6.683562403749608
+                        score_skill: 6
+                        score_exploration: 2
+                        dungeon_class: dungeon_class
+                        score_bonus: 1
+                        teammates:
+                        - teammates
+                        - teammates
+                        score_speed: 6
+                        elapsed_time: 3
+                        mobs_killed: 6
+                        secrets_found: 5
+                        deaths: 6
+                        timestamp: 6
+                    mobs_killed:
+                      key: 4
+                    highest_tier_completed: 6
+                player_classes:
+                  key:
+                    experience: 4.258773108174356
+                dungeon_journal:
+                  unlocked_journals:
+                  - unlocked_journals
+                  - unlocked_journals
+                dungeon_hub_race_settings:
+                  selected_race: selected_race
+                  runback: true
+                  selected_setting: selected_setting
+                last_dungeon_run: last_dungeon_run
+                daily_runs:
+                  completed_runs_count: 9
+                  current_day_stamp: 9
+                treasures:
+                  chests:
+                  - run_id: run_id
+                    paid: true
+                    chest_id: chest_id
+                    rerolls: 7
+                    treasure_type: treasure_type
+                    shiny_eligible: true
+                    rewards:
+                      rewards:
+                      - rewards
+                      - rewards
+                      rolled_rng_meter_randomly: true
+                    quality: 4
+                  - run_id: run_id
+                    paid: true
+                    chest_id: chest_id
+                    rerolls: 7
+                    treasure_type: treasure_type
+                    shiny_eligible: true
+                    rewards:
+                      rewards:
+                      - rewards
+                      - rewards
+                      rolled_rng_meter_randomly: true
+                    quality: 4
+                  runs:
+                  - run_id: run_id
+                    dungeon_tier: 0
+                    completion_ts: 9
+                    dungeon_type: dungeon_type
+                    participants:
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                  - run_id: run_id
+                    dungeon_tier: 0
+                    completion_ts: 9
+                    dungeon_type: dungeon_type
+                    participants:
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                dungeons_blah_blah:
+                - dungeons_blah_blah
+                - dungeons_blah_blah
+                secrets: 1
               bestiary:
                 kills:
                   last_killed_mob: last_killed_mob
@@ -2577,8 +3470,8 @@ components:
                     intelligence: 7
                 bag_upgrades_purchased: 5
                 unlocked_powers:
-                - adept
-                - adept
+                - unlocked_powers
+                - unlocked_powers
                 selected_power: selected_power
                 highest_magical_power: 5
               collection:
@@ -2619,23 +3512,23 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 3
-                  crumbs_laid_out: 3
+                  wizard_quest_step: 9
+                  crumbs_laid_out: 8
                 enigma:
                   found_souls:
-                  - BACK2BASICS
-                  - BACK2BASICS
+                  - found_souls
+                  - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 8
+                  claimed_bonus_index: 4
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 9
+                  completed_step: 0
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
                   montezuma:
-                    tier: COMMON
+                    tier: tier
                     heldItem:
                       category: CHESTPLATE
                       color: "255,215,0"
@@ -2659,57 +3552,197 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 6.683562403749608
-                    type: FRACTURED_MONTEZUMA_SOUL
+                    exp: 5.507386964179881
+                    type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 9
+                    candyUsed: 7
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
-                  - eight
-                  - eight
+                  - found_cats
+                  - found_cats
                   picked_up_detector: true
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 5
-                    step_index: 6
-                    step_index_pt2: 6
+                    step_index_pt3: 6
+                    step_index: 1
+                    step_index_pt2: 8
                     room_clues:
-                    - blood
-                    - blood
+                    - room_clues
+                    - room_clues
                   cowboy:
-                    stage: 1
-                    hay_eaten: 6
+                    stage: 0
+                    hay_eaten: 3
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 6
+                    step_index: 4
                   lonely:
                     seconds_sitting: 2
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
-                    - creed
-                    - creed
+                    - convinced
+                    - convinced
                     received_reward: true
                 wither_cage:
                   killed_eyes:
-                  - castle
-                  - castle
+                  - killed_eyes
+                  - killed_eyes
                 gallery:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 9
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 3
-                    type: chicken_n_egg
-                    timestamp: 6
-                  - visits: 3
-                    type: chicken_n_egg
-                    timestamp: 6
+                  - visits: 4
+                    type: type
+                    timestamp: 8
+                  - visits: 4
+                    type: type
+                    timestamp: 8
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              dungeons:
+                selected_dungeon_class: selected_dungeon_class
+                dungeon_types:
+                  key:
+                    best_score:
+                      key: 3
+                    tier_completions:
+                      key: 4
+                    fastest_time_s_plus:
+                      key: 7
+                    most_damage_tank:
+                      key: 7.04836565559697
+                    watcher_kills:
+                      key: 6
+                    times_played:
+                      key: 0
+                    experience: 3.0937452626664474
+                    milestone_completions:
+                      key: 0
+                    most_damage_berserk:
+                      key: 7.740351818741173
+                    most_damage_healer:
+                      key: 3.0205796992916243
+                    most_mobs_killed:
+                      key: 3
+                    fastest_time:
+                      key: 7
+                    most_damage_mage:
+                      key: 3.0576100241049344
+                    most_damage_archer:
+                      key: 8.969578798196912
+                    fastest_time_s:
+                      key: 0
+                    most_healing:
+                      key: 5.533258397034986
+                    best_runs:
+                      key:
+                      - damage_dealt: 8.762042012749001
+                        damage_mitigated: 9.018348186070783
+                        ally_healing: 6.683562403749608
+                        score_skill: 6
+                        score_exploration: 2
+                        dungeon_class: dungeon_class
+                        score_bonus: 1
+                        teammates:
+                        - teammates
+                        - teammates
+                        score_speed: 6
+                        elapsed_time: 3
+                        mobs_killed: 6
+                        secrets_found: 5
+                        deaths: 6
+                        timestamp: 6
+                      - damage_dealt: 8.762042012749001
+                        damage_mitigated: 9.018348186070783
+                        ally_healing: 6.683562403749608
+                        score_skill: 6
+                        score_exploration: 2
+                        dungeon_class: dungeon_class
+                        score_bonus: 1
+                        teammates:
+                        - teammates
+                        - teammates
+                        score_speed: 6
+                        elapsed_time: 3
+                        mobs_killed: 6
+                        secrets_found: 5
+                        deaths: 6
+                        timestamp: 6
+                    mobs_killed:
+                      key: 4
+                    highest_tier_completed: 6
+                player_classes:
+                  key:
+                    experience: 4.258773108174356
+                dungeon_journal:
+                  unlocked_journals:
+                  - unlocked_journals
+                  - unlocked_journals
+                dungeon_hub_race_settings:
+                  selected_race: selected_race
+                  runback: true
+                  selected_setting: selected_setting
+                last_dungeon_run: last_dungeon_run
+                daily_runs:
+                  completed_runs_count: 9
+                  current_day_stamp: 9
+                treasures:
+                  chests:
+                  - run_id: run_id
+                    paid: true
+                    chest_id: chest_id
+                    rerolls: 7
+                    treasure_type: treasure_type
+                    shiny_eligible: true
+                    rewards:
+                      rewards:
+                      - rewards
+                      - rewards
+                      rolled_rng_meter_randomly: true
+                    quality: 4
+                  - run_id: run_id
+                    paid: true
+                    chest_id: chest_id
+                    rerolls: 7
+                    treasure_type: treasure_type
+                    shiny_eligible: true
+                    rewards:
+                      rewards:
+                      - rewards
+                      - rewards
+                      rolled_rng_meter_randomly: true
+                    quality: 4
+                  runs:
+                  - run_id: run_id
+                    dungeon_tier: 0
+                    completion_ts: 9
+                    dungeon_type: dungeon_type
+                    participants:
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                  - run_id: run_id
+                    dungeon_tier: 0
+                    completion_ts: 9
+                    dungeon_type: dungeon_type
+                    participants:
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                dungeons_blah_blah:
+                - dungeons_blah_blah
+                - dungeons_blah_blah
+                secrets: 1
               bestiary:
                 kills:
                   last_killed_mob: last_killed_mob
@@ -2771,8 +3804,8 @@ components:
                     intelligence: 7
                 bag_upgrades_purchased: 5
                 unlocked_powers:
-                - adept
-                - adept
+                - unlocked_powers
+                - unlocked_powers
                 selected_power: selected_power
                 highest_magical_power: 5
               collection:
@@ -2803,23 +3836,23 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 3
-                  crumbs_laid_out: 3
+                  wizard_quest_step: 9
+                  crumbs_laid_out: 8
                 enigma:
                   found_souls:
-                  - BACK2BASICS
-                  - BACK2BASICS
+                  - found_souls
+                  - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 8
+                  claimed_bonus_index: 4
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 9
+                  completed_step: 0
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
                   montezuma:
-                    tier: COMMON
+                    tier: tier
                     heldItem:
                       category: CHESTPLATE
                       color: "255,215,0"
@@ -2843,57 +3876,197 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 6.683562403749608
-                    type: FRACTURED_MONTEZUMA_SOUL
+                    exp: 5.507386964179881
+                    type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 9
+                    candyUsed: 7
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
-                  - eight
-                  - eight
+                  - found_cats
+                  - found_cats
                   picked_up_detector: true
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 5
-                    step_index: 6
-                    step_index_pt2: 6
+                    step_index_pt3: 6
+                    step_index: 1
+                    step_index_pt2: 8
                     room_clues:
-                    - blood
-                    - blood
+                    - room_clues
+                    - room_clues
                   cowboy:
-                    stage: 1
-                    hay_eaten: 6
+                    stage: 0
+                    hay_eaten: 3
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 6
+                    step_index: 4
                   lonely:
                     seconds_sitting: 2
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
-                    - creed
-                    - creed
+                    - convinced
+                    - convinced
                     received_reward: true
                 wither_cage:
                   killed_eyes:
-                  - castle
-                  - castle
+                  - killed_eyes
+                  - killed_eyes
                 gallery:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 9
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 3
-                    type: chicken_n_egg
-                    timestamp: 6
-                  - visits: 3
-                    type: chicken_n_egg
-                    timestamp: 6
+                  - visits: 4
+                    type: type
+                    timestamp: 8
+                  - visits: 4
+                    type: type
+                    timestamp: 8
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              dungeons:
+                selected_dungeon_class: selected_dungeon_class
+                dungeon_types:
+                  key:
+                    best_score:
+                      key: 3
+                    tier_completions:
+                      key: 4
+                    fastest_time_s_plus:
+                      key: 7
+                    most_damage_tank:
+                      key: 7.04836565559697
+                    watcher_kills:
+                      key: 6
+                    times_played:
+                      key: 0
+                    experience: 3.0937452626664474
+                    milestone_completions:
+                      key: 0
+                    most_damage_berserk:
+                      key: 7.740351818741173
+                    most_damage_healer:
+                      key: 3.0205796992916243
+                    most_mobs_killed:
+                      key: 3
+                    fastest_time:
+                      key: 7
+                    most_damage_mage:
+                      key: 3.0576100241049344
+                    most_damage_archer:
+                      key: 8.969578798196912
+                    fastest_time_s:
+                      key: 0
+                    most_healing:
+                      key: 5.533258397034986
+                    best_runs:
+                      key:
+                      - damage_dealt: 8.762042012749001
+                        damage_mitigated: 9.018348186070783
+                        ally_healing: 6.683562403749608
+                        score_skill: 6
+                        score_exploration: 2
+                        dungeon_class: dungeon_class
+                        score_bonus: 1
+                        teammates:
+                        - teammates
+                        - teammates
+                        score_speed: 6
+                        elapsed_time: 3
+                        mobs_killed: 6
+                        secrets_found: 5
+                        deaths: 6
+                        timestamp: 6
+                      - damage_dealt: 8.762042012749001
+                        damage_mitigated: 9.018348186070783
+                        ally_healing: 6.683562403749608
+                        score_skill: 6
+                        score_exploration: 2
+                        dungeon_class: dungeon_class
+                        score_bonus: 1
+                        teammates:
+                        - teammates
+                        - teammates
+                        score_speed: 6
+                        elapsed_time: 3
+                        mobs_killed: 6
+                        secrets_found: 5
+                        deaths: 6
+                        timestamp: 6
+                    mobs_killed:
+                      key: 4
+                    highest_tier_completed: 6
+                player_classes:
+                  key:
+                    experience: 4.258773108174356
+                dungeon_journal:
+                  unlocked_journals:
+                  - unlocked_journals
+                  - unlocked_journals
+                dungeon_hub_race_settings:
+                  selected_race: selected_race
+                  runback: true
+                  selected_setting: selected_setting
+                last_dungeon_run: last_dungeon_run
+                daily_runs:
+                  completed_runs_count: 9
+                  current_day_stamp: 9
+                treasures:
+                  chests:
+                  - run_id: run_id
+                    paid: true
+                    chest_id: chest_id
+                    rerolls: 7
+                    treasure_type: treasure_type
+                    shiny_eligible: true
+                    rewards:
+                      rewards:
+                      - rewards
+                      - rewards
+                      rolled_rng_meter_randomly: true
+                    quality: 4
+                  - run_id: run_id
+                    paid: true
+                    chest_id: chest_id
+                    rerolls: 7
+                    treasure_type: treasure_type
+                    shiny_eligible: true
+                    rewards:
+                      rewards:
+                      - rewards
+                      - rewards
+                      rolled_rng_meter_randomly: true
+                    quality: 4
+                  runs:
+                  - run_id: run_id
+                    dungeon_tier: 0
+                    completion_ts: 9
+                    dungeon_type: dungeon_type
+                    participants:
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                  - run_id: run_id
+                    dungeon_tier: 0
+                    completion_ts: 9
+                    dungeon_type: dungeon_type
+                    participants:
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                    - class_milestone: 9
+                      display_name: display_name
+                      player_uuid: player_uuid
+                dungeons_blah_blah:
+                - dungeons_blah_blah
+                - dungeons_blah_blah
+                secrets: 1
               bestiary:
                 kills:
                   last_killed_mob: last_killed_mob
@@ -2955,8 +4128,8 @@ components:
                     intelligence: 7
                 bag_upgrades_purchased: 5
                 unlocked_powers:
-                - adept
-                - adept
+                - unlocked_powers
+                - unlocked_powers
                 selected_power: selected_power
                 highest_magical_power: 5
               collection:
@@ -3073,54 +4246,29 @@ components:
             $ref: '#/components/schemas/SkyBlockProfile_banking_transactions_inner'
           type: array
       type: object
-    SkyBlockProfileMemberBestiary_kills:
-      additionalProperties:
-        type: integer
-      example:
-        last_killed_mob: last_killed_mob
-      properties:
-        last_killed_mob:
-          type: string
-      type: object
-    SkyBlockProfileMemberBestiary_milestone:
-      example:
-        last_claimed_milestone: 6
-      properties:
-        last_claimed_milestone:
-          type: integer
-      type: object
-    SkyBlockProfileMemberBestiary_miscellaneous:
-      example:
-        max_kills_visible: true
-      properties:
-        max_kills_visible:
-          type: boolean
-      type: object
-    SkyBlockProfileMemberCurrencies_essence_value:
+    SkyBlockProfileMemberCurrenciesEssence_value:
       example:
         current: 4
       properties:
         current:
           type: integer
       type: object
+    SkyBlockProfileMemberDungeonsPlayerClasses_value:
+      example:
+        experience: 4.258773108174356
+      properties:
+        experience:
+          type: number
+      type: object
     SkyBlockProfileMemberRiftGallery_secured_trophies_inner:
       example:
-        visits: 3
-        type: chicken_n_egg
-        timestamp: 6
+        visits: 4
+        type: type
+        timestamp: 8
       properties:
         timestamp:
           type: integer
         type:
-          enum:
-          - chicken_n_egg
-          - citizen
-          - lazy_living
-          - mirrored
-          - mountain
-          - slime
-          - vampiric
-          - wyldly_supreme
           type: string
         visits:
           type: integer
