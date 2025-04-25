@@ -612,6 +612,9 @@
                     "glacite_player_data": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberGlacitePlayerData"
                     },
+                    "inventory": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventory"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -1597,6 +1600,90 @@
                         "type": "integer"
                     },
                     "vanguard": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberInventory": {
+                "properties": {
+                    "backpack_contents": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBackpackContents"
+                    },
+                    "backpack_icons": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBackpackIcons"
+                    },
+                    "bag_contents": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBagContents"
+                    },
+                    "ender_chest_contents": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    },
+                    "equipment_contents": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    },
+                    "inv_armor": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    },
+                    "inv_contents": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    },
+                    "personal_vault_contents": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    },
+                    "sacks_counts": {
+                        "additionalProperties": {
+                            "type": "integer"
+                        },
+                        "type": "object"
+                    },
+                    "wardrobe_contents": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    },
+                    "wardrobe_equipped_slot": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberInventoryBackpackContents": {
+                "additionalProperties": {
+                    "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberInventoryBackpackIcons": {
+                "additionalProperties": {
+                    "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberInventoryBagContents": {
+                "properties": {
+                    "fishing_bag": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    },
+                    "potion_bag": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    },
+                    "quiver": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    },
+                    "sacks_bag": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    },
+                    "talisman_bag": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberInventoryBase64GzipData": {
+                "properties": {
+                    "data": {
+                        "type": "string"
+                    },
+                    "type": {
                         "type": "integer"
                     }
                 },

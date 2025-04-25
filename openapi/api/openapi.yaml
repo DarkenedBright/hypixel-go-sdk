@@ -996,20 +996,66 @@ components:
               highest_magical_power: 5
             collection:
               key: 7
+            inventory:
+              ender_chest_contents:
+                data: data
+                type: 9
+              equipment_contents:
+                data: data
+                type: 9
+              wardrobe_contents:
+                data: data
+                type: 9
+              sacks_counts:
+                key: 7
+              personal_vault_contents:
+                data: data
+                type: 9
+              inv_contents:
+                data: data
+                type: 9
+              backpack_contents:
+                key:
+                  data: data
+                  type: 9
+              wardrobe_equipped_slot: 6
+              bag_contents:
+                fishing_bag:
+                  data: data
+                  type: 9
+                potion_bag:
+                  data: data
+                  type: 9
+                sacks_bag:
+                  data: data
+                  type: 9
+                talisman_bag:
+                  data: data
+                  type: 9
+                quiver:
+                  data: data
+                  type: 9
+              inv_armor:
+                data: data
+                type: 9
+              backpack_icons:
+                key:
+                  data: data
+                  type: 9
             rift:
               wizard_tower:
-                wizard_quest_step: 1
+                wizard_quest_step: 8
                 crumbs_laid_out: 3
               enigma:
                 found_souls:
                 - found_souls
                 - found_souls
                 bought_cloak: true
-                claimed_bonus_index: 0
+                claimed_bonus_index: 7
               black_lagoon:
                 received_science_paper: true
                 delivered_science_paper: true
-                completed_step: 9
+                completed_step: 0
                 talked_to_edwin: true
               dead_cats:
                 unlocked_pet: true
@@ -1038,10 +1084,10 @@ components:
                       HEALTH: 20
                     tier: RARE
                   active: true
-                  exp: 6.918231485891953
+                  exp: 0.36062689002149373
                   type: type
                   uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                  candyUsed: 7
+                  candyUsed: 4
                   uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                 found_cats:
                 - found_cats
@@ -1050,22 +1096,22 @@ components:
                 talked_to_jacquelle: true
               village_plaza:
                 murder:
-                  step_index_pt3: 3
-                  step_index: 4
-                  step_index_pt2: 2
+                  step_index_pt3: 1
+                  step_index: 5
+                  step_index_pt2: 3
                   room_clues:
                   - room_clues
                   - room_clues
                 cowboy:
-                  stage: 6
-                  hay_eaten: 1
+                  stage: 2
+                  hay_eaten: 4
                   rabbit_name: rabbit_name
                 barter_bank: "{}"
                 got_scammed: true
                 seraphine:
                   step_index: 5
                 lonely:
-                  seconds_sitting: 2
+                  seconds_sitting: 3
                 barry_center:
                   first_talk_to_barry: true
                   convinced:
@@ -1080,14 +1126,14 @@ components:
                 sent_trophy_dialogues:
                 - sent_trophy_dialogues
                 - sent_trophy_dialogues
-                elise_step: 4
+                elise_step: 1
                 secured_trophies:
-                - visits: 7
+                - visits: 2
                   type: type
-                  timestamp: 0
-                - visits: 7
+                  timestamp: 6
+                - visits: 2
                   type: type
-                  timestamp: 0
+                  timestamp: 6
             player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             glacite_player_data:
               corpses_looted:
@@ -1474,20 +1520,66 @@ components:
           highest_magical_power: 5
         collection:
           key: 7
+        inventory:
+          ender_chest_contents:
+            data: data
+            type: 9
+          equipment_contents:
+            data: data
+            type: 9
+          wardrobe_contents:
+            data: data
+            type: 9
+          sacks_counts:
+            key: 7
+          personal_vault_contents:
+            data: data
+            type: 9
+          inv_contents:
+            data: data
+            type: 9
+          backpack_contents:
+            key:
+              data: data
+              type: 9
+          wardrobe_equipped_slot: 6
+          bag_contents:
+            fishing_bag:
+              data: data
+              type: 9
+            potion_bag:
+              data: data
+              type: 9
+            sacks_bag:
+              data: data
+              type: 9
+            talisman_bag:
+              data: data
+              type: 9
+            quiver:
+              data: data
+              type: 9
+          inv_armor:
+            data: data
+            type: 9
+          backpack_icons:
+            key:
+              data: data
+              type: 9
         rift:
           wizard_tower:
-            wizard_quest_step: 1
+            wizard_quest_step: 8
             crumbs_laid_out: 3
           enigma:
             found_souls:
             - found_souls
             - found_souls
             bought_cloak: true
-            claimed_bonus_index: 0
+            claimed_bonus_index: 7
           black_lagoon:
             received_science_paper: true
             delivered_science_paper: true
-            completed_step: 9
+            completed_step: 0
             talked_to_edwin: true
           dead_cats:
             unlocked_pet: true
@@ -1516,10 +1608,10 @@ components:
                   HEALTH: 20
                 tier: RARE
               active: true
-              exp: 6.918231485891953
+              exp: 0.36062689002149373
               type: type
               uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              candyUsed: 7
+              candyUsed: 4
               uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             found_cats:
             - found_cats
@@ -1528,22 +1620,22 @@ components:
             talked_to_jacquelle: true
           village_plaza:
             murder:
-              step_index_pt3: 3
-              step_index: 4
-              step_index_pt2: 2
+              step_index_pt3: 1
+              step_index: 5
+              step_index_pt2: 3
               room_clues:
               - room_clues
               - room_clues
             cowboy:
-              stage: 6
-              hay_eaten: 1
+              stage: 2
+              hay_eaten: 4
               rabbit_name: rabbit_name
             barter_bank: "{}"
             got_scammed: true
             seraphine:
               step_index: 5
             lonely:
-              seconds_sitting: 2
+              seconds_sitting: 3
             barry_center:
               first_talk_to_barry: true
               convinced:
@@ -1558,14 +1650,14 @@ components:
             sent_trophy_dialogues:
             - sent_trophy_dialogues
             - sent_trophy_dialogues
-            elise_step: 4
+            elise_step: 1
             secured_trophies:
-            - visits: 7
+            - visits: 2
               type: type
-              timestamp: 0
-            - visits: 7
+              timestamp: 6
+            - visits: 2
               type: type
-              timestamp: 0
+              timestamp: 6
         player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         glacite_player_data:
           corpses_looted:
@@ -1731,6 +1823,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberGardenPlayerData'
         glacite_player_data:
           $ref: '#/components/schemas/SkyBlockProfileMemberGlacitePlayerData'
+        inventory:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventory'
         player_id:
           format: uuid
           type: string
@@ -3093,21 +3187,145 @@ components:
         vanguard:
           type: integer
       type: object
+    SkyBlockProfileMemberInventory:
+      example:
+        ender_chest_contents:
+          data: data
+          type: 9
+        equipment_contents:
+          data: data
+          type: 9
+        wardrobe_contents:
+          data: data
+          type: 9
+        sacks_counts:
+          key: 7
+        personal_vault_contents:
+          data: data
+          type: 9
+        inv_contents:
+          data: data
+          type: 9
+        backpack_contents:
+          key:
+            data: data
+            type: 9
+        wardrobe_equipped_slot: 6
+        bag_contents:
+          fishing_bag:
+            data: data
+            type: 9
+          potion_bag:
+            data: data
+            type: 9
+          sacks_bag:
+            data: data
+            type: 9
+          talisman_bag:
+            data: data
+            type: 9
+          quiver:
+            data: data
+            type: 9
+        inv_armor:
+          data: data
+          type: 9
+        backpack_icons:
+          key:
+            data: data
+            type: 9
+      properties:
+        backpack_contents:
+          additionalProperties:
+            $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+          type: object
+        backpack_icons:
+          additionalProperties:
+            $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+          type: object
+        bag_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBagContents'
+        ender_chest_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        equipment_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        inv_armor:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        inv_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        personal_vault_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        sacks_counts:
+          additionalProperties:
+            type: integer
+          type: object
+        wardrobe_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        wardrobe_equipped_slot:
+          type: integer
+      type: object
+    SkyBlockProfileMemberInventoryBackpackContents:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+      type: object
+    SkyBlockProfileMemberInventoryBackpackIcons:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+      type: object
+    SkyBlockProfileMemberInventoryBagContents:
+      example:
+        fishing_bag:
+          data: data
+          type: 9
+        potion_bag:
+          data: data
+          type: 9
+        sacks_bag:
+          data: data
+          type: 9
+        talisman_bag:
+          data: data
+          type: 9
+        quiver:
+          data: data
+          type: 9
+      properties:
+        fishing_bag:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        potion_bag:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        quiver:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        sacks_bag:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        talisman_bag:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+      type: object
+    SkyBlockProfileMemberInventoryBase64GzipData:
+      example:
+        data: data
+        type: 9
+      properties:
+        data:
+          type: string
+        type:
+          type: integer
+      type: object
     SkyBlockProfileMemberRift:
       example:
         wizard_tower:
-          wizard_quest_step: 1
+          wizard_quest_step: 8
           crumbs_laid_out: 3
         enigma:
           found_souls:
           - found_souls
           - found_souls
           bought_cloak: true
-          claimed_bonus_index: 0
+          claimed_bonus_index: 7
         black_lagoon:
           received_science_paper: true
           delivered_science_paper: true
-          completed_step: 9
+          completed_step: 0
           talked_to_edwin: true
         dead_cats:
           unlocked_pet: true
@@ -3136,10 +3354,10 @@ components:
                 HEALTH: 20
               tier: RARE
             active: true
-            exp: 6.918231485891953
+            exp: 0.36062689002149373
             type: type
             uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            candyUsed: 7
+            candyUsed: 4
             uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           found_cats:
           - found_cats
@@ -3148,22 +3366,22 @@ components:
           talked_to_jacquelle: true
         village_plaza:
           murder:
-            step_index_pt3: 3
-            step_index: 4
-            step_index_pt2: 2
+            step_index_pt3: 1
+            step_index: 5
+            step_index_pt2: 3
             room_clues:
             - room_clues
             - room_clues
           cowboy:
-            stage: 6
-            hay_eaten: 1
+            stage: 2
+            hay_eaten: 4
             rabbit_name: rabbit_name
           barter_bank: "{}"
           got_scammed: true
           seraphine:
             step_index: 5
           lonely:
-            seconds_sitting: 2
+            seconds_sitting: 3
           barry_center:
             first_talk_to_barry: true
             convinced:
@@ -3178,14 +3396,14 @@ components:
           sent_trophy_dialogues:
           - sent_trophy_dialogues
           - sent_trophy_dialogues
-          elise_step: 4
+          elise_step: 1
           secured_trophies:
-          - visits: 7
+          - visits: 2
             type: type
-            timestamp: 0
-          - visits: 7
+            timestamp: 6
+          - visits: 2
             type: type
-            timestamp: 0
+            timestamp: 6
       properties:
         black_lagoon:
           $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
@@ -3206,7 +3424,7 @@ components:
       example:
         received_science_paper: true
         delivered_science_paper: true
-        completed_step: 9
+        completed_step: 0
         talked_to_edwin: true
       properties:
         completed_step:
@@ -3246,10 +3464,10 @@ components:
               HEALTH: 20
             tier: RARE
           active: true
-          exp: 6.918231485891953
+          exp: 0.36062689002149373
           type: type
           uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          candyUsed: 7
+          candyUsed: 4
           uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         found_cats:
         - found_cats
@@ -3296,10 +3514,10 @@ components:
             HEALTH: 20
           tier: RARE
         active: true
-        exp: 6.918231485891953
+        exp: 0.36062689002149373
         type: type
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        candyUsed: 7
+        candyUsed: 4
         uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         active:
@@ -3329,7 +3547,7 @@ components:
         - found_souls
         - found_souls
         bought_cloak: true
-        claimed_bonus_index: 0
+        claimed_bonus_index: 7
       properties:
         bought_cloak:
           type: boolean
@@ -3345,14 +3563,14 @@ components:
         sent_trophy_dialogues:
         - sent_trophy_dialogues
         - sent_trophy_dialogues
-        elise_step: 4
+        elise_step: 1
         secured_trophies:
-        - visits: 7
+        - visits: 2
           type: type
-          timestamp: 0
-        - visits: 7
+          timestamp: 6
+        - visits: 2
           type: type
-          timestamp: 0
+          timestamp: 6
       properties:
         elise_step:
           type: integer
@@ -3368,22 +3586,22 @@ components:
     SkyBlockProfileMemberRiftVillagePlaza:
       example:
         murder:
-          step_index_pt3: 3
-          step_index: 4
-          step_index_pt2: 2
+          step_index_pt3: 1
+          step_index: 5
+          step_index_pt2: 3
           room_clues:
           - room_clues
           - room_clues
         cowboy:
-          stage: 6
-          hay_eaten: 1
+          stage: 2
+          hay_eaten: 4
           rabbit_name: rabbit_name
         barter_bank: "{}"
         got_scammed: true
         seraphine:
           step_index: 5
         lonely:
-          seconds_sitting: 2
+          seconds_sitting: 3
         barry_center:
           first_talk_to_barry: true
           convinced:
@@ -3429,8 +3647,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaCowboy:
       example:
-        stage: 6
-        hay_eaten: 1
+        stage: 2
+        hay_eaten: 4
         rabbit_name: rabbit_name
       properties:
         hay_eaten:
@@ -3442,16 +3660,16 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaLonely:
       example:
-        seconds_sitting: 2
+        seconds_sitting: 3
       properties:
         seconds_sitting:
           type: integer
       type: object
     SkyBlockProfileMemberRiftVillagePlazaMurder:
       example:
-        step_index_pt3: 3
-        step_index: 4
-        step_index_pt2: 2
+        step_index_pt3: 1
+        step_index: 5
+        step_index_pt2: 3
         room_clues:
         - room_clues
         - room_clues
@@ -3487,7 +3705,7 @@ components:
       type: object
     SkyBlockProfileMemberRiftWizardTower:
       example:
-        wizard_quest_step: 1
+        wizard_quest_step: 8
         crumbs_laid_out: 3
       properties:
         crumbs_laid_out:
@@ -4204,20 +4422,66 @@ components:
                 highest_magical_power: 5
               collection:
                 key: 7
+              inventory:
+                ender_chest_contents:
+                  data: data
+                  type: 9
+                equipment_contents:
+                  data: data
+                  type: 9
+                wardrobe_contents:
+                  data: data
+                  type: 9
+                sacks_counts:
+                  key: 7
+                personal_vault_contents:
+                  data: data
+                  type: 9
+                inv_contents:
+                  data: data
+                  type: 9
+                backpack_contents:
+                  key:
+                    data: data
+                    type: 9
+                wardrobe_equipped_slot: 6
+                bag_contents:
+                  fishing_bag:
+                    data: data
+                    type: 9
+                  potion_bag:
+                    data: data
+                    type: 9
+                  sacks_bag:
+                    data: data
+                    type: 9
+                  talisman_bag:
+                    data: data
+                    type: 9
+                  quiver:
+                    data: data
+                    type: 9
+                inv_armor:
+                  data: data
+                  type: 9
+                backpack_icons:
+                  key:
+                    data: data
+                    type: 9
               rift:
                 wizard_tower:
-                  wizard_quest_step: 1
+                  wizard_quest_step: 8
                   crumbs_laid_out: 3
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 0
+                  claimed_bonus_index: 7
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 9
+                  completed_step: 0
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -4246,10 +4510,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 6.918231485891953
+                    exp: 0.36062689002149373
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 7
+                    candyUsed: 4
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -4258,22 +4522,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 3
-                    step_index: 4
-                    step_index_pt2: 2
+                    step_index_pt3: 1
+                    step_index: 5
+                    step_index_pt2: 3
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 6
-                    hay_eaten: 1
+                    stage: 2
+                    hay_eaten: 4
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
                     step_index: 5
                   lonely:
-                    seconds_sitting: 2
+                    seconds_sitting: 3
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -4288,14 +4552,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 4
+                  elise_step: 1
                   secured_trophies:
-                  - visits: 7
+                  - visits: 2
                     type: type
-                    timestamp: 0
-                  - visits: 7
+                    timestamp: 6
+                  - visits: 2
                     type: type
-                    timestamp: 0
+                    timestamp: 6
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -4664,20 +4928,66 @@ components:
                 highest_magical_power: 5
               collection:
                 key: 7
+              inventory:
+                ender_chest_contents:
+                  data: data
+                  type: 9
+                equipment_contents:
+                  data: data
+                  type: 9
+                wardrobe_contents:
+                  data: data
+                  type: 9
+                sacks_counts:
+                  key: 7
+                personal_vault_contents:
+                  data: data
+                  type: 9
+                inv_contents:
+                  data: data
+                  type: 9
+                backpack_contents:
+                  key:
+                    data: data
+                    type: 9
+                wardrobe_equipped_slot: 6
+                bag_contents:
+                  fishing_bag:
+                    data: data
+                    type: 9
+                  potion_bag:
+                    data: data
+                    type: 9
+                  sacks_bag:
+                    data: data
+                    type: 9
+                  talisman_bag:
+                    data: data
+                    type: 9
+                  quiver:
+                    data: data
+                    type: 9
+                inv_armor:
+                  data: data
+                  type: 9
+                backpack_icons:
+                  key:
+                    data: data
+                    type: 9
               rift:
                 wizard_tower:
-                  wizard_quest_step: 1
+                  wizard_quest_step: 8
                   crumbs_laid_out: 3
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 0
+                  claimed_bonus_index: 7
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 9
+                  completed_step: 0
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -4706,10 +5016,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 6.918231485891953
+                    exp: 0.36062689002149373
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 7
+                    candyUsed: 4
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -4718,22 +5028,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 3
-                    step_index: 4
-                    step_index_pt2: 2
+                    step_index_pt3: 1
+                    step_index: 5
+                    step_index_pt2: 3
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 6
-                    hay_eaten: 1
+                    stage: 2
+                    hay_eaten: 4
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
                     step_index: 5
                   lonely:
-                    seconds_sitting: 2
+                    seconds_sitting: 3
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -4748,14 +5058,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 4
+                  elise_step: 1
                   secured_trophies:
-                  - visits: 7
+                  - visits: 2
                     type: type
-                    timestamp: 0
-                  - visits: 7
+                    timestamp: 6
+                  - visits: 2
                     type: type
-                    timestamp: 0
+                    timestamp: 6
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -5114,20 +5424,66 @@ components:
                 highest_magical_power: 5
               collection:
                 key: 7
+              inventory:
+                ender_chest_contents:
+                  data: data
+                  type: 9
+                equipment_contents:
+                  data: data
+                  type: 9
+                wardrobe_contents:
+                  data: data
+                  type: 9
+                sacks_counts:
+                  key: 7
+                personal_vault_contents:
+                  data: data
+                  type: 9
+                inv_contents:
+                  data: data
+                  type: 9
+                backpack_contents:
+                  key:
+                    data: data
+                    type: 9
+                wardrobe_equipped_slot: 6
+                bag_contents:
+                  fishing_bag:
+                    data: data
+                    type: 9
+                  potion_bag:
+                    data: data
+                    type: 9
+                  sacks_bag:
+                    data: data
+                    type: 9
+                  talisman_bag:
+                    data: data
+                    type: 9
+                  quiver:
+                    data: data
+                    type: 9
+                inv_armor:
+                  data: data
+                  type: 9
+                backpack_icons:
+                  key:
+                    data: data
+                    type: 9
               rift:
                 wizard_tower:
-                  wizard_quest_step: 1
+                  wizard_quest_step: 8
                   crumbs_laid_out: 3
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 0
+                  claimed_bonus_index: 7
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 9
+                  completed_step: 0
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -5156,10 +5512,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 6.918231485891953
+                    exp: 0.36062689002149373
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 7
+                    candyUsed: 4
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -5168,22 +5524,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 3
-                    step_index: 4
-                    step_index_pt2: 2
+                    step_index_pt3: 1
+                    step_index: 5
+                    step_index_pt2: 3
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 6
-                    hay_eaten: 1
+                    stage: 2
+                    hay_eaten: 4
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
                     step_index: 5
                   lonely:
-                    seconds_sitting: 2
+                    seconds_sitting: 3
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -5198,14 +5554,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 4
+                  elise_step: 1
                   secured_trophies:
-                  - visits: 7
+                  - visits: 2
                     type: type
-                    timestamp: 0
-                  - visits: 7
+                    timestamp: 6
+                  - visits: 2
                     type: type
-                    timestamp: 0
+                    timestamp: 6
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -5468,9 +5824,9 @@ components:
       type: object
     SkyBlockProfileMemberRiftGallery_secured_trophies_inner:
       example:
-        visits: 7
+        visits: 2
         type: type
-        timestamp: 0
+        timestamp: 6
       properties:
         timestamp:
           type: integer

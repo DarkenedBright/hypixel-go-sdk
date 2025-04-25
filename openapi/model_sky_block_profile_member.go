@@ -30,6 +30,7 @@ type SkyBlockProfileMember struct {
 	Forge               *SkyBlockProfileMemberForge               `json:"forge,omitempty"`
 	GardenPlayerData    *SkyBlockProfileMemberGardenPlayerData    `json:"garden_player_data,omitempty"`
 	GlacitePlayerData   *SkyBlockProfileMemberGlacitePlayerData   `json:"glacite_player_data,omitempty"`
+	Inventory           *SkyBlockProfileMemberInventory           `json:"inventory,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -403,6 +404,38 @@ func (o *SkyBlockProfileMember) SetGlacitePlayerData(v SkyBlockProfileMemberGlac
 	o.GlacitePlayerData = &v
 }
 
+// GetInventory returns the Inventory field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetInventory() SkyBlockProfileMemberInventory {
+	if o == nil || IsNil(o.Inventory) {
+		var ret SkyBlockProfileMemberInventory
+		return ret
+	}
+	return *o.Inventory
+}
+
+// GetInventoryOk returns a tuple with the Inventory field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetInventoryOk() (*SkyBlockProfileMemberInventory, bool) {
+	if o == nil || IsNil(o.Inventory) {
+		return nil, false
+	}
+	return o.Inventory, true
+}
+
+// HasInventory returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasInventory() bool {
+	if o != nil && !IsNil(o.Inventory) {
+		return true
+	}
+
+	return false
+}
+
+// SetInventory gets a reference to the given SkyBlockProfileMemberInventory and assigns it to the Inventory field.
+func (o *SkyBlockProfileMember) SetInventory(v SkyBlockProfileMemberInventory) {
+	o.Inventory = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -509,6 +542,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.GlacitePlayerData) {
 		toSerialize["glacite_player_data"] = o.GlacitePlayerData
+	}
+	if !IsNil(o.Inventory) {
+		toSerialize["inventory"] = o.Inventory
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId
