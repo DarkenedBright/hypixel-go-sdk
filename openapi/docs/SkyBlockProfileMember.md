@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AccessoryBagStorage** | Pointer to [**SkyBlockProfileMemberAccessoryBagStorage**](SkyBlockProfileMemberAccessoryBagStorage.md) |  | [optional] 
 **Bestiary** | Pointer to [**SkyBlockProfileMemberBestiary**](SkyBlockProfileMemberBestiary.md) |  | [optional] 
+**Collection** | Pointer to **map[string]int64** |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -77,6 +78,31 @@ SetBestiary sets Bestiary field to given value.
 `func (o *SkyBlockProfileMember) HasBestiary() bool`
 
 HasBestiary returns a boolean if a field has been set.
+
+### GetCollection
+
+`func (o *SkyBlockProfileMember) GetCollection() map[string]int64`
+
+GetCollection returns the Collection field if non-nil, zero value otherwise.
+
+### GetCollectionOk
+
+`func (o *SkyBlockProfileMember) GetCollectionOk() (*map[string]int64, bool)`
+
+GetCollectionOk returns a tuple with the Collection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCollection
+
+`func (o *SkyBlockProfileMember) SetCollection(v map[string]int64)`
+
+SetCollection sets Collection field to given value.
+
+### HasCollection
+
+`func (o *SkyBlockProfileMember) HasCollection() bool`
+
+HasCollection returns a boolean if a field has been set.
 
 ### GetPlayerId
 

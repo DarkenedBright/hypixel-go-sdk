@@ -585,6 +585,9 @@
                     "bestiary": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberBestiary"
                     },
+                    "collection": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberCollection"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -729,6 +732,12 @@
                         },
                         "type": "object"
                     }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberCollection": {
+                "additionalProperties": {
+                    "type": "integer"
                 },
                 "type": "object"
             },

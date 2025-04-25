@@ -798,8 +798,8 @@ components:
           key:
             rift:
               wizard_tower:
-                wizard_quest_step: 5
-                crumbs_laid_out: 6
+                wizard_quest_step: 6
+                crumbs_laid_out: 5
               enigma:
                 found_souls:
                 - BACK2BASICS
@@ -809,7 +809,7 @@ components:
               black_lagoon:
                 received_science_paper: true
                 delivered_science_paper: true
-                completed_step: 1
+                completed_step: 4
                 talked_to_edwin: true
               dead_cats:
                 unlocked_pet: true
@@ -838,10 +838,10 @@ components:
                       HEALTH: 20
                     tier: RARE
                   active: true
-                  exp: 5.025004791520295
+                  exp: 9.965781217890562
                   type: FRACTURED_MONTEZUMA_SOUL
                   uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                  candyUsed: 4
+                  candyUsed: 5
                   uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                 found_cats:
                 - eight
@@ -850,22 +850,22 @@ components:
                 talked_to_jacquelle: true
               village_plaza:
                 murder:
-                  step_index_pt3: 2
-                  step_index: 6
-                  step_index_pt2: 1
+                  step_index_pt3: 6
+                  step_index: 1
+                  step_index_pt2: 2
                   room_clues:
                   - blood
                   - blood
                 cowboy:
-                  stage: 6
-                  hay_eaten: 9
+                  stage: 3
+                  hay_eaten: 6
                   rabbit_name: rabbit_name
                 barter_bank: "{}"
                 got_scammed: true
                 seraphine:
                   step_index: 6
                 lonely:
-                  seconds_sitting: 3
+                  seconds_sitting: 6
                 barry_center:
                   first_talk_to_barry: true
                   convinced:
@@ -880,14 +880,14 @@ components:
                 sent_trophy_dialogues:
                 - sent_trophy_dialogues
                 - sent_trophy_dialogues
-                elise_step: 9
+                elise_step: 6
                 secured_trophies:
-                - visits: 8
+                - visits: 9
                   type: chicken_n_egg
-                  timestamp: 6
-                - visits: 8
+                  timestamp: 8
+                - visits: 9
                   type: chicken_n_egg
-                  timestamp: 6
+                  timestamp: 8
             player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             bestiary:
               kills:
@@ -954,6 +954,8 @@ components:
               - adept
               selected_power: selected_power
               highest_magical_power: 5
+            collection:
+              key: 1
         game_mode: bingo
         community_upgrades: "{}"
         cute_name: cute_name
@@ -1002,8 +1004,8 @@ components:
       example:
         rift:
           wizard_tower:
-            wizard_quest_step: 5
-            crumbs_laid_out: 6
+            wizard_quest_step: 6
+            crumbs_laid_out: 5
           enigma:
             found_souls:
             - BACK2BASICS
@@ -1013,7 +1015,7 @@ components:
           black_lagoon:
             received_science_paper: true
             delivered_science_paper: true
-            completed_step: 1
+            completed_step: 4
             talked_to_edwin: true
           dead_cats:
             unlocked_pet: true
@@ -1042,10 +1044,10 @@ components:
                   HEALTH: 20
                 tier: RARE
               active: true
-              exp: 5.025004791520295
+              exp: 9.965781217890562
               type: FRACTURED_MONTEZUMA_SOUL
               uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              candyUsed: 4
+              candyUsed: 5
               uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             found_cats:
             - eight
@@ -1054,22 +1056,22 @@ components:
             talked_to_jacquelle: true
           village_plaza:
             murder:
-              step_index_pt3: 2
-              step_index: 6
-              step_index_pt2: 1
+              step_index_pt3: 6
+              step_index: 1
+              step_index_pt2: 2
               room_clues:
               - blood
               - blood
             cowboy:
-              stage: 6
-              hay_eaten: 9
+              stage: 3
+              hay_eaten: 6
               rabbit_name: rabbit_name
             barter_bank: "{}"
             got_scammed: true
             seraphine:
               step_index: 6
             lonely:
-              seconds_sitting: 3
+              seconds_sitting: 6
             barry_center:
               first_talk_to_barry: true
               convinced:
@@ -1084,14 +1086,14 @@ components:
             sent_trophy_dialogues:
             - sent_trophy_dialogues
             - sent_trophy_dialogues
-            elise_step: 9
+            elise_step: 6
             secured_trophies:
-            - visits: 8
+            - visits: 9
               type: chicken_n_egg
-              timestamp: 6
-            - visits: 8
+              timestamp: 8
+            - visits: 9
               type: chicken_n_egg
-              timestamp: 6
+              timestamp: 8
         player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         bestiary:
           kills:
@@ -1158,11 +1160,17 @@ components:
           - adept
           selected_power: selected_power
           highest_magical_power: 5
+        collection:
+          key: 1
       properties:
         accessory_bag_storage:
           $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorage'
         bestiary:
           $ref: '#/components/schemas/SkyBlockProfileMemberBestiary'
+        collection:
+          additionalProperties:
+            type: integer
+          type: object
         player_id:
           format: uuid
           type: string
@@ -1380,11 +1388,15 @@ components:
         miscellaneous:
           $ref: '#/components/schemas/SkyBlockProfileMemberBestiary_miscellaneous'
       type: object
+    SkyBlockProfileMemberCollection:
+      additionalProperties:
+        type: integer
+      type: object
     SkyBlockProfileMemberRift:
       example:
         wizard_tower:
-          wizard_quest_step: 5
-          crumbs_laid_out: 6
+          wizard_quest_step: 6
+          crumbs_laid_out: 5
         enigma:
           found_souls:
           - BACK2BASICS
@@ -1394,7 +1406,7 @@ components:
         black_lagoon:
           received_science_paper: true
           delivered_science_paper: true
-          completed_step: 1
+          completed_step: 4
           talked_to_edwin: true
         dead_cats:
           unlocked_pet: true
@@ -1423,10 +1435,10 @@ components:
                 HEALTH: 20
               tier: RARE
             active: true
-            exp: 5.025004791520295
+            exp: 9.965781217890562
             type: FRACTURED_MONTEZUMA_SOUL
             uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            candyUsed: 4
+            candyUsed: 5
             uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           found_cats:
           - eight
@@ -1435,22 +1447,22 @@ components:
           talked_to_jacquelle: true
         village_plaza:
           murder:
-            step_index_pt3: 2
-            step_index: 6
-            step_index_pt2: 1
+            step_index_pt3: 6
+            step_index: 1
+            step_index_pt2: 2
             room_clues:
             - blood
             - blood
           cowboy:
-            stage: 6
-            hay_eaten: 9
+            stage: 3
+            hay_eaten: 6
             rabbit_name: rabbit_name
           barter_bank: "{}"
           got_scammed: true
           seraphine:
             step_index: 6
           lonely:
-            seconds_sitting: 3
+            seconds_sitting: 6
           barry_center:
             first_talk_to_barry: true
             convinced:
@@ -1465,14 +1477,14 @@ components:
           sent_trophy_dialogues:
           - sent_trophy_dialogues
           - sent_trophy_dialogues
-          elise_step: 9
+          elise_step: 6
           secured_trophies:
-          - visits: 8
+          - visits: 9
             type: chicken_n_egg
-            timestamp: 6
-          - visits: 8
+            timestamp: 8
+          - visits: 9
             type: chicken_n_egg
-            timestamp: 6
+            timestamp: 8
       properties:
         black_lagoon:
           $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
@@ -1493,7 +1505,7 @@ components:
       example:
         received_science_paper: true
         delivered_science_paper: true
-        completed_step: 1
+        completed_step: 4
         talked_to_edwin: true
       properties:
         completed_step:
@@ -1533,10 +1545,10 @@ components:
               HEALTH: 20
             tier: RARE
           active: true
-          exp: 5.025004791520295
+          exp: 9.965781217890562
           type: FRACTURED_MONTEZUMA_SOUL
           uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          candyUsed: 4
+          candyUsed: 5
           uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         found_cats:
         - eight
@@ -1593,10 +1605,10 @@ components:
             HEALTH: 20
           tier: RARE
         active: true
-        exp: 5.025004791520295
+        exp: 9.965781217890562
         type: FRACTURED_MONTEZUMA_SOUL
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        candyUsed: 4
+        candyUsed: 5
         uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         active:
@@ -1698,14 +1710,14 @@ components:
         sent_trophy_dialogues:
         - sent_trophy_dialogues
         - sent_trophy_dialogues
-        elise_step: 9
+        elise_step: 6
         secured_trophies:
-        - visits: 8
+        - visits: 9
           type: chicken_n_egg
-          timestamp: 6
-        - visits: 8
+          timestamp: 8
+        - visits: 9
           type: chicken_n_egg
-          timestamp: 6
+          timestamp: 8
       properties:
         elise_step:
           type: integer
@@ -1721,22 +1733,22 @@ components:
     SkyBlockProfileMemberRiftVillagePlaza:
       example:
         murder:
-          step_index_pt3: 2
-          step_index: 6
-          step_index_pt2: 1
+          step_index_pt3: 6
+          step_index: 1
+          step_index_pt2: 2
           room_clues:
           - blood
           - blood
         cowboy:
-          stage: 6
-          hay_eaten: 9
+          stage: 3
+          hay_eaten: 6
           rabbit_name: rabbit_name
         barter_bank: "{}"
         got_scammed: true
         seraphine:
           step_index: 6
         lonely:
-          seconds_sitting: 3
+          seconds_sitting: 6
         barry_center:
           first_talk_to_barry: true
           convinced:
@@ -1790,8 +1802,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaCowboy:
       example:
-        stage: 6
-        hay_eaten: 9
+        stage: 3
+        hay_eaten: 6
         rabbit_name: rabbit_name
       properties:
         hay_eaten:
@@ -1803,16 +1815,16 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaLonely:
       example:
-        seconds_sitting: 3
+        seconds_sitting: 6
       properties:
         seconds_sitting:
           type: integer
       type: object
     SkyBlockProfileMemberRiftVillagePlazaMurder:
       example:
-        step_index_pt3: 2
-        step_index: 6
-        step_index_pt2: 1
+        step_index_pt3: 6
+        step_index: 1
+        step_index_pt2: 2
         room_clues:
         - blood
         - blood
@@ -1865,8 +1877,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftWizardTower:
       example:
-        wizard_quest_step: 5
-        crumbs_laid_out: 6
+        wizard_quest_step: 6
+        crumbs_laid_out: 5
       properties:
         crumbs_laid_out:
           type: integer
@@ -2384,8 +2396,8 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 5
-                  crumbs_laid_out: 6
+                  wizard_quest_step: 6
+                  crumbs_laid_out: 5
                 enigma:
                   found_souls:
                   - BACK2BASICS
@@ -2395,7 +2407,7 @@ components:
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 1
+                  completed_step: 4
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -2424,10 +2436,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 5.025004791520295
+                    exp: 9.965781217890562
                     type: FRACTURED_MONTEZUMA_SOUL
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 4
+                    candyUsed: 5
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - eight
@@ -2436,22 +2448,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 2
-                    step_index: 6
-                    step_index_pt2: 1
+                    step_index_pt3: 6
+                    step_index: 1
+                    step_index_pt2: 2
                     room_clues:
                     - blood
                     - blood
                   cowboy:
-                    stage: 6
-                    hay_eaten: 9
+                    stage: 3
+                    hay_eaten: 6
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
                     step_index: 6
                   lonely:
-                    seconds_sitting: 3
+                    seconds_sitting: 6
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -2466,14 +2478,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 9
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 8
+                  - visits: 9
                     type: chicken_n_egg
-                    timestamp: 6
-                  - visits: 8
+                    timestamp: 8
+                  - visits: 9
                     type: chicken_n_egg
-                    timestamp: 6
+                    timestamp: 8
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               bestiary:
                 kills:
@@ -2540,6 +2552,8 @@ components:
                 - adept
                 selected_power: selected_power
                 highest_magical_power: 5
+              collection:
+                key: 1
           game_mode: bingo
           community_upgrades: "{}"
           cute_name: cute_name
@@ -2570,8 +2584,8 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 5
-                  crumbs_laid_out: 6
+                  wizard_quest_step: 6
+                  crumbs_laid_out: 5
                 enigma:
                   found_souls:
                   - BACK2BASICS
@@ -2581,7 +2595,7 @@ components:
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 1
+                  completed_step: 4
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -2610,10 +2624,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 5.025004791520295
+                    exp: 9.965781217890562
                     type: FRACTURED_MONTEZUMA_SOUL
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 4
+                    candyUsed: 5
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - eight
@@ -2622,22 +2636,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 2
-                    step_index: 6
-                    step_index_pt2: 1
+                    step_index_pt3: 6
+                    step_index: 1
+                    step_index_pt2: 2
                     room_clues:
                     - blood
                     - blood
                   cowboy:
-                    stage: 6
-                    hay_eaten: 9
+                    stage: 3
+                    hay_eaten: 6
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
                     step_index: 6
                   lonely:
-                    seconds_sitting: 3
+                    seconds_sitting: 6
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -2652,14 +2666,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 9
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 8
+                  - visits: 9
                     type: chicken_n_egg
-                    timestamp: 6
-                  - visits: 8
+                    timestamp: 8
+                  - visits: 9
                     type: chicken_n_egg
-                    timestamp: 6
+                    timestamp: 8
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               bestiary:
                 kills:
@@ -2726,6 +2740,8 @@ components:
                 - adept
                 selected_power: selected_power
                 highest_magical_power: 5
+              collection:
+                key: 1
           game_mode: bingo
           community_upgrades: "{}"
           cute_name: cute_name
@@ -2746,8 +2762,8 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 5
-                  crumbs_laid_out: 6
+                  wizard_quest_step: 6
+                  crumbs_laid_out: 5
                 enigma:
                   found_souls:
                   - BACK2BASICS
@@ -2757,7 +2773,7 @@ components:
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 1
+                  completed_step: 4
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -2786,10 +2802,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 5.025004791520295
+                    exp: 9.965781217890562
                     type: FRACTURED_MONTEZUMA_SOUL
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 4
+                    candyUsed: 5
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - eight
@@ -2798,22 +2814,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 2
-                    step_index: 6
-                    step_index_pt2: 1
+                    step_index_pt3: 6
+                    step_index: 1
+                    step_index_pt2: 2
                     room_clues:
                     - blood
                     - blood
                   cowboy:
-                    stage: 6
-                    hay_eaten: 9
+                    stage: 3
+                    hay_eaten: 6
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
                     step_index: 6
                   lonely:
-                    seconds_sitting: 3
+                    seconds_sitting: 6
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -2828,14 +2844,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 9
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 8
+                  - visits: 9
                     type: chicken_n_egg
-                    timestamp: 6
-                  - visits: 8
+                    timestamp: 8
+                  - visits: 9
                     type: chicken_n_egg
-                    timestamp: 6
+                    timestamp: 8
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               bestiary:
                 kills:
@@ -2902,6 +2918,8 @@ components:
                 - adept
                 selected_power: selected_power
                 highest_magical_power: 5
+              collection:
+                key: 1
           game_mode: bingo
           community_upgrades: "{}"
           cute_name: cute_name
@@ -3024,9 +3042,9 @@ components:
       type: object
     SkyBlockProfileMemberRiftGallery_secured_trophies_inner:
       example:
-        visits: 8
+        visits: 9
         type: chicken_n_egg
-        timestamp: 6
+        timestamp: 8
       properties:
         timestamp:
           type: integer

@@ -21,6 +21,7 @@ var _ MappedNullable = &SkyBlockProfileMember{}
 type SkyBlockProfileMember struct {
 	AccessoryBagStorage *SkyBlockProfileMemberAccessoryBagStorage `json:"accessory_bag_storage,omitempty"`
 	Bestiary            *SkyBlockProfileMemberBestiary            `json:"bestiary,omitempty"`
+	Collection          *map[string]int64                         `json:"collection,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -106,6 +107,38 @@ func (o *SkyBlockProfileMember) SetBestiary(v SkyBlockProfileMemberBestiary) {
 	o.Bestiary = &v
 }
 
+// GetCollection returns the Collection field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetCollection() map[string]int64 {
+	if o == nil || IsNil(o.Collection) {
+		var ret map[string]int64
+		return ret
+	}
+	return *o.Collection
+}
+
+// GetCollectionOk returns a tuple with the Collection field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetCollectionOk() (*map[string]int64, bool) {
+	if o == nil || IsNil(o.Collection) {
+		return nil, false
+	}
+	return o.Collection, true
+}
+
+// HasCollection returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasCollection() bool {
+	if o != nil && !IsNil(o.Collection) {
+		return true
+	}
+
+	return false
+}
+
+// SetCollection gets a reference to the given map[string]int64 and assigns it to the Collection field.
+func (o *SkyBlockProfileMember) SetCollection(v map[string]int64) {
+	o.Collection = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -185,6 +218,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Bestiary) {
 		toSerialize["bestiary"] = o.Bestiary
+	}
+	if !IsNil(o.Collection) {
+		toSerialize["collection"] = o.Collection
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId
