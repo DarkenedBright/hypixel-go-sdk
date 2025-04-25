@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/DarkenedBright/hypixel-go-sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_HousingAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_HousingAPIService(t *testing.T) {
 
 	t.Run("Test HousingAPIService V2HousingActiveGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.HousingAPI.V2HousingActiveGet(context.Background()).Execute()
 
@@ -36,7 +37,7 @@ func Test_openapi_HousingAPIService(t *testing.T) {
 
 	t.Run("Test HousingAPIService V2HousingHouseGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.HousingAPI.V2HousingHouseGet(context.Background()).Execute()
 
@@ -48,7 +49,7 @@ func Test_openapi_HousingAPIService(t *testing.T) {
 
 	t.Run("Test HousingAPIService V2HousingHousesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.HousingAPI.V2HousingHousesGet(context.Background()).Execute()
 

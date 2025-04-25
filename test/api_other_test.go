@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/DarkenedBright/hypixel-go-sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_OtherAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_OtherAPIService(t *testing.T) {
 
 	t.Run("Test OtherAPIService V2BoostersGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OtherAPI.V2BoostersGet(context.Background()).Execute()
 
@@ -36,7 +37,7 @@ func Test_openapi_OtherAPIService(t *testing.T) {
 
 	t.Run("Test OtherAPIService V2CountsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OtherAPI.V2CountsGet(context.Background()).Execute()
 
@@ -48,7 +49,7 @@ func Test_openapi_OtherAPIService(t *testing.T) {
 
 	t.Run("Test OtherAPIService V2LeaderboardsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OtherAPI.V2LeaderboardsGet(context.Background()).Execute()
 
@@ -60,7 +61,7 @@ func Test_openapi_OtherAPIService(t *testing.T) {
 
 	t.Run("Test OtherAPIService V2PunishmentstatsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OtherAPI.V2PunishmentstatsGet(context.Background()).Execute()
 

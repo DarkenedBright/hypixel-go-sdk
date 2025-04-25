@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/DarkenedBright/hypixel-go-sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_ResourcesAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_ResourcesAPIService(t *testing.T) {
 
 	t.Run("Test ResourcesAPIService V2ResourcesAchievementsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ResourcesAPI.V2ResourcesAchievementsGet(context.Background()).Execute()
 
@@ -36,7 +37,7 @@ func Test_openapi_ResourcesAPIService(t *testing.T) {
 
 	t.Run("Test ResourcesAPIService V2ResourcesChallengesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ResourcesAPI.V2ResourcesChallengesGet(context.Background()).Execute()
 
@@ -48,7 +49,7 @@ func Test_openapi_ResourcesAPIService(t *testing.T) {
 
 	t.Run("Test ResourcesAPIService V2ResourcesGamesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ResourcesAPI.V2ResourcesGamesGet(context.Background()).Execute()
 
@@ -60,7 +61,7 @@ func Test_openapi_ResourcesAPIService(t *testing.T) {
 
 	t.Run("Test ResourcesAPIService V2ResourcesGuildsAchievementsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ResourcesAPI.V2ResourcesGuildsAchievementsGet(context.Background()).Execute()
 
@@ -72,7 +73,7 @@ func Test_openapi_ResourcesAPIService(t *testing.T) {
 
 	t.Run("Test ResourcesAPIService V2ResourcesQuestsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ResourcesAPI.V2ResourcesQuestsGet(context.Background()).Execute()
 
@@ -84,7 +85,7 @@ func Test_openapi_ResourcesAPIService(t *testing.T) {
 
 	t.Run("Test ResourcesAPIService V2ResourcesVanityCompanionsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ResourcesAPI.V2ResourcesVanityCompanionsGet(context.Background()).Execute()
 
@@ -96,7 +97,7 @@ func Test_openapi_ResourcesAPIService(t *testing.T) {
 
 	t.Run("Test ResourcesAPIService V2ResourcesVanityPetsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ResourcesAPI.V2ResourcesVanityPetsGet(context.Background()).Execute()
 

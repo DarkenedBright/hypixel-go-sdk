@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/DarkenedBright/hypixel-go-sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_PlayerDataAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_PlayerDataAPIService(t *testing.T) {
 
 	t.Run("Test PlayerDataAPIService V2GuildGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.PlayerDataAPI.V2GuildGet(context.Background()).Execute()
 
@@ -36,7 +37,7 @@ func Test_openapi_PlayerDataAPIService(t *testing.T) {
 
 	t.Run("Test PlayerDataAPIService V2PlayerGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.PlayerDataAPI.V2PlayerGet(context.Background()).Execute()
 
@@ -48,7 +49,7 @@ func Test_openapi_PlayerDataAPIService(t *testing.T) {
 
 	t.Run("Test PlayerDataAPIService V2RecentgamesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.PlayerDataAPI.V2RecentgamesGet(context.Background()).Execute()
 
@@ -60,7 +61,7 @@ func Test_openapi_PlayerDataAPIService(t *testing.T) {
 
 	t.Run("Test PlayerDataAPIService V2StatusGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.PlayerDataAPI.V2StatusGet(context.Background()).Execute()
 
