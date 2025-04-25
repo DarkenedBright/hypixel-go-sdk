@@ -606,6 +606,9 @@
                     "forge": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberForge"
                     },
+                    "garden_player_data": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberGardenPlayerData"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -1544,6 +1547,17 @@
                     },
                     "type": {
                         "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberGardenPlayerData": {
+                "properties": {
+                    "copper": {
+                        "type": "integer"
+                    },
+                    "larva_consumed": {
+                        "type": "integer"
                     }
                 },
                 "type": "object"

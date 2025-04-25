@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **Experimentation** | Pointer to [**SkyBlockProfileMemberExperimentation**](SkyBlockProfileMemberExperimentation.md) |  | [optional] 
 **FairySoul** | Pointer to [**SkyBlockProfileMemberFairySoul**](SkyBlockProfileMemberFairySoul.md) |  | [optional] 
 **Forge** | Pointer to [**SkyBlockProfileMemberForge**](SkyBlockProfileMemberForge.md) |  | [optional] 
+**GardenPlayerData** | Pointer to [**SkyBlockProfileMemberGardenPlayerData**](SkyBlockProfileMemberGardenPlayerData.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -259,6 +260,31 @@ SetForge sets Forge field to given value.
 `func (o *SkyBlockProfileMember) HasForge() bool`
 
 HasForge returns a boolean if a field has been set.
+
+### GetGardenPlayerData
+
+`func (o *SkyBlockProfileMember) GetGardenPlayerData() SkyBlockProfileMemberGardenPlayerData`
+
+GetGardenPlayerData returns the GardenPlayerData field if non-nil, zero value otherwise.
+
+### GetGardenPlayerDataOk
+
+`func (o *SkyBlockProfileMember) GetGardenPlayerDataOk() (*SkyBlockProfileMemberGardenPlayerData, bool)`
+
+GetGardenPlayerDataOk returns a tuple with the GardenPlayerData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGardenPlayerData
+
+`func (o *SkyBlockProfileMember) SetGardenPlayerData(v SkyBlockProfileMemberGardenPlayerData)`
+
+SetGardenPlayerData sets GardenPlayerData field to given value.
+
+### HasGardenPlayerData
+
+`func (o *SkyBlockProfileMember) HasGardenPlayerData() bool`
+
+HasGardenPlayerData returns a boolean if a field has been set.
 
 ### GetPlayerId
 
