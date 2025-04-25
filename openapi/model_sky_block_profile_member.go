@@ -22,6 +22,7 @@ type SkyBlockProfileMember struct {
 	AccessoryBagStorage *SkyBlockProfileMemberAccessoryBagStorage `json:"accessory_bag_storage,omitempty"`
 	Bestiary            *SkyBlockProfileMemberBestiary            `json:"bestiary,omitempty"`
 	Collection          *map[string]int64                         `json:"collection,omitempty"`
+	Currencies          *SkyBlockProfileMemberCurrencies          `json:"currencies,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -139,6 +140,38 @@ func (o *SkyBlockProfileMember) SetCollection(v map[string]int64) {
 	o.Collection = &v
 }
 
+// GetCurrencies returns the Currencies field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetCurrencies() SkyBlockProfileMemberCurrencies {
+	if o == nil || IsNil(o.Currencies) {
+		var ret SkyBlockProfileMemberCurrencies
+		return ret
+	}
+	return *o.Currencies
+}
+
+// GetCurrenciesOk returns a tuple with the Currencies field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetCurrenciesOk() (*SkyBlockProfileMemberCurrencies, bool) {
+	if o == nil || IsNil(o.Currencies) {
+		return nil, false
+	}
+	return o.Currencies, true
+}
+
+// HasCurrencies returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasCurrencies() bool {
+	if o != nil && !IsNil(o.Currencies) {
+		return true
+	}
+
+	return false
+}
+
+// SetCurrencies gets a reference to the given SkyBlockProfileMemberCurrencies and assigns it to the Currencies field.
+func (o *SkyBlockProfileMember) SetCurrencies(v SkyBlockProfileMemberCurrencies) {
+	o.Currencies = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -221,6 +254,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Collection) {
 		toSerialize["collection"] = o.Collection
+	}
+	if !IsNil(o.Currencies) {
+		toSerialize["currencies"] = o.Currencies
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId

@@ -184,6 +184,8 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberBestiaryKills](docs/SkyBlockProfileMemberBestiaryKills.md)
  - [SkyBlockProfileMemberBestiaryMilestone](docs/SkyBlockProfileMemberBestiaryMilestone.md)
  - [SkyBlockProfileMemberBestiaryMiscellaneous](docs/SkyBlockProfileMemberBestiaryMiscellaneous.md)
+ - [SkyBlockProfileMemberCurrencies](docs/SkyBlockProfileMemberCurrencies.md)
+ - [SkyBlockProfileMemberCurrenciesEssenceValue](docs/SkyBlockProfileMemberCurrenciesEssenceValue.md)
  - [SkyBlockProfileMemberRift](docs/SkyBlockProfileMemberRift.md)
  - [SkyBlockProfileMemberRiftBlackLagoon](docs/SkyBlockProfileMemberRiftBlackLagoon.md)
  - [SkyBlockProfileMemberRiftDeadCats](docs/SkyBlockProfileMemberRiftDeadCats.md)

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **AccessoryBagStorage** | Pointer to [**SkyBlockProfileMemberAccessoryBagStorage**](SkyBlockProfileMemberAccessoryBagStorage.md) |  | [optional] 
 **Bestiary** | Pointer to [**SkyBlockProfileMemberBestiary**](SkyBlockProfileMemberBestiary.md) |  | [optional] 
 **Collection** | Pointer to **map[string]int64** |  | [optional] 
+**Currencies** | Pointer to [**SkyBlockProfileMemberCurrencies**](SkyBlockProfileMemberCurrencies.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -103,6 +104,31 @@ SetCollection sets Collection field to given value.
 `func (o *SkyBlockProfileMember) HasCollection() bool`
 
 HasCollection returns a boolean if a field has been set.
+
+### GetCurrencies
+
+`func (o *SkyBlockProfileMember) GetCurrencies() SkyBlockProfileMemberCurrencies`
+
+GetCurrencies returns the Currencies field if non-nil, zero value otherwise.
+
+### GetCurrenciesOk
+
+`func (o *SkyBlockProfileMember) GetCurrenciesOk() (*SkyBlockProfileMemberCurrencies, bool)`
+
+GetCurrenciesOk returns a tuple with the Currencies field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCurrencies
+
+`func (o *SkyBlockProfileMember) SetCurrencies(v SkyBlockProfileMemberCurrencies)`
+
+SetCurrencies sets Currencies field to given value.
+
+### HasCurrencies
+
+`func (o *SkyBlockProfileMember) HasCurrencies() bool`
+
+HasCurrencies returns a boolean if a field has been set.
 
 ### GetPlayerId
 

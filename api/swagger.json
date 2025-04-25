@@ -588,6 +588,9 @@
                     "collection": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberCollection"
                     },
+                    "currencies": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberCurrencies"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -743,6 +746,28 @@
             "SkyBlockProfileMemberCollection": {
                 "additionalProperties": {
                     "type": "integer"
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberCurrencies": {
+                "properties": {
+                    "coin_purse": {
+                        "type": "number"
+                    },
+                    "essence": {
+                        "additionalProperties": {
+                            "properties": {
+                                "current": {
+                                    "type": "integer"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "object"
+                    },
+                    "motes_purse": {
+                        "type": "number"
+                    }
                 },
                 "type": "object"
             },
