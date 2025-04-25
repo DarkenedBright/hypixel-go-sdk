@@ -798,18 +798,18 @@ components:
           key:
             rift:
               wizard_tower:
-                wizard_quest_step: 0
-                crumbs_laid_out: 9
+                wizard_quest_step: 4
+                crumbs_laid_out: 0
               enigma:
                 found_souls:
                 - found_souls
                 - found_souls
                 bought_cloak: true
-                claimed_bonus_index: 0
+                claimed_bonus_index: 5
               black_lagoon:
                 received_science_paper: true
                 delivered_science_paper: true
-                completed_step: 9
+                completed_step: 6
                 talked_to_edwin: true
               dead_cats:
                 unlocked_pet: true
@@ -838,10 +838,10 @@ components:
                       HEALTH: 20
                     tier: RARE
                   active: true
-                  exp: 7.835035282970782
+                  exp: 2.9679475177256287
                   type: type
                   uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                  candyUsed: 5
+                  candyUsed: 0
                   uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                 found_cats:
                 - found_cats
@@ -850,20 +850,20 @@ components:
                 talked_to_jacquelle: true
               village_plaza:
                 murder:
-                  step_index_pt3: 4
-                  step_index: 0
-                  step_index_pt2: 7
+                  step_index_pt3: 7
+                  step_index: 9
+                  step_index_pt2: 9
                   room_clues:
                   - room_clues
                   - room_clues
                 cowboy:
-                  stage: 4
-                  hay_eaten: 8
+                  stage: 0
+                  hay_eaten: 4
                   rabbit_name: rabbit_name
                 barter_bank: "{}"
                 got_scammed: true
                 seraphine:
-                  step_index: 2
+                  step_index: 6
                 lonely:
                   seconds_sitting: 0
                 barry_center:
@@ -880,15 +880,72 @@ components:
                 sent_trophy_dialogues:
                 - sent_trophy_dialogues
                 - sent_trophy_dialogues
-                elise_step: 3
+                elise_step: 0
                 secured_trophies:
-                - visits: 3
+                - visits: 6
                   type: type
-                  timestamp: 2
-                - visits: 3
+                  timestamp: 7
+                - visits: 6
                   type: type
-                  timestamp: 2
+                  timestamp: 7
             player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            experimentation:
+              claims_resets: 5
+              simon:
+                bonus_clicks: 2
+                attempts_0: 3
+                claimed: true
+                attempts_5: 7
+                attempts_1: 9
+                attempts_2: 7
+                attempts_3: 7
+                last_attempt: 8
+                best_score_1: 1
+                best_score_0: 9
+                best_score_3: 3
+                best_score_2: 4
+                best_score_5: 8
+                last_claimed: 2
+                claims_5: 4
+                claims_2: 8
+                claims_3: 6
+                claims_0: 9
+                claims_1: 4
+              claimed_retroactive_rng: true
+              numbers:
+                bonus_clicks: 0
+                claimed: true
+                attempts_1: 0
+                attempts_2: 3
+                attempts_3: 2
+                last_attempt: 2
+                best_score_1: 3
+                best_score_3: 4
+                best_score_2: 8
+                last_claimed: 9
+                claims_2: 7
+                claims_3: 4
+                claims_1: 0
+              claims_resets_timestamp: 7
+              charge_track_timestamp: 9
+              serums_drank: 1
+              pairings:
+                bonus_clicks: 1
+                claimed: true
+                last_attempt: 5
+                best_score_1: 2
+                best_score_0: 0
+                best_score_3: 4
+                best_score_2: 6
+                best_score_5: 9
+                best_score_4: 6
+                last_claimed: 3
+                claims_4: 4
+                claims_5: 5
+                claims_2: 5
+                claims_3: 1
+                claims_0: 1
+                claims_1: 3
             dungeons:
               selected_dungeon_class: selected_dungeon_class
               dungeon_types:
@@ -1198,18 +1255,18 @@ components:
       example:
         rift:
           wizard_tower:
-            wizard_quest_step: 0
-            crumbs_laid_out: 9
+            wizard_quest_step: 4
+            crumbs_laid_out: 0
           enigma:
             found_souls:
             - found_souls
             - found_souls
             bought_cloak: true
-            claimed_bonus_index: 0
+            claimed_bonus_index: 5
           black_lagoon:
             received_science_paper: true
             delivered_science_paper: true
-            completed_step: 9
+            completed_step: 6
             talked_to_edwin: true
           dead_cats:
             unlocked_pet: true
@@ -1238,10 +1295,10 @@ components:
                   HEALTH: 20
                 tier: RARE
               active: true
-              exp: 7.835035282970782
+              exp: 2.9679475177256287
               type: type
               uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              candyUsed: 5
+              candyUsed: 0
               uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             found_cats:
             - found_cats
@@ -1250,20 +1307,20 @@ components:
             talked_to_jacquelle: true
           village_plaza:
             murder:
-              step_index_pt3: 4
-              step_index: 0
-              step_index_pt2: 7
+              step_index_pt3: 7
+              step_index: 9
+              step_index_pt2: 9
               room_clues:
               - room_clues
               - room_clues
             cowboy:
-              stage: 4
-              hay_eaten: 8
+              stage: 0
+              hay_eaten: 4
               rabbit_name: rabbit_name
             barter_bank: "{}"
             got_scammed: true
             seraphine:
-              step_index: 2
+              step_index: 6
             lonely:
               seconds_sitting: 0
             barry_center:
@@ -1280,15 +1337,72 @@ components:
             sent_trophy_dialogues:
             - sent_trophy_dialogues
             - sent_trophy_dialogues
-            elise_step: 3
+            elise_step: 0
             secured_trophies:
-            - visits: 3
+            - visits: 6
               type: type
-              timestamp: 2
-            - visits: 3
+              timestamp: 7
+            - visits: 6
               type: type
-              timestamp: 2
+              timestamp: 7
         player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        experimentation:
+          claims_resets: 5
+          simon:
+            bonus_clicks: 2
+            attempts_0: 3
+            claimed: true
+            attempts_5: 7
+            attempts_1: 9
+            attempts_2: 7
+            attempts_3: 7
+            last_attempt: 8
+            best_score_1: 1
+            best_score_0: 9
+            best_score_3: 3
+            best_score_2: 4
+            best_score_5: 8
+            last_claimed: 2
+            claims_5: 4
+            claims_2: 8
+            claims_3: 6
+            claims_0: 9
+            claims_1: 4
+          claimed_retroactive_rng: true
+          numbers:
+            bonus_clicks: 0
+            claimed: true
+            attempts_1: 0
+            attempts_2: 3
+            attempts_3: 2
+            last_attempt: 2
+            best_score_1: 3
+            best_score_3: 4
+            best_score_2: 8
+            last_claimed: 9
+            claims_2: 7
+            claims_3: 4
+            claims_1: 0
+          claims_resets_timestamp: 7
+          charge_track_timestamp: 9
+          serums_drank: 1
+          pairings:
+            bonus_clicks: 1
+            claimed: true
+            last_attempt: 5
+            best_score_1: 2
+            best_score_0: 0
+            best_score_3: 4
+            best_score_2: 6
+            best_score_5: 9
+            best_score_4: 6
+            last_claimed: 3
+            claims_4: 4
+            claims_5: 5
+            claims_2: 5
+            claims_3: 1
+            claims_0: 1
+            claims_1: 3
         dungeons:
           selected_dungeon_class: selected_dungeon_class
           dungeon_types:
@@ -1565,6 +1679,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberDungeons'
         events:
           $ref: '#/components/schemas/SkyBlockProfileMemberEvents'
+        experimentation:
+          $ref: '#/components/schemas/SkyBlockProfileMemberExperimentation'
         player_id:
           format: uuid
           type: string
@@ -2596,21 +2712,253 @@ components:
         level:
           type: integer
       type: object
+    SkyBlockProfileMemberExperimentation:
+      example:
+        claims_resets: 5
+        simon:
+          bonus_clicks: 2
+          attempts_0: 3
+          claimed: true
+          attempts_5: 7
+          attempts_1: 9
+          attempts_2: 7
+          attempts_3: 7
+          last_attempt: 8
+          best_score_1: 1
+          best_score_0: 9
+          best_score_3: 3
+          best_score_2: 4
+          best_score_5: 8
+          last_claimed: 2
+          claims_5: 4
+          claims_2: 8
+          claims_3: 6
+          claims_0: 9
+          claims_1: 4
+        claimed_retroactive_rng: true
+        numbers:
+          bonus_clicks: 0
+          claimed: true
+          attempts_1: 0
+          attempts_2: 3
+          attempts_3: 2
+          last_attempt: 2
+          best_score_1: 3
+          best_score_3: 4
+          best_score_2: 8
+          last_claimed: 9
+          claims_2: 7
+          claims_3: 4
+          claims_1: 0
+        claims_resets_timestamp: 7
+        charge_track_timestamp: 9
+        serums_drank: 1
+        pairings:
+          bonus_clicks: 1
+          claimed: true
+          last_attempt: 5
+          best_score_1: 2
+          best_score_0: 0
+          best_score_3: 4
+          best_score_2: 6
+          best_score_5: 9
+          best_score_4: 6
+          last_claimed: 3
+          claims_4: 4
+          claims_5: 5
+          claims_2: 5
+          claims_3: 1
+          claims_0: 1
+          claims_1: 3
+      properties:
+        charge_track_timestamp:
+          type: integer
+        claimed_retroactive_rng:
+          type: boolean
+        claims_resets:
+          type: integer
+        claims_resets_timestamp:
+          type: integer
+        numbers:
+          $ref: '#/components/schemas/SkyBlockProfileMemberExperimentationNumbers'
+        pairings:
+          $ref: '#/components/schemas/SkyBlockProfileMemberExperimentationPairings'
+        serums_drank:
+          type: integer
+        simon:
+          $ref: '#/components/schemas/SkyBlockProfileMemberExperimentationSimon'
+      type: object
+    SkyBlockProfileMemberExperimentationNumbers:
+      example:
+        bonus_clicks: 0
+        claimed: true
+        attempts_1: 0
+        attempts_2: 3
+        attempts_3: 2
+        last_attempt: 2
+        best_score_1: 3
+        best_score_3: 4
+        best_score_2: 8
+        last_claimed: 9
+        claims_2: 7
+        claims_3: 4
+        claims_1: 0
+      properties:
+        attempts_1:
+          type: integer
+        attempts_2:
+          type: integer
+        attempts_3:
+          type: integer
+        best_score_1:
+          type: integer
+        best_score_2:
+          type: integer
+        best_score_3:
+          type: integer
+        bonus_clicks:
+          type: integer
+        claimed:
+          type: boolean
+        claims_1:
+          type: integer
+        claims_2:
+          type: integer
+        claims_3:
+          type: integer
+        last_attempt:
+          type: integer
+        last_claimed:
+          type: integer
+      type: object
+    SkyBlockProfileMemberExperimentationPairings:
+      example:
+        bonus_clicks: 1
+        claimed: true
+        last_attempt: 5
+        best_score_1: 2
+        best_score_0: 0
+        best_score_3: 4
+        best_score_2: 6
+        best_score_5: 9
+        best_score_4: 6
+        last_claimed: 3
+        claims_4: 4
+        claims_5: 5
+        claims_2: 5
+        claims_3: 1
+        claims_0: 1
+        claims_1: 3
+      properties:
+        best_score_0:
+          type: integer
+        best_score_1:
+          type: integer
+        best_score_2:
+          type: integer
+        best_score_3:
+          type: integer
+        best_score_4:
+          type: integer
+        best_score_5:
+          type: integer
+        bonus_clicks:
+          type: integer
+        claimed:
+          type: boolean
+        claims_0:
+          type: integer
+        claims_1:
+          type: integer
+        claims_2:
+          type: integer
+        claims_3:
+          type: integer
+        claims_4:
+          type: integer
+        claims_5:
+          type: integer
+        last_attempt:
+          type: integer
+        last_claimed:
+          type: integer
+      type: object
+    SkyBlockProfileMemberExperimentationSimon:
+      example:
+        bonus_clicks: 2
+        attempts_0: 3
+        claimed: true
+        attempts_5: 7
+        attempts_1: 9
+        attempts_2: 7
+        attempts_3: 7
+        last_attempt: 8
+        best_score_1: 1
+        best_score_0: 9
+        best_score_3: 3
+        best_score_2: 4
+        best_score_5: 8
+        last_claimed: 2
+        claims_5: 4
+        claims_2: 8
+        claims_3: 6
+        claims_0: 9
+        claims_1: 4
+      properties:
+        attempts_0:
+          type: integer
+        attempts_1:
+          type: integer
+        attempts_2:
+          type: integer
+        attempts_3:
+          type: integer
+        attempts_5:
+          type: integer
+        best_score_0:
+          type: integer
+        best_score_1:
+          type: integer
+        best_score_2:
+          type: integer
+        best_score_3:
+          type: integer
+        best_score_5:
+          type: integer
+        bonus_clicks:
+          type: integer
+        claimed:
+          type: boolean
+        claims_0:
+          type: integer
+        claims_1:
+          type: integer
+        claims_2:
+          type: integer
+        claims_3:
+          type: integer
+        claims_5:
+          type: integer
+        last_attempt:
+          type: integer
+        last_claimed:
+          type: integer
+      type: object
     SkyBlockProfileMemberRift:
       example:
         wizard_tower:
-          wizard_quest_step: 0
-          crumbs_laid_out: 9
+          wizard_quest_step: 4
+          crumbs_laid_out: 0
         enigma:
           found_souls:
           - found_souls
           - found_souls
           bought_cloak: true
-          claimed_bonus_index: 0
+          claimed_bonus_index: 5
         black_lagoon:
           received_science_paper: true
           delivered_science_paper: true
-          completed_step: 9
+          completed_step: 6
           talked_to_edwin: true
         dead_cats:
           unlocked_pet: true
@@ -2639,10 +2987,10 @@ components:
                 HEALTH: 20
               tier: RARE
             active: true
-            exp: 7.835035282970782
+            exp: 2.9679475177256287
             type: type
             uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            candyUsed: 5
+            candyUsed: 0
             uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           found_cats:
           - found_cats
@@ -2651,20 +2999,20 @@ components:
           talked_to_jacquelle: true
         village_plaza:
           murder:
-            step_index_pt3: 4
-            step_index: 0
-            step_index_pt2: 7
+            step_index_pt3: 7
+            step_index: 9
+            step_index_pt2: 9
             room_clues:
             - room_clues
             - room_clues
           cowboy:
-            stage: 4
-            hay_eaten: 8
+            stage: 0
+            hay_eaten: 4
             rabbit_name: rabbit_name
           barter_bank: "{}"
           got_scammed: true
           seraphine:
-            step_index: 2
+            step_index: 6
           lonely:
             seconds_sitting: 0
           barry_center:
@@ -2681,14 +3029,14 @@ components:
           sent_trophy_dialogues:
           - sent_trophy_dialogues
           - sent_trophy_dialogues
-          elise_step: 3
+          elise_step: 0
           secured_trophies:
-          - visits: 3
+          - visits: 6
             type: type
-            timestamp: 2
-          - visits: 3
+            timestamp: 7
+          - visits: 6
             type: type
-            timestamp: 2
+            timestamp: 7
       properties:
         black_lagoon:
           $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
@@ -2709,7 +3057,7 @@ components:
       example:
         received_science_paper: true
         delivered_science_paper: true
-        completed_step: 9
+        completed_step: 6
         talked_to_edwin: true
       properties:
         completed_step:
@@ -2749,10 +3097,10 @@ components:
               HEALTH: 20
             tier: RARE
           active: true
-          exp: 7.835035282970782
+          exp: 2.9679475177256287
           type: type
           uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          candyUsed: 5
+          candyUsed: 0
           uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         found_cats:
         - found_cats
@@ -2799,10 +3147,10 @@ components:
             HEALTH: 20
           tier: RARE
         active: true
-        exp: 7.835035282970782
+        exp: 2.9679475177256287
         type: type
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        candyUsed: 5
+        candyUsed: 0
         uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         active:
@@ -2832,7 +3180,7 @@ components:
         - found_souls
         - found_souls
         bought_cloak: true
-        claimed_bonus_index: 0
+        claimed_bonus_index: 5
       properties:
         bought_cloak:
           type: boolean
@@ -2848,14 +3196,14 @@ components:
         sent_trophy_dialogues:
         - sent_trophy_dialogues
         - sent_trophy_dialogues
-        elise_step: 3
+        elise_step: 0
         secured_trophies:
-        - visits: 3
+        - visits: 6
           type: type
-          timestamp: 2
-        - visits: 3
+          timestamp: 7
+        - visits: 6
           type: type
-          timestamp: 2
+          timestamp: 7
       properties:
         elise_step:
           type: integer
@@ -2871,20 +3219,20 @@ components:
     SkyBlockProfileMemberRiftVillagePlaza:
       example:
         murder:
-          step_index_pt3: 4
-          step_index: 0
-          step_index_pt2: 7
+          step_index_pt3: 7
+          step_index: 9
+          step_index_pt2: 9
           room_clues:
           - room_clues
           - room_clues
         cowboy:
-          stage: 4
-          hay_eaten: 8
+          stage: 0
+          hay_eaten: 4
           rabbit_name: rabbit_name
         barter_bank: "{}"
         got_scammed: true
         seraphine:
-          step_index: 2
+          step_index: 6
         lonely:
           seconds_sitting: 0
         barry_center:
@@ -2932,8 +3280,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaCowboy:
       example:
-        stage: 4
-        hay_eaten: 8
+        stage: 0
+        hay_eaten: 4
         rabbit_name: rabbit_name
       properties:
         hay_eaten:
@@ -2952,9 +3300,9 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaMurder:
       example:
-        step_index_pt3: 4
-        step_index: 0
-        step_index_pt2: 7
+        step_index_pt3: 7
+        step_index: 9
+        step_index_pt2: 9
         room_clues:
         - room_clues
         - room_clues
@@ -2972,7 +3320,7 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaSeraphine:
       example:
-        step_index: 2
+        step_index: 6
       properties:
         step_index:
           type: integer
@@ -2990,8 +3338,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftWizardTower:
       example:
-        wizard_quest_step: 0
-        crumbs_laid_out: 9
+        wizard_quest_step: 4
+        crumbs_laid_out: 0
       properties:
         crumbs_laid_out:
           type: integer
@@ -3509,18 +3857,18 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 0
-                  crumbs_laid_out: 9
+                  wizard_quest_step: 4
+                  crumbs_laid_out: 0
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 0
+                  claimed_bonus_index: 5
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 9
+                  completed_step: 6
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -3549,10 +3897,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 7.835035282970782
+                    exp: 2.9679475177256287
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 5
+                    candyUsed: 0
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -3561,20 +3909,20 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 4
-                    step_index: 0
-                    step_index_pt2: 7
+                    step_index_pt3: 7
+                    step_index: 9
+                    step_index_pt2: 9
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 4
-                    hay_eaten: 8
+                    stage: 0
+                    hay_eaten: 4
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 2
+                    step_index: 6
                   lonely:
                     seconds_sitting: 0
                   barry_center:
@@ -3591,15 +3939,72 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 3
+                  elise_step: 0
                   secured_trophies:
-                  - visits: 3
+                  - visits: 6
                     type: type
-                    timestamp: 2
-                  - visits: 3
+                    timestamp: 7
+                  - visits: 6
                     type: type
-                    timestamp: 2
+                    timestamp: 7
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              experimentation:
+                claims_resets: 5
+                simon:
+                  bonus_clicks: 2
+                  attempts_0: 3
+                  claimed: true
+                  attempts_5: 7
+                  attempts_1: 9
+                  attempts_2: 7
+                  attempts_3: 7
+                  last_attempt: 8
+                  best_score_1: 1
+                  best_score_0: 9
+                  best_score_3: 3
+                  best_score_2: 4
+                  best_score_5: 8
+                  last_claimed: 2
+                  claims_5: 4
+                  claims_2: 8
+                  claims_3: 6
+                  claims_0: 9
+                  claims_1: 4
+                claimed_retroactive_rng: true
+                numbers:
+                  bonus_clicks: 0
+                  claimed: true
+                  attempts_1: 0
+                  attempts_2: 3
+                  attempts_3: 2
+                  last_attempt: 2
+                  best_score_1: 3
+                  best_score_3: 4
+                  best_score_2: 8
+                  last_claimed: 9
+                  claims_2: 7
+                  claims_3: 4
+                  claims_1: 0
+                claims_resets_timestamp: 7
+                charge_track_timestamp: 9
+                serums_drank: 1
+                pairings:
+                  bonus_clicks: 1
+                  claimed: true
+                  last_attempt: 5
+                  best_score_1: 2
+                  best_score_0: 0
+                  best_score_3: 4
+                  best_score_2: 6
+                  best_score_5: 9
+                  best_score_4: 6
+                  last_claimed: 3
+                  claims_4: 4
+                  claims_5: 5
+                  claims_2: 5
+                  claims_3: 1
+                  claims_0: 1
+                  claims_1: 3
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
@@ -3891,18 +4296,18 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 0
-                  crumbs_laid_out: 9
+                  wizard_quest_step: 4
+                  crumbs_laid_out: 0
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 0
+                  claimed_bonus_index: 5
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 9
+                  completed_step: 6
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -3931,10 +4336,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 7.835035282970782
+                    exp: 2.9679475177256287
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 5
+                    candyUsed: 0
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -3943,20 +4348,20 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 4
-                    step_index: 0
-                    step_index_pt2: 7
+                    step_index_pt3: 7
+                    step_index: 9
+                    step_index_pt2: 9
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 4
-                    hay_eaten: 8
+                    stage: 0
+                    hay_eaten: 4
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 2
+                    step_index: 6
                   lonely:
                     seconds_sitting: 0
                   barry_center:
@@ -3973,15 +4378,72 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 3
+                  elise_step: 0
                   secured_trophies:
-                  - visits: 3
+                  - visits: 6
                     type: type
-                    timestamp: 2
-                  - visits: 3
+                    timestamp: 7
+                  - visits: 6
                     type: type
-                    timestamp: 2
+                    timestamp: 7
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              experimentation:
+                claims_resets: 5
+                simon:
+                  bonus_clicks: 2
+                  attempts_0: 3
+                  claimed: true
+                  attempts_5: 7
+                  attempts_1: 9
+                  attempts_2: 7
+                  attempts_3: 7
+                  last_attempt: 8
+                  best_score_1: 1
+                  best_score_0: 9
+                  best_score_3: 3
+                  best_score_2: 4
+                  best_score_5: 8
+                  last_claimed: 2
+                  claims_5: 4
+                  claims_2: 8
+                  claims_3: 6
+                  claims_0: 9
+                  claims_1: 4
+                claimed_retroactive_rng: true
+                numbers:
+                  bonus_clicks: 0
+                  claimed: true
+                  attempts_1: 0
+                  attempts_2: 3
+                  attempts_3: 2
+                  last_attempt: 2
+                  best_score_1: 3
+                  best_score_3: 4
+                  best_score_2: 8
+                  last_claimed: 9
+                  claims_2: 7
+                  claims_3: 4
+                  claims_1: 0
+                claims_resets_timestamp: 7
+                charge_track_timestamp: 9
+                serums_drank: 1
+                pairings:
+                  bonus_clicks: 1
+                  claimed: true
+                  last_attempt: 5
+                  best_score_1: 2
+                  best_score_0: 0
+                  best_score_3: 4
+                  best_score_2: 6
+                  best_score_5: 9
+                  best_score_4: 6
+                  last_claimed: 3
+                  claims_4: 4
+                  claims_5: 5
+                  claims_2: 5
+                  claims_3: 1
+                  claims_0: 1
+                  claims_1: 3
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
@@ -4263,18 +4725,18 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 0
-                  crumbs_laid_out: 9
+                  wizard_quest_step: 4
+                  crumbs_laid_out: 0
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 0
+                  claimed_bonus_index: 5
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 9
+                  completed_step: 6
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -4303,10 +4765,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 7.835035282970782
+                    exp: 2.9679475177256287
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 5
+                    candyUsed: 0
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -4315,20 +4777,20 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 4
-                    step_index: 0
-                    step_index_pt2: 7
+                    step_index_pt3: 7
+                    step_index: 9
+                    step_index_pt2: 9
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 4
-                    hay_eaten: 8
+                    stage: 0
+                    hay_eaten: 4
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 2
+                    step_index: 6
                   lonely:
                     seconds_sitting: 0
                   barry_center:
@@ -4345,15 +4807,72 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 3
+                  elise_step: 0
                   secured_trophies:
-                  - visits: 3
+                  - visits: 6
                     type: type
-                    timestamp: 2
-                  - visits: 3
+                    timestamp: 7
+                  - visits: 6
                     type: type
-                    timestamp: 2
+                    timestamp: 7
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              experimentation:
+                claims_resets: 5
+                simon:
+                  bonus_clicks: 2
+                  attempts_0: 3
+                  claimed: true
+                  attempts_5: 7
+                  attempts_1: 9
+                  attempts_2: 7
+                  attempts_3: 7
+                  last_attempt: 8
+                  best_score_1: 1
+                  best_score_0: 9
+                  best_score_3: 3
+                  best_score_2: 4
+                  best_score_5: 8
+                  last_claimed: 2
+                  claims_5: 4
+                  claims_2: 8
+                  claims_3: 6
+                  claims_0: 9
+                  claims_1: 4
+                claimed_retroactive_rng: true
+                numbers:
+                  bonus_clicks: 0
+                  claimed: true
+                  attempts_1: 0
+                  attempts_2: 3
+                  attempts_3: 2
+                  last_attempt: 2
+                  best_score_1: 3
+                  best_score_3: 4
+                  best_score_2: 8
+                  last_claimed: 9
+                  claims_2: 7
+                  claims_3: 4
+                  claims_1: 0
+                claims_resets_timestamp: 7
+                charge_track_timestamp: 9
+                serums_drank: 1
+                pairings:
+                  bonus_clicks: 1
+                  claimed: true
+                  last_attempt: 5
+                  best_score_1: 2
+                  best_score_0: 0
+                  best_score_3: 4
+                  best_score_2: 6
+                  best_score_5: 9
+                  best_score_4: 6
+                  last_claimed: 3
+                  claims_4: 4
+                  claims_5: 5
+                  claims_2: 5
+                  claims_3: 1
+                  claims_0: 1
+                  claims_1: 3
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
@@ -4737,9 +5256,9 @@ components:
       type: object
     SkyBlockProfileMemberRiftGallery_secured_trophies_inner:
       example:
-        visits: 3
+        visits: 6
         type: type
-        timestamp: 2
+        timestamp: 7
       properties:
         timestamp:
           type: integer

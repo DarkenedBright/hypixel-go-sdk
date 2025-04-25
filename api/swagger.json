@@ -597,6 +597,9 @@
                     "events": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberEvents"
                     },
+                    "experimentation": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberExperimentation"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -1285,6 +1288,194 @@
                         "type": "integer"
                     },
                     "level": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberExperimentation": {
+                "properties": {
+                    "charge_track_timestamp": {
+                        "type": "integer"
+                    },
+                    "claimed_retroactive_rng": {
+                        "type": "boolean"
+                    },
+                    "claims_resets": {
+                        "type": "integer"
+                    },
+                    "claims_resets_timestamp": {
+                        "type": "integer"
+                    },
+                    "numbers": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberExperimentationNumbers"
+                    },
+                    "pairings": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberExperimentationPairings"
+                    },
+                    "serums_drank": {
+                        "type": "integer"
+                    },
+                    "simon": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberExperimentationSimon"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberExperimentationNumbers": {
+                "properties": {
+                    "attempts_1": {
+                        "type": "integer"
+                    },
+                    "attempts_2": {
+                        "type": "integer"
+                    },
+                    "attempts_3": {
+                        "type": "integer"
+                    },
+                    "best_score_1": {
+                        "type": "integer"
+                    },
+                    "best_score_2": {
+                        "type": "integer"
+                    },
+                    "best_score_3": {
+                        "type": "integer"
+                    },
+                    "bonus_clicks": {
+                        "type": "integer"
+                    },
+                    "claimed": {
+                        "type": "boolean"
+                    },
+                    "claims_1": {
+                        "type": "integer"
+                    },
+                    "claims_2": {
+                        "type": "integer"
+                    },
+                    "claims_3": {
+                        "type": "integer"
+                    },
+                    "last_attempt": {
+                        "type": "integer"
+                    },
+                    "last_claimed": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberExperimentationPairings": {
+                "properties": {
+                    "best_score_0": {
+                        "type": "integer"
+                    },
+                    "best_score_1": {
+                        "type": "integer"
+                    },
+                    "best_score_2": {
+                        "type": "integer"
+                    },
+                    "best_score_3": {
+                        "type": "integer"
+                    },
+                    "best_score_4": {
+                        "type": "integer"
+                    },
+                    "best_score_5": {
+                        "type": "integer"
+                    },
+                    "bonus_clicks": {
+                        "type": "integer"
+                    },
+                    "claimed": {
+                        "type": "boolean"
+                    },
+                    "claims_0": {
+                        "type": "integer"
+                    },
+                    "claims_1": {
+                        "type": "integer"
+                    },
+                    "claims_2": {
+                        "type": "integer"
+                    },
+                    "claims_3": {
+                        "type": "integer"
+                    },
+                    "claims_4": {
+                        "type": "integer"
+                    },
+                    "claims_5": {
+                        "type": "integer"
+                    },
+                    "last_attempt": {
+                        "type": "integer"
+                    },
+                    "last_claimed": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberExperimentationSimon": {
+                "properties": {
+                    "attempts_0": {
+                        "type": "integer"
+                    },
+                    "attempts_1": {
+                        "type": "integer"
+                    },
+                    "attempts_2": {
+                        "type": "integer"
+                    },
+                    "attempts_3": {
+                        "type": "integer"
+                    },
+                    "attempts_5": {
+                        "type": "integer"
+                    },
+                    "best_score_0": {
+                        "type": "integer"
+                    },
+                    "best_score_1": {
+                        "type": "integer"
+                    },
+                    "best_score_2": {
+                        "type": "integer"
+                    },
+                    "best_score_3": {
+                        "type": "integer"
+                    },
+                    "best_score_5": {
+                        "type": "integer"
+                    },
+                    "bonus_clicks": {
+                        "type": "integer"
+                    },
+                    "claimed": {
+                        "type": "boolean"
+                    },
+                    "claims_0": {
+                        "type": "integer"
+                    },
+                    "claims_1": {
+                        "type": "integer"
+                    },
+                    "claims_2": {
+                        "type": "integer"
+                    },
+                    "claims_3": {
+                        "type": "integer"
+                    },
+                    "claims_5": {
+                        "type": "integer"
+                    },
+                    "last_attempt": {
+                        "type": "integer"
+                    },
+                    "last_claimed": {
                         "type": "integer"
                     }
                 },

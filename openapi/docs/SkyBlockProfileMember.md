@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Currencies** | Pointer to [**SkyBlockProfileMemberCurrencies**](SkyBlockProfileMemberCurrencies.md) |  | [optional] 
 **Dungeons** | Pointer to [**SkyBlockProfileMemberDungeons**](SkyBlockProfileMemberDungeons.md) |  | [optional] 
 **Events** | Pointer to [**SkyBlockProfileMemberEvents**](SkyBlockProfileMemberEvents.md) |  | [optional] 
+**Experimentation** | Pointer to [**SkyBlockProfileMemberExperimentation**](SkyBlockProfileMemberExperimentation.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -181,6 +182,31 @@ SetEvents sets Events field to given value.
 `func (o *SkyBlockProfileMember) HasEvents() bool`
 
 HasEvents returns a boolean if a field has been set.
+
+### GetExperimentation
+
+`func (o *SkyBlockProfileMember) GetExperimentation() SkyBlockProfileMemberExperimentation`
+
+GetExperimentation returns the Experimentation field if non-nil, zero value otherwise.
+
+### GetExperimentationOk
+
+`func (o *SkyBlockProfileMember) GetExperimentationOk() (*SkyBlockProfileMemberExperimentation, bool)`
+
+GetExperimentationOk returns a tuple with the Experimentation field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExperimentation
+
+`func (o *SkyBlockProfileMember) SetExperimentation(v SkyBlockProfileMemberExperimentation)`
+
+SetExperimentation sets Experimentation field to given value.
+
+### HasExperimentation
+
+`func (o *SkyBlockProfileMember) HasExperimentation() bool`
+
+HasExperimentation returns a boolean if a field has been set.
 
 ### GetPlayerId
 

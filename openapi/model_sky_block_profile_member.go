@@ -25,6 +25,7 @@ type SkyBlockProfileMember struct {
 	Currencies          *SkyBlockProfileMemberCurrencies          `json:"currencies,omitempty"`
 	Dungeons            *SkyBlockProfileMemberDungeons            `json:"dungeons,omitempty"`
 	Events              *SkyBlockProfileMemberEvents              `json:"events,omitempty"`
+	Experimentation     *SkyBlockProfileMemberExperimentation     `json:"experimentation,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -238,6 +239,38 @@ func (o *SkyBlockProfileMember) SetEvents(v SkyBlockProfileMemberEvents) {
 	o.Events = &v
 }
 
+// GetExperimentation returns the Experimentation field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetExperimentation() SkyBlockProfileMemberExperimentation {
+	if o == nil || IsNil(o.Experimentation) {
+		var ret SkyBlockProfileMemberExperimentation
+		return ret
+	}
+	return *o.Experimentation
+}
+
+// GetExperimentationOk returns a tuple with the Experimentation field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetExperimentationOk() (*SkyBlockProfileMemberExperimentation, bool) {
+	if o == nil || IsNil(o.Experimentation) {
+		return nil, false
+	}
+	return o.Experimentation, true
+}
+
+// HasExperimentation returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasExperimentation() bool {
+	if o != nil && !IsNil(o.Experimentation) {
+		return true
+	}
+
+	return false
+}
+
+// SetExperimentation gets a reference to the given SkyBlockProfileMemberExperimentation and assigns it to the Experimentation field.
+func (o *SkyBlockProfileMember) SetExperimentation(v SkyBlockProfileMemberExperimentation) {
+	o.Experimentation = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -329,6 +362,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Events) {
 		toSerialize["events"] = o.Events
+	}
+	if !IsNil(o.Experimentation) {
+		toSerialize["experimentation"] = o.Experimentation
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId
