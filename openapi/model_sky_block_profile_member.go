@@ -19,9 +19,10 @@ var _ MappedNullable = &SkyBlockProfileMember{}
 
 // SkyBlockProfileMember struct for SkyBlockProfileMember
 type SkyBlockProfileMember struct {
-	AccessoryBagStorage NullableSkyBlockProfileMemberAccessoryBagStorage `json:"accessory_bag_storage,omitempty"`
-	PlayerId            *string                                          `json:"player_id,omitempty"`
-	Rift                NullableSkyBlockProfileMemberRift                `json:"rift,omitempty"`
+	AccessoryBagStorage *SkyBlockProfileMemberAccessoryBagStorage `json:"accessory_bag_storage,omitempty"`
+	Bestiary            *SkyBlockProfileMemberBestiary            `json:"bestiary,omitempty"`
+	PlayerId            *string                                   `json:"player_id,omitempty"`
+	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
 
 // NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
@@ -41,47 +42,68 @@ func NewSkyBlockProfileMemberWithDefaults() *SkyBlockProfileMember {
 	return &this
 }
 
-// GetAccessoryBagStorage returns the AccessoryBagStorage field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetAccessoryBagStorage returns the AccessoryBagStorage field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetAccessoryBagStorage() SkyBlockProfileMemberAccessoryBagStorage {
-	if o == nil || IsNil(o.AccessoryBagStorage.Get()) {
+	if o == nil || IsNil(o.AccessoryBagStorage) {
 		var ret SkyBlockProfileMemberAccessoryBagStorage
 		return ret
 	}
-	return *o.AccessoryBagStorage.Get()
+	return *o.AccessoryBagStorage
 }
 
 // GetAccessoryBagStorageOk returns a tuple with the AccessoryBagStorage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMember) GetAccessoryBagStorageOk() (*SkyBlockProfileMemberAccessoryBagStorage, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.AccessoryBagStorage) {
 		return nil, false
 	}
-	return o.AccessoryBagStorage.Get(), o.AccessoryBagStorage.IsSet()
+	return o.AccessoryBagStorage, true
 }
 
 // HasAccessoryBagStorage returns a boolean if a field has been set.
 func (o *SkyBlockProfileMember) HasAccessoryBagStorage() bool {
-	if o != nil && o.AccessoryBagStorage.IsSet() {
+	if o != nil && !IsNil(o.AccessoryBagStorage) {
 		return true
 	}
 
 	return false
 }
 
-// SetAccessoryBagStorage gets a reference to the given NullableSkyBlockProfileMemberAccessoryBagStorage and assigns it to the AccessoryBagStorage field.
+// SetAccessoryBagStorage gets a reference to the given SkyBlockProfileMemberAccessoryBagStorage and assigns it to the AccessoryBagStorage field.
 func (o *SkyBlockProfileMember) SetAccessoryBagStorage(v SkyBlockProfileMemberAccessoryBagStorage) {
-	o.AccessoryBagStorage.Set(&v)
+	o.AccessoryBagStorage = &v
 }
 
-// SetAccessoryBagStorageNil sets the value for AccessoryBagStorage to be an explicit nil
-func (o *SkyBlockProfileMember) SetAccessoryBagStorageNil() {
-	o.AccessoryBagStorage.Set(nil)
+// GetBestiary returns the Bestiary field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetBestiary() SkyBlockProfileMemberBestiary {
+	if o == nil || IsNil(o.Bestiary) {
+		var ret SkyBlockProfileMemberBestiary
+		return ret
+	}
+	return *o.Bestiary
 }
 
-// UnsetAccessoryBagStorage ensures that no value is present for AccessoryBagStorage, not even an explicit nil
-func (o *SkyBlockProfileMember) UnsetAccessoryBagStorage() {
-	o.AccessoryBagStorage.Unset()
+// GetBestiaryOk returns a tuple with the Bestiary field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetBestiaryOk() (*SkyBlockProfileMemberBestiary, bool) {
+	if o == nil || IsNil(o.Bestiary) {
+		return nil, false
+	}
+	return o.Bestiary, true
+}
+
+// HasBestiary returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasBestiary() bool {
+	if o != nil && !IsNil(o.Bestiary) {
+		return true
+	}
+
+	return false
+}
+
+// SetBestiary gets a reference to the given SkyBlockProfileMemberBestiary and assigns it to the Bestiary field.
+func (o *SkyBlockProfileMember) SetBestiary(v SkyBlockProfileMemberBestiary) {
+	o.Bestiary = &v
 }
 
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
@@ -116,47 +138,36 @@ func (o *SkyBlockProfileMember) SetPlayerId(v string) {
 	o.PlayerId = &v
 }
 
-// GetRift returns the Rift field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetRift returns the Rift field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetRift() SkyBlockProfileMemberRift {
-	if o == nil || IsNil(o.Rift.Get()) {
+	if o == nil || IsNil(o.Rift) {
 		var ret SkyBlockProfileMemberRift
 		return ret
 	}
-	return *o.Rift.Get()
+	return *o.Rift
 }
 
 // GetRiftOk returns a tuple with the Rift field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMember) GetRiftOk() (*SkyBlockProfileMemberRift, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Rift) {
 		return nil, false
 	}
-	return o.Rift.Get(), o.Rift.IsSet()
+	return o.Rift, true
 }
 
 // HasRift returns a boolean if a field has been set.
 func (o *SkyBlockProfileMember) HasRift() bool {
-	if o != nil && o.Rift.IsSet() {
+	if o != nil && !IsNil(o.Rift) {
 		return true
 	}
 
 	return false
 }
 
-// SetRift gets a reference to the given NullableSkyBlockProfileMemberRift and assigns it to the Rift field.
+// SetRift gets a reference to the given SkyBlockProfileMemberRift and assigns it to the Rift field.
 func (o *SkyBlockProfileMember) SetRift(v SkyBlockProfileMemberRift) {
-	o.Rift.Set(&v)
-}
-
-// SetRiftNil sets the value for Rift to be an explicit nil
-func (o *SkyBlockProfileMember) SetRiftNil() {
-	o.Rift.Set(nil)
-}
-
-// UnsetRift ensures that no value is present for Rift, not even an explicit nil
-func (o *SkyBlockProfileMember) UnsetRift() {
-	o.Rift.Unset()
+	o.Rift = &v
 }
 
 func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
@@ -169,14 +180,17 @@ func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AccessoryBagStorage.IsSet() {
-		toSerialize["accessory_bag_storage"] = o.AccessoryBagStorage.Get()
+	if !IsNil(o.AccessoryBagStorage) {
+		toSerialize["accessory_bag_storage"] = o.AccessoryBagStorage
+	}
+	if !IsNil(o.Bestiary) {
+		toSerialize["bestiary"] = o.Bestiary
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId
 	}
-	if o.Rift.IsSet() {
-		toSerialize["rift"] = o.Rift.Get()
+	if !IsNil(o.Rift) {
+		toSerialize["rift"] = o.Rift
 	}
 	return toSerialize, nil
 }

@@ -19,14 +19,14 @@ var _ MappedNullable = &QueuedBooster{}
 
 // QueuedBooster struct for QueuedBooster
 type QueuedBooster struct {
-	Id             *string      `json:"_id,omitempty"`
-	Amount         *int64       `json:"amount,omitempty"`
-	DateActivated  *int64       `json:"dateActivated,omitempty"`
-	GameType       *int64       `json:"gameType,omitempty"`
-	Length         *int64       `json:"length,omitempty"`
-	OriginalLength *int64       `json:"originalLength,omitempty"`
-	PurchaserUuid  *string      `json:"purchaserUuid,omitempty"`
-	Stacked        NullableBool `json:"stacked,omitempty"`
+	Id             *string `json:"_id,omitempty"`
+	Amount         *int64  `json:"amount,omitempty"`
+	DateActivated  *int64  `json:"dateActivated,omitempty"`
+	GameType       *int64  `json:"gameType,omitempty"`
+	Length         *int64  `json:"length,omitempty"`
+	OriginalLength *int64  `json:"originalLength,omitempty"`
+	PurchaserUuid  *string `json:"purchaserUuid,omitempty"`
+	Stacked        *bool   `json:"stacked,omitempty"`
 }
 
 // NewQueuedBooster instantiates a new QueuedBooster object
@@ -270,47 +270,36 @@ func (o *QueuedBooster) SetPurchaserUuid(v string) {
 	o.PurchaserUuid = &v
 }
 
-// GetStacked returns the Stacked field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetStacked returns the Stacked field value if set, zero value otherwise.
 func (o *QueuedBooster) GetStacked() bool {
-	if o == nil || IsNil(o.Stacked.Get()) {
+	if o == nil || IsNil(o.Stacked) {
 		var ret bool
 		return ret
 	}
-	return *o.Stacked.Get()
+	return *o.Stacked
 }
 
 // GetStackedOk returns a tuple with the Stacked field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *QueuedBooster) GetStackedOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Stacked) {
 		return nil, false
 	}
-	return o.Stacked.Get(), o.Stacked.IsSet()
+	return o.Stacked, true
 }
 
 // HasStacked returns a boolean if a field has been set.
 func (o *QueuedBooster) HasStacked() bool {
-	if o != nil && o.Stacked.IsSet() {
+	if o != nil && !IsNil(o.Stacked) {
 		return true
 	}
 
 	return false
 }
 
-// SetStacked gets a reference to the given NullableBool and assigns it to the Stacked field.
+// SetStacked gets a reference to the given bool and assigns it to the Stacked field.
 func (o *QueuedBooster) SetStacked(v bool) {
-	o.Stacked.Set(&v)
-}
-
-// SetStackedNil sets the value for Stacked to be an explicit nil
-func (o *QueuedBooster) SetStackedNil() {
-	o.Stacked.Set(nil)
-}
-
-// UnsetStacked ensures that no value is present for Stacked, not even an explicit nil
-func (o *QueuedBooster) UnsetStacked() {
-	o.Stacked.Unset()
+	o.Stacked = &v
 }
 
 func (o QueuedBooster) MarshalJSON() ([]byte, error) {
@@ -344,8 +333,8 @@ func (o QueuedBooster) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.PurchaserUuid) {
 		toSerialize["purchaserUuid"] = o.PurchaserUuid
 	}
-	if o.Stacked.IsSet() {
-		toSerialize["stacked"] = o.Stacked.Get()
+	if !IsNil(o.Stacked) {
+		toSerialize["stacked"] = o.Stacked
 	}
 	return toSerialize, nil
 }

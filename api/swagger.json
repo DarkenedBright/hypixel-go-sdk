@@ -186,7 +186,6 @@
                                     "format": "uuid",
                                     "type": "string"
                                 },
-                                "nullable": true,
                                 "type": "array"
                             }
                         },
@@ -230,7 +229,6 @@
                     {
                         "properties": {
                             "stacked": {
-                                "nullable": true,
                                 "type": "boolean"
                             }
                         },
@@ -515,7 +513,6 @@
                 "properties": {
                     "banking": {
                         "description": "Information about the bank account for this profile, only present if the API banking setting is enabled",
-                        "nullable": true,
                         "properties": {
                             "balance": {
                                 "type": "number"
@@ -548,12 +545,10 @@
                         "type": "object"
                     },
                     "community_upgrades": {
-                        "nullable": true,
                         "type": "object"
                     },
                     "cute_name": {
                         "description": "The cute name of the profile, only provided on the profiles endpoint",
-                        "nullable": true,
                         "type": "string"
                     },
                     "game_mode": {
@@ -563,7 +558,6 @@
                             "ironman",
                             "island"
                         ],
-                        "nullable": true,
                         "type": "string"
                     },
                     "members": {
@@ -579,7 +573,6 @@
                     },
                     "selected": {
                         "description": "Whether or not this is the currently selected profile, only provided on the profiles endpoint",
-                        "nullable": true,
                         "type": "boolean"
                     }
                 }
@@ -589,9 +582,11 @@
                     "accessory_bag_storage": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberAccessoryBagStorage"
                     },
+                    "bestiary": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberBestiary"
+                    },
                     "player_id": {
                         "format": "uuid",
-                        "nullable": false,
                         "type": "string"
                     },
                     "rift": {
@@ -601,21 +596,14 @@
                 "type": "object"
             },
             "SkyBlockProfileMemberAccessoryBagStorage": {
-                "nullable": true,
                 "properties": {
                     "bag_upgrades_purchased": {
-                        "minimum": 0,
-                        "maximum": 99,
-                        "nullable": false,
                         "type": "integer"
                     },
                     "highest_magical_power": {
-                        "minimum": 0,
-                        "nullable": false,
                         "type": "integer"
                     },
                     "selected_power": {
-                        "nullable": false,
                         "type": "string"
                     },
                     "tuning": {
@@ -648,19 +636,14 @@
                             ],
                             "type": "string"
                         },
-                        "nullable": false,
                         "type": "array"
                     }
                 },
                 "type": "object"
             },
             "SkyBlockProfileMemberAccessoryBagStorageTuning": {
-                "nullable": false,
                 "properties": {
                     "highest_unlocked_slot": {
-                        "minimum": 1,
-                        "maximum": 4,
-                        "nullable": true,
                         "type": "integer"
                     },
                     "slot_0": {
@@ -682,53 +665,74 @@
                 "type": "object"
             },
             "SkyBlockProfileMemberAccessoryBagStorageTuningSlot": {
-                "nullable": true,
                 "properties": {
                     "attack_speed": {
-                        "minimum": 0,
-                        "nullable": false,
                         "type": "integer"
                     },
                     "critical_chance": {
-                        "minimum": 0,
-                        "nullable": false,
                         "type": "integer"
                     },
                     "critical_damage": {
-                        "minimum": 0,
-                        "nullable": false,
                         "type": "integer"
                     },
                     "defense": {
-                        "minimum": 0,
-                        "nullable": false,
                         "type": "integer"
                     },
                     "health": {
-                        "minimum": 0,
-                        "nullable": false,
                         "type": "integer"
                     },
                     "intelligence": {
-                        "minimum": 0,
-                        "nullable": false,
                         "type": "integer"
                     },
                     "strength": {
-                        "minimum": 0,
-                        "nullable": false,
                         "type": "integer"
                     },
                     "walk_speed": {
-                        "minimum": 0,
-                        "nullable": false,
                         "type": "integer"
                     }
                 },
                 "type": "object"
             },
+            "SkyBlockProfileMemberBestiary": {
+                "properties": {
+                    "deaths": {
+                        "additionalProperties": {
+                            "type": "integer"
+                        },
+                        "type": "object"
+                    },
+                    "kills": {
+                        "additionalProperties": {
+                            "type": "integer"
+                        },
+                        "type": "object"
+                    },
+                    "migrated_stats": {
+                        "type": "boolean"
+                    },
+                    "migration": {
+                        "type": "boolean"
+                    },
+                    "milestone": {
+                        "properties": {
+                            "last_claimed_milestone": {
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "miscellaneous": {
+                        "properties": {
+                            "max_kills_visible": {
+                                "type": "boolean"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
             "SkyBlockProfileMemberRift": {
-                "nullable": true,
                 "properties": {
                     "black_lagoon": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon"
@@ -847,7 +851,6 @@
                     },
                     "uuid": {
                         "format": "uuid",
-                        "nullable": true,
                         "type": "string"
                     }
                 },

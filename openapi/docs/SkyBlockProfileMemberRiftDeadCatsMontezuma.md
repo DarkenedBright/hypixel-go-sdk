@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Tier** | Pointer to **string** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
 **UniqueId** | Pointer to **string** |  | [optional] 
-**Uuid** | Pointer to **NullableString** |  | [optional] 
+**Uuid** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
@@ -258,16 +258,6 @@ SetUuid sets Uuid field to given value.
 
 HasUuid returns a boolean if a field has been set.
 
-### SetUuidNil
-
-`func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) SetUuidNil(b bool)`
-
- SetUuidNil sets the value for Uuid to be an explicit nil
-
-### UnsetUuid
-`func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) UnsetUuid()`
-
-UnsetUuid ensures that no value is present for Uuid, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

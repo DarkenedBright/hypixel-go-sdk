@@ -19,15 +19,15 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftDeadCatsMontezuma{}
 
 // SkyBlockProfileMemberRiftDeadCatsMontezuma struct for SkyBlockProfileMemberRiftDeadCatsMontezuma
 type SkyBlockProfileMemberRiftDeadCatsMontezuma struct {
-	Active    *bool          `json:"active,omitempty"`
-	CandyUsed *int64         `json:"candyUsed,omitempty"`
-	Exp       *float64       `json:"exp,omitempty"`
-	HeldItem  *SkyBlockItem  `json:"heldItem,omitempty"`
-	Skin      *SkyBlockItem  `json:"skin,omitempty"`
-	Tier      *string        `json:"tier,omitempty"`
-	Type      *string        `json:"type,omitempty"`
-	UniqueId  *string        `json:"uniqueId,omitempty"`
-	Uuid      NullableString `json:"uuid,omitempty"`
+	Active    *bool         `json:"active,omitempty"`
+	CandyUsed *int64        `json:"candyUsed,omitempty"`
+	Exp       *float64      `json:"exp,omitempty"`
+	HeldItem  *SkyBlockItem `json:"heldItem,omitempty"`
+	Skin      *SkyBlockItem `json:"skin,omitempty"`
+	Tier      *string       `json:"tier,omitempty"`
+	Type      *string       `json:"type,omitempty"`
+	UniqueId  *string       `json:"uniqueId,omitempty"`
+	Uuid      *string       `json:"uuid,omitempty"`
 }
 
 // NewSkyBlockProfileMemberRiftDeadCatsMontezuma instantiates a new SkyBlockProfileMemberRiftDeadCatsMontezuma object
@@ -303,47 +303,36 @@ func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) SetUniqueId(v string) {
 	o.UniqueId = &v
 }
 
-// GetUuid returns the Uuid field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetUuid returns the Uuid field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetUuid() string {
-	if o == nil || IsNil(o.Uuid.Get()) {
+	if o == nil || IsNil(o.Uuid) {
 		var ret string
 		return ret
 	}
-	return *o.Uuid.Get()
+	return *o.Uuid
 }
 
 // GetUuidOk returns a tuple with the Uuid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetUuidOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Uuid) {
 		return nil, false
 	}
-	return o.Uuid.Get(), o.Uuid.IsSet()
+	return o.Uuid, true
 }
 
 // HasUuid returns a boolean if a field has been set.
 func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) HasUuid() bool {
-	if o != nil && o.Uuid.IsSet() {
+	if o != nil && !IsNil(o.Uuid) {
 		return true
 	}
 
 	return false
 }
 
-// SetUuid gets a reference to the given NullableString and assigns it to the Uuid field.
+// SetUuid gets a reference to the given string and assigns it to the Uuid field.
 func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) SetUuid(v string) {
-	o.Uuid.Set(&v)
-}
-
-// SetUuidNil sets the value for Uuid to be an explicit nil
-func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) SetUuidNil() {
-	o.Uuid.Set(nil)
-}
-
-// UnsetUuid ensures that no value is present for Uuid, not even an explicit nil
-func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) UnsetUuid() {
-	o.Uuid.Unset()
+	o.Uuid = &v
 }
 
 func (o SkyBlockProfileMemberRiftDeadCatsMontezuma) MarshalJSON() ([]byte, error) {
@@ -380,8 +369,8 @@ func (o SkyBlockProfileMemberRiftDeadCatsMontezuma) ToMap() (map[string]interfac
 	if !IsNil(o.UniqueId) {
 		toSerialize["uniqueId"] = o.UniqueId
 	}
-	if o.Uuid.IsSet() {
-		toSerialize["uuid"] = o.Uuid.Get()
+	if !IsNil(o.Uuid) {
+		toSerialize["uuid"] = o.Uuid
 	}
 	return toSerialize, nil
 }

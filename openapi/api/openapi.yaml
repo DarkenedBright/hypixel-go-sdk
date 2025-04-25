@@ -492,7 +492,6 @@ components:
               example: ad8fefaa-8351-454b-b739-a4eaa872173f
               format: uuid
               type: string
-            nullable: true
             type: array
         type: object
     Booster:
@@ -518,7 +517,6 @@ components:
       - $ref: '#/components/schemas/Booster'
       - properties:
           stacked:
-            nullable: true
             type: boolean
         type: object
     SkyBlockFireSale:
@@ -800,14 +798,14 @@ components:
           key:
             rift:
               wizard_tower:
-                wizard_quest_step: 2
-                crumbs_laid_out: 1
+                wizard_quest_step: 5
+                crumbs_laid_out: 6
               enigma:
                 found_souls:
                 - BACK2BASICS
                 - BACK2BASICS
                 bought_cloak: true
-                claimed_bonus_index: 1
+                claimed_bonus_index: 9
               black_lagoon:
                 received_science_paper: true
                 delivered_science_paper: true
@@ -840,10 +838,10 @@ components:
                       HEALTH: 20
                     tier: RARE
                   active: true
-                  exp: 7.457744773683766
+                  exp: 5.025004791520295
                   type: FRACTURED_MONTEZUMA_SOUL
                   uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                  candyUsed: 6
+                  candyUsed: 4
                   uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                 found_cats:
                 - eight
@@ -852,9 +850,9 @@ components:
                 talked_to_jacquelle: true
               village_plaza:
                 murder:
-                  step_index_pt3: 3
-                  step_index: 9
-                  step_index_pt2: 6
+                  step_index_pt3: 2
+                  step_index: 6
+                  step_index_pt2: 1
                   room_clues:
                   - blood
                   - blood
@@ -867,7 +865,7 @@ components:
                 seraphine:
                   step_index: 6
                 lonely:
-                  seconds_sitting: 8
+                  seconds_sitting: 3
                 barry_center:
                   first_talk_to_barry: true
                   convinced:
@@ -882,69 +880,80 @@ components:
                 sent_trophy_dialogues:
                 - sent_trophy_dialogues
                 - sent_trophy_dialogues
-                elise_step: 4
+                elise_step: 9
                 secured_trophies:
-                - visits: 9
+                - visits: 8
                   type: chicken_n_egg
-                  timestamp: 5
-                - visits: 9
+                  timestamp: 6
+                - visits: 8
                   type: chicken_n_egg
-                  timestamp: 5
+                  timestamp: 6
             player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            bestiary:
+              kills:
+                key: 6
+              miscellaneous:
+                max_kills_visible: true
+              milestone:
+                last_claimed_milestone: 7
+              migration: true
+              migrated_stats: true
+              deaths:
+                key: 1
             accessory_bag_storage:
               tuning:
                 slot_4:
-                  walk_speed: 0
-                  strength: 0
-                  critical_damage: 0
-                  defense: 0
-                  critical_chance: 0
-                  health: 0
-                  attack_speed: 0
-                  intelligence: 0
+                  walk_speed: 1
+                  strength: 1
+                  critical_damage: 3
+                  defense: 2
+                  critical_chance: 9
+                  health: 4
+                  attack_speed: 7
+                  intelligence: 7
                 slot_3:
-                  walk_speed: 0
-                  strength: 0
-                  critical_damage: 0
-                  defense: 0
-                  critical_chance: 0
-                  health: 0
-                  attack_speed: 0
-                  intelligence: 0
+                  walk_speed: 1
+                  strength: 1
+                  critical_damage: 3
+                  defense: 2
+                  critical_chance: 9
+                  health: 4
+                  attack_speed: 7
+                  intelligence: 7
                 slot_2:
-                  walk_speed: 0
-                  strength: 0
-                  critical_damage: 0
-                  defense: 0
-                  critical_chance: 0
-                  health: 0
-                  attack_speed: 0
-                  intelligence: 0
+                  walk_speed: 1
+                  strength: 1
+                  critical_damage: 3
+                  defense: 2
+                  critical_chance: 9
+                  health: 4
+                  attack_speed: 7
+                  intelligence: 7
                 slot_1:
-                  walk_speed: 0
-                  strength: 0
-                  critical_damage: 0
-                  defense: 0
-                  critical_chance: 0
-                  health: 0
-                  attack_speed: 0
-                  intelligence: 0
-                highest_unlocked_slot: 1
+                  walk_speed: 1
+                  strength: 1
+                  critical_damage: 3
+                  defense: 2
+                  critical_chance: 9
+                  health: 4
+                  attack_speed: 7
+                  intelligence: 7
+                highest_unlocked_slot: 2
                 slot_0:
-                  walk_speed: 0
-                  strength: 0
-                  critical_damage: 0
-                  defense: 0
-                  critical_chance: 0
-                  health: 0
-                  attack_speed: 0
-                  intelligence: 0
-              bag_upgrades_purchased: 59
+                  walk_speed: 1
+                  strength: 1
+                  critical_damage: 3
+                  defense: 2
+                  critical_chance: 9
+                  health: 4
+                  attack_speed: 7
+                  intelligence: 7
+              bag_upgrades_purchased: 5
               unlocked_powers:
               - adept
               - adept
               selected_power: selected_power
-              highest_magical_power: 0
+              highest_magical_power: 5
         game_mode: bingo
         community_upgrades: "{}"
         cute_name: cute_name
@@ -964,12 +973,10 @@ components:
         banking:
           $ref: '#/components/schemas/SkyBlockProfile_banking'
         community_upgrades:
-          nullable: true
           type: object
         cute_name:
           description: "The cute name of the profile, only provided on the profiles\
             \ endpoint"
-          nullable: true
           type: string
         game_mode:
           description: "The SkyBlock game mode of the profile, not present if normal\
@@ -978,7 +985,6 @@ components:
           - bingo
           - ironman
           - island
-          nullable: true
           type: string
         members:
           additionalProperties:
@@ -991,20 +997,19 @@ components:
         selected:
           description: "Whether or not this is the currently selected profile, only\
             \ provided on the profiles endpoint"
-          nullable: true
           type: boolean
     SkyBlockProfileMember:
       example:
         rift:
           wizard_tower:
-            wizard_quest_step: 2
-            crumbs_laid_out: 1
+            wizard_quest_step: 5
+            crumbs_laid_out: 6
           enigma:
             found_souls:
             - BACK2BASICS
             - BACK2BASICS
             bought_cloak: true
-            claimed_bonus_index: 1
+            claimed_bonus_index: 9
           black_lagoon:
             received_science_paper: true
             delivered_science_paper: true
@@ -1037,10 +1042,10 @@ components:
                   HEALTH: 20
                 tier: RARE
               active: true
-              exp: 7.457744773683766
+              exp: 5.025004791520295
               type: FRACTURED_MONTEZUMA_SOUL
               uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              candyUsed: 6
+              candyUsed: 4
               uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             found_cats:
             - eight
@@ -1049,9 +1054,9 @@ components:
             talked_to_jacquelle: true
           village_plaza:
             murder:
-              step_index_pt3: 3
-              step_index: 9
-              step_index_pt2: 6
+              step_index_pt3: 2
+              step_index: 6
+              step_index_pt2: 1
               room_clues:
               - blood
               - blood
@@ -1064,7 +1069,7 @@ components:
             seraphine:
               step_index: 6
             lonely:
-              seconds_sitting: 8
+              seconds_sitting: 3
             barry_center:
               first_talk_to_barry: true
               convinced:
@@ -1079,75 +1084,87 @@ components:
             sent_trophy_dialogues:
             - sent_trophy_dialogues
             - sent_trophy_dialogues
-            elise_step: 4
+            elise_step: 9
             secured_trophies:
-            - visits: 9
+            - visits: 8
               type: chicken_n_egg
-              timestamp: 5
-            - visits: 9
+              timestamp: 6
+            - visits: 8
               type: chicken_n_egg
-              timestamp: 5
+              timestamp: 6
         player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        bestiary:
+          kills:
+            key: 6
+          miscellaneous:
+            max_kills_visible: true
+          milestone:
+            last_claimed_milestone: 7
+          migration: true
+          migrated_stats: true
+          deaths:
+            key: 1
         accessory_bag_storage:
           tuning:
             slot_4:
-              walk_speed: 0
-              strength: 0
-              critical_damage: 0
-              defense: 0
-              critical_chance: 0
-              health: 0
-              attack_speed: 0
-              intelligence: 0
+              walk_speed: 1
+              strength: 1
+              critical_damage: 3
+              defense: 2
+              critical_chance: 9
+              health: 4
+              attack_speed: 7
+              intelligence: 7
             slot_3:
-              walk_speed: 0
-              strength: 0
-              critical_damage: 0
-              defense: 0
-              critical_chance: 0
-              health: 0
-              attack_speed: 0
-              intelligence: 0
+              walk_speed: 1
+              strength: 1
+              critical_damage: 3
+              defense: 2
+              critical_chance: 9
+              health: 4
+              attack_speed: 7
+              intelligence: 7
             slot_2:
-              walk_speed: 0
-              strength: 0
-              critical_damage: 0
-              defense: 0
-              critical_chance: 0
-              health: 0
-              attack_speed: 0
-              intelligence: 0
+              walk_speed: 1
+              strength: 1
+              critical_damage: 3
+              defense: 2
+              critical_chance: 9
+              health: 4
+              attack_speed: 7
+              intelligence: 7
             slot_1:
-              walk_speed: 0
-              strength: 0
-              critical_damage: 0
-              defense: 0
-              critical_chance: 0
-              health: 0
-              attack_speed: 0
-              intelligence: 0
-            highest_unlocked_slot: 1
+              walk_speed: 1
+              strength: 1
+              critical_damage: 3
+              defense: 2
+              critical_chance: 9
+              health: 4
+              attack_speed: 7
+              intelligence: 7
+            highest_unlocked_slot: 2
             slot_0:
-              walk_speed: 0
-              strength: 0
-              critical_damage: 0
-              defense: 0
-              critical_chance: 0
-              health: 0
-              attack_speed: 0
-              intelligence: 0
-          bag_upgrades_purchased: 59
+              walk_speed: 1
+              strength: 1
+              critical_damage: 3
+              defense: 2
+              critical_chance: 9
+              health: 4
+              attack_speed: 7
+              intelligence: 7
+          bag_upgrades_purchased: 5
           unlocked_powers:
           - adept
           - adept
           selected_power: selected_power
-          highest_magical_power: 0
+          highest_magical_power: 5
       properties:
         accessory_bag_storage:
           $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorage'
+        bestiary:
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiary'
         player_id:
           format: uuid
-          nullable: false
           type: string
         rift:
           $ref: '#/components/schemas/SkyBlockProfileMemberRift'
@@ -1156,70 +1173,63 @@ components:
       example:
         tuning:
           slot_4:
-            walk_speed: 0
-            strength: 0
-            critical_damage: 0
-            defense: 0
-            critical_chance: 0
-            health: 0
-            attack_speed: 0
-            intelligence: 0
+            walk_speed: 1
+            strength: 1
+            critical_damage: 3
+            defense: 2
+            critical_chance: 9
+            health: 4
+            attack_speed: 7
+            intelligence: 7
           slot_3:
-            walk_speed: 0
-            strength: 0
-            critical_damage: 0
-            defense: 0
-            critical_chance: 0
-            health: 0
-            attack_speed: 0
-            intelligence: 0
+            walk_speed: 1
+            strength: 1
+            critical_damage: 3
+            defense: 2
+            critical_chance: 9
+            health: 4
+            attack_speed: 7
+            intelligence: 7
           slot_2:
-            walk_speed: 0
-            strength: 0
-            critical_damage: 0
-            defense: 0
-            critical_chance: 0
-            health: 0
-            attack_speed: 0
-            intelligence: 0
+            walk_speed: 1
+            strength: 1
+            critical_damage: 3
+            defense: 2
+            critical_chance: 9
+            health: 4
+            attack_speed: 7
+            intelligence: 7
           slot_1:
-            walk_speed: 0
-            strength: 0
-            critical_damage: 0
-            defense: 0
-            critical_chance: 0
-            health: 0
-            attack_speed: 0
-            intelligence: 0
-          highest_unlocked_slot: 1
+            walk_speed: 1
+            strength: 1
+            critical_damage: 3
+            defense: 2
+            critical_chance: 9
+            health: 4
+            attack_speed: 7
+            intelligence: 7
+          highest_unlocked_slot: 2
           slot_0:
-            walk_speed: 0
-            strength: 0
-            critical_damage: 0
-            defense: 0
-            critical_chance: 0
-            health: 0
-            attack_speed: 0
-            intelligence: 0
-        bag_upgrades_purchased: 59
+            walk_speed: 1
+            strength: 1
+            critical_damage: 3
+            defense: 2
+            critical_chance: 9
+            health: 4
+            attack_speed: 7
+            intelligence: 7
+        bag_upgrades_purchased: 5
         unlocked_powers:
         - adept
         - adept
         selected_power: selected_power
-        highest_magical_power: 0
-      nullable: true
+        highest_magical_power: 5
       properties:
         bag_upgrades_purchased:
-          maximum: 99
-          minimum: 0
-          nullable: false
           type: integer
         highest_magical_power:
-          minimum: 0
-          nullable: false
           type: integer
         selected_power:
-          nullable: false
           type: string
         tuning:
           $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuning'
@@ -1248,63 +1258,58 @@ components:
             - strong
             - sweet
             type: string
-          nullable: false
           type: array
       type: object
     SkyBlockProfileMemberAccessoryBagStorageTuning:
       example:
         slot_4:
-          walk_speed: 0
-          strength: 0
-          critical_damage: 0
-          defense: 0
-          critical_chance: 0
-          health: 0
-          attack_speed: 0
-          intelligence: 0
+          walk_speed: 1
+          strength: 1
+          critical_damage: 3
+          defense: 2
+          critical_chance: 9
+          health: 4
+          attack_speed: 7
+          intelligence: 7
         slot_3:
-          walk_speed: 0
-          strength: 0
-          critical_damage: 0
-          defense: 0
-          critical_chance: 0
-          health: 0
-          attack_speed: 0
-          intelligence: 0
+          walk_speed: 1
+          strength: 1
+          critical_damage: 3
+          defense: 2
+          critical_chance: 9
+          health: 4
+          attack_speed: 7
+          intelligence: 7
         slot_2:
-          walk_speed: 0
-          strength: 0
-          critical_damage: 0
-          defense: 0
-          critical_chance: 0
-          health: 0
-          attack_speed: 0
-          intelligence: 0
+          walk_speed: 1
+          strength: 1
+          critical_damage: 3
+          defense: 2
+          critical_chance: 9
+          health: 4
+          attack_speed: 7
+          intelligence: 7
         slot_1:
-          walk_speed: 0
-          strength: 0
-          critical_damage: 0
-          defense: 0
-          critical_chance: 0
-          health: 0
-          attack_speed: 0
-          intelligence: 0
-        highest_unlocked_slot: 1
+          walk_speed: 1
+          strength: 1
+          critical_damage: 3
+          defense: 2
+          critical_chance: 9
+          health: 4
+          attack_speed: 7
+          intelligence: 7
+        highest_unlocked_slot: 2
         slot_0:
-          walk_speed: 0
-          strength: 0
-          critical_damage: 0
-          defense: 0
-          critical_chance: 0
-          health: 0
-          attack_speed: 0
-          intelligence: 0
-      nullable: false
+          walk_speed: 1
+          strength: 1
+          critical_damage: 3
+          defense: 2
+          critical_chance: 9
+          health: 4
+          attack_speed: 7
+          intelligence: 7
       properties:
         highest_unlocked_slot:
-          maximum: 4
-          minimum: 1
-          nullable: true
           type: integer
         slot_0:
           $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot'
@@ -1319,60 +1324,73 @@ components:
       type: object
     SkyBlockProfileMemberAccessoryBagStorageTuningSlot:
       example:
-        walk_speed: 0
-        strength: 0
-        critical_damage: 0
-        defense: 0
-        critical_chance: 0
-        health: 0
-        attack_speed: 0
-        intelligence: 0
-      nullable: true
+        walk_speed: 1
+        strength: 1
+        critical_damage: 3
+        defense: 2
+        critical_chance: 9
+        health: 4
+        attack_speed: 7
+        intelligence: 7
       properties:
         attack_speed:
-          minimum: 0
-          nullable: false
           type: integer
         critical_chance:
-          minimum: 0
-          nullable: false
           type: integer
         critical_damage:
-          minimum: 0
-          nullable: false
           type: integer
         defense:
-          minimum: 0
-          nullable: false
           type: integer
         health:
-          minimum: 0
-          nullable: false
           type: integer
         intelligence:
-          minimum: 0
-          nullable: false
           type: integer
         strength:
-          minimum: 0
-          nullable: false
           type: integer
         walk_speed:
-          minimum: 0
-          nullable: false
           type: integer
+      type: object
+    SkyBlockProfileMemberBestiary:
+      example:
+        kills:
+          key: 6
+        miscellaneous:
+          max_kills_visible: true
+        milestone:
+          last_claimed_milestone: 7
+        migration: true
+        migrated_stats: true
+        deaths:
+          key: 1
+      properties:
+        deaths:
+          additionalProperties:
+            type: integer
+          type: object
+        kills:
+          additionalProperties:
+            type: integer
+          type: object
+        migrated_stats:
+          type: boolean
+        migration:
+          type: boolean
+        milestone:
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiary_milestone'
+        miscellaneous:
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiary_miscellaneous'
       type: object
     SkyBlockProfileMemberRift:
       example:
         wizard_tower:
-          wizard_quest_step: 2
-          crumbs_laid_out: 1
+          wizard_quest_step: 5
+          crumbs_laid_out: 6
         enigma:
           found_souls:
           - BACK2BASICS
           - BACK2BASICS
           bought_cloak: true
-          claimed_bonus_index: 1
+          claimed_bonus_index: 9
         black_lagoon:
           received_science_paper: true
           delivered_science_paper: true
@@ -1405,10 +1423,10 @@ components:
                 HEALTH: 20
               tier: RARE
             active: true
-            exp: 7.457744773683766
+            exp: 5.025004791520295
             type: FRACTURED_MONTEZUMA_SOUL
             uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            candyUsed: 6
+            candyUsed: 4
             uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           found_cats:
           - eight
@@ -1417,9 +1435,9 @@ components:
           talked_to_jacquelle: true
         village_plaza:
           murder:
-            step_index_pt3: 3
-            step_index: 9
-            step_index_pt2: 6
+            step_index_pt3: 2
+            step_index: 6
+            step_index_pt2: 1
             room_clues:
             - blood
             - blood
@@ -1432,7 +1450,7 @@ components:
           seraphine:
             step_index: 6
           lonely:
-            seconds_sitting: 8
+            seconds_sitting: 3
           barry_center:
             first_talk_to_barry: true
             convinced:
@@ -1447,15 +1465,14 @@ components:
           sent_trophy_dialogues:
           - sent_trophy_dialogues
           - sent_trophy_dialogues
-          elise_step: 4
+          elise_step: 9
           secured_trophies:
-          - visits: 9
+          - visits: 8
             type: chicken_n_egg
-            timestamp: 5
-          - visits: 9
+            timestamp: 6
+          - visits: 8
             type: chicken_n_egg
-            timestamp: 5
-      nullable: true
+            timestamp: 6
       properties:
         black_lagoon:
           $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
@@ -1516,10 +1533,10 @@ components:
               HEALTH: 20
             tier: RARE
           active: true
-          exp: 7.457744773683766
+          exp: 5.025004791520295
           type: FRACTURED_MONTEZUMA_SOUL
           uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          candyUsed: 6
+          candyUsed: 4
           uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         found_cats:
         - eight
@@ -1576,10 +1593,10 @@ components:
             HEALTH: 20
           tier: RARE
         active: true
-        exp: 7.457744773683766
+        exp: 5.025004791520295
         type: FRACTURED_MONTEZUMA_SOUL
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        candyUsed: 6
+        candyUsed: 4
         uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         active:
@@ -1610,7 +1627,6 @@ components:
           type: string
         uuid:
           format: uuid
-          nullable: true
           type: string
       type: object
     SkyBlockProfileMemberRiftEnigma:
@@ -1619,7 +1635,7 @@ components:
         - BACK2BASICS
         - BACK2BASICS
         bought_cloak: true
-        claimed_bonus_index: 1
+        claimed_bonus_index: 9
       properties:
         bought_cloak:
           type: boolean
@@ -1682,14 +1698,14 @@ components:
         sent_trophy_dialogues:
         - sent_trophy_dialogues
         - sent_trophy_dialogues
-        elise_step: 4
+        elise_step: 9
         secured_trophies:
-        - visits: 9
+        - visits: 8
           type: chicken_n_egg
-          timestamp: 5
-        - visits: 9
+          timestamp: 6
+        - visits: 8
           type: chicken_n_egg
-          timestamp: 5
+          timestamp: 6
       properties:
         elise_step:
           type: integer
@@ -1705,9 +1721,9 @@ components:
     SkyBlockProfileMemberRiftVillagePlaza:
       example:
         murder:
-          step_index_pt3: 3
-          step_index: 9
-          step_index_pt2: 6
+          step_index_pt3: 2
+          step_index: 6
+          step_index_pt2: 1
           room_clues:
           - blood
           - blood
@@ -1720,7 +1736,7 @@ components:
         seraphine:
           step_index: 6
         lonely:
-          seconds_sitting: 8
+          seconds_sitting: 3
         barry_center:
           first_talk_to_barry: true
           convinced:
@@ -1787,16 +1803,16 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaLonely:
       example:
-        seconds_sitting: 8
+        seconds_sitting: 3
       properties:
         seconds_sitting:
           type: integer
       type: object
     SkyBlockProfileMemberRiftVillagePlazaMurder:
       example:
-        step_index_pt3: 3
-        step_index: 9
-        step_index_pt2: 6
+        step_index_pt3: 2
+        step_index: 6
+        step_index_pt2: 1
         room_clues:
         - blood
         - blood
@@ -1849,8 +1865,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftWizardTower:
       example:
-        wizard_quest_step: 2
-        crumbs_laid_out: 1
+        wizard_quest_step: 5
+        crumbs_laid_out: 6
       properties:
         crumbs_laid_out:
           type: integer
@@ -2368,14 +2384,14 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 2
-                  crumbs_laid_out: 1
+                  wizard_quest_step: 5
+                  crumbs_laid_out: 6
                 enigma:
                   found_souls:
                   - BACK2BASICS
                   - BACK2BASICS
                   bought_cloak: true
-                  claimed_bonus_index: 1
+                  claimed_bonus_index: 9
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
@@ -2408,10 +2424,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 7.457744773683766
+                    exp: 5.025004791520295
                     type: FRACTURED_MONTEZUMA_SOUL
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 6
+                    candyUsed: 4
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - eight
@@ -2420,9 +2436,9 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 3
-                    step_index: 9
-                    step_index_pt2: 6
+                    step_index_pt3: 2
+                    step_index: 6
+                    step_index_pt2: 1
                     room_clues:
                     - blood
                     - blood
@@ -2435,7 +2451,7 @@ components:
                   seraphine:
                     step_index: 6
                   lonely:
-                    seconds_sitting: 8
+                    seconds_sitting: 3
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -2450,69 +2466,80 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 4
+                  elise_step: 9
                   secured_trophies:
-                  - visits: 9
+                  - visits: 8
                     type: chicken_n_egg
-                    timestamp: 5
-                  - visits: 9
+                    timestamp: 6
+                  - visits: 8
                     type: chicken_n_egg
-                    timestamp: 5
+                    timestamp: 6
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              bestiary:
+                kills:
+                  key: 6
+                miscellaneous:
+                  max_kills_visible: true
+                milestone:
+                  last_claimed_milestone: 7
+                migration: true
+                migrated_stats: true
+                deaths:
+                  key: 1
               accessory_bag_storage:
                 tuning:
                   slot_4:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
                   slot_3:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
                   slot_2:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
                   slot_1:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
-                  highest_unlocked_slot: 1
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
+                  highest_unlocked_slot: 2
                   slot_0:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
-                bag_upgrades_purchased: 59
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
+                bag_upgrades_purchased: 5
                 unlocked_powers:
                 - adept
                 - adept
                 selected_power: selected_power
-                highest_magical_power: 0
+                highest_magical_power: 5
           game_mode: bingo
           community_upgrades: "{}"
           cute_name: cute_name
@@ -2543,14 +2570,14 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 2
-                  crumbs_laid_out: 1
+                  wizard_quest_step: 5
+                  crumbs_laid_out: 6
                 enigma:
                   found_souls:
                   - BACK2BASICS
                   - BACK2BASICS
                   bought_cloak: true
-                  claimed_bonus_index: 1
+                  claimed_bonus_index: 9
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
@@ -2583,10 +2610,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 7.457744773683766
+                    exp: 5.025004791520295
                     type: FRACTURED_MONTEZUMA_SOUL
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 6
+                    candyUsed: 4
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - eight
@@ -2595,9 +2622,9 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 3
-                    step_index: 9
-                    step_index_pt2: 6
+                    step_index_pt3: 2
+                    step_index: 6
+                    step_index_pt2: 1
                     room_clues:
                     - blood
                     - blood
@@ -2610,7 +2637,7 @@ components:
                   seraphine:
                     step_index: 6
                   lonely:
-                    seconds_sitting: 8
+                    seconds_sitting: 3
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -2625,69 +2652,80 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 4
+                  elise_step: 9
                   secured_trophies:
-                  - visits: 9
+                  - visits: 8
                     type: chicken_n_egg
-                    timestamp: 5
-                  - visits: 9
+                    timestamp: 6
+                  - visits: 8
                     type: chicken_n_egg
-                    timestamp: 5
+                    timestamp: 6
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              bestiary:
+                kills:
+                  key: 6
+                miscellaneous:
+                  max_kills_visible: true
+                milestone:
+                  last_claimed_milestone: 7
+                migration: true
+                migrated_stats: true
+                deaths:
+                  key: 1
               accessory_bag_storage:
                 tuning:
                   slot_4:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
                   slot_3:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
                   slot_2:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
                   slot_1:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
-                  highest_unlocked_slot: 1
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
+                  highest_unlocked_slot: 2
                   slot_0:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
-                bag_upgrades_purchased: 59
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
+                bag_upgrades_purchased: 5
                 unlocked_powers:
                 - adept
                 - adept
                 selected_power: selected_power
-                highest_magical_power: 0
+                highest_magical_power: 5
           game_mode: bingo
           community_upgrades: "{}"
           cute_name: cute_name
@@ -2708,14 +2746,14 @@ components:
             key:
               rift:
                 wizard_tower:
-                  wizard_quest_step: 2
-                  crumbs_laid_out: 1
+                  wizard_quest_step: 5
+                  crumbs_laid_out: 6
                 enigma:
                   found_souls:
                   - BACK2BASICS
                   - BACK2BASICS
                   bought_cloak: true
-                  claimed_bonus_index: 1
+                  claimed_bonus_index: 9
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
@@ -2748,10 +2786,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 7.457744773683766
+                    exp: 5.025004791520295
                     type: FRACTURED_MONTEZUMA_SOUL
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 6
+                    candyUsed: 4
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - eight
@@ -2760,9 +2798,9 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 3
-                    step_index: 9
-                    step_index_pt2: 6
+                    step_index_pt3: 2
+                    step_index: 6
+                    step_index_pt2: 1
                     room_clues:
                     - blood
                     - blood
@@ -2775,7 +2813,7 @@ components:
                   seraphine:
                     step_index: 6
                   lonely:
-                    seconds_sitting: 8
+                    seconds_sitting: 3
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -2790,69 +2828,80 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 4
+                  elise_step: 9
                   secured_trophies:
-                  - visits: 9
+                  - visits: 8
                     type: chicken_n_egg
-                    timestamp: 5
-                  - visits: 9
+                    timestamp: 6
+                  - visits: 8
                     type: chicken_n_egg
-                    timestamp: 5
+                    timestamp: 6
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              bestiary:
+                kills:
+                  key: 6
+                miscellaneous:
+                  max_kills_visible: true
+                milestone:
+                  last_claimed_milestone: 7
+                migration: true
+                migrated_stats: true
+                deaths:
+                  key: 1
               accessory_bag_storage:
                 tuning:
                   slot_4:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
                   slot_3:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
                   slot_2:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
                   slot_1:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
-                  highest_unlocked_slot: 1
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
+                  highest_unlocked_slot: 2
                   slot_0:
-                    walk_speed: 0
-                    strength: 0
-                    critical_damage: 0
-                    defense: 0
-                    critical_chance: 0
-                    health: 0
-                    attack_speed: 0
-                    intelligence: 0
-                bag_upgrades_purchased: 59
+                    walk_speed: 1
+                    strength: 1
+                    critical_damage: 3
+                    defense: 2
+                    critical_chance: 9
+                    health: 4
+                    attack_speed: 7
+                    intelligence: 7
+                bag_upgrades_purchased: 5
                 unlocked_powers:
                 - adept
                 - adept
                 selected_power: selected_power
-                highest_magical_power: 0
+                highest_magical_power: 5
           game_mode: bingo
           community_upgrades: "{}"
           cute_name: cute_name
@@ -2951,7 +3000,6 @@ components:
           action: DEPOSIT
           initiator_name: initiator_name
           timestamp: 1
-      nullable: true
       properties:
         balance:
           type: number
@@ -2960,11 +3008,25 @@ components:
             $ref: '#/components/schemas/SkyBlockProfile_banking_transactions_inner'
           type: array
       type: object
+    SkyBlockProfileMemberBestiary_milestone:
+      example:
+        last_claimed_milestone: 7
+      properties:
+        last_claimed_milestone:
+          type: integer
+      type: object
+    SkyBlockProfileMemberBestiary_miscellaneous:
+      example:
+        max_kills_visible: true
+      properties:
+        max_kills_visible:
+          type: boolean
+      type: object
     SkyBlockProfileMemberRiftGallery_secured_trophies_inner:
       example:
-        visits: 9
+        visits: 8
         type: chicken_n_egg
-        timestamp: 5
+        timestamp: 6
       properties:
         timestamp:
           type: integer

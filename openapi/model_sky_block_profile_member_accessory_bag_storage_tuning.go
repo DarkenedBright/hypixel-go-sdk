@@ -19,12 +19,12 @@ var _ MappedNullable = &SkyBlockProfileMemberAccessoryBagStorageTuning{}
 
 // SkyBlockProfileMemberAccessoryBagStorageTuning struct for SkyBlockProfileMemberAccessoryBagStorageTuning
 type SkyBlockProfileMemberAccessoryBagStorageTuning struct {
-	HighestUnlockedSlot NullableInt64                                              `json:"highest_unlocked_slot,omitempty"`
-	Slot0               NullableSkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_0,omitempty"`
-	Slot1               NullableSkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_1,omitempty"`
-	Slot2               NullableSkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_2,omitempty"`
-	Slot3               NullableSkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_3,omitempty"`
-	Slot4               NullableSkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_4,omitempty"`
+	HighestUnlockedSlot *int64                                              `json:"highest_unlocked_slot,omitempty"`
+	Slot0               *SkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_0,omitempty"`
+	Slot1               *SkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_1,omitempty"`
+	Slot2               *SkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_2,omitempty"`
+	Slot3               *SkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_3,omitempty"`
+	Slot4               *SkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_4,omitempty"`
 }
 
 // NewSkyBlockProfileMemberAccessoryBagStorageTuning instantiates a new SkyBlockProfileMemberAccessoryBagStorageTuning object
@@ -44,262 +44,196 @@ func NewSkyBlockProfileMemberAccessoryBagStorageTuningWithDefaults() *SkyBlockPr
 	return &this
 }
 
-// GetHighestUnlockedSlot returns the HighestUnlockedSlot field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetHighestUnlockedSlot returns the HighestUnlockedSlot field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetHighestUnlockedSlot() int64 {
-	if o == nil || IsNil(o.HighestUnlockedSlot.Get()) {
+	if o == nil || IsNil(o.HighestUnlockedSlot) {
 		var ret int64
 		return ret
 	}
-	return *o.HighestUnlockedSlot.Get()
+	return *o.HighestUnlockedSlot
 }
 
 // GetHighestUnlockedSlotOk returns a tuple with the HighestUnlockedSlot field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetHighestUnlockedSlotOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.HighestUnlockedSlot) {
 		return nil, false
 	}
-	return o.HighestUnlockedSlot.Get(), o.HighestUnlockedSlot.IsSet()
+	return o.HighestUnlockedSlot, true
 }
 
 // HasHighestUnlockedSlot returns a boolean if a field has been set.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) HasHighestUnlockedSlot() bool {
-	if o != nil && o.HighestUnlockedSlot.IsSet() {
+	if o != nil && !IsNil(o.HighestUnlockedSlot) {
 		return true
 	}
 
 	return false
 }
 
-// SetHighestUnlockedSlot gets a reference to the given NullableInt64 and assigns it to the HighestUnlockedSlot field.
+// SetHighestUnlockedSlot gets a reference to the given int64 and assigns it to the HighestUnlockedSlot field.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetHighestUnlockedSlot(v int64) {
-	o.HighestUnlockedSlot.Set(&v)
+	o.HighestUnlockedSlot = &v
 }
 
-// SetHighestUnlockedSlotNil sets the value for HighestUnlockedSlot to be an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetHighestUnlockedSlotNil() {
-	o.HighestUnlockedSlot.Set(nil)
-}
-
-// UnsetHighestUnlockedSlot ensures that no value is present for HighestUnlockedSlot, not even an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) UnsetHighestUnlockedSlot() {
-	o.HighestUnlockedSlot.Unset()
-}
-
-// GetSlot0 returns the Slot0 field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetSlot0 returns the Slot0 field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetSlot0() SkyBlockProfileMemberAccessoryBagStorageTuningSlot {
-	if o == nil || IsNil(o.Slot0.Get()) {
+	if o == nil || IsNil(o.Slot0) {
 		var ret SkyBlockProfileMemberAccessoryBagStorageTuningSlot
 		return ret
 	}
-	return *o.Slot0.Get()
+	return *o.Slot0
 }
 
 // GetSlot0Ok returns a tuple with the Slot0 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetSlot0Ok() (*SkyBlockProfileMemberAccessoryBagStorageTuningSlot, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Slot0) {
 		return nil, false
 	}
-	return o.Slot0.Get(), o.Slot0.IsSet()
+	return o.Slot0, true
 }
 
 // HasSlot0 returns a boolean if a field has been set.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) HasSlot0() bool {
-	if o != nil && o.Slot0.IsSet() {
+	if o != nil && !IsNil(o.Slot0) {
 		return true
 	}
 
 	return false
 }
 
-// SetSlot0 gets a reference to the given NullableSkyBlockProfileMemberAccessoryBagStorageTuningSlot and assigns it to the Slot0 field.
+// SetSlot0 gets a reference to the given SkyBlockProfileMemberAccessoryBagStorageTuningSlot and assigns it to the Slot0 field.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetSlot0(v SkyBlockProfileMemberAccessoryBagStorageTuningSlot) {
-	o.Slot0.Set(&v)
+	o.Slot0 = &v
 }
 
-// SetSlot0Nil sets the value for Slot0 to be an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetSlot0Nil() {
-	o.Slot0.Set(nil)
-}
-
-// UnsetSlot0 ensures that no value is present for Slot0, not even an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) UnsetSlot0() {
-	o.Slot0.Unset()
-}
-
-// GetSlot1 returns the Slot1 field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetSlot1 returns the Slot1 field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetSlot1() SkyBlockProfileMemberAccessoryBagStorageTuningSlot {
-	if o == nil || IsNil(o.Slot1.Get()) {
+	if o == nil || IsNil(o.Slot1) {
 		var ret SkyBlockProfileMemberAccessoryBagStorageTuningSlot
 		return ret
 	}
-	return *o.Slot1.Get()
+	return *o.Slot1
 }
 
 // GetSlot1Ok returns a tuple with the Slot1 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetSlot1Ok() (*SkyBlockProfileMemberAccessoryBagStorageTuningSlot, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Slot1) {
 		return nil, false
 	}
-	return o.Slot1.Get(), o.Slot1.IsSet()
+	return o.Slot1, true
 }
 
 // HasSlot1 returns a boolean if a field has been set.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) HasSlot1() bool {
-	if o != nil && o.Slot1.IsSet() {
+	if o != nil && !IsNil(o.Slot1) {
 		return true
 	}
 
 	return false
 }
 
-// SetSlot1 gets a reference to the given NullableSkyBlockProfileMemberAccessoryBagStorageTuningSlot and assigns it to the Slot1 field.
+// SetSlot1 gets a reference to the given SkyBlockProfileMemberAccessoryBagStorageTuningSlot and assigns it to the Slot1 field.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetSlot1(v SkyBlockProfileMemberAccessoryBagStorageTuningSlot) {
-	o.Slot1.Set(&v)
+	o.Slot1 = &v
 }
 
-// SetSlot1Nil sets the value for Slot1 to be an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetSlot1Nil() {
-	o.Slot1.Set(nil)
-}
-
-// UnsetSlot1 ensures that no value is present for Slot1, not even an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) UnsetSlot1() {
-	o.Slot1.Unset()
-}
-
-// GetSlot2 returns the Slot2 field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetSlot2 returns the Slot2 field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetSlot2() SkyBlockProfileMemberAccessoryBagStorageTuningSlot {
-	if o == nil || IsNil(o.Slot2.Get()) {
+	if o == nil || IsNil(o.Slot2) {
 		var ret SkyBlockProfileMemberAccessoryBagStorageTuningSlot
 		return ret
 	}
-	return *o.Slot2.Get()
+	return *o.Slot2
 }
 
 // GetSlot2Ok returns a tuple with the Slot2 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetSlot2Ok() (*SkyBlockProfileMemberAccessoryBagStorageTuningSlot, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Slot2) {
 		return nil, false
 	}
-	return o.Slot2.Get(), o.Slot2.IsSet()
+	return o.Slot2, true
 }
 
 // HasSlot2 returns a boolean if a field has been set.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) HasSlot2() bool {
-	if o != nil && o.Slot2.IsSet() {
+	if o != nil && !IsNil(o.Slot2) {
 		return true
 	}
 
 	return false
 }
 
-// SetSlot2 gets a reference to the given NullableSkyBlockProfileMemberAccessoryBagStorageTuningSlot and assigns it to the Slot2 field.
+// SetSlot2 gets a reference to the given SkyBlockProfileMemberAccessoryBagStorageTuningSlot and assigns it to the Slot2 field.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetSlot2(v SkyBlockProfileMemberAccessoryBagStorageTuningSlot) {
-	o.Slot2.Set(&v)
+	o.Slot2 = &v
 }
 
-// SetSlot2Nil sets the value for Slot2 to be an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetSlot2Nil() {
-	o.Slot2.Set(nil)
-}
-
-// UnsetSlot2 ensures that no value is present for Slot2, not even an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) UnsetSlot2() {
-	o.Slot2.Unset()
-}
-
-// GetSlot3 returns the Slot3 field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetSlot3 returns the Slot3 field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetSlot3() SkyBlockProfileMemberAccessoryBagStorageTuningSlot {
-	if o == nil || IsNil(o.Slot3.Get()) {
+	if o == nil || IsNil(o.Slot3) {
 		var ret SkyBlockProfileMemberAccessoryBagStorageTuningSlot
 		return ret
 	}
-	return *o.Slot3.Get()
+	return *o.Slot3
 }
 
 // GetSlot3Ok returns a tuple with the Slot3 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetSlot3Ok() (*SkyBlockProfileMemberAccessoryBagStorageTuningSlot, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Slot3) {
 		return nil, false
 	}
-	return o.Slot3.Get(), o.Slot3.IsSet()
+	return o.Slot3, true
 }
 
 // HasSlot3 returns a boolean if a field has been set.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) HasSlot3() bool {
-	if o != nil && o.Slot3.IsSet() {
+	if o != nil && !IsNil(o.Slot3) {
 		return true
 	}
 
 	return false
 }
 
-// SetSlot3 gets a reference to the given NullableSkyBlockProfileMemberAccessoryBagStorageTuningSlot and assigns it to the Slot3 field.
+// SetSlot3 gets a reference to the given SkyBlockProfileMemberAccessoryBagStorageTuningSlot and assigns it to the Slot3 field.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetSlot3(v SkyBlockProfileMemberAccessoryBagStorageTuningSlot) {
-	o.Slot3.Set(&v)
+	o.Slot3 = &v
 }
 
-// SetSlot3Nil sets the value for Slot3 to be an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetSlot3Nil() {
-	o.Slot3.Set(nil)
-}
-
-// UnsetSlot3 ensures that no value is present for Slot3, not even an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) UnsetSlot3() {
-	o.Slot3.Unset()
-}
-
-// GetSlot4 returns the Slot4 field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetSlot4 returns the Slot4 field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetSlot4() SkyBlockProfileMemberAccessoryBagStorageTuningSlot {
-	if o == nil || IsNil(o.Slot4.Get()) {
+	if o == nil || IsNil(o.Slot4) {
 		var ret SkyBlockProfileMemberAccessoryBagStorageTuningSlot
 		return ret
 	}
-	return *o.Slot4.Get()
+	return *o.Slot4
 }
 
 // GetSlot4Ok returns a tuple with the Slot4 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetSlot4Ok() (*SkyBlockProfileMemberAccessoryBagStorageTuningSlot, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Slot4) {
 		return nil, false
 	}
-	return o.Slot4.Get(), o.Slot4.IsSet()
+	return o.Slot4, true
 }
 
 // HasSlot4 returns a boolean if a field has been set.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) HasSlot4() bool {
-	if o != nil && o.Slot4.IsSet() {
+	if o != nil && !IsNil(o.Slot4) {
 		return true
 	}
 
 	return false
 }
 
-// SetSlot4 gets a reference to the given NullableSkyBlockProfileMemberAccessoryBagStorageTuningSlot and assigns it to the Slot4 field.
+// SetSlot4 gets a reference to the given SkyBlockProfileMemberAccessoryBagStorageTuningSlot and assigns it to the Slot4 field.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetSlot4(v SkyBlockProfileMemberAccessoryBagStorageTuningSlot) {
-	o.Slot4.Set(&v)
-}
-
-// SetSlot4Nil sets the value for Slot4 to be an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetSlot4Nil() {
-	o.Slot4.Set(nil)
-}
-
-// UnsetSlot4 ensures that no value is present for Slot4, not even an explicit nil
-func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) UnsetSlot4() {
-	o.Slot4.Unset()
+	o.Slot4 = &v
 }
 
 func (o SkyBlockProfileMemberAccessoryBagStorageTuning) MarshalJSON() ([]byte, error) {
@@ -312,23 +246,23 @@ func (o SkyBlockProfileMemberAccessoryBagStorageTuning) MarshalJSON() ([]byte, e
 
 func (o SkyBlockProfileMemberAccessoryBagStorageTuning) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if o.HighestUnlockedSlot.IsSet() {
-		toSerialize["highest_unlocked_slot"] = o.HighestUnlockedSlot.Get()
+	if !IsNil(o.HighestUnlockedSlot) {
+		toSerialize["highest_unlocked_slot"] = o.HighestUnlockedSlot
 	}
-	if o.Slot0.IsSet() {
-		toSerialize["slot_0"] = o.Slot0.Get()
+	if !IsNil(o.Slot0) {
+		toSerialize["slot_0"] = o.Slot0
 	}
-	if o.Slot1.IsSet() {
-		toSerialize["slot_1"] = o.Slot1.Get()
+	if !IsNil(o.Slot1) {
+		toSerialize["slot_1"] = o.Slot1
 	}
-	if o.Slot2.IsSet() {
-		toSerialize["slot_2"] = o.Slot2.Get()
+	if !IsNil(o.Slot2) {
+		toSerialize["slot_2"] = o.Slot2
 	}
-	if o.Slot3.IsSet() {
-		toSerialize["slot_3"] = o.Slot3.Get()
+	if !IsNil(o.Slot3) {
+		toSerialize["slot_3"] = o.Slot3
 	}
-	if o.Slot4.IsSet() {
-		toSerialize["slot_4"] = o.Slot4.Get()
+	if !IsNil(o.Slot4) {
+		toSerialize["slot_4"] = o.Slot4
 	}
 	return toSerialize, nil
 }

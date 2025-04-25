@@ -19,17 +19,17 @@ var _ MappedNullable = &SkyBlockProfile{}
 
 // SkyBlockProfile struct for SkyBlockProfile
 type SkyBlockProfile struct {
-	Banking           NullableSkyBlockProfileBanking `json:"banking,omitempty"`
-	CommunityUpgrades map[string]interface{}         `json:"community_upgrades,omitempty"`
+	Banking           *SkyBlockProfileBanking `json:"banking,omitempty"`
+	CommunityUpgrades map[string]interface{}  `json:"community_upgrades,omitempty"`
 	// The cute name of the profile, only provided on the profiles endpoint
-	CuteName NullableString `json:"cute_name,omitempty"`
+	CuteName *string `json:"cute_name,omitempty"`
 	// The SkyBlock game mode of the profile, not present if normal mode
-	GameMode NullableString `json:"game_mode,omitempty"`
+	GameMode *string `json:"game_mode,omitempty"`
 	// A map of profile member UUIDs to profile member objects
 	Members   *map[string]SkyBlockProfileMember `json:"members,omitempty"`
 	ProfileId *string                           `json:"profile_id,omitempty"`
 	// Whether or not this is the currently selected profile, only provided on the profiles endpoint
-	Selected NullableBool `json:"selected,omitempty"`
+	Selected *bool `json:"selected,omitempty"`
 }
 
 // NewSkyBlockProfile instantiates a new SkyBlockProfile object
@@ -49,52 +49,41 @@ func NewSkyBlockProfileWithDefaults() *SkyBlockProfile {
 	return &this
 }
 
-// GetBanking returns the Banking field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetBanking returns the Banking field value if set, zero value otherwise.
 func (o *SkyBlockProfile) GetBanking() SkyBlockProfileBanking {
-	if o == nil || IsNil(o.Banking.Get()) {
+	if o == nil || IsNil(o.Banking) {
 		var ret SkyBlockProfileBanking
 		return ret
 	}
-	return *o.Banking.Get()
+	return *o.Banking
 }
 
 // GetBankingOk returns a tuple with the Banking field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfile) GetBankingOk() (*SkyBlockProfileBanking, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Banking) {
 		return nil, false
 	}
-	return o.Banking.Get(), o.Banking.IsSet()
+	return o.Banking, true
 }
 
 // HasBanking returns a boolean if a field has been set.
 func (o *SkyBlockProfile) HasBanking() bool {
-	if o != nil && o.Banking.IsSet() {
+	if o != nil && !IsNil(o.Banking) {
 		return true
 	}
 
 	return false
 }
 
-// SetBanking gets a reference to the given NullableSkyBlockProfileBanking and assigns it to the Banking field.
+// SetBanking gets a reference to the given SkyBlockProfileBanking and assigns it to the Banking field.
 func (o *SkyBlockProfile) SetBanking(v SkyBlockProfileBanking) {
-	o.Banking.Set(&v)
+	o.Banking = &v
 }
 
-// SetBankingNil sets the value for Banking to be an explicit nil
-func (o *SkyBlockProfile) SetBankingNil() {
-	o.Banking.Set(nil)
-}
-
-// UnsetBanking ensures that no value is present for Banking, not even an explicit nil
-func (o *SkyBlockProfile) UnsetBanking() {
-	o.Banking.Unset()
-}
-
-// GetCommunityUpgrades returns the CommunityUpgrades field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetCommunityUpgrades returns the CommunityUpgrades field value if set, zero value otherwise.
 func (o *SkyBlockProfile) GetCommunityUpgrades() map[string]interface{} {
-	if o == nil {
+	if o == nil || IsNil(o.CommunityUpgrades) {
 		var ret map[string]interface{}
 		return ret
 	}
@@ -103,7 +92,6 @@ func (o *SkyBlockProfile) GetCommunityUpgrades() map[string]interface{} {
 
 // GetCommunityUpgradesOk returns a tuple with the CommunityUpgrades field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfile) GetCommunityUpgradesOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.CommunityUpgrades) {
 		return map[string]interface{}{}, false
@@ -125,90 +113,68 @@ func (o *SkyBlockProfile) SetCommunityUpgrades(v map[string]interface{}) {
 	o.CommunityUpgrades = v
 }
 
-// GetCuteName returns the CuteName field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetCuteName returns the CuteName field value if set, zero value otherwise.
 func (o *SkyBlockProfile) GetCuteName() string {
-	if o == nil || IsNil(o.CuteName.Get()) {
+	if o == nil || IsNil(o.CuteName) {
 		var ret string
 		return ret
 	}
-	return *o.CuteName.Get()
+	return *o.CuteName
 }
 
 // GetCuteNameOk returns a tuple with the CuteName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfile) GetCuteNameOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.CuteName) {
 		return nil, false
 	}
-	return o.CuteName.Get(), o.CuteName.IsSet()
+	return o.CuteName, true
 }
 
 // HasCuteName returns a boolean if a field has been set.
 func (o *SkyBlockProfile) HasCuteName() bool {
-	if o != nil && o.CuteName.IsSet() {
+	if o != nil && !IsNil(o.CuteName) {
 		return true
 	}
 
 	return false
 }
 
-// SetCuteName gets a reference to the given NullableString and assigns it to the CuteName field.
+// SetCuteName gets a reference to the given string and assigns it to the CuteName field.
 func (o *SkyBlockProfile) SetCuteName(v string) {
-	o.CuteName.Set(&v)
+	o.CuteName = &v
 }
 
-// SetCuteNameNil sets the value for CuteName to be an explicit nil
-func (o *SkyBlockProfile) SetCuteNameNil() {
-	o.CuteName.Set(nil)
-}
-
-// UnsetCuteName ensures that no value is present for CuteName, not even an explicit nil
-func (o *SkyBlockProfile) UnsetCuteName() {
-	o.CuteName.Unset()
-}
-
-// GetGameMode returns the GameMode field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetGameMode returns the GameMode field value if set, zero value otherwise.
 func (o *SkyBlockProfile) GetGameMode() string {
-	if o == nil || IsNil(o.GameMode.Get()) {
+	if o == nil || IsNil(o.GameMode) {
 		var ret string
 		return ret
 	}
-	return *o.GameMode.Get()
+	return *o.GameMode
 }
 
 // GetGameModeOk returns a tuple with the GameMode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfile) GetGameModeOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.GameMode) {
 		return nil, false
 	}
-	return o.GameMode.Get(), o.GameMode.IsSet()
+	return o.GameMode, true
 }
 
 // HasGameMode returns a boolean if a field has been set.
 func (o *SkyBlockProfile) HasGameMode() bool {
-	if o != nil && o.GameMode.IsSet() {
+	if o != nil && !IsNil(o.GameMode) {
 		return true
 	}
 
 	return false
 }
 
-// SetGameMode gets a reference to the given NullableString and assigns it to the GameMode field.
+// SetGameMode gets a reference to the given string and assigns it to the GameMode field.
 func (o *SkyBlockProfile) SetGameMode(v string) {
-	o.GameMode.Set(&v)
-}
-
-// SetGameModeNil sets the value for GameMode to be an explicit nil
-func (o *SkyBlockProfile) SetGameModeNil() {
-	o.GameMode.Set(nil)
-}
-
-// UnsetGameMode ensures that no value is present for GameMode, not even an explicit nil
-func (o *SkyBlockProfile) UnsetGameMode() {
-	o.GameMode.Unset()
+	o.GameMode = &v
 }
 
 // GetMembers returns the Members field value if set, zero value otherwise.
@@ -275,47 +241,36 @@ func (o *SkyBlockProfile) SetProfileId(v string) {
 	o.ProfileId = &v
 }
 
-// GetSelected returns the Selected field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetSelected returns the Selected field value if set, zero value otherwise.
 func (o *SkyBlockProfile) GetSelected() bool {
-	if o == nil || IsNil(o.Selected.Get()) {
+	if o == nil || IsNil(o.Selected) {
 		var ret bool
 		return ret
 	}
-	return *o.Selected.Get()
+	return *o.Selected
 }
 
 // GetSelectedOk returns a tuple with the Selected field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfile) GetSelectedOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Selected) {
 		return nil, false
 	}
-	return o.Selected.Get(), o.Selected.IsSet()
+	return o.Selected, true
 }
 
 // HasSelected returns a boolean if a field has been set.
 func (o *SkyBlockProfile) HasSelected() bool {
-	if o != nil && o.Selected.IsSet() {
+	if o != nil && !IsNil(o.Selected) {
 		return true
 	}
 
 	return false
 }
 
-// SetSelected gets a reference to the given NullableBool and assigns it to the Selected field.
+// SetSelected gets a reference to the given bool and assigns it to the Selected field.
 func (o *SkyBlockProfile) SetSelected(v bool) {
-	o.Selected.Set(&v)
-}
-
-// SetSelectedNil sets the value for Selected to be an explicit nil
-func (o *SkyBlockProfile) SetSelectedNil() {
-	o.Selected.Set(nil)
-}
-
-// UnsetSelected ensures that no value is present for Selected, not even an explicit nil
-func (o *SkyBlockProfile) UnsetSelected() {
-	o.Selected.Unset()
+	o.Selected = &v
 }
 
 func (o SkyBlockProfile) MarshalJSON() ([]byte, error) {
@@ -328,17 +283,17 @@ func (o SkyBlockProfile) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfile) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Banking.IsSet() {
-		toSerialize["banking"] = o.Banking.Get()
+	if !IsNil(o.Banking) {
+		toSerialize["banking"] = o.Banking
 	}
-	if o.CommunityUpgrades != nil {
+	if !IsNil(o.CommunityUpgrades) {
 		toSerialize["community_upgrades"] = o.CommunityUpgrades
 	}
-	if o.CuteName.IsSet() {
-		toSerialize["cute_name"] = o.CuteName.Get()
+	if !IsNil(o.CuteName) {
+		toSerialize["cute_name"] = o.CuteName
 	}
-	if o.GameMode.IsSet() {
-		toSerialize["game_mode"] = o.GameMode.Get()
+	if !IsNil(o.GameMode) {
+		toSerialize["game_mode"] = o.GameMode
 	}
 	if !IsNil(o.Members) {
 		toSerialize["members"] = o.Members
@@ -346,8 +301,8 @@ func (o SkyBlockProfile) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ProfileId) {
 		toSerialize["profile_id"] = o.ProfileId
 	}
-	if o.Selected.IsSet() {
-		toSerialize["selected"] = o.Selected.Get()
+	if !IsNil(o.Selected) {
+		toSerialize["selected"] = o.Selected
 	}
 	return toSerialize, nil
 }

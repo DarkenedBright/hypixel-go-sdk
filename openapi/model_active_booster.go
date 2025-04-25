@@ -270,9 +270,9 @@ func (o *ActiveBooster) SetPurchaserUuid(v string) {
 	o.PurchaserUuid = &v
 }
 
-// GetStacked returns the Stacked field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetStacked returns the Stacked field value if set, zero value otherwise.
 func (o *ActiveBooster) GetStacked() []string {
-	if o == nil {
+	if o == nil || IsNil(o.Stacked) {
 		var ret []string
 		return ret
 	}
@@ -281,7 +281,6 @@ func (o *ActiveBooster) GetStacked() []string {
 
 // GetStackedOk returns a tuple with the Stacked field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *ActiveBooster) GetStackedOk() ([]string, bool) {
 	if o == nil || IsNil(o.Stacked) {
 		return nil, false
@@ -334,7 +333,7 @@ func (o ActiveBooster) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.PurchaserUuid) {
 		toSerialize["purchaserUuid"] = o.PurchaserUuid
 	}
-	if o.Stacked != nil {
+	if !IsNil(o.Stacked) {
 		toSerialize["stacked"] = o.Stacked
 	}
 	return toSerialize, nil

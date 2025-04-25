@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Length** | Pointer to **int64** |  | [optional] 
 **OriginalLength** | Pointer to **int64** |  | [optional] 
 **PurchaserUuid** | Pointer to **string** |  | [optional] 
-**Stacked** | Pointer to **NullableBool** |  | [optional] 
+**Stacked** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
@@ -232,16 +232,6 @@ SetStacked sets Stacked field to given value.
 
 HasStacked returns a boolean if a field has been set.
 
-### SetStackedNil
-
-`func (o *QueuedBooster) SetStackedNil(b bool)`
-
- SetStackedNil sets the value for Stacked to be an explicit nil
-
-### UnsetStacked
-`func (o *QueuedBooster) UnsetStacked()`
-
-UnsetStacked ensures that no value is present for Stacked, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

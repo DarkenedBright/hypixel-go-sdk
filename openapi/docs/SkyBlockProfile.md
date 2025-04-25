@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Banking** | Pointer to [**NullableSkyBlockProfileBanking**](SkyBlockProfileBanking.md) |  | [optional] 
+**Banking** | Pointer to [**SkyBlockProfileBanking**](SkyBlockProfileBanking.md) |  | [optional] 
 **CommunityUpgrades** | Pointer to **map[string]interface{}** |  | [optional] 
-**CuteName** | Pointer to **NullableString** | The cute name of the profile, only provided on the profiles endpoint | [optional] 
-**GameMode** | Pointer to **NullableString** | The SkyBlock game mode of the profile, not present if normal mode | [optional] 
+**CuteName** | Pointer to **string** | The cute name of the profile, only provided on the profiles endpoint | [optional] 
+**GameMode** | Pointer to **string** | The SkyBlock game mode of the profile, not present if normal mode | [optional] 
 **Members** | Pointer to [**map[string]SkyBlockProfileMember**](SkyBlockProfileMember.md) | A map of profile member UUIDs to profile member objects | [optional] 
 **ProfileId** | Pointer to **string** |  | [optional] 
-**Selected** | Pointer to **NullableBool** | Whether or not this is the currently selected profile, only provided on the profiles endpoint | [optional] 
+**Selected** | Pointer to **bool** | Whether or not this is the currently selected profile, only provided on the profiles endpoint | [optional] 
 
 ## Methods
 
@@ -56,16 +56,6 @@ SetBanking sets Banking field to given value.
 
 HasBanking returns a boolean if a field has been set.
 
-### SetBankingNil
-
-`func (o *SkyBlockProfile) SetBankingNil(b bool)`
-
- SetBankingNil sets the value for Banking to be an explicit nil
-
-### UnsetBanking
-`func (o *SkyBlockProfile) UnsetBanking()`
-
-UnsetBanking ensures that no value is present for Banking, not even an explicit nil
 ### GetCommunityUpgrades
 
 `func (o *SkyBlockProfile) GetCommunityUpgrades() map[string]interface{}`
@@ -91,16 +81,6 @@ SetCommunityUpgrades sets CommunityUpgrades field to given value.
 
 HasCommunityUpgrades returns a boolean if a field has been set.
 
-### SetCommunityUpgradesNil
-
-`func (o *SkyBlockProfile) SetCommunityUpgradesNil(b bool)`
-
- SetCommunityUpgradesNil sets the value for CommunityUpgrades to be an explicit nil
-
-### UnsetCommunityUpgrades
-`func (o *SkyBlockProfile) UnsetCommunityUpgrades()`
-
-UnsetCommunityUpgrades ensures that no value is present for CommunityUpgrades, not even an explicit nil
 ### GetCuteName
 
 `func (o *SkyBlockProfile) GetCuteName() string`
@@ -126,16 +106,6 @@ SetCuteName sets CuteName field to given value.
 
 HasCuteName returns a boolean if a field has been set.
 
-### SetCuteNameNil
-
-`func (o *SkyBlockProfile) SetCuteNameNil(b bool)`
-
- SetCuteNameNil sets the value for CuteName to be an explicit nil
-
-### UnsetCuteName
-`func (o *SkyBlockProfile) UnsetCuteName()`
-
-UnsetCuteName ensures that no value is present for CuteName, not even an explicit nil
 ### GetGameMode
 
 `func (o *SkyBlockProfile) GetGameMode() string`
@@ -161,16 +131,6 @@ SetGameMode sets GameMode field to given value.
 
 HasGameMode returns a boolean if a field has been set.
 
-### SetGameModeNil
-
-`func (o *SkyBlockProfile) SetGameModeNil(b bool)`
-
- SetGameModeNil sets the value for GameMode to be an explicit nil
-
-### UnsetGameMode
-`func (o *SkyBlockProfile) UnsetGameMode()`
-
-UnsetGameMode ensures that no value is present for GameMode, not even an explicit nil
 ### GetMembers
 
 `func (o *SkyBlockProfile) GetMembers() map[string]SkyBlockProfileMember`
@@ -246,16 +206,6 @@ SetSelected sets Selected field to given value.
 
 HasSelected returns a boolean if a field has been set.
 
-### SetSelectedNil
-
-`func (o *SkyBlockProfile) SetSelectedNil(b bool)`
-
- SetSelectedNil sets the value for Selected to be an explicit nil
-
-### UnsetSelected
-`func (o *SkyBlockProfile) UnsetSelected()`
-
-UnsetSelected ensures that no value is present for Selected, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
