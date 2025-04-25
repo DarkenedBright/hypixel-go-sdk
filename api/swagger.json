@@ -708,6 +708,11 @@
                         "additionalProperties": {
                             "type": "integer"
                         },
+                        "properties": {
+                            "last_killed_mob": {
+                                "type": "string"
+                            }
+                        },
                         "type": "object"
                     },
                     "migrated_stats": {

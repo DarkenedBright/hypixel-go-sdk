@@ -181,6 +181,7 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberAccessoryBagStorageTuning](docs/SkyBlockProfileMemberAccessoryBagStorageTuning.md)
  - [SkyBlockProfileMemberAccessoryBagStorageTuningSlot](docs/SkyBlockProfileMemberAccessoryBagStorageTuningSlot.md)
  - [SkyBlockProfileMemberBestiary](docs/SkyBlockProfileMemberBestiary.md)
+ - [SkyBlockProfileMemberBestiaryKills](docs/SkyBlockProfileMemberBestiaryKills.md)
  - [SkyBlockProfileMemberBestiaryMilestone](docs/SkyBlockProfileMemberBestiaryMilestone.md)
  - [SkyBlockProfileMemberBestiaryMiscellaneous](docs/SkyBlockProfileMemberBestiaryMiscellaneous.md)
  - [SkyBlockProfileMemberRift](docs/SkyBlockProfileMemberRift.md)

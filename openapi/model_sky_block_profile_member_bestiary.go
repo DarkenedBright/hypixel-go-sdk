@@ -20,7 +20,7 @@ var _ MappedNullable = &SkyBlockProfileMemberBestiary{}
 // SkyBlockProfileMemberBestiary struct for SkyBlockProfileMemberBestiary
 type SkyBlockProfileMemberBestiary struct {
 	Deaths        *map[string]int64                           `json:"deaths,omitempty"`
-	Kills         *map[string]int64                           `json:"kills,omitempty"`
+	Kills         *SkyBlockProfileMemberBestiaryKills         `json:"kills,omitempty"`
 	MigratedStats *bool                                       `json:"migrated_stats,omitempty"`
 	Migration     *bool                                       `json:"migration,omitempty"`
 	Milestone     *SkyBlockProfileMemberBestiaryMilestone     `json:"milestone,omitempty"`
@@ -77,9 +77,9 @@ func (o *SkyBlockProfileMemberBestiary) SetDeaths(v map[string]int64) {
 }
 
 // GetKills returns the Kills field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberBestiary) GetKills() map[string]int64 {
+func (o *SkyBlockProfileMemberBestiary) GetKills() SkyBlockProfileMemberBestiaryKills {
 	if o == nil || IsNil(o.Kills) {
-		var ret map[string]int64
+		var ret SkyBlockProfileMemberBestiaryKills
 		return ret
 	}
 	return *o.Kills
@@ -87,7 +87,7 @@ func (o *SkyBlockProfileMemberBestiary) GetKills() map[string]int64 {
 
 // GetKillsOk returns a tuple with the Kills field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberBestiary) GetKillsOk() (*map[string]int64, bool) {
+func (o *SkyBlockProfileMemberBestiary) GetKillsOk() (*SkyBlockProfileMemberBestiaryKills, bool) {
 	if o == nil || IsNil(o.Kills) {
 		return nil, false
 	}
@@ -103,8 +103,8 @@ func (o *SkyBlockProfileMemberBestiary) HasKills() bool {
 	return false
 }
 
-// SetKills gets a reference to the given map[string]int64 and assigns it to the Kills field.
-func (o *SkyBlockProfileMemberBestiary) SetKills(v map[string]int64) {
+// SetKills gets a reference to the given SkyBlockProfileMemberBestiaryKills and assigns it to the Kills field.
+func (o *SkyBlockProfileMemberBestiary) SetKills(v SkyBlockProfileMemberBestiaryKills) {
 	o.Kills = &v
 }
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Deaths** | Pointer to **map[string]int64** |  | [optional] 
-**Kills** | Pointer to **map[string]int64** |  | [optional] 
+**Kills** | Pointer to [**SkyBlockProfileMemberBestiaryKills**](SkyBlockProfileMemberBestiaryKills.md) |  | [optional] 
 **MigratedStats** | Pointer to **bool** |  | [optional] 
 **Migration** | Pointer to **bool** |  | [optional] 
 **Milestone** | Pointer to [**SkyBlockProfileMemberBestiaryMilestone**](SkyBlockProfileMemberBestiaryMilestone.md) |  | [optional] 
@@ -57,20 +57,20 @@ HasDeaths returns a boolean if a field has been set.
 
 ### GetKills
 
-`func (o *SkyBlockProfileMemberBestiary) GetKills() map[string]int64`
+`func (o *SkyBlockProfileMemberBestiary) GetKills() SkyBlockProfileMemberBestiaryKills`
 
 GetKills returns the Kills field if non-nil, zero value otherwise.
 
 ### GetKillsOk
 
-`func (o *SkyBlockProfileMemberBestiary) GetKillsOk() (*map[string]int64, bool)`
+`func (o *SkyBlockProfileMemberBestiary) GetKillsOk() (*SkyBlockProfileMemberBestiaryKills, bool)`
 
 GetKillsOk returns a tuple with the Kills field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetKills
 
-`func (o *SkyBlockProfileMemberBestiary) SetKills(v map[string]int64)`
+`func (o *SkyBlockProfileMemberBestiary) SetKills(v SkyBlockProfileMemberBestiaryKills)`
 
 SetKills sets Kills field to given value.
 
