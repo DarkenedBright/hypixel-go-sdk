@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Value** | Pointer to **float64** |  | [optional] 
 **Appraisal** | Pointer to **bool** |  | [optional] 
 **Items** | Pointer to **map[string]interface{}** |  | [optional] 
 **Special** | Pointer to [**[]SkyBlockMuseumSpecialInner**](SkyBlockMuseumSpecialInner.md) |  | [optional] 
+**Value** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
@@ -27,31 +27,6 @@ will change when the set of required properties is changed
 NewSkyBlockMuseumWithDefaults instantiates a new SkyBlockMuseum object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetValue
-
-`func (o *SkyBlockMuseum) GetValue() float64`
-
-GetValue returns the Value field if non-nil, zero value otherwise.
-
-### GetValueOk
-
-`func (o *SkyBlockMuseum) GetValueOk() (*float64, bool)`
-
-GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetValue
-
-`func (o *SkyBlockMuseum) SetValue(v float64)`
-
-SetValue sets Value field to given value.
-
-### HasValue
-
-`func (o *SkyBlockMuseum) HasValue() bool`
-
-HasValue returns a boolean if a field has been set.
 
 ### GetAppraisal
 
@@ -127,6 +102,31 @@ SetSpecial sets Special field to given value.
 `func (o *SkyBlockMuseum) HasSpecial() bool`
 
 HasSpecial returns a boolean if a field has been set.
+
+### GetValue
+
+`func (o *SkyBlockMuseum) GetValue() int64`
+
+GetValue returns the Value field if non-nil, zero value otherwise.
+
+### GetValueOk
+
+`func (o *SkyBlockMuseum) GetValueOk() (*int64, bool)`
+
+GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetValue
+
+`func (o *SkyBlockMuseum) SetValue(v int64)`
+
+SetValue sets Value field to given value.
+
+### HasValue
+
+`func (o *SkyBlockMuseum) HasValue() bool`
+
+HasValue returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** |  | [optional] 
-**Members** | Pointer to [**map[string]SkyBlockProfileMember**](SkyBlockProfileMember.md) | A map of profile member UUIDs to profile member objects | [optional] 
-**CuteName** | Pointer to **NullableString** | The cute name of the profile, only provided on the profiles endpoint | [optional] 
-**Selected** | Pointer to **NullableBool** | Whether or not this is the currently selected profile, only provided on the profiles endpoint | [optional] 
-**CommunityUpgrades** | Pointer to **map[string]interface{}** |  | [optional] 
 **Banking** | Pointer to [**NullableSkyBlockProfileBanking**](SkyBlockProfileBanking.md) |  | [optional] 
+**CommunityUpgrades** | Pointer to **map[string]interface{}** |  | [optional] 
+**CuteName** | Pointer to **NullableString** | The cute name of the profile, only provided on the profiles endpoint | [optional] 
 **GameMode** | Pointer to **NullableString** | The SkyBlock game mode of the profile, not present if normal mode | [optional] 
+**Members** | Pointer to [**map[string]SkyBlockProfileMember**](SkyBlockProfileMember.md) | A map of profile member UUIDs to profile member objects | [optional] 
+**ProfileId** | Pointer to **string** |  | [optional] 
+**Selected** | Pointer to **NullableBool** | Whether or not this is the currently selected profile, only provided on the profiles endpoint | [optional] 
 
 ## Methods
 
@@ -31,161 +31,6 @@ NewSkyBlockProfileWithDefaults instantiates a new SkyBlockProfile object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
-
-`func (o *SkyBlockProfile) GetProfileId() string`
-
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
-
-### GetProfileIdOk
-
-`func (o *SkyBlockProfile) GetProfileIdOk() (*string, bool)`
-
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProfileId
-
-`func (o *SkyBlockProfile) SetProfileId(v string)`
-
-SetProfileId sets ProfileId field to given value.
-
-### HasProfileId
-
-`func (o *SkyBlockProfile) HasProfileId() bool`
-
-HasProfileId returns a boolean if a field has been set.
-
-### GetMembers
-
-`func (o *SkyBlockProfile) GetMembers() map[string]SkyBlockProfileMember`
-
-GetMembers returns the Members field if non-nil, zero value otherwise.
-
-### GetMembersOk
-
-`func (o *SkyBlockProfile) GetMembersOk() (*map[string]SkyBlockProfileMember, bool)`
-
-GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMembers
-
-`func (o *SkyBlockProfile) SetMembers(v map[string]SkyBlockProfileMember)`
-
-SetMembers sets Members field to given value.
-
-### HasMembers
-
-`func (o *SkyBlockProfile) HasMembers() bool`
-
-HasMembers returns a boolean if a field has been set.
-
-### GetCuteName
-
-`func (o *SkyBlockProfile) GetCuteName() string`
-
-GetCuteName returns the CuteName field if non-nil, zero value otherwise.
-
-### GetCuteNameOk
-
-`func (o *SkyBlockProfile) GetCuteNameOk() (*string, bool)`
-
-GetCuteNameOk returns a tuple with the CuteName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCuteName
-
-`func (o *SkyBlockProfile) SetCuteName(v string)`
-
-SetCuteName sets CuteName field to given value.
-
-### HasCuteName
-
-`func (o *SkyBlockProfile) HasCuteName() bool`
-
-HasCuteName returns a boolean if a field has been set.
-
-### SetCuteNameNil
-
-`func (o *SkyBlockProfile) SetCuteNameNil(b bool)`
-
- SetCuteNameNil sets the value for CuteName to be an explicit nil
-
-### UnsetCuteName
-`func (o *SkyBlockProfile) UnsetCuteName()`
-
-UnsetCuteName ensures that no value is present for CuteName, not even an explicit nil
-### GetSelected
-
-`func (o *SkyBlockProfile) GetSelected() bool`
-
-GetSelected returns the Selected field if non-nil, zero value otherwise.
-
-### GetSelectedOk
-
-`func (o *SkyBlockProfile) GetSelectedOk() (*bool, bool)`
-
-GetSelectedOk returns a tuple with the Selected field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSelected
-
-`func (o *SkyBlockProfile) SetSelected(v bool)`
-
-SetSelected sets Selected field to given value.
-
-### HasSelected
-
-`func (o *SkyBlockProfile) HasSelected() bool`
-
-HasSelected returns a boolean if a field has been set.
-
-### SetSelectedNil
-
-`func (o *SkyBlockProfile) SetSelectedNil(b bool)`
-
- SetSelectedNil sets the value for Selected to be an explicit nil
-
-### UnsetSelected
-`func (o *SkyBlockProfile) UnsetSelected()`
-
-UnsetSelected ensures that no value is present for Selected, not even an explicit nil
-### GetCommunityUpgrades
-
-`func (o *SkyBlockProfile) GetCommunityUpgrades() map[string]interface{}`
-
-GetCommunityUpgrades returns the CommunityUpgrades field if non-nil, zero value otherwise.
-
-### GetCommunityUpgradesOk
-
-`func (o *SkyBlockProfile) GetCommunityUpgradesOk() (*map[string]interface{}, bool)`
-
-GetCommunityUpgradesOk returns a tuple with the CommunityUpgrades field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCommunityUpgrades
-
-`func (o *SkyBlockProfile) SetCommunityUpgrades(v map[string]interface{})`
-
-SetCommunityUpgrades sets CommunityUpgrades field to given value.
-
-### HasCommunityUpgrades
-
-`func (o *SkyBlockProfile) HasCommunityUpgrades() bool`
-
-HasCommunityUpgrades returns a boolean if a field has been set.
-
-### SetCommunityUpgradesNil
-
-`func (o *SkyBlockProfile) SetCommunityUpgradesNil(b bool)`
-
- SetCommunityUpgradesNil sets the value for CommunityUpgrades to be an explicit nil
-
-### UnsetCommunityUpgrades
-`func (o *SkyBlockProfile) UnsetCommunityUpgrades()`
-
-UnsetCommunityUpgrades ensures that no value is present for CommunityUpgrades, not even an explicit nil
 ### GetBanking
 
 `func (o *SkyBlockProfile) GetBanking() SkyBlockProfileBanking`
@@ -221,6 +66,76 @@ HasBanking returns a boolean if a field has been set.
 `func (o *SkyBlockProfile) UnsetBanking()`
 
 UnsetBanking ensures that no value is present for Banking, not even an explicit nil
+### GetCommunityUpgrades
+
+`func (o *SkyBlockProfile) GetCommunityUpgrades() map[string]interface{}`
+
+GetCommunityUpgrades returns the CommunityUpgrades field if non-nil, zero value otherwise.
+
+### GetCommunityUpgradesOk
+
+`func (o *SkyBlockProfile) GetCommunityUpgradesOk() (*map[string]interface{}, bool)`
+
+GetCommunityUpgradesOk returns a tuple with the CommunityUpgrades field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCommunityUpgrades
+
+`func (o *SkyBlockProfile) SetCommunityUpgrades(v map[string]interface{})`
+
+SetCommunityUpgrades sets CommunityUpgrades field to given value.
+
+### HasCommunityUpgrades
+
+`func (o *SkyBlockProfile) HasCommunityUpgrades() bool`
+
+HasCommunityUpgrades returns a boolean if a field has been set.
+
+### SetCommunityUpgradesNil
+
+`func (o *SkyBlockProfile) SetCommunityUpgradesNil(b bool)`
+
+ SetCommunityUpgradesNil sets the value for CommunityUpgrades to be an explicit nil
+
+### UnsetCommunityUpgrades
+`func (o *SkyBlockProfile) UnsetCommunityUpgrades()`
+
+UnsetCommunityUpgrades ensures that no value is present for CommunityUpgrades, not even an explicit nil
+### GetCuteName
+
+`func (o *SkyBlockProfile) GetCuteName() string`
+
+GetCuteName returns the CuteName field if non-nil, zero value otherwise.
+
+### GetCuteNameOk
+
+`func (o *SkyBlockProfile) GetCuteNameOk() (*string, bool)`
+
+GetCuteNameOk returns a tuple with the CuteName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCuteName
+
+`func (o *SkyBlockProfile) SetCuteName(v string)`
+
+SetCuteName sets CuteName field to given value.
+
+### HasCuteName
+
+`func (o *SkyBlockProfile) HasCuteName() bool`
+
+HasCuteName returns a boolean if a field has been set.
+
+### SetCuteNameNil
+
+`func (o *SkyBlockProfile) SetCuteNameNil(b bool)`
+
+ SetCuteNameNil sets the value for CuteName to be an explicit nil
+
+### UnsetCuteName
+`func (o *SkyBlockProfile) UnsetCuteName()`
+
+UnsetCuteName ensures that no value is present for CuteName, not even an explicit nil
 ### GetGameMode
 
 `func (o *SkyBlockProfile) GetGameMode() string`
@@ -256,6 +171,91 @@ HasGameMode returns a boolean if a field has been set.
 `func (o *SkyBlockProfile) UnsetGameMode()`
 
 UnsetGameMode ensures that no value is present for GameMode, not even an explicit nil
+### GetMembers
+
+`func (o *SkyBlockProfile) GetMembers() map[string]SkyBlockProfileMember`
+
+GetMembers returns the Members field if non-nil, zero value otherwise.
+
+### GetMembersOk
+
+`func (o *SkyBlockProfile) GetMembersOk() (*map[string]SkyBlockProfileMember, bool)`
+
+GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMembers
+
+`func (o *SkyBlockProfile) SetMembers(v map[string]SkyBlockProfileMember)`
+
+SetMembers sets Members field to given value.
+
+### HasMembers
+
+`func (o *SkyBlockProfile) HasMembers() bool`
+
+HasMembers returns a boolean if a field has been set.
+
+### GetProfileId
+
+`func (o *SkyBlockProfile) GetProfileId() string`
+
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+
+### GetProfileIdOk
+
+`func (o *SkyBlockProfile) GetProfileIdOk() (*string, bool)`
+
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfileId
+
+`func (o *SkyBlockProfile) SetProfileId(v string)`
+
+SetProfileId sets ProfileId field to given value.
+
+### HasProfileId
+
+`func (o *SkyBlockProfile) HasProfileId() bool`
+
+HasProfileId returns a boolean if a field has been set.
+
+### GetSelected
+
+`func (o *SkyBlockProfile) GetSelected() bool`
+
+GetSelected returns the Selected field if non-nil, zero value otherwise.
+
+### GetSelectedOk
+
+`func (o *SkyBlockProfile) GetSelectedOk() (*bool, bool)`
+
+GetSelectedOk returns a tuple with the Selected field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSelected
+
+`func (o *SkyBlockProfile) SetSelected(v bool)`
+
+SetSelected sets Selected field to given value.
+
+### HasSelected
+
+`func (o *SkyBlockProfile) HasSelected() bool`
+
+HasSelected returns a boolean if a field has been set.
+
+### SetSelectedNil
+
+`func (o *SkyBlockProfile) SetSelectedNil(b bool)`
+
+ SetSelectedNil sets the value for Selected to be an explicit nil
+
+### UnsetSelected
+`func (o *SkyBlockProfile) UnsetSelected()`
+
+UnsetSelected ensures that no value is present for Selected, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

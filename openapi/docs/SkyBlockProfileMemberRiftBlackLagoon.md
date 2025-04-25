@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CompletedStep** | Pointer to **float64** |  | [optional] 
+**CompletedStep** | Pointer to **int64** |  | [optional] 
 **DeliveredSciencePaper** | Pointer to **bool** |  | [optional] 
 **ReceivedSciencePaper** | Pointer to **bool** |  | [optional] 
 **TalkedToEdwin** | Pointer to **bool** |  | [optional] 
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCompletedStep
 
-`func (o *SkyBlockProfileMemberRiftBlackLagoon) GetCompletedStep() float64`
+`func (o *SkyBlockProfileMemberRiftBlackLagoon) GetCompletedStep() int64`
 
 GetCompletedStep returns the CompletedStep field if non-nil, zero value otherwise.
 
 ### GetCompletedStepOk
 
-`func (o *SkyBlockProfileMemberRiftBlackLagoon) GetCompletedStepOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftBlackLagoon) GetCompletedStepOk() (*int64, bool)`
 
 GetCompletedStepOk returns a tuple with the CompletedStep field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCompletedStep
 
-`func (o *SkyBlockProfileMemberRiftBlackLagoon) SetCompletedStep(v float64)`
+`func (o *SkyBlockProfileMemberRiftBlackLagoon) SetCompletedStep(v int64)`
 
 SetCompletedStep sets CompletedStep field to given value.
 

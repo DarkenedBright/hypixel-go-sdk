@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BoughtCloak** | Pointer to **bool** |  | [optional] 
-**ClaimedBonusIndex** | Pointer to **float64** |  | [optional] 
+**ClaimedBonusIndex** | Pointer to **int64** |  | [optional] 
 **FoundSouls** | Pointer to **[]string** |  | [optional] 
 
 ## Methods
@@ -54,20 +54,20 @@ HasBoughtCloak returns a boolean if a field has been set.
 
 ### GetClaimedBonusIndex
 
-`func (o *SkyBlockProfileMemberRiftEnigma) GetClaimedBonusIndex() float64`
+`func (o *SkyBlockProfileMemberRiftEnigma) GetClaimedBonusIndex() int64`
 
 GetClaimedBonusIndex returns the ClaimedBonusIndex field if non-nil, zero value otherwise.
 
 ### GetClaimedBonusIndexOk
 
-`func (o *SkyBlockProfileMemberRiftEnigma) GetClaimedBonusIndexOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftEnigma) GetClaimedBonusIndexOk() (*int64, bool)`
 
 GetClaimedBonusIndexOk returns a tuple with the ClaimedBonusIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetClaimedBonusIndex
 
-`func (o *SkyBlockProfileMemberRiftEnigma) SetClaimedBonusIndex(v float64)`
+`func (o *SkyBlockProfileMemberRiftEnigma) SetClaimedBonusIndex(v int64)`
 
 SetClaimedBonusIndex sets ClaimedBonusIndex field to given value.
 

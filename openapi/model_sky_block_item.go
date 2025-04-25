@@ -19,18 +19,18 @@ var _ MappedNullable = &SkyBlockItem{}
 
 // SkyBlockItem struct for SkyBlockItem
 type SkyBlockItem struct {
+	// The color metadata to be applied to an item, usually leather armor pieces
+	Color *string `json:"color,omitempty" validate:"regexp=^(?:(?:^|,\\\\s*)([01]?\\\\d\\\\d?|2[0-4]\\\\d|25[0-5])){3}$"`
 	// The unique identifier for this item
 	Id *string `json:"id,omitempty"`
 	// The Bukkit material enum value for the item
 	Material *string `json:"material,omitempty"`
 	// The name of the item
 	Name *string `json:"name,omitempty"`
-	// The rarity tier of the item
-	Tier *string `json:"tier,omitempty"`
-	// The color metadata to be applied to an item, usually leather armor pieces
-	Color *string `json:"color,omitempty" validate:"regexp=^(?:(?:^|,\\\\s*)([01]?\\\\d\\\\d?|2[0-4]\\\\d|25[0-5])){3}$"`
 	// The skin value for a skull based item
 	Skin *string `json:"skin,omitempty"`
+	// The rarity tier of the item
+	Tier *string `json:"tier,omitempty"`
 }
 
 // NewSkyBlockItem instantiates a new SkyBlockItem object
@@ -48,6 +48,38 @@ func NewSkyBlockItem() *SkyBlockItem {
 func NewSkyBlockItemWithDefaults() *SkyBlockItem {
 	this := SkyBlockItem{}
 	return &this
+}
+
+// GetColor returns the Color field value if set, zero value otherwise.
+func (o *SkyBlockItem) GetColor() string {
+	if o == nil || IsNil(o.Color) {
+		var ret string
+		return ret
+	}
+	return *o.Color
+}
+
+// GetColorOk returns a tuple with the Color field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockItem) GetColorOk() (*string, bool) {
+	if o == nil || IsNil(o.Color) {
+		return nil, false
+	}
+	return o.Color, true
+}
+
+// HasColor returns a boolean if a field has been set.
+func (o *SkyBlockItem) HasColor() bool {
+	if o != nil && !IsNil(o.Color) {
+		return true
+	}
+
+	return false
+}
+
+// SetColor gets a reference to the given string and assigns it to the Color field.
+func (o *SkyBlockItem) SetColor(v string) {
+	o.Color = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
@@ -146,70 +178,6 @@ func (o *SkyBlockItem) SetName(v string) {
 	o.Name = &v
 }
 
-// GetTier returns the Tier field value if set, zero value otherwise.
-func (o *SkyBlockItem) GetTier() string {
-	if o == nil || IsNil(o.Tier) {
-		var ret string
-		return ret
-	}
-	return *o.Tier
-}
-
-// GetTierOk returns a tuple with the Tier field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockItem) GetTierOk() (*string, bool) {
-	if o == nil || IsNil(o.Tier) {
-		return nil, false
-	}
-	return o.Tier, true
-}
-
-// HasTier returns a boolean if a field has been set.
-func (o *SkyBlockItem) HasTier() bool {
-	if o != nil && !IsNil(o.Tier) {
-		return true
-	}
-
-	return false
-}
-
-// SetTier gets a reference to the given string and assigns it to the Tier field.
-func (o *SkyBlockItem) SetTier(v string) {
-	o.Tier = &v
-}
-
-// GetColor returns the Color field value if set, zero value otherwise.
-func (o *SkyBlockItem) GetColor() string {
-	if o == nil || IsNil(o.Color) {
-		var ret string
-		return ret
-	}
-	return *o.Color
-}
-
-// GetColorOk returns a tuple with the Color field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockItem) GetColorOk() (*string, bool) {
-	if o == nil || IsNil(o.Color) {
-		return nil, false
-	}
-	return o.Color, true
-}
-
-// HasColor returns a boolean if a field has been set.
-func (o *SkyBlockItem) HasColor() bool {
-	if o != nil && !IsNil(o.Color) {
-		return true
-	}
-
-	return false
-}
-
-// SetColor gets a reference to the given string and assigns it to the Color field.
-func (o *SkyBlockItem) SetColor(v string) {
-	o.Color = &v
-}
-
 // GetSkin returns the Skin field value if set, zero value otherwise.
 func (o *SkyBlockItem) GetSkin() string {
 	if o == nil || IsNil(o.Skin) {
@@ -242,6 +210,38 @@ func (o *SkyBlockItem) SetSkin(v string) {
 	o.Skin = &v
 }
 
+// GetTier returns the Tier field value if set, zero value otherwise.
+func (o *SkyBlockItem) GetTier() string {
+	if o == nil || IsNil(o.Tier) {
+		var ret string
+		return ret
+	}
+	return *o.Tier
+}
+
+// GetTierOk returns a tuple with the Tier field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockItem) GetTierOk() (*string, bool) {
+	if o == nil || IsNil(o.Tier) {
+		return nil, false
+	}
+	return o.Tier, true
+}
+
+// HasTier returns a boolean if a field has been set.
+func (o *SkyBlockItem) HasTier() bool {
+	if o != nil && !IsNil(o.Tier) {
+		return true
+	}
+
+	return false
+}
+
+// SetTier gets a reference to the given string and assigns it to the Tier field.
+func (o *SkyBlockItem) SetTier(v string) {
+	o.Tier = &v
+}
+
 func (o SkyBlockItem) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -252,6 +252,9 @@ func (o SkyBlockItem) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockItem) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Color) {
+		toSerialize["color"] = o.Color
+	}
 	if !IsNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
@@ -261,14 +264,11 @@ func (o SkyBlockItem) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if !IsNil(o.Tier) {
-		toSerialize["tier"] = o.Tier
-	}
-	if !IsNil(o.Color) {
-		toSerialize["color"] = o.Color
-	}
 	if !IsNil(o.Skin) {
 		toSerialize["skin"] = o.Skin
+	}
+	if !IsNil(o.Tier) {
+		toSerialize["tier"] = o.Tier
 	}
 	return toSerialize, nil
 }

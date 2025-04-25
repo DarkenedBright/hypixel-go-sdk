@@ -630,7 +630,7 @@ func (a *SkyBlockAPIService) V2SkyblockBingoGetExecute(r ApiV2SkyblockBingoGetRe
 			error: localVarHTTPResponse.Status,
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
-			var v V2SkyblockProfileGet400Response
+			var v V2SkyblockBingoGet400Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -641,7 +641,7 @@ func (a *SkyBlockAPIService) V2SkyblockBingoGetExecute(r ApiV2SkyblockBingoGetRe
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 403 {
-			var v V2SkyblockNewsGet403Response
+			var v V2SkyblockBingoGet403Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -663,7 +663,7 @@ func (a *SkyBlockAPIService) V2SkyblockBingoGetExecute(r ApiV2SkyblockBingoGetRe
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 422 {
-			var v V2SkyblockProfileGet422Response
+			var v V2SkyblockBingoGet422Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -674,7 +674,7 @@ func (a *SkyBlockAPIService) V2SkyblockBingoGetExecute(r ApiV2SkyblockBingoGetRe
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 429 {
-			var v V2SkyblockNewsGet429Response
+			var v V2SkyblockBingoGet429Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -907,7 +907,7 @@ func (a *SkyBlockAPIService) V2SkyblockGardenGetExecute(r ApiV2SkyblockGardenGet
 			error: localVarHTTPResponse.Status,
 		}
 		if localVarHTTPResponse.StatusCode == 403 {
-			var v V2SkyblockNewsGet403Response
+			var v V2SkyblockBingoGet403Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -929,7 +929,7 @@ func (a *SkyBlockAPIService) V2SkyblockGardenGetExecute(r ApiV2SkyblockGardenGet
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 422 {
-			var v V2SkyblockProfileGet422Response
+			var v V2SkyblockBingoGet422Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -940,7 +940,7 @@ func (a *SkyBlockAPIService) V2SkyblockGardenGetExecute(r ApiV2SkyblockGardenGet
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 429 {
-			var v V2SkyblockNewsGet429Response
+			var v V2SkyblockBingoGet429Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1073,7 +1073,7 @@ func (a *SkyBlockAPIService) V2SkyblockMuseumGetExecute(r ApiV2SkyblockMuseumGet
 			error: localVarHTTPResponse.Status,
 		}
 		if localVarHTTPResponse.StatusCode == 403 {
-			var v V2SkyblockNewsGet403Response
+			var v V2SkyblockBingoGet403Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1084,7 +1084,7 @@ func (a *SkyBlockAPIService) V2SkyblockMuseumGetExecute(r ApiV2SkyblockMuseumGet
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 422 {
-			var v V2SkyblockProfileGet422Response
+			var v V2SkyblockBingoGet422Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1095,7 +1095,7 @@ func (a *SkyBlockAPIService) V2SkyblockMuseumGetExecute(r ApiV2SkyblockMuseumGet
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 429 {
-			var v V2SkyblockNewsGet429Response
+			var v V2SkyblockBingoGet429Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1217,7 +1217,7 @@ func (a *SkyBlockAPIService) V2SkyblockNewsGetExecute(r ApiV2SkyblockNewsGetRequ
 			error: localVarHTTPResponse.Status,
 		}
 		if localVarHTTPResponse.StatusCode == 403 {
-			var v V2SkyblockNewsGet403Response
+			var v V2SkyblockBingoGet403Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1228,7 +1228,7 @@ func (a *SkyBlockAPIService) V2SkyblockNewsGetExecute(r ApiV2SkyblockNewsGetRequ
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 429 {
-			var v V2SkyblockNewsGet429Response
+			var v V2SkyblockBingoGet429Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1361,7 +1361,7 @@ func (a *SkyBlockAPIService) V2SkyblockProfileGetExecute(r ApiV2SkyblockProfileG
 			error: localVarHTTPResponse.Status,
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
-			var v V2SkyblockProfileGet400Response
+			var v V2SkyblockBingoGet400Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1372,7 +1372,7 @@ func (a *SkyBlockAPIService) V2SkyblockProfileGetExecute(r ApiV2SkyblockProfileG
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 403 {
-			var v V2SkyblockNewsGet403Response
+			var v V2SkyblockBingoGet403Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1383,7 +1383,7 @@ func (a *SkyBlockAPIService) V2SkyblockProfileGetExecute(r ApiV2SkyblockProfileG
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 422 {
-			var v V2SkyblockProfileGet422Response
+			var v V2SkyblockBingoGet422Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1394,7 +1394,7 @@ func (a *SkyBlockAPIService) V2SkyblockProfileGetExecute(r ApiV2SkyblockProfileG
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 429 {
-			var v V2SkyblockNewsGet429Response
+			var v V2SkyblockBingoGet429Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1525,7 +1525,7 @@ func (a *SkyBlockAPIService) V2SkyblockProfilesGetExecute(r ApiV2SkyblockProfile
 			error: localVarHTTPResponse.Status,
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
-			var v V2SkyblockProfileGet400Response
+			var v V2SkyblockBingoGet400Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1536,7 +1536,7 @@ func (a *SkyBlockAPIService) V2SkyblockProfilesGetExecute(r ApiV2SkyblockProfile
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 403 {
-			var v V2SkyblockNewsGet403Response
+			var v V2SkyblockBingoGet403Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1547,7 +1547,7 @@ func (a *SkyBlockAPIService) V2SkyblockProfilesGetExecute(r ApiV2SkyblockProfile
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 422 {
-			var v V2SkyblockProfileGet422Response
+			var v V2SkyblockBingoGet422Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1558,7 +1558,7 @@ func (a *SkyBlockAPIService) V2SkyblockProfilesGetExecute(r ApiV2SkyblockProfile
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 429 {
-			var v V2SkyblockNewsGet429Response
+			var v V2SkyblockBingoGet429Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()

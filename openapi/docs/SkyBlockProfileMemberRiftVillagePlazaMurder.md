@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RoomClues** | Pointer to **[]string** |  | [optional] 
-**StepIndex** | Pointer to **float64** |  | [optional] 
-**StepIndexPt2** | Pointer to **float64** |  | [optional] 
-**StepIndexPt3** | Pointer to **float64** |  | [optional] 
+**StepIndex** | Pointer to **int64** |  | [optional] 
+**StepIndexPt2** | Pointer to **int64** |  | [optional] 
+**StepIndexPt3** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
@@ -55,20 +55,20 @@ HasRoomClues returns a boolean if a field has been set.
 
 ### GetStepIndex
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndex() float64`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndex() int64`
 
 GetStepIndex returns the StepIndex field if non-nil, zero value otherwise.
 
 ### GetStepIndexOk
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexOk() (*int64, bool)`
 
 GetStepIndexOk returns a tuple with the StepIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStepIndex
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndex(v float64)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndex(v int64)`
 
 SetStepIndex sets StepIndex field to given value.
 
@@ -80,20 +80,20 @@ HasStepIndex returns a boolean if a field has been set.
 
 ### GetStepIndexPt2
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt2() float64`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt2() int64`
 
 GetStepIndexPt2 returns the StepIndexPt2 field if non-nil, zero value otherwise.
 
 ### GetStepIndexPt2Ok
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt2Ok() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt2Ok() (*int64, bool)`
 
 GetStepIndexPt2Ok returns a tuple with the StepIndexPt2 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStepIndexPt2
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndexPt2(v float64)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndexPt2(v int64)`
 
 SetStepIndexPt2 sets StepIndexPt2 field to given value.
 
@@ -105,20 +105,20 @@ HasStepIndexPt2 returns a boolean if a field has been set.
 
 ### GetStepIndexPt3
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt3() float64`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt3() int64`
 
 GetStepIndexPt3 returns the StepIndexPt3 field if non-nil, zero value otherwise.
 
 ### GetStepIndexPt3Ok
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt3Ok() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt3Ok() (*int64, bool)`
 
 GetStepIndexPt3Ok returns a tuple with the StepIndexPt3 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStepIndexPt3
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndexPt3(v float64)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndexPt3(v int64)`
 
 SetStepIndexPt3 sets StepIndexPt3 field to given value.
 

@@ -19,9 +19,9 @@ var _ MappedNullable = &V2ResourcesSkyblockItemsGet200Response{}
 
 // V2ResourcesSkyblockItemsGet200Response struct for V2ResourcesSkyblockItemsGet200Response
 type V2ResourcesSkyblockItemsGet200Response struct {
-	Success     *bool          `json:"success,omitempty"`
-	LastUpdated *float64       `json:"lastUpdated,omitempty"`
 	Items       []SkyBlockItem `json:"items,omitempty"`
+	LastUpdated *int64         `json:"lastUpdated,omitempty"`
+	Success     *bool          `json:"success,omitempty"`
 }
 
 // NewV2ResourcesSkyblockItemsGet200Response instantiates a new V2ResourcesSkyblockItemsGet200Response object
@@ -39,70 +39,6 @@ func NewV2ResourcesSkyblockItemsGet200Response() *V2ResourcesSkyblockItemsGet200
 func NewV2ResourcesSkyblockItemsGet200ResponseWithDefaults() *V2ResourcesSkyblockItemsGet200Response {
 	this := V2ResourcesSkyblockItemsGet200Response{}
 	return &this
-}
-
-// GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockItemsGet200Response) GetSuccess() bool {
-	if o == nil || IsNil(o.Success) {
-		var ret bool
-		return ret
-	}
-	return *o.Success
-}
-
-// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockItemsGet200Response) GetSuccessOk() (*bool, bool) {
-	if o == nil || IsNil(o.Success) {
-		return nil, false
-	}
-	return o.Success, true
-}
-
-// HasSuccess returns a boolean if a field has been set.
-func (o *V2ResourcesSkyblockItemsGet200Response) HasSuccess() bool {
-	if o != nil && !IsNil(o.Success) {
-		return true
-	}
-
-	return false
-}
-
-// SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *V2ResourcesSkyblockItemsGet200Response) SetSuccess(v bool) {
-	o.Success = &v
-}
-
-// GetLastUpdated returns the LastUpdated field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockItemsGet200Response) GetLastUpdated() float64 {
-	if o == nil || IsNil(o.LastUpdated) {
-		var ret float64
-		return ret
-	}
-	return *o.LastUpdated
-}
-
-// GetLastUpdatedOk returns a tuple with the LastUpdated field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockItemsGet200Response) GetLastUpdatedOk() (*float64, bool) {
-	if o == nil || IsNil(o.LastUpdated) {
-		return nil, false
-	}
-	return o.LastUpdated, true
-}
-
-// HasLastUpdated returns a boolean if a field has been set.
-func (o *V2ResourcesSkyblockItemsGet200Response) HasLastUpdated() bool {
-	if o != nil && !IsNil(o.LastUpdated) {
-		return true
-	}
-
-	return false
-}
-
-// SetLastUpdated gets a reference to the given float64 and assigns it to the LastUpdated field.
-func (o *V2ResourcesSkyblockItemsGet200Response) SetLastUpdated(v float64) {
-	o.LastUpdated = &v
 }
 
 // GetItems returns the Items field value if set, zero value otherwise.
@@ -137,6 +73,70 @@ func (o *V2ResourcesSkyblockItemsGet200Response) SetItems(v []SkyBlockItem) {
 	o.Items = v
 }
 
+// GetLastUpdated returns the LastUpdated field value if set, zero value otherwise.
+func (o *V2ResourcesSkyblockItemsGet200Response) GetLastUpdated() int64 {
+	if o == nil || IsNil(o.LastUpdated) {
+		var ret int64
+		return ret
+	}
+	return *o.LastUpdated
+}
+
+// GetLastUpdatedOk returns a tuple with the LastUpdated field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2ResourcesSkyblockItemsGet200Response) GetLastUpdatedOk() (*int64, bool) {
+	if o == nil || IsNil(o.LastUpdated) {
+		return nil, false
+	}
+	return o.LastUpdated, true
+}
+
+// HasLastUpdated returns a boolean if a field has been set.
+func (o *V2ResourcesSkyblockItemsGet200Response) HasLastUpdated() bool {
+	if o != nil && !IsNil(o.LastUpdated) {
+		return true
+	}
+
+	return false
+}
+
+// SetLastUpdated gets a reference to the given int64 and assigns it to the LastUpdated field.
+func (o *V2ResourcesSkyblockItemsGet200Response) SetLastUpdated(v int64) {
+	o.LastUpdated = &v
+}
+
+// GetSuccess returns the Success field value if set, zero value otherwise.
+func (o *V2ResourcesSkyblockItemsGet200Response) GetSuccess() bool {
+	if o == nil || IsNil(o.Success) {
+		var ret bool
+		return ret
+	}
+	return *o.Success
+}
+
+// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2ResourcesSkyblockItemsGet200Response) GetSuccessOk() (*bool, bool) {
+	if o == nil || IsNil(o.Success) {
+		return nil, false
+	}
+	return o.Success, true
+}
+
+// HasSuccess returns a boolean if a field has been set.
+func (o *V2ResourcesSkyblockItemsGet200Response) HasSuccess() bool {
+	if o != nil && !IsNil(o.Success) {
+		return true
+	}
+
+	return false
+}
+
+// SetSuccess gets a reference to the given bool and assigns it to the Success field.
+func (o *V2ResourcesSkyblockItemsGet200Response) SetSuccess(v bool) {
+	o.Success = &v
+}
+
 func (o V2ResourcesSkyblockItemsGet200Response) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -147,14 +147,14 @@ func (o V2ResourcesSkyblockItemsGet200Response) MarshalJSON() ([]byte, error) {
 
 func (o V2ResourcesSkyblockItemsGet200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Success) {
-		toSerialize["success"] = o.Success
+	if !IsNil(o.Items) {
+		toSerialize["items"] = o.Items
 	}
 	if !IsNil(o.LastUpdated) {
 		toSerialize["lastUpdated"] = o.LastUpdated
 	}
-	if !IsNil(o.Items) {
-		toSerialize["items"] = o.Items
+	if !IsNil(o.Success) {
+		toSerialize["success"] = o.Success
 	}
 	return toSerialize, nil
 }

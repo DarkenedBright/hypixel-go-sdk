@@ -19,8 +19,8 @@ var _ MappedNullable = &InlineObject1{}
 
 // InlineObject1 struct for InlineObject1
 type InlineObject1 struct {
-	Success *bool   `json:"success,omitempty"`
 	Cause   *string `json:"cause,omitempty"`
+	Success *bool   `json:"success,omitempty"`
 }
 
 // NewInlineObject1 instantiates a new InlineObject1 object
@@ -38,38 +38,6 @@ func NewInlineObject1() *InlineObject1 {
 func NewInlineObject1WithDefaults() *InlineObject1 {
 	this := InlineObject1{}
 	return &this
-}
-
-// GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *InlineObject1) GetSuccess() bool {
-	if o == nil || IsNil(o.Success) {
-		var ret bool
-		return ret
-	}
-	return *o.Success
-}
-
-// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *InlineObject1) GetSuccessOk() (*bool, bool) {
-	if o == nil || IsNil(o.Success) {
-		return nil, false
-	}
-	return o.Success, true
-}
-
-// HasSuccess returns a boolean if a field has been set.
-func (o *InlineObject1) HasSuccess() bool {
-	if o != nil && !IsNil(o.Success) {
-		return true
-	}
-
-	return false
-}
-
-// SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *InlineObject1) SetSuccess(v bool) {
-	o.Success = &v
 }
 
 // GetCause returns the Cause field value if set, zero value otherwise.
@@ -104,6 +72,38 @@ func (o *InlineObject1) SetCause(v string) {
 	o.Cause = &v
 }
 
+// GetSuccess returns the Success field value if set, zero value otherwise.
+func (o *InlineObject1) GetSuccess() bool {
+	if o == nil || IsNil(o.Success) {
+		var ret bool
+		return ret
+	}
+	return *o.Success
+}
+
+// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *InlineObject1) GetSuccessOk() (*bool, bool) {
+	if o == nil || IsNil(o.Success) {
+		return nil, false
+	}
+	return o.Success, true
+}
+
+// HasSuccess returns a boolean if a field has been set.
+func (o *InlineObject1) HasSuccess() bool {
+	if o != nil && !IsNil(o.Success) {
+		return true
+	}
+
+	return false
+}
+
+// SetSuccess gets a reference to the given bool and assigns it to the Success field.
+func (o *InlineObject1) SetSuccess(v bool) {
+	o.Success = &v
+}
+
 func (o InlineObject1) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -114,11 +114,11 @@ func (o InlineObject1) MarshalJSON() ([]byte, error) {
 
 func (o InlineObject1) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Success) {
-		toSerialize["success"] = o.Success
-	}
 	if !IsNil(o.Cause) {
 		toSerialize["cause"] = o.Cause
+	}
+	if !IsNil(o.Success) {
+		toSerialize["success"] = o.Success
 	}
 	return toSerialize, nil
 }

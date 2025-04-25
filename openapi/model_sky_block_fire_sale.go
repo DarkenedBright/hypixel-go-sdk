@@ -19,16 +19,16 @@ var _ MappedNullable = &SkyBlockFireSale{}
 
 // SkyBlockFireSale struct for SkyBlockFireSale
 type SkyBlockFireSale struct {
+	// The amount of items available for this sale
+	Amount *int64 `json:"amount,omitempty"`
+	// The end time in unix milliseconds for the sale
+	End *int64 `json:"end,omitempty"`
 	// The SkyBlock item ID for this sale
 	ItemId *string `json:"item_id,omitempty"`
-	// The start time in unix milliseconds for the sale
-	Start *float64 `json:"start,omitempty"`
-	// The end time in unix milliseconds for the sale
-	End *float64 `json:"end,omitempty"`
-	// The amount of items available for this sale
-	Amount *float64 `json:"amount,omitempty"`
 	// The price in Gems for this sale
-	Price *float64 `json:"price,omitempty"`
+	Price *int64 `json:"price,omitempty"`
+	// The start time in unix milliseconds for the sale
+	Start *int64 `json:"start,omitempty"`
 }
 
 // NewSkyBlockFireSale instantiates a new SkyBlockFireSale object
@@ -46,6 +46,70 @@ func NewSkyBlockFireSale() *SkyBlockFireSale {
 func NewSkyBlockFireSaleWithDefaults() *SkyBlockFireSale {
 	this := SkyBlockFireSale{}
 	return &this
+}
+
+// GetAmount returns the Amount field value if set, zero value otherwise.
+func (o *SkyBlockFireSale) GetAmount() int64 {
+	if o == nil || IsNil(o.Amount) {
+		var ret int64
+		return ret
+	}
+	return *o.Amount
+}
+
+// GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockFireSale) GetAmountOk() (*int64, bool) {
+	if o == nil || IsNil(o.Amount) {
+		return nil, false
+	}
+	return o.Amount, true
+}
+
+// HasAmount returns a boolean if a field has been set.
+func (o *SkyBlockFireSale) HasAmount() bool {
+	if o != nil && !IsNil(o.Amount) {
+		return true
+	}
+
+	return false
+}
+
+// SetAmount gets a reference to the given int64 and assigns it to the Amount field.
+func (o *SkyBlockFireSale) SetAmount(v int64) {
+	o.Amount = &v
+}
+
+// GetEnd returns the End field value if set, zero value otherwise.
+func (o *SkyBlockFireSale) GetEnd() int64 {
+	if o == nil || IsNil(o.End) {
+		var ret int64
+		return ret
+	}
+	return *o.End
+}
+
+// GetEndOk returns a tuple with the End field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockFireSale) GetEndOk() (*int64, bool) {
+	if o == nil || IsNil(o.End) {
+		return nil, false
+	}
+	return o.End, true
+}
+
+// HasEnd returns a boolean if a field has been set.
+func (o *SkyBlockFireSale) HasEnd() bool {
+	if o != nil && !IsNil(o.End) {
+		return true
+	}
+
+	return false
+}
+
+// SetEnd gets a reference to the given int64 and assigns it to the End field.
+func (o *SkyBlockFireSale) SetEnd(v int64) {
+	o.End = &v
 }
 
 // GetItemId returns the ItemId field value if set, zero value otherwise.
@@ -80,106 +144,10 @@ func (o *SkyBlockFireSale) SetItemId(v string) {
 	o.ItemId = &v
 }
 
-// GetStart returns the Start field value if set, zero value otherwise.
-func (o *SkyBlockFireSale) GetStart() float64 {
-	if o == nil || IsNil(o.Start) {
-		var ret float64
-		return ret
-	}
-	return *o.Start
-}
-
-// GetStartOk returns a tuple with the Start field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockFireSale) GetStartOk() (*float64, bool) {
-	if o == nil || IsNil(o.Start) {
-		return nil, false
-	}
-	return o.Start, true
-}
-
-// HasStart returns a boolean if a field has been set.
-func (o *SkyBlockFireSale) HasStart() bool {
-	if o != nil && !IsNil(o.Start) {
-		return true
-	}
-
-	return false
-}
-
-// SetStart gets a reference to the given float64 and assigns it to the Start field.
-func (o *SkyBlockFireSale) SetStart(v float64) {
-	o.Start = &v
-}
-
-// GetEnd returns the End field value if set, zero value otherwise.
-func (o *SkyBlockFireSale) GetEnd() float64 {
-	if o == nil || IsNil(o.End) {
-		var ret float64
-		return ret
-	}
-	return *o.End
-}
-
-// GetEndOk returns a tuple with the End field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockFireSale) GetEndOk() (*float64, bool) {
-	if o == nil || IsNil(o.End) {
-		return nil, false
-	}
-	return o.End, true
-}
-
-// HasEnd returns a boolean if a field has been set.
-func (o *SkyBlockFireSale) HasEnd() bool {
-	if o != nil && !IsNil(o.End) {
-		return true
-	}
-
-	return false
-}
-
-// SetEnd gets a reference to the given float64 and assigns it to the End field.
-func (o *SkyBlockFireSale) SetEnd(v float64) {
-	o.End = &v
-}
-
-// GetAmount returns the Amount field value if set, zero value otherwise.
-func (o *SkyBlockFireSale) GetAmount() float64 {
-	if o == nil || IsNil(o.Amount) {
-		var ret float64
-		return ret
-	}
-	return *o.Amount
-}
-
-// GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockFireSale) GetAmountOk() (*float64, bool) {
-	if o == nil || IsNil(o.Amount) {
-		return nil, false
-	}
-	return o.Amount, true
-}
-
-// HasAmount returns a boolean if a field has been set.
-func (o *SkyBlockFireSale) HasAmount() bool {
-	if o != nil && !IsNil(o.Amount) {
-		return true
-	}
-
-	return false
-}
-
-// SetAmount gets a reference to the given float64 and assigns it to the Amount field.
-func (o *SkyBlockFireSale) SetAmount(v float64) {
-	o.Amount = &v
-}
-
 // GetPrice returns the Price field value if set, zero value otherwise.
-func (o *SkyBlockFireSale) GetPrice() float64 {
+func (o *SkyBlockFireSale) GetPrice() int64 {
 	if o == nil || IsNil(o.Price) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.Price
@@ -187,7 +155,7 @@ func (o *SkyBlockFireSale) GetPrice() float64 {
 
 // GetPriceOk returns a tuple with the Price field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockFireSale) GetPriceOk() (*float64, bool) {
+func (o *SkyBlockFireSale) GetPriceOk() (*int64, bool) {
 	if o == nil || IsNil(o.Price) {
 		return nil, false
 	}
@@ -203,9 +171,41 @@ func (o *SkyBlockFireSale) HasPrice() bool {
 	return false
 }
 
-// SetPrice gets a reference to the given float64 and assigns it to the Price field.
-func (o *SkyBlockFireSale) SetPrice(v float64) {
+// SetPrice gets a reference to the given int64 and assigns it to the Price field.
+func (o *SkyBlockFireSale) SetPrice(v int64) {
 	o.Price = &v
+}
+
+// GetStart returns the Start field value if set, zero value otherwise.
+func (o *SkyBlockFireSale) GetStart() int64 {
+	if o == nil || IsNil(o.Start) {
+		var ret int64
+		return ret
+	}
+	return *o.Start
+}
+
+// GetStartOk returns a tuple with the Start field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockFireSale) GetStartOk() (*int64, bool) {
+	if o == nil || IsNil(o.Start) {
+		return nil, false
+	}
+	return o.Start, true
+}
+
+// HasStart returns a boolean if a field has been set.
+func (o *SkyBlockFireSale) HasStart() bool {
+	if o != nil && !IsNil(o.Start) {
+		return true
+	}
+
+	return false
+}
+
+// SetStart gets a reference to the given int64 and assigns it to the Start field.
+func (o *SkyBlockFireSale) SetStart(v int64) {
+	o.Start = &v
 }
 
 func (o SkyBlockFireSale) MarshalJSON() ([]byte, error) {
@@ -218,20 +218,20 @@ func (o SkyBlockFireSale) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockFireSale) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ItemId) {
-		toSerialize["item_id"] = o.ItemId
-	}
-	if !IsNil(o.Start) {
-		toSerialize["start"] = o.Start
+	if !IsNil(o.Amount) {
+		toSerialize["amount"] = o.Amount
 	}
 	if !IsNil(o.End) {
 		toSerialize["end"] = o.End
 	}
-	if !IsNil(o.Amount) {
-		toSerialize["amount"] = o.Amount
+	if !IsNil(o.ItemId) {
+		toSerialize["item_id"] = o.ItemId
 	}
 	if !IsNil(o.Price) {
 		toSerialize["price"] = o.Price
+	}
+	if !IsNil(o.Start) {
+		toSerialize["start"] = o.Start
 	}
 	return toSerialize, nil
 }

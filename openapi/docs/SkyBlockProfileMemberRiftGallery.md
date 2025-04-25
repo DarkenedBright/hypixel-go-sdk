@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EliseStep** | Pointer to **float64** |  | [optional] 
+**EliseStep** | Pointer to **int64** |  | [optional] 
 **SecuredTrophies** | Pointer to [**[]SkyBlockProfileMemberRiftGallerySecuredTrophiesInner**](SkyBlockProfileMemberRiftGallerySecuredTrophiesInner.md) |  | [optional] 
 **SentTrophyDialogues** | Pointer to **[]string** |  | [optional] 
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetEliseStep
 
-`func (o *SkyBlockProfileMemberRiftGallery) GetEliseStep() float64`
+`func (o *SkyBlockProfileMemberRiftGallery) GetEliseStep() int64`
 
 GetEliseStep returns the EliseStep field if non-nil, zero value otherwise.
 
 ### GetEliseStepOk
 
-`func (o *SkyBlockProfileMemberRiftGallery) GetEliseStepOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftGallery) GetEliseStepOk() (*int64, bool)`
 
 GetEliseStepOk returns a tuple with the EliseStep field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEliseStep
 
-`func (o *SkyBlockProfileMemberRiftGallery) SetEliseStep(v float64)`
+`func (o *SkyBlockProfileMemberRiftGallery) SetEliseStep(v int64)`
 
 SetEliseStep sets EliseStep field to given value.
 

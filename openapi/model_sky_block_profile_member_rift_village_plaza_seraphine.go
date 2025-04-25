@@ -19,7 +19,7 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftVillagePlazaSeraphine{}
 
 // SkyBlockProfileMemberRiftVillagePlazaSeraphine struct for SkyBlockProfileMemberRiftVillagePlazaSeraphine
 type SkyBlockProfileMemberRiftVillagePlazaSeraphine struct {
-	StepIndex *float64 `json:"step_index,omitempty"`
+	StepIndex *int64 `json:"step_index,omitempty"`
 }
 
 // NewSkyBlockProfileMemberRiftVillagePlazaSeraphine instantiates a new SkyBlockProfileMemberRiftVillagePlazaSeraphine object
@@ -40,9 +40,9 @@ func NewSkyBlockProfileMemberRiftVillagePlazaSeraphineWithDefaults() *SkyBlockPr
 }
 
 // GetStepIndex returns the StepIndex field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) GetStepIndex() float64 {
+func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) GetStepIndex() int64 {
 	if o == nil || IsNil(o.StepIndex) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.StepIndex
@@ -50,7 +50,7 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) GetStepIndex() float64 
 
 // GetStepIndexOk returns a tuple with the StepIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) GetStepIndexOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) GetStepIndexOk() (*int64, bool) {
 	if o == nil || IsNil(o.StepIndex) {
 		return nil, false
 	}
@@ -66,8 +66,8 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) HasStepIndex() bool {
 	return false
 }
 
-// SetStepIndex gets a reference to the given float64 and assigns it to the StepIndex field.
-func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) SetStepIndex(v float64) {
+// SetStepIndex gets a reference to the given int64 and assigns it to the StepIndex field.
+func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) SetStepIndex(v int64) {
 	o.StepIndex = &v
 }
 

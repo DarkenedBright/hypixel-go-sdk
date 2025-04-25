@@ -19,8 +19,8 @@ var _ MappedNullable = &V2SkyblockProfileGet200Response{}
 
 // V2SkyblockProfileGet200Response struct for V2SkyblockProfileGet200Response
 type V2SkyblockProfileGet200Response struct {
-	Success *bool            `json:"success,omitempty"`
 	Profile *SkyBlockProfile `json:"profile,omitempty"`
+	Success *bool            `json:"success,omitempty"`
 }
 
 // NewV2SkyblockProfileGet200Response instantiates a new V2SkyblockProfileGet200Response object
@@ -38,38 +38,6 @@ func NewV2SkyblockProfileGet200Response() *V2SkyblockProfileGet200Response {
 func NewV2SkyblockProfileGet200ResponseWithDefaults() *V2SkyblockProfileGet200Response {
 	this := V2SkyblockProfileGet200Response{}
 	return &this
-}
-
-// GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *V2SkyblockProfileGet200Response) GetSuccess() bool {
-	if o == nil || IsNil(o.Success) {
-		var ret bool
-		return ret
-	}
-	return *o.Success
-}
-
-// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V2SkyblockProfileGet200Response) GetSuccessOk() (*bool, bool) {
-	if o == nil || IsNil(o.Success) {
-		return nil, false
-	}
-	return o.Success, true
-}
-
-// HasSuccess returns a boolean if a field has been set.
-func (o *V2SkyblockProfileGet200Response) HasSuccess() bool {
-	if o != nil && !IsNil(o.Success) {
-		return true
-	}
-
-	return false
-}
-
-// SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *V2SkyblockProfileGet200Response) SetSuccess(v bool) {
-	o.Success = &v
 }
 
 // GetProfile returns the Profile field value if set, zero value otherwise.
@@ -104,6 +72,38 @@ func (o *V2SkyblockProfileGet200Response) SetProfile(v SkyBlockProfile) {
 	o.Profile = &v
 }
 
+// GetSuccess returns the Success field value if set, zero value otherwise.
+func (o *V2SkyblockProfileGet200Response) GetSuccess() bool {
+	if o == nil || IsNil(o.Success) {
+		var ret bool
+		return ret
+	}
+	return *o.Success
+}
+
+// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2SkyblockProfileGet200Response) GetSuccessOk() (*bool, bool) {
+	if o == nil || IsNil(o.Success) {
+		return nil, false
+	}
+	return o.Success, true
+}
+
+// HasSuccess returns a boolean if a field has been set.
+func (o *V2SkyblockProfileGet200Response) HasSuccess() bool {
+	if o != nil && !IsNil(o.Success) {
+		return true
+	}
+
+	return false
+}
+
+// SetSuccess gets a reference to the given bool and assigns it to the Success field.
+func (o *V2SkyblockProfileGet200Response) SetSuccess(v bool) {
+	o.Success = &v
+}
+
 func (o V2SkyblockProfileGet200Response) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -114,11 +114,11 @@ func (o V2SkyblockProfileGet200Response) MarshalJSON() ([]byte, error) {
 
 func (o V2SkyblockProfileGet200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Success) {
-		toSerialize["success"] = o.Success
-	}
 	if !IsNil(o.Profile) {
 		toSerialize["profile"] = o.Profile
+	}
+	if !IsNil(o.Success) {
+		toSerialize["success"] = o.Success
 	}
 	return toSerialize, nil
 }

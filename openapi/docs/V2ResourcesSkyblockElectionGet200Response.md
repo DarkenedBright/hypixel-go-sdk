@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** |  | [optional] 
-**LastUpdated** | Pointer to **float64** |  | [optional] 
-**Mayor** | Pointer to **map[string]interface{}** | Data regarding the current mayor | [optional] 
 **Current** | Pointer to **map[string]interface{}** | Data regarding the current election, will not be provided if there is no open election ongoing | [optional] 
+**LastUpdated** | Pointer to **int64** |  | [optional] 
+**Mayor** | Pointer to **map[string]interface{}** | Data regarding the current mayor | [optional] 
+**Success** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
@@ -28,47 +28,47 @@ NewV2ResourcesSkyblockElectionGet200ResponseWithDefaults instantiates a new V2Re
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetCurrent
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) GetSuccess() bool`
+`func (o *V2ResourcesSkyblockElectionGet200Response) GetCurrent() map[string]interface{}`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetCurrent returns the Current field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetCurrentOk
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) GetSuccessOk() (*bool, bool)`
+`func (o *V2ResourcesSkyblockElectionGet200Response) GetCurrentOk() (*map[string]interface{}, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetCurrentOk returns a tuple with the Current field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetCurrent
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) SetSuccess(v bool)`
+`func (o *V2ResourcesSkyblockElectionGet200Response) SetCurrent(v map[string]interface{})`
 
-SetSuccess sets Success field to given value.
+SetCurrent sets Current field to given value.
 
-### HasSuccess
+### HasCurrent
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) HasSuccess() bool`
+`func (o *V2ResourcesSkyblockElectionGet200Response) HasCurrent() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasCurrent returns a boolean if a field has been set.
 
 ### GetLastUpdated
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) GetLastUpdated() float64`
+`func (o *V2ResourcesSkyblockElectionGet200Response) GetLastUpdated() int64`
 
 GetLastUpdated returns the LastUpdated field if non-nil, zero value otherwise.
 
 ### GetLastUpdatedOk
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) GetLastUpdatedOk() (*float64, bool)`
+`func (o *V2ResourcesSkyblockElectionGet200Response) GetLastUpdatedOk() (*int64, bool)`
 
 GetLastUpdatedOk returns a tuple with the LastUpdated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastUpdated
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) SetLastUpdated(v float64)`
+`func (o *V2ResourcesSkyblockElectionGet200Response) SetLastUpdated(v int64)`
 
 SetLastUpdated sets LastUpdated field to given value.
 
@@ -103,30 +103,30 @@ SetMayor sets Mayor field to given value.
 
 HasMayor returns a boolean if a field has been set.
 
-### GetCurrent
+### GetSuccess
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) GetCurrent() map[string]interface{}`
+`func (o *V2ResourcesSkyblockElectionGet200Response) GetSuccess() bool`
 
-GetCurrent returns the Current field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetCurrentOk
+### GetSuccessOk
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) GetCurrentOk() (*map[string]interface{}, bool)`
+`func (o *V2ResourcesSkyblockElectionGet200Response) GetSuccessOk() (*bool, bool)`
 
-GetCurrentOk returns a tuple with the Current field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrent
+### SetSuccess
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) SetCurrent(v map[string]interface{})`
+`func (o *V2ResourcesSkyblockElectionGet200Response) SetSuccess(v bool)`
 
-SetCurrent sets Current field to given value.
+SetSuccess sets Success field to given value.
 
-### HasCurrent
+### HasSuccess
 
-`func (o *V2ResourcesSkyblockElectionGet200Response) HasCurrent() bool`
+`func (o *V2ResourcesSkyblockElectionGet200Response) HasSuccess() bool`
 
-HasCurrent returns a boolean if a field has been set.
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

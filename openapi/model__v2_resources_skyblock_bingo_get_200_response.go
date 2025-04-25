@@ -21,21 +21,21 @@ var _ MappedNullable = &V2ResourcesSkyblockBingoGet200Response{}
 
 // V2ResourcesSkyblockBingoGet200Response struct for V2ResourcesSkyblockBingoGet200Response
 type V2ResourcesSkyblockBingoGet200Response struct {
-	Success bool `json:"success"`
-	// The unix milliseconds timestamp of the last time this data was updated
-	LastUpdated float64 `json:"lastUpdated"`
+	// The end time of the current bingo event in unix milliseconds
+	End int64 `json:"end"`
+	// The goals for the current bingo event, as well as their progress
+	Goals []V2ResourcesSkyblockBingoGet200ResponseGoalsInner `json:"goals"`
 	// The current bingo event ID, increments by 1 for each bingo hosted
-	Id float64 `json:"id"`
+	Id int64 `json:"id"`
+	// The unix milliseconds timestamp of the last time this data was updated
+	LastUpdated int64 `json:"lastUpdated"`
+	// The modifier for the current bingo event
+	Modifier string `json:"modifier"`
 	// The display name for the current bingo event
 	Name string `json:"name"`
 	// The start time of the current bingo event in unix milliseconds
-	Start float64 `json:"start"`
-	// The end time of the current bingo event in unix milliseconds
-	End float64 `json:"end"`
-	// The modifier for the current bingo event
-	Modifier string `json:"modifier"`
-	// The goals for the current bingo event, as well as their progress
-	Goals []V2ResourcesSkyblockBingoGet200ResponseGoalsInner `json:"goals"`
+	Start   int64 `json:"start"`
+	Success bool  `json:"success"`
 }
 
 type _V2ResourcesSkyblockBingoGet200Response V2ResourcesSkyblockBingoGet200Response
@@ -44,16 +44,16 @@ type _V2ResourcesSkyblockBingoGet200Response V2ResourcesSkyblockBingoGet200Respo
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewV2ResourcesSkyblockBingoGet200Response(success bool, lastUpdated float64, id float64, name string, start float64, end float64, modifier string, goals []V2ResourcesSkyblockBingoGet200ResponseGoalsInner) *V2ResourcesSkyblockBingoGet200Response {
+func NewV2ResourcesSkyblockBingoGet200Response(end int64, goals []V2ResourcesSkyblockBingoGet200ResponseGoalsInner, id int64, lastUpdated int64, modifier string, name string, start int64, success bool) *V2ResourcesSkyblockBingoGet200Response {
 	this := V2ResourcesSkyblockBingoGet200Response{}
-	this.Success = success
-	this.LastUpdated = lastUpdated
+	this.End = end
+	this.Goals = goals
 	this.Id = id
+	this.LastUpdated = lastUpdated
+	this.Modifier = modifier
 	this.Name = name
 	this.Start = start
-	this.End = end
-	this.Modifier = modifier
-	this.Goals = goals
+	this.Success = success
 	return &this
 }
 
@@ -65,58 +65,58 @@ func NewV2ResourcesSkyblockBingoGet200ResponseWithDefaults() *V2ResourcesSkybloc
 	return &this
 }
 
-// GetSuccess returns the Success field value
-func (o *V2ResourcesSkyblockBingoGet200Response) GetSuccess() bool {
+// GetEnd returns the End field value
+func (o *V2ResourcesSkyblockBingoGet200Response) GetEnd() int64 {
 	if o == nil {
-		var ret bool
+		var ret int64
 		return ret
 	}
 
-	return o.Success
+	return o.End
 }
 
-// GetSuccessOk returns a tuple with the Success field value
+// GetEndOk returns a tuple with the End field value
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200Response) GetSuccessOk() (*bool, bool) {
+func (o *V2ResourcesSkyblockBingoGet200Response) GetEndOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return &o.Success, true
+	return &o.End, true
 }
 
-// SetSuccess sets field value
-func (o *V2ResourcesSkyblockBingoGet200Response) SetSuccess(v bool) {
-	o.Success = v
+// SetEnd sets field value
+func (o *V2ResourcesSkyblockBingoGet200Response) SetEnd(v int64) {
+	o.End = v
 }
 
-// GetLastUpdated returns the LastUpdated field value
-func (o *V2ResourcesSkyblockBingoGet200Response) GetLastUpdated() float64 {
+// GetGoals returns the Goals field value
+func (o *V2ResourcesSkyblockBingoGet200Response) GetGoals() []V2ResourcesSkyblockBingoGet200ResponseGoalsInner {
 	if o == nil {
-		var ret float64
+		var ret []V2ResourcesSkyblockBingoGet200ResponseGoalsInner
 		return ret
 	}
 
-	return o.LastUpdated
+	return o.Goals
 }
 
-// GetLastUpdatedOk returns a tuple with the LastUpdated field value
+// GetGoalsOk returns a tuple with the Goals field value
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200Response) GetLastUpdatedOk() (*float64, bool) {
+func (o *V2ResourcesSkyblockBingoGet200Response) GetGoalsOk() ([]V2ResourcesSkyblockBingoGet200ResponseGoalsInner, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return &o.LastUpdated, true
+	return o.Goals, true
 }
 
-// SetLastUpdated sets field value
-func (o *V2ResourcesSkyblockBingoGet200Response) SetLastUpdated(v float64) {
-	o.LastUpdated = v
+// SetGoals sets field value
+func (o *V2ResourcesSkyblockBingoGet200Response) SetGoals(v []V2ResourcesSkyblockBingoGet200ResponseGoalsInner) {
+	o.Goals = v
 }
 
 // GetId returns the Id field value
-func (o *V2ResourcesSkyblockBingoGet200Response) GetId() float64 {
+func (o *V2ResourcesSkyblockBingoGet200Response) GetId() int64 {
 	if o == nil {
-		var ret float64
+		var ret int64
 		return ret
 	}
 
@@ -125,7 +125,7 @@ func (o *V2ResourcesSkyblockBingoGet200Response) GetId() float64 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200Response) GetIdOk() (*float64, bool) {
+func (o *V2ResourcesSkyblockBingoGet200Response) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -133,8 +133,56 @@ func (o *V2ResourcesSkyblockBingoGet200Response) GetIdOk() (*float64, bool) {
 }
 
 // SetId sets field value
-func (o *V2ResourcesSkyblockBingoGet200Response) SetId(v float64) {
+func (o *V2ResourcesSkyblockBingoGet200Response) SetId(v int64) {
 	o.Id = v
+}
+
+// GetLastUpdated returns the LastUpdated field value
+func (o *V2ResourcesSkyblockBingoGet200Response) GetLastUpdated() int64 {
+	if o == nil {
+		var ret int64
+		return ret
+	}
+
+	return o.LastUpdated
+}
+
+// GetLastUpdatedOk returns a tuple with the LastUpdated field value
+// and a boolean to check if the value has been set.
+func (o *V2ResourcesSkyblockBingoGet200Response) GetLastUpdatedOk() (*int64, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.LastUpdated, true
+}
+
+// SetLastUpdated sets field value
+func (o *V2ResourcesSkyblockBingoGet200Response) SetLastUpdated(v int64) {
+	o.LastUpdated = v
+}
+
+// GetModifier returns the Modifier field value
+func (o *V2ResourcesSkyblockBingoGet200Response) GetModifier() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.Modifier
+}
+
+// GetModifierOk returns a tuple with the Modifier field value
+// and a boolean to check if the value has been set.
+func (o *V2ResourcesSkyblockBingoGet200Response) GetModifierOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.Modifier, true
+}
+
+// SetModifier sets field value
+func (o *V2ResourcesSkyblockBingoGet200Response) SetModifier(v string) {
+	o.Modifier = v
 }
 
 // GetName returns the Name field value
@@ -162,9 +210,9 @@ func (o *V2ResourcesSkyblockBingoGet200Response) SetName(v string) {
 }
 
 // GetStart returns the Start field value
-func (o *V2ResourcesSkyblockBingoGet200Response) GetStart() float64 {
+func (o *V2ResourcesSkyblockBingoGet200Response) GetStart() int64 {
 	if o == nil {
-		var ret float64
+		var ret int64
 		return ret
 	}
 
@@ -173,7 +221,7 @@ func (o *V2ResourcesSkyblockBingoGet200Response) GetStart() float64 {
 
 // GetStartOk returns a tuple with the Start field value
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200Response) GetStartOk() (*float64, bool) {
+func (o *V2ResourcesSkyblockBingoGet200Response) GetStartOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -181,80 +229,32 @@ func (o *V2ResourcesSkyblockBingoGet200Response) GetStartOk() (*float64, bool) {
 }
 
 // SetStart sets field value
-func (o *V2ResourcesSkyblockBingoGet200Response) SetStart(v float64) {
+func (o *V2ResourcesSkyblockBingoGet200Response) SetStart(v int64) {
 	o.Start = v
 }
 
-// GetEnd returns the End field value
-func (o *V2ResourcesSkyblockBingoGet200Response) GetEnd() float64 {
+// GetSuccess returns the Success field value
+func (o *V2ResourcesSkyblockBingoGet200Response) GetSuccess() bool {
 	if o == nil {
-		var ret float64
+		var ret bool
 		return ret
 	}
 
-	return o.End
+	return o.Success
 }
 
-// GetEndOk returns a tuple with the End field value
+// GetSuccessOk returns a tuple with the Success field value
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200Response) GetEndOk() (*float64, bool) {
+func (o *V2ResourcesSkyblockBingoGet200Response) GetSuccessOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return &o.End, true
+	return &o.Success, true
 }
 
-// SetEnd sets field value
-func (o *V2ResourcesSkyblockBingoGet200Response) SetEnd(v float64) {
-	o.End = v
-}
-
-// GetModifier returns the Modifier field value
-func (o *V2ResourcesSkyblockBingoGet200Response) GetModifier() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.Modifier
-}
-
-// GetModifierOk returns a tuple with the Modifier field value
-// and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200Response) GetModifierOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.Modifier, true
-}
-
-// SetModifier sets field value
-func (o *V2ResourcesSkyblockBingoGet200Response) SetModifier(v string) {
-	o.Modifier = v
-}
-
-// GetGoals returns the Goals field value
-func (o *V2ResourcesSkyblockBingoGet200Response) GetGoals() []V2ResourcesSkyblockBingoGet200ResponseGoalsInner {
-	if o == nil {
-		var ret []V2ResourcesSkyblockBingoGet200ResponseGoalsInner
-		return ret
-	}
-
-	return o.Goals
-}
-
-// GetGoalsOk returns a tuple with the Goals field value
-// and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200Response) GetGoalsOk() ([]V2ResourcesSkyblockBingoGet200ResponseGoalsInner, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return o.Goals, true
-}
-
-// SetGoals sets field value
-func (o *V2ResourcesSkyblockBingoGet200Response) SetGoals(v []V2ResourcesSkyblockBingoGet200ResponseGoalsInner) {
-	o.Goals = v
+// SetSuccess sets field value
+func (o *V2ResourcesSkyblockBingoGet200Response) SetSuccess(v bool) {
+	o.Success = v
 }
 
 func (o V2ResourcesSkyblockBingoGet200Response) MarshalJSON() ([]byte, error) {
@@ -267,14 +267,14 @@ func (o V2ResourcesSkyblockBingoGet200Response) MarshalJSON() ([]byte, error) {
 
 func (o V2ResourcesSkyblockBingoGet200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["success"] = o.Success
-	toSerialize["lastUpdated"] = o.LastUpdated
+	toSerialize["end"] = o.End
+	toSerialize["goals"] = o.Goals
 	toSerialize["id"] = o.Id
+	toSerialize["lastUpdated"] = o.LastUpdated
+	toSerialize["modifier"] = o.Modifier
 	toSerialize["name"] = o.Name
 	toSerialize["start"] = o.Start
-	toSerialize["end"] = o.End
-	toSerialize["modifier"] = o.Modifier
-	toSerialize["goals"] = o.Goals
+	toSerialize["success"] = o.Success
 	return toSerialize, nil
 }
 
@@ -283,14 +283,14 @@ func (o *V2ResourcesSkyblockBingoGet200Response) UnmarshalJSON(data []byte) (err
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
-		"success",
-		"lastUpdated",
+		"end",
+		"goals",
 		"id",
+		"lastUpdated",
+		"modifier",
 		"name",
 		"start",
-		"end",
-		"modifier",
-		"goals",
+		"success",
 	}
 
 	allProperties := make(map[string]interface{})

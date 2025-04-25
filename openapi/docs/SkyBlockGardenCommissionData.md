@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Visits** | Pointer to **map[string]interface{}** | A map of visitor identifier to visit count | [optional] 
 **Completed** | Pointer to **map[string]interface{}** | A map of visitor identifier to completed count | [optional] 
-**TotalCompleted** | Pointer to **float64** |  | [optional] 
-**UniqueNpcsServed** | Pointer to **float64** |  | [optional] 
+**TotalCompleted** | Pointer to **int64** |  | [optional] 
+**UniqueNpcsServed** | Pointer to **int64** |  | [optional] 
+**Visits** | Pointer to **map[string]interface{}** | A map of visitor identifier to visit count | [optional] 
 
 ## Methods
 
@@ -27,31 +27,6 @@ will change when the set of required properties is changed
 NewSkyBlockGardenCommissionDataWithDefaults instantiates a new SkyBlockGardenCommissionData object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetVisits
-
-`func (o *SkyBlockGardenCommissionData) GetVisits() map[string]interface{}`
-
-GetVisits returns the Visits field if non-nil, zero value otherwise.
-
-### GetVisitsOk
-
-`func (o *SkyBlockGardenCommissionData) GetVisitsOk() (*map[string]interface{}, bool)`
-
-GetVisitsOk returns a tuple with the Visits field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVisits
-
-`func (o *SkyBlockGardenCommissionData) SetVisits(v map[string]interface{})`
-
-SetVisits sets Visits field to given value.
-
-### HasVisits
-
-`func (o *SkyBlockGardenCommissionData) HasVisits() bool`
-
-HasVisits returns a boolean if a field has been set.
 
 ### GetCompleted
 
@@ -80,20 +55,20 @@ HasCompleted returns a boolean if a field has been set.
 
 ### GetTotalCompleted
 
-`func (o *SkyBlockGardenCommissionData) GetTotalCompleted() float64`
+`func (o *SkyBlockGardenCommissionData) GetTotalCompleted() int64`
 
 GetTotalCompleted returns the TotalCompleted field if non-nil, zero value otherwise.
 
 ### GetTotalCompletedOk
 
-`func (o *SkyBlockGardenCommissionData) GetTotalCompletedOk() (*float64, bool)`
+`func (o *SkyBlockGardenCommissionData) GetTotalCompletedOk() (*int64, bool)`
 
 GetTotalCompletedOk returns a tuple with the TotalCompleted field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalCompleted
 
-`func (o *SkyBlockGardenCommissionData) SetTotalCompleted(v float64)`
+`func (o *SkyBlockGardenCommissionData) SetTotalCompleted(v int64)`
 
 SetTotalCompleted sets TotalCompleted field to given value.
 
@@ -105,20 +80,20 @@ HasTotalCompleted returns a boolean if a field has been set.
 
 ### GetUniqueNpcsServed
 
-`func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServed() float64`
+`func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServed() int64`
 
 GetUniqueNpcsServed returns the UniqueNpcsServed field if non-nil, zero value otherwise.
 
 ### GetUniqueNpcsServedOk
 
-`func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServedOk() (*float64, bool)`
+`func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServedOk() (*int64, bool)`
 
 GetUniqueNpcsServedOk returns a tuple with the UniqueNpcsServed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUniqueNpcsServed
 
-`func (o *SkyBlockGardenCommissionData) SetUniqueNpcsServed(v float64)`
+`func (o *SkyBlockGardenCommissionData) SetUniqueNpcsServed(v int64)`
 
 SetUniqueNpcsServed sets UniqueNpcsServed field to given value.
 
@@ -127,6 +102,31 @@ SetUniqueNpcsServed sets UniqueNpcsServed field to given value.
 `func (o *SkyBlockGardenCommissionData) HasUniqueNpcsServed() bool`
 
 HasUniqueNpcsServed returns a boolean if a field has been set.
+
+### GetVisits
+
+`func (o *SkyBlockGardenCommissionData) GetVisits() map[string]interface{}`
+
+GetVisits returns the Visits field if non-nil, zero value otherwise.
+
+### GetVisitsOk
+
+`func (o *SkyBlockGardenCommissionData) GetVisitsOk() (*map[string]interface{}, bool)`
+
+GetVisitsOk returns a tuple with the Visits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVisits
+
+`func (o *SkyBlockGardenCommissionData) SetVisits(v map[string]interface{})`
+
+SetVisits sets Visits field to given value.
+
+### HasVisits
+
+`func (o *SkyBlockGardenCommissionData) HasVisits() bool`
+
+HasVisits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

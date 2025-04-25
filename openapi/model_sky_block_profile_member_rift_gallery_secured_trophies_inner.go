@@ -19,9 +19,9 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftGallerySecuredTrophiesInner{}
 
 // SkyBlockProfileMemberRiftGallerySecuredTrophiesInner struct for SkyBlockProfileMemberRiftGallerySecuredTrophiesInner
 type SkyBlockProfileMemberRiftGallerySecuredTrophiesInner struct {
-	Timestamp *float64 `json:"timestamp,omitempty"`
-	Type      *string  `json:"type,omitempty"`
-	Visits    *float64 `json:"visits,omitempty"`
+	Timestamp *int64  `json:"timestamp,omitempty"`
+	Type      *string `json:"type,omitempty"`
+	Visits    *int64  `json:"visits,omitempty"`
 }
 
 // NewSkyBlockProfileMemberRiftGallerySecuredTrophiesInner instantiates a new SkyBlockProfileMemberRiftGallerySecuredTrophiesInner object
@@ -42,9 +42,9 @@ func NewSkyBlockProfileMemberRiftGallerySecuredTrophiesInnerWithDefaults() *SkyB
 }
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetTimestamp() float64 {
+func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetTimestamp() int64 {
 	if o == nil || IsNil(o.Timestamp) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.Timestamp
@@ -52,7 +52,7 @@ func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetTimestamp() fl
 
 // GetTimestampOk returns a tuple with the Timestamp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetTimestampOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetTimestampOk() (*int64, bool) {
 	if o == nil || IsNil(o.Timestamp) {
 		return nil, false
 	}
@@ -68,8 +68,8 @@ func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) HasTimestamp() bo
 	return false
 }
 
-// SetTimestamp gets a reference to the given float64 and assigns it to the Timestamp field.
-func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) SetTimestamp(v float64) {
+// SetTimestamp gets a reference to the given int64 and assigns it to the Timestamp field.
+func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) SetTimestamp(v int64) {
 	o.Timestamp = &v
 }
 
@@ -106,9 +106,9 @@ func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) SetType(v string)
 }
 
 // GetVisits returns the Visits field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetVisits() float64 {
+func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetVisits() int64 {
 	if o == nil || IsNil(o.Visits) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.Visits
@@ -116,7 +116,7 @@ func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetVisits() float
 
 // GetVisitsOk returns a tuple with the Visits field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetVisitsOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetVisitsOk() (*int64, bool) {
 	if o == nil || IsNil(o.Visits) {
 		return nil, false
 	}
@@ -132,8 +132,8 @@ func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) HasVisits() bool 
 	return false
 }
 
-// SetVisits gets a reference to the given float64 and assigns it to the Visits field.
-func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) SetVisits(v float64) {
+// SetVisits gets a reference to the given int64 and assigns it to the Visits field.
+func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) SetVisits(v int64) {
 	o.Visits = &v
 }
 

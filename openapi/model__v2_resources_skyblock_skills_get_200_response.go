@@ -19,10 +19,10 @@ var _ MappedNullable = &V2ResourcesSkyblockSkillsGet200Response{}
 
 // V2ResourcesSkyblockSkillsGet200Response struct for V2ResourcesSkyblockSkillsGet200Response
 type V2ResourcesSkyblockSkillsGet200Response struct {
-	Success     *bool                  `json:"success,omitempty"`
-	LastUpdated *float64               `json:"lastUpdated,omitempty"`
-	Version     *string                `json:"version,omitempty"`
+	LastUpdated *int64                 `json:"lastUpdated,omitempty"`
 	Skills      map[string]interface{} `json:"skills,omitempty"`
+	Success     *bool                  `json:"success,omitempty"`
+	Version     *string                `json:"version,omitempty"`
 }
 
 // NewV2ResourcesSkyblockSkillsGet200Response instantiates a new V2ResourcesSkyblockSkillsGet200Response object
@@ -42,42 +42,10 @@ func NewV2ResourcesSkyblockSkillsGet200ResponseWithDefaults() *V2ResourcesSkyblo
 	return &this
 }
 
-// GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockSkillsGet200Response) GetSuccess() bool {
-	if o == nil || IsNil(o.Success) {
-		var ret bool
-		return ret
-	}
-	return *o.Success
-}
-
-// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockSkillsGet200Response) GetSuccessOk() (*bool, bool) {
-	if o == nil || IsNil(o.Success) {
-		return nil, false
-	}
-	return o.Success, true
-}
-
-// HasSuccess returns a boolean if a field has been set.
-func (o *V2ResourcesSkyblockSkillsGet200Response) HasSuccess() bool {
-	if o != nil && !IsNil(o.Success) {
-		return true
-	}
-
-	return false
-}
-
-// SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *V2ResourcesSkyblockSkillsGet200Response) SetSuccess(v bool) {
-	o.Success = &v
-}
-
 // GetLastUpdated returns the LastUpdated field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockSkillsGet200Response) GetLastUpdated() float64 {
+func (o *V2ResourcesSkyblockSkillsGet200Response) GetLastUpdated() int64 {
 	if o == nil || IsNil(o.LastUpdated) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.LastUpdated
@@ -85,7 +53,7 @@ func (o *V2ResourcesSkyblockSkillsGet200Response) GetLastUpdated() float64 {
 
 // GetLastUpdatedOk returns a tuple with the LastUpdated field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockSkillsGet200Response) GetLastUpdatedOk() (*float64, bool) {
+func (o *V2ResourcesSkyblockSkillsGet200Response) GetLastUpdatedOk() (*int64, bool) {
 	if o == nil || IsNil(o.LastUpdated) {
 		return nil, false
 	}
@@ -101,41 +69,9 @@ func (o *V2ResourcesSkyblockSkillsGet200Response) HasLastUpdated() bool {
 	return false
 }
 
-// SetLastUpdated gets a reference to the given float64 and assigns it to the LastUpdated field.
-func (o *V2ResourcesSkyblockSkillsGet200Response) SetLastUpdated(v float64) {
+// SetLastUpdated gets a reference to the given int64 and assigns it to the LastUpdated field.
+func (o *V2ResourcesSkyblockSkillsGet200Response) SetLastUpdated(v int64) {
 	o.LastUpdated = &v
-}
-
-// GetVersion returns the Version field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockSkillsGet200Response) GetVersion() string {
-	if o == nil || IsNil(o.Version) {
-		var ret string
-		return ret
-	}
-	return *o.Version
-}
-
-// GetVersionOk returns a tuple with the Version field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockSkillsGet200Response) GetVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.Version) {
-		return nil, false
-	}
-	return o.Version, true
-}
-
-// HasVersion returns a boolean if a field has been set.
-func (o *V2ResourcesSkyblockSkillsGet200Response) HasVersion() bool {
-	if o != nil && !IsNil(o.Version) {
-		return true
-	}
-
-	return false
-}
-
-// SetVersion gets a reference to the given string and assigns it to the Version field.
-func (o *V2ResourcesSkyblockSkillsGet200Response) SetVersion(v string) {
-	o.Version = &v
 }
 
 // GetSkills returns the Skills field value if set, zero value otherwise.
@@ -170,6 +106,70 @@ func (o *V2ResourcesSkyblockSkillsGet200Response) SetSkills(v map[string]interfa
 	o.Skills = v
 }
 
+// GetSuccess returns the Success field value if set, zero value otherwise.
+func (o *V2ResourcesSkyblockSkillsGet200Response) GetSuccess() bool {
+	if o == nil || IsNil(o.Success) {
+		var ret bool
+		return ret
+	}
+	return *o.Success
+}
+
+// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2ResourcesSkyblockSkillsGet200Response) GetSuccessOk() (*bool, bool) {
+	if o == nil || IsNil(o.Success) {
+		return nil, false
+	}
+	return o.Success, true
+}
+
+// HasSuccess returns a boolean if a field has been set.
+func (o *V2ResourcesSkyblockSkillsGet200Response) HasSuccess() bool {
+	if o != nil && !IsNil(o.Success) {
+		return true
+	}
+
+	return false
+}
+
+// SetSuccess gets a reference to the given bool and assigns it to the Success field.
+func (o *V2ResourcesSkyblockSkillsGet200Response) SetSuccess(v bool) {
+	o.Success = &v
+}
+
+// GetVersion returns the Version field value if set, zero value otherwise.
+func (o *V2ResourcesSkyblockSkillsGet200Response) GetVersion() string {
+	if o == nil || IsNil(o.Version) {
+		var ret string
+		return ret
+	}
+	return *o.Version
+}
+
+// GetVersionOk returns a tuple with the Version field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2ResourcesSkyblockSkillsGet200Response) GetVersionOk() (*string, bool) {
+	if o == nil || IsNil(o.Version) {
+		return nil, false
+	}
+	return o.Version, true
+}
+
+// HasVersion returns a boolean if a field has been set.
+func (o *V2ResourcesSkyblockSkillsGet200Response) HasVersion() bool {
+	if o != nil && !IsNil(o.Version) {
+		return true
+	}
+
+	return false
+}
+
+// SetVersion gets a reference to the given string and assigns it to the Version field.
+func (o *V2ResourcesSkyblockSkillsGet200Response) SetVersion(v string) {
+	o.Version = &v
+}
+
 func (o V2ResourcesSkyblockSkillsGet200Response) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -180,17 +180,17 @@ func (o V2ResourcesSkyblockSkillsGet200Response) MarshalJSON() ([]byte, error) {
 
 func (o V2ResourcesSkyblockSkillsGet200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Success) {
-		toSerialize["success"] = o.Success
-	}
 	if !IsNil(o.LastUpdated) {
 		toSerialize["lastUpdated"] = o.LastUpdated
 	}
-	if !IsNil(o.Version) {
-		toSerialize["version"] = o.Version
-	}
 	if !IsNil(o.Skills) {
 		toSerialize["skills"] = o.Skills
+	}
+	if !IsNil(o.Success) {
+		toSerialize["success"] = o.Success
+	}
+	if !IsNil(o.Version) {
+		toSerialize["version"] = o.Version
 	}
 	return toSerialize, nil
 }

@@ -19,12 +19,12 @@ var _ MappedNullable = &V2ResourcesSkyblockElectionGet200Response{}
 
 // V2ResourcesSkyblockElectionGet200Response struct for V2ResourcesSkyblockElectionGet200Response
 type V2ResourcesSkyblockElectionGet200Response struct {
-	Success     *bool    `json:"success,omitempty"`
-	LastUpdated *float64 `json:"lastUpdated,omitempty"`
-	// Data regarding the current mayor
-	Mayor map[string]interface{} `json:"mayor,omitempty"`
 	// Data regarding the current election, will not be provided if there is no open election ongoing
-	Current map[string]interface{} `json:"current,omitempty"`
+	Current     map[string]interface{} `json:"current,omitempty"`
+	LastUpdated *int64                 `json:"lastUpdated,omitempty"`
+	// Data regarding the current mayor
+	Mayor   map[string]interface{} `json:"mayor,omitempty"`
+	Success *bool                  `json:"success,omitempty"`
 }
 
 // NewV2ResourcesSkyblockElectionGet200Response instantiates a new V2ResourcesSkyblockElectionGet200Response object
@@ -44,42 +44,42 @@ func NewV2ResourcesSkyblockElectionGet200ResponseWithDefaults() *V2ResourcesSkyb
 	return &this
 }
 
-// GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockElectionGet200Response) GetSuccess() bool {
-	if o == nil || IsNil(o.Success) {
-		var ret bool
+// GetCurrent returns the Current field value if set, zero value otherwise.
+func (o *V2ResourcesSkyblockElectionGet200Response) GetCurrent() map[string]interface{} {
+	if o == nil || IsNil(o.Current) {
+		var ret map[string]interface{}
 		return ret
 	}
-	return *o.Success
+	return o.Current
 }
 
-// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
+// GetCurrentOk returns a tuple with the Current field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockElectionGet200Response) GetSuccessOk() (*bool, bool) {
-	if o == nil || IsNil(o.Success) {
-		return nil, false
+func (o *V2ResourcesSkyblockElectionGet200Response) GetCurrentOk() (map[string]interface{}, bool) {
+	if o == nil || IsNil(o.Current) {
+		return map[string]interface{}{}, false
 	}
-	return o.Success, true
+	return o.Current, true
 }
 
-// HasSuccess returns a boolean if a field has been set.
-func (o *V2ResourcesSkyblockElectionGet200Response) HasSuccess() bool {
-	if o != nil && !IsNil(o.Success) {
+// HasCurrent returns a boolean if a field has been set.
+func (o *V2ResourcesSkyblockElectionGet200Response) HasCurrent() bool {
+	if o != nil && !IsNil(o.Current) {
 		return true
 	}
 
 	return false
 }
 
-// SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *V2ResourcesSkyblockElectionGet200Response) SetSuccess(v bool) {
-	o.Success = &v
+// SetCurrent gets a reference to the given map[string]interface{} and assigns it to the Current field.
+func (o *V2ResourcesSkyblockElectionGet200Response) SetCurrent(v map[string]interface{}) {
+	o.Current = v
 }
 
 // GetLastUpdated returns the LastUpdated field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockElectionGet200Response) GetLastUpdated() float64 {
+func (o *V2ResourcesSkyblockElectionGet200Response) GetLastUpdated() int64 {
 	if o == nil || IsNil(o.LastUpdated) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.LastUpdated
@@ -87,7 +87,7 @@ func (o *V2ResourcesSkyblockElectionGet200Response) GetLastUpdated() float64 {
 
 // GetLastUpdatedOk returns a tuple with the LastUpdated field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockElectionGet200Response) GetLastUpdatedOk() (*float64, bool) {
+func (o *V2ResourcesSkyblockElectionGet200Response) GetLastUpdatedOk() (*int64, bool) {
 	if o == nil || IsNil(o.LastUpdated) {
 		return nil, false
 	}
@@ -103,8 +103,8 @@ func (o *V2ResourcesSkyblockElectionGet200Response) HasLastUpdated() bool {
 	return false
 }
 
-// SetLastUpdated gets a reference to the given float64 and assigns it to the LastUpdated field.
-func (o *V2ResourcesSkyblockElectionGet200Response) SetLastUpdated(v float64) {
+// SetLastUpdated gets a reference to the given int64 and assigns it to the LastUpdated field.
+func (o *V2ResourcesSkyblockElectionGet200Response) SetLastUpdated(v int64) {
 	o.LastUpdated = &v
 }
 
@@ -140,36 +140,36 @@ func (o *V2ResourcesSkyblockElectionGet200Response) SetMayor(v map[string]interf
 	o.Mayor = v
 }
 
-// GetCurrent returns the Current field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockElectionGet200Response) GetCurrent() map[string]interface{} {
-	if o == nil || IsNil(o.Current) {
-		var ret map[string]interface{}
+// GetSuccess returns the Success field value if set, zero value otherwise.
+func (o *V2ResourcesSkyblockElectionGet200Response) GetSuccess() bool {
+	if o == nil || IsNil(o.Success) {
+		var ret bool
 		return ret
 	}
-	return o.Current
+	return *o.Success
 }
 
-// GetCurrentOk returns a tuple with the Current field value if set, nil otherwise
+// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockElectionGet200Response) GetCurrentOk() (map[string]interface{}, bool) {
-	if o == nil || IsNil(o.Current) {
-		return map[string]interface{}{}, false
+func (o *V2ResourcesSkyblockElectionGet200Response) GetSuccessOk() (*bool, bool) {
+	if o == nil || IsNil(o.Success) {
+		return nil, false
 	}
-	return o.Current, true
+	return o.Success, true
 }
 
-// HasCurrent returns a boolean if a field has been set.
-func (o *V2ResourcesSkyblockElectionGet200Response) HasCurrent() bool {
-	if o != nil && !IsNil(o.Current) {
+// HasSuccess returns a boolean if a field has been set.
+func (o *V2ResourcesSkyblockElectionGet200Response) HasSuccess() bool {
+	if o != nil && !IsNil(o.Success) {
 		return true
 	}
 
 	return false
 }
 
-// SetCurrent gets a reference to the given map[string]interface{} and assigns it to the Current field.
-func (o *V2ResourcesSkyblockElectionGet200Response) SetCurrent(v map[string]interface{}) {
-	o.Current = v
+// SetSuccess gets a reference to the given bool and assigns it to the Success field.
+func (o *V2ResourcesSkyblockElectionGet200Response) SetSuccess(v bool) {
+	o.Success = &v
 }
 
 func (o V2ResourcesSkyblockElectionGet200Response) MarshalJSON() ([]byte, error) {
@@ -182,8 +182,8 @@ func (o V2ResourcesSkyblockElectionGet200Response) MarshalJSON() ([]byte, error)
 
 func (o V2ResourcesSkyblockElectionGet200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Success) {
-		toSerialize["success"] = o.Success
+	if !IsNil(o.Current) {
+		toSerialize["current"] = o.Current
 	}
 	if !IsNil(o.LastUpdated) {
 		toSerialize["lastUpdated"] = o.LastUpdated
@@ -191,8 +191,8 @@ func (o V2ResourcesSkyblockElectionGet200Response) ToMap() (map[string]interface
 	if !IsNil(o.Mayor) {
 		toSerialize["mayor"] = o.Mayor
 	}
-	if !IsNil(o.Current) {
-		toSerialize["current"] = o.Current
+	if !IsNil(o.Success) {
+		toSerialize["success"] = o.Success
 	}
 	return toSerialize, nil
 }

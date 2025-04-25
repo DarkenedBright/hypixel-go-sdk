@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SecondsSitting** | Pointer to **float64** |  | [optional] 
+**SecondsSitting** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetSecondsSitting
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) GetSecondsSitting() float64`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) GetSecondsSitting() int64`
 
 GetSecondsSitting returns the SecondsSitting field if non-nil, zero value otherwise.
 
 ### GetSecondsSittingOk
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) GetSecondsSittingOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) GetSecondsSittingOk() (*int64, bool)`
 
 GetSecondsSittingOk returns a tuple with the SecondsSitting field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSecondsSitting
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) SetSecondsSitting(v float64)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) SetSecondsSitting(v int64)`
 
 SetSecondsSitting sets SecondsSitting field to given value.
 

@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uuid** | **string** | The UUID of the profile for this garden. | 
+**ActiveCommissions** | Pointer to **map[string]interface{}** |  | [optional] 
 **CommissionData** | Pointer to [**SkyBlockGardenCommissionData**](SkyBlockGardenCommissionData.md) |  | [optional] 
 **ComposterData** | Pointer to **map[string]interface{}** |  | [optional] 
-**ActiveCommissions** | Pointer to **map[string]interface{}** |  | [optional] 
-**ResourcesCollected** | Pointer to **map[string]interface{}** | A map of resource ID to amount collected | [optional] 
 **CropUpgradeLevels** | Pointer to **map[string]interface{}** |  | [optional] 
-**UnlockedPlotsIds** | Pointer to **[]string** |  | [optional] 
 **GardenExperience** | Pointer to **float64** |  | [optional] 
-**UnlockedBarnSkins** | Pointer to **[]string** |  | [optional] 
+**ResourcesCollected** | Pointer to **map[string]interface{}** | A map of resource ID to amount collected | [optional] 
 **SelectedBarnSkin** | Pointer to **string** |  | [optional] 
+**UnlockedBarnSkins** | Pointer to **[]string** |  | [optional] 
+**UnlockedPlotsIds** | Pointer to **[]string** |  | [optional] 
+**Uuid** | **string** | The UUID of the profile for this garden. | 
 
 ## Methods
 
@@ -34,25 +34,30 @@ NewSkyBlockGardenWithDefaults instantiates a new SkyBlockGarden object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUuid
+### GetActiveCommissions
 
-`func (o *SkyBlockGarden) GetUuid() string`
+`func (o *SkyBlockGarden) GetActiveCommissions() map[string]interface{}`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetActiveCommissions returns the ActiveCommissions field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetActiveCommissionsOk
 
-`func (o *SkyBlockGarden) GetUuidOk() (*string, bool)`
+`func (o *SkyBlockGarden) GetActiveCommissionsOk() (*map[string]interface{}, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetActiveCommissionsOk returns a tuple with the ActiveCommissions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetActiveCommissions
 
-`func (o *SkyBlockGarden) SetUuid(v string)`
+`func (o *SkyBlockGarden) SetActiveCommissions(v map[string]interface{})`
 
-SetUuid sets Uuid field to given value.
+SetActiveCommissions sets ActiveCommissions field to given value.
 
+### HasActiveCommissions
+
+`func (o *SkyBlockGarden) HasActiveCommissions() bool`
+
+HasActiveCommissions returns a boolean if a field has been set.
 
 ### GetCommissionData
 
@@ -104,56 +109,6 @@ SetComposterData sets ComposterData field to given value.
 
 HasComposterData returns a boolean if a field has been set.
 
-### GetActiveCommissions
-
-`func (o *SkyBlockGarden) GetActiveCommissions() map[string]interface{}`
-
-GetActiveCommissions returns the ActiveCommissions field if non-nil, zero value otherwise.
-
-### GetActiveCommissionsOk
-
-`func (o *SkyBlockGarden) GetActiveCommissionsOk() (*map[string]interface{}, bool)`
-
-GetActiveCommissionsOk returns a tuple with the ActiveCommissions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActiveCommissions
-
-`func (o *SkyBlockGarden) SetActiveCommissions(v map[string]interface{})`
-
-SetActiveCommissions sets ActiveCommissions field to given value.
-
-### HasActiveCommissions
-
-`func (o *SkyBlockGarden) HasActiveCommissions() bool`
-
-HasActiveCommissions returns a boolean if a field has been set.
-
-### GetResourcesCollected
-
-`func (o *SkyBlockGarden) GetResourcesCollected() map[string]interface{}`
-
-GetResourcesCollected returns the ResourcesCollected field if non-nil, zero value otherwise.
-
-### GetResourcesCollectedOk
-
-`func (o *SkyBlockGarden) GetResourcesCollectedOk() (*map[string]interface{}, bool)`
-
-GetResourcesCollectedOk returns a tuple with the ResourcesCollected field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResourcesCollected
-
-`func (o *SkyBlockGarden) SetResourcesCollected(v map[string]interface{})`
-
-SetResourcesCollected sets ResourcesCollected field to given value.
-
-### HasResourcesCollected
-
-`func (o *SkyBlockGarden) HasResourcesCollected() bool`
-
-HasResourcesCollected returns a boolean if a field has been set.
-
 ### GetCropUpgradeLevels
 
 `func (o *SkyBlockGarden) GetCropUpgradeLevels() map[string]interface{}`
@@ -178,31 +133,6 @@ SetCropUpgradeLevels sets CropUpgradeLevels field to given value.
 `func (o *SkyBlockGarden) HasCropUpgradeLevels() bool`
 
 HasCropUpgradeLevels returns a boolean if a field has been set.
-
-### GetUnlockedPlotsIds
-
-`func (o *SkyBlockGarden) GetUnlockedPlotsIds() []string`
-
-GetUnlockedPlotsIds returns the UnlockedPlotsIds field if non-nil, zero value otherwise.
-
-### GetUnlockedPlotsIdsOk
-
-`func (o *SkyBlockGarden) GetUnlockedPlotsIdsOk() (*[]string, bool)`
-
-GetUnlockedPlotsIdsOk returns a tuple with the UnlockedPlotsIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUnlockedPlotsIds
-
-`func (o *SkyBlockGarden) SetUnlockedPlotsIds(v []string)`
-
-SetUnlockedPlotsIds sets UnlockedPlotsIds field to given value.
-
-### HasUnlockedPlotsIds
-
-`func (o *SkyBlockGarden) HasUnlockedPlotsIds() bool`
-
-HasUnlockedPlotsIds returns a boolean if a field has been set.
 
 ### GetGardenExperience
 
@@ -229,30 +159,30 @@ SetGardenExperience sets GardenExperience field to given value.
 
 HasGardenExperience returns a boolean if a field has been set.
 
-### GetUnlockedBarnSkins
+### GetResourcesCollected
 
-`func (o *SkyBlockGarden) GetUnlockedBarnSkins() []string`
+`func (o *SkyBlockGarden) GetResourcesCollected() map[string]interface{}`
 
-GetUnlockedBarnSkins returns the UnlockedBarnSkins field if non-nil, zero value otherwise.
+GetResourcesCollected returns the ResourcesCollected field if non-nil, zero value otherwise.
 
-### GetUnlockedBarnSkinsOk
+### GetResourcesCollectedOk
 
-`func (o *SkyBlockGarden) GetUnlockedBarnSkinsOk() (*[]string, bool)`
+`func (o *SkyBlockGarden) GetResourcesCollectedOk() (*map[string]interface{}, bool)`
 
-GetUnlockedBarnSkinsOk returns a tuple with the UnlockedBarnSkins field if it's non-nil, zero value otherwise
+GetResourcesCollectedOk returns a tuple with the ResourcesCollected field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnlockedBarnSkins
+### SetResourcesCollected
 
-`func (o *SkyBlockGarden) SetUnlockedBarnSkins(v []string)`
+`func (o *SkyBlockGarden) SetResourcesCollected(v map[string]interface{})`
 
-SetUnlockedBarnSkins sets UnlockedBarnSkins field to given value.
+SetResourcesCollected sets ResourcesCollected field to given value.
 
-### HasUnlockedBarnSkins
+### HasResourcesCollected
 
-`func (o *SkyBlockGarden) HasUnlockedBarnSkins() bool`
+`func (o *SkyBlockGarden) HasResourcesCollected() bool`
 
-HasUnlockedBarnSkins returns a boolean if a field has been set.
+HasResourcesCollected returns a boolean if a field has been set.
 
 ### GetSelectedBarnSkin
 
@@ -278,6 +208,76 @@ SetSelectedBarnSkin sets SelectedBarnSkin field to given value.
 `func (o *SkyBlockGarden) HasSelectedBarnSkin() bool`
 
 HasSelectedBarnSkin returns a boolean if a field has been set.
+
+### GetUnlockedBarnSkins
+
+`func (o *SkyBlockGarden) GetUnlockedBarnSkins() []string`
+
+GetUnlockedBarnSkins returns the UnlockedBarnSkins field if non-nil, zero value otherwise.
+
+### GetUnlockedBarnSkinsOk
+
+`func (o *SkyBlockGarden) GetUnlockedBarnSkinsOk() (*[]string, bool)`
+
+GetUnlockedBarnSkinsOk returns a tuple with the UnlockedBarnSkins field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnlockedBarnSkins
+
+`func (o *SkyBlockGarden) SetUnlockedBarnSkins(v []string)`
+
+SetUnlockedBarnSkins sets UnlockedBarnSkins field to given value.
+
+### HasUnlockedBarnSkins
+
+`func (o *SkyBlockGarden) HasUnlockedBarnSkins() bool`
+
+HasUnlockedBarnSkins returns a boolean if a field has been set.
+
+### GetUnlockedPlotsIds
+
+`func (o *SkyBlockGarden) GetUnlockedPlotsIds() []string`
+
+GetUnlockedPlotsIds returns the UnlockedPlotsIds field if non-nil, zero value otherwise.
+
+### GetUnlockedPlotsIdsOk
+
+`func (o *SkyBlockGarden) GetUnlockedPlotsIdsOk() (*[]string, bool)`
+
+GetUnlockedPlotsIdsOk returns a tuple with the UnlockedPlotsIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnlockedPlotsIds
+
+`func (o *SkyBlockGarden) SetUnlockedPlotsIds(v []string)`
+
+SetUnlockedPlotsIds sets UnlockedPlotsIds field to given value.
+
+### HasUnlockedPlotsIds
+
+`func (o *SkyBlockGarden) HasUnlockedPlotsIds() bool`
+
+HasUnlockedPlotsIds returns a boolean if a field has been set.
+
+### GetUuid
+
+`func (o *SkyBlockGarden) GetUuid() string`
+
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
+
+### GetUuidOk
+
+`func (o *SkyBlockGarden) GetUuidOk() (*string, bool)`
+
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUuid
+
+`func (o *SkyBlockGarden) SetUuid(v string)`
+
+SetUuid sets Uuid field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

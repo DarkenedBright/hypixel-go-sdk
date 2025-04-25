@@ -19,10 +19,10 @@ var _ MappedNullable = &SkyBlockMuseum{}
 
 // SkyBlockMuseum struct for SkyBlockMuseum
 type SkyBlockMuseum struct {
-	Value     *float64                     `json:"value,omitempty"`
 	Appraisal *bool                        `json:"appraisal,omitempty"`
 	Items     map[string]interface{}       `json:"items,omitempty"`
 	Special   []SkyBlockMuseumSpecialInner `json:"special,omitempty"`
+	Value     *int64                       `json:"value,omitempty"`
 }
 
 // NewSkyBlockMuseum instantiates a new SkyBlockMuseum object
@@ -40,38 +40,6 @@ func NewSkyBlockMuseum() *SkyBlockMuseum {
 func NewSkyBlockMuseumWithDefaults() *SkyBlockMuseum {
 	this := SkyBlockMuseum{}
 	return &this
-}
-
-// GetValue returns the Value field value if set, zero value otherwise.
-func (o *SkyBlockMuseum) GetValue() float64 {
-	if o == nil || IsNil(o.Value) {
-		var ret float64
-		return ret
-	}
-	return *o.Value
-}
-
-// GetValueOk returns a tuple with the Value field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockMuseum) GetValueOk() (*float64, bool) {
-	if o == nil || IsNil(o.Value) {
-		return nil, false
-	}
-	return o.Value, true
-}
-
-// HasValue returns a boolean if a field has been set.
-func (o *SkyBlockMuseum) HasValue() bool {
-	if o != nil && !IsNil(o.Value) {
-		return true
-	}
-
-	return false
-}
-
-// SetValue gets a reference to the given float64 and assigns it to the Value field.
-func (o *SkyBlockMuseum) SetValue(v float64) {
-	o.Value = &v
 }
 
 // GetAppraisal returns the Appraisal field value if set, zero value otherwise.
@@ -170,6 +138,38 @@ func (o *SkyBlockMuseum) SetSpecial(v []SkyBlockMuseumSpecialInner) {
 	o.Special = v
 }
 
+// GetValue returns the Value field value if set, zero value otherwise.
+func (o *SkyBlockMuseum) GetValue() int64 {
+	if o == nil || IsNil(o.Value) {
+		var ret int64
+		return ret
+	}
+	return *o.Value
+}
+
+// GetValueOk returns a tuple with the Value field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockMuseum) GetValueOk() (*int64, bool) {
+	if o == nil || IsNil(o.Value) {
+		return nil, false
+	}
+	return o.Value, true
+}
+
+// HasValue returns a boolean if a field has been set.
+func (o *SkyBlockMuseum) HasValue() bool {
+	if o != nil && !IsNil(o.Value) {
+		return true
+	}
+
+	return false
+}
+
+// SetValue gets a reference to the given int64 and assigns it to the Value field.
+func (o *SkyBlockMuseum) SetValue(v int64) {
+	o.Value = &v
+}
+
 func (o SkyBlockMuseum) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -180,9 +180,6 @@ func (o SkyBlockMuseum) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockMuseum) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Value) {
-		toSerialize["value"] = o.Value
-	}
 	if !IsNil(o.Appraisal) {
 		toSerialize["appraisal"] = o.Appraisal
 	}
@@ -191,6 +188,9 @@ func (o SkyBlockMuseum) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Special) {
 		toSerialize["special"] = o.Special
+	}
+	if !IsNil(o.Value) {
+		toSerialize["value"] = o.Value
 	}
 	return toSerialize, nil
 }

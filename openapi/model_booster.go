@@ -19,13 +19,13 @@ var _ MappedNullable = &Booster{}
 
 // Booster struct for Booster
 type Booster struct {
-	Id             *string  `json:"_id,omitempty"`
-	PurchaserUuid  *string  `json:"purchaserUuid,omitempty"`
-	Amount         *float64 `json:"amount,omitempty"`
-	OriginalLength *float64 `json:"originalLength,omitempty"`
-	Length         *float64 `json:"length,omitempty"`
-	GameType       *float64 `json:"gameType,omitempty"`
-	DateActivated  *float64 `json:"dateActivated,omitempty"`
+	Id             *string `json:"_id,omitempty"`
+	Amount         *int64  `json:"amount,omitempty"`
+	DateActivated  *int64  `json:"dateActivated,omitempty"`
+	GameType       *int64  `json:"gameType,omitempty"`
+	Length         *int64  `json:"length,omitempty"`
+	OriginalLength *int64  `json:"originalLength,omitempty"`
+	PurchaserUuid  *string `json:"purchaserUuid,omitempty"`
 }
 
 // NewBooster instantiates a new Booster object
@@ -77,6 +77,166 @@ func (o *Booster) SetId(v string) {
 	o.Id = &v
 }
 
+// GetAmount returns the Amount field value if set, zero value otherwise.
+func (o *Booster) GetAmount() int64 {
+	if o == nil || IsNil(o.Amount) {
+		var ret int64
+		return ret
+	}
+	return *o.Amount
+}
+
+// GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Booster) GetAmountOk() (*int64, bool) {
+	if o == nil || IsNil(o.Amount) {
+		return nil, false
+	}
+	return o.Amount, true
+}
+
+// HasAmount returns a boolean if a field has been set.
+func (o *Booster) HasAmount() bool {
+	if o != nil && !IsNil(o.Amount) {
+		return true
+	}
+
+	return false
+}
+
+// SetAmount gets a reference to the given int64 and assigns it to the Amount field.
+func (o *Booster) SetAmount(v int64) {
+	o.Amount = &v
+}
+
+// GetDateActivated returns the DateActivated field value if set, zero value otherwise.
+func (o *Booster) GetDateActivated() int64 {
+	if o == nil || IsNil(o.DateActivated) {
+		var ret int64
+		return ret
+	}
+	return *o.DateActivated
+}
+
+// GetDateActivatedOk returns a tuple with the DateActivated field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Booster) GetDateActivatedOk() (*int64, bool) {
+	if o == nil || IsNil(o.DateActivated) {
+		return nil, false
+	}
+	return o.DateActivated, true
+}
+
+// HasDateActivated returns a boolean if a field has been set.
+func (o *Booster) HasDateActivated() bool {
+	if o != nil && !IsNil(o.DateActivated) {
+		return true
+	}
+
+	return false
+}
+
+// SetDateActivated gets a reference to the given int64 and assigns it to the DateActivated field.
+func (o *Booster) SetDateActivated(v int64) {
+	o.DateActivated = &v
+}
+
+// GetGameType returns the GameType field value if set, zero value otherwise.
+func (o *Booster) GetGameType() int64 {
+	if o == nil || IsNil(o.GameType) {
+		var ret int64
+		return ret
+	}
+	return *o.GameType
+}
+
+// GetGameTypeOk returns a tuple with the GameType field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Booster) GetGameTypeOk() (*int64, bool) {
+	if o == nil || IsNil(o.GameType) {
+		return nil, false
+	}
+	return o.GameType, true
+}
+
+// HasGameType returns a boolean if a field has been set.
+func (o *Booster) HasGameType() bool {
+	if o != nil && !IsNil(o.GameType) {
+		return true
+	}
+
+	return false
+}
+
+// SetGameType gets a reference to the given int64 and assigns it to the GameType field.
+func (o *Booster) SetGameType(v int64) {
+	o.GameType = &v
+}
+
+// GetLength returns the Length field value if set, zero value otherwise.
+func (o *Booster) GetLength() int64 {
+	if o == nil || IsNil(o.Length) {
+		var ret int64
+		return ret
+	}
+	return *o.Length
+}
+
+// GetLengthOk returns a tuple with the Length field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Booster) GetLengthOk() (*int64, bool) {
+	if o == nil || IsNil(o.Length) {
+		return nil, false
+	}
+	return o.Length, true
+}
+
+// HasLength returns a boolean if a field has been set.
+func (o *Booster) HasLength() bool {
+	if o != nil && !IsNil(o.Length) {
+		return true
+	}
+
+	return false
+}
+
+// SetLength gets a reference to the given int64 and assigns it to the Length field.
+func (o *Booster) SetLength(v int64) {
+	o.Length = &v
+}
+
+// GetOriginalLength returns the OriginalLength field value if set, zero value otherwise.
+func (o *Booster) GetOriginalLength() int64 {
+	if o == nil || IsNil(o.OriginalLength) {
+		var ret int64
+		return ret
+	}
+	return *o.OriginalLength
+}
+
+// GetOriginalLengthOk returns a tuple with the OriginalLength field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Booster) GetOriginalLengthOk() (*int64, bool) {
+	if o == nil || IsNil(o.OriginalLength) {
+		return nil, false
+	}
+	return o.OriginalLength, true
+}
+
+// HasOriginalLength returns a boolean if a field has been set.
+func (o *Booster) HasOriginalLength() bool {
+	if o != nil && !IsNil(o.OriginalLength) {
+		return true
+	}
+
+	return false
+}
+
+// SetOriginalLength gets a reference to the given int64 and assigns it to the OriginalLength field.
+func (o *Booster) SetOriginalLength(v int64) {
+	o.OriginalLength = &v
+}
+
 // GetPurchaserUuid returns the PurchaserUuid field value if set, zero value otherwise.
 func (o *Booster) GetPurchaserUuid() string {
 	if o == nil || IsNil(o.PurchaserUuid) {
@@ -109,166 +269,6 @@ func (o *Booster) SetPurchaserUuid(v string) {
 	o.PurchaserUuid = &v
 }
 
-// GetAmount returns the Amount field value if set, zero value otherwise.
-func (o *Booster) GetAmount() float64 {
-	if o == nil || IsNil(o.Amount) {
-		var ret float64
-		return ret
-	}
-	return *o.Amount
-}
-
-// GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Booster) GetAmountOk() (*float64, bool) {
-	if o == nil || IsNil(o.Amount) {
-		return nil, false
-	}
-	return o.Amount, true
-}
-
-// HasAmount returns a boolean if a field has been set.
-func (o *Booster) HasAmount() bool {
-	if o != nil && !IsNil(o.Amount) {
-		return true
-	}
-
-	return false
-}
-
-// SetAmount gets a reference to the given float64 and assigns it to the Amount field.
-func (o *Booster) SetAmount(v float64) {
-	o.Amount = &v
-}
-
-// GetOriginalLength returns the OriginalLength field value if set, zero value otherwise.
-func (o *Booster) GetOriginalLength() float64 {
-	if o == nil || IsNil(o.OriginalLength) {
-		var ret float64
-		return ret
-	}
-	return *o.OriginalLength
-}
-
-// GetOriginalLengthOk returns a tuple with the OriginalLength field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Booster) GetOriginalLengthOk() (*float64, bool) {
-	if o == nil || IsNil(o.OriginalLength) {
-		return nil, false
-	}
-	return o.OriginalLength, true
-}
-
-// HasOriginalLength returns a boolean if a field has been set.
-func (o *Booster) HasOriginalLength() bool {
-	if o != nil && !IsNil(o.OriginalLength) {
-		return true
-	}
-
-	return false
-}
-
-// SetOriginalLength gets a reference to the given float64 and assigns it to the OriginalLength field.
-func (o *Booster) SetOriginalLength(v float64) {
-	o.OriginalLength = &v
-}
-
-// GetLength returns the Length field value if set, zero value otherwise.
-func (o *Booster) GetLength() float64 {
-	if o == nil || IsNil(o.Length) {
-		var ret float64
-		return ret
-	}
-	return *o.Length
-}
-
-// GetLengthOk returns a tuple with the Length field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Booster) GetLengthOk() (*float64, bool) {
-	if o == nil || IsNil(o.Length) {
-		return nil, false
-	}
-	return o.Length, true
-}
-
-// HasLength returns a boolean if a field has been set.
-func (o *Booster) HasLength() bool {
-	if o != nil && !IsNil(o.Length) {
-		return true
-	}
-
-	return false
-}
-
-// SetLength gets a reference to the given float64 and assigns it to the Length field.
-func (o *Booster) SetLength(v float64) {
-	o.Length = &v
-}
-
-// GetGameType returns the GameType field value if set, zero value otherwise.
-func (o *Booster) GetGameType() float64 {
-	if o == nil || IsNil(o.GameType) {
-		var ret float64
-		return ret
-	}
-	return *o.GameType
-}
-
-// GetGameTypeOk returns a tuple with the GameType field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Booster) GetGameTypeOk() (*float64, bool) {
-	if o == nil || IsNil(o.GameType) {
-		return nil, false
-	}
-	return o.GameType, true
-}
-
-// HasGameType returns a boolean if a field has been set.
-func (o *Booster) HasGameType() bool {
-	if o != nil && !IsNil(o.GameType) {
-		return true
-	}
-
-	return false
-}
-
-// SetGameType gets a reference to the given float64 and assigns it to the GameType field.
-func (o *Booster) SetGameType(v float64) {
-	o.GameType = &v
-}
-
-// GetDateActivated returns the DateActivated field value if set, zero value otherwise.
-func (o *Booster) GetDateActivated() float64 {
-	if o == nil || IsNil(o.DateActivated) {
-		var ret float64
-		return ret
-	}
-	return *o.DateActivated
-}
-
-// GetDateActivatedOk returns a tuple with the DateActivated field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Booster) GetDateActivatedOk() (*float64, bool) {
-	if o == nil || IsNil(o.DateActivated) {
-		return nil, false
-	}
-	return o.DateActivated, true
-}
-
-// HasDateActivated returns a boolean if a field has been set.
-func (o *Booster) HasDateActivated() bool {
-	if o != nil && !IsNil(o.DateActivated) {
-		return true
-	}
-
-	return false
-}
-
-// SetDateActivated gets a reference to the given float64 and assigns it to the DateActivated field.
-func (o *Booster) SetDateActivated(v float64) {
-	o.DateActivated = &v
-}
-
 func (o Booster) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -282,23 +282,23 @@ func (o Booster) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Id) {
 		toSerialize["_id"] = o.Id
 	}
-	if !IsNil(o.PurchaserUuid) {
-		toSerialize["purchaserUuid"] = o.PurchaserUuid
-	}
 	if !IsNil(o.Amount) {
 		toSerialize["amount"] = o.Amount
 	}
-	if !IsNil(o.OriginalLength) {
-		toSerialize["originalLength"] = o.OriginalLength
-	}
-	if !IsNil(o.Length) {
-		toSerialize["length"] = o.Length
+	if !IsNil(o.DateActivated) {
+		toSerialize["dateActivated"] = o.DateActivated
 	}
 	if !IsNil(o.GameType) {
 		toSerialize["gameType"] = o.GameType
 	}
-	if !IsNil(o.DateActivated) {
-		toSerialize["dateActivated"] = o.DateActivated
+	if !IsNil(o.Length) {
+		toSerialize["length"] = o.Length
+	}
+	if !IsNil(o.OriginalLength) {
+		toSerialize["originalLength"] = o.OriginalLength
+	}
+	if !IsNil(o.PurchaserUuid) {
+		toSerialize["purchaserUuid"] = o.PurchaserUuid
 	}
 	return toSerialize, nil
 }

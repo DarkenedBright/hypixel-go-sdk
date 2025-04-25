@@ -21,12 +21,12 @@ var _ MappedNullable = &V2SkyblockBingoGet200ResponseEventsInner{}
 
 // V2SkyblockBingoGet200ResponseEventsInner struct for V2SkyblockBingoGet200ResponseEventsInner
 type V2SkyblockBingoGet200ResponseEventsInner struct {
-	// The id for this event
-	Key float64 `json:"key"`
-	// The amount of points earned
-	Points float64 `json:"points"`
 	// The completed goal IDs
 	CompletedGoals []string `json:"completed_goals"`
+	// The id for this event
+	Key int64 `json:"key"`
+	// The amount of points earned
+	Points int64 `json:"points"`
 }
 
 type _V2SkyblockBingoGet200ResponseEventsInner V2SkyblockBingoGet200ResponseEventsInner
@@ -35,11 +35,11 @@ type _V2SkyblockBingoGet200ResponseEventsInner V2SkyblockBingoGet200ResponseEven
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewV2SkyblockBingoGet200ResponseEventsInner(key float64, points float64, completedGoals []string) *V2SkyblockBingoGet200ResponseEventsInner {
+func NewV2SkyblockBingoGet200ResponseEventsInner(completedGoals []string, key int64, points int64) *V2SkyblockBingoGet200ResponseEventsInner {
 	this := V2SkyblockBingoGet200ResponseEventsInner{}
+	this.CompletedGoals = completedGoals
 	this.Key = key
 	this.Points = points
-	this.CompletedGoals = completedGoals
 	return &this
 }
 
@@ -49,54 +49,6 @@ func NewV2SkyblockBingoGet200ResponseEventsInner(key float64, points float64, co
 func NewV2SkyblockBingoGet200ResponseEventsInnerWithDefaults() *V2SkyblockBingoGet200ResponseEventsInner {
 	this := V2SkyblockBingoGet200ResponseEventsInner{}
 	return &this
-}
-
-// GetKey returns the Key field value
-func (o *V2SkyblockBingoGet200ResponseEventsInner) GetKey() float64 {
-	if o == nil {
-		var ret float64
-		return ret
-	}
-
-	return o.Key
-}
-
-// GetKeyOk returns a tuple with the Key field value
-// and a boolean to check if the value has been set.
-func (o *V2SkyblockBingoGet200ResponseEventsInner) GetKeyOk() (*float64, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.Key, true
-}
-
-// SetKey sets field value
-func (o *V2SkyblockBingoGet200ResponseEventsInner) SetKey(v float64) {
-	o.Key = v
-}
-
-// GetPoints returns the Points field value
-func (o *V2SkyblockBingoGet200ResponseEventsInner) GetPoints() float64 {
-	if o == nil {
-		var ret float64
-		return ret
-	}
-
-	return o.Points
-}
-
-// GetPointsOk returns a tuple with the Points field value
-// and a boolean to check if the value has been set.
-func (o *V2SkyblockBingoGet200ResponseEventsInner) GetPointsOk() (*float64, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.Points, true
-}
-
-// SetPoints sets field value
-func (o *V2SkyblockBingoGet200ResponseEventsInner) SetPoints(v float64) {
-	o.Points = v
 }
 
 // GetCompletedGoals returns the CompletedGoals field value
@@ -123,6 +75,54 @@ func (o *V2SkyblockBingoGet200ResponseEventsInner) SetCompletedGoals(v []string)
 	o.CompletedGoals = v
 }
 
+// GetKey returns the Key field value
+func (o *V2SkyblockBingoGet200ResponseEventsInner) GetKey() int64 {
+	if o == nil {
+		var ret int64
+		return ret
+	}
+
+	return o.Key
+}
+
+// GetKeyOk returns a tuple with the Key field value
+// and a boolean to check if the value has been set.
+func (o *V2SkyblockBingoGet200ResponseEventsInner) GetKeyOk() (*int64, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.Key, true
+}
+
+// SetKey sets field value
+func (o *V2SkyblockBingoGet200ResponseEventsInner) SetKey(v int64) {
+	o.Key = v
+}
+
+// GetPoints returns the Points field value
+func (o *V2SkyblockBingoGet200ResponseEventsInner) GetPoints() int64 {
+	if o == nil {
+		var ret int64
+		return ret
+	}
+
+	return o.Points
+}
+
+// GetPointsOk returns a tuple with the Points field value
+// and a boolean to check if the value has been set.
+func (o *V2SkyblockBingoGet200ResponseEventsInner) GetPointsOk() (*int64, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.Points, true
+}
+
+// SetPoints sets field value
+func (o *V2SkyblockBingoGet200ResponseEventsInner) SetPoints(v int64) {
+	o.Points = v
+}
+
 func (o V2SkyblockBingoGet200ResponseEventsInner) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -133,9 +133,9 @@ func (o V2SkyblockBingoGet200ResponseEventsInner) MarshalJSON() ([]byte, error) 
 
 func (o V2SkyblockBingoGet200ResponseEventsInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	toSerialize["completed_goals"] = o.CompletedGoals
 	toSerialize["key"] = o.Key
 	toSerialize["points"] = o.Points
-	toSerialize["completed_goals"] = o.CompletedGoals
 	return toSerialize, nil
 }
 
@@ -144,9 +144,9 @@ func (o *V2SkyblockBingoGet200ResponseEventsInner) UnmarshalJSON(data []byte) (e
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
+		"completed_goals",
 		"key",
 		"points",
-		"completed_goals",
 	}
 
 	allProperties := make(map[string]interface{})

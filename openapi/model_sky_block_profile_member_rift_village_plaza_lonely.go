@@ -19,7 +19,7 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftVillagePlazaLonely{}
 
 // SkyBlockProfileMemberRiftVillagePlazaLonely struct for SkyBlockProfileMemberRiftVillagePlazaLonely
 type SkyBlockProfileMemberRiftVillagePlazaLonely struct {
-	SecondsSitting *float64 `json:"seconds_sitting,omitempty"`
+	SecondsSitting *int64 `json:"seconds_sitting,omitempty"`
 }
 
 // NewSkyBlockProfileMemberRiftVillagePlazaLonely instantiates a new SkyBlockProfileMemberRiftVillagePlazaLonely object
@@ -40,9 +40,9 @@ func NewSkyBlockProfileMemberRiftVillagePlazaLonelyWithDefaults() *SkyBlockProfi
 }
 
 // GetSecondsSitting returns the SecondsSitting field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) GetSecondsSitting() float64 {
+func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) GetSecondsSitting() int64 {
 	if o == nil || IsNil(o.SecondsSitting) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.SecondsSitting
@@ -50,7 +50,7 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) GetSecondsSitting() float6
 
 // GetSecondsSittingOk returns a tuple with the SecondsSitting field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) GetSecondsSittingOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) GetSecondsSittingOk() (*int64, bool) {
 	if o == nil || IsNil(o.SecondsSitting) {
 		return nil, false
 	}
@@ -66,8 +66,8 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) HasSecondsSitting() bool {
 	return false
 }
 
-// SetSecondsSitting gets a reference to the given float64 and assigns it to the SecondsSitting field.
-func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) SetSecondsSitting(v float64) {
+// SetSecondsSitting gets a reference to the given int64 and assigns it to the SecondsSitting field.
+func (o *SkyBlockProfileMemberRiftVillagePlazaLonely) SetSecondsSitting(v int64) {
 	o.SecondsSitting = &v
 }
 

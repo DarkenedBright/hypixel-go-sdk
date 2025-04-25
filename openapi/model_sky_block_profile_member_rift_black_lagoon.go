@@ -19,10 +19,10 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftBlackLagoon{}
 
 // SkyBlockProfileMemberRiftBlackLagoon struct for SkyBlockProfileMemberRiftBlackLagoon
 type SkyBlockProfileMemberRiftBlackLagoon struct {
-	CompletedStep         *float64 `json:"completed_step,omitempty"`
-	DeliveredSciencePaper *bool    `json:"delivered_science_paper,omitempty"`
-	ReceivedSciencePaper  *bool    `json:"received_science_paper,omitempty"`
-	TalkedToEdwin         *bool    `json:"talked_to_edwin,omitempty"`
+	CompletedStep         *int64 `json:"completed_step,omitempty"`
+	DeliveredSciencePaper *bool  `json:"delivered_science_paper,omitempty"`
+	ReceivedSciencePaper  *bool  `json:"received_science_paper,omitempty"`
+	TalkedToEdwin         *bool  `json:"talked_to_edwin,omitempty"`
 }
 
 // NewSkyBlockProfileMemberRiftBlackLagoon instantiates a new SkyBlockProfileMemberRiftBlackLagoon object
@@ -43,9 +43,9 @@ func NewSkyBlockProfileMemberRiftBlackLagoonWithDefaults() *SkyBlockProfileMembe
 }
 
 // GetCompletedStep returns the CompletedStep field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftBlackLagoon) GetCompletedStep() float64 {
+func (o *SkyBlockProfileMemberRiftBlackLagoon) GetCompletedStep() int64 {
 	if o == nil || IsNil(o.CompletedStep) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.CompletedStep
@@ -53,7 +53,7 @@ func (o *SkyBlockProfileMemberRiftBlackLagoon) GetCompletedStep() float64 {
 
 // GetCompletedStepOk returns a tuple with the CompletedStep field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftBlackLagoon) GetCompletedStepOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftBlackLagoon) GetCompletedStepOk() (*int64, bool) {
 	if o == nil || IsNil(o.CompletedStep) {
 		return nil, false
 	}
@@ -69,8 +69,8 @@ func (o *SkyBlockProfileMemberRiftBlackLagoon) HasCompletedStep() bool {
 	return false
 }
 
-// SetCompletedStep gets a reference to the given float64 and assigns it to the CompletedStep field.
-func (o *SkyBlockProfileMemberRiftBlackLagoon) SetCompletedStep(v float64) {
+// SetCompletedStep gets a reference to the given int64 and assigns it to the CompletedStep field.
+func (o *SkyBlockProfileMemberRiftBlackLagoon) SetCompletedStep(v int64) {
 	o.CompletedStep = &v
 }
 

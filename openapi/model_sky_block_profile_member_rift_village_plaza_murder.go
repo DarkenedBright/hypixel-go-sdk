@@ -20,9 +20,9 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftVillagePlazaMurder{}
 // SkyBlockProfileMemberRiftVillagePlazaMurder struct for SkyBlockProfileMemberRiftVillagePlazaMurder
 type SkyBlockProfileMemberRiftVillagePlazaMurder struct {
 	RoomClues    []string `json:"room_clues,omitempty"`
-	StepIndex    *float64 `json:"step_index,omitempty"`
-	StepIndexPt2 *float64 `json:"step_index_pt2,omitempty"`
-	StepIndexPt3 *float64 `json:"step_index_pt3,omitempty"`
+	StepIndex    *int64   `json:"step_index,omitempty"`
+	StepIndexPt2 *int64   `json:"step_index_pt2,omitempty"`
+	StepIndexPt3 *int64   `json:"step_index_pt3,omitempty"`
 }
 
 // NewSkyBlockProfileMemberRiftVillagePlazaMurder instantiates a new SkyBlockProfileMemberRiftVillagePlazaMurder object
@@ -75,9 +75,9 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetRoomClues(v []string) {
 }
 
 // GetStepIndex returns the StepIndex field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndex() float64 {
+func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndex() int64 {
 	if o == nil || IsNil(o.StepIndex) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.StepIndex
@@ -85,7 +85,7 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndex() float64 {
 
 // GetStepIndexOk returns a tuple with the StepIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexOk() (*int64, bool) {
 	if o == nil || IsNil(o.StepIndex) {
 		return nil, false
 	}
@@ -101,15 +101,15 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) HasStepIndex() bool {
 	return false
 }
 
-// SetStepIndex gets a reference to the given float64 and assigns it to the StepIndex field.
-func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndex(v float64) {
+// SetStepIndex gets a reference to the given int64 and assigns it to the StepIndex field.
+func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndex(v int64) {
 	o.StepIndex = &v
 }
 
 // GetStepIndexPt2 returns the StepIndexPt2 field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt2() float64 {
+func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt2() int64 {
 	if o == nil || IsNil(o.StepIndexPt2) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.StepIndexPt2
@@ -117,7 +117,7 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt2() float64 
 
 // GetStepIndexPt2Ok returns a tuple with the StepIndexPt2 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt2Ok() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt2Ok() (*int64, bool) {
 	if o == nil || IsNil(o.StepIndexPt2) {
 		return nil, false
 	}
@@ -133,15 +133,15 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) HasStepIndexPt2() bool {
 	return false
 }
 
-// SetStepIndexPt2 gets a reference to the given float64 and assigns it to the StepIndexPt2 field.
-func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndexPt2(v float64) {
+// SetStepIndexPt2 gets a reference to the given int64 and assigns it to the StepIndexPt2 field.
+func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndexPt2(v int64) {
 	o.StepIndexPt2 = &v
 }
 
 // GetStepIndexPt3 returns the StepIndexPt3 field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt3() float64 {
+func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt3() int64 {
 	if o == nil || IsNil(o.StepIndexPt3) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.StepIndexPt3
@@ -149,7 +149,7 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt3() float64 
 
 // GetStepIndexPt3Ok returns a tuple with the StepIndexPt3 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt3Ok() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) GetStepIndexPt3Ok() (*int64, bool) {
 	if o == nil || IsNil(o.StepIndexPt3) {
 		return nil, false
 	}
@@ -165,8 +165,8 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) HasStepIndexPt3() bool {
 	return false
 }
 
-// SetStepIndexPt3 gets a reference to the given float64 and assigns it to the StepIndexPt3 field.
-func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndexPt3(v float64) {
+// SetStepIndexPt3 gets a reference to the given int64 and assigns it to the StepIndexPt3 field.
+func (o *SkyBlockProfileMemberRiftVillagePlazaMurder) SetStepIndexPt3(v int64) {
 	o.StepIndexPt3 = &v
 }
 

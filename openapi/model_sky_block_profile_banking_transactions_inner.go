@@ -19,10 +19,10 @@ var _ MappedNullable = &SkyBlockProfileBankingTransactionsInner{}
 
 // SkyBlockProfileBankingTransactionsInner struct for SkyBlockProfileBankingTransactionsInner
 type SkyBlockProfileBankingTransactionsInner struct {
-	Timestamp     *float64 `json:"timestamp,omitempty"`
 	Action        *string  `json:"action,omitempty"`
-	InitiatorName *string  `json:"initiator_name,omitempty"`
 	Amount        *float64 `json:"amount,omitempty"`
+	InitiatorName *string  `json:"initiator_name,omitempty"`
+	Timestamp     *int64   `json:"timestamp,omitempty"`
 }
 
 // NewSkyBlockProfileBankingTransactionsInner instantiates a new SkyBlockProfileBankingTransactionsInner object
@@ -40,38 +40,6 @@ func NewSkyBlockProfileBankingTransactionsInner() *SkyBlockProfileBankingTransac
 func NewSkyBlockProfileBankingTransactionsInnerWithDefaults() *SkyBlockProfileBankingTransactionsInner {
 	this := SkyBlockProfileBankingTransactionsInner{}
 	return &this
-}
-
-// GetTimestamp returns the Timestamp field value if set, zero value otherwise.
-func (o *SkyBlockProfileBankingTransactionsInner) GetTimestamp() float64 {
-	if o == nil || IsNil(o.Timestamp) {
-		var ret float64
-		return ret
-	}
-	return *o.Timestamp
-}
-
-// GetTimestampOk returns a tuple with the Timestamp field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockProfileBankingTransactionsInner) GetTimestampOk() (*float64, bool) {
-	if o == nil || IsNil(o.Timestamp) {
-		return nil, false
-	}
-	return o.Timestamp, true
-}
-
-// HasTimestamp returns a boolean if a field has been set.
-func (o *SkyBlockProfileBankingTransactionsInner) HasTimestamp() bool {
-	if o != nil && !IsNil(o.Timestamp) {
-		return true
-	}
-
-	return false
-}
-
-// SetTimestamp gets a reference to the given float64 and assigns it to the Timestamp field.
-func (o *SkyBlockProfileBankingTransactionsInner) SetTimestamp(v float64) {
-	o.Timestamp = &v
 }
 
 // GetAction returns the Action field value if set, zero value otherwise.
@@ -106,38 +74,6 @@ func (o *SkyBlockProfileBankingTransactionsInner) SetAction(v string) {
 	o.Action = &v
 }
 
-// GetInitiatorName returns the InitiatorName field value if set, zero value otherwise.
-func (o *SkyBlockProfileBankingTransactionsInner) GetInitiatorName() string {
-	if o == nil || IsNil(o.InitiatorName) {
-		var ret string
-		return ret
-	}
-	return *o.InitiatorName
-}
-
-// GetInitiatorNameOk returns a tuple with the InitiatorName field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockProfileBankingTransactionsInner) GetInitiatorNameOk() (*string, bool) {
-	if o == nil || IsNil(o.InitiatorName) {
-		return nil, false
-	}
-	return o.InitiatorName, true
-}
-
-// HasInitiatorName returns a boolean if a field has been set.
-func (o *SkyBlockProfileBankingTransactionsInner) HasInitiatorName() bool {
-	if o != nil && !IsNil(o.InitiatorName) {
-		return true
-	}
-
-	return false
-}
-
-// SetInitiatorName gets a reference to the given string and assigns it to the InitiatorName field.
-func (o *SkyBlockProfileBankingTransactionsInner) SetInitiatorName(v string) {
-	o.InitiatorName = &v
-}
-
 // GetAmount returns the Amount field value if set, zero value otherwise.
 func (o *SkyBlockProfileBankingTransactionsInner) GetAmount() float64 {
 	if o == nil || IsNil(o.Amount) {
@@ -170,6 +106,70 @@ func (o *SkyBlockProfileBankingTransactionsInner) SetAmount(v float64) {
 	o.Amount = &v
 }
 
+// GetInitiatorName returns the InitiatorName field value if set, zero value otherwise.
+func (o *SkyBlockProfileBankingTransactionsInner) GetInitiatorName() string {
+	if o == nil || IsNil(o.InitiatorName) {
+		var ret string
+		return ret
+	}
+	return *o.InitiatorName
+}
+
+// GetInitiatorNameOk returns a tuple with the InitiatorName field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileBankingTransactionsInner) GetInitiatorNameOk() (*string, bool) {
+	if o == nil || IsNil(o.InitiatorName) {
+		return nil, false
+	}
+	return o.InitiatorName, true
+}
+
+// HasInitiatorName returns a boolean if a field has been set.
+func (o *SkyBlockProfileBankingTransactionsInner) HasInitiatorName() bool {
+	if o != nil && !IsNil(o.InitiatorName) {
+		return true
+	}
+
+	return false
+}
+
+// SetInitiatorName gets a reference to the given string and assigns it to the InitiatorName field.
+func (o *SkyBlockProfileBankingTransactionsInner) SetInitiatorName(v string) {
+	o.InitiatorName = &v
+}
+
+// GetTimestamp returns the Timestamp field value if set, zero value otherwise.
+func (o *SkyBlockProfileBankingTransactionsInner) GetTimestamp() int64 {
+	if o == nil || IsNil(o.Timestamp) {
+		var ret int64
+		return ret
+	}
+	return *o.Timestamp
+}
+
+// GetTimestampOk returns a tuple with the Timestamp field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileBankingTransactionsInner) GetTimestampOk() (*int64, bool) {
+	if o == nil || IsNil(o.Timestamp) {
+		return nil, false
+	}
+	return o.Timestamp, true
+}
+
+// HasTimestamp returns a boolean if a field has been set.
+func (o *SkyBlockProfileBankingTransactionsInner) HasTimestamp() bool {
+	if o != nil && !IsNil(o.Timestamp) {
+		return true
+	}
+
+	return false
+}
+
+// SetTimestamp gets a reference to the given int64 and assigns it to the Timestamp field.
+func (o *SkyBlockProfileBankingTransactionsInner) SetTimestamp(v int64) {
+	o.Timestamp = &v
+}
+
 func (o SkyBlockProfileBankingTransactionsInner) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -180,17 +180,17 @@ func (o SkyBlockProfileBankingTransactionsInner) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileBankingTransactionsInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Timestamp) {
-		toSerialize["timestamp"] = o.Timestamp
-	}
 	if !IsNil(o.Action) {
 		toSerialize["action"] = o.Action
+	}
+	if !IsNil(o.Amount) {
+		toSerialize["amount"] = o.Amount
 	}
 	if !IsNil(o.InitiatorName) {
 		toSerialize["initiator_name"] = o.InitiatorName
 	}
-	if !IsNil(o.Amount) {
-		toSerialize["amount"] = o.Amount
+	if !IsNil(o.Timestamp) {
+		toSerialize["timestamp"] = o.Timestamp
 	}
 	return toSerialize, nil
 }

@@ -19,9 +19,9 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftVillagePlazaCowboy{}
 
 // SkyBlockProfileMemberRiftVillagePlazaCowboy struct for SkyBlockProfileMemberRiftVillagePlazaCowboy
 type SkyBlockProfileMemberRiftVillagePlazaCowboy struct {
-	HayEaten   *float64 `json:"hay_eaten,omitempty"`
-	RabbitName *string  `json:"rabbit_name,omitempty"`
-	Stage      *float64 `json:"stage,omitempty"`
+	HayEaten   *int64  `json:"hay_eaten,omitempty"`
+	RabbitName *string `json:"rabbit_name,omitempty"`
+	Stage      *int64  `json:"stage,omitempty"`
 }
 
 // NewSkyBlockProfileMemberRiftVillagePlazaCowboy instantiates a new SkyBlockProfileMemberRiftVillagePlazaCowboy object
@@ -42,9 +42,9 @@ func NewSkyBlockProfileMemberRiftVillagePlazaCowboyWithDefaults() *SkyBlockProfi
 }
 
 // GetHayEaten returns the HayEaten field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetHayEaten() float64 {
+func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetHayEaten() int64 {
 	if o == nil || IsNil(o.HayEaten) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.HayEaten
@@ -52,7 +52,7 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetHayEaten() float64 {
 
 // GetHayEatenOk returns a tuple with the HayEaten field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetHayEatenOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetHayEatenOk() (*int64, bool) {
 	if o == nil || IsNil(o.HayEaten) {
 		return nil, false
 	}
@@ -68,8 +68,8 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) HasHayEaten() bool {
 	return false
 }
 
-// SetHayEaten gets a reference to the given float64 and assigns it to the HayEaten field.
-func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) SetHayEaten(v float64) {
+// SetHayEaten gets a reference to the given int64 and assigns it to the HayEaten field.
+func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) SetHayEaten(v int64) {
 	o.HayEaten = &v
 }
 
@@ -106,9 +106,9 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) SetRabbitName(v string) {
 }
 
 // GetStage returns the Stage field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetStage() float64 {
+func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetStage() int64 {
 	if o == nil || IsNil(o.Stage) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.Stage
@@ -116,7 +116,7 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetStage() float64 {
 
 // GetStageOk returns a tuple with the Stage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetStageOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetStageOk() (*int64, bool) {
 	if o == nil || IsNil(o.Stage) {
 		return nil, false
 	}
@@ -132,8 +132,8 @@ func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) HasStage() bool {
 	return false
 }
 
-// SetStage gets a reference to the given float64 and assigns it to the Stage field.
-func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) SetStage(v float64) {
+// SetStage gets a reference to the given int64 and assigns it to the Stage field.
+func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) SetStage(v int64) {
 	o.Stage = &v
 }
 

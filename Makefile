@@ -5,6 +5,14 @@ SHELL := /bin/bash
 default: generate
 
 generate:
+	@echo -n "Removing old openapi directory..."
+	@if rm -rf openapi; then \
+		echo " SUCCESS"; \
+	else \
+		echo " FAILED"; \
+		exit 1; \
+	fi
+	
 	@echo -n "Running 'openapi-generator generate'..."
 	@openapi-generator generate \
 		--input-spec api/swagger.json \

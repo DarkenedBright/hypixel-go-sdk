@@ -20,7 +20,7 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftEnigma{}
 // SkyBlockProfileMemberRiftEnigma struct for SkyBlockProfileMemberRiftEnigma
 type SkyBlockProfileMemberRiftEnigma struct {
 	BoughtCloak       *bool    `json:"bought_cloak,omitempty"`
-	ClaimedBonusIndex *float64 `json:"claimed_bonus_index,omitempty"`
+	ClaimedBonusIndex *int64   `json:"claimed_bonus_index,omitempty"`
 	FoundSouls        []string `json:"found_souls,omitempty"`
 }
 
@@ -74,9 +74,9 @@ func (o *SkyBlockProfileMemberRiftEnigma) SetBoughtCloak(v bool) {
 }
 
 // GetClaimedBonusIndex returns the ClaimedBonusIndex field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftEnigma) GetClaimedBonusIndex() float64 {
+func (o *SkyBlockProfileMemberRiftEnigma) GetClaimedBonusIndex() int64 {
 	if o == nil || IsNil(o.ClaimedBonusIndex) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.ClaimedBonusIndex
@@ -84,7 +84,7 @@ func (o *SkyBlockProfileMemberRiftEnigma) GetClaimedBonusIndex() float64 {
 
 // GetClaimedBonusIndexOk returns a tuple with the ClaimedBonusIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftEnigma) GetClaimedBonusIndexOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftEnigma) GetClaimedBonusIndexOk() (*int64, bool) {
 	if o == nil || IsNil(o.ClaimedBonusIndex) {
 		return nil, false
 	}
@@ -100,8 +100,8 @@ func (o *SkyBlockProfileMemberRiftEnigma) HasClaimedBonusIndex() bool {
 	return false
 }
 
-// SetClaimedBonusIndex gets a reference to the given float64 and assigns it to the ClaimedBonusIndex field.
-func (o *SkyBlockProfileMemberRiftEnigma) SetClaimedBonusIndex(v float64) {
+// SetClaimedBonusIndex gets a reference to the given int64 and assigns it to the ClaimedBonusIndex field.
+func (o *SkyBlockProfileMemberRiftEnigma) SetClaimedBonusIndex(v int64) {
 	o.ClaimedBonusIndex = &v
 }
 

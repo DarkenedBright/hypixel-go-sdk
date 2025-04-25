@@ -19,8 +19,8 @@ var _ MappedNullable = &V2SkyblockGardenGet200Response{}
 
 // V2SkyblockGardenGet200Response struct for V2SkyblockGardenGet200Response
 type V2SkyblockGardenGet200Response struct {
-	Success *bool           `json:"success,omitempty"`
 	Garden  *SkyBlockGarden `json:"garden,omitempty"`
+	Success *bool           `json:"success,omitempty"`
 }
 
 // NewV2SkyblockGardenGet200Response instantiates a new V2SkyblockGardenGet200Response object
@@ -38,38 +38,6 @@ func NewV2SkyblockGardenGet200Response() *V2SkyblockGardenGet200Response {
 func NewV2SkyblockGardenGet200ResponseWithDefaults() *V2SkyblockGardenGet200Response {
 	this := V2SkyblockGardenGet200Response{}
 	return &this
-}
-
-// GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *V2SkyblockGardenGet200Response) GetSuccess() bool {
-	if o == nil || IsNil(o.Success) {
-		var ret bool
-		return ret
-	}
-	return *o.Success
-}
-
-// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V2SkyblockGardenGet200Response) GetSuccessOk() (*bool, bool) {
-	if o == nil || IsNil(o.Success) {
-		return nil, false
-	}
-	return o.Success, true
-}
-
-// HasSuccess returns a boolean if a field has been set.
-func (o *V2SkyblockGardenGet200Response) HasSuccess() bool {
-	if o != nil && !IsNil(o.Success) {
-		return true
-	}
-
-	return false
-}
-
-// SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *V2SkyblockGardenGet200Response) SetSuccess(v bool) {
-	o.Success = &v
 }
 
 // GetGarden returns the Garden field value if set, zero value otherwise.
@@ -104,6 +72,38 @@ func (o *V2SkyblockGardenGet200Response) SetGarden(v SkyBlockGarden) {
 	o.Garden = &v
 }
 
+// GetSuccess returns the Success field value if set, zero value otherwise.
+func (o *V2SkyblockGardenGet200Response) GetSuccess() bool {
+	if o == nil || IsNil(o.Success) {
+		var ret bool
+		return ret
+	}
+	return *o.Success
+}
+
+// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2SkyblockGardenGet200Response) GetSuccessOk() (*bool, bool) {
+	if o == nil || IsNil(o.Success) {
+		return nil, false
+	}
+	return o.Success, true
+}
+
+// HasSuccess returns a boolean if a field has been set.
+func (o *V2SkyblockGardenGet200Response) HasSuccess() bool {
+	if o != nil && !IsNil(o.Success) {
+		return true
+	}
+
+	return false
+}
+
+// SetSuccess gets a reference to the given bool and assigns it to the Success field.
+func (o *V2SkyblockGardenGet200Response) SetSuccess(v bool) {
+	o.Success = &v
+}
+
 func (o V2SkyblockGardenGet200Response) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -114,11 +114,11 @@ func (o V2SkyblockGardenGet200Response) MarshalJSON() ([]byte, error) {
 
 func (o V2SkyblockGardenGet200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Success) {
-		toSerialize["success"] = o.Success
-	}
 	if !IsNil(o.Garden) {
 		toSerialize["garden"] = o.Garden
+	}
+	if !IsNil(o.Success) {
+		toSerialize["success"] = o.Success
 	}
 	return toSerialize, nil
 }

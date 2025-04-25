@@ -19,12 +19,12 @@ var _ MappedNullable = &SkyBlockGardenCommissionData{}
 
 // SkyBlockGardenCommissionData struct for SkyBlockGardenCommissionData
 type SkyBlockGardenCommissionData struct {
-	// A map of visitor identifier to visit count
-	Visits map[string]interface{} `json:"visits,omitempty"`
 	// A map of visitor identifier to completed count
 	Completed        map[string]interface{} `json:"completed,omitempty"`
-	TotalCompleted   *float64               `json:"total_completed,omitempty"`
-	UniqueNpcsServed *float64               `json:"unique_npcs_served,omitempty"`
+	TotalCompleted   *int64                 `json:"total_completed,omitempty"`
+	UniqueNpcsServed *int64                 `json:"unique_npcs_served,omitempty"`
+	// A map of visitor identifier to visit count
+	Visits map[string]interface{} `json:"visits,omitempty"`
 }
 
 // NewSkyBlockGardenCommissionData instantiates a new SkyBlockGardenCommissionData object
@@ -42,38 +42,6 @@ func NewSkyBlockGardenCommissionData() *SkyBlockGardenCommissionData {
 func NewSkyBlockGardenCommissionDataWithDefaults() *SkyBlockGardenCommissionData {
 	this := SkyBlockGardenCommissionData{}
 	return &this
-}
-
-// GetVisits returns the Visits field value if set, zero value otherwise.
-func (o *SkyBlockGardenCommissionData) GetVisits() map[string]interface{} {
-	if o == nil || IsNil(o.Visits) {
-		var ret map[string]interface{}
-		return ret
-	}
-	return o.Visits
-}
-
-// GetVisitsOk returns a tuple with the Visits field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockGardenCommissionData) GetVisitsOk() (map[string]interface{}, bool) {
-	if o == nil || IsNil(o.Visits) {
-		return map[string]interface{}{}, false
-	}
-	return o.Visits, true
-}
-
-// HasVisits returns a boolean if a field has been set.
-func (o *SkyBlockGardenCommissionData) HasVisits() bool {
-	if o != nil && !IsNil(o.Visits) {
-		return true
-	}
-
-	return false
-}
-
-// SetVisits gets a reference to the given map[string]interface{} and assigns it to the Visits field.
-func (o *SkyBlockGardenCommissionData) SetVisits(v map[string]interface{}) {
-	o.Visits = v
 }
 
 // GetCompleted returns the Completed field value if set, zero value otherwise.
@@ -109,9 +77,9 @@ func (o *SkyBlockGardenCommissionData) SetCompleted(v map[string]interface{}) {
 }
 
 // GetTotalCompleted returns the TotalCompleted field value if set, zero value otherwise.
-func (o *SkyBlockGardenCommissionData) GetTotalCompleted() float64 {
+func (o *SkyBlockGardenCommissionData) GetTotalCompleted() int64 {
 	if o == nil || IsNil(o.TotalCompleted) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.TotalCompleted
@@ -119,7 +87,7 @@ func (o *SkyBlockGardenCommissionData) GetTotalCompleted() float64 {
 
 // GetTotalCompletedOk returns a tuple with the TotalCompleted field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockGardenCommissionData) GetTotalCompletedOk() (*float64, bool) {
+func (o *SkyBlockGardenCommissionData) GetTotalCompletedOk() (*int64, bool) {
 	if o == nil || IsNil(o.TotalCompleted) {
 		return nil, false
 	}
@@ -135,15 +103,15 @@ func (o *SkyBlockGardenCommissionData) HasTotalCompleted() bool {
 	return false
 }
 
-// SetTotalCompleted gets a reference to the given float64 and assigns it to the TotalCompleted field.
-func (o *SkyBlockGardenCommissionData) SetTotalCompleted(v float64) {
+// SetTotalCompleted gets a reference to the given int64 and assigns it to the TotalCompleted field.
+func (o *SkyBlockGardenCommissionData) SetTotalCompleted(v int64) {
 	o.TotalCompleted = &v
 }
 
 // GetUniqueNpcsServed returns the UniqueNpcsServed field value if set, zero value otherwise.
-func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServed() float64 {
+func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServed() int64 {
 	if o == nil || IsNil(o.UniqueNpcsServed) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.UniqueNpcsServed
@@ -151,7 +119,7 @@ func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServed() float64 {
 
 // GetUniqueNpcsServedOk returns a tuple with the UniqueNpcsServed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServedOk() (*float64, bool) {
+func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServedOk() (*int64, bool) {
 	if o == nil || IsNil(o.UniqueNpcsServed) {
 		return nil, false
 	}
@@ -167,9 +135,41 @@ func (o *SkyBlockGardenCommissionData) HasUniqueNpcsServed() bool {
 	return false
 }
 
-// SetUniqueNpcsServed gets a reference to the given float64 and assigns it to the UniqueNpcsServed field.
-func (o *SkyBlockGardenCommissionData) SetUniqueNpcsServed(v float64) {
+// SetUniqueNpcsServed gets a reference to the given int64 and assigns it to the UniqueNpcsServed field.
+func (o *SkyBlockGardenCommissionData) SetUniqueNpcsServed(v int64) {
 	o.UniqueNpcsServed = &v
+}
+
+// GetVisits returns the Visits field value if set, zero value otherwise.
+func (o *SkyBlockGardenCommissionData) GetVisits() map[string]interface{} {
+	if o == nil || IsNil(o.Visits) {
+		var ret map[string]interface{}
+		return ret
+	}
+	return o.Visits
+}
+
+// GetVisitsOk returns a tuple with the Visits field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockGardenCommissionData) GetVisitsOk() (map[string]interface{}, bool) {
+	if o == nil || IsNil(o.Visits) {
+		return map[string]interface{}{}, false
+	}
+	return o.Visits, true
+}
+
+// HasVisits returns a boolean if a field has been set.
+func (o *SkyBlockGardenCommissionData) HasVisits() bool {
+	if o != nil && !IsNil(o.Visits) {
+		return true
+	}
+
+	return false
+}
+
+// SetVisits gets a reference to the given map[string]interface{} and assigns it to the Visits field.
+func (o *SkyBlockGardenCommissionData) SetVisits(v map[string]interface{}) {
+	o.Visits = v
 }
 
 func (o SkyBlockGardenCommissionData) MarshalJSON() ([]byte, error) {
@@ -182,9 +182,6 @@ func (o SkyBlockGardenCommissionData) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockGardenCommissionData) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Visits) {
-		toSerialize["visits"] = o.Visits
-	}
 	if !IsNil(o.Completed) {
 		toSerialize["completed"] = o.Completed
 	}
@@ -193,6 +190,9 @@ func (o SkyBlockGardenCommissionData) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.UniqueNpcsServed) {
 		toSerialize["unique_npcs_served"] = o.UniqueNpcsServed
+	}
+	if !IsNil(o.Visits) {
+		toSerialize["visits"] = o.Visits
 	}
 	return toSerialize, nil
 }

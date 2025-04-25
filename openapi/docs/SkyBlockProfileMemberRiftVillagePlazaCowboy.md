@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**HayEaten** | Pointer to **float64** |  | [optional] 
+**HayEaten** | Pointer to **int64** |  | [optional] 
 **RabbitName** | Pointer to **string** |  | [optional] 
-**Stage** | Pointer to **float64** |  | [optional] 
+**Stage** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetHayEaten
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetHayEaten() float64`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetHayEaten() int64`
 
 GetHayEaten returns the HayEaten field if non-nil, zero value otherwise.
 
 ### GetHayEatenOk
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetHayEatenOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetHayEatenOk() (*int64, bool)`
 
 GetHayEatenOk returns a tuple with the HayEaten field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHayEaten
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) SetHayEaten(v float64)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) SetHayEaten(v int64)`
 
 SetHayEaten sets HayEaten field to given value.
 
@@ -79,20 +79,20 @@ HasRabbitName returns a boolean if a field has been set.
 
 ### GetStage
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetStage() float64`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetStage() int64`
 
 GetStage returns the Stage field if non-nil, zero value otherwise.
 
 ### GetStageOk
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetStageOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) GetStageOk() (*int64, bool)`
 
 GetStageOk returns a tuple with the Stage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStage
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) SetStage(v float64)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaCowboy) SetStage(v int64)`
 
 SetStage sets Stage field to given value.
 

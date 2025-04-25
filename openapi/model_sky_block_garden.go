@@ -21,18 +21,18 @@ var _ MappedNullable = &SkyBlockGarden{}
 
 // SkyBlockGarden Information about a player's SkyBlock garden, the only guaranteed field is the `uuid` field.
 type SkyBlockGarden struct {
-	// The UUID of the profile for this garden.
-	Uuid              string                        `json:"uuid"`
+	ActiveCommissions map[string]interface{}        `json:"active_commissions,omitempty"`
 	CommissionData    *SkyBlockGardenCommissionData `json:"commission_data,omitempty"`
 	ComposterData     map[string]interface{}        `json:"composter_data,omitempty"`
-	ActiveCommissions map[string]interface{}        `json:"active_commissions,omitempty"`
+	CropUpgradeLevels map[string]interface{}        `json:"crop_upgrade_levels,omitempty"`
+	GardenExperience  *float64                      `json:"garden_experience,omitempty"`
 	// A map of resource ID to amount collected
 	ResourcesCollected map[string]interface{} `json:"resources_collected,omitempty"`
-	CropUpgradeLevels  map[string]interface{} `json:"crop_upgrade_levels,omitempty"`
-	UnlockedPlotsIds   []string               `json:"unlocked_plots_ids,omitempty"`
-	GardenExperience   *float64               `json:"garden_experience,omitempty"`
-	UnlockedBarnSkins  []string               `json:"unlocked_barn_skins,omitempty"`
 	SelectedBarnSkin   *string                `json:"selected_barn_skin,omitempty"`
+	UnlockedBarnSkins  []string               `json:"unlocked_barn_skins,omitempty"`
+	UnlockedPlotsIds   []string               `json:"unlocked_plots_ids,omitempty"`
+	// The UUID of the profile for this garden.
+	Uuid string `json:"uuid"`
 }
 
 type _SkyBlockGarden SkyBlockGarden
@@ -55,28 +55,36 @@ func NewSkyBlockGardenWithDefaults() *SkyBlockGarden {
 	return &this
 }
 
-// GetUuid returns the Uuid field value
-func (o *SkyBlockGarden) GetUuid() string {
-	if o == nil {
-		var ret string
+// GetActiveCommissions returns the ActiveCommissions field value if set, zero value otherwise.
+func (o *SkyBlockGarden) GetActiveCommissions() map[string]interface{} {
+	if o == nil || IsNil(o.ActiveCommissions) {
+		var ret map[string]interface{}
 		return ret
 	}
-
-	return o.Uuid
+	return o.ActiveCommissions
 }
 
-// GetUuidOk returns a tuple with the Uuid field value
+// GetActiveCommissionsOk returns a tuple with the ActiveCommissions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockGarden) GetUuidOk() (*string, bool) {
-	if o == nil {
-		return nil, false
+func (o *SkyBlockGarden) GetActiveCommissionsOk() (map[string]interface{}, bool) {
+	if o == nil || IsNil(o.ActiveCommissions) {
+		return map[string]interface{}{}, false
 	}
-	return &o.Uuid, true
+	return o.ActiveCommissions, true
 }
 
-// SetUuid sets field value
-func (o *SkyBlockGarden) SetUuid(v string) {
-	o.Uuid = v
+// HasActiveCommissions returns a boolean if a field has been set.
+func (o *SkyBlockGarden) HasActiveCommissions() bool {
+	if o != nil && !IsNil(o.ActiveCommissions) {
+		return true
+	}
+
+	return false
+}
+
+// SetActiveCommissions gets a reference to the given map[string]interface{} and assigns it to the ActiveCommissions field.
+func (o *SkyBlockGarden) SetActiveCommissions(v map[string]interface{}) {
+	o.ActiveCommissions = v
 }
 
 // GetCommissionData returns the CommissionData field value if set, zero value otherwise.
@@ -143,70 +151,6 @@ func (o *SkyBlockGarden) SetComposterData(v map[string]interface{}) {
 	o.ComposterData = v
 }
 
-// GetActiveCommissions returns the ActiveCommissions field value if set, zero value otherwise.
-func (o *SkyBlockGarden) GetActiveCommissions() map[string]interface{} {
-	if o == nil || IsNil(o.ActiveCommissions) {
-		var ret map[string]interface{}
-		return ret
-	}
-	return o.ActiveCommissions
-}
-
-// GetActiveCommissionsOk returns a tuple with the ActiveCommissions field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockGarden) GetActiveCommissionsOk() (map[string]interface{}, bool) {
-	if o == nil || IsNil(o.ActiveCommissions) {
-		return map[string]interface{}{}, false
-	}
-	return o.ActiveCommissions, true
-}
-
-// HasActiveCommissions returns a boolean if a field has been set.
-func (o *SkyBlockGarden) HasActiveCommissions() bool {
-	if o != nil && !IsNil(o.ActiveCommissions) {
-		return true
-	}
-
-	return false
-}
-
-// SetActiveCommissions gets a reference to the given map[string]interface{} and assigns it to the ActiveCommissions field.
-func (o *SkyBlockGarden) SetActiveCommissions(v map[string]interface{}) {
-	o.ActiveCommissions = v
-}
-
-// GetResourcesCollected returns the ResourcesCollected field value if set, zero value otherwise.
-func (o *SkyBlockGarden) GetResourcesCollected() map[string]interface{} {
-	if o == nil || IsNil(o.ResourcesCollected) {
-		var ret map[string]interface{}
-		return ret
-	}
-	return o.ResourcesCollected
-}
-
-// GetResourcesCollectedOk returns a tuple with the ResourcesCollected field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockGarden) GetResourcesCollectedOk() (map[string]interface{}, bool) {
-	if o == nil || IsNil(o.ResourcesCollected) {
-		return map[string]interface{}{}, false
-	}
-	return o.ResourcesCollected, true
-}
-
-// HasResourcesCollected returns a boolean if a field has been set.
-func (o *SkyBlockGarden) HasResourcesCollected() bool {
-	if o != nil && !IsNil(o.ResourcesCollected) {
-		return true
-	}
-
-	return false
-}
-
-// SetResourcesCollected gets a reference to the given map[string]interface{} and assigns it to the ResourcesCollected field.
-func (o *SkyBlockGarden) SetResourcesCollected(v map[string]interface{}) {
-	o.ResourcesCollected = v
-}
-
 // GetCropUpgradeLevels returns the CropUpgradeLevels field value if set, zero value otherwise.
 func (o *SkyBlockGarden) GetCropUpgradeLevels() map[string]interface{} {
 	if o == nil || IsNil(o.CropUpgradeLevels) {
@@ -237,38 +181,6 @@ func (o *SkyBlockGarden) HasCropUpgradeLevels() bool {
 // SetCropUpgradeLevels gets a reference to the given map[string]interface{} and assigns it to the CropUpgradeLevels field.
 func (o *SkyBlockGarden) SetCropUpgradeLevels(v map[string]interface{}) {
 	o.CropUpgradeLevels = v
-}
-
-// GetUnlockedPlotsIds returns the UnlockedPlotsIds field value if set, zero value otherwise.
-func (o *SkyBlockGarden) GetUnlockedPlotsIds() []string {
-	if o == nil || IsNil(o.UnlockedPlotsIds) {
-		var ret []string
-		return ret
-	}
-	return o.UnlockedPlotsIds
-}
-
-// GetUnlockedPlotsIdsOk returns a tuple with the UnlockedPlotsIds field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockGarden) GetUnlockedPlotsIdsOk() ([]string, bool) {
-	if o == nil || IsNil(o.UnlockedPlotsIds) {
-		return nil, false
-	}
-	return o.UnlockedPlotsIds, true
-}
-
-// HasUnlockedPlotsIds returns a boolean if a field has been set.
-func (o *SkyBlockGarden) HasUnlockedPlotsIds() bool {
-	if o != nil && !IsNil(o.UnlockedPlotsIds) {
-		return true
-	}
-
-	return false
-}
-
-// SetUnlockedPlotsIds gets a reference to the given []string and assigns it to the UnlockedPlotsIds field.
-func (o *SkyBlockGarden) SetUnlockedPlotsIds(v []string) {
-	o.UnlockedPlotsIds = v
 }
 
 // GetGardenExperience returns the GardenExperience field value if set, zero value otherwise.
@@ -303,36 +215,36 @@ func (o *SkyBlockGarden) SetGardenExperience(v float64) {
 	o.GardenExperience = &v
 }
 
-// GetUnlockedBarnSkins returns the UnlockedBarnSkins field value if set, zero value otherwise.
-func (o *SkyBlockGarden) GetUnlockedBarnSkins() []string {
-	if o == nil || IsNil(o.UnlockedBarnSkins) {
-		var ret []string
+// GetResourcesCollected returns the ResourcesCollected field value if set, zero value otherwise.
+func (o *SkyBlockGarden) GetResourcesCollected() map[string]interface{} {
+	if o == nil || IsNil(o.ResourcesCollected) {
+		var ret map[string]interface{}
 		return ret
 	}
-	return o.UnlockedBarnSkins
+	return o.ResourcesCollected
 }
 
-// GetUnlockedBarnSkinsOk returns a tuple with the UnlockedBarnSkins field value if set, nil otherwise
+// GetResourcesCollectedOk returns a tuple with the ResourcesCollected field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockGarden) GetUnlockedBarnSkinsOk() ([]string, bool) {
-	if o == nil || IsNil(o.UnlockedBarnSkins) {
-		return nil, false
+func (o *SkyBlockGarden) GetResourcesCollectedOk() (map[string]interface{}, bool) {
+	if o == nil || IsNil(o.ResourcesCollected) {
+		return map[string]interface{}{}, false
 	}
-	return o.UnlockedBarnSkins, true
+	return o.ResourcesCollected, true
 }
 
-// HasUnlockedBarnSkins returns a boolean if a field has been set.
-func (o *SkyBlockGarden) HasUnlockedBarnSkins() bool {
-	if o != nil && !IsNil(o.UnlockedBarnSkins) {
+// HasResourcesCollected returns a boolean if a field has been set.
+func (o *SkyBlockGarden) HasResourcesCollected() bool {
+	if o != nil && !IsNil(o.ResourcesCollected) {
 		return true
 	}
 
 	return false
 }
 
-// SetUnlockedBarnSkins gets a reference to the given []string and assigns it to the UnlockedBarnSkins field.
-func (o *SkyBlockGarden) SetUnlockedBarnSkins(v []string) {
-	o.UnlockedBarnSkins = v
+// SetResourcesCollected gets a reference to the given map[string]interface{} and assigns it to the ResourcesCollected field.
+func (o *SkyBlockGarden) SetResourcesCollected(v map[string]interface{}) {
+	o.ResourcesCollected = v
 }
 
 // GetSelectedBarnSkin returns the SelectedBarnSkin field value if set, zero value otherwise.
@@ -367,6 +279,94 @@ func (o *SkyBlockGarden) SetSelectedBarnSkin(v string) {
 	o.SelectedBarnSkin = &v
 }
 
+// GetUnlockedBarnSkins returns the UnlockedBarnSkins field value if set, zero value otherwise.
+func (o *SkyBlockGarden) GetUnlockedBarnSkins() []string {
+	if o == nil || IsNil(o.UnlockedBarnSkins) {
+		var ret []string
+		return ret
+	}
+	return o.UnlockedBarnSkins
+}
+
+// GetUnlockedBarnSkinsOk returns a tuple with the UnlockedBarnSkins field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockGarden) GetUnlockedBarnSkinsOk() ([]string, bool) {
+	if o == nil || IsNil(o.UnlockedBarnSkins) {
+		return nil, false
+	}
+	return o.UnlockedBarnSkins, true
+}
+
+// HasUnlockedBarnSkins returns a boolean if a field has been set.
+func (o *SkyBlockGarden) HasUnlockedBarnSkins() bool {
+	if o != nil && !IsNil(o.UnlockedBarnSkins) {
+		return true
+	}
+
+	return false
+}
+
+// SetUnlockedBarnSkins gets a reference to the given []string and assigns it to the UnlockedBarnSkins field.
+func (o *SkyBlockGarden) SetUnlockedBarnSkins(v []string) {
+	o.UnlockedBarnSkins = v
+}
+
+// GetUnlockedPlotsIds returns the UnlockedPlotsIds field value if set, zero value otherwise.
+func (o *SkyBlockGarden) GetUnlockedPlotsIds() []string {
+	if o == nil || IsNil(o.UnlockedPlotsIds) {
+		var ret []string
+		return ret
+	}
+	return o.UnlockedPlotsIds
+}
+
+// GetUnlockedPlotsIdsOk returns a tuple with the UnlockedPlotsIds field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockGarden) GetUnlockedPlotsIdsOk() ([]string, bool) {
+	if o == nil || IsNil(o.UnlockedPlotsIds) {
+		return nil, false
+	}
+	return o.UnlockedPlotsIds, true
+}
+
+// HasUnlockedPlotsIds returns a boolean if a field has been set.
+func (o *SkyBlockGarden) HasUnlockedPlotsIds() bool {
+	if o != nil && !IsNil(o.UnlockedPlotsIds) {
+		return true
+	}
+
+	return false
+}
+
+// SetUnlockedPlotsIds gets a reference to the given []string and assigns it to the UnlockedPlotsIds field.
+func (o *SkyBlockGarden) SetUnlockedPlotsIds(v []string) {
+	o.UnlockedPlotsIds = v
+}
+
+// GetUuid returns the Uuid field value
+func (o *SkyBlockGarden) GetUuid() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.Uuid
+}
+
+// GetUuidOk returns a tuple with the Uuid field value
+// and a boolean to check if the value has been set.
+func (o *SkyBlockGarden) GetUuidOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.Uuid, true
+}
+
+// SetUuid sets field value
+func (o *SkyBlockGarden) SetUuid(v string) {
+	o.Uuid = v
+}
+
 func (o SkyBlockGarden) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -377,34 +377,34 @@ func (o SkyBlockGarden) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockGarden) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["uuid"] = o.Uuid
+	if !IsNil(o.ActiveCommissions) {
+		toSerialize["active_commissions"] = o.ActiveCommissions
+	}
 	if !IsNil(o.CommissionData) {
 		toSerialize["commission_data"] = o.CommissionData
 	}
 	if !IsNil(o.ComposterData) {
 		toSerialize["composter_data"] = o.ComposterData
 	}
-	if !IsNil(o.ActiveCommissions) {
-		toSerialize["active_commissions"] = o.ActiveCommissions
-	}
-	if !IsNil(o.ResourcesCollected) {
-		toSerialize["resources_collected"] = o.ResourcesCollected
-	}
 	if !IsNil(o.CropUpgradeLevels) {
 		toSerialize["crop_upgrade_levels"] = o.CropUpgradeLevels
-	}
-	if !IsNil(o.UnlockedPlotsIds) {
-		toSerialize["unlocked_plots_ids"] = o.UnlockedPlotsIds
 	}
 	if !IsNil(o.GardenExperience) {
 		toSerialize["garden_experience"] = o.GardenExperience
 	}
-	if !IsNil(o.UnlockedBarnSkins) {
-		toSerialize["unlocked_barn_skins"] = o.UnlockedBarnSkins
+	if !IsNil(o.ResourcesCollected) {
+		toSerialize["resources_collected"] = o.ResourcesCollected
 	}
 	if !IsNil(o.SelectedBarnSkin) {
 		toSerialize["selected_barn_skin"] = o.SelectedBarnSkin
 	}
+	if !IsNil(o.UnlockedBarnSkins) {
+		toSerialize["unlocked_barn_skins"] = o.UnlockedBarnSkins
+	}
+	if !IsNil(o.UnlockedPlotsIds) {
+		toSerialize["unlocked_plots_ids"] = o.UnlockedPlotsIds
+	}
+	toSerialize["uuid"] = o.Uuid
 	return toSerialize, nil
 }
 

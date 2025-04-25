@@ -19,8 +19,8 @@ var _ MappedNullable = &V2SkyblockBingoGet200Response{}
 
 // V2SkyblockBingoGet200Response struct for V2SkyblockBingoGet200Response
 type V2SkyblockBingoGet200Response struct {
-	Success *bool                                      `json:"success,omitempty"`
 	Events  []V2SkyblockBingoGet200ResponseEventsInner `json:"events,omitempty"`
+	Success *bool                                      `json:"success,omitempty"`
 }
 
 // NewV2SkyblockBingoGet200Response instantiates a new V2SkyblockBingoGet200Response object
@@ -38,38 +38,6 @@ func NewV2SkyblockBingoGet200Response() *V2SkyblockBingoGet200Response {
 func NewV2SkyblockBingoGet200ResponseWithDefaults() *V2SkyblockBingoGet200Response {
 	this := V2SkyblockBingoGet200Response{}
 	return &this
-}
-
-// GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *V2SkyblockBingoGet200Response) GetSuccess() bool {
-	if o == nil || IsNil(o.Success) {
-		var ret bool
-		return ret
-	}
-	return *o.Success
-}
-
-// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V2SkyblockBingoGet200Response) GetSuccessOk() (*bool, bool) {
-	if o == nil || IsNil(o.Success) {
-		return nil, false
-	}
-	return o.Success, true
-}
-
-// HasSuccess returns a boolean if a field has been set.
-func (o *V2SkyblockBingoGet200Response) HasSuccess() bool {
-	if o != nil && !IsNil(o.Success) {
-		return true
-	}
-
-	return false
-}
-
-// SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *V2SkyblockBingoGet200Response) SetSuccess(v bool) {
-	o.Success = &v
 }
 
 // GetEvents returns the Events field value if set, zero value otherwise.
@@ -104,6 +72,38 @@ func (o *V2SkyblockBingoGet200Response) SetEvents(v []V2SkyblockBingoGet200Respo
 	o.Events = v
 }
 
+// GetSuccess returns the Success field value if set, zero value otherwise.
+func (o *V2SkyblockBingoGet200Response) GetSuccess() bool {
+	if o == nil || IsNil(o.Success) {
+		var ret bool
+		return ret
+	}
+	return *o.Success
+}
+
+// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2SkyblockBingoGet200Response) GetSuccessOk() (*bool, bool) {
+	if o == nil || IsNil(o.Success) {
+		return nil, false
+	}
+	return o.Success, true
+}
+
+// HasSuccess returns a boolean if a field has been set.
+func (o *V2SkyblockBingoGet200Response) HasSuccess() bool {
+	if o != nil && !IsNil(o.Success) {
+		return true
+	}
+
+	return false
+}
+
+// SetSuccess gets a reference to the given bool and assigns it to the Success field.
+func (o *V2SkyblockBingoGet200Response) SetSuccess(v bool) {
+	o.Success = &v
+}
+
 func (o V2SkyblockBingoGet200Response) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -114,11 +114,11 @@ func (o V2SkyblockBingoGet200Response) MarshalJSON() ([]byte, error) {
 
 func (o V2SkyblockBingoGet200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Success) {
-		toSerialize["success"] = o.Success
-	}
 	if !IsNil(o.Events) {
 		toSerialize["events"] = o.Events
+	}
+	if !IsNil(o.Success) {
+		toSerialize["success"] = o.Success
 	}
 	return toSerialize, nil
 }

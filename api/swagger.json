@@ -1,1727 +1,1813 @@
 {
-  "openapi": "3.0.3",
-  "info": {
-    "title": "Hypixel Public API",
-    "x-logo": {
-      "url": "https://api.hypixel.net/assets/images/logo.png",
-      "altText": "Hypixel Logo",
-      "href": "#"
-    },
-    "description": "# Introduction\nThis is the official Hypixel API documentation. [Hypixel Website](https://hypixel.net/) - [GitHub Repo](https://github.com/HypixelDev/PublicAPI) - [API Help Forum](https://hypixel.net/forums/api-help.111/)\n\nAll use of the API must conform to the [API policies](https://developer.hypixel.net/policies), violation of these policies may lead to applications being revoked or users banned from the API.\n## Limits\nAPI keys are limited to a maximum amount of requests per 5 minute intervals. These limits will depend on the type of application that the key is assigned to.\n\nEndpoints which require the use of an API key will also respond with headers to assist with managing the rate limit:\n- 'RateLimit-Limit' - The limit of requests per minute for the provided API key.\n- 'RateLimit-Remaining' - The remaining amount of requests allowed for the current minute.\n- 'RateLimit-Reset' - The amount of seconds until the next minute and the reset of the API key usages.\n\n## GameTypes\n| ID | Type Name      | Database Name | Clean Name           |\n |----|----------------|---------------|----------------------|\n | 2  | QUAKECRAFT     | Quake         | Quake                |\n | 3  | WALLS          | Walls         | Walls                |\n | 4  | PAINTBALL      | Paintball     | Paintball            |\n | 5  | SURVIVAL_GAMES | HungerGames   | Blitz Survival Games |\n | 6  | TNTGAMES       | TNTGames      | TNT Games            |\n | 7  | VAMPIREZ       | VampireZ      | VampireZ             |\n | 13 | WALLS3         | Walls3        | Mega Walls           |\n | 14 | ARCADE         | Arcade        | Arcade               |\n | 17 | ARENA          | Arena         | Arena                |\n | 20 | UHC            | UHC           | UHC Champions        |\n | 21 | MCGO           | MCGO          | Cops and Crims       |\n | 23 | BATTLEGROUND   | Battleground  | Warlords             |\n | 24 | SUPER_SMASH    | SuperSmash    | Smash Heroes         |\n | 25 | GINGERBREAD    | GingerBread   | Turbo Kart Racers    |\n | 26 | HOUSING        | Housing       | Housing              |\n | 51 | SKYWARS        | SkyWars       | SkyWars              |\n | 52 | TRUE_COMBAT    | TrueCombat    | Crazy Walls          |\n | 54 | SPEED_UHC      | SpeedUHC      | Speed UHC            |\n | 55 | SKYCLASH       | SkyClash      | SkyClash             |\n | 56 | LEGACY         | Legacy        | Classic Games        |\n | 57 | PROTOTYPE      | Prototype     | Prototype            |\n | 58 | BEDWARS        | Bedwars       | Bed Wars             |\n | 59 | MURDER_MYSTERY | MurderMystery | Murder Mystery       |\n | 60 | BUILD_BATTLE   | BuildBattle   | Build Battle         |\n | 61 | DUELS          | Duels         | Duels                |\n | 63 | SKYBLOCK       | SkyBlock      | SkyBlock             |\n | 64 | PIT            | Pit           | Pit                  |\n | 65 | REPLAY         | Replay        | Replay               |\n | 67 | SMP            | SMP           | SMP                  |\n | 68 | WOOL_GAMES     | WoolGames     | Wool Wars            |\n\n### Storage\nGames store their respective stats and data in a Player's `stats` collection. The game's specific data is held within a JSON object named after it's `Database Name` (seen above.)\n### GameType Notes\n* Clean names are what is displayed to the user when referencing the name.\n* Database names or IDs are used when the API references a specific GameType.\n## Notes\n\n### Date and Time\nGenerally dates are stored as a Unix Epoch times in milliseconds.\n### Response Format\nResponses are served in JSON format.\n### UUID Parameters\nAll uuid parameters support both dashed and undashed versions.\n### SkyBlock items and inventories\nItems and inventory data are stored as a base64 encoded string containing gzipped nbt data.\nIf a method is missing important information about an item or inventory, you should try checking this!\n>Note: the base64 string may contain a unicode escape for non-alphabetical symbols, and some programming languages may have silent defects when interpreting the string. \n\n# Authentication\n\n<!-- ReDoc-Inject: <security-definitions> -->",
-    "version": "v2",
-    "termsOfService": "https://hypixel.net/tos",
-    "contact": {
-      "name": "Hypixel Support",
-      "url": "https://developer.hypixel.net"
-    }
-  },
-  "servers": [
-    {
-      "url": "https://api.hypixel.net"
-    }
-  ],
-  "components": {
-    "securitySchemes": {
-      "ApiKey": {
-        "type": "apiKey",
-        "in": "header",
-        "name": "API-Key",
-        "description": "Obtained via the [Hypixel Developer Dashboard](https://developer.hypixel.net) when creating an application. You can also request higher limits for production applications in this dashboard."
-      }
-    },
-    "responses": {
-      "DataMissing": {
-        "description": "Some data is missing, this is usually a field.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
+    "components": {
+        "responses": {
+            "DataMissing": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "properties": {
+                                "cause": {
+                                    "example": "Missing one or more fields [...]",
+                                    "type": "string"
+                                },
+                                "success": {
+                                    "example": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
                 },
-                "cause": {
-                  "type": "string",
-                  "example": "Missing one or more fields [...]"
-                }
-              }
-            }
-          }
-        }
-      },
-      "InvalidKey": {
-        "description": "Access is forbidden, usually due to an invalid API key being used.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
+                "description": "Some data is missing, this is usually a field."
+            },
+            "InvalidKey": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "properties": {
+                                "cause": {
+                                    "example": "Invalid API key",
+                                    "type": "string"
+                                },
+                                "success": {
+                                    "example": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
                 },
-                "cause": {
-                  "type": "string",
-                  "example": "Invalid API key"
-                }
-              }
-            }
-          }
-        }
-      },
-      "RateLimited": {
-        "description": "A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
+                "description": "Access is forbidden, usually due to an invalid API key being used."
+            },
+            "InvalidPage": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "properties": {
+                                "cause": {
+                                    "example": "Invalid page",
+                                    "type": "string"
+                                },
+                                "success": {
+                                    "example": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
                 },
-                "cause": {
-                  "type": "string",
-                  "example": "Key throttle"
+                "description": "The page provided is invalid."
+            },
+            "MalformedData": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "properties": {
+                                "cause": {
+                                    "example": "Malformed UUID",
+                                    "type": "string"
+                                },
+                                "success": {
+                                    "example": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
                 },
-                "throttle": {
-                  "type": "boolean",
-                  "example": true
+                "description": "Some data provided is invalid."
+            },
+            "MissingPage": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "properties": {
+                                "cause": {
+                                    "example": "Page not found",
+                                    "type": "string"
+                                },
+                                "success": {
+                                    "example": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
                 },
-                "global": {
-                  "type": "boolean",
-                  "description": "When this boolean exists and is true, the throttle occurring is a global throttle applied to all users",
-                  "example": true
-                }
-              }
-            }
-          }
-        }
-      },
-      "InvalidPage": {
-        "description": "The page provided is invalid.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
+                "description": "The page provided does not exist."
+            },
+            "NoResult": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "properties": {
+                                "cause": {
+                                    "example": "No result was found",
+                                    "type": "string"
+                                },
+                                "success": {
+                                    "example": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
                 },
-                "cause": {
-                  "type": "string",
-                  "example": "Invalid page"
-                }
-              }
-            }
-          }
-        }
-      },
-      "MissingPage": {
-        "description": "The page provided does not exist.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
+                "description": "The request responded with no result."
+            },
+            "NotPopulated": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "properties": {
+                                "cause": {
+                                    "example": "Leaderboard data has not yet been populated",
+                                    "type": "string"
+                                },
+                                "success": {
+                                    "example": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
                 },
-                "cause": {
-                  "type": "string",
-                  "example": "Page not found"
-                }
-              }
-            }
-          }
-        }
-      },
-      "MalformedData": {
-        "description": "Some data provided is invalid.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
+                "description": "The data is not yet populated and should be available shortly"
+            },
+            "RateLimited": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "properties": {
+                                "cause": {
+                                    "example": "Key throttle",
+                                    "type": "string"
+                                },
+                                "global": {
+                                    "description": "When this boolean exists and is true, the throttle occurring is a global throttle applied to all users",
+                                    "example": true,
+                                    "type": "boolean"
+                                },
+                                "success": {
+                                    "example": false,
+                                    "type": "boolean"
+                                },
+                                "throttle": {
+                                    "example": true,
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
                 },
-                "cause": {
-                  "type": "string",
-                  "example": "Malformed UUID"
-                }
-              }
+                "description": "A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle."
             }
-          }
-        }
-      },
-      "NotPopulated": {
-        "description": "The data is not yet populated and should be available shortly",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "cause": {
-                  "type": "string",
-                  "example": "Leaderboard data has not yet been populated"
-                }
-              }
-            }
-          }
-        }
-      },
-      "NoResult": {
-        "description": "The request responded with no result.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "cause": {
-                  "type": "string",
-                  "example": "No result was found"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "schemas": {
-      "ActiveBooster": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Booster"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "stacked": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "type": "string",
-                  "description": "UUID of the player in a dashed format",
-                  "format": "uuid",
-                  "example": "ad8fefaa-8351-454b-b739-a4eaa872173f"
-                }
-              }
-            }
-          }
-        ]
-      },
-      "Booster": {
-        "properties": {
-          "_id": {
-            "type": "string",
-            "format": "objectid"
-          },
-          "purchaserUuid": {
-            "type": "string",
-            "format": "uuid",
-            "example": "ad8fefaa8351454bb739a4eaa872173f"
-          },
-          "amount": {
-            "format": "int64",
-            "type": "number"
-          },
-          "originalLength": {
-            "format": "int64",
-            "type": "number"
-          },
-          "length": {
-            "format": "int64",
-            "type": "number"
-          },
-          "gameType": {
-            "format": "int64",
-            "type": "number"
-          },
-          "dateActivated": {
-            "format": "int64",
-            "type": "number"
-          }
-        }
-      },
-      "QueuedBooster": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Booster"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "stacked": {
-                "type": "boolean",
-                "nullable": true
-              }
-            }
-          }
-        ]
-      },
-      "SkyBlockProfile": {
-        "properties": {
-          "profile_id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "members": {
-            "description": "A map of profile member UUIDs to profile member objects",
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/SkyBlockProfileMember"
-            }
-          },
-          "cute_name": {
-            "description": "The cute name of the profile, only provided on the profiles endpoint",
-            "nullable": true,
-            "type": "string"
-          },
-          "selected": {
-            "description": "Whether or not this is the currently selected profile, only provided on the profiles endpoint",
-            "nullable": true,
-            "type": "boolean"
-          },
-          "community_upgrades": {
-            "nullable": true,
-            "type": "object"
-          },
-          "banking": {
-            "description": "Information about the bank account for this profile, only present if the API banking setting is enabled",
-            "nullable": true,
-            "type": "object",
-            "properties": {
-              "balance": {
-                "format": "double",
-                "type": "number"
-              },
-              "transactions": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "timestamp": {
-                      "type": "number",
-                      "format": "int64"
+        },
+        "schemas": {
+            "ActiveBooster": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/Booster"
                     },
-                    "action": {
-                      "type": "string",
-                      "enum": [
-                        "DEPOSIT",
-                        "WITHDRAW"
-                      ]
-                    },
-                    "initiator_name": {
-                      "type": "string"
+                    {
+                        "properties": {
+                            "stacked": {
+                                "items": {
+                                    "description": "UUID of the player in a dashed format",
+                                    "example": "ad8fefaa-8351-454b-b739-a4eaa872173f",
+                                    "format": "uuid",
+                                    "type": "string"
+                                },
+                                "nullable": true,
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    }
+                ]
+            },
+            "Booster": {
+                "properties": {
+                    "_id": {
+                        "format": "objectid",
+                        "type": "string"
                     },
                     "amount": {
-                      "type": "number",
-                      "format": "double"
+                        "type": "integer"
+                    },
+                    "dateActivated": {
+                        "type": "integer"
+                    },
+                    "gameType": {
+                        "type": "integer"
+                    },
+                    "length": {
+                        "type": "integer"
+                    },
+                    "originalLength": {
+                        "type": "integer"
+                    },
+                    "purchaserUuid": {
+                        "example": "ad8fefaa8351454bb739a4eaa872173f",
+                        "format": "uuid",
+                        "type": "string"
                     }
-                  }
                 }
-              }
-            }
-          },
-          "game_mode": {
-            "description": "The SkyBlock game mode of the profile, not present if normal mode",
-            "nullable": true,
-            "type": "string",
-            "enum": [
-              "ironman",
-              "island",
-              "bingo"
-            ]
-          }
-        }
-      },
-      "SkyBlockProfileMember": {
-        "type": "object",
-        "properties": {
-          "player_id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "rift": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRift"
-          }
-        }
-      },
-      "SkyBlockProfileMemberRift": {
-        "type": "object",
-        "properties": {
-          "black_lagoon": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon"
-          },
-          "dead_cats": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftDeadCats"
-          },
-          "enigma": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftEnigma"
-          },
-          "gallery": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftGallery"
-          },
-          "village_plaza": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlaza"
-          },
-          "wither_cage": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftWitherCage"
-          },
-          "wizard_tower": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftWizardTower"
-          }
-        }
-      },
-      "SkyBlockProfileMemberRiftBlackLagoon": {
-        "properties": {
-          "completed_step": {
-            "format": "int64",
-            "type": "number"
-          },
-          "delivered_science_paper": {
-            "type": "boolean"
-          },
-          "received_science_paper": {
-            "type": "boolean"
-          },
-          "talked_to_edwin": {
-            "type": "boolean"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftDeadCats": {
-        "properties": {
-          "found_cats": {
-            "items": {
-              "enum": [
-                "eight",
-                "fifth",
-                "first",
-                "fourth",
-                "ninth",
-                "second",
-                "seventh",
-                "sixth",
-                "third"
-              ],
-              "type": "string"
             },
-            "type": "array"
-          },
-          "montezuma": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftDeadCatsMontezuma"
-          },
-          "picked_up_detector": {
-            "type": "boolean"
-          },
-          "talked_to_jacquelle": {
-            "type": "boolean"
-          },
-          "unlocked_pet": {
-            "type": "boolean"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftDeadCatsMontezuma": {
-        "properties": {
-          "active": {
-            "type": "boolean"
-          },
-          "candyUsed": {
-            "format": "int64",
-            "type": "number"
-          },
-          "exp": {
-            "format": "double",
-            "type": "number"
-          },
-          "heldItem": {
-            "nullable": true,
-            "$ref": "#/components/schemas/SkyBlockItem"
-          },
-          "skin": {
-            "nullable": true,
-            "$ref": "#/components/schemas/SkyBlockItem"
-          },
-          "tier": {
-            "enum": [
-              "COMMON",
-              "EPIC",
-              "LEGENDARY",
-              "MYTHIC",
-              "RARE",
-              "UNCOMMON"
-            ],
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "FRACTURED_MONTEZUMA_SOUL"
-            ]
-          },
-          "uniqueId": {
-            "format": "uuid",
-            "type": "string"
-          },
-          "uuid": {
-            "format": "uuid",
-            "nullable": true,
-            "type": "string"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftEnigma": {
-        "properties": {
-          "bought_cloak": {
-            "type": "boolean"
-          },
-          "claimed_bonus_index": {
-            "format": "int64",
-            "type": "number"
-          },
-          "found_souls": {
-            "items": {
-              "enum": [
-                "BACK2BASICS",
-                "BARK_TREE",
-                "BEANSTALK",
-                "BETWEEN_BRANCHES",
-                "buttons_soul",
-                "CASTLE_BALLOONS",
-                "CASTLE_FLOWERS",
-                "CASTLE_MIDAIR",
-                "CASTLE_PHANTOM",
-                "COLOSSEUM_PILLARS",
-                "DOLPHIN_PARKOUR",
-                "FAIRY_TOWER_SOUL",
-                "FARM_BALLOONS",
-                "FROG_JUMP_PAD",
-                "HORSING_AROUND",
-                "HOT_DOG_SOUL",
-                "LAGOON_PARKOUR",
-                "LAGOON_SHOP_SOUL",
-                "LEAP_OF_FAITH",
-                "LIVING_CAVE_WALL",
-                "LONELY_SOUL",
-                "LONG_SHROOM",
-                "MOUNTAIN_IKRUS",
-                "MOUNTAIN_UBIK_BOXES",
-                "MOUNTAIN_UBIK_TATS",
-                "PIECE_TREE",
-                "PLAZA_BALLOONS",
-                "PLAZA_MIDAIR",
-                "PLAZA_PHANTOM",
-                "RABBIT_HAT_SOUL",
-                "RIFT_1",
-                "RIFT_CAKE",
-                "RIFT_CAKE_2",
-                "ROCKS_GAME_SOUL",
-                "SAY_HI",
-                "SCAMMER_SOUL",
-                "SOUL_IN_A_BOX",
-                "STANDING_THERE",
-                "TELKAR",
-                "TREE_LAUNCH",
-                "TWO_PLAYERS_SOUL",
-                "WEST_VILLAGE_KAT",
-                "WEST_VILLAGE_MIDAIR",
-                "WOODS_FLOWER_POT",
-                "WOODS_PHANTOM",
-                "WOODS_WATER_SOUL"
-              ],
-              "type": "string"
-            },
-            "type": "array"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftGallery": {
-        "properties": {
-          "elise_step": {
-            "format": "int64",
-            "type": "number"
-          },
-          "secured_trophies": {
-            "items": {
-              "properties": {
-                "timestamp": {
-                  "type": "number",
-                  "format": "int64"
-                },
-                "type": {
-                  "enum": [
-                    "chicken_n_egg",
-                    "citizen",
-                    "lazy_living",
-                    "mirrored",
-                    "mountain",
-                    "slime",
-                    "vampiric",
-                    "wyldly_supreme"
-                  ],
-                  "type": "string"
-                },
-                "visits": {
-                  "type": "number",
-                  "format": "int64"
-                }
-              },
-              "type": "object"
-            },
-            "type": "array"
-          },
-          "sent_trophy_dialogues": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftVillagePlaza": {
-        "properties": {
-          "barry_center": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarryCenter"
-          },
-          "barter_bank": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarterBank"
-          },
-          "cowboy": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaCowboy"
-          },
-          "got_scammed": {
-            "type": "boolean"
-          },
-          "lonely": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaLonely"
-          },
-          "murder": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaMurder"
-          },
-          "seraphine": {
-            "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaSeraphine"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftVillagePlazaBarryCenter": {
-        "properties": {
-          "convinced": {
-            "items": {
-              "enum": [
-                "creed",
-                "dust",
-                "frankie",
-                "harriette",
-                "soma",
-                "stain",
-                "violetta"
-              ],
-              "type": "string"
-            },
-            "type": "array"
-          },
-          "first_talk_to_barry": {
-            "type": "boolean"
-          },
-          "received_reward": {
-            "type": "boolean"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftVillagePlazaBarterBank": {
-        "properties": {},
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftVillagePlazaCowboy": {
-        "properties": {
-          "hay_eaten": {
-            "format": "int64",
-            "type": "number"
-          },
-          "rabbit_name": {
-            "type": "string"
-          },
-          "stage": {
-            "format": "int64",
-            "type": "number"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftVillagePlazaLonely": {
-        "properties": {
-          "seconds_sitting": {
-            "format": "int64",
-            "type": "number"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftVillagePlazaMurder": {
-        "properties": {
-          "room_clues": {
-            "items": {
-              "enum": [
-                "blood",
-                "flowers",
-                "fridge",
-                "letter",
-                "painting_1",
-                "painting_2",
-                "ring",
-                "window"
-              ],
-              "type": "string"
-            },
-            "type": "array"
-          },
-          "step_index": {
-            "format": "int64",
-            "type": "number"
-          },
-          "step_index_pt2": {
-            "format": "int64",
-            "type": "number"
-          },
-          "step_index_pt3": {
-            "format": "int64",
-            "type": "number"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftVillagePlazaSeraphine": {
-        "properties": {
-          "step_index": {
-            "format": "int64",
-            "type": "number"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftWitherCage": {
-        "properties": {
-          "killed_eyes": {
-            "items": {
-              "enum": [
-                "castle",
-                "colosseum",
-                "dreadfarm",
-                "fisherman_hut",
-                "mountaintop",
-                "plaza",
-                "wizard_tower"
-              ],
-              "type": "string"
-            },
-            "type": "array"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockProfileMemberRiftWizardTower": {
-        "properties": {
-          "crumbs_laid_out": {
-            "format": "int64",
-            "type": "number"
-          },
-          "wizard_quest_step": {
-            "format": "int64",
-            "type": "number"
-          }
-        },
-        "type": "object"
-      },
-      "SkyBlockItem": {
-        "properties": {
-          "id": {
-            "description": "The unique identifier for this item",
-            "type": "string"
-          },
-          "material": {
-            "description": "The Bukkit material enum value for the item",
-            "type": "string"
-          },
-          "name": {
-            "description": "The name of the item",
-            "type": "string"
-          },
-          "tier": {
-            "description": "The rarity tier of the item",
-            "type": "string",
-            "enum": [
-              "COMMON",
-              "UNCOMMON",
-              "RARE",
-              "EPIC",
-              "LEGENDARY",
-              "MYTHIC",
-              "SUPREME",
-              "SPECIAL",
-              "VERY_SPECIAL"
-            ]
-          },
-          "color": {
-            "description": "The color metadata to be applied to an item, usually leather armor pieces",
-            "pattern": "^(?:(?:^|,\\s*)([01]?\\d\\d?|2[0-4]\\d|25[0-5])){3}$",
-            "type": "string"
-          },
-          "skin": {
-            "description": "The skin value for a skull based item",
-            "type": "string"
-          }
-        },
-        "example": {
-          "material": "LEATHER_CHESTPLATE",
-          "color": "255,215,0",
-          "name": "Farm Armor Chestplate",
-          "category": "CHESTPLATE",
-          "tier": "RARE",
-          "stats": {
-            "DEFENSE": 75,
-            "HEALTH": 20
-          },
-          "npc_sell_price": 5200,
-          "id": "FARM_ARMOR_CHESTPLATE"
-        }
-      },
-      "SkyBlockMuseum": {
-        "properties": {
-          "value": {
-            "type": "number",
-            "format": "int64"
-          },
-          "appraisal": {
-            "type": "boolean"
-          },
-          "items": {
-            "type": "object"
-          },
-          "special": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "donated_time": {
-                  "type": "number",
-                  "format": "int64"
-                },
-                "items": {
-                  "type": "object"
-                }
-              }
-            }
-          }
-        }
-      },
-      "SkyBlockFireSale": {
-        "properties": {
-          "item_id": {
-            "description": "The SkyBlock item ID for this sale",
-            "type": "string"
-          },
-          "start": {
-            "description": "The start time in unix milliseconds for the sale",
-            "format": "int64",
-            "type": "number"
-          },
-          "end": {
-            "description": "The end time in unix milliseconds for the sale",
-            "format": "int64",
-            "type": "number"
-          },
-          "amount": {
-            "description": "The amount of items available for this sale",
-            "format": "int64",
-            "type": "number"
-          },
-          "price": {
-            "description": "The price in Gems for this sale",
-            "format": "int64",
-            "type": "number"
-          }
-        }
-      },
-      "SkyBlockGarden": {
-        "description": "Information about a player's SkyBlock garden, the only guaranteed field is the `uuid` field.",
-        "required": [
-          "uuid"
-        ],
-        "properties": {
-          "uuid": {
-            "type": "string",
-            "format": "uuid",
-            "description": "The UUID of the profile for this garden."
-          },
-          "commission_data": {
-            "type": "object",
-            "properties": {
-              "visits": {
-                "type": "object",
-                "description": "A map of visitor identifier to visit count",
-                "example": {
-                  "jerry": 1,
-                  "jacob": 2,
-                  "andrew": 3
-                }
-              },
-              "completed": {
-                "type": "object",
-                "description": "A map of visitor identifier to completed count",
-                "example": {
-                  "jerry": 1,
-                  "jacob": 1,
-                  "andrew": 2
-                }
-              },
-              "total_completed": {
-                "type": "number",
-                "format": "int64"
-              },
-              "unique_npcs_served": {
-                "type": "number",
-                "format": "int64"
-              }
-            }
-          },
-          "composter_data": {
-            "type": "object",
-            "example": {
-              "organic_matter": 1772.8,
-              "fuel_units": 17000,
-              "compost_units": 0,
-              "compost_items": 2,
-              "conversion_ticks": 300,
-              "last_save": 1721039418436,
-              "upgrades": {
-                "speed": 25,
-                "multi_drop": 25,
-                "fuel_cap": 22,
-                "organic_matter_cap": 25,
-                "cost_reduction": 25
-              }
-            }
-          },
-          "active_commissions": {
-            "type": "object",
-            "example": {
-              "liam": {
-                "requirement": [
-                  {
-                    "original_item": "NETHER_STALK",
-                    "original_amount": 93995,
-                    "item": "MUTANT_NETHER_STALK",
-                    "amount": 4
-                  }
-                ],
-                "status": "NOT_STARTED",
-                "position": 1
-              },
-              "lumberjack": {
-                "requirement": [
-                  {
-                    "original_item": "POTATO_ITEM",
-                    "original_amount": 81380,
-                    "item": "ENCHANTED_BAKED_POTATO",
-                    "amount": 3
-                  }
-                ],
-                "status": "NOT_STARTED",
-                "position": 2
-              },
-              "oringo": {
-                "requirement": [
-                  {
-                    "original_item": "WHEAT",
-                    "original_amount": 26798,
-                    "item": "ENCHANTED_HAY_BLOCK",
-                    "amount": 21
-                  }
-                ],
-                "status": "NOT_STARTED",
-                "position": 3
-              },
-              "rhys": {
-                "requirement": [
-                  {
-                    "original_item": "JACK_O_LANTERN",
-                    "original_amount": 512,
-                    "item": "JACK_O_LANTERN",
-                    "amount": 512
-                  }
-                ],
-                "status": "NOT_STARTED",
-                "position": 4
-              },
-              "fear_mongerer": {
-                "requirement": [
-                  {
-                    "original_item": "PUMPKIN",
-                    "original_amount": 27709,
-                    "item": "POLISHED_PUMPKIN",
-                    "amount": 1
-                  }
-                ],
-                "status": "NOT_STARTED",
-                "position": 5,
-                "extra_rewards": [
-                  {
-                    "candy": "PURPLE_CANDY"
-                  }
+            "QueuedBooster": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/Booster"
+                    },
+                    {
+                        "properties": {
+                            "stacked": {
+                                "nullable": true,
+                                "type": "boolean"
+                            }
+                        },
+                        "type": "object"
+                    }
                 ]
-              }
-            }
-          },
-          "resources_collected": {
-            "type": "object",
-            "description": "A map of resource ID to amount collected",
-            "example": {
-              "WHEAT": 100,
-              "POTATO_ITEM": 100,
-              "INK_SACK:3": 100
-            }
-          },
-          "crop_upgrade_levels": {
-            "type": "object",
-            "example": {
-              "WHEAT": 1,
-              "POTATO_ITEM": 2,
-              "INK_SACK:3": 3
-            }
-          },
-          "unlocked_plots_ids": {
-            "type": "array",
-            "items": {
-              "type": "string"
             },
-            "example": [
-              "beginner_1",
-              "intermediate_3"
-            ]
-          },
-          "garden_experience": {
-            "type": "number",
-            "format": "double"
-          },
-          "unlocked_barn_skins": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "selected_barn_skin": {
-            "type": "string"
-          }
-        }
-      }
-    }
-  },
-  "paths": {
-    "/v2/resources/skyblock/collections": {
-      "get": {
-        "summary": "Collections",
-        "description": "Information regarding Collections in the SkyBlock game.",
-        "tags": [
-          "SkyBlock"
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "lastUpdated": {
-                      "format": "int64",
-                      "type": "number"
-                    },
-                    "version": {
-                      "type": "string",
-                      "example": "0.11.22"
-                    },
-                    "collections": {
-                      "type": "object"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v2/resources/skyblock/skills": {
-      "get": {
-        "summary": "Skills",
-        "description": "Information regarding skills in the SkyBlock game.",
-        "tags": [
-          "SkyBlock"
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "lastUpdated": {
-                      "format": "int64",
-                      "type": "number"
-                    },
-                    "version": {
-                      "type": "string",
-                      "example": "0.11.22"
-                    },
-                    "skills": {
-                      "type": "object"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v2/resources/skyblock/items": {
-      "get": {
-        "summary": "Items",
-        "description": "Information regarding items in the SkyBlock game.",
-        "tags": [
-          "SkyBlock"
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "lastUpdated": {
-                      "format": "int64",
-                      "type": "number"
-                    },
-                    "items": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/SkyBlockItem"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v2/resources/skyblock/election": {
-      "get": {
-        "summary": "Election and Mayor",
-        "description": "Information regarding the current mayor and ongoing election in SkyBlock.",
-        "tags": [
-          "SkyBlock"
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "lastUpdated": {
-                      "format": "int64",
-                      "type": "number"
-                    },
-                    "mayor": {
-                      "type": "object",
-                      "description": "Data regarding the current mayor"
-                    },
-                    "current": {
-                      "type": "object",
-                      "description": "Data regarding the current election, will not be provided if there is no open election ongoing"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v2/resources/skyblock/bingo": {
-      "get": {
-        "summary": "Current Bingo Event",
-        "description": "Information regarding the current bingo event and its goals.",
-        "tags": [
-          "SkyBlock"
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "required": [
-                    "success",
-                    "lastUpdated",
-                    "id",
-                    "name",
-                    "start",
-                    "end",
-                    "modifier",
-                    "goals"
-                  ],
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "lastUpdated": {
-                      "type": "number",
-                      "format": "int64",
-                      "description": "The unix milliseconds timestamp of the last time this data was updated"
-                    },
-                    "id": {
-                      "type": "number",
-                      "format": "int64",
-                      "description": "The current bingo event ID, increments by 1 for each bingo hosted",
-                      "example": 27
-                    },
-                    "name": {
-                      "type": "string",
-                      "description": "The display name for the current bingo event",
-                      "example": "March 2024"
-                    },
-                    "start": {
-                      "type": "number",
-                      "format": "int64",
-                      "description": "The start time of the current bingo event in unix milliseconds",
-                      "example": 1709269200000
+            "SkyBlockFireSale": {
+                "properties": {
+                    "amount": {
+                        "description": "The amount of items available for this sale",
+                        "type": "integer"
                     },
                     "end": {
-                      "type": "number",
-                      "format": "int64",
-                      "description": "The end time of the current bingo event in unix milliseconds",
-                      "example": 1709874000000
+                        "description": "The end time in unix milliseconds for the sale",
+                        "type": "integer"
                     },
-                    "modifier": {
-                      "type": "string",
-                      "enum": [
-                        "NORMAL",
-                        "EXTREME",
-                        "SECRET"
-                      ],
-                      "description": "The modifier for the current bingo event",
-                      "example": "NORMAL"
+                    "item_id": {
+                        "description": "The SkyBlock item ID for this sale",
+                        "type": "string"
                     },
-                    "goals": {
-                      "type": "array",
-                      "description": "The goals for the current bingo event, as well as their progress",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "name"
-                        ],
-                        "properties": {
-                          "id": {
-                            "description": "The backend ID for this goal",
-                            "type": "string"
-                          },
-                          "name": {
-                            "description": "The user friendly display name for this goal",
-                            "type": "string"
-                          },
-                          "lore": {
-                            "description": "Description of this goal",
-                            "type": "string"
-                          },
-                          "fullLore": {
-                            "description": "The full description of this goal",
-                            "type": "array",
-                            "items": {
-                              "type": "string"
-                            }
-                          },
-                          "tiers": {
-                            "description": "The tiers of this goal, if a global goal",
-                            "type": "array",
-                            "items": {
-                              "type": "number",
-                              "format": "int64"
-                            }
-                          },
-                          "progress": {
-                            "description": "The global progress of this goal",
-                            "type": "number",
-                            "format": "int64"
-                          },
-                          "requiredAmount": {
-                            "description": "The required amount for this specific goal",
-                            "type": "number",
-                            "format": "int64"
-                          }
-                        }
-                      }
+                    "price": {
+                        "description": "The price in Gems for this sale",
+                        "type": "integer"
+                    },
+                    "start": {
+                        "description": "The start time in unix milliseconds for the sale",
+                        "type": "integer"
                     }
-                  }
                 }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v2/skyblock/news": {
-      "get": {
-        "summary": "News",
-        "tags": [
-          "SkyBlock"
-        ],
-        "security": [
-          {
-            "ApiKey": []
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
+            },
+            "SkyBlockGarden": {
+                "description": "Information about a player's SkyBlock garden, the only guaranteed field is the `uuid` field.",
+                "properties": {
+                    "active_commissions": {
+                        "example": {
+                            "fear_mongerer": {
+                                "extra_rewards": [
+                                    {
+                                        "candy": "PURPLE_CANDY"
+                                    }
+                                ],
+                                "position": 5,
+                                "requirement": [
+                                    {
+                                        "amount": 1,
+                                        "item": "POLISHED_PUMPKIN",
+                                        "original_amount": 27709,
+                                        "original_item": "PUMPKIN"
+                                    }
+                                ],
+                                "status": "NOT_STARTED"
+                            },
+                            "liam": {
+                                "position": 1,
+                                "requirement": [
+                                    {
+                                        "amount": 4,
+                                        "item": "MUTANT_NETHER_STALK",
+                                        "original_amount": 93995,
+                                        "original_item": "NETHER_STALK"
+                                    }
+                                ],
+                                "status": "NOT_STARTED"
+                            },
+                            "lumberjack": {
+                                "position": 2,
+                                "requirement": [
+                                    {
+                                        "amount": 3,
+                                        "item": "ENCHANTED_BAKED_POTATO",
+                                        "original_amount": 81380,
+                                        "original_item": "POTATO_ITEM"
+                                    }
+                                ],
+                                "status": "NOT_STARTED"
+                            },
+                            "oringo": {
+                                "position": 3,
+                                "requirement": [
+                                    {
+                                        "amount": 21,
+                                        "item": "ENCHANTED_HAY_BLOCK",
+                                        "original_amount": 26798,
+                                        "original_item": "WHEAT"
+                                    }
+                                ],
+                                "status": "NOT_STARTED"
+                            },
+                            "rhys": {
+                                "position": 4,
+                                "requirement": [
+                                    {
+                                        "amount": 512,
+                                        "item": "JACK_O_LANTERN",
+                                        "original_amount": 512,
+                                        "original_item": "JACK_O_LANTERN"
+                                    }
+                                ],
+                                "status": "NOT_STARTED"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "commission_data": {
+                        "properties": {
+                            "completed": {
+                                "description": "A map of visitor identifier to completed count",
+                                "example": {
+                                    "andrew": 2,
+                                    "jacob": 1,
+                                    "jerry": 1
+                                },
+                                "type": "object"
+                            },
+                            "total_completed": {
+                                "type": "integer"
+                            },
+                            "unique_npcs_served": {
+                                "type": "integer"
+                            },
+                            "visits": {
+                                "description": "A map of visitor identifier to visit count",
+                                "example": {
+                                    "andrew": 3,
+                                    "jacob": 2,
+                                    "jerry": 1
+                                },
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "composter_data": {
+                        "example": {
+                            "compost_items": 2,
+                            "compost_units": 0,
+                            "conversion_ticks": 300,
+                            "fuel_units": 17000,
+                            "last_save": 1721039418436,
+                            "organic_matter": 1772.8,
+                            "upgrades": {
+                                "cost_reduction": 25,
+                                "fuel_cap": 22,
+                                "multi_drop": 25,
+                                "organic_matter_cap": 25,
+                                "speed": 25
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "crop_upgrade_levels": {
+                        "example": {
+                            "INK_SACK:3": 3,
+                            "POTATO_ITEM": 2,
+                            "WHEAT": 1
+                        },
+                        "type": "object"
+                    },
+                    "garden_experience": {
+                        "type": "number"
+                    },
+                    "resources_collected": {
+                        "description": "A map of resource ID to amount collected",
+                        "example": {
+                            "INK_SACK:3": 100,
+                            "POTATO_ITEM": 100,
+                            "WHEAT": 100
+                        },
+                        "type": "object"
+                    },
+                    "selected_barn_skin": {
+                        "type": "string"
+                    },
+                    "unlocked_barn_skins": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "unlocked_plots_ids": {
+                        "example": [
+                            "beginner_1",
+                            "intermediate_3"
+                        ],
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "uuid": {
+                        "description": "The UUID of the profile for this garden.",
+                        "format": "uuid",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "uuid"
+                ]
+            },
+            "SkyBlockItem": {
+                "example": {
+                    "category": "CHESTPLATE",
+                    "color": "255,215,0",
+                    "id": "FARM_ARMOR_CHESTPLATE",
+                    "material": "LEATHER_CHESTPLATE",
+                    "name": "Farm Armor Chestplate",
+                    "npc_sell_price": 5200,
+                    "stats": {
+                        "DEFENSE": 75,
+                        "HEALTH": 20
+                    },
+                    "tier": "RARE"
+                },
+                "properties": {
+                    "color": {
+                        "description": "The color metadata to be applied to an item, usually leather armor pieces",
+                        "pattern": "^(?:(?:^|,\\s*)([01]?\\d\\d?|2[0-4]\\d|25[0-5])){3}$",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The unique identifier for this item",
+                        "type": "string"
+                    },
+                    "material": {
+                        "description": "The Bukkit material enum value for the item",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The name of the item",
+                        "type": "string"
+                    },
+                    "skin": {
+                        "description": "The skin value for a skull based item",
+                        "type": "string"
+                    },
+                    "tier": {
+                        "description": "The rarity tier of the item",
+                        "enum": [
+                            "COMMON",
+                            "EPIC",
+                            "LEGENDARY",
+                            "MYTHIC",
+                            "RARE",
+                            "SPECIAL",
+                            "SUPREME",
+                            "UNCOMMON",
+                            "VERY_SPECIAL"
+                        ],
+                        "type": "string"
+                    }
+                }
+            },
+            "SkyBlockMuseum": {
+                "properties": {
+                    "appraisal": {
+                        "type": "boolean"
                     },
                     "items": {
-                      "items": {
-                        "example": {
-                          "item": {
-                            "material": "DIAMOND"
-                          },
-                          "link": "https://hypixel.net",
-                          "title": "SkyBlock v0.11",
-                          "text": "15th January 2021"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "$ref": "#/components/responses/InvalidKey"
-          },
-          "429": {
-            "$ref": "#/components/responses/RateLimited"
-          }
-        }
-      }
-    },
-    "/v2/skyblock/profile": {
-      "get": {
-        "summary": "Profile by UUID",
-        "description": "SkyBlock profile data, such as stats, objectives etc. The data returned can differ depending on the players in-game API settings.",
-        "tags": [
-          "SkyBlock"
-        ],
-        "security": [
-          {
-            "ApiKey": []
-          }
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "profile",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
+                        "type": "object"
                     },
-                    "profile": {
-                      "$ref": "#/components/schemas/SkyBlockProfile"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/components/responses/DataMissing"
-          },
-          "403": {
-            "$ref": "#/components/responses/InvalidKey"
-          },
-          "422": {
-            "$ref": "#/components/responses/MalformedData"
-          },
-          "429": {
-            "$ref": "#/components/responses/RateLimited"
-          }
-        }
-      }
-    },
-    "/v2/skyblock/profiles": {
-      "get": {
-        "summary": "Profiles by player",
-        "tags": [
-          "SkyBlock"
-        ],
-        "security": [
-          {
-            "ApiKey": []
-          }
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "uuid",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
+                    "special": {
+                        "items": {
+                            "properties": {
+                                "donated_time": {
+                                    "type": "integer"
+                                },
+                                "items": {
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
                     },
-                    "profiles": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/SkyBlockProfile"
-                      }
+                    "value": {
+                        "type": "integer"
                     }
-                  }
                 }
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/components/responses/DataMissing"
-          },
-          "403": {
-            "$ref": "#/components/responses/InvalidKey"
-          },
-          "422": {
-            "$ref": "#/components/responses/MalformedData"
-          },
-          "429": {
-            "$ref": "#/components/responses/RateLimited"
-          }
-        }
-      }
-    },
-    "/v2/skyblock/museum": {
-      "get": {
-        "summary": "Museum data by profile ID",
-        "description": "SkyBlock museum data for all members of the provided profile. The data returned can differ depending on the players in-game API settings.",
-        "tags": [
-          "SkyBlock"
-        ],
-        "security": [
-          {
-            "ApiKey": []
-          }
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "profile",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "profile": {
-                      "$ref": "#/components/schemas/SkyBlockMuseum"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "$ref": "#/components/responses/InvalidKey"
-          },
-          "422": {
-            "$ref": "#/components/responses/MalformedData"
-          },
-          "429": {
-            "$ref": "#/components/responses/RateLimited"
-          }
-        }
-      }
-    },
-    "/v2/skyblock/garden": {
-      "get": {
-        "summary": "Garden data by profile ID",
-        "description": "SkyBlock garden data for the provided profile.",
-        "tags": [
-          "SkyBlock"
-        ],
-        "security": [
-          {
-            "ApiKey": []
-          }
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "profile",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "garden": {
-                      "$ref": "#/components/schemas/SkyBlockGarden"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "$ref": "#/components/responses/InvalidKey"
-          },
-          "404": {
-            "$ref": "#/components/responses/NoResult"
-          },
-          "422": {
-            "$ref": "#/components/responses/MalformedData"
-          },
-          "429": {
-            "$ref": "#/components/responses/RateLimited"
-          }
-        }
-      }
-    },
-    "/v2/skyblock/bingo": {
-      "get": {
-        "summary": "Bingo data by player",
-        "description": "Bingo data for participated events of the provided player.",
-        "tags": [
-          "SkyBlock"
-        ],
-        "security": [
-          {
-            "ApiKey": []
-          }
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "uuid",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "events": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "key",
-                          "points",
-                          "completed_goals"
-                        ],
+            },
+            "SkyBlockProfile": {
+                "properties": {
+                    "banking": {
+                        "description": "Information about the bank account for this profile, only present if the API banking setting is enabled",
+                        "nullable": true,
                         "properties": {
-                          "key": {
-                            "description": "The id for this event",
-                            "type": "number",
-                            "format": "int64",
-                            "example": 2
-                          },
-                          "points": {
-                            "description": "The amount of points earned",
-                            "type": "number",
-                            "format": "int64",
-                            "example": 117
-                          },
-                          "completed_goals": {
-                            "description": "The completed goal IDs",
-                            "type": "array",
-                            "items": {
-                              "type": "string",
-                              "example": [
-                                "stat_walk_speed",
-                                "KILL_TRAPPER_MOB"
-                              ]
+                            "balance": {
+                                "type": "number"
+                            },
+                            "transactions": {
+                                "items": {
+                                    "properties": {
+                                        "action": {
+                                            "enum": [
+                                                "DEPOSIT",
+                                                "WITHDRAW"
+                                            ],
+                                            "type": "string"
+                                        },
+                                        "amount": {
+                                            "type": "number"
+                                        },
+                                        "initiator_name": {
+                                            "type": "string"
+                                        },
+                                        "timestamp": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
                             }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/components/responses/DataMissing"
-          },
-          "403": {
-            "$ref": "#/components/responses/InvalidKey"
-          },
-          "404": {
-            "description": "No data could be found for the provided player uuid.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean",
-                      "example": false
+                        },
+                        "type": "object"
                     },
-                    "cause": {
-                      "type": "string",
-                      "example": "No bingo data could be found"
+                    "community_upgrades": {
+                        "nullable": true,
+                        "type": "object"
+                    },
+                    "cute_name": {
+                        "description": "The cute name of the profile, only provided on the profiles endpoint",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "game_mode": {
+                        "description": "The SkyBlock game mode of the profile, not present if normal mode",
+                        "enum": [
+                            "bingo",
+                            "ironman",
+                            "island"
+                        ],
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "members": {
+                        "additionalProperties": {
+                            "$ref": "#/components/schemas/SkyBlockProfileMember"
+                        },
+                        "description": "A map of profile member UUIDs to profile member objects",
+                        "type": "object"
+                    },
+                    "profile_id": {
+                        "format": "uuid",
+                        "type": "string"
+                    },
+                    "selected": {
+                        "description": "Whether or not this is the currently selected profile, only provided on the profiles endpoint",
+                        "nullable": true,
+                        "type": "boolean"
                     }
-                  }
                 }
-              }
+            },
+            "SkyBlockProfileMember": {
+                "properties": {
+                    "accessory_bag_storage": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberAccessoryBagStorage"
+                    },
+                    "player_id": {
+                        "format": "uuid",
+                        "nullable": false,
+                        "type": "string"
+                    },
+                    "rift": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRift"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberAccessoryBagStorage": {
+                "nullable": true,
+                "properties": {
+                    "bag_upgrades_purchased": {
+                        "minimum": 0,
+                        "maximum": 99,
+                        "nullable": false,
+                        "type": "integer"
+                    },
+                    "highest_magical_power": {
+                        "minimum": 0,
+                        "nullable": false,
+                        "type": "integer"
+                    },
+                    "selected_power": {
+                        "nullable": false,
+                        "type": "string"
+                    },
+                    "tuning": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuning"
+                    },
+                    "unlocked_powers": {
+                        "items": {
+                            "enum": [
+                                "adept",
+                                "bizarre",
+                                "bloody",
+                                "bubba",
+                                "crumbly",
+                                "demonic",
+                                "forceful",
+                                "frozen",
+                                "healthy",
+                                "hurtful",
+                                "itchy",
+                                "mythical",
+                                "pleasant",
+                                "sanguisuge",
+                                "scorching",
+                                "shaded",
+                                "sighted",
+                                "silky",
+                                "slender",
+                                "strong",
+                                "sweet"
+                            ],
+                            "type": "string"
+                        },
+                        "nullable": false,
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberAccessoryBagStorageTuning": {
+                "nullable": false,
+                "properties": {
+                    "highest_unlocked_slot": {
+                        "minimum": 1,
+                        "maximum": 4,
+                        "nullable": true,
+                        "type": "integer"
+                    },
+                    "slot_0": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot"
+                    },
+                    "slot_1": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot"
+                    },
+                    "slot_2": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot"
+                    },
+                    "slot_3": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot"
+                    },
+                    "slot_4": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberAccessoryBagStorageTuningSlot": {
+                "nullable": true,
+                "properties": {
+                    "attack_speed": {
+                        "minimum": 0,
+                        "nullable": false,
+                        "type": "integer"
+                    },
+                    "critical_chance": {
+                        "minimum": 0,
+                        "nullable": false,
+                        "type": "integer"
+                    },
+                    "critical_damage": {
+                        "minimum": 0,
+                        "nullable": false,
+                        "type": "integer"
+                    },
+                    "defense": {
+                        "minimum": 0,
+                        "nullable": false,
+                        "type": "integer"
+                    },
+                    "health": {
+                        "minimum": 0,
+                        "nullable": false,
+                        "type": "integer"
+                    },
+                    "intelligence": {
+                        "minimum": 0,
+                        "nullable": false,
+                        "type": "integer"
+                    },
+                    "strength": {
+                        "minimum": 0,
+                        "nullable": false,
+                        "type": "integer"
+                    },
+                    "walk_speed": {
+                        "minimum": 0,
+                        "nullable": false,
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRift": {
+                "nullable": true,
+                "properties": {
+                    "black_lagoon": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon"
+                    },
+                    "dead_cats": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftDeadCats"
+                    },
+                    "enigma": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftEnigma"
+                    },
+                    "gallery": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftGallery"
+                    },
+                    "village_plaza": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlaza"
+                    },
+                    "wither_cage": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftWitherCage"
+                    },
+                    "wizard_tower": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftWizardTower"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftBlackLagoon": {
+                "properties": {
+                    "completed_step": {
+                        "type": "integer"
+                    },
+                    "delivered_science_paper": {
+                        "type": "boolean"
+                    },
+                    "received_science_paper": {
+                        "type": "boolean"
+                    },
+                    "talked_to_edwin": {
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftDeadCats": {
+                "properties": {
+                    "found_cats": {
+                        "items": {
+                            "enum": [
+                                "eight",
+                                "fifth",
+                                "first",
+                                "fourth",
+                                "ninth",
+                                "second",
+                                "seventh",
+                                "sixth",
+                                "third"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "montezuma": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftDeadCatsMontezuma"
+                    },
+                    "picked_up_detector": {
+                        "type": "boolean"
+                    },
+                    "talked_to_jacquelle": {
+                        "type": "boolean"
+                    },
+                    "unlocked_pet": {
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftDeadCatsMontezuma": {
+                "properties": {
+                    "active": {
+                        "type": "boolean"
+                    },
+                    "candyUsed": {
+                        "type": "integer"
+                    },
+                    "exp": {
+                        "type": "number"
+                    },
+                    "heldItem": {
+                        "$ref": "#/components/schemas/SkyBlockItem",
+                        "nullable": true
+                    },
+                    "skin": {
+                        "$ref": "#/components/schemas/SkyBlockItem",
+                        "nullable": true
+                    },
+                    "tier": {
+                        "enum": [
+                            "COMMON",
+                            "EPIC",
+                            "LEGENDARY",
+                            "MYTHIC",
+                            "RARE",
+                            "UNCOMMON"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "FRACTURED_MONTEZUMA_SOUL"
+                        ],
+                        "type": "string"
+                    },
+                    "uniqueId": {
+                        "format": "uuid",
+                        "type": "string"
+                    },
+                    "uuid": {
+                        "format": "uuid",
+                        "nullable": true,
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftEnigma": {
+                "properties": {
+                    "bought_cloak": {
+                        "type": "boolean"
+                    },
+                    "claimed_bonus_index": {
+                        "type": "integer"
+                    },
+                    "found_souls": {
+                        "items": {
+                            "enum": [
+                                "BACK2BASICS",
+                                "BARK_TREE",
+                                "BEANSTALK",
+                                "BETWEEN_BRANCHES",
+                                "buttons_soul",
+                                "CASTLE_BALLOONS",
+                                "CASTLE_FLOWERS",
+                                "CASTLE_MIDAIR",
+                                "CASTLE_PHANTOM",
+                                "COLOSSEUM_PILLARS",
+                                "DOLPHIN_PARKOUR",
+                                "FAIRY_TOWER_SOUL",
+                                "FARM_BALLOONS",
+                                "FROG_JUMP_PAD",
+                                "HORSING_AROUND",
+                                "HOT_DOG_SOUL",
+                                "LAGOON_PARKOUR",
+                                "LAGOON_SHOP_SOUL",
+                                "LEAP_OF_FAITH",
+                                "LIVING_CAVE_WALL",
+                                "LONELY_SOUL",
+                                "LONG_SHROOM",
+                                "MOUNTAIN_IKRUS",
+                                "MOUNTAIN_UBIK_BOXES",
+                                "MOUNTAIN_UBIK_TATS",
+                                "PIECE_TREE",
+                                "PLAZA_BALLOONS",
+                                "PLAZA_MIDAIR",
+                                "PLAZA_PHANTOM",
+                                "RABBIT_HAT_SOUL",
+                                "RIFT_1",
+                                "RIFT_CAKE",
+                                "RIFT_CAKE_2",
+                                "ROCKS_GAME_SOUL",
+                                "SAY_HI",
+                                "SCAMMER_SOUL",
+                                "SOUL_IN_A_BOX",
+                                "STANDING_THERE",
+                                "TELKAR",
+                                "TREE_LAUNCH",
+                                "TWO_PLAYERS_SOUL",
+                                "WEST_VILLAGE_KAT",
+                                "WEST_VILLAGE_MIDAIR",
+                                "WOODS_FLOWER_POT",
+                                "WOODS_PHANTOM",
+                                "WOODS_WATER_SOUL"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftGallery": {
+                "properties": {
+                    "elise_step": {
+                        "type": "integer"
+                    },
+                    "secured_trophies": {
+                        "items": {
+                            "properties": {
+                                "timestamp": {
+                                    "type": "integer"
+                                },
+                                "type": {
+                                    "enum": [
+                                        "chicken_n_egg",
+                                        "citizen",
+                                        "lazy_living",
+                                        "mirrored",
+                                        "mountain",
+                                        "slime",
+                                        "vampiric",
+                                        "wyldly_supreme"
+                                    ],
+                                    "type": "string"
+                                },
+                                "visits": {
+                                    "type": "integer"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "sent_trophy_dialogues": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftVillagePlaza": {
+                "properties": {
+                    "barry_center": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarryCenter"
+                    },
+                    "barter_bank": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarterBank"
+                    },
+                    "cowboy": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaCowboy"
+                    },
+                    "got_scammed": {
+                        "type": "boolean"
+                    },
+                    "lonely": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaLonely"
+                    },
+                    "murder": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaMurder"
+                    },
+                    "seraphine": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaSeraphine"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftVillagePlazaBarryCenter": {
+                "properties": {
+                    "convinced": {
+                        "items": {
+                            "enum": [
+                                "creed",
+                                "dust",
+                                "frankie",
+                                "harriette",
+                                "soma",
+                                "stain",
+                                "violetta"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "first_talk_to_barry": {
+                        "type": "boolean"
+                    },
+                    "received_reward": {
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftVillagePlazaBarterBank": {
+                "properties": {},
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftVillagePlazaCowboy": {
+                "properties": {
+                    "hay_eaten": {
+                        "type": "integer"
+                    },
+                    "rabbit_name": {
+                        "type": "string"
+                    },
+                    "stage": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftVillagePlazaLonely": {
+                "properties": {
+                    "seconds_sitting": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftVillagePlazaMurder": {
+                "properties": {
+                    "room_clues": {
+                        "items": {
+                            "enum": [
+                                "blood",
+                                "flowers",
+                                "fridge",
+                                "letter",
+                                "painting_1",
+                                "painting_2",
+                                "ring",
+                                "window"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "step_index": {
+                        "type": "integer"
+                    },
+                    "step_index_pt2": {
+                        "type": "integer"
+                    },
+                    "step_index_pt3": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftVillagePlazaSeraphine": {
+                "properties": {
+                    "step_index": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftWitherCage": {
+                "properties": {
+                    "killed_eyes": {
+                        "items": {
+                            "enum": [
+                                "castle",
+                                "colosseum",
+                                "dreadfarm",
+                                "fisherman_hut",
+                                "mountaintop",
+                                "plaza",
+                                "wizard_tower"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberRiftWizardTower": {
+                "properties": {
+                    "crumbs_laid_out": {
+                        "type": "integer"
+                    },
+                    "wizard_quest_step": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
             }
-          },
-          "422": {
-            "$ref": "#/components/responses/MalformedData"
-          },
-          "429": {
-            "$ref": "#/components/responses/RateLimited"
-          }
+        },
+        "securitySchemes": {
+            "ApiKey": {
+                "description": "Obtained via the [Hypixel Developer Dashboard](https://developer.hypixel.net) when creating an application. You can also request higher limits for production applications in this dashboard.",
+                "in": "header",
+                "name": "API-Key",
+                "type": "apiKey"
+            }
         }
-      }
     },
-    "/v2/skyblock/firesales": {
-      "get": {
-        "summary": "Active/Upcoming Fire Sales",
-        "description": "Retrieve the currently active or upcoming Fire Sales for SkyBlock.",
-        "tags": [
-          "SkyBlock"
-        ],
-        "responses": {
-          "200": {
-            "description": "A successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "sales": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/SkyBlockFireSale"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
+    "info": {
+        "contact": {
+            "name": "Hypixel Support",
+            "url": "https://developer.hypixel.net"
+        },
+        "description": "# Introduction\nThis is the official Hypixel API documentation. [Hypixel Website](https://hypixel.net/) - [GitHub Repo](https://github.com/HypixelDev/PublicAPI) - [API Help Forum](https://hypixel.net/forums/api-help.111/)\n\nAll use of the API must conform to the [API policies](https://developer.hypixel.net/policies), violation of these policies may lead to applications being revoked or users banned from the API.\n## Limits\nAPI keys are limited to a maximum amount of requests per 5 minute intervals. These limits will depend on the type of application that the key is assigned to.\n\nEndpoints which require the use of an API key will also respond with headers to assist with managing the rate limit:\n- 'RateLimit-Limit' - The limit of requests per minute for the provided API key.\n- 'RateLimit-Remaining' - The remaining amount of requests allowed for the current minute.\n- 'RateLimit-Reset' - The amount of seconds until the next minute and the reset of the API key usages.\n\n## GameTypes\n| ID | Type Name      | Database Name | Clean Name           |\n |----|----------------|---------------|----------------------|\n | 2  | QUAKECRAFT     | Quake         | Quake                |\n | 3  | WALLS          | Walls         | Walls                |\n | 4  | PAINTBALL      | Paintball     | Paintball            |\n | 5  | SURVIVAL_GAMES | HungerGames   | Blitz Survival Games |\n | 6  | TNTGAMES       | TNTGames      | TNT Games            |\n | 7  | VAMPIREZ       | VampireZ      | VampireZ             |\n | 13 | WALLS3         | Walls3        | Mega Walls           |\n | 14 | ARCADE         | Arcade        | Arcade               |\n | 17 | ARENA          | Arena         | Arena                |\n | 20 | UHC            | UHC           | UHC Champions        |\n | 21 | MCGO           | MCGO          | Cops and Crims       |\n | 23 | BATTLEGROUND   | Battleground  | Warlords             |\n | 24 | SUPER_SMASH    | SuperSmash    | Smash Heroes         |\n | 25 | GINGERBREAD    | GingerBread   | Turbo Kart Racers    |\n | 26 | HOUSING        | Housing       | Housing              |\n | 51 | SKYWARS        | SkyWars       | SkyWars              |\n | 52 | TRUE_COMBAT    | TrueCombat    | Crazy Walls          |\n | 54 | SPEED_UHC      | SpeedUHC      | Speed UHC            |\n | 55 | SKYCLASH       | SkyClash      | SkyClash             |\n | 56 | LEGACY         | Legacy        | Classic Games        |\n | 57 | PROTOTYPE      | Prototype     | Prototype            |\n | 58 | BEDWARS        | Bedwars       | Bed Wars             |\n | 59 | MURDER_MYSTERY | MurderMystery | Murder Mystery       |\n | 60 | BUILD_BATTLE   | BuildBattle   | Build Battle         |\n | 61 | DUELS          | Duels         | Duels                |\n | 63 | SKYBLOCK       | SkyBlock      | SkyBlock             |\n | 64 | PIT            | Pit           | Pit                  |\n | 65 | REPLAY         | Replay        | Replay               |\n | 67 | SMP            | SMP           | SMP                  |\n | 68 | WOOL_GAMES     | WoolGames     | Wool Wars            |\n\n### Storage\nGames store their respective stats and data in a Player's `stats` collection. The game's specific data is held within a JSON object named after it's `Database Name` (seen above.)\n### GameType Notes\n* Clean names are what is displayed to the user when referencing the name.\n* Database names or IDs are used when the API references a specific GameType.\n## Notes\n\n### Date and Time\nGenerally dates are stored as a Unix Epoch times in milliseconds.\n### Response Format\nResponses are served in JSON format.\n### UUID Parameters\nAll uuid parameters support both dashed and undashed versions.\n### SkyBlock items and inventories\nItems and inventory data are stored as a base64 encoded string containing gzipped nbt data.\nIf a method is missing important information about an item or inventory, you should try checking this!\n>Note: the base64 string may contain a unicode escape for non-alphabetical symbols, and some programming languages may have silent defects when interpreting the string. \n\n# Authentication\n\n<!-- ReDoc-Inject: <security-definitions> -->",
+        "termsOfService": "https://hypixel.net/tos",
+        "title": "Hypixel Public API",
+        "version": "v2",
+        "x-logo": {
+            "altText": "Hypixel Logo",
+            "href": "#",
+            "url": "https://api.hypixel.net/assets/images/logo.png"
         }
-      }
-    }
-  }
+    },
+    "openapi": "3.0.3",
+    "paths": {
+        "/v2/resources/skyblock/bingo": {
+            "get": {
+                "description": "Information regarding the current bingo event and its goals.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "end": {
+                                            "description": "The end time of the current bingo event in unix milliseconds",
+                                            "example": 1709874000000,
+                                            "type": "integer"
+                                        },
+                                        "goals": {
+                                            "description": "The goals for the current bingo event, as well as their progress",
+                                            "items": {
+                                                "properties": {
+                                                    "fullLore": {
+                                                        "description": "The full description of this goal",
+                                                        "items": {
+                                                            "type": "string"
+                                                        },
+                                                        "type": "array"
+                                                    },
+                                                    "id": {
+                                                        "description": "The backend ID for this goal",
+                                                        "type": "string"
+                                                    },
+                                                    "lore": {
+                                                        "description": "Description of this goal",
+                                                        "type": "string"
+                                                    },
+                                                    "name": {
+                                                        "description": "The user friendly display name for this goal",
+                                                        "type": "string"
+                                                    },
+                                                    "progress": {
+                                                        "description": "The global progress of this goal",
+                                                        "type": "integer"
+                                                    },
+                                                    "requiredAmount": {
+                                                        "description": "The required amount for this specific goal",
+                                                        "type": "integer"
+                                                    },
+                                                    "tiers": {
+                                                        "description": "The tiers of this goal, if a global goal",
+                                                        "items": {
+                                                            "type": "integer"
+                                                        },
+                                                        "type": "array"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "id",
+                                                    "name"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "id": {
+                                            "description": "The current bingo event ID, increments by 1 for each bingo hosted",
+                                            "example": 27,
+                                            "type": "integer"
+                                        },
+                                        "lastUpdated": {
+                                            "description": "The unix milliseconds timestamp of the last time this data was updated",
+                                            "type": "integer"
+                                        },
+                                        "modifier": {
+                                            "description": "The modifier for the current bingo event",
+                                            "enum": [
+                                                "EXTREME",
+                                                "NORMAL",
+                                                "SECRET"
+                                            ],
+                                            "example": "NORMAL",
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "description": "The display name for the current bingo event",
+                                            "example": "March 2024",
+                                            "type": "string"
+                                        },
+                                        "start": {
+                                            "description": "The start time of the current bingo event in unix milliseconds",
+                                            "example": 1709269200000,
+                                            "type": "integer"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "required": [
+                                        "end",
+                                        "goals",
+                                        "id",
+                                        "lastUpdated",
+                                        "modifier",
+                                        "name",
+                                        "start",
+                                        "success"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    }
+                },
+                "summary": "Current Bingo Event",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/resources/skyblock/collections": {
+            "get": {
+                "description": "Information regarding Collections in the SkyBlock game.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "collections": {
+                                            "type": "object"
+                                        },
+                                        "lastUpdated": {
+                                            "type": "integer"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "version": {
+                                            "example": "0.11.22",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    }
+                },
+                "summary": "Collections",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/resources/skyblock/election": {
+            "get": {
+                "description": "Information regarding the current mayor and ongoing election in SkyBlock.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "current": {
+                                            "description": "Data regarding the current election, will not be provided if there is no open election ongoing",
+                                            "type": "object"
+                                        },
+                                        "lastUpdated": {
+                                            "type": "integer"
+                                        },
+                                        "mayor": {
+                                            "description": "Data regarding the current mayor",
+                                            "type": "object"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    }
+                },
+                "summary": "Election and Mayor",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/resources/skyblock/items": {
+            "get": {
+                "description": "Information regarding items in the SkyBlock game.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "items": {
+                                            "items": {
+                                                "$ref": "#/components/schemas/SkyBlockItem"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "lastUpdated": {
+                                            "type": "integer"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    }
+                },
+                "summary": "Items",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/resources/skyblock/skills": {
+            "get": {
+                "description": "Information regarding skills in the SkyBlock game.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "lastUpdated": {
+                                            "type": "integer"
+                                        },
+                                        "skills": {
+                                            "type": "object"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "version": {
+                                            "example": "0.11.22",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    }
+                },
+                "summary": "Skills",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/skyblock/bingo": {
+            "get": {
+                "description": "Bingo data for participated events of the provided player.",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "uuid",
+                        "schema": {
+                            "format": "uuid",
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "events": {
+                                            "items": {
+                                                "properties": {
+                                                    "completed_goals": {
+                                                        "description": "The completed goal IDs",
+                                                        "items": {
+                                                            "example": [
+                                                                "KILL_TRAPPER_MOB",
+                                                                "stat_walk_speed"
+                                                            ],
+                                                            "type": "string"
+                                                        },
+                                                        "type": "array"
+                                                    },
+                                                    "key": {
+                                                        "description": "The id for this event",
+                                                        "example": 2,
+                                                        "type": "integer"
+                                                    },
+                                                    "points": {
+                                                        "description": "The amount of points earned",
+                                                        "example": 117,
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "completed_goals",
+                                                    "key",
+                                                    "points"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/DataMissing"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/InvalidKey"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "cause": {
+                                            "example": "No bingo data could be found",
+                                            "type": "string"
+                                        },
+                                        "success": {
+                                            "example": false,
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "No data could be found for the provided player uuid."
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/MalformedData"
+                    },
+                    "429": {
+                        "$ref": "#/components/responses/RateLimited"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKey": []
+                    }
+                ],
+                "summary": "Bingo data by player",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/skyblock/firesales": {
+            "get": {
+                "description": "Retrieve the currently active or upcoming Fire Sales for SkyBlock.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "sales": {
+                                            "items": {
+                                                "$ref": "#/components/schemas/SkyBlockFireSale"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    }
+                },
+                "summary": "Active/Upcoming Fire Sales",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/skyblock/garden": {
+            "get": {
+                "description": "SkyBlock garden data for the provided profile.",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "profile",
+                        "schema": {
+                            "format": "uuid",
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "garden": {
+                                            "$ref": "#/components/schemas/SkyBlockGarden"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/InvalidKey"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NoResult"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/MalformedData"
+                    },
+                    "429": {
+                        "$ref": "#/components/responses/RateLimited"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKey": []
+                    }
+                ],
+                "summary": "Garden data by profile ID",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/skyblock/museum": {
+            "get": {
+                "description": "SkyBlock museum data for all members of the provided profile. The data returned can differ depending on the players in-game API settings.",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "profile",
+                        "schema": {
+                            "format": "uuid",
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "profile": {
+                                            "$ref": "#/components/schemas/SkyBlockMuseum"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/InvalidKey"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/MalformedData"
+                    },
+                    "429": {
+                        "$ref": "#/components/responses/RateLimited"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKey": []
+                    }
+                ],
+                "summary": "Museum data by profile ID",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/skyblock/news": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "items": {
+                                            "items": {
+                                                "example": {
+                                                    "item": {
+                                                        "material": "DIAMOND"
+                                                    },
+                                                    "link": "https://hypixel.net",
+                                                    "text": "15th January 2021",
+                                                    "title": "SkyBlock v0.11"
+                                                }
+                                            }
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/InvalidKey"
+                    },
+                    "429": {
+                        "$ref": "#/components/responses/RateLimited"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKey": []
+                    }
+                ],
+                "summary": "News",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/skyblock/profile": {
+            "get": {
+                "description": "SkyBlock profile data, such as stats, objectives etc. The data returned can differ depending on the players in-game API settings.",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "profile",
+                        "schema": {
+                            "format": "uuid",
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "profile": {
+                                            "$ref": "#/components/schemas/SkyBlockProfile"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/DataMissing"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/InvalidKey"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/MalformedData"
+                    },
+                    "429": {
+                        "$ref": "#/components/responses/RateLimited"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKey": []
+                    }
+                ],
+                "summary": "Profile by UUID",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        },
+        "/v2/skyblock/profiles": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "uuid",
+                        "schema": {
+                            "format": "uuid",
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "profiles": {
+                                            "items": {
+                                                "$ref": "#/components/schemas/SkyBlockProfile"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "A successful response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/DataMissing"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/InvalidKey"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/MalformedData"
+                    },
+                    "429": {
+                        "$ref": "#/components/responses/RateLimited"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKey": []
+                    }
+                ],
+                "summary": "Profiles by player",
+                "tags": [
+                    "SkyBlock"
+                ]
+            }
+        }
+    },
+    "servers": [
+        {
+            "url": "https://api.hypixel.net"
+        }
+    ]
 }

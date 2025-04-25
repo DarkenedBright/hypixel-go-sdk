@@ -14,66 +14,34 @@ import (
 	"encoding/json"
 )
 
-// checks if the V2SkyblockProfileGet400Response type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &V2SkyblockProfileGet400Response{}
+// checks if the V2SkyblockBingoGet422Response type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &V2SkyblockBingoGet422Response{}
 
-// V2SkyblockProfileGet400Response struct for V2SkyblockProfileGet400Response
-type V2SkyblockProfileGet400Response struct {
-	Success *bool   `json:"success,omitempty"`
+// V2SkyblockBingoGet422Response struct for V2SkyblockBingoGet422Response
+type V2SkyblockBingoGet422Response struct {
 	Cause   *string `json:"cause,omitempty"`
+	Success *bool   `json:"success,omitempty"`
 }
 
-// NewV2SkyblockProfileGet400Response instantiates a new V2SkyblockProfileGet400Response object
+// NewV2SkyblockBingoGet422Response instantiates a new V2SkyblockBingoGet422Response object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewV2SkyblockProfileGet400Response() *V2SkyblockProfileGet400Response {
-	this := V2SkyblockProfileGet400Response{}
+func NewV2SkyblockBingoGet422Response() *V2SkyblockBingoGet422Response {
+	this := V2SkyblockBingoGet422Response{}
 	return &this
 }
 
-// NewV2SkyblockProfileGet400ResponseWithDefaults instantiates a new V2SkyblockProfileGet400Response object
+// NewV2SkyblockBingoGet422ResponseWithDefaults instantiates a new V2SkyblockBingoGet422Response object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewV2SkyblockProfileGet400ResponseWithDefaults() *V2SkyblockProfileGet400Response {
-	this := V2SkyblockProfileGet400Response{}
+func NewV2SkyblockBingoGet422ResponseWithDefaults() *V2SkyblockBingoGet422Response {
+	this := V2SkyblockBingoGet422Response{}
 	return &this
-}
-
-// GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *V2SkyblockProfileGet400Response) GetSuccess() bool {
-	if o == nil || IsNil(o.Success) {
-		var ret bool
-		return ret
-	}
-	return *o.Success
-}
-
-// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V2SkyblockProfileGet400Response) GetSuccessOk() (*bool, bool) {
-	if o == nil || IsNil(o.Success) {
-		return nil, false
-	}
-	return o.Success, true
-}
-
-// HasSuccess returns a boolean if a field has been set.
-func (o *V2SkyblockProfileGet400Response) HasSuccess() bool {
-	if o != nil && !IsNil(o.Success) {
-		return true
-	}
-
-	return false
-}
-
-// SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *V2SkyblockProfileGet400Response) SetSuccess(v bool) {
-	o.Success = &v
 }
 
 // GetCause returns the Cause field value if set, zero value otherwise.
-func (o *V2SkyblockProfileGet400Response) GetCause() string {
+func (o *V2SkyblockBingoGet422Response) GetCause() string {
 	if o == nil || IsNil(o.Cause) {
 		var ret string
 		return ret
@@ -83,7 +51,7 @@ func (o *V2SkyblockProfileGet400Response) GetCause() string {
 
 // GetCauseOk returns a tuple with the Cause field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2SkyblockProfileGet400Response) GetCauseOk() (*string, bool) {
+func (o *V2SkyblockBingoGet422Response) GetCauseOk() (*string, bool) {
 	if o == nil || IsNil(o.Cause) {
 		return nil, false
 	}
@@ -91,7 +59,7 @@ func (o *V2SkyblockProfileGet400Response) GetCauseOk() (*string, bool) {
 }
 
 // HasCause returns a boolean if a field has been set.
-func (o *V2SkyblockProfileGet400Response) HasCause() bool {
+func (o *V2SkyblockBingoGet422Response) HasCause() bool {
 	if o != nil && !IsNil(o.Cause) {
 		return true
 	}
@@ -100,11 +68,43 @@ func (o *V2SkyblockProfileGet400Response) HasCause() bool {
 }
 
 // SetCause gets a reference to the given string and assigns it to the Cause field.
-func (o *V2SkyblockProfileGet400Response) SetCause(v string) {
+func (o *V2SkyblockBingoGet422Response) SetCause(v string) {
 	o.Cause = &v
 }
 
-func (o V2SkyblockProfileGet400Response) MarshalJSON() ([]byte, error) {
+// GetSuccess returns the Success field value if set, zero value otherwise.
+func (o *V2SkyblockBingoGet422Response) GetSuccess() bool {
+	if o == nil || IsNil(o.Success) {
+		var ret bool
+		return ret
+	}
+	return *o.Success
+}
+
+// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2SkyblockBingoGet422Response) GetSuccessOk() (*bool, bool) {
+	if o == nil || IsNil(o.Success) {
+		return nil, false
+	}
+	return o.Success, true
+}
+
+// HasSuccess returns a boolean if a field has been set.
+func (o *V2SkyblockBingoGet422Response) HasSuccess() bool {
+	if o != nil && !IsNil(o.Success) {
+		return true
+	}
+
+	return false
+}
+
+// SetSuccess gets a reference to the given bool and assigns it to the Success field.
+func (o *V2SkyblockBingoGet422Response) SetSuccess(v bool) {
+	o.Success = &v
+}
+
+func (o V2SkyblockBingoGet422Response) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -112,49 +112,49 @@ func (o V2SkyblockProfileGet400Response) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o V2SkyblockProfileGet400Response) ToMap() (map[string]interface{}, error) {
+func (o V2SkyblockBingoGet422Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Success) {
-		toSerialize["success"] = o.Success
-	}
 	if !IsNil(o.Cause) {
 		toSerialize["cause"] = o.Cause
+	}
+	if !IsNil(o.Success) {
+		toSerialize["success"] = o.Success
 	}
 	return toSerialize, nil
 }
 
-type NullableV2SkyblockProfileGet400Response struct {
-	value *V2SkyblockProfileGet400Response
+type NullableV2SkyblockBingoGet422Response struct {
+	value *V2SkyblockBingoGet422Response
 	isSet bool
 }
 
-func (v NullableV2SkyblockProfileGet400Response) Get() *V2SkyblockProfileGet400Response {
+func (v NullableV2SkyblockBingoGet422Response) Get() *V2SkyblockBingoGet422Response {
 	return v.value
 }
 
-func (v *NullableV2SkyblockProfileGet400Response) Set(val *V2SkyblockProfileGet400Response) {
+func (v *NullableV2SkyblockBingoGet422Response) Set(val *V2SkyblockBingoGet422Response) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableV2SkyblockProfileGet400Response) IsSet() bool {
+func (v NullableV2SkyblockBingoGet422Response) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableV2SkyblockProfileGet400Response) Unset() {
+func (v *NullableV2SkyblockBingoGet422Response) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableV2SkyblockProfileGet400Response(val *V2SkyblockProfileGet400Response) *NullableV2SkyblockProfileGet400Response {
-	return &NullableV2SkyblockProfileGet400Response{value: val, isSet: true}
+func NewNullableV2SkyblockBingoGet422Response(val *V2SkyblockBingoGet422Response) *NullableV2SkyblockBingoGet422Response {
+	return &NullableV2SkyblockBingoGet422Response{value: val, isSet: true}
 }
 
-func (v NullableV2SkyblockProfileGet400Response) MarshalJSON() ([]byte, error) {
+func (v NullableV2SkyblockBingoGet422Response) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableV2SkyblockProfileGet400Response) UnmarshalJSON(src []byte) error {
+func (v *NullableV2SkyblockBingoGet422Response) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

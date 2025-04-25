@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Active** | Pointer to **bool** |  | [optional] 
-**CandyUsed** | Pointer to **float64** |  | [optional] 
+**CandyUsed** | Pointer to **int64** |  | [optional] 
 **Exp** | Pointer to **float64** |  | [optional] 
 **HeldItem** | Pointer to [**SkyBlockItem**](SkyBlockItem.md) |  | [optional] 
 **Skin** | Pointer to [**SkyBlockItem**](SkyBlockItem.md) |  | [optional] 
@@ -60,20 +60,20 @@ HasActive returns a boolean if a field has been set.
 
 ### GetCandyUsed
 
-`func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetCandyUsed() float64`
+`func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetCandyUsed() int64`
 
 GetCandyUsed returns the CandyUsed field if non-nil, zero value otherwise.
 
 ### GetCandyUsedOk
 
-`func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetCandyUsedOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetCandyUsedOk() (*int64, bool)`
 
 GetCandyUsedOk returns a tuple with the CandyUsed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCandyUsed
 
-`func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) SetCandyUsed(v float64)`
+`func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) SetCandyUsed(v int64)`
 
 SetCandyUsed sets CandyUsed field to given value.
 

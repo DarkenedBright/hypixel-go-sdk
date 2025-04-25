@@ -20,7 +20,7 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftDeadCatsMontezuma{}
 // SkyBlockProfileMemberRiftDeadCatsMontezuma struct for SkyBlockProfileMemberRiftDeadCatsMontezuma
 type SkyBlockProfileMemberRiftDeadCatsMontezuma struct {
 	Active    *bool          `json:"active,omitempty"`
-	CandyUsed *float64       `json:"candyUsed,omitempty"`
+	CandyUsed *int64         `json:"candyUsed,omitempty"`
 	Exp       *float64       `json:"exp,omitempty"`
 	HeldItem  *SkyBlockItem  `json:"heldItem,omitempty"`
 	Skin      *SkyBlockItem  `json:"skin,omitempty"`
@@ -80,9 +80,9 @@ func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) SetActive(v bool) {
 }
 
 // GetCandyUsed returns the CandyUsed field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetCandyUsed() float64 {
+func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetCandyUsed() int64 {
 	if o == nil || IsNil(o.CandyUsed) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.CandyUsed
@@ -90,7 +90,7 @@ func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetCandyUsed() float64 {
 
 // GetCandyUsedOk returns a tuple with the CandyUsed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetCandyUsedOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) GetCandyUsedOk() (*int64, bool) {
 	if o == nil || IsNil(o.CandyUsed) {
 		return nil, false
 	}
@@ -106,8 +106,8 @@ func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) HasCandyUsed() bool {
 	return false
 }
 
-// SetCandyUsed gets a reference to the given float64 and assigns it to the CandyUsed field.
-func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) SetCandyUsed(v float64) {
+// SetCandyUsed gets a reference to the given int64 and assigns it to the CandyUsed field.
+func (o *SkyBlockProfileMemberRiftDeadCatsMontezuma) SetCandyUsed(v int64) {
 	o.CandyUsed = &v
 }
 

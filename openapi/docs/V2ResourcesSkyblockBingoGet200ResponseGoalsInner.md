@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **string** | The backend ID for this goal | 
-**Name** | **string** | The user friendly display name for this goal | 
-**Lore** | Pointer to **string** | Description of this goal | [optional] 
 **FullLore** | Pointer to **[]string** | The full description of this goal | [optional] 
-**Tiers** | Pointer to **[]float64** | The tiers of this goal, if a global goal | [optional] 
-**Progress** | Pointer to **float64** | The global progress of this goal | [optional] 
-**RequiredAmount** | Pointer to **float64** | The required amount for this specific goal | [optional] 
+**Id** | **string** | The backend ID for this goal | 
+**Lore** | Pointer to **string** | Description of this goal | [optional] 
+**Name** | **string** | The user friendly display name for this goal | 
+**Progress** | Pointer to **int64** | The global progress of this goal | [optional] 
+**RequiredAmount** | Pointer to **int64** | The required amount for this specific goal | [optional] 
+**Tiers** | Pointer to **[]int64** | The tiers of this goal, if a global goal | [optional] 
 
 ## Methods
 
@@ -31,6 +31,31 @@ NewV2ResourcesSkyblockBingoGet200ResponseGoalsInnerWithDefaults instantiates a n
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetFullLore
+
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetFullLore() []string`
+
+GetFullLore returns the FullLore field if non-nil, zero value otherwise.
+
+### GetFullLoreOk
+
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetFullLoreOk() (*[]string, bool)`
+
+GetFullLoreOk returns a tuple with the FullLore field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFullLore
+
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetFullLore(v []string)`
+
+SetFullLore sets FullLore field to given value.
+
+### HasFullLore
+
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasFullLore() bool`
+
+HasFullLore returns a boolean if a field has been set.
+
 ### GetId
 
 `func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetId() string`
@@ -49,26 +74,6 @@ and a boolean to check if the value has been set.
 `func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetId(v string)`
 
 SetId sets Id field to given value.
-
-
-### GetName
-
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetName(v string)`
-
-SetName sets Name field to given value.
 
 
 ### GetLore
@@ -96,72 +101,42 @@ SetLore sets Lore field to given value.
 
 HasLore returns a boolean if a field has been set.
 
-### GetFullLore
+### GetName
 
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetFullLore() []string`
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetName() string`
 
-GetFullLore returns the FullLore field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetFullLoreOk
+### GetNameOk
 
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetFullLoreOk() (*[]string, bool)`
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetNameOk() (*string, bool)`
 
-GetFullLoreOk returns a tuple with the FullLore field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFullLore
+### SetName
 
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetFullLore(v []string)`
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetName(v string)`
 
-SetFullLore sets FullLore field to given value.
+SetName sets Name field to given value.
 
-### HasFullLore
-
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasFullLore() bool`
-
-HasFullLore returns a boolean if a field has been set.
-
-### GetTiers
-
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetTiers() []float64`
-
-GetTiers returns the Tiers field if non-nil, zero value otherwise.
-
-### GetTiersOk
-
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetTiersOk() (*[]float64, bool)`
-
-GetTiersOk returns a tuple with the Tiers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTiers
-
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetTiers(v []float64)`
-
-SetTiers sets Tiers field to given value.
-
-### HasTiers
-
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasTiers() bool`
-
-HasTiers returns a boolean if a field has been set.
 
 ### GetProgress
 
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetProgress() float64`
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetProgress() int64`
 
 GetProgress returns the Progress field if non-nil, zero value otherwise.
 
 ### GetProgressOk
 
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetProgressOk() (*float64, bool)`
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetProgressOk() (*int64, bool)`
 
 GetProgressOk returns a tuple with the Progress field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProgress
 
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetProgress(v float64)`
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetProgress(v int64)`
 
 SetProgress sets Progress field to given value.
 
@@ -173,20 +148,20 @@ HasProgress returns a boolean if a field has been set.
 
 ### GetRequiredAmount
 
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetRequiredAmount() float64`
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetRequiredAmount() int64`
 
 GetRequiredAmount returns the RequiredAmount field if non-nil, zero value otherwise.
 
 ### GetRequiredAmountOk
 
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetRequiredAmountOk() (*float64, bool)`
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetRequiredAmountOk() (*int64, bool)`
 
 GetRequiredAmountOk returns a tuple with the RequiredAmount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequiredAmount
 
-`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetRequiredAmount(v float64)`
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetRequiredAmount(v int64)`
 
 SetRequiredAmount sets RequiredAmount field to given value.
 
@@ -195,6 +170,31 @@ SetRequiredAmount sets RequiredAmount field to given value.
 `func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasRequiredAmount() bool`
 
 HasRequiredAmount returns a boolean if a field has been set.
+
+### GetTiers
+
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetTiers() []int64`
+
+GetTiers returns the Tiers field if non-nil, zero value otherwise.
+
+### GetTiersOk
+
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetTiersOk() (*[]int64, bool)`
+
+GetTiersOk returns a tuple with the Tiers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTiers
+
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetTiers(v []int64)`
+
+SetTiers sets Tiers field to given value.
+
+### HasTiers
+
+`func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasTiers() bool`
+
+HasTiers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

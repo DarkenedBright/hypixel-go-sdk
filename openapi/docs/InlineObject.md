@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** |  | [optional] 
 **Cause** | Pointer to **string** |  | [optional] 
+**Success** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewInlineObjectWithDefaults instantiates a new InlineObject object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetSuccess
-
-`func (o *InlineObject) GetSuccess() bool`
-
-GetSuccess returns the Success field if non-nil, zero value otherwise.
-
-### GetSuccessOk
-
-`func (o *InlineObject) GetSuccessOk() (*bool, bool)`
-
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSuccess
-
-`func (o *InlineObject) SetSuccess(v bool)`
-
-SetSuccess sets Success field to given value.
-
-### HasSuccess
-
-`func (o *InlineObject) HasSuccess() bool`
-
-HasSuccess returns a boolean if a field has been set.
 
 ### GetCause
 
@@ -75,6 +50,31 @@ SetCause sets Cause field to given value.
 `func (o *InlineObject) HasCause() bool`
 
 HasCause returns a boolean if a field has been set.
+
+### GetSuccess
+
+`func (o *InlineObject) GetSuccess() bool`
+
+GetSuccess returns the Success field if non-nil, zero value otherwise.
+
+### GetSuccessOk
+
+`func (o *InlineObject) GetSuccessOk() (*bool, bool)`
+
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSuccess
+
+`func (o *InlineObject) SetSuccess(v bool)`
+
+SetSuccess sets Success field to given value.
+
+### HasSuccess
+
+`func (o *InlineObject) HasSuccess() bool`
+
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

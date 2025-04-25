@@ -21,20 +21,20 @@ var _ MappedNullable = &V2ResourcesSkyblockBingoGet200ResponseGoalsInner{}
 
 // V2ResourcesSkyblockBingoGet200ResponseGoalsInner struct for V2ResourcesSkyblockBingoGet200ResponseGoalsInner
 type V2ResourcesSkyblockBingoGet200ResponseGoalsInner struct {
-	// The backend ID for this goal
-	Id string `json:"id"`
-	// The user friendly display name for this goal
-	Name string `json:"name"`
-	// Description of this goal
-	Lore *string `json:"lore,omitempty"`
 	// The full description of this goal
 	FullLore []string `json:"fullLore,omitempty"`
-	// The tiers of this goal, if a global goal
-	Tiers []float64 `json:"tiers,omitempty"`
+	// The backend ID for this goal
+	Id string `json:"id"`
+	// Description of this goal
+	Lore *string `json:"lore,omitempty"`
+	// The user friendly display name for this goal
+	Name string `json:"name"`
 	// The global progress of this goal
-	Progress *float64 `json:"progress,omitempty"`
+	Progress *int64 `json:"progress,omitempty"`
 	// The required amount for this specific goal
-	RequiredAmount *float64 `json:"requiredAmount,omitempty"`
+	RequiredAmount *int64 `json:"requiredAmount,omitempty"`
+	// The tiers of this goal, if a global goal
+	Tiers []int64 `json:"tiers,omitempty"`
 }
 
 type _V2ResourcesSkyblockBingoGet200ResponseGoalsInner V2ResourcesSkyblockBingoGet200ResponseGoalsInner
@@ -56,86 +56,6 @@ func NewV2ResourcesSkyblockBingoGet200ResponseGoalsInner(id string, name string)
 func NewV2ResourcesSkyblockBingoGet200ResponseGoalsInnerWithDefaults() *V2ResourcesSkyblockBingoGet200ResponseGoalsInner {
 	this := V2ResourcesSkyblockBingoGet200ResponseGoalsInner{}
 	return &this
-}
-
-// GetId returns the Id field value
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.Id
-}
-
-// GetIdOk returns a tuple with the Id field value
-// and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.Id, true
-}
-
-// SetId sets field value
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetId(v string) {
-	o.Id = v
-}
-
-// GetName returns the Name field value
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetName() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.Name
-}
-
-// GetNameOk returns a tuple with the Name field value
-// and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetNameOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.Name, true
-}
-
-// SetName sets field value
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetName(v string) {
-	o.Name = v
-}
-
-// GetLore returns the Lore field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetLore() string {
-	if o == nil || IsNil(o.Lore) {
-		var ret string
-		return ret
-	}
-	return *o.Lore
-}
-
-// GetLoreOk returns a tuple with the Lore field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetLoreOk() (*string, bool) {
-	if o == nil || IsNil(o.Lore) {
-		return nil, false
-	}
-	return o.Lore, true
-}
-
-// HasLore returns a boolean if a field has been set.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasLore() bool {
-	if o != nil && !IsNil(o.Lore) {
-		return true
-	}
-
-	return false
-}
-
-// SetLore gets a reference to the given string and assigns it to the Lore field.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetLore(v string) {
-	o.Lore = &v
 }
 
 // GetFullLore returns the FullLore field value if set, zero value otherwise.
@@ -170,42 +90,90 @@ func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetFullLore(v []strin
 	o.FullLore = v
 }
 
-// GetTiers returns the Tiers field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetTiers() []float64 {
-	if o == nil || IsNil(o.Tiers) {
-		var ret []float64
+// GetId returns the Id field value
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetId() string {
+	if o == nil {
+		var ret string
 		return ret
 	}
-	return o.Tiers
+
+	return o.Id
 }
 
-// GetTiersOk returns a tuple with the Tiers field value if set, nil otherwise
+// GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetTiersOk() ([]float64, bool) {
-	if o == nil || IsNil(o.Tiers) {
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetIdOk() (*string, bool) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Tiers, true
+	return &o.Id, true
 }
 
-// HasTiers returns a boolean if a field has been set.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasTiers() bool {
-	if o != nil && !IsNil(o.Tiers) {
+// SetId sets field value
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetId(v string) {
+	o.Id = v
+}
+
+// GetLore returns the Lore field value if set, zero value otherwise.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetLore() string {
+	if o == nil || IsNil(o.Lore) {
+		var ret string
+		return ret
+	}
+	return *o.Lore
+}
+
+// GetLoreOk returns a tuple with the Lore field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetLoreOk() (*string, bool) {
+	if o == nil || IsNil(o.Lore) {
+		return nil, false
+	}
+	return o.Lore, true
+}
+
+// HasLore returns a boolean if a field has been set.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasLore() bool {
+	if o != nil && !IsNil(o.Lore) {
 		return true
 	}
 
 	return false
 }
 
-// SetTiers gets a reference to the given []float64 and assigns it to the Tiers field.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetTiers(v []float64) {
-	o.Tiers = v
+// SetLore gets a reference to the given string and assigns it to the Lore field.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetLore(v string) {
+	o.Lore = &v
+}
+
+// GetName returns the Name field value
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetName() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.Name
+}
+
+// GetNameOk returns a tuple with the Name field value
+// and a boolean to check if the value has been set.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetNameOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.Name, true
+}
+
+// SetName sets field value
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetName(v string) {
+	o.Name = v
 }
 
 // GetProgress returns the Progress field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetProgress() float64 {
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetProgress() int64 {
 	if o == nil || IsNil(o.Progress) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.Progress
@@ -213,7 +181,7 @@ func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetProgress() float64
 
 // GetProgressOk returns a tuple with the Progress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetProgressOk() (*float64, bool) {
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetProgressOk() (*int64, bool) {
 	if o == nil || IsNil(o.Progress) {
 		return nil, false
 	}
@@ -229,15 +197,15 @@ func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasProgress() bool {
 	return false
 }
 
-// SetProgress gets a reference to the given float64 and assigns it to the Progress field.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetProgress(v float64) {
+// SetProgress gets a reference to the given int64 and assigns it to the Progress field.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetProgress(v int64) {
 	o.Progress = &v
 }
 
 // GetRequiredAmount returns the RequiredAmount field value if set, zero value otherwise.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetRequiredAmount() float64 {
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetRequiredAmount() int64 {
 	if o == nil || IsNil(o.RequiredAmount) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.RequiredAmount
@@ -245,7 +213,7 @@ func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetRequiredAmount() f
 
 // GetRequiredAmountOk returns a tuple with the RequiredAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetRequiredAmountOk() (*float64, bool) {
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetRequiredAmountOk() (*int64, bool) {
 	if o == nil || IsNil(o.RequiredAmount) {
 		return nil, false
 	}
@@ -261,9 +229,41 @@ func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasRequiredAmount() b
 	return false
 }
 
-// SetRequiredAmount gets a reference to the given float64 and assigns it to the RequiredAmount field.
-func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetRequiredAmount(v float64) {
+// SetRequiredAmount gets a reference to the given int64 and assigns it to the RequiredAmount field.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetRequiredAmount(v int64) {
 	o.RequiredAmount = &v
+}
+
+// GetTiers returns the Tiers field value if set, zero value otherwise.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetTiers() []int64 {
+	if o == nil || IsNil(o.Tiers) {
+		var ret []int64
+		return ret
+	}
+	return o.Tiers
+}
+
+// GetTiersOk returns a tuple with the Tiers field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) GetTiersOk() ([]int64, bool) {
+	if o == nil || IsNil(o.Tiers) {
+		return nil, false
+	}
+	return o.Tiers, true
+}
+
+// HasTiers returns a boolean if a field has been set.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) HasTiers() bool {
+	if o != nil && !IsNil(o.Tiers) {
+		return true
+	}
+
+	return false
+}
+
+// SetTiers gets a reference to the given []int64 and assigns it to the Tiers field.
+func (o *V2ResourcesSkyblockBingoGet200ResponseGoalsInner) SetTiers(v []int64) {
+	o.Tiers = v
 }
 
 func (o V2ResourcesSkyblockBingoGet200ResponseGoalsInner) MarshalJSON() ([]byte, error) {
@@ -276,22 +276,22 @@ func (o V2ResourcesSkyblockBingoGet200ResponseGoalsInner) MarshalJSON() ([]byte,
 
 func (o V2ResourcesSkyblockBingoGet200ResponseGoalsInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["id"] = o.Id
-	toSerialize["name"] = o.Name
-	if !IsNil(o.Lore) {
-		toSerialize["lore"] = o.Lore
-	}
 	if !IsNil(o.FullLore) {
 		toSerialize["fullLore"] = o.FullLore
 	}
-	if !IsNil(o.Tiers) {
-		toSerialize["tiers"] = o.Tiers
+	toSerialize["id"] = o.Id
+	if !IsNil(o.Lore) {
+		toSerialize["lore"] = o.Lore
 	}
+	toSerialize["name"] = o.Name
 	if !IsNil(o.Progress) {
 		toSerialize["progress"] = o.Progress
 	}
 	if !IsNil(o.RequiredAmount) {
 		toSerialize["requiredAmount"] = o.RequiredAmount
+	}
+	if !IsNil(o.Tiers) {
+		toSerialize["tiers"] = o.Tiers
 	}
 	return toSerialize, nil
 }

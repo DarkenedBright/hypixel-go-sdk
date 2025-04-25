@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timestamp** | Pointer to **float64** |  | [optional] 
+**Timestamp** | Pointer to **int64** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
-**Visits** | Pointer to **float64** |  | [optional] 
+**Visits** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetTimestamp
 
-`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetTimestamp() float64`
+`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetTimestamp() int64`
 
 GetTimestamp returns the Timestamp field if non-nil, zero value otherwise.
 
 ### GetTimestampOk
 
-`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetTimestampOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetTimestampOk() (*int64, bool)`
 
 GetTimestampOk returns a tuple with the Timestamp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimestamp
 
-`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) SetTimestamp(v float64)`
+`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) SetTimestamp(v int64)`
 
 SetTimestamp sets Timestamp field to given value.
 
@@ -79,20 +79,20 @@ HasType returns a boolean if a field has been set.
 
 ### GetVisits
 
-`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetVisits() float64`
+`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetVisits() int64`
 
 GetVisits returns the Visits field if non-nil, zero value otherwise.
 
 ### GetVisitsOk
 
-`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetVisitsOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) GetVisitsOk() (*int64, bool)`
 
 GetVisitsOk returns a tuple with the Visits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVisits
 
-`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) SetVisits(v float64)`
+`func (o *SkyBlockProfileMemberRiftGallerySecuredTrophiesInner) SetVisits(v int64)`
 
 SetVisits sets Visits field to given value.
 

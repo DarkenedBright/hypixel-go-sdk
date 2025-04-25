@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StepIndex** | Pointer to **float64** |  | [optional] 
+**StepIndex** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetStepIndex
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) GetStepIndex() float64`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) GetStepIndex() int64`
 
 GetStepIndex returns the StepIndex field if non-nil, zero value otherwise.
 
 ### GetStepIndexOk
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) GetStepIndexOk() (*float64, bool)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) GetStepIndexOk() (*int64, bool)`
 
 GetStepIndexOk returns a tuple with the StepIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStepIndex
 
-`func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) SetStepIndex(v float64)`
+`func (o *SkyBlockProfileMemberRiftVillagePlazaSeraphine) SetStepIndex(v int64)`
 
 SetStepIndex sets StepIndex field to given value.
 

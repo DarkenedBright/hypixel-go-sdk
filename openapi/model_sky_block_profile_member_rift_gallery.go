@@ -19,7 +19,7 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftGallery{}
 
 // SkyBlockProfileMemberRiftGallery struct for SkyBlockProfileMemberRiftGallery
 type SkyBlockProfileMemberRiftGallery struct {
-	EliseStep           *float64                                               `json:"elise_step,omitempty"`
+	EliseStep           *int64                                                 `json:"elise_step,omitempty"`
 	SecuredTrophies     []SkyBlockProfileMemberRiftGallerySecuredTrophiesInner `json:"secured_trophies,omitempty"`
 	SentTrophyDialogues []string                                               `json:"sent_trophy_dialogues,omitempty"`
 }
@@ -42,9 +42,9 @@ func NewSkyBlockProfileMemberRiftGalleryWithDefaults() *SkyBlockProfileMemberRif
 }
 
 // GetEliseStep returns the EliseStep field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftGallery) GetEliseStep() float64 {
+func (o *SkyBlockProfileMemberRiftGallery) GetEliseStep() int64 {
 	if o == nil || IsNil(o.EliseStep) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.EliseStep
@@ -52,7 +52,7 @@ func (o *SkyBlockProfileMemberRiftGallery) GetEliseStep() float64 {
 
 // GetEliseStepOk returns a tuple with the EliseStep field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftGallery) GetEliseStepOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftGallery) GetEliseStepOk() (*int64, bool) {
 	if o == nil || IsNil(o.EliseStep) {
 		return nil, false
 	}
@@ -68,8 +68,8 @@ func (o *SkyBlockProfileMemberRiftGallery) HasEliseStep() bool {
 	return false
 }
 
-// SetEliseStep gets a reference to the given float64 and assigns it to the EliseStep field.
-func (o *SkyBlockProfileMemberRiftGallery) SetEliseStep(v float64) {
+// SetEliseStep gets a reference to the given int64 and assigns it to the EliseStep field.
+func (o *SkyBlockProfileMemberRiftGallery) SetEliseStep(v int64) {
 	o.EliseStep = &v
 }
 

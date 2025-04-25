@@ -19,8 +19,8 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftWizardTower{}
 
 // SkyBlockProfileMemberRiftWizardTower struct for SkyBlockProfileMemberRiftWizardTower
 type SkyBlockProfileMemberRiftWizardTower struct {
-	CrumbsLaidOut   *float64 `json:"crumbs_laid_out,omitempty"`
-	WizardQuestStep *float64 `json:"wizard_quest_step,omitempty"`
+	CrumbsLaidOut   *int64 `json:"crumbs_laid_out,omitempty"`
+	WizardQuestStep *int64 `json:"wizard_quest_step,omitempty"`
 }
 
 // NewSkyBlockProfileMemberRiftWizardTower instantiates a new SkyBlockProfileMemberRiftWizardTower object
@@ -41,9 +41,9 @@ func NewSkyBlockProfileMemberRiftWizardTowerWithDefaults() *SkyBlockProfileMembe
 }
 
 // GetCrumbsLaidOut returns the CrumbsLaidOut field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftWizardTower) GetCrumbsLaidOut() float64 {
+func (o *SkyBlockProfileMemberRiftWizardTower) GetCrumbsLaidOut() int64 {
 	if o == nil || IsNil(o.CrumbsLaidOut) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.CrumbsLaidOut
@@ -51,7 +51,7 @@ func (o *SkyBlockProfileMemberRiftWizardTower) GetCrumbsLaidOut() float64 {
 
 // GetCrumbsLaidOutOk returns a tuple with the CrumbsLaidOut field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftWizardTower) GetCrumbsLaidOutOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftWizardTower) GetCrumbsLaidOutOk() (*int64, bool) {
 	if o == nil || IsNil(o.CrumbsLaidOut) {
 		return nil, false
 	}
@@ -67,15 +67,15 @@ func (o *SkyBlockProfileMemberRiftWizardTower) HasCrumbsLaidOut() bool {
 	return false
 }
 
-// SetCrumbsLaidOut gets a reference to the given float64 and assigns it to the CrumbsLaidOut field.
-func (o *SkyBlockProfileMemberRiftWizardTower) SetCrumbsLaidOut(v float64) {
+// SetCrumbsLaidOut gets a reference to the given int64 and assigns it to the CrumbsLaidOut field.
+func (o *SkyBlockProfileMemberRiftWizardTower) SetCrumbsLaidOut(v int64) {
 	o.CrumbsLaidOut = &v
 }
 
 // GetWizardQuestStep returns the WizardQuestStep field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberRiftWizardTower) GetWizardQuestStep() float64 {
+func (o *SkyBlockProfileMemberRiftWizardTower) GetWizardQuestStep() int64 {
 	if o == nil || IsNil(o.WizardQuestStep) {
-		var ret float64
+		var ret int64
 		return ret
 	}
 	return *o.WizardQuestStep
@@ -83,7 +83,7 @@ func (o *SkyBlockProfileMemberRiftWizardTower) GetWizardQuestStep() float64 {
 
 // GetWizardQuestStepOk returns a tuple with the WizardQuestStep field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberRiftWizardTower) GetWizardQuestStepOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberRiftWizardTower) GetWizardQuestStepOk() (*int64, bool) {
 	if o == nil || IsNil(o.WizardQuestStep) {
 		return nil, false
 	}
@@ -99,8 +99,8 @@ func (o *SkyBlockProfileMemberRiftWizardTower) HasWizardQuestStep() bool {
 	return false
 }
 
-// SetWizardQuestStep gets a reference to the given float64 and assigns it to the WizardQuestStep field.
-func (o *SkyBlockProfileMemberRiftWizardTower) SetWizardQuestStep(v float64) {
+// SetWizardQuestStep gets a reference to the given int64 and assigns it to the WizardQuestStep field.
+func (o *SkyBlockProfileMemberRiftWizardTower) SetWizardQuestStep(v int64) {
 	o.WizardQuestStep = &v
 }
 
