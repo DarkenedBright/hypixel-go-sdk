@@ -6,10 +6,35 @@ default: generate
 
 generate:
 	@echo -n "Running 'openapi-generator generate'..."
-	@openapi-generator generate -i ./swagger.json --git-repo-id hypixel-go-sdk --git-user-id DarkenedBright -g go -o . || { echo " FAILED"; exit 1; }
+	@openapi-generator generate \
+		--input-spec api/swagger.json \
+		--git-host github.com \
+		--git-repo-id hypixel-go-sdk \
+		--git-user-id DarkenedBright \
+		--generator-name go \
+		--type-mappings=integer=int64,number=float64 \
+		--additional-properties=enumClassPrefix=true,useOneOfDiscriminatorLookup=true,withGoMod=false \
+		--output openapi \
+		|| { echo " FAILED"; exit 1; }
+
+	@echo -n "Removing generated test files..."
+	@if rm -r openapi/test; then \
+		echo " SUCCESS"; \
+	else \
+		echo " FAILED"; \
+		exit 1; \
+	fi
 
 	@echo -n "Running 'go mod tidy'..."
 	@if go mod tidy; then \
+		echo " SUCCESS"; \
+	else \
+		echo " FAILED"; \
+		exit 1; \
+	fi
+
+	@echo -n "Running 'go fmt'..."
+	@if go fmt ./...; then \
 		echo " SUCCESS"; \
 	else \
 		echo " FAILED"; \
