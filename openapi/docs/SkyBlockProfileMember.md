@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **Events** | Pointer to [**SkyBlockProfileMemberEvents**](SkyBlockProfileMemberEvents.md) |  | [optional] 
 **Experimentation** | Pointer to [**SkyBlockProfileMemberExperimentation**](SkyBlockProfileMemberExperimentation.md) |  | [optional] 
 **FairySoul** | Pointer to [**SkyBlockProfileMemberFairySoul**](SkyBlockProfileMemberFairySoul.md) |  | [optional] 
+**Forge** | Pointer to [**SkyBlockProfileMemberForge**](SkyBlockProfileMemberForge.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -233,6 +234,31 @@ SetFairySoul sets FairySoul field to given value.
 `func (o *SkyBlockProfileMember) HasFairySoul() bool`
 
 HasFairySoul returns a boolean if a field has been set.
+
+### GetForge
+
+`func (o *SkyBlockProfileMember) GetForge() SkyBlockProfileMemberForge`
+
+GetForge returns the Forge field if non-nil, zero value otherwise.
+
+### GetForgeOk
+
+`func (o *SkyBlockProfileMember) GetForgeOk() (*SkyBlockProfileMemberForge, bool)`
+
+GetForgeOk returns a tuple with the Forge field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetForge
+
+`func (o *SkyBlockProfileMember) SetForge(v SkyBlockProfileMemberForge)`
+
+SetForge sets Forge field to given value.
+
+### HasForge
+
+`func (o *SkyBlockProfileMember) HasForge() bool`
+
+HasForge returns a boolean if a field has been set.
 
 ### GetPlayerId
 

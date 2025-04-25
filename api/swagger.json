@@ -603,6 +603,9 @@
                     "fairy_soul": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberFairySoul"
                     },
+                    "forge": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberForge"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -1494,6 +1497,53 @@
                     },
                     "unspent_souls": {
                         "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberForge": {
+                "properties": {
+                    "forge_processes": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberForgeProcesses"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberForgeProcesses": {
+                "additionalProperties": {
+                    "$ref": "#/components/schemas/SkyBlockProfileMemberForgeProcessesProcess"
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberForgeProcessesProcess": {
+                "additionalProperties": {
+                    "$ref": "#/components/schemas/SkyBlockProfileMemberForgeProcessesProcessSlot"
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberForgeProcessesProcessSlot": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "notified": {
+                        "type": "boolean"
+                    },
+                    "oldItem": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "processTimeModifier": {
+                        "type": "integer"
+                    },
+                    "slot": {
+                        "type": "integer"
+                    },
+                    "startTime": {
+                        "type": "integer"
+                    },
+                    "type": {
+                        "type": "string"
                     }
                 },
                 "type": "object"

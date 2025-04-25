@@ -950,6 +950,9 @@ components:
                 claims_3: 1
                 claims_0: 1
                 claims_1: 3
+            forge:
+              forge_processes:
+                key: null
             dungeons:
               selected_dungeon_class: selected_dungeon_class
               dungeon_types:
@@ -1411,6 +1414,9 @@ components:
             claims_3: 1
             claims_0: 1
             claims_1: 3
+        forge:
+          forge_processes:
+            key: null
         dungeons:
           selected_dungeon_class: selected_dungeon_class
           dungeon_types:
@@ -1691,6 +1697,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberExperimentation'
         fairy_soul:
           $ref: '#/components/schemas/SkyBlockProfileMemberFairySoul'
+        forge:
+          $ref: '#/components/schemas/SkyBlockProfileMemberForge'
         player_id:
           format: uuid
           type: string
@@ -2967,6 +2975,42 @@ components:
         unspent_souls:
           type: integer
       type: object
+    SkyBlockProfileMemberForge:
+      example:
+        forge_processes:
+          key: null
+      properties:
+        forge_processes:
+          additionalProperties:
+            $ref: '#/components/schemas/SkyBlockProfileMemberForgeProcessesProcess'
+          type: object
+      type: object
+    SkyBlockProfileMemberForgeProcesses:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberForgeProcessesProcess'
+      type: object
+    SkyBlockProfileMemberForgeProcessesProcess:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberForgeProcessesProcessSlot'
+      type: object
+    SkyBlockProfileMemberForgeProcessesProcessSlot:
+      properties:
+        id:
+          type: string
+        notified:
+          type: boolean
+        oldItem:
+          nullable: true
+          type: string
+        processTimeModifier:
+          type: integer
+        slot:
+          type: integer
+        startTime:
+          type: integer
+        type:
+          type: string
+      type: object
     SkyBlockProfileMemberRift:
       example:
         wizard_tower:
@@ -4032,6 +4076,9 @@ components:
                   claims_3: 1
                   claims_0: 1
                   claims_1: 3
+              forge:
+                forge_processes:
+                  key: null
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
@@ -4475,6 +4522,9 @@ components:
                   claims_3: 1
                   claims_0: 1
                   claims_1: 3
+              forge:
+                forge_processes:
+                  key: null
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
@@ -4908,6 +4958,9 @@ components:
                   claims_3: 1
                   claims_0: 1
                   claims_1: 3
+              forge:
+                forge_processes:
+                  key: null
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
