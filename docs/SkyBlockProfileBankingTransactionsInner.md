@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timestamp** | Pointer to **int64** |  | [optional] 
+**Timestamp** | Pointer to **float32** |  | [optional] 
 **Action** | Pointer to **string** |  | [optional] 
 **InitiatorName** | Pointer to **string** |  | [optional] 
 **Amount** | Pointer to **float64** |  | [optional] 
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetTimestamp
 
-`func (o *SkyBlockProfileBankingTransactionsInner) GetTimestamp() int64`
+`func (o *SkyBlockProfileBankingTransactionsInner) GetTimestamp() float32`
 
 GetTimestamp returns the Timestamp field if non-nil, zero value otherwise.
 
 ### GetTimestampOk
 
-`func (o *SkyBlockProfileBankingTransactionsInner) GetTimestampOk() (*int64, bool)`
+`func (o *SkyBlockProfileBankingTransactionsInner) GetTimestampOk() (*float32, bool)`
 
 GetTimestampOk returns a tuple with the Timestamp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimestamp
 
-`func (o *SkyBlockProfileBankingTransactionsInner) SetTimestamp(v int64)`
+`func (o *SkyBlockProfileBankingTransactionsInner) SetTimestamp(v float32)`
 
 SetTimestamp sets Timestamp field to given value.
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ProfileId** | Pointer to **string** |  | [optional] 
-**Members** | Pointer to [**SkyBlockProfileMembers**](SkyBlockProfileMembers.md) |  | [optional] 
+**Members** | Pointer to [**map[string]SkyBlockProfileMember**](SkyBlockProfileMember.md) | A map of profile member UUIDs to profile member objects | [optional] 
 **CuteName** | Pointer to **NullableString** | The cute name of the profile, only provided on the profiles endpoint | [optional] 
 **Selected** | Pointer to **NullableBool** | Whether or not this is the currently selected profile, only provided on the profiles endpoint | [optional] 
 **CommunityUpgrades** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -58,20 +58,20 @@ HasProfileId returns a boolean if a field has been set.
 
 ### GetMembers
 
-`func (o *SkyBlockProfile) GetMembers() SkyBlockProfileMembers`
+`func (o *SkyBlockProfile) GetMembers() map[string]SkyBlockProfileMember`
 
 GetMembers returns the Members field if non-nil, zero value otherwise.
 
 ### GetMembersOk
 
-`func (o *SkyBlockProfile) GetMembersOk() (*SkyBlockProfileMembers, bool)`
+`func (o *SkyBlockProfile) GetMembersOk() (*map[string]SkyBlockProfileMember, bool)`
 
 GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMembers
 
-`func (o *SkyBlockProfile) SetMembers(v SkyBlockProfileMembers)`
+`func (o *SkyBlockProfile) SetMembers(v map[string]SkyBlockProfileMember)`
 
 SetMembers sets Members field to given value.
 

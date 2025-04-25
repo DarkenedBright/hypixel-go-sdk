@@ -19,7 +19,7 @@ var _ MappedNullable = &SkyBlockMuseum{}
 
 // SkyBlockMuseum struct for SkyBlockMuseum
 type SkyBlockMuseum struct {
-	Value *int64 `json:"value,omitempty"`
+	Value *float32 `json:"value,omitempty"`
 	Appraisal *bool `json:"appraisal,omitempty"`
 	Items map[string]interface{} `json:"items,omitempty"`
 	Special []SkyBlockMuseumSpecialInner `json:"special,omitempty"`
@@ -43,9 +43,9 @@ func NewSkyBlockMuseumWithDefaults() *SkyBlockMuseum {
 }
 
 // GetValue returns the Value field value if set, zero value otherwise.
-func (o *SkyBlockMuseum) GetValue() int64 {
+func (o *SkyBlockMuseum) GetValue() float32 {
 	if o == nil || IsNil(o.Value) {
-		var ret int64
+		var ret float32
 		return ret
 	}
 	return *o.Value
@@ -53,7 +53,7 @@ func (o *SkyBlockMuseum) GetValue() int64 {
 
 // GetValueOk returns a tuple with the Value field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockMuseum) GetValueOk() (*int64, bool) {
+func (o *SkyBlockMuseum) GetValueOk() (*float32, bool) {
 	if o == nil || IsNil(o.Value) {
 		return nil, false
 	}
@@ -69,8 +69,8 @@ func (o *SkyBlockMuseum) HasValue() bool {
 	return false
 }
 
-// SetValue gets a reference to the given int64 and assigns it to the Value field.
-func (o *SkyBlockMuseum) SetValue(v int64) {
+// SetValue gets a reference to the given float32 and assigns it to the Value field.
+func (o *SkyBlockMuseum) SetValue(v float32) {
 	o.Value = &v
 }
 

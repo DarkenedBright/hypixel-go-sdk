@@ -19,7 +19,7 @@ var _ MappedNullable = &SkyBlockMuseumSpecialInner{}
 
 // SkyBlockMuseumSpecialInner struct for SkyBlockMuseumSpecialInner
 type SkyBlockMuseumSpecialInner struct {
-	DonatedTime *int64 `json:"donated_time,omitempty"`
+	DonatedTime *float32 `json:"donated_time,omitempty"`
 	Items map[string]interface{} `json:"items,omitempty"`
 }
 
@@ -41,9 +41,9 @@ func NewSkyBlockMuseumSpecialInnerWithDefaults() *SkyBlockMuseumSpecialInner {
 }
 
 // GetDonatedTime returns the DonatedTime field value if set, zero value otherwise.
-func (o *SkyBlockMuseumSpecialInner) GetDonatedTime() int64 {
+func (o *SkyBlockMuseumSpecialInner) GetDonatedTime() float32 {
 	if o == nil || IsNil(o.DonatedTime) {
-		var ret int64
+		var ret float32
 		return ret
 	}
 	return *o.DonatedTime
@@ -51,7 +51,7 @@ func (o *SkyBlockMuseumSpecialInner) GetDonatedTime() int64 {
 
 // GetDonatedTimeOk returns a tuple with the DonatedTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockMuseumSpecialInner) GetDonatedTimeOk() (*int64, bool) {
+func (o *SkyBlockMuseumSpecialInner) GetDonatedTimeOk() (*float32, bool) {
 	if o == nil || IsNil(o.DonatedTime) {
 		return nil, false
 	}
@@ -67,8 +67,8 @@ func (o *SkyBlockMuseumSpecialInner) HasDonatedTime() bool {
 	return false
 }
 
-// SetDonatedTime gets a reference to the given int64 and assigns it to the DonatedTime field.
-func (o *SkyBlockMuseumSpecialInner) SetDonatedTime(v int64) {
+// SetDonatedTime gets a reference to the given float32 and assigns it to the DonatedTime field.
+func (o *SkyBlockMuseumSpecialInner) SetDonatedTime(v float32) {
 	o.DonatedTime = &v
 }
 

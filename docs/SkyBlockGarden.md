@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **ResourcesCollected** | Pointer to **map[string]interface{}** | A map of resource ID to amount collected | [optional] 
 **CropUpgradeLevels** | Pointer to **map[string]interface{}** |  | [optional] 
 **UnlockedPlotsIds** | Pointer to **[]string** |  | [optional] 
-**GardenExperience** | Pointer to **int32** |  | [optional] 
+**GardenExperience** | Pointer to **float64** |  | [optional] 
 **UnlockedBarnSkins** | Pointer to **[]string** |  | [optional] 
 **SelectedBarnSkin** | Pointer to **string** |  | [optional] 
 
@@ -206,20 +206,20 @@ HasUnlockedPlotsIds returns a boolean if a field has been set.
 
 ### GetGardenExperience
 
-`func (o *SkyBlockGarden) GetGardenExperience() int32`
+`func (o *SkyBlockGarden) GetGardenExperience() float64`
 
 GetGardenExperience returns the GardenExperience field if non-nil, zero value otherwise.
 
 ### GetGardenExperienceOk
 
-`func (o *SkyBlockGarden) GetGardenExperienceOk() (*int32, bool)`
+`func (o *SkyBlockGarden) GetGardenExperienceOk() (*float64, bool)`
 
 GetGardenExperienceOk returns a tuple with the GardenExperience field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGardenExperience
 
-`func (o *SkyBlockGarden) SetGardenExperience(v int32)`
+`func (o *SkyBlockGarden) SetGardenExperience(v float64)`
 
 SetGardenExperience sets GardenExperience field to given value.
 

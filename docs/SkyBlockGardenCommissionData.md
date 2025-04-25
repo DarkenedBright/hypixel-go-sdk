@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Visits** | Pointer to **map[string]interface{}** | A map of visitor identifier to visit count | [optional] 
 **Completed** | Pointer to **map[string]interface{}** | A map of visitor identifier to completed count | [optional] 
-**TotalCompleted** | Pointer to **int32** |  | [optional] 
-**UniqueNpcsServed** | Pointer to **int32** |  | [optional] 
+**TotalCompleted** | Pointer to **float32** |  | [optional] 
+**UniqueNpcsServed** | Pointer to **float32** |  | [optional] 
 
 ## Methods
 
@@ -80,20 +80,20 @@ HasCompleted returns a boolean if a field has been set.
 
 ### GetTotalCompleted
 
-`func (o *SkyBlockGardenCommissionData) GetTotalCompleted() int32`
+`func (o *SkyBlockGardenCommissionData) GetTotalCompleted() float32`
 
 GetTotalCompleted returns the TotalCompleted field if non-nil, zero value otherwise.
 
 ### GetTotalCompletedOk
 
-`func (o *SkyBlockGardenCommissionData) GetTotalCompletedOk() (*int32, bool)`
+`func (o *SkyBlockGardenCommissionData) GetTotalCompletedOk() (*float32, bool)`
 
 GetTotalCompletedOk returns a tuple with the TotalCompleted field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalCompleted
 
-`func (o *SkyBlockGardenCommissionData) SetTotalCompleted(v int32)`
+`func (o *SkyBlockGardenCommissionData) SetTotalCompleted(v float32)`
 
 SetTotalCompleted sets TotalCompleted field to given value.
 
@@ -105,20 +105,20 @@ HasTotalCompleted returns a boolean if a field has been set.
 
 ### GetUniqueNpcsServed
 
-`func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServed() int32`
+`func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServed() float32`
 
 GetUniqueNpcsServed returns the UniqueNpcsServed field if non-nil, zero value otherwise.
 
 ### GetUniqueNpcsServedOk
 
-`func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServedOk() (*int32, bool)`
+`func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServedOk() (*float32, bool)`
 
 GetUniqueNpcsServedOk returns a tuple with the UniqueNpcsServed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUniqueNpcsServed
 
-`func (o *SkyBlockGardenCommissionData) SetUniqueNpcsServed(v int32)`
+`func (o *SkyBlockGardenCommissionData) SetUniqueNpcsServed(v float32)`
 
 SetUniqueNpcsServed sets UniqueNpcsServed field to given value.
 

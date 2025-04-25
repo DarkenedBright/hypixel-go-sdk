@@ -30,7 +30,7 @@ type SkyBlockGarden struct {
 	ResourcesCollected map[string]interface{} `json:"resources_collected,omitempty"`
 	CropUpgradeLevels map[string]interface{} `json:"crop_upgrade_levels,omitempty"`
 	UnlockedPlotsIds []string `json:"unlocked_plots_ids,omitempty"`
-	GardenExperience *int32 `json:"garden_experience,omitempty"`
+	GardenExperience *float64 `json:"garden_experience,omitempty"`
 	UnlockedBarnSkins []string `json:"unlocked_barn_skins,omitempty"`
 	SelectedBarnSkin *string `json:"selected_barn_skin,omitempty"`
 }
@@ -272,9 +272,9 @@ func (o *SkyBlockGarden) SetUnlockedPlotsIds(v []string) {
 }
 
 // GetGardenExperience returns the GardenExperience field value if set, zero value otherwise.
-func (o *SkyBlockGarden) GetGardenExperience() int32 {
+func (o *SkyBlockGarden) GetGardenExperience() float64 {
 	if o == nil || IsNil(o.GardenExperience) {
-		var ret int32
+		var ret float64
 		return ret
 	}
 	return *o.GardenExperience
@@ -282,7 +282,7 @@ func (o *SkyBlockGarden) GetGardenExperience() int32 {
 
 // GetGardenExperienceOk returns a tuple with the GardenExperience field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockGarden) GetGardenExperienceOk() (*int32, bool) {
+func (o *SkyBlockGarden) GetGardenExperienceOk() (*float64, bool) {
 	if o == nil || IsNil(o.GardenExperience) {
 		return nil, false
 	}
@@ -298,8 +298,8 @@ func (o *SkyBlockGarden) HasGardenExperience() bool {
 	return false
 }
 
-// SetGardenExperience gets a reference to the given int32 and assigns it to the GardenExperience field.
-func (o *SkyBlockGarden) SetGardenExperience(v int32) {
+// SetGardenExperience gets a reference to the given float64 and assigns it to the GardenExperience field.
+func (o *SkyBlockGarden) SetGardenExperience(v float64) {
 	o.GardenExperience = &v
 }
 

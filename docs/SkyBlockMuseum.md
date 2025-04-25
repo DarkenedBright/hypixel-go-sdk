@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Value** | Pointer to **int64** |  | [optional] 
+**Value** | Pointer to **float32** |  | [optional] 
 **Appraisal** | Pointer to **bool** |  | [optional] 
 **Items** | Pointer to **map[string]interface{}** |  | [optional] 
 **Special** | Pointer to [**[]SkyBlockMuseumSpecialInner**](SkyBlockMuseumSpecialInner.md) |  | [optional] 
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetValue
 
-`func (o *SkyBlockMuseum) GetValue() int64`
+`func (o *SkyBlockMuseum) GetValue() float32`
 
 GetValue returns the Value field if non-nil, zero value otherwise.
 
 ### GetValueOk
 
-`func (o *SkyBlockMuseum) GetValueOk() (*int64, bool)`
+`func (o *SkyBlockMuseum) GetValueOk() (*float32, bool)`
 
 GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValue
 
-`func (o *SkyBlockMuseum) SetValue(v int64)`
+`func (o *SkyBlockMuseum) SetValue(v float32)`
 
 SetValue sets Value field to given value.
 

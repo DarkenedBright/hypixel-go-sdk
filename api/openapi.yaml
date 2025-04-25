@@ -66,286 +66,6 @@ info:
 servers:
 - url: https://api.hypixel.net
 paths:
-  /v2/player:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: uuid
-        required: true
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_200_response'
-          description: Get player's data
-        "400":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_400_response'
-          description: "Some data is missing, this is usually a field."
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-      security:
-      - ApiKey: []
-      summary: "Data of a specific player, including game stats"
-      tags:
-      - Player Data
-  /v2/recentgames:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: uuid
-        required: true
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_recentgames_get_200_response'
-          description: Get player's recent game
-        "400":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_400_response'
-          description: "Some data is missing, this is usually a field."
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_recentgames_get_422_response'
-          description: Some data provided is invalid.
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-      security:
-      - ApiKey: []
-      summary: The recently played games of a specific player
-      tags:
-      - Player Data
-  /v2/status:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: uuid
-        required: true
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_status_get_200_response'
-          description: Get player status
-        "400":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_400_response'
-          description: "Some data is missing, this is usually a field."
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-      security:
-      - ApiKey: []
-      summary: The current online status of a specific player
-      tags:
-      - Player Data
-  /v2/guild:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: id
-        required: false
-        schema:
-          format: objectid
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: player
-        required: false
-        schema:
-          format: uuid
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: name
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_guild_get_200_response'
-          description: Get guild information
-        "400":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_400_response'
-          description: "Some data is missing, this is usually a field."
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-      security:
-      - ApiKey: []
-      summary: "Retrieve a Guild by a player, id, or name"
-      tags:
-      - Player Data
-  /v2/resources/games:
-    get:
-      description: Returns information about Hypixel Games. This endpoint is in early
-        development and we are working to add more information when possible <a href="https://github.com/HypixelDev/PublicAPI/discussions/197#discussioncomment-1047648">HypixelDev/PublicAPI#197</a>
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_resources_games_get_200_response'
-          description: A successful response
-      summary: Game Information
-      tags:
-      - Resources
-  /v2/resources/achievements:
-    get:
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_resources_achievements_get_200_response'
-          description: A successful response
-      summary: Achievements
-      tags:
-      - Resources
-  /v2/resources/challenges:
-    get:
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_resources_challenges_get_200_response'
-          description: A successful response
-      summary: Challenges
-      tags:
-      - Resources
-  /v2/resources/quests:
-    get:
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_resources_quests_get_200_response'
-          description: A successful response
-      summary: Quests
-      tags:
-      - Resources
-  /v2/resources/guilds/achievements:
-    get:
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_resources_guilds_achievements_get_200_response'
-          description: A successful response
-      summary: Guild Achievements
-      tags:
-      - Resources
-  /v2/resources/vanity/pets:
-    get:
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_resources_vanity_pets_get_200_response'
-          description: A successful response
-      summary: Vanity Pets
-      tags:
-      - Resources
-  /v2/resources/vanity/companions:
-    get:
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_resources_vanity_pets_get_200_response'
-          description: A successful response
-      summary: Vanity Companions
-      tags:
-      - Resources
   /v2/resources/skyblock/collections:
     get:
       description: Information regarding Collections in the SkyBlock game.
@@ -425,14 +145,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -465,26 +185,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_400_response'
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_400_response'
           description: "Some data is missing, this is usually a field."
         "403":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_recentgames_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -515,26 +235,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_400_response'
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_400_response'
           description: "Some data is missing, this is usually a field."
         "403":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_recentgames_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -567,20 +287,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_recentgames_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -612,7 +332,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "404":
@@ -625,13 +345,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_recentgames_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -663,13 +383,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_400_response'
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_400_response'
           description: "Some data is missing, this is usually a field."
         "403":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "404":
@@ -682,13 +402,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_recentgames_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -710,271 +430,25 @@ paths:
       summary: Active/Upcoming Fire Sales
       tags:
       - SkyBlock
-  /v2/housing/active:
-    get:
-      description: This data may be cached for a short period of time.
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/HousingHouse'
-                type: array
-          description: A successful response
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-      security:
-      - ApiKey: []
-      summary: The currently active public houses.
-      tags:
-      - Housing
-  /v2/housing/house:
-    get:
-      description: This data may be cached for a short period of time.
-      parameters:
-      - description: The UUID of the house to get information about.
-        explode: true
-        in: query
-        name: house
-        required: true
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HousingHouse'
-          description: A successful response
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_404_response'
-          description: The request responded with no result.
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-      security:
-      - ApiKey: []
-      summary: Information about a specific house.
-      tags:
-      - Housing
-  /v2/housing/houses:
-    get:
-      description: This data may be cached for a short period of time.
-      parameters:
-      - description: The UUID of the player to get houses for.
-        explode: true
-        in: query
-        name: player
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/HousingHouse'
-                type: array
-          description: A successful response
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-      security:
-      - ApiKey: []
-      summary: The public houses for a specific player.
-      tags:
-      - Housing
-  /v2/boosters:
-    get:
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_boosters_get_200_response'
-          description: Get boosters list
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-      security:
-      - ApiKey: []
-      summary: Active Network Boosters
-      tags:
-      - Other
-  /v2/counts:
-    get:
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_counts_get_200_response'
-          description: A successful response
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-      security:
-      - ApiKey: []
-      summary: Current Player Counts
-      tags:
-      - Other
-  /v2/leaderboards:
-    get:
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_leaderboards_get_200_response'
-          description: A successful response
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-        "503":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_leaderboards_get_503_response'
-          description: The data is not yet populated and should be available shortly
-      security:
-      - ApiKey: []
-      summary: Current Leaderboards
-      tags:
-      - Other
-  /v2/punishmentstats:
-    get:
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_punishmentstats_get_200_response'
-          description: A successful response
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_403_response'
-          description: "Access is forbidden, usually due to an invalid API key being\
-            \ used."
-        "429":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_player_get_429_response'
-          description: "A request limit has been reached, usually this is due to the\
-            \ limit on the key being reached but can also be triggered by a global\
-            \ throttle."
-        "503":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/_v2_leaderboards_get_503_response'
-          description: The data is not yet populated and should be available shortly
-      security:
-      - ApiKey: []
-      summary: Punishment Statistics
-      tags:
-      - Other
 components:
   responses:
     DataMissing:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_player_get_400_response'
+            $ref: '#/components/schemas/_v2_skyblock_profile_get_400_response'
       description: "Some data is missing, this is usually a field."
     InvalidKey:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_player_get_403_response'
+            $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
       description: "Access is forbidden, usually due to an invalid API key being used."
     RateLimited:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_player_get_429_response'
+            $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
       description: "A request limit has been reached, usually this is due to the limit\
         \ on the key being reached but can also be triggered by a global throttle."
     InvalidPage:
@@ -993,13 +467,13 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_recentgames_get_422_response'
+            $ref: '#/components/schemas/_v2_skyblock_profile_get_422_response'
       description: Some data provided is invalid.
     NotPopulated:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_leaderboards_get_503_response'
+            $ref: '#/components/schemas/inline_object_2'
       description: The data is not yet populated and should be available shortly
     NoResult:
       content:
@@ -1008,25 +482,6 @@ components:
             $ref: '#/components/schemas/_v2_skyblock_garden_get_404_response'
       description: The request responded with no result.
   schemas:
-    Booster:
-      properties:
-        _id:
-          format: objectid
-          type: string
-        purchaserUuid:
-          format: uuid
-          type: string
-        amount:
-          type: number
-        originalLength:
-          type: integer
-        length:
-          type: integer
-        gameType:
-          type: integer
-        dateActivated:
-          format: int64
-          type: integer
     ActiveBooster:
       allOf:
       - $ref: '#/components/schemas/Booster'
@@ -1040,17 +495,29 @@ components:
             nullable: true
             type: array
         type: object
-      example:
-        gameType: 5
-        amount: 0.8008281904610115
-        stacked:
-        - ad8fefaa-8351-454b-b739-a4eaa872173f
-        - ad8fefaa-8351-454b-b739-a4eaa872173f
-        originalLength: 6
-        length: 1
-        purchaserUuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        dateActivated: 5
-        _id: _id
+    Booster:
+      properties:
+        _id:
+          format: objectid
+          type: string
+        purchaserUuid:
+          format: uuid
+          type: string
+        amount:
+          format: int64
+          type: number
+        originalLength:
+          format: int64
+          type: number
+        length:
+          format: int64
+          type: number
+        gameType:
+          format: int64
+          type: number
+        dateActivated:
+          format: int64
+          type: number
     QueuedBooster:
       allOf:
       - $ref: '#/components/schemas/Booster'
@@ -1063,31 +530,124 @@ components:
       example:
         profile_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         members:
-          player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          profile:
-            deletion_notice:
-              timestamp: 0
+          key:
+            rift:
+              wizard_tower:
+                wizard_quest_step: 6.84685269835264
+                crumbs_laid_out: 1.4894159098541704
+              enigma:
+                found_souls:
+                - BACK2BASICS
+                - BACK2BASICS
+                bought_cloak: true
+                claimed_bonus_index: 5.962133916683182
+              black_lagoon:
+                received_science_paper: true
+                delivered_science_paper: true
+                completed_step: 0.8008281904610115
+                talked_to_edwin: true
+              dead_cats:
+                unlocked_pet: true
+                montezuma:
+                  tier: COMMON
+                  heldItem:
+                    material: LEATHER_CHESTPLATE
+                    color: "255,215,0"
+                    name: Farm Armor Chestplate
+                    category: CHESTPLATE
+                    tier: RARE
+                    stats:
+                      DEFENSE: 75
+                      HEALTH: 20
+                    npc_sell_price: 5200
+                    id: FARM_ARMOR_CHESTPLATE
+                  skin:
+                    material: LEATHER_CHESTPLATE
+                    color: "255,215,0"
+                    name: Farm Armor Chestplate
+                    category: CHESTPLATE
+                    tier: RARE
+                    stats:
+                      DEFENSE: 75
+                      HEALTH: 20
+                    npc_sell_price: 5200
+                    id: FARM_ARMOR_CHESTPLATE
+                  active: true
+                  exp: 1.4658129805029452
+                  type: FRACTURED_MONTEZUMA_SOUL
+                  uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  candyUsed: 6.027456183070403
+                  uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                found_cats:
+                - eight
+                - eight
+                picked_up_detector: true
+                talked_to_jacquelle: true
+              village_plaza:
+                murder:
+                  step_index_pt3: 1.2315135367772556
+                  step_index: 4.145608029883936
+                  step_index_pt2: 7.386281948385884
+                  room_clues:
+                  - blood
+                  - blood
+                cowboy:
+                  stage: 3.616076749251911
+                  hay_eaten: 9.301444243932576
+                  rabbit_name: rabbit_name
+                barter_bank: "{}"
+                got_scammed: true
+                seraphine:
+                  step_index: 1.0246457001441578
+                lonely:
+                  seconds_sitting: 2.027123023002322
+                barry_center:
+                  first_talk_to_barry: true
+                  convinced:
+                  - creed
+                  - creed
+                  received_reward: true
+              wither_cage:
+                killed_eyes:
+                - castle
+                - castle
+              gallery:
+                sent_trophy_dialogues:
+                - sent_trophy_dialogues
+                - sent_trophy_dialogues
+                elise_step: 5.637376656633329
+                secured_trophies:
+                - visits: 7.061401241503109
+                  type: chicken_n_egg
+                  timestamp: 2.3021358869347655
+                - visits: 7.061401241503109
+                  type: chicken_n_egg
+                  timestamp: 2.3021358869347655
+            player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         game_mode: ironman
         community_upgrades: "{}"
         cute_name: cute_name
         selected: true
         banking:
-          balance: 6.027456183070403
+          balance: 7.457744773683766
           transactions:
-          - amount: 5.962133916683182
+          - amount: 4.965218492984954
             action: DEPOSIT
             initiator_name: initiator_name
-            timestamp: 1
-          - amount: 5.962133916683182
+            timestamp: 1.1730742509559433
+          - amount: 4.965218492984954
             action: DEPOSIT
             initiator_name: initiator_name
-            timestamp: 1
+            timestamp: 1.1730742509559433
       properties:
         profile_id:
           format: uuid
           type: string
         members:
-          $ref: '#/components/schemas/SkyBlockProfile_members'
+          additionalProperties:
+            $ref: '#/components/schemas/SkyBlockProfileMember'
+          description: A map of profile member UUIDs to profile member objects
+          type: object
         cute_name:
           description: "The cute name of the profile, only provided on the profiles\
             \ endpoint"
@@ -1112,6 +672,616 @@ components:
           - bingo
           nullable: true
           type: string
+    SkyBlockProfileMember:
+      example:
+        rift:
+          wizard_tower:
+            wizard_quest_step: 6.84685269835264
+            crumbs_laid_out: 1.4894159098541704
+          enigma:
+            found_souls:
+            - BACK2BASICS
+            - BACK2BASICS
+            bought_cloak: true
+            claimed_bonus_index: 5.962133916683182
+          black_lagoon:
+            received_science_paper: true
+            delivered_science_paper: true
+            completed_step: 0.8008281904610115
+            talked_to_edwin: true
+          dead_cats:
+            unlocked_pet: true
+            montezuma:
+              tier: COMMON
+              heldItem:
+                material: LEATHER_CHESTPLATE
+                color: "255,215,0"
+                name: Farm Armor Chestplate
+                category: CHESTPLATE
+                tier: RARE
+                stats:
+                  DEFENSE: 75
+                  HEALTH: 20
+                npc_sell_price: 5200
+                id: FARM_ARMOR_CHESTPLATE
+              skin:
+                material: LEATHER_CHESTPLATE
+                color: "255,215,0"
+                name: Farm Armor Chestplate
+                category: CHESTPLATE
+                tier: RARE
+                stats:
+                  DEFENSE: 75
+                  HEALTH: 20
+                npc_sell_price: 5200
+                id: FARM_ARMOR_CHESTPLATE
+              active: true
+              exp: 1.4658129805029452
+              type: FRACTURED_MONTEZUMA_SOUL
+              uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              candyUsed: 6.027456183070403
+              uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            found_cats:
+            - eight
+            - eight
+            picked_up_detector: true
+            talked_to_jacquelle: true
+          village_plaza:
+            murder:
+              step_index_pt3: 1.2315135367772556
+              step_index: 4.145608029883936
+              step_index_pt2: 7.386281948385884
+              room_clues:
+              - blood
+              - blood
+            cowboy:
+              stage: 3.616076749251911
+              hay_eaten: 9.301444243932576
+              rabbit_name: rabbit_name
+            barter_bank: "{}"
+            got_scammed: true
+            seraphine:
+              step_index: 1.0246457001441578
+            lonely:
+              seconds_sitting: 2.027123023002322
+            barry_center:
+              first_talk_to_barry: true
+              convinced:
+              - creed
+              - creed
+              received_reward: true
+          wither_cage:
+            killed_eyes:
+            - castle
+            - castle
+          gallery:
+            sent_trophy_dialogues:
+            - sent_trophy_dialogues
+            - sent_trophy_dialogues
+            elise_step: 5.637376656633329
+            secured_trophies:
+            - visits: 7.061401241503109
+              type: chicken_n_egg
+              timestamp: 2.3021358869347655
+            - visits: 7.061401241503109
+              type: chicken_n_egg
+              timestamp: 2.3021358869347655
+        player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        player_id:
+          format: uuid
+          type: string
+        rift:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRift'
+      type: object
+    SkyBlockProfileMemberRift:
+      example:
+        wizard_tower:
+          wizard_quest_step: 6.84685269835264
+          crumbs_laid_out: 1.4894159098541704
+        enigma:
+          found_souls:
+          - BACK2BASICS
+          - BACK2BASICS
+          bought_cloak: true
+          claimed_bonus_index: 5.962133916683182
+        black_lagoon:
+          received_science_paper: true
+          delivered_science_paper: true
+          completed_step: 0.8008281904610115
+          talked_to_edwin: true
+        dead_cats:
+          unlocked_pet: true
+          montezuma:
+            tier: COMMON
+            heldItem:
+              material: LEATHER_CHESTPLATE
+              color: "255,215,0"
+              name: Farm Armor Chestplate
+              category: CHESTPLATE
+              tier: RARE
+              stats:
+                DEFENSE: 75
+                HEALTH: 20
+              npc_sell_price: 5200
+              id: FARM_ARMOR_CHESTPLATE
+            skin:
+              material: LEATHER_CHESTPLATE
+              color: "255,215,0"
+              name: Farm Armor Chestplate
+              category: CHESTPLATE
+              tier: RARE
+              stats:
+                DEFENSE: 75
+                HEALTH: 20
+              npc_sell_price: 5200
+              id: FARM_ARMOR_CHESTPLATE
+            active: true
+            exp: 1.4658129805029452
+            type: FRACTURED_MONTEZUMA_SOUL
+            uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            candyUsed: 6.027456183070403
+            uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          found_cats:
+          - eight
+          - eight
+          picked_up_detector: true
+          talked_to_jacquelle: true
+        village_plaza:
+          murder:
+            step_index_pt3: 1.2315135367772556
+            step_index: 4.145608029883936
+            step_index_pt2: 7.386281948385884
+            room_clues:
+            - blood
+            - blood
+          cowboy:
+            stage: 3.616076749251911
+            hay_eaten: 9.301444243932576
+            rabbit_name: rabbit_name
+          barter_bank: "{}"
+          got_scammed: true
+          seraphine:
+            step_index: 1.0246457001441578
+          lonely:
+            seconds_sitting: 2.027123023002322
+          barry_center:
+            first_talk_to_barry: true
+            convinced:
+            - creed
+            - creed
+            received_reward: true
+        wither_cage:
+          killed_eyes:
+          - castle
+          - castle
+        gallery:
+          sent_trophy_dialogues:
+          - sent_trophy_dialogues
+          - sent_trophy_dialogues
+          elise_step: 5.637376656633329
+          secured_trophies:
+          - visits: 7.061401241503109
+            type: chicken_n_egg
+            timestamp: 2.3021358869347655
+          - visits: 7.061401241503109
+            type: chicken_n_egg
+            timestamp: 2.3021358869347655
+      properties:
+        black_lagoon:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
+        dead_cats:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftDeadCats'
+        enigma:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftEnigma'
+        gallery:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftGallery'
+        village_plaza:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlaza'
+        wither_cage:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWitherCage'
+        wizard_tower:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWizardTower'
+      type: object
+    SkyBlockProfileMemberRiftBlackLagoon:
+      example:
+        received_science_paper: true
+        delivered_science_paper: true
+        completed_step: 0.8008281904610115
+        talked_to_edwin: true
+      properties:
+        completed_step:
+          format: int64
+          type: number
+        delivered_science_paper:
+          type: boolean
+        received_science_paper:
+          type: boolean
+        talked_to_edwin:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftDeadCats:
+      example:
+        unlocked_pet: true
+        montezuma:
+          tier: COMMON
+          heldItem:
+            material: LEATHER_CHESTPLATE
+            color: "255,215,0"
+            name: Farm Armor Chestplate
+            category: CHESTPLATE
+            tier: RARE
+            stats:
+              DEFENSE: 75
+              HEALTH: 20
+            npc_sell_price: 5200
+            id: FARM_ARMOR_CHESTPLATE
+          skin:
+            material: LEATHER_CHESTPLATE
+            color: "255,215,0"
+            name: Farm Armor Chestplate
+            category: CHESTPLATE
+            tier: RARE
+            stats:
+              DEFENSE: 75
+              HEALTH: 20
+            npc_sell_price: 5200
+            id: FARM_ARMOR_CHESTPLATE
+          active: true
+          exp: 1.4658129805029452
+          type: FRACTURED_MONTEZUMA_SOUL
+          uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          candyUsed: 6.027456183070403
+          uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        found_cats:
+        - eight
+        - eight
+        picked_up_detector: true
+        talked_to_jacquelle: true
+      properties:
+        found_cats:
+          items:
+            enum:
+            - eight
+            - fifth
+            - first
+            - fourth
+            - ninth
+            - second
+            - seventh
+            - sixth
+            - third
+            type: string
+          type: array
+        montezuma:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftDeadCatsMontezuma'
+        picked_up_detector:
+          type: boolean
+        talked_to_jacquelle:
+          type: boolean
+        unlocked_pet:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftDeadCatsMontezuma:
+      example:
+        tier: COMMON
+        heldItem:
+          material: LEATHER_CHESTPLATE
+          color: "255,215,0"
+          name: Farm Armor Chestplate
+          category: CHESTPLATE
+          tier: RARE
+          stats:
+            DEFENSE: 75
+            HEALTH: 20
+          npc_sell_price: 5200
+          id: FARM_ARMOR_CHESTPLATE
+        skin:
+          material: LEATHER_CHESTPLATE
+          color: "255,215,0"
+          name: Farm Armor Chestplate
+          category: CHESTPLATE
+          tier: RARE
+          stats:
+            DEFENSE: 75
+            HEALTH: 20
+          npc_sell_price: 5200
+          id: FARM_ARMOR_CHESTPLATE
+        active: true
+        exp: 1.4658129805029452
+        type: FRACTURED_MONTEZUMA_SOUL
+        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        candyUsed: 6.027456183070403
+        uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        active:
+          type: boolean
+        candyUsed:
+          format: int64
+          type: number
+        exp:
+          format: double
+          type: number
+        heldItem:
+          $ref: '#/components/schemas/SkyBlockItem'
+        skin:
+          $ref: '#/components/schemas/SkyBlockItem'
+        tier:
+          enum:
+          - COMMON
+          - EPIC
+          - LEGENDARY
+          - MYTHIC
+          - RARE
+          - UNCOMMON
+          type: string
+        type:
+          enum:
+          - FRACTURED_MONTEZUMA_SOUL
+          type: string
+        uniqueId:
+          format: uuid
+          type: string
+        uuid:
+          format: uuid
+          nullable: true
+          type: string
+      type: object
+    SkyBlockProfileMemberRiftEnigma:
+      example:
+        found_souls:
+        - BACK2BASICS
+        - BACK2BASICS
+        bought_cloak: true
+        claimed_bonus_index: 5.962133916683182
+      properties:
+        bought_cloak:
+          type: boolean
+        claimed_bonus_index:
+          format: int64
+          type: number
+        found_souls:
+          items:
+            enum:
+            - BACK2BASICS
+            - BARK_TREE
+            - BEANSTALK
+            - BETWEEN_BRANCHES
+            - buttons_soul
+            - CASTLE_BALLOONS
+            - CASTLE_FLOWERS
+            - CASTLE_MIDAIR
+            - CASTLE_PHANTOM
+            - COLOSSEUM_PILLARS
+            - DOLPHIN_PARKOUR
+            - FAIRY_TOWER_SOUL
+            - FARM_BALLOONS
+            - FROG_JUMP_PAD
+            - HORSING_AROUND
+            - HOT_DOG_SOUL
+            - LAGOON_PARKOUR
+            - LAGOON_SHOP_SOUL
+            - LEAP_OF_FAITH
+            - LIVING_CAVE_WALL
+            - LONELY_SOUL
+            - LONG_SHROOM
+            - MOUNTAIN_IKRUS
+            - MOUNTAIN_UBIK_BOXES
+            - MOUNTAIN_UBIK_TATS
+            - PIECE_TREE
+            - PLAZA_BALLOONS
+            - PLAZA_MIDAIR
+            - PLAZA_PHANTOM
+            - RABBIT_HAT_SOUL
+            - RIFT_1
+            - RIFT_CAKE
+            - RIFT_CAKE_2
+            - ROCKS_GAME_SOUL
+            - SAY_HI
+            - SCAMMER_SOUL
+            - SOUL_IN_A_BOX
+            - STANDING_THERE
+            - TELKAR
+            - TREE_LAUNCH
+            - TWO_PLAYERS_SOUL
+            - WEST_VILLAGE_KAT
+            - WEST_VILLAGE_MIDAIR
+            - WOODS_FLOWER_POT
+            - WOODS_PHANTOM
+            - WOODS_WATER_SOUL
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberRiftGallery:
+      example:
+        sent_trophy_dialogues:
+        - sent_trophy_dialogues
+        - sent_trophy_dialogues
+        elise_step: 5.637376656633329
+        secured_trophies:
+        - visits: 7.061401241503109
+          type: chicken_n_egg
+          timestamp: 2.3021358869347655
+        - visits: 7.061401241503109
+          type: chicken_n_egg
+          timestamp: 2.3021358869347655
+      properties:
+        elise_step:
+          format: int64
+          type: number
+        secured_trophies:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberRiftGallery_secured_trophies_inner'
+          type: array
+        sent_trophy_dialogues:
+          items:
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberRiftVillagePlaza:
+      example:
+        murder:
+          step_index_pt3: 1.2315135367772556
+          step_index: 4.145608029883936
+          step_index_pt2: 7.386281948385884
+          room_clues:
+          - blood
+          - blood
+        cowboy:
+          stage: 3.616076749251911
+          hay_eaten: 9.301444243932576
+          rabbit_name: rabbit_name
+        barter_bank: "{}"
+        got_scammed: true
+        seraphine:
+          step_index: 1.0246457001441578
+        lonely:
+          seconds_sitting: 2.027123023002322
+        barry_center:
+          first_talk_to_barry: true
+          convinced:
+          - creed
+          - creed
+          received_reward: true
+      properties:
+        barry_center:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarryCenter'
+        barter_bank:
+          properties: {}
+          type: object
+        cowboy:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaCowboy'
+        got_scammed:
+          type: boolean
+        lonely:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaLonely'
+        murder:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaMurder'
+        seraphine:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaSeraphine'
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaBarryCenter:
+      example:
+        first_talk_to_barry: true
+        convinced:
+        - creed
+        - creed
+        received_reward: true
+      properties:
+        convinced:
+          items:
+            enum:
+            - creed
+            - dust
+            - frankie
+            - harriette
+            - soma
+            - stain
+            - violetta
+            type: string
+          type: array
+        first_talk_to_barry:
+          type: boolean
+        received_reward:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaBarterBank:
+      properties: {}
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaCowboy:
+      example:
+        stage: 3.616076749251911
+        hay_eaten: 9.301444243932576
+        rabbit_name: rabbit_name
+      properties:
+        hay_eaten:
+          format: int64
+          type: number
+        rabbit_name:
+          type: string
+        stage:
+          format: int64
+          type: number
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaLonely:
+      example:
+        seconds_sitting: 2.027123023002322
+      properties:
+        seconds_sitting:
+          format: int64
+          type: number
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaMurder:
+      example:
+        step_index_pt3: 1.2315135367772556
+        step_index: 4.145608029883936
+        step_index_pt2: 7.386281948385884
+        room_clues:
+        - blood
+        - blood
+      properties:
+        room_clues:
+          items:
+            enum:
+            - blood
+            - flowers
+            - fridge
+            - letter
+            - painting_1
+            - painting_2
+            - ring
+            - window
+            type: string
+          type: array
+        step_index:
+          format: int64
+          type: number
+        step_index_pt2:
+          format: int64
+          type: number
+        step_index_pt3:
+          format: int64
+          type: number
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaSeraphine:
+      example:
+        step_index: 1.0246457001441578
+      properties:
+        step_index:
+          format: int64
+          type: number
+      type: object
+    SkyBlockProfileMemberRiftWitherCage:
+      example:
+        killed_eyes:
+        - castle
+        - castle
+      properties:
+        killed_eyes:
+          items:
+            enum:
+            - castle
+            - colosseum
+            - dreadfarm
+            - fisherman_hut
+            - mountaintop
+            - plaza
+            - wizard_tower
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberRiftWizardTower:
+      example:
+        wizard_quest_step: 6.84685269835264
+        crumbs_laid_out: 1.4894159098541704
+      properties:
+        crumbs_laid_out:
+          format: int64
+          type: number
+        wizard_quest_step:
+          format: int64
+          type: number
+      type: object
     SkyBlockItem:
       example:
         material: LEATHER_CHESTPLATE
@@ -1158,17 +1328,17 @@ components:
     SkyBlockMuseum:
       example:
         special:
-        - donated_time: 6
+        - donated_time: 6.027456183070403
           items: "{}"
-        - donated_time: 6
+        - donated_time: 6.027456183070403
           items: "{}"
         appraisal: true
-        value: 0
+        value: 0.8008281904610115
         items: "{}"
       properties:
         value:
           format: int64
-          type: integer
+          type: number
         appraisal:
           type: boolean
         items:
@@ -1177,53 +1347,11 @@ components:
           items:
             $ref: '#/components/schemas/SkyBlockMuseum_special_inner'
           type: array
-    Game:
-      description: "Information about a specific game. When a field is not present\
-        \ you should fallback to the provided default if there is one, required fields\
-        \ will always exist."
-      example:
-        id: 58
-        name: Bed Wars
-        databaseName: Bedwars
-        modeNames:
-          BEDWARS_TWO_FOUR: 4v4
-          BEDWARS_EIGHT_ONE: Solo
-      properties:
-        id:
-          description: The backend ID of the game.
-          example: 1
-          type: integer
-        name:
-          description: The display name of the game.
-          example: Bed Wars
-          type: string
-        databaseName:
-          description: "The key used for database storage, such as for stats."
-          example: Bedwars
-          type: string
-        modeNames:
-          description: A map of mode key to display name
-          example:
-            solo_normal: Solo
-            team_normal: Doubles
-          type: object
-        retired:
-          default: false
-          description: True if the game is retired and no longer playable.
-          type: boolean
-        legacy:
-          default: false
-          description: True if the game is legacy and part of the Classic Lobby.
-          type: boolean
-      required:
-      - databaseName
-      - id
-      - name
     SkyBlockFireSale:
       example:
-        amount: 1
+        amount: 1.4658129805029452
         item_id: item_id
-        price: 5
+        price: 5.962133916683182
         start: 0.8008281904610115
         end: 6.027456183070403
       properties:
@@ -1232,21 +1360,25 @@ components:
           type: string
         start:
           description: The start time in unix milliseconds for the sale
+          format: int64
           type: number
         end:
           description: The end time in unix milliseconds for the sale
+          format: int64
           type: number
         amount:
           description: The amount of items available for this sale
-          type: integer
+          format: int64
+          type: number
         price:
           description: The price in Gems for this sale
-          type: integer
+          format: int64
+          type: number
     SkyBlockGarden:
       description: "Information about a player's SkyBlock garden, the only guaranteed\
         \ field is the `uuid` field."
       example:
-        garden_experience: 1
+        garden_experience: 1.4658129805029452
         unlocked_barn_skins:
         - unlocked_barn_skins
         - unlocked_barn_skins
@@ -1256,12 +1388,12 @@ components:
             jerry: 1
             jacob: 2
             andrew: 3
-          total_completed: 0
+          total_completed: 0.8008281904610115
           completed:
             jerry: 1
             jacob: 1
             andrew: 2
-          unique_npcs_served: 6
+          unique_npcs_served: 6.027456183070403
         resources_collected:
           WHEAT: 100
           POTATO_ITEM: 100
@@ -1419,7 +1551,7 @@ components:
           type: array
         garden_experience:
           format: double
-          type: integer
+          type: number
         unlocked_barn_skins:
           items:
             type: string
@@ -1428,374 +1560,6 @@ components:
           type: string
       required:
       - uuid
-    HousingHouse:
-      description: Information about a player's house.
-      example:
-        owner: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        createdAt: 0.8008281904610115
-        players: 6.027456183070403
-        name: name
-        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        cookies:
-          current: 1.4658129805029452
-      properties:
-        uuid:
-          description: The UUID of this house.
-          format: uuid
-          type: string
-        owner:
-          description: The UUID of the owner of this house.
-          format: uuid
-          type: string
-        name:
-          description: "The name of this house, may contain Minecraft color symbols."
-          nullable: true
-          type: string
-        createdAt:
-          description: The time this house was created.
-          format: int64
-          type: number
-        players:
-          description: The number of players in this house.
-          format: int32
-          type: number
-        cookies:
-          $ref: '#/components/schemas/HousingHouse_cookies'
-      required:
-      - cookies
-      - createdAt
-      - name
-      - owner
-      - players
-      - uuid
-    _v2_player_get_200_response_player:
-      example:
-        lastLogout: 1.4658129805029452
-        lastLogin: 6.027456183070403
-        firstLogin: 0.8008281904610115
-        stats: "{}"
-        displayname: displayname
-        rank: ADMIN
-        newPackageRank: MVP_PLUS
-        uuid: 3fa85f6457174562b3fc2c963f66afa6
-        packageRank: MVP_PLUS
-        monthlyPackageRank: SUPERSTAR
-      properties:
-        uuid:
-          example: 3fa85f6457174562b3fc2c963f66afa6
-          type: string
-        displayname:
-          nullable: true
-          type: string
-        rank:
-          enum:
-          - ADMIN
-          - MODERATOR
-          - HELPER
-          - NORMAL
-          nullable: true
-          type: string
-        packageRank:
-          enum:
-          - MVP_PLUS
-          - MVP
-          - VIP_PLUS
-          - VIP
-          - NONE
-          nullable: true
-          type: string
-        newPackageRank:
-          enum:
-          - MVP_PLUS
-          - MVP
-          - VIP_PLUS
-          - VIP
-          - NONE
-          nullable: true
-          type: string
-        monthlyPackageRank:
-          enum:
-          - SUPERSTAR
-          - NONE
-          nullable: true
-          type: string
-        firstLogin:
-          nullable: true
-          type: number
-        lastLogin:
-          nullable: true
-          type: number
-        lastLogout:
-          nullable: true
-          type: number
-        stats:
-          nullable: true
-          type: object
-      type: object
-    _v2_player_get_200_response:
-      example:
-        success: true
-        player:
-          lastLogout: 1.4658129805029452
-          lastLogin: 6.027456183070403
-          firstLogin: 0.8008281904610115
-          stats: "{}"
-          displayname: displayname
-          rank: ADMIN
-          newPackageRank: MVP_PLUS
-          uuid: 3fa85f6457174562b3fc2c963f66afa6
-          packageRank: MVP_PLUS
-          monthlyPackageRank: SUPERSTAR
-      properties:
-        success:
-          example: true
-          type: boolean
-        player:
-          $ref: '#/components/schemas/_v2_player_get_200_response_player'
-      type: object
-    _v2_player_get_400_response:
-      example:
-        success: false
-        cause: "Missing one or more fields [...]"
-      properties:
-        success:
-          example: false
-          type: boolean
-        cause:
-          example: "Missing one or more fields [...]"
-          type: string
-      type: object
-    _v2_player_get_403_response:
-      example:
-        success: false
-        cause: Invalid API key
-      properties:
-        success:
-          example: false
-          type: boolean
-        cause:
-          example: Invalid API key
-          type: string
-      type: object
-    _v2_player_get_429_response:
-      example:
-        throttle: true
-        success: false
-        cause: Key throttle
-        global: true
-      properties:
-        success:
-          example: false
-          type: boolean
-        cause:
-          example: Key throttle
-          type: string
-        throttle:
-          example: true
-          type: boolean
-        global:
-          description: "When this boolean exists and is true, the throttle occurring\
-            \ is a global throttle applied to all users"
-          example: true
-          type: boolean
-      type: object
-    _v2_recentgames_get_200_response_games_inner:
-      example:
-        date: 0.8008281904610115
-        mode: mode
-        gameType: gameType
-        ended: 6.027456183070403
-        map: map
-      properties:
-        date:
-          format: int64
-          type: number
-        gameType:
-          type: string
-        mode:
-          type: string
-        map:
-          type: string
-        ended:
-          format: int64
-          type: number
-      type: object
-    _v2_recentgames_get_200_response:
-      example:
-        success: true
-        games:
-        - date: 0.8008281904610115
-          mode: mode
-          gameType: gameType
-          ended: 6.027456183070403
-          map: map
-        - date: 0.8008281904610115
-          mode: mode
-          gameType: gameType
-          ended: 6.027456183070403
-          map: map
-        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        success:
-          type: boolean
-        uuid:
-          format: uuid
-          type: string
-        games:
-          items:
-            $ref: '#/components/schemas/_v2_recentgames_get_200_response_games_inner'
-          type: array
-      type: object
-    _v2_recentgames_get_422_response:
-      example:
-        success: false
-        cause: Malformed UUID
-      properties:
-        success:
-          example: false
-          type: boolean
-        cause:
-          example: Malformed UUID
-          type: string
-      type: object
-    _v2_status_get_200_response_session:
-      example:
-        mode: mode
-        gameType: gameType
-        online: true
-        map: map
-      properties:
-        online:
-          type: boolean
-        gameType:
-          type: string
-        mode:
-          type: string
-        map:
-          type: string
-      type: object
-    _v2_status_get_200_response:
-      example:
-        success: true
-        session:
-          mode: mode
-          gameType: gameType
-          online: true
-          map: map
-        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        success:
-          type: boolean
-        uuid:
-          format: uuid
-          type: string
-        session:
-          $ref: '#/components/schemas/_v2_status_get_200_response_session'
-      type: object
-    _v2_guild_get_200_response:
-      example:
-        guild: "{}"
-        success: true
-      properties:
-        success:
-          type: boolean
-        guild:
-          type: object
-      type: object
-    _v2_resources_games_get_200_response:
-      example:
-        lastUpdated: 0.8008281904610115
-        success: true
-        games:
-          key:
-            id: 58
-            name: Bed Wars
-            databaseName: Bedwars
-            modeNames:
-              BEDWARS_TWO_FOUR: 4v4
-              BEDWARS_EIGHT_ONE: Solo
-      properties:
-        success:
-          type: boolean
-        lastUpdated:
-          type: number
-        games:
-          additionalProperties:
-            $ref: '#/components/schemas/Game'
-          description: A map where the key is the backend name of the game
-          type: object
-      type: object
-    _v2_resources_achievements_get_200_response:
-      example:
-        lastUpdated: 0.8008281904610115
-        achievements: "{}"
-        success: true
-      properties:
-        success:
-          type: boolean
-        lastUpdated:
-          type: number
-        achievements:
-          type: object
-      type: object
-    _v2_resources_challenges_get_200_response:
-      example:
-        lastUpdated: 0.8008281904610115
-        challenges: "{}"
-        success: true
-      properties:
-        success:
-          type: boolean
-        lastUpdated:
-          type: number
-        challenges:
-          type: object
-      type: object
-    _v2_resources_quests_get_200_response:
-      example:
-        lastUpdated: 0.8008281904610115
-        quests: "{}"
-        success: true
-      properties:
-        success:
-          type: boolean
-        lastUpdated:
-          type: number
-        quests:
-          type: object
-      type: object
-    _v2_resources_guilds_achievements_get_200_response:
-      example:
-        lastUpdated: 0.8008281904610115
-        success: true
-        tiered: "{}"
-        one_time: "{}"
-      properties:
-        success:
-          type: boolean
-        lastUpdated:
-          type: number
-        one_time:
-          type: object
-        tiered:
-          type: object
-      type: object
-    _v2_resources_vanity_pets_get_200_response:
-      example:
-        lastUpdated: 0.8008281904610115
-        rarities: "{}"
-        types: "{}"
-        success: true
-      properties:
-        success:
-          type: boolean
-        lastUpdated:
-          type: number
-        types:
-          type: object
-        rarities:
-          type: object
-      type: object
     _v2_resources_skyblock_collections_get_200_response:
       example:
         lastUpdated: 0.8008281904610115
@@ -1806,6 +1570,7 @@ components:
         success:
           type: boolean
         lastUpdated:
+          format: int64
           type: number
         version:
           example: 0.11.22
@@ -1823,6 +1588,7 @@ components:
         success:
           type: boolean
         lastUpdated:
+          format: int64
           type: number
         version:
           example: 0.11.22
@@ -1859,6 +1625,7 @@ components:
         success:
           type: boolean
         lastUpdated:
+          format: int64
           type: number
         items:
           items:
@@ -1875,6 +1642,7 @@ components:
         success:
           type: boolean
         lastUpdated:
+          format: int64
           type: number
         mayor:
           description: Data regarding the current mayor
@@ -1924,7 +1692,7 @@ components:
           type: number
         requiredAmount:
           description: The required amount for this specific goal
-          format: int32
+          format: int64
           type: number
       required:
       - id
@@ -1974,7 +1742,7 @@ components:
           description: "The current bingo event ID, increments by 1 for each bingo\
             \ hosted"
           example: 27
-          format: int32
+          format: int64
           type: number
         name:
           description: The display name for the current bingo event
@@ -2040,36 +1808,184 @@ components:
               text: 15th January 2021
           type: array
       type: object
+    _v2_skyblock_news_get_403_response:
+      example:
+        success: false
+        cause: Invalid API key
+      properties:
+        success:
+          example: false
+          type: boolean
+        cause:
+          example: Invalid API key
+          type: string
+      type: object
+    _v2_skyblock_news_get_429_response:
+      example:
+        throttle: true
+        success: false
+        cause: Key throttle
+        global: true
+      properties:
+        success:
+          example: false
+          type: boolean
+        cause:
+          example: Key throttle
+          type: string
+        throttle:
+          example: true
+          type: boolean
+        global:
+          description: "When this boolean exists and is true, the throttle occurring\
+            \ is a global throttle applied to all users"
+          example: true
+          type: boolean
+      type: object
     _v2_skyblock_profile_get_200_response:
       example:
         success: true
         profile:
           profile_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           members:
-            player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            profile:
-              deletion_notice:
-                timestamp: 0
+            key:
+              rift:
+                wizard_tower:
+                  wizard_quest_step: 6.84685269835264
+                  crumbs_laid_out: 1.4894159098541704
+                enigma:
+                  found_souls:
+                  - BACK2BASICS
+                  - BACK2BASICS
+                  bought_cloak: true
+                  claimed_bonus_index: 5.962133916683182
+                black_lagoon:
+                  received_science_paper: true
+                  delivered_science_paper: true
+                  completed_step: 0.8008281904610115
+                  talked_to_edwin: true
+                dead_cats:
+                  unlocked_pet: true
+                  montezuma:
+                    tier: COMMON
+                    heldItem:
+                      material: LEATHER_CHESTPLATE
+                      color: "255,215,0"
+                      name: Farm Armor Chestplate
+                      category: CHESTPLATE
+                      tier: RARE
+                      stats:
+                        DEFENSE: 75
+                        HEALTH: 20
+                      npc_sell_price: 5200
+                      id: FARM_ARMOR_CHESTPLATE
+                    skin:
+                      material: LEATHER_CHESTPLATE
+                      color: "255,215,0"
+                      name: Farm Armor Chestplate
+                      category: CHESTPLATE
+                      tier: RARE
+                      stats:
+                        DEFENSE: 75
+                        HEALTH: 20
+                      npc_sell_price: 5200
+                      id: FARM_ARMOR_CHESTPLATE
+                    active: true
+                    exp: 1.4658129805029452
+                    type: FRACTURED_MONTEZUMA_SOUL
+                    uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                    candyUsed: 6.027456183070403
+                    uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  found_cats:
+                  - eight
+                  - eight
+                  picked_up_detector: true
+                  talked_to_jacquelle: true
+                village_plaza:
+                  murder:
+                    step_index_pt3: 1.2315135367772556
+                    step_index: 4.145608029883936
+                    step_index_pt2: 7.386281948385884
+                    room_clues:
+                    - blood
+                    - blood
+                  cowboy:
+                    stage: 3.616076749251911
+                    hay_eaten: 9.301444243932576
+                    rabbit_name: rabbit_name
+                  barter_bank: "{}"
+                  got_scammed: true
+                  seraphine:
+                    step_index: 1.0246457001441578
+                  lonely:
+                    seconds_sitting: 2.027123023002322
+                  barry_center:
+                    first_talk_to_barry: true
+                    convinced:
+                    - creed
+                    - creed
+                    received_reward: true
+                wither_cage:
+                  killed_eyes:
+                  - castle
+                  - castle
+                gallery:
+                  sent_trophy_dialogues:
+                  - sent_trophy_dialogues
+                  - sent_trophy_dialogues
+                  elise_step: 5.637376656633329
+                  secured_trophies:
+                  - visits: 7.061401241503109
+                    type: chicken_n_egg
+                    timestamp: 2.3021358869347655
+                  - visits: 7.061401241503109
+                    type: chicken_n_egg
+                    timestamp: 2.3021358869347655
+              player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           game_mode: ironman
           community_upgrades: "{}"
           cute_name: cute_name
           selected: true
           banking:
-            balance: 6.027456183070403
+            balance: 7.457744773683766
             transactions:
-            - amount: 5.962133916683182
+            - amount: 4.965218492984954
               action: DEPOSIT
               initiator_name: initiator_name
-              timestamp: 1
-            - amount: 5.962133916683182
+              timestamp: 1.1730742509559433
+            - amount: 4.965218492984954
               action: DEPOSIT
               initiator_name: initiator_name
-              timestamp: 1
+              timestamp: 1.1730742509559433
       properties:
         success:
           type: boolean
         profile:
           $ref: '#/components/schemas/SkyBlockProfile'
+      type: object
+    _v2_skyblock_profile_get_400_response:
+      example:
+        success: false
+        cause: "Missing one or more fields [...]"
+      properties:
+        success:
+          example: false
+          type: boolean
+        cause:
+          example: "Missing one or more fields [...]"
+          type: string
+      type: object
+    _v2_skyblock_profile_get_422_response:
+      example:
+        success: false
+        cause: Malformed UUID
+      properties:
+        success:
+          example: false
+          type: boolean
+        cause:
+          example: Malformed UUID
+          type: string
       type: object
     _v2_skyblock_profiles_get_200_response:
       example:
@@ -2077,46 +1993,226 @@ components:
         profiles:
         - profile_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           members:
-            player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            profile:
-              deletion_notice:
-                timestamp: 0
+            key:
+              rift:
+                wizard_tower:
+                  wizard_quest_step: 6.84685269835264
+                  crumbs_laid_out: 1.4894159098541704
+                enigma:
+                  found_souls:
+                  - BACK2BASICS
+                  - BACK2BASICS
+                  bought_cloak: true
+                  claimed_bonus_index: 5.962133916683182
+                black_lagoon:
+                  received_science_paper: true
+                  delivered_science_paper: true
+                  completed_step: 0.8008281904610115
+                  talked_to_edwin: true
+                dead_cats:
+                  unlocked_pet: true
+                  montezuma:
+                    tier: COMMON
+                    heldItem:
+                      material: LEATHER_CHESTPLATE
+                      color: "255,215,0"
+                      name: Farm Armor Chestplate
+                      category: CHESTPLATE
+                      tier: RARE
+                      stats:
+                        DEFENSE: 75
+                        HEALTH: 20
+                      npc_sell_price: 5200
+                      id: FARM_ARMOR_CHESTPLATE
+                    skin:
+                      material: LEATHER_CHESTPLATE
+                      color: "255,215,0"
+                      name: Farm Armor Chestplate
+                      category: CHESTPLATE
+                      tier: RARE
+                      stats:
+                        DEFENSE: 75
+                        HEALTH: 20
+                      npc_sell_price: 5200
+                      id: FARM_ARMOR_CHESTPLATE
+                    active: true
+                    exp: 1.4658129805029452
+                    type: FRACTURED_MONTEZUMA_SOUL
+                    uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                    candyUsed: 6.027456183070403
+                    uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  found_cats:
+                  - eight
+                  - eight
+                  picked_up_detector: true
+                  talked_to_jacquelle: true
+                village_plaza:
+                  murder:
+                    step_index_pt3: 1.2315135367772556
+                    step_index: 4.145608029883936
+                    step_index_pt2: 7.386281948385884
+                    room_clues:
+                    - blood
+                    - blood
+                  cowboy:
+                    stage: 3.616076749251911
+                    hay_eaten: 9.301444243932576
+                    rabbit_name: rabbit_name
+                  barter_bank: "{}"
+                  got_scammed: true
+                  seraphine:
+                    step_index: 1.0246457001441578
+                  lonely:
+                    seconds_sitting: 2.027123023002322
+                  barry_center:
+                    first_talk_to_barry: true
+                    convinced:
+                    - creed
+                    - creed
+                    received_reward: true
+                wither_cage:
+                  killed_eyes:
+                  - castle
+                  - castle
+                gallery:
+                  sent_trophy_dialogues:
+                  - sent_trophy_dialogues
+                  - sent_trophy_dialogues
+                  elise_step: 5.637376656633329
+                  secured_trophies:
+                  - visits: 7.061401241503109
+                    type: chicken_n_egg
+                    timestamp: 2.3021358869347655
+                  - visits: 7.061401241503109
+                    type: chicken_n_egg
+                    timestamp: 2.3021358869347655
+              player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           game_mode: ironman
           community_upgrades: "{}"
           cute_name: cute_name
           selected: true
           banking:
-            balance: 6.027456183070403
+            balance: 7.457744773683766
             transactions:
-            - amount: 5.962133916683182
+            - amount: 4.965218492984954
               action: DEPOSIT
               initiator_name: initiator_name
-              timestamp: 1
-            - amount: 5.962133916683182
+              timestamp: 1.1730742509559433
+            - amount: 4.965218492984954
               action: DEPOSIT
               initiator_name: initiator_name
-              timestamp: 1
+              timestamp: 1.1730742509559433
         - profile_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           members:
-            player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            profile:
-              deletion_notice:
-                timestamp: 0
+            key:
+              rift:
+                wizard_tower:
+                  wizard_quest_step: 6.84685269835264
+                  crumbs_laid_out: 1.4894159098541704
+                enigma:
+                  found_souls:
+                  - BACK2BASICS
+                  - BACK2BASICS
+                  bought_cloak: true
+                  claimed_bonus_index: 5.962133916683182
+                black_lagoon:
+                  received_science_paper: true
+                  delivered_science_paper: true
+                  completed_step: 0.8008281904610115
+                  talked_to_edwin: true
+                dead_cats:
+                  unlocked_pet: true
+                  montezuma:
+                    tier: COMMON
+                    heldItem:
+                      material: LEATHER_CHESTPLATE
+                      color: "255,215,0"
+                      name: Farm Armor Chestplate
+                      category: CHESTPLATE
+                      tier: RARE
+                      stats:
+                        DEFENSE: 75
+                        HEALTH: 20
+                      npc_sell_price: 5200
+                      id: FARM_ARMOR_CHESTPLATE
+                    skin:
+                      material: LEATHER_CHESTPLATE
+                      color: "255,215,0"
+                      name: Farm Armor Chestplate
+                      category: CHESTPLATE
+                      tier: RARE
+                      stats:
+                        DEFENSE: 75
+                        HEALTH: 20
+                      npc_sell_price: 5200
+                      id: FARM_ARMOR_CHESTPLATE
+                    active: true
+                    exp: 1.4658129805029452
+                    type: FRACTURED_MONTEZUMA_SOUL
+                    uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                    candyUsed: 6.027456183070403
+                    uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  found_cats:
+                  - eight
+                  - eight
+                  picked_up_detector: true
+                  talked_to_jacquelle: true
+                village_plaza:
+                  murder:
+                    step_index_pt3: 1.2315135367772556
+                    step_index: 4.145608029883936
+                    step_index_pt2: 7.386281948385884
+                    room_clues:
+                    - blood
+                    - blood
+                  cowboy:
+                    stage: 3.616076749251911
+                    hay_eaten: 9.301444243932576
+                    rabbit_name: rabbit_name
+                  barter_bank: "{}"
+                  got_scammed: true
+                  seraphine:
+                    step_index: 1.0246457001441578
+                  lonely:
+                    seconds_sitting: 2.027123023002322
+                  barry_center:
+                    first_talk_to_barry: true
+                    convinced:
+                    - creed
+                    - creed
+                    received_reward: true
+                wither_cage:
+                  killed_eyes:
+                  - castle
+                  - castle
+                gallery:
+                  sent_trophy_dialogues:
+                  - sent_trophy_dialogues
+                  - sent_trophy_dialogues
+                  elise_step: 5.637376656633329
+                  secured_trophies:
+                  - visits: 7.061401241503109
+                    type: chicken_n_egg
+                    timestamp: 2.3021358869347655
+                  - visits: 7.061401241503109
+                    type: chicken_n_egg
+                    timestamp: 2.3021358869347655
+              player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           game_mode: ironman
           community_upgrades: "{}"
           cute_name: cute_name
           selected: true
           banking:
-            balance: 6.027456183070403
+            balance: 7.457744773683766
             transactions:
-            - amount: 5.962133916683182
+            - amount: 4.965218492984954
               action: DEPOSIT
               initiator_name: initiator_name
-              timestamp: 1
-            - amount: 5.962133916683182
+              timestamp: 1.1730742509559433
+            - amount: 4.965218492984954
               action: DEPOSIT
               initiator_name: initiator_name
-              timestamp: 1
+              timestamp: 1.1730742509559433
       properties:
         success:
           type: boolean
@@ -2130,12 +2226,12 @@ components:
         success: true
         profile:
           special:
-          - donated_time: 6
+          - donated_time: 6.027456183070403
             items: "{}"
-          - donated_time: 6
+          - donated_time: 6.027456183070403
             items: "{}"
           appraisal: true
-          value: 0
+          value: 0.8008281904610115
           items: "{}"
       properties:
         success:
@@ -2147,7 +2243,7 @@ components:
       example:
         success: true
         garden:
-          garden_experience: 1
+          garden_experience: 1.4658129805029452
           unlocked_barn_skins:
           - unlocked_barn_skins
           - unlocked_barn_skins
@@ -2157,12 +2253,12 @@ components:
               jerry: 1
               jacob: 2
               andrew: 3
-            total_completed: 0
+            total_completed: 0.8008281904610115
             completed:
               jerry: 1
               jacob: 1
               andrew: 2
-            unique_npcs_served: 6
+            unique_npcs_served: 6.027456183070403
           resources_collected:
             WHEAT: 100
             POTATO_ITEM: 100
@@ -2260,12 +2356,12 @@ components:
         key:
           description: The id for this event
           example: 2
-          format: int32
+          format: int64
           type: number
         points:
           description: The amount of points earned
           example: 117
-          format: int32
+          format: int64
           type: number
         completed_goals:
           description: The completed goal IDs
@@ -2316,14 +2412,14 @@ components:
       example:
         success: true
         sales:
-        - amount: 1
+        - amount: 1.4658129805029452
           item_id: item_id
-          price: 5
+          price: 5.962133916683182
           start: 0.8008281904610115
           end: 6.027456183070403
-        - amount: 1
+        - amount: 1.4658129805029452
           item_id: item_id
-          price: 5
+          price: 5.962133916683182
           start: 0.8008281904610115
           end: 6.027456183070403
       properties:
@@ -2334,163 +2430,16 @@ components:
             $ref: '#/components/schemas/SkyBlockFireSale'
           type: array
       type: object
-    _v2_boosters_get_200_response_boosters_inner:
-      oneOf:
-      - $ref: '#/components/schemas/ActiveBooster'
-      - $ref: '#/components/schemas/QueuedBooster'
-    _v2_boosters_get_200_response_boosterState:
-      example:
-        decrementing: true
-      properties:
-        decrementing:
-          type: boolean
-      type: object
-    _v2_boosters_get_200_response:
-      example:
-        success: true
-        boosters:
-        - gameType: 5
-          amount: 0.8008281904610115
-          stacked:
-          - ad8fefaa-8351-454b-b739-a4eaa872173f
-          - ad8fefaa-8351-454b-b739-a4eaa872173f
-          originalLength: 6
-          length: 1
-          purchaserUuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          dateActivated: 5
-          _id: _id
-        - gameType: 5
-          amount: 0.8008281904610115
-          stacked:
-          - ad8fefaa-8351-454b-b739-a4eaa872173f
-          - ad8fefaa-8351-454b-b739-a4eaa872173f
-          originalLength: 6
-          length: 1
-          purchaserUuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          dateActivated: 5
-          _id: _id
-        boosterState:
-          decrementing: true
-      properties:
-        success:
-          type: boolean
-        boosters:
-          items:
-            $ref: '#/components/schemas/_v2_boosters_get_200_response_boosters_inner'
-          type: array
-        boosterState:
-          $ref: '#/components/schemas/_v2_boosters_get_200_response_boosterState'
-      type: object
-    _v2_counts_get_200_response:
-      example:
-        success: true
-        playerCount: 0
-        games:
-          GAME_TYPE:
-            players: 2
-            modes:
-              mode_1: 1
-              mode_2: 1
-      properties:
-        success:
-          type: boolean
-        playerCount:
-          type: integer
-        games:
-          example:
-            GAME_TYPE:
-              players: 2
-              modes:
-                mode_1: 1
-                mode_2: 1
-          type: object
-      type: object
-    _v2_leaderboards_get_200_response:
-      example:
-        success: true
-        leaderboards: "{}"
-      properties:
-        success:
-          type: boolean
-        leaderboards:
-          type: object
-      type: object
-    _v2_leaderboards_get_503_response:
-      example:
-        success: false
-        cause: Leaderboard data has not yet been populated
-      properties:
-        success:
-          example: false
-          type: boolean
-        cause:
-          example: Leaderboard data has not yet been populated
-          type: string
-      type: object
-    _v2_punishmentstats_get_200_response:
-      example:
-        watchdog_lastMinute: 0
-        staff_rollingDaily: 6
-        watchdog_total: 1
-        success: true
-        watchdog_rollingDaily: 5
-        staff_total: 5
-      properties:
-        success:
-          type: boolean
-        watchdog_lastMinute:
-          type: integer
-        staff_rollingDaily:
-          type: integer
-        watchdog_total:
-          type: integer
-        watchdog_rollingDaily:
-          type: integer
-        staff_total:
-          type: integer
-      type: object
-    SkyBlockProfile_members_profile_deletion_notice:
-      description: "If this field exists, the member profile is marked as deleted"
-      example:
-        timestamp: 0
-      nullable: true
-      properties:
-        timestamp:
-          format: int64
-          type: integer
-      type: object
-    SkyBlockProfile_members_profile:
-      example:
-        deletion_notice:
-          timestamp: 0
-      properties:
-        deletion_notice:
-          $ref: '#/components/schemas/SkyBlockProfile_members_profile_deletion_notice'
-      type: object
-    SkyBlockProfile_members:
-      description: A map of member UUIDs to member profiles objects
-      example:
-        player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        profile:
-          deletion_notice:
-            timestamp: 0
-      properties:
-        player_id:
-          format: uuid
-          type: string
-        profile:
-          $ref: '#/components/schemas/SkyBlockProfile_members_profile'
-      type: object
     SkyBlockProfile_banking_transactions_inner:
       example:
-        amount: 5.962133916683182
+        amount: 4.965218492984954
         action: DEPOSIT
         initiator_name: initiator_name
-        timestamp: 1
+        timestamp: 1.1730742509559433
       properties:
         timestamp:
           format: int64
-          type: integer
+          type: number
         action:
           enum:
           - DEPOSIT
@@ -2506,16 +2455,16 @@ components:
       description: "Information about the bank account for this profile, only present\
         \ if the API banking setting is enabled"
       example:
-        balance: 6.027456183070403
+        balance: 7.457744773683766
         transactions:
-        - amount: 5.962133916683182
+        - amount: 4.965218492984954
           action: DEPOSIT
           initiator_name: initiator_name
-          timestamp: 1
-        - amount: 5.962133916683182
+          timestamp: 1.1730742509559433
+        - amount: 4.965218492984954
           action: DEPOSIT
           initiator_name: initiator_name
-          timestamp: 1
+          timestamp: 1.1730742509559433
       nullable: true
       properties:
         balance:
@@ -2526,14 +2475,38 @@ components:
             $ref: '#/components/schemas/SkyBlockProfile_banking_transactions_inner'
           type: array
       type: object
+    SkyBlockProfileMemberRiftGallery_secured_trophies_inner:
+      example:
+        visits: 7.061401241503109
+        type: chicken_n_egg
+        timestamp: 2.3021358869347655
+      properties:
+        timestamp:
+          format: int64
+          type: number
+        type:
+          enum:
+          - chicken_n_egg
+          - citizen
+          - lazy_living
+          - mirrored
+          - mountain
+          - slime
+          - vampiric
+          - wyldly_supreme
+          type: string
+        visits:
+          format: int64
+          type: number
+      type: object
     SkyBlockMuseum_special_inner:
       example:
-        donated_time: 6
+        donated_time: 6.027456183070403
         items: "{}"
       properties:
         donated_time:
           format: int64
-          type: integer
+          type: number
         items:
           type: object
       type: object
@@ -2543,12 +2516,12 @@ components:
           jerry: 1
           jacob: 2
           andrew: 3
-        total_completed: 0
+        total_completed: 0.8008281904610115
         completed:
           jerry: 1
           jacob: 1
           andrew: 2
-        unique_npcs_served: 6
+        unique_npcs_served: 6.027456183070403
       properties:
         visits:
           description: A map of visitor identifier to visit count
@@ -2565,20 +2538,10 @@ components:
             andrew: 2
           type: object
         total_completed:
-          format: int32
-          type: integer
+          format: int64
+          type: number
         unique_npcs_served:
-          format: int32
-          type: integer
-      type: object
-    HousingHouse_cookies:
-      example:
-        current: 1.4658129805029452
-      properties:
-        current:
-          description: The current amount of cookies that this house has for the current
-            week.
-          format: int32
+          format: int64
           type: number
       type: object
     inline_object:
@@ -2597,6 +2560,15 @@ components:
           type: boolean
         cause:
           example: Page not found
+          type: string
+      type: object
+    inline_object_2:
+      properties:
+        success:
+          example: false
+          type: boolean
+        cause:
+          example: Leaderboard data has not yet been populated
           type: string
       type: object
   securitySchemes:

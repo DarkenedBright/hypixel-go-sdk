@@ -49,14 +49,6 @@ type APIClient struct {
 
 	// API Services
 
-	HousingAPI *HousingAPIService
-
-	OtherAPI *OtherAPIService
-
-	PlayerDataAPI *PlayerDataAPIService
-
-	ResourcesAPI *ResourcesAPIService
-
 	SkyBlockAPI *SkyBlockAPIService
 }
 
@@ -76,10 +68,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
-	c.HousingAPI = (*HousingAPIService)(&c.common)
-	c.OtherAPI = (*OtherAPIService)(&c.common)
-	c.PlayerDataAPI = (*PlayerDataAPIService)(&c.common)
-	c.ResourcesAPI = (*ResourcesAPIService)(&c.common)
 	c.SkyBlockAPI = (*SkyBlockAPIService)(&c.common)
 
 	return c

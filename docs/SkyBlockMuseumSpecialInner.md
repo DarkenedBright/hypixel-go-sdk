@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DonatedTime** | Pointer to **int64** |  | [optional] 
+**DonatedTime** | Pointer to **float32** |  | [optional] 
 **Items** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetDonatedTime
 
-`func (o *SkyBlockMuseumSpecialInner) GetDonatedTime() int64`
+`func (o *SkyBlockMuseumSpecialInner) GetDonatedTime() float32`
 
 GetDonatedTime returns the DonatedTime field if non-nil, zero value otherwise.
 
 ### GetDonatedTimeOk
 
-`func (o *SkyBlockMuseumSpecialInner) GetDonatedTimeOk() (*int64, bool)`
+`func (o *SkyBlockMuseumSpecialInner) GetDonatedTimeOk() (*float32, bool)`
 
 GetDonatedTimeOk returns a tuple with the DonatedTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDonatedTime
 
-`func (o *SkyBlockMuseumSpecialInner) SetDonatedTime(v int64)`
+`func (o *SkyBlockMuseumSpecialInner) SetDonatedTime(v float32)`
 
 SetDonatedTime sets DonatedTime field to given value.
 

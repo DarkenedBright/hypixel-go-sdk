@@ -20,7 +20,8 @@ var _ MappedNullable = &SkyBlockProfile{}
 // SkyBlockProfile struct for SkyBlockProfile
 type SkyBlockProfile struct {
 	ProfileId *string `json:"profile_id,omitempty"`
-	Members *SkyBlockProfileMembers `json:"members,omitempty"`
+	// A map of profile member UUIDs to profile member objects
+	Members *map[string]SkyBlockProfileMember `json:"members,omitempty"`
 	// The cute name of the profile, only provided on the profiles endpoint
 	CuteName NullableString `json:"cute_name,omitempty"`
 	// Whether or not this is the currently selected profile, only provided on the profiles endpoint
@@ -81,9 +82,9 @@ func (o *SkyBlockProfile) SetProfileId(v string) {
 }
 
 // GetMembers returns the Members field value if set, zero value otherwise.
-func (o *SkyBlockProfile) GetMembers() SkyBlockProfileMembers {
+func (o *SkyBlockProfile) GetMembers() map[string]SkyBlockProfileMember {
 	if o == nil || IsNil(o.Members) {
-		var ret SkyBlockProfileMembers
+		var ret map[string]SkyBlockProfileMember
 		return ret
 	}
 	return *o.Members
@@ -91,7 +92,7 @@ func (o *SkyBlockProfile) GetMembers() SkyBlockProfileMembers {
 
 // GetMembersOk returns a tuple with the Members field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfile) GetMembersOk() (*SkyBlockProfileMembers, bool) {
+func (o *SkyBlockProfile) GetMembersOk() (*map[string]SkyBlockProfileMember, bool) {
 	if o == nil || IsNil(o.Members) {
 		return nil, false
 	}
@@ -107,8 +108,8 @@ func (o *SkyBlockProfile) HasMembers() bool {
 	return false
 }
 
-// SetMembers gets a reference to the given SkyBlockProfileMembers and assigns it to the Members field.
-func (o *SkyBlockProfile) SetMembers(v SkyBlockProfileMembers) {
+// SetMembers gets a reference to the given map[string]SkyBlockProfileMember and assigns it to the Members field.
+func (o *SkyBlockProfile) SetMembers(v map[string]SkyBlockProfileMember) {
 	o.Members = &v
 }
 

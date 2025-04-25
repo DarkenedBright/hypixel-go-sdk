@@ -7,10 +7,10 @@ Name | Type | Description | Notes
 **Id** | Pointer to **string** |  | [optional] 
 **PurchaserUuid** | Pointer to **string** |  | [optional] 
 **Amount** | Pointer to **float32** |  | [optional] 
-**OriginalLength** | Pointer to **int32** |  | [optional] 
-**Length** | Pointer to **int32** |  | [optional] 
-**GameType** | Pointer to **int32** |  | [optional] 
-**DateActivated** | Pointer to **int64** |  | [optional] 
+**OriginalLength** | Pointer to **float32** |  | [optional] 
+**Length** | Pointer to **float32** |  | [optional] 
+**GameType** | Pointer to **float32** |  | [optional] 
+**DateActivated** | Pointer to **float32** |  | [optional] 
 **Stacked** | Pointer to **NullableBool** |  | [optional] 
 
 ## Methods
@@ -109,20 +109,20 @@ HasAmount returns a boolean if a field has been set.
 
 ### GetOriginalLength
 
-`func (o *QueuedBooster) GetOriginalLength() int32`
+`func (o *QueuedBooster) GetOriginalLength() float32`
 
 GetOriginalLength returns the OriginalLength field if non-nil, zero value otherwise.
 
 ### GetOriginalLengthOk
 
-`func (o *QueuedBooster) GetOriginalLengthOk() (*int32, bool)`
+`func (o *QueuedBooster) GetOriginalLengthOk() (*float32, bool)`
 
 GetOriginalLengthOk returns a tuple with the OriginalLength field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOriginalLength
 
-`func (o *QueuedBooster) SetOriginalLength(v int32)`
+`func (o *QueuedBooster) SetOriginalLength(v float32)`
 
 SetOriginalLength sets OriginalLength field to given value.
 
@@ -134,20 +134,20 @@ HasOriginalLength returns a boolean if a field has been set.
 
 ### GetLength
 
-`func (o *QueuedBooster) GetLength() int32`
+`func (o *QueuedBooster) GetLength() float32`
 
 GetLength returns the Length field if non-nil, zero value otherwise.
 
 ### GetLengthOk
 
-`func (o *QueuedBooster) GetLengthOk() (*int32, bool)`
+`func (o *QueuedBooster) GetLengthOk() (*float32, bool)`
 
 GetLengthOk returns a tuple with the Length field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLength
 
-`func (o *QueuedBooster) SetLength(v int32)`
+`func (o *QueuedBooster) SetLength(v float32)`
 
 SetLength sets Length field to given value.
 
@@ -159,20 +159,20 @@ HasLength returns a boolean if a field has been set.
 
 ### GetGameType
 
-`func (o *QueuedBooster) GetGameType() int32`
+`func (o *QueuedBooster) GetGameType() float32`
 
 GetGameType returns the GameType field if non-nil, zero value otherwise.
 
 ### GetGameTypeOk
 
-`func (o *QueuedBooster) GetGameTypeOk() (*int32, bool)`
+`func (o *QueuedBooster) GetGameTypeOk() (*float32, bool)`
 
 GetGameTypeOk returns a tuple with the GameType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGameType
 
-`func (o *QueuedBooster) SetGameType(v int32)`
+`func (o *QueuedBooster) SetGameType(v float32)`
 
 SetGameType sets GameType field to given value.
 
@@ -184,20 +184,20 @@ HasGameType returns a boolean if a field has been set.
 
 ### GetDateActivated
 
-`func (o *QueuedBooster) GetDateActivated() int64`
+`func (o *QueuedBooster) GetDateActivated() float32`
 
 GetDateActivated returns the DateActivated field if non-nil, zero value otherwise.
 
 ### GetDateActivatedOk
 
-`func (o *QueuedBooster) GetDateActivatedOk() (*int64, bool)`
+`func (o *QueuedBooster) GetDateActivatedOk() (*float32, bool)`
 
 GetDateActivatedOk returns a tuple with the DateActivated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDateActivated
 
-`func (o *QueuedBooster) SetDateActivated(v int64)`
+`func (o *QueuedBooster) SetDateActivated(v float32)`
 
 SetDateActivated sets DateActivated field to given value.
 

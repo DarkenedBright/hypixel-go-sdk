@@ -23,8 +23,8 @@ type SkyBlockGardenCommissionData struct {
 	Visits map[string]interface{} `json:"visits,omitempty"`
 	// A map of visitor identifier to completed count
 	Completed map[string]interface{} `json:"completed,omitempty"`
-	TotalCompleted *int32 `json:"total_completed,omitempty"`
-	UniqueNpcsServed *int32 `json:"unique_npcs_served,omitempty"`
+	TotalCompleted *float32 `json:"total_completed,omitempty"`
+	UniqueNpcsServed *float32 `json:"unique_npcs_served,omitempty"`
 }
 
 // NewSkyBlockGardenCommissionData instantiates a new SkyBlockGardenCommissionData object
@@ -109,9 +109,9 @@ func (o *SkyBlockGardenCommissionData) SetCompleted(v map[string]interface{}) {
 }
 
 // GetTotalCompleted returns the TotalCompleted field value if set, zero value otherwise.
-func (o *SkyBlockGardenCommissionData) GetTotalCompleted() int32 {
+func (o *SkyBlockGardenCommissionData) GetTotalCompleted() float32 {
 	if o == nil || IsNil(o.TotalCompleted) {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.TotalCompleted
@@ -119,7 +119,7 @@ func (o *SkyBlockGardenCommissionData) GetTotalCompleted() int32 {
 
 // GetTotalCompletedOk returns a tuple with the TotalCompleted field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockGardenCommissionData) GetTotalCompletedOk() (*int32, bool) {
+func (o *SkyBlockGardenCommissionData) GetTotalCompletedOk() (*float32, bool) {
 	if o == nil || IsNil(o.TotalCompleted) {
 		return nil, false
 	}
@@ -135,15 +135,15 @@ func (o *SkyBlockGardenCommissionData) HasTotalCompleted() bool {
 	return false
 }
 
-// SetTotalCompleted gets a reference to the given int32 and assigns it to the TotalCompleted field.
-func (o *SkyBlockGardenCommissionData) SetTotalCompleted(v int32) {
+// SetTotalCompleted gets a reference to the given float32 and assigns it to the TotalCompleted field.
+func (o *SkyBlockGardenCommissionData) SetTotalCompleted(v float32) {
 	o.TotalCompleted = &v
 }
 
 // GetUniqueNpcsServed returns the UniqueNpcsServed field value if set, zero value otherwise.
-func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServed() int32 {
+func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServed() float32 {
 	if o == nil || IsNil(o.UniqueNpcsServed) {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.UniqueNpcsServed
@@ -151,7 +151,7 @@ func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServed() int32 {
 
 // GetUniqueNpcsServedOk returns a tuple with the UniqueNpcsServed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServedOk() (*int32, bool) {
+func (o *SkyBlockGardenCommissionData) GetUniqueNpcsServedOk() (*float32, bool) {
 	if o == nil || IsNil(o.UniqueNpcsServed) {
 		return nil, false
 	}
@@ -167,8 +167,8 @@ func (o *SkyBlockGardenCommissionData) HasUniqueNpcsServed() bool {
 	return false
 }
 
-// SetUniqueNpcsServed gets a reference to the given int32 and assigns it to the UniqueNpcsServed field.
-func (o *SkyBlockGardenCommissionData) SetUniqueNpcsServed(v int32) {
+// SetUniqueNpcsServed gets a reference to the given float32 and assigns it to the UniqueNpcsServed field.
+func (o *SkyBlockGardenCommissionData) SetUniqueNpcsServed(v float32) {
 	o.UniqueNpcsServed = &v
 }
 

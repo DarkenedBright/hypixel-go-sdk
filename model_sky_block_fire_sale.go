@@ -26,9 +26,9 @@ type SkyBlockFireSale struct {
 	// The end time in unix milliseconds for the sale
 	End *float32 `json:"end,omitempty"`
 	// The amount of items available for this sale
-	Amount *int32 `json:"amount,omitempty"`
+	Amount *float32 `json:"amount,omitempty"`
 	// The price in Gems for this sale
-	Price *int32 `json:"price,omitempty"`
+	Price *float32 `json:"price,omitempty"`
 }
 
 // NewSkyBlockFireSale instantiates a new SkyBlockFireSale object
@@ -145,9 +145,9 @@ func (o *SkyBlockFireSale) SetEnd(v float32) {
 }
 
 // GetAmount returns the Amount field value if set, zero value otherwise.
-func (o *SkyBlockFireSale) GetAmount() int32 {
+func (o *SkyBlockFireSale) GetAmount() float32 {
 	if o == nil || IsNil(o.Amount) {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.Amount
@@ -155,7 +155,7 @@ func (o *SkyBlockFireSale) GetAmount() int32 {
 
 // GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockFireSale) GetAmountOk() (*int32, bool) {
+func (o *SkyBlockFireSale) GetAmountOk() (*float32, bool) {
 	if o == nil || IsNil(o.Amount) {
 		return nil, false
 	}
@@ -171,15 +171,15 @@ func (o *SkyBlockFireSale) HasAmount() bool {
 	return false
 }
 
-// SetAmount gets a reference to the given int32 and assigns it to the Amount field.
-func (o *SkyBlockFireSale) SetAmount(v int32) {
+// SetAmount gets a reference to the given float32 and assigns it to the Amount field.
+func (o *SkyBlockFireSale) SetAmount(v float32) {
 	o.Amount = &v
 }
 
 // GetPrice returns the Price field value if set, zero value otherwise.
-func (o *SkyBlockFireSale) GetPrice() int32 {
+func (o *SkyBlockFireSale) GetPrice() float32 {
 	if o == nil || IsNil(o.Price) {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.Price
@@ -187,7 +187,7 @@ func (o *SkyBlockFireSale) GetPrice() int32 {
 
 // GetPriceOk returns a tuple with the Price field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockFireSale) GetPriceOk() (*int32, bool) {
+func (o *SkyBlockFireSale) GetPriceOk() (*float32, bool) {
 	if o == nil || IsNil(o.Price) {
 		return nil, false
 	}
@@ -203,8 +203,8 @@ func (o *SkyBlockFireSale) HasPrice() bool {
 	return false
 }
 
-// SetPrice gets a reference to the given int32 and assigns it to the Price field.
-func (o *SkyBlockFireSale) SetPrice(v int32) {
+// SetPrice gets a reference to the given float32 and assigns it to the Price field.
+func (o *SkyBlockFireSale) SetPrice(v float32) {
 	o.Price = &v
 }
 

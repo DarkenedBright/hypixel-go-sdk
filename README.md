@@ -89,7 +89,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```go
-import openapi "github.com/DarkenedBright/hypixel-go-sdk"
+import openapi "github.com/GIT_USER_ID/GIT_REPO_ID"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:
@@ -145,24 +145,6 @@ All URIs are relative to *https://api.hypixel.net*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*HousingAPI* | [**V2HousingActiveGet**](docs/HousingAPI.md#v2housingactiveget) | **Get** /v2/housing/active | The currently active public houses.
-*HousingAPI* | [**V2HousingHouseGet**](docs/HousingAPI.md#v2housinghouseget) | **Get** /v2/housing/house | Information about a specific house.
-*HousingAPI* | [**V2HousingHousesGet**](docs/HousingAPI.md#v2housinghousesget) | **Get** /v2/housing/houses | The public houses for a specific player.
-*OtherAPI* | [**V2BoostersGet**](docs/OtherAPI.md#v2boostersget) | **Get** /v2/boosters | Active Network Boosters
-*OtherAPI* | [**V2CountsGet**](docs/OtherAPI.md#v2countsget) | **Get** /v2/counts | Current Player Counts
-*OtherAPI* | [**V2LeaderboardsGet**](docs/OtherAPI.md#v2leaderboardsget) | **Get** /v2/leaderboards | Current Leaderboards
-*OtherAPI* | [**V2PunishmentstatsGet**](docs/OtherAPI.md#v2punishmentstatsget) | **Get** /v2/punishmentstats | Punishment Statistics
-*PlayerDataAPI* | [**V2GuildGet**](docs/PlayerDataAPI.md#v2guildget) | **Get** /v2/guild | Retrieve a Guild by a player, id, or name
-*PlayerDataAPI* | [**V2PlayerGet**](docs/PlayerDataAPI.md#v2playerget) | **Get** /v2/player | Data of a specific player, including game stats
-*PlayerDataAPI* | [**V2RecentgamesGet**](docs/PlayerDataAPI.md#v2recentgamesget) | **Get** /v2/recentgames | The recently played games of a specific player
-*PlayerDataAPI* | [**V2StatusGet**](docs/PlayerDataAPI.md#v2statusget) | **Get** /v2/status | The current online status of a specific player
-*ResourcesAPI* | [**V2ResourcesAchievementsGet**](docs/ResourcesAPI.md#v2resourcesachievementsget) | **Get** /v2/resources/achievements | Achievements
-*ResourcesAPI* | [**V2ResourcesChallengesGet**](docs/ResourcesAPI.md#v2resourceschallengesget) | **Get** /v2/resources/challenges | Challenges
-*ResourcesAPI* | [**V2ResourcesGamesGet**](docs/ResourcesAPI.md#v2resourcesgamesget) | **Get** /v2/resources/games | Game Information
-*ResourcesAPI* | [**V2ResourcesGuildsAchievementsGet**](docs/ResourcesAPI.md#v2resourcesguildsachievementsget) | **Get** /v2/resources/guilds/achievements | Guild Achievements
-*ResourcesAPI* | [**V2ResourcesQuestsGet**](docs/ResourcesAPI.md#v2resourcesquestsget) | **Get** /v2/resources/quests | Quests
-*ResourcesAPI* | [**V2ResourcesVanityCompanionsGet**](docs/ResourcesAPI.md#v2resourcesvanitycompanionsget) | **Get** /v2/resources/vanity/companions | Vanity Companions
-*ResourcesAPI* | [**V2ResourcesVanityPetsGet**](docs/ResourcesAPI.md#v2resourcesvanitypetsget) | **Get** /v2/resources/vanity/pets | Vanity Pets
 *SkyBlockAPI* | [**V2ResourcesSkyblockBingoGet**](docs/SkyBlockAPI.md#v2resourcesskyblockbingoget) | **Get** /v2/resources/skyblock/bingo | Current Bingo Event
 *SkyBlockAPI* | [**V2ResourcesSkyblockCollectionsGet**](docs/SkyBlockAPI.md#v2resourcesskyblockcollectionsget) | **Get** /v2/resources/skyblock/collections | Collections
 *SkyBlockAPI* | [**V2ResourcesSkyblockElectionGet**](docs/SkyBlockAPI.md#v2resourcesskyblockelectionget) | **Get** /v2/resources/skyblock/election | Election and Mayor
@@ -181,11 +163,9 @@ Class | Method | HTTP request | Description
 
  - [ActiveBooster](docs/ActiveBooster.md)
  - [Booster](docs/Booster.md)
- - [Game](docs/Game.md)
- - [HousingHouse](docs/HousingHouse.md)
- - [HousingHouseCookies](docs/HousingHouseCookies.md)
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)
+ - [InlineObject2](docs/InlineObject2.md)
  - [QueuedBooster](docs/QueuedBooster.md)
  - [SkyBlockFireSale](docs/SkyBlockFireSale.md)
  - [SkyBlockGarden](docs/SkyBlockGarden.md)
@@ -196,37 +176,28 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfile](docs/SkyBlockProfile.md)
  - [SkyBlockProfileBanking](docs/SkyBlockProfileBanking.md)
  - [SkyBlockProfileBankingTransactionsInner](docs/SkyBlockProfileBankingTransactionsInner.md)
- - [SkyBlockProfileMembers](docs/SkyBlockProfileMembers.md)
- - [SkyBlockProfileMembersProfile](docs/SkyBlockProfileMembersProfile.md)
- - [SkyBlockProfileMembersProfileDeletionNotice](docs/SkyBlockProfileMembersProfileDeletionNotice.md)
- - [V2BoostersGet200Response](docs/V2BoostersGet200Response.md)
- - [V2BoostersGet200ResponseBoosterState](docs/V2BoostersGet200ResponseBoosterState.md)
- - [V2BoostersGet200ResponseBoostersInner](docs/V2BoostersGet200ResponseBoostersInner.md)
- - [V2CountsGet200Response](docs/V2CountsGet200Response.md)
- - [V2GuildGet200Response](docs/V2GuildGet200Response.md)
- - [V2LeaderboardsGet200Response](docs/V2LeaderboardsGet200Response.md)
- - [V2LeaderboardsGet503Response](docs/V2LeaderboardsGet503Response.md)
- - [V2PlayerGet200Response](docs/V2PlayerGet200Response.md)
- - [V2PlayerGet200ResponsePlayer](docs/V2PlayerGet200ResponsePlayer.md)
- - [V2PlayerGet400Response](docs/V2PlayerGet400Response.md)
- - [V2PlayerGet403Response](docs/V2PlayerGet403Response.md)
- - [V2PlayerGet429Response](docs/V2PlayerGet429Response.md)
- - [V2PunishmentstatsGet200Response](docs/V2PunishmentstatsGet200Response.md)
- - [V2RecentgamesGet200Response](docs/V2RecentgamesGet200Response.md)
- - [V2RecentgamesGet200ResponseGamesInner](docs/V2RecentgamesGet200ResponseGamesInner.md)
- - [V2RecentgamesGet422Response](docs/V2RecentgamesGet422Response.md)
- - [V2ResourcesAchievementsGet200Response](docs/V2ResourcesAchievementsGet200Response.md)
- - [V2ResourcesChallengesGet200Response](docs/V2ResourcesChallengesGet200Response.md)
- - [V2ResourcesGamesGet200Response](docs/V2ResourcesGamesGet200Response.md)
- - [V2ResourcesGuildsAchievementsGet200Response](docs/V2ResourcesGuildsAchievementsGet200Response.md)
- - [V2ResourcesQuestsGet200Response](docs/V2ResourcesQuestsGet200Response.md)
+ - [SkyBlockProfileMember](docs/SkyBlockProfileMember.md)
+ - [SkyBlockProfileMemberRift](docs/SkyBlockProfileMemberRift.md)
+ - [SkyBlockProfileMemberRiftBlackLagoon](docs/SkyBlockProfileMemberRiftBlackLagoon.md)
+ - [SkyBlockProfileMemberRiftDeadCats](docs/SkyBlockProfileMemberRiftDeadCats.md)
+ - [SkyBlockProfileMemberRiftDeadCatsMontezuma](docs/SkyBlockProfileMemberRiftDeadCatsMontezuma.md)
+ - [SkyBlockProfileMemberRiftEnigma](docs/SkyBlockProfileMemberRiftEnigma.md)
+ - [SkyBlockProfileMemberRiftGallery](docs/SkyBlockProfileMemberRiftGallery.md)
+ - [SkyBlockProfileMemberRiftGallerySecuredTrophiesInner](docs/SkyBlockProfileMemberRiftGallerySecuredTrophiesInner.md)
+ - [SkyBlockProfileMemberRiftVillagePlaza](docs/SkyBlockProfileMemberRiftVillagePlaza.md)
+ - [SkyBlockProfileMemberRiftVillagePlazaBarryCenter](docs/SkyBlockProfileMemberRiftVillagePlazaBarryCenter.md)
+ - [SkyBlockProfileMemberRiftVillagePlazaCowboy](docs/SkyBlockProfileMemberRiftVillagePlazaCowboy.md)
+ - [SkyBlockProfileMemberRiftVillagePlazaLonely](docs/SkyBlockProfileMemberRiftVillagePlazaLonely.md)
+ - [SkyBlockProfileMemberRiftVillagePlazaMurder](docs/SkyBlockProfileMemberRiftVillagePlazaMurder.md)
+ - [SkyBlockProfileMemberRiftVillagePlazaSeraphine](docs/SkyBlockProfileMemberRiftVillagePlazaSeraphine.md)
+ - [SkyBlockProfileMemberRiftWitherCage](docs/SkyBlockProfileMemberRiftWitherCage.md)
+ - [SkyBlockProfileMemberRiftWizardTower](docs/SkyBlockProfileMemberRiftWizardTower.md)
  - [V2ResourcesSkyblockBingoGet200Response](docs/V2ResourcesSkyblockBingoGet200Response.md)
  - [V2ResourcesSkyblockBingoGet200ResponseGoalsInner](docs/V2ResourcesSkyblockBingoGet200ResponseGoalsInner.md)
  - [V2ResourcesSkyblockCollectionsGet200Response](docs/V2ResourcesSkyblockCollectionsGet200Response.md)
  - [V2ResourcesSkyblockElectionGet200Response](docs/V2ResourcesSkyblockElectionGet200Response.md)
  - [V2ResourcesSkyblockItemsGet200Response](docs/V2ResourcesSkyblockItemsGet200Response.md)
  - [V2ResourcesSkyblockSkillsGet200Response](docs/V2ResourcesSkyblockSkillsGet200Response.md)
- - [V2ResourcesVanityPetsGet200Response](docs/V2ResourcesVanityPetsGet200Response.md)
  - [V2SkyblockBingoGet200Response](docs/V2SkyblockBingoGet200Response.md)
  - [V2SkyblockBingoGet200ResponseEventsInner](docs/V2SkyblockBingoGet200ResponseEventsInner.md)
  - [V2SkyblockBingoGet404Response](docs/V2SkyblockBingoGet404Response.md)
@@ -235,10 +206,12 @@ Class | Method | HTTP request | Description
  - [V2SkyblockGardenGet404Response](docs/V2SkyblockGardenGet404Response.md)
  - [V2SkyblockMuseumGet200Response](docs/V2SkyblockMuseumGet200Response.md)
  - [V2SkyblockNewsGet200Response](docs/V2SkyblockNewsGet200Response.md)
+ - [V2SkyblockNewsGet403Response](docs/V2SkyblockNewsGet403Response.md)
+ - [V2SkyblockNewsGet429Response](docs/V2SkyblockNewsGet429Response.md)
  - [V2SkyblockProfileGet200Response](docs/V2SkyblockProfileGet200Response.md)
+ - [V2SkyblockProfileGet400Response](docs/V2SkyblockProfileGet400Response.md)
+ - [V2SkyblockProfileGet422Response](docs/V2SkyblockProfileGet422Response.md)
  - [V2SkyblockProfilesGet200Response](docs/V2SkyblockProfilesGet200Response.md)
- - [V2StatusGet200Response](docs/V2StatusGet200Response.md)
- - [V2StatusGet200ResponseSession](docs/V2StatusGet200ResponseSession.md)
 
 
 ## Documentation For Authorization

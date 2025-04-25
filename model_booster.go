@@ -22,10 +22,10 @@ type Booster struct {
 	Id *string `json:"_id,omitempty"`
 	PurchaserUuid *string `json:"purchaserUuid,omitempty"`
 	Amount *float32 `json:"amount,omitempty"`
-	OriginalLength *int32 `json:"originalLength,omitempty"`
-	Length *int32 `json:"length,omitempty"`
-	GameType *int32 `json:"gameType,omitempty"`
-	DateActivated *int64 `json:"dateActivated,omitempty"`
+	OriginalLength *float32 `json:"originalLength,omitempty"`
+	Length *float32 `json:"length,omitempty"`
+	GameType *float32 `json:"gameType,omitempty"`
+	DateActivated *float32 `json:"dateActivated,omitempty"`
 }
 
 // NewBooster instantiates a new Booster object
@@ -142,9 +142,9 @@ func (o *Booster) SetAmount(v float32) {
 }
 
 // GetOriginalLength returns the OriginalLength field value if set, zero value otherwise.
-func (o *Booster) GetOriginalLength() int32 {
+func (o *Booster) GetOriginalLength() float32 {
 	if o == nil || IsNil(o.OriginalLength) {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.OriginalLength
@@ -152,7 +152,7 @@ func (o *Booster) GetOriginalLength() int32 {
 
 // GetOriginalLengthOk returns a tuple with the OriginalLength field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Booster) GetOriginalLengthOk() (*int32, bool) {
+func (o *Booster) GetOriginalLengthOk() (*float32, bool) {
 	if o == nil || IsNil(o.OriginalLength) {
 		return nil, false
 	}
@@ -168,15 +168,15 @@ func (o *Booster) HasOriginalLength() bool {
 	return false
 }
 
-// SetOriginalLength gets a reference to the given int32 and assigns it to the OriginalLength field.
-func (o *Booster) SetOriginalLength(v int32) {
+// SetOriginalLength gets a reference to the given float32 and assigns it to the OriginalLength field.
+func (o *Booster) SetOriginalLength(v float32) {
 	o.OriginalLength = &v
 }
 
 // GetLength returns the Length field value if set, zero value otherwise.
-func (o *Booster) GetLength() int32 {
+func (o *Booster) GetLength() float32 {
 	if o == nil || IsNil(o.Length) {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.Length
@@ -184,7 +184,7 @@ func (o *Booster) GetLength() int32 {
 
 // GetLengthOk returns a tuple with the Length field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Booster) GetLengthOk() (*int32, bool) {
+func (o *Booster) GetLengthOk() (*float32, bool) {
 	if o == nil || IsNil(o.Length) {
 		return nil, false
 	}
@@ -200,15 +200,15 @@ func (o *Booster) HasLength() bool {
 	return false
 }
 
-// SetLength gets a reference to the given int32 and assigns it to the Length field.
-func (o *Booster) SetLength(v int32) {
+// SetLength gets a reference to the given float32 and assigns it to the Length field.
+func (o *Booster) SetLength(v float32) {
 	o.Length = &v
 }
 
 // GetGameType returns the GameType field value if set, zero value otherwise.
-func (o *Booster) GetGameType() int32 {
+func (o *Booster) GetGameType() float32 {
 	if o == nil || IsNil(o.GameType) {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.GameType
@@ -216,7 +216,7 @@ func (o *Booster) GetGameType() int32 {
 
 // GetGameTypeOk returns a tuple with the GameType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Booster) GetGameTypeOk() (*int32, bool) {
+func (o *Booster) GetGameTypeOk() (*float32, bool) {
 	if o == nil || IsNil(o.GameType) {
 		return nil, false
 	}
@@ -232,15 +232,15 @@ func (o *Booster) HasGameType() bool {
 	return false
 }
 
-// SetGameType gets a reference to the given int32 and assigns it to the GameType field.
-func (o *Booster) SetGameType(v int32) {
+// SetGameType gets a reference to the given float32 and assigns it to the GameType field.
+func (o *Booster) SetGameType(v float32) {
 	o.GameType = &v
 }
 
 // GetDateActivated returns the DateActivated field value if set, zero value otherwise.
-func (o *Booster) GetDateActivated() int64 {
+func (o *Booster) GetDateActivated() float32 {
 	if o == nil || IsNil(o.DateActivated) {
-		var ret int64
+		var ret float32
 		return ret
 	}
 	return *o.DateActivated
@@ -248,7 +248,7 @@ func (o *Booster) GetDateActivated() int64 {
 
 // GetDateActivatedOk returns a tuple with the DateActivated field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Booster) GetDateActivatedOk() (*int64, bool) {
+func (o *Booster) GetDateActivatedOk() (*float32, bool) {
 	if o == nil || IsNil(o.DateActivated) {
 		return nil, false
 	}
@@ -264,8 +264,8 @@ func (o *Booster) HasDateActivated() bool {
 	return false
 }
 
-// SetDateActivated gets a reference to the given int64 and assigns it to the DateActivated field.
-func (o *Booster) SetDateActivated(v int64) {
+// SetDateActivated gets a reference to the given float32 and assigns it to the DateActivated field.
+func (o *Booster) SetDateActivated(v float32) {
 	o.DateActivated = &v
 }
 

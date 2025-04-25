@@ -19,7 +19,7 @@ var _ MappedNullable = &SkyBlockProfileBankingTransactionsInner{}
 
 // SkyBlockProfileBankingTransactionsInner struct for SkyBlockProfileBankingTransactionsInner
 type SkyBlockProfileBankingTransactionsInner struct {
-	Timestamp *int64 `json:"timestamp,omitempty"`
+	Timestamp *float32 `json:"timestamp,omitempty"`
 	Action *string `json:"action,omitempty"`
 	InitiatorName *string `json:"initiator_name,omitempty"`
 	Amount *float64 `json:"amount,omitempty"`
@@ -43,9 +43,9 @@ func NewSkyBlockProfileBankingTransactionsInnerWithDefaults() *SkyBlockProfileBa
 }
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise.
-func (o *SkyBlockProfileBankingTransactionsInner) GetTimestamp() int64 {
+func (o *SkyBlockProfileBankingTransactionsInner) GetTimestamp() float32 {
 	if o == nil || IsNil(o.Timestamp) {
-		var ret int64
+		var ret float32
 		return ret
 	}
 	return *o.Timestamp
@@ -53,7 +53,7 @@ func (o *SkyBlockProfileBankingTransactionsInner) GetTimestamp() int64 {
 
 // GetTimestampOk returns a tuple with the Timestamp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileBankingTransactionsInner) GetTimestampOk() (*int64, bool) {
+func (o *SkyBlockProfileBankingTransactionsInner) GetTimestampOk() (*float32, bool) {
 	if o == nil || IsNil(o.Timestamp) {
 		return nil, false
 	}
@@ -69,8 +69,8 @@ func (o *SkyBlockProfileBankingTransactionsInner) HasTimestamp() bool {
 	return false
 }
 
-// SetTimestamp gets a reference to the given int64 and assigns it to the Timestamp field.
-func (o *SkyBlockProfileBankingTransactionsInner) SetTimestamp(v int64) {
+// SetTimestamp gets a reference to the given float32 and assigns it to the Timestamp field.
+func (o *SkyBlockProfileBankingTransactionsInner) SetTimestamp(v float32) {
 	o.Timestamp = &v
 }
 

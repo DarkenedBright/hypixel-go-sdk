@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **ItemId** | Pointer to **string** | The SkyBlock item ID for this sale | [optional] 
 **Start** | Pointer to **float32** | The start time in unix milliseconds for the sale | [optional] 
 **End** | Pointer to **float32** | The end time in unix milliseconds for the sale | [optional] 
-**Amount** | Pointer to **int32** | The amount of items available for this sale | [optional] 
-**Price** | Pointer to **int32** | The price in Gems for this sale | [optional] 
+**Amount** | Pointer to **float32** | The amount of items available for this sale | [optional] 
+**Price** | Pointer to **float32** | The price in Gems for this sale | [optional] 
 
 ## Methods
 
@@ -106,20 +106,20 @@ HasEnd returns a boolean if a field has been set.
 
 ### GetAmount
 
-`func (o *SkyBlockFireSale) GetAmount() int32`
+`func (o *SkyBlockFireSale) GetAmount() float32`
 
 GetAmount returns the Amount field if non-nil, zero value otherwise.
 
 ### GetAmountOk
 
-`func (o *SkyBlockFireSale) GetAmountOk() (*int32, bool)`
+`func (o *SkyBlockFireSale) GetAmountOk() (*float32, bool)`
 
 GetAmountOk returns a tuple with the Amount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAmount
 
-`func (o *SkyBlockFireSale) SetAmount(v int32)`
+`func (o *SkyBlockFireSale) SetAmount(v float32)`
 
 SetAmount sets Amount field to given value.
 
@@ -131,20 +131,20 @@ HasAmount returns a boolean if a field has been set.
 
 ### GetPrice
 
-`func (o *SkyBlockFireSale) GetPrice() int32`
+`func (o *SkyBlockFireSale) GetPrice() float32`
 
 GetPrice returns the Price field if non-nil, zero value otherwise.
 
 ### GetPriceOk
 
-`func (o *SkyBlockFireSale) GetPriceOk() (*int32, bool)`
+`func (o *SkyBlockFireSale) GetPriceOk() (*float32, bool)`
 
 GetPriceOk returns a tuple with the Price field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPrice
 
-`func (o *SkyBlockFireSale) SetPrice(v int32)`
+`func (o *SkyBlockFireSale) SetPrice(v float32)`
 
 SetPrice sets Price field to given value.
 
