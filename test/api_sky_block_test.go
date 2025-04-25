@@ -11,11 +11,10 @@ package openapi
 
 import (
 	"context"
-	"testing"
-
-	openapiclient "github.com/DarkenedBright/hypixel-go-sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"testing"
+	openapiclient "github.com/DarkenedBright/hypixel-go-sdk"
 )
 
 func Test_openapi_SkyBlockAPIService(t *testing.T) {
@@ -25,7 +24,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2ResourcesSkyblockBingoGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2ResourcesSkyblockBingoGet(context.Background()).Execute()
 
@@ -37,7 +36,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2ResourcesSkyblockCollectionsGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2ResourcesSkyblockCollectionsGet(context.Background()).Execute()
 
@@ -49,7 +48,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2ResourcesSkyblockElectionGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2ResourcesSkyblockElectionGet(context.Background()).Execute()
 
@@ -61,7 +60,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2ResourcesSkyblockItemsGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2ResourcesSkyblockItemsGet(context.Background()).Execute()
 
@@ -73,7 +72,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2ResourcesSkyblockSkillsGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2ResourcesSkyblockSkillsGet(context.Background()).Execute()
 
@@ -85,7 +84,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2SkyblockBingoGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2SkyblockBingoGet(context.Background()).Execute()
 
@@ -97,7 +96,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2SkyblockFiresalesGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2SkyblockFiresalesGet(context.Background()).Execute()
 
@@ -109,7 +108,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2SkyblockGardenGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2SkyblockGardenGet(context.Background()).Execute()
 
@@ -121,7 +120,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2SkyblockMuseumGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2SkyblockMuseumGet(context.Background()).Execute()
 
@@ -133,7 +132,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2SkyblockNewsGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2SkyblockNewsGet(context.Background()).Execute()
 
@@ -145,7 +144,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2SkyblockProfileGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2SkyblockProfileGet(context.Background()).Execute()
 
@@ -157,7 +156,7 @@ func Test_openapi_SkyBlockAPIService(t *testing.T) {
 
 	t.Run("Test SkyBlockAPIService V2SkyblockProfilesGet", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SkyBlockAPI.V2SkyblockProfilesGet(context.Background()).Execute()
 
