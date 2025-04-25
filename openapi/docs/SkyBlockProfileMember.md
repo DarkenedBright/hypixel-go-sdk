@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Collection** | Pointer to **map[string]int64** |  | [optional] 
 **Currencies** | Pointer to [**SkyBlockProfileMemberCurrencies**](SkyBlockProfileMemberCurrencies.md) |  | [optional] 
 **Dungeons** | Pointer to [**SkyBlockProfileMemberDungeons**](SkyBlockProfileMemberDungeons.md) |  | [optional] 
+**Events** | Pointer to [**SkyBlockProfileMemberEvents**](SkyBlockProfileMemberEvents.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -155,6 +156,31 @@ SetDungeons sets Dungeons field to given value.
 `func (o *SkyBlockProfileMember) HasDungeons() bool`
 
 HasDungeons returns a boolean if a field has been set.
+
+### GetEvents
+
+`func (o *SkyBlockProfileMember) GetEvents() SkyBlockProfileMemberEvents`
+
+GetEvents returns the Events field if non-nil, zero value otherwise.
+
+### GetEventsOk
+
+`func (o *SkyBlockProfileMember) GetEventsOk() (*SkyBlockProfileMemberEvents, bool)`
+
+GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEvents
+
+`func (o *SkyBlockProfileMember) SetEvents(v SkyBlockProfileMemberEvents)`
+
+SetEvents sets Events field to given value.
+
+### HasEvents
+
+`func (o *SkyBlockProfileMember) HasEvents() bool`
+
+HasEvents returns a boolean if a field has been set.
 
 ### GetPlayerId
 

@@ -24,6 +24,7 @@ type SkyBlockProfileMember struct {
 	Collection          *map[string]int64                         `json:"collection,omitempty"`
 	Currencies          *SkyBlockProfileMemberCurrencies          `json:"currencies,omitempty"`
 	Dungeons            *SkyBlockProfileMemberDungeons            `json:"dungeons,omitempty"`
+	Events              *SkyBlockProfileMemberEvents              `json:"events,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -205,6 +206,38 @@ func (o *SkyBlockProfileMember) SetDungeons(v SkyBlockProfileMemberDungeons) {
 	o.Dungeons = &v
 }
 
+// GetEvents returns the Events field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetEvents() SkyBlockProfileMemberEvents {
+	if o == nil || IsNil(o.Events) {
+		var ret SkyBlockProfileMemberEvents
+		return ret
+	}
+	return *o.Events
+}
+
+// GetEventsOk returns a tuple with the Events field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetEventsOk() (*SkyBlockProfileMemberEvents, bool) {
+	if o == nil || IsNil(o.Events) {
+		return nil, false
+	}
+	return o.Events, true
+}
+
+// HasEvents returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasEvents() bool {
+	if o != nil && !IsNil(o.Events) {
+		return true
+	}
+
+	return false
+}
+
+// SetEvents gets a reference to the given SkyBlockProfileMemberEvents and assigns it to the Events field.
+func (o *SkyBlockProfileMember) SetEvents(v SkyBlockProfileMemberEvents) {
+	o.Events = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -293,6 +326,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Dungeons) {
 		toSerialize["dungeons"] = o.Dungeons
+	}
+	if !IsNil(o.Events) {
+		toSerialize["events"] = o.Events
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId

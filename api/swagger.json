@@ -594,6 +594,9 @@
                     "dungeons": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberDungeons"
                     },
+                    "events": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberEvents"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -846,6 +849,56 @@
                 },
                 "type": "object"
             },
+            "SkyBlockProfileMemberDungeonsDungeonTypesBestRuns": {
+                "properties": {
+                    "ally_healing": {
+                        "type": "number"
+                    },
+                    "damage_dealt": {
+                        "type": "number"
+                    },
+                    "damage_mitigated": {
+                        "type": "number"
+                    },
+                    "deaths": {
+                        "type": "integer"
+                    },
+                    "dungeon_class": {
+                        "type": "string"
+                    },
+                    "elapsed_time": {
+                        "type": "integer"
+                    },
+                    "mobs_killed": {
+                        "type": "integer"
+                    },
+                    "score_bonus": {
+                        "type": "integer"
+                    },
+                    "score_exploration": {
+                        "type": "integer"
+                    },
+                    "score_skill": {
+                        "type": "integer"
+                    },
+                    "score_speed": {
+                        "type": "integer"
+                    },
+                    "secrets_found": {
+                        "type": "integer"
+                    },
+                    "teammates": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "timestamp": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
             "SkyBlockProfileMemberDungeonsDungeonTypesType": {
                 "properties": {
                     "best_runs": {
@@ -864,7 +917,7 @@
                         "type": "object"
                     },
                     "experience": {
-                        "type": "number" 
+                        "type": "number"
                     },
                     "fastest_time": {
                         "additionalProperties": {
@@ -962,56 +1015,6 @@
                 },
                 "type": "object"
             },
-            "SkyBlockProfileMemberDungeonsDungeonTypesBestRuns": {
-                "properties": {
-                    "ally_healing": {
-                        "type": "number"
-                    },
-                    "damage_dealt": {
-                        "type": "number"
-                    },
-                    "damage_mitigated": {
-                        "type": "number"
-                    },
-                    "deaths": {
-                        "type": "integer"
-                    },
-                    "dungeon_class": {
-                        "type": "string"
-                    },
-                    "elapsed_time": {
-                        "type": "integer"
-                    },
-                    "mobs_killed": {
-                        "type": "integer"
-                    },
-                    "score_bonus": {
-                        "type": "integer"
-                    },
-                    "score_exploration": {
-                        "type": "integer"
-                    },
-                    "score_skill": {
-                        "type": "integer"
-                    },
-                    "score_speed": {
-                        "type": "integer"
-                    },
-                    "secrets_found": {
-                        "type": "integer"
-                    },
-                    "teammates": {
-                        "items": {
-                            "type": "string"
-                        },
-                        "type": "array"
-                    },
-                    "timestamp": {
-                        "type": "integer"
-                    }
-                },
-                "type": "object"
-            },
             "SkyBlockProfileMemberDungeonsPlayerClasses": {
                 "additionalProperties": {
                     "properties": {
@@ -1069,6 +1072,20 @@
                 },
                 "type": "object"
             },
+            "SkyBlockProfileMemberDungeonsTreasuresChestRewards": {
+                "properties": {
+                    "rewards": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "rolled_rng_meter_randomly": {
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            },
             "SkyBlockProfileMemberDungeonsTreasuresRun": {
                 "properties": {
                     "completion_ts": {
@@ -1106,19 +1123,172 @@
                 },
                 "type": "object"
             },
-            "SkyBlockProfileMemberDungeonsTreasuresChestRewards": {
+            "SkyBlockProfileMemberEvents": {
                 "properties": {
-                    "rewards": {
+                    "easter": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberEventsEaster"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberEventsEaster": {
+                "properties": {
+                    "chocolate": {
+                        "type": "integer"
+                    },
+                    "chocolate_level": {
+                        "type": "integer"
+                    },
+                    "chocolate_multiplier_upgrades": {
+                        "type": "integer"
+                    },
+                    "chocolate_since_prestige": {
+                        "type": "integer"
+                    },
+                    "click_upgrades": {
+                        "type": "integer"
+                    },
+                    "el_dorado_progress": {
+                        "type": "integer"
+                    },
+                    "employees": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberEventsEasterEmployees"
+                    },
+                    "golden_click_amount": {
+                        "type": "integer"
+                    },
+                    "golden_click_year": {
+                        "type": "integer"
+                    },
+                    "last_viewed_chocolate_factory": {
+                        "type": "integer"
+                    },
+                    "rabbit_barn_capacity_level": {
+                        "type": "integer"
+                    },
+                    "rabbit_filter": {
+                        "type": "string"
+                    },
+                    "rabbit_hitmen": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberEventsEasterRabbitHitmen"
+                    },
+                    "rabbit_hotspot_filer": {
+                        "type": "string"
+                    },
+                    "rabbit_rarity_upgrades": {
+                        "type": "integer"
+                    },
+                    "rabbit_sort": {
+                        "type": "string"
+                    },
+                    "rabbits": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberEventsEasterRabbits"
+                    },
+                    "refined_dark_cacao_truffles": {
+                        "type": "integer"
+                    },
+                    "shop": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberEventsEasterShop"
+                    },
+                    "supreme_chocolate_bars": {
+                        "type": "integer"
+                    },
+                    "time_tower": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberEventsEasterTimeTower"
+                    },
+                    "total_chocolate": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberEventsEasterEmployees": {
+                "additionalProperties": {
+                    "type": "integer"
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberEventsEasterRabbitHitmen": {
+                "properties": {
+                    "egg_slot_cooldown_mark": {
+                        "type": "integer"
+                    },
+                    "egg_slot_cooldown_sum": {
+                        "type": "integer"
+                    },
+                    "missed_uncollected_eggs": {
+                        "type": "integer"
+                    },
+                    "rabbit_hitmen_slots": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberEventsEasterRabbits": {
+                "additionalProperties": {
+                    "type": "integer"
+                },
+                "properties": {
+                    "collected_eggs": {
+                        "additionalProperties": {
+                            "type": "integer"
+                        },
+                        "type": "object"
+                    },
+                    "collected_locations": {
+                        "additionalProperties": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberEventsEasterShop": {
+                "properties": {
+                    "chocolate_spent": {
+                        "type": "integer"
+                    },
+                    "cocoa_fortune_upgrades": {
+                        "type": "integer"
+                    },
+                    "rabbits": {
                         "items": {
                             "type": "string"
                         },
                         "type": "array"
                     },
-                    "rolled_rng_meter_randomly": {
-                        "type": "boolean"
+                    "rabbits_purchased": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "year": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "SkyBlockProfileMemberEventsEasterTimeTower": {
+                "properties": {
+                    "activation_time": {
+                        "type": "integer"
+                    },
+                    "charges": {
+                        "type": "integer"
+                    },
+                    "last_charge_time": {
+                        "type": "integer"
+                    },
+                    "level": {
+                        "type": "integer"
                     }
                 },
-                "type": "object"  
+                "type": "object"
             },
             "SkyBlockProfileMemberRift": {
                 "properties": {
