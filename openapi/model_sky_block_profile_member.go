@@ -29,6 +29,7 @@ type SkyBlockProfileMember struct {
 	FairySoul           *SkyBlockProfileMemberFairySoul           `json:"fairy_soul,omitempty"`
 	Forge               *SkyBlockProfileMemberForge               `json:"forge,omitempty"`
 	GardenPlayerData    *SkyBlockProfileMemberGardenPlayerData    `json:"garden_player_data,omitempty"`
+	GlacitePlayerData   *SkyBlockProfileMemberGlacitePlayerData   `json:"glacite_player_data,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -370,6 +371,38 @@ func (o *SkyBlockProfileMember) SetGardenPlayerData(v SkyBlockProfileMemberGarde
 	o.GardenPlayerData = &v
 }
 
+// GetGlacitePlayerData returns the GlacitePlayerData field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetGlacitePlayerData() SkyBlockProfileMemberGlacitePlayerData {
+	if o == nil || IsNil(o.GlacitePlayerData) {
+		var ret SkyBlockProfileMemberGlacitePlayerData
+		return ret
+	}
+	return *o.GlacitePlayerData
+}
+
+// GetGlacitePlayerDataOk returns a tuple with the GlacitePlayerData field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetGlacitePlayerDataOk() (*SkyBlockProfileMemberGlacitePlayerData, bool) {
+	if o == nil || IsNil(o.GlacitePlayerData) {
+		return nil, false
+	}
+	return o.GlacitePlayerData, true
+}
+
+// HasGlacitePlayerData returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasGlacitePlayerData() bool {
+	if o != nil && !IsNil(o.GlacitePlayerData) {
+		return true
+	}
+
+	return false
+}
+
+// SetGlacitePlayerData gets a reference to the given SkyBlockProfileMemberGlacitePlayerData and assigns it to the GlacitePlayerData field.
+func (o *SkyBlockProfileMember) SetGlacitePlayerData(v SkyBlockProfileMemberGlacitePlayerData) {
+	o.GlacitePlayerData = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -473,6 +506,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.GardenPlayerData) {
 		toSerialize["garden_player_data"] = o.GardenPlayerData
+	}
+	if !IsNil(o.GlacitePlayerData) {
+		toSerialize["glacite_player_data"] = o.GlacitePlayerData
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId

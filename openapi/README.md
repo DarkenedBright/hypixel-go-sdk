@@ -212,6 +212,8 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberForge](docs/SkyBlockProfileMemberForge.md)
  - [SkyBlockProfileMemberForgeProcessesProcessSlot](docs/SkyBlockProfileMemberForgeProcessesProcessSlot.md)
  - [SkyBlockProfileMemberGardenPlayerData](docs/SkyBlockProfileMemberGardenPlayerData.md)
+ - [SkyBlockProfileMemberGlacitePlayerData](docs/SkyBlockProfileMemberGlacitePlayerData.md)
+ - [SkyBlockProfileMemberGlacitePlayerDataCorpsesLooted](docs/SkyBlockProfileMemberGlacitePlayerDataCorpsesLooted.md)
  - [SkyBlockProfileMemberRift](docs/SkyBlockProfileMemberRift.md)
  - [SkyBlockProfileMemberRiftBlackLagoon](docs/SkyBlockProfileMemberRiftBlackLagoon.md)
  - [SkyBlockProfileMemberRiftDeadCats](docs/SkyBlockProfileMemberRiftDeadCats.md)

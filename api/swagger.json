@@ -609,6 +609,9 @@
                     "garden_player_data": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberGardenPlayerData"
                     },
+                    "glacite_player_data": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberGlacitePlayerData"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -1557,6 +1560,43 @@
                         "type": "integer"
                     },
                     "larva_consumed": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberGlacitePlayerData": {
+                "properties": {
+                    "corpses_looted": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberGlacitePlayerDataCorpsesLooted"
+                    },
+                    "fossil_dust": {
+                        "type": "number"
+                    },
+                    "fossils_donated": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "mineshafts_entered": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberGlacitePlayerDataCorpsesLooted": {
+                "properties": {
+                    "lapis": {
+                        "type": "integer"
+                    },
+                    "tungsten": {
+                        "type": "integer"
+                    },
+                    "umber": {
+                        "type": "integer"
+                    },
+                    "vanguard": {
                         "type": "integer"
                     }
                 },

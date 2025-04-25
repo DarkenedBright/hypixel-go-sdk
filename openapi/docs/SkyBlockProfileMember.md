@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **FairySoul** | Pointer to [**SkyBlockProfileMemberFairySoul**](SkyBlockProfileMemberFairySoul.md) |  | [optional] 
 **Forge** | Pointer to [**SkyBlockProfileMemberForge**](SkyBlockProfileMemberForge.md) |  | [optional] 
 **GardenPlayerData** | Pointer to [**SkyBlockProfileMemberGardenPlayerData**](SkyBlockProfileMemberGardenPlayerData.md) |  | [optional] 
+**GlacitePlayerData** | Pointer to [**SkyBlockProfileMemberGlacitePlayerData**](SkyBlockProfileMemberGlacitePlayerData.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -285,6 +286,31 @@ SetGardenPlayerData sets GardenPlayerData field to given value.
 `func (o *SkyBlockProfileMember) HasGardenPlayerData() bool`
 
 HasGardenPlayerData returns a boolean if a field has been set.
+
+### GetGlacitePlayerData
+
+`func (o *SkyBlockProfileMember) GetGlacitePlayerData() SkyBlockProfileMemberGlacitePlayerData`
+
+GetGlacitePlayerData returns the GlacitePlayerData field if non-nil, zero value otherwise.
+
+### GetGlacitePlayerDataOk
+
+`func (o *SkyBlockProfileMember) GetGlacitePlayerDataOk() (*SkyBlockProfileMemberGlacitePlayerData, bool)`
+
+GetGlacitePlayerDataOk returns a tuple with the GlacitePlayerData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGlacitePlayerData
+
+`func (o *SkyBlockProfileMember) SetGlacitePlayerData(v SkyBlockProfileMemberGlacitePlayerData)`
+
+SetGlacitePlayerData sets GlacitePlayerData field to given value.
+
+### HasGlacitePlayerData
+
+`func (o *SkyBlockProfileMember) HasGlacitePlayerData() bool`
+
+HasGlacitePlayerData returns a boolean if a field has been set.
 
 ### GetPlayerId
 
