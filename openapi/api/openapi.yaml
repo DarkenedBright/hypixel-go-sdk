@@ -894,34 +894,34 @@ components:
               dungeon_types:
                 key:
                   best_score:
-                    key: 3
+                    key: 3.353193347011243
                   tier_completions:
-                    key: 4
+                    key: 4.078845849666752
                   fastest_time_s_plus:
-                    key: 7
+                    key: 7.058770351582356
                   most_damage_tank:
                     key: 7.04836565559697
                   watcher_kills:
-                    key: 6
+                    key: 6.628464275087742
                   times_played:
-                    key: 0
+                    key: 0.2025324113236393
                   experience: 3.0937452626664474
                   milestone_completions:
-                    key: 0
+                    key: 0.10263654006109402
                   most_damage_berserk:
                     key: 7.740351818741173
                   most_damage_healer:
                     key: 3.0205796992916243
                   most_mobs_killed:
-                    key: 3
+                    key: 3.2588565619047607
                   fastest_time:
-                    key: 7
+                    key: 7.143538047012306
                   most_damage_mage:
                     key: 3.0576100241049344
                   most_damage_archer:
                     key: 8.969578798196912
                   fastest_time_s:
-                    key: 0
+                    key: 0.8851374739011653
                   most_healing:
                     key: 5.533258397034986
                   best_runs:
@@ -959,7 +959,7 @@ components:
                       deaths: 6
                       timestamp: 6
                   mobs_killed:
-                    key: 4
+                    key: 4.652396432933246
                   highest_tier_completed: 6
               player_classes:
                 key:
@@ -1246,34 +1246,34 @@ components:
           dungeon_types:
             key:
               best_score:
-                key: 3
+                key: 3.353193347011243
               tier_completions:
-                key: 4
+                key: 4.078845849666752
               fastest_time_s_plus:
-                key: 7
+                key: 7.058770351582356
               most_damage_tank:
                 key: 7.04836565559697
               watcher_kills:
-                key: 6
+                key: 6.628464275087742
               times_played:
-                key: 0
+                key: 0.2025324113236393
               experience: 3.0937452626664474
               milestone_completions:
-                key: 0
+                key: 0.10263654006109402
               most_damage_berserk:
                 key: 7.740351818741173
               most_damage_healer:
                 key: 3.0205796992916243
               most_mobs_killed:
-                key: 3
+                key: 3.2588565619047607
               fastest_time:
-                key: 7
+                key: 7.143538047012306
               most_damage_mage:
                 key: 3.0576100241049344
               most_damage_archer:
                 key: 8.969578798196912
               fastest_time_s:
-                key: 0
+                key: 0.8851374739011653
               most_healing:
                 key: 5.533258397034986
               best_runs:
@@ -1311,7 +1311,7 @@ components:
                   deaths: 6
                   timestamp: 6
               mobs_killed:
-                key: 4
+                key: 4.652396432933246
               highest_tier_completed: 6
           player_classes:
             key:
@@ -1718,34 +1718,34 @@ components:
         dungeon_types:
           key:
             best_score:
-              key: 3
+              key: 3.353193347011243
             tier_completions:
-              key: 4
+              key: 4.078845849666752
             fastest_time_s_plus:
-              key: 7
+              key: 7.058770351582356
             most_damage_tank:
               key: 7.04836565559697
             watcher_kills:
-              key: 6
+              key: 6.628464275087742
             times_played:
-              key: 0
+              key: 0.2025324113236393
             experience: 3.0937452626664474
             milestone_completions:
-              key: 0
+              key: 0.10263654006109402
             most_damage_berserk:
               key: 7.740351818741173
             most_damage_healer:
               key: 3.0205796992916243
             most_mobs_killed:
-              key: 3
+              key: 3.2588565619047607
             fastest_time:
-              key: 7
+              key: 7.143538047012306
             most_damage_mage:
               key: 3.0576100241049344
             most_damage_archer:
               key: 8.969578798196912
             fastest_time_s:
-              key: 0
+              key: 0.8851374739011653
             most_healing:
               key: 5.533258397034986
             best_runs:
@@ -1783,7 +1783,7 @@ components:
                 deaths: 6
                 timestamp: 6
             mobs_killed:
-              key: 4
+              key: 4.652396432933246
             highest_tier_completed: 6
         player_classes:
           key:
@@ -1922,34 +1922,34 @@ components:
     SkyBlockProfileMemberDungeonsDungeonTypesType:
       example:
         best_score:
-          key: 3
+          key: 3.353193347011243
         tier_completions:
-          key: 4
+          key: 4.078845849666752
         fastest_time_s_plus:
-          key: 7
+          key: 7.058770351582356
         most_damage_tank:
           key: 7.04836565559697
         watcher_kills:
-          key: 6
+          key: 6.628464275087742
         times_played:
-          key: 0
+          key: 0.2025324113236393
         experience: 3.0937452626664474
         milestone_completions:
-          key: 0
+          key: 0.10263654006109402
         most_damage_berserk:
           key: 7.740351818741173
         most_damage_healer:
           key: 3.0205796992916243
         most_mobs_killed:
-          key: 3
+          key: 3.2588565619047607
         fastest_time:
-          key: 7
+          key: 7.143538047012306
         most_damage_mage:
           key: 3.0576100241049344
         most_damage_archer:
           key: 8.969578798196912
         fastest_time_s:
-          key: 0
+          key: 0.8851374739011653
         most_healing:
           key: 5.533258397034986
         best_runs:
@@ -1987,7 +1987,7 @@ components:
             deaths: 6
             timestamp: 6
         mobs_killed:
-          key: 4
+          key: 4.652396432933246
         highest_tier_completed: 6
       properties:
         best_runs:
@@ -1998,31 +1998,31 @@ components:
           type: object
         best_score:
           additionalProperties:
-            type: integer
+            type: number
           type: object
         experience:
           type: number
         fastest_time:
           additionalProperties:
-            type: integer
+            type: number
           type: object
         fastest_time_s:
           additionalProperties:
-            type: integer
+            type: number
           type: object
         fastest_time_s_plus:
           additionalProperties:
-            type: integer
+            type: number
           type: object
         highest_tier_completed:
           type: integer
         milestone_completions:
           additionalProperties:
-            type: integer
+            type: number
           type: object
         mobs_killed:
           additionalProperties:
-            type: integer
+            type: number
           type: object
         most_damage_archer:
           additionalProperties:
@@ -2050,19 +2050,19 @@ components:
           type: object
         most_mobs_killed:
           additionalProperties:
-            type: integer
+            type: number
           type: object
         tier_completions:
           additionalProperties:
-            type: integer
+            type: number
           type: object
         times_played:
           additionalProperties:
-            type: integer
+            type: number
           type: object
         watcher_kills:
           additionalProperties:
-            type: integer
+            type: number
           type: object
       type: object
     SkyBlockProfileMemberDungeonsDungeonTypesBestRuns:
@@ -3274,34 +3274,34 @@ components:
                 dungeon_types:
                   key:
                     best_score:
-                      key: 3
+                      key: 3.353193347011243
                     tier_completions:
-                      key: 4
+                      key: 4.078845849666752
                     fastest_time_s_plus:
-                      key: 7
+                      key: 7.058770351582356
                     most_damage_tank:
                       key: 7.04836565559697
                     watcher_kills:
-                      key: 6
+                      key: 6.628464275087742
                     times_played:
-                      key: 0
+                      key: 0.2025324113236393
                     experience: 3.0937452626664474
                     milestone_completions:
-                      key: 0
+                      key: 0.10263654006109402
                     most_damage_berserk:
                       key: 7.740351818741173
                     most_damage_healer:
                       key: 3.0205796992916243
                     most_mobs_killed:
-                      key: 3
+                      key: 3.2588565619047607
                     fastest_time:
-                      key: 7
+                      key: 7.143538047012306
                     most_damage_mage:
                       key: 3.0576100241049344
                     most_damage_archer:
                       key: 8.969578798196912
                     fastest_time_s:
-                      key: 0
+                      key: 0.8851374739011653
                     most_healing:
                       key: 5.533258397034986
                     best_runs:
@@ -3339,7 +3339,7 @@ components:
                         deaths: 6
                         timestamp: 6
                     mobs_killed:
-                      key: 4
+                      key: 4.652396432933246
                     highest_tier_completed: 6
                 player_classes:
                   key:
@@ -3608,34 +3608,34 @@ components:
                 dungeon_types:
                   key:
                     best_score:
-                      key: 3
+                      key: 3.353193347011243
                     tier_completions:
-                      key: 4
+                      key: 4.078845849666752
                     fastest_time_s_plus:
-                      key: 7
+                      key: 7.058770351582356
                     most_damage_tank:
                       key: 7.04836565559697
                     watcher_kills:
-                      key: 6
+                      key: 6.628464275087742
                     times_played:
-                      key: 0
+                      key: 0.2025324113236393
                     experience: 3.0937452626664474
                     milestone_completions:
-                      key: 0
+                      key: 0.10263654006109402
                     most_damage_berserk:
                       key: 7.740351818741173
                     most_damage_healer:
                       key: 3.0205796992916243
                     most_mobs_killed:
-                      key: 3
+                      key: 3.2588565619047607
                     fastest_time:
-                      key: 7
+                      key: 7.143538047012306
                     most_damage_mage:
                       key: 3.0576100241049344
                     most_damage_archer:
                       key: 8.969578798196912
                     fastest_time_s:
-                      key: 0
+                      key: 0.8851374739011653
                     most_healing:
                       key: 5.533258397034986
                     best_runs:
@@ -3673,7 +3673,7 @@ components:
                         deaths: 6
                         timestamp: 6
                     mobs_killed:
-                      key: 4
+                      key: 4.652396432933246
                     highest_tier_completed: 6
                 player_classes:
                   key:
@@ -3932,34 +3932,34 @@ components:
                 dungeon_types:
                   key:
                     best_score:
-                      key: 3
+                      key: 3.353193347011243
                     tier_completions:
-                      key: 4
+                      key: 4.078845849666752
                     fastest_time_s_plus:
-                      key: 7
+                      key: 7.058770351582356
                     most_damage_tank:
                       key: 7.04836565559697
                     watcher_kills:
-                      key: 6
+                      key: 6.628464275087742
                     times_played:
-                      key: 0
+                      key: 0.2025324113236393
                     experience: 3.0937452626664474
                     milestone_completions:
-                      key: 0
+                      key: 0.10263654006109402
                     most_damage_berserk:
                       key: 7.740351818741173
                     most_damage_healer:
                       key: 3.0205796992916243
                     most_mobs_killed:
-                      key: 3
+                      key: 3.2588565619047607
                     fastest_time:
-                      key: 7
+                      key: 7.143538047012306
                     most_damage_mage:
                       key: 3.0576100241049344
                     most_damage_archer:
                       key: 8.969578798196912
                     fastest_time_s:
-                      key: 0
+                      key: 0.8851374739011653
                     most_healing:
                       key: 5.533258397034986
                     best_runs:
@@ -3997,7 +3997,7 @@ components:
                         deaths: 6
                         timestamp: 6
                     mobs_killed:
-                      key: 4
+                      key: 4.652396432933246
                     highest_tier_completed: 6
                 player_classes:
                   key:

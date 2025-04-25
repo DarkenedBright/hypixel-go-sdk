@@ -859,7 +859,7 @@
                     },
                     "best_score": {
                         "additionalProperties": {
-                            "type": "integer"
+                            "type": "number"
                         },
                         "type": "object"
                     },
@@ -868,19 +868,19 @@
                     },
                     "fastest_time": {
                         "additionalProperties": {
-                            "type": "integer"
+                            "type": "number"
                         },
                         "type": "object"
                     },
                     "fastest_time_s": {
                         "additionalProperties": {
-                            "type": "integer"
+                            "type": "number"
                         },
                         "type": "object"
                     },
                     "fastest_time_s_plus": {
                         "additionalProperties": {
-                            "type": "integer"
+                            "type": "number"
                         },
                         "type": "object"
                     },
@@ -889,13 +889,13 @@
                     },
                     "milestone_completions": {
                         "additionalProperties": {
-                            "type": "integer"
+                            "type": "number"
                         },
                         "type": "object"
                     },
                     "mobs_killed": {
                         "additionalProperties": {
-                            "type": "integer"
+                            "type": "number"
                         },
                         "type": "object"
                     },
@@ -937,25 +937,25 @@
                     },
                     "most_mobs_killed": {
                         "additionalProperties": {
-                            "type": "integer"
+                            "type": "number"
                         },
                         "type": "object"
                     },
                     "tier_completions": {
                         "additionalProperties": {
-                            "type": "integer"
+                            "type": "number"
                         },
                         "type": "object"
                     },
                     "times_played": {
                         "additionalProperties": {
-                            "type": "integer"
+                            "type": "number"
                         },
                         "type": "object"
                     },
                     "watcher_kills": {
                         "additionalProperties": {
-                            "type": "integer"
+                            "type": "number"
                         },
                         "type": "object"
                     }
