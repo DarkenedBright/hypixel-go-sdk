@@ -217,6 +217,7 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberInventory](docs/SkyBlockProfileMemberInventory.md)
  - [SkyBlockProfileMemberInventoryBagContents](docs/SkyBlockProfileMemberInventoryBagContents.md)
  - [SkyBlockProfileMemberInventoryBase64GzipData](docs/SkyBlockProfileMemberInventoryBase64GzipData.md)
+ - [SkyBlockProfileMemberItemData](docs/SkyBlockProfileMemberItemData.md)
  - [SkyBlockProfileMemberRift](docs/SkyBlockProfileMemberRift.md)
  - [SkyBlockProfileMemberRiftBlackLagoon](docs/SkyBlockProfileMemberRiftBlackLagoon.md)
  - [SkyBlockProfileMemberRiftDeadCats](docs/SkyBlockProfileMemberRiftDeadCats.md)

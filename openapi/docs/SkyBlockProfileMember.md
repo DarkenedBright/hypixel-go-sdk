@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **GardenPlayerData** | Pointer to [**SkyBlockProfileMemberGardenPlayerData**](SkyBlockProfileMemberGardenPlayerData.md) |  | [optional] 
 **GlacitePlayerData** | Pointer to [**SkyBlockProfileMemberGlacitePlayerData**](SkyBlockProfileMemberGlacitePlayerData.md) |  | [optional] 
 **Inventory** | Pointer to [**SkyBlockProfileMemberInventory**](SkyBlockProfileMemberInventory.md) |  | [optional] 
+**ItemData** | Pointer to [**SkyBlockProfileMemberItemData**](SkyBlockProfileMemberItemData.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -337,6 +338,31 @@ SetInventory sets Inventory field to given value.
 `func (o *SkyBlockProfileMember) HasInventory() bool`
 
 HasInventory returns a boolean if a field has been set.
+
+### GetItemData
+
+`func (o *SkyBlockProfileMember) GetItemData() SkyBlockProfileMemberItemData`
+
+GetItemData returns the ItemData field if non-nil, zero value otherwise.
+
+### GetItemDataOk
+
+`func (o *SkyBlockProfileMember) GetItemDataOk() (*SkyBlockProfileMemberItemData, bool)`
+
+GetItemDataOk returns a tuple with the ItemData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetItemData
+
+`func (o *SkyBlockProfileMember) SetItemData(v SkyBlockProfileMemberItemData)`
+
+SetItemData sets ItemData field to given value.
+
+### HasItemData
+
+`func (o *SkyBlockProfileMember) HasItemData() bool`
+
+HasItemData returns a boolean if a field has been set.
 
 ### GetPlayerId
 

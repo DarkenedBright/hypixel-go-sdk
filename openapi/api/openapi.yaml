@@ -1042,20 +1042,24 @@ components:
                 key:
                   data: data
                   type: 9
+            item_data:
+              soulflow: 0
+              teleporter_pill_consumed: true
+              favorite_arrow: favorite_arrow
             rift:
               wizard_tower:
-                wizard_quest_step: 8
-                crumbs_laid_out: 3
+                wizard_quest_step: 7
+                crumbs_laid_out: 8
               enigma:
                 found_souls:
                 - found_souls
                 - found_souls
                 bought_cloak: true
-                claimed_bonus_index: 7
+                claimed_bonus_index: 1
               black_lagoon:
                 received_science_paper: true
                 delivered_science_paper: true
-                completed_step: 0
+                completed_step: 4
                 talked_to_edwin: true
               dead_cats:
                 unlocked_pet: true
@@ -1084,10 +1088,10 @@ components:
                       HEALTH: 20
                     tier: RARE
                   active: true
-                  exp: 0.36062689002149373
+                  exp: 7.390706075830692
                   type: type
                   uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                  candyUsed: 4
+                  candyUsed: 0
                   uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                 found_cats:
                 - found_cats
@@ -1096,22 +1100,22 @@ components:
                 talked_to_jacquelle: true
               village_plaza:
                 murder:
-                  step_index_pt3: 1
-                  step_index: 5
-                  step_index_pt2: 3
+                  step_index_pt3: 5
+                  step_index: 3
+                  step_index_pt2: 1
                   room_clues:
                   - room_clues
                   - room_clues
                 cowboy:
-                  stage: 2
-                  hay_eaten: 4
+                  stage: 3
+                  hay_eaten: 2
                   rabbit_name: rabbit_name
                 barter_bank: "{}"
                 got_scammed: true
                 seraphine:
-                  step_index: 5
+                  step_index: 3
                 lonely:
-                  seconds_sitting: 3
+                  seconds_sitting: 5
                 barry_center:
                   first_talk_to_barry: true
                   convinced:
@@ -1126,14 +1130,14 @@ components:
                 sent_trophy_dialogues:
                 - sent_trophy_dialogues
                 - sent_trophy_dialogues
-                elise_step: 1
+                elise_step: 6
                 secured_trophies:
-                - visits: 2
+                - visits: 4
                   type: type
-                  timestamp: 6
-                - visits: 2
+                  timestamp: 2
+                - visits: 4
                   type: type
-                  timestamp: 6
+                  timestamp: 2
             player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             glacite_player_data:
               corpses_looted:
@@ -1566,20 +1570,24 @@ components:
             key:
               data: data
               type: 9
+        item_data:
+          soulflow: 0
+          teleporter_pill_consumed: true
+          favorite_arrow: favorite_arrow
         rift:
           wizard_tower:
-            wizard_quest_step: 8
-            crumbs_laid_out: 3
+            wizard_quest_step: 7
+            crumbs_laid_out: 8
           enigma:
             found_souls:
             - found_souls
             - found_souls
             bought_cloak: true
-            claimed_bonus_index: 7
+            claimed_bonus_index: 1
           black_lagoon:
             received_science_paper: true
             delivered_science_paper: true
-            completed_step: 0
+            completed_step: 4
             talked_to_edwin: true
           dead_cats:
             unlocked_pet: true
@@ -1608,10 +1616,10 @@ components:
                   HEALTH: 20
                 tier: RARE
               active: true
-              exp: 0.36062689002149373
+              exp: 7.390706075830692
               type: type
               uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              candyUsed: 4
+              candyUsed: 0
               uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             found_cats:
             - found_cats
@@ -1620,22 +1628,22 @@ components:
             talked_to_jacquelle: true
           village_plaza:
             murder:
-              step_index_pt3: 1
-              step_index: 5
-              step_index_pt2: 3
+              step_index_pt3: 5
+              step_index: 3
+              step_index_pt2: 1
               room_clues:
               - room_clues
               - room_clues
             cowboy:
-              stage: 2
-              hay_eaten: 4
+              stage: 3
+              hay_eaten: 2
               rabbit_name: rabbit_name
             barter_bank: "{}"
             got_scammed: true
             seraphine:
-              step_index: 5
+              step_index: 3
             lonely:
-              seconds_sitting: 3
+              seconds_sitting: 5
             barry_center:
               first_talk_to_barry: true
               convinced:
@@ -1650,14 +1658,14 @@ components:
             sent_trophy_dialogues:
             - sent_trophy_dialogues
             - sent_trophy_dialogues
-            elise_step: 1
+            elise_step: 6
             secured_trophies:
-            - visits: 2
+            - visits: 4
               type: type
-              timestamp: 6
-            - visits: 2
+              timestamp: 2
+            - visits: 4
               type: type
-              timestamp: 6
+              timestamp: 2
         player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         glacite_player_data:
           corpses_looted:
@@ -1825,6 +1833,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberGlacitePlayerData'
         inventory:
           $ref: '#/components/schemas/SkyBlockProfileMemberInventory'
+        item_data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberItemData'
         player_id:
           format: uuid
           type: string
@@ -3311,21 +3321,34 @@ components:
         type:
           type: integer
       type: object
+    SkyBlockProfileMemberItemData:
+      example:
+        soulflow: 0
+        teleporter_pill_consumed: true
+        favorite_arrow: favorite_arrow
+      properties:
+        favorite_arrow:
+          type: string
+        soulflow:
+          type: integer
+        teleporter_pill_consumed:
+          type: boolean
+      type: object
     SkyBlockProfileMemberRift:
       example:
         wizard_tower:
-          wizard_quest_step: 8
-          crumbs_laid_out: 3
+          wizard_quest_step: 7
+          crumbs_laid_out: 8
         enigma:
           found_souls:
           - found_souls
           - found_souls
           bought_cloak: true
-          claimed_bonus_index: 7
+          claimed_bonus_index: 1
         black_lagoon:
           received_science_paper: true
           delivered_science_paper: true
-          completed_step: 0
+          completed_step: 4
           talked_to_edwin: true
         dead_cats:
           unlocked_pet: true
@@ -3354,10 +3377,10 @@ components:
                 HEALTH: 20
               tier: RARE
             active: true
-            exp: 0.36062689002149373
+            exp: 7.390706075830692
             type: type
             uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            candyUsed: 4
+            candyUsed: 0
             uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           found_cats:
           - found_cats
@@ -3366,22 +3389,22 @@ components:
           talked_to_jacquelle: true
         village_plaza:
           murder:
-            step_index_pt3: 1
-            step_index: 5
-            step_index_pt2: 3
+            step_index_pt3: 5
+            step_index: 3
+            step_index_pt2: 1
             room_clues:
             - room_clues
             - room_clues
           cowboy:
-            stage: 2
-            hay_eaten: 4
+            stage: 3
+            hay_eaten: 2
             rabbit_name: rabbit_name
           barter_bank: "{}"
           got_scammed: true
           seraphine:
-            step_index: 5
+            step_index: 3
           lonely:
-            seconds_sitting: 3
+            seconds_sitting: 5
           barry_center:
             first_talk_to_barry: true
             convinced:
@@ -3396,14 +3419,14 @@ components:
           sent_trophy_dialogues:
           - sent_trophy_dialogues
           - sent_trophy_dialogues
-          elise_step: 1
+          elise_step: 6
           secured_trophies:
-          - visits: 2
+          - visits: 4
             type: type
-            timestamp: 6
-          - visits: 2
+            timestamp: 2
+          - visits: 4
             type: type
-            timestamp: 6
+            timestamp: 2
       properties:
         black_lagoon:
           $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
@@ -3424,7 +3447,7 @@ components:
       example:
         received_science_paper: true
         delivered_science_paper: true
-        completed_step: 0
+        completed_step: 4
         talked_to_edwin: true
       properties:
         completed_step:
@@ -3464,10 +3487,10 @@ components:
               HEALTH: 20
             tier: RARE
           active: true
-          exp: 0.36062689002149373
+          exp: 7.390706075830692
           type: type
           uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          candyUsed: 4
+          candyUsed: 0
           uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         found_cats:
         - found_cats
@@ -3514,10 +3537,10 @@ components:
             HEALTH: 20
           tier: RARE
         active: true
-        exp: 0.36062689002149373
+        exp: 7.390706075830692
         type: type
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        candyUsed: 4
+        candyUsed: 0
         uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         active:
@@ -3547,7 +3570,7 @@ components:
         - found_souls
         - found_souls
         bought_cloak: true
-        claimed_bonus_index: 7
+        claimed_bonus_index: 1
       properties:
         bought_cloak:
           type: boolean
@@ -3563,14 +3586,14 @@ components:
         sent_trophy_dialogues:
         - sent_trophy_dialogues
         - sent_trophy_dialogues
-        elise_step: 1
+        elise_step: 6
         secured_trophies:
-        - visits: 2
+        - visits: 4
           type: type
-          timestamp: 6
-        - visits: 2
+          timestamp: 2
+        - visits: 4
           type: type
-          timestamp: 6
+          timestamp: 2
       properties:
         elise_step:
           type: integer
@@ -3586,22 +3609,22 @@ components:
     SkyBlockProfileMemberRiftVillagePlaza:
       example:
         murder:
-          step_index_pt3: 1
-          step_index: 5
-          step_index_pt2: 3
+          step_index_pt3: 5
+          step_index: 3
+          step_index_pt2: 1
           room_clues:
           - room_clues
           - room_clues
         cowboy:
-          stage: 2
-          hay_eaten: 4
+          stage: 3
+          hay_eaten: 2
           rabbit_name: rabbit_name
         barter_bank: "{}"
         got_scammed: true
         seraphine:
-          step_index: 5
+          step_index: 3
         lonely:
-          seconds_sitting: 3
+          seconds_sitting: 5
         barry_center:
           first_talk_to_barry: true
           convinced:
@@ -3647,8 +3670,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaCowboy:
       example:
-        stage: 2
-        hay_eaten: 4
+        stage: 3
+        hay_eaten: 2
         rabbit_name: rabbit_name
       properties:
         hay_eaten:
@@ -3660,16 +3683,16 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaLonely:
       example:
-        seconds_sitting: 3
+        seconds_sitting: 5
       properties:
         seconds_sitting:
           type: integer
       type: object
     SkyBlockProfileMemberRiftVillagePlazaMurder:
       example:
-        step_index_pt3: 1
-        step_index: 5
-        step_index_pt2: 3
+        step_index_pt3: 5
+        step_index: 3
+        step_index_pt2: 1
         room_clues:
         - room_clues
         - room_clues
@@ -3687,7 +3710,7 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaSeraphine:
       example:
-        step_index: 5
+        step_index: 3
       properties:
         step_index:
           type: integer
@@ -3705,8 +3728,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftWizardTower:
       example:
-        wizard_quest_step: 8
-        crumbs_laid_out: 3
+        wizard_quest_step: 7
+        crumbs_laid_out: 8
       properties:
         crumbs_laid_out:
           type: integer
@@ -4468,20 +4491,24 @@ components:
                   key:
                     data: data
                     type: 9
+              item_data:
+                soulflow: 0
+                teleporter_pill_consumed: true
+                favorite_arrow: favorite_arrow
               rift:
                 wizard_tower:
-                  wizard_quest_step: 8
-                  crumbs_laid_out: 3
+                  wizard_quest_step: 7
+                  crumbs_laid_out: 8
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 7
+                  claimed_bonus_index: 1
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 0
+                  completed_step: 4
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -4510,10 +4537,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 0.36062689002149373
+                    exp: 7.390706075830692
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 4
+                    candyUsed: 0
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -4522,22 +4549,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 1
-                    step_index: 5
-                    step_index_pt2: 3
+                    step_index_pt3: 5
+                    step_index: 3
+                    step_index_pt2: 1
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 2
-                    hay_eaten: 4
+                    stage: 3
+                    hay_eaten: 2
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 5
+                    step_index: 3
                   lonely:
-                    seconds_sitting: 3
+                    seconds_sitting: 5
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -4552,14 +4579,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 1
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 2
+                  - visits: 4
                     type: type
-                    timestamp: 6
-                  - visits: 2
+                    timestamp: 2
+                  - visits: 4
                     type: type
-                    timestamp: 6
+                    timestamp: 2
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -4974,20 +5001,24 @@ components:
                   key:
                     data: data
                     type: 9
+              item_data:
+                soulflow: 0
+                teleporter_pill_consumed: true
+                favorite_arrow: favorite_arrow
               rift:
                 wizard_tower:
-                  wizard_quest_step: 8
-                  crumbs_laid_out: 3
+                  wizard_quest_step: 7
+                  crumbs_laid_out: 8
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 7
+                  claimed_bonus_index: 1
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 0
+                  completed_step: 4
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -5016,10 +5047,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 0.36062689002149373
+                    exp: 7.390706075830692
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 4
+                    candyUsed: 0
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -5028,22 +5059,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 1
-                    step_index: 5
-                    step_index_pt2: 3
+                    step_index_pt3: 5
+                    step_index: 3
+                    step_index_pt2: 1
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 2
-                    hay_eaten: 4
+                    stage: 3
+                    hay_eaten: 2
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 5
+                    step_index: 3
                   lonely:
-                    seconds_sitting: 3
+                    seconds_sitting: 5
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -5058,14 +5089,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 1
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 2
+                  - visits: 4
                     type: type
-                    timestamp: 6
-                  - visits: 2
+                    timestamp: 2
+                  - visits: 4
                     type: type
-                    timestamp: 6
+                    timestamp: 2
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -5470,20 +5501,24 @@ components:
                   key:
                     data: data
                     type: 9
+              item_data:
+                soulflow: 0
+                teleporter_pill_consumed: true
+                favorite_arrow: favorite_arrow
               rift:
                 wizard_tower:
-                  wizard_quest_step: 8
-                  crumbs_laid_out: 3
+                  wizard_quest_step: 7
+                  crumbs_laid_out: 8
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 7
+                  claimed_bonus_index: 1
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 0
+                  completed_step: 4
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -5512,10 +5547,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 0.36062689002149373
+                    exp: 7.390706075830692
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 4
+                    candyUsed: 0
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -5524,22 +5559,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 1
-                    step_index: 5
-                    step_index_pt2: 3
+                    step_index_pt3: 5
+                    step_index: 3
+                    step_index_pt2: 1
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 2
-                    hay_eaten: 4
+                    stage: 3
+                    hay_eaten: 2
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 5
+                    step_index: 3
                   lonely:
-                    seconds_sitting: 3
+                    seconds_sitting: 5
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -5554,14 +5589,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 1
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 2
+                  - visits: 4
                     type: type
-                    timestamp: 6
-                  - visits: 2
+                    timestamp: 2
+                  - visits: 4
                     type: type
-                    timestamp: 6
+                    timestamp: 2
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -5824,9 +5859,9 @@ components:
       type: object
     SkyBlockProfileMemberRiftGallery_secured_trophies_inner:
       example:
-        visits: 2
+        visits: 4
         type: type
-        timestamp: 6
+        timestamp: 2
       properties:
         timestamp:
           type: integer

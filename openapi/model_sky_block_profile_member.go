@@ -31,6 +31,7 @@ type SkyBlockProfileMember struct {
 	GardenPlayerData    *SkyBlockProfileMemberGardenPlayerData    `json:"garden_player_data,omitempty"`
 	GlacitePlayerData   *SkyBlockProfileMemberGlacitePlayerData   `json:"glacite_player_data,omitempty"`
 	Inventory           *SkyBlockProfileMemberInventory           `json:"inventory,omitempty"`
+	ItemData            *SkyBlockProfileMemberItemData            `json:"item_data,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -436,6 +437,38 @@ func (o *SkyBlockProfileMember) SetInventory(v SkyBlockProfileMemberInventory) {
 	o.Inventory = &v
 }
 
+// GetItemData returns the ItemData field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetItemData() SkyBlockProfileMemberItemData {
+	if o == nil || IsNil(o.ItemData) {
+		var ret SkyBlockProfileMemberItemData
+		return ret
+	}
+	return *o.ItemData
+}
+
+// GetItemDataOk returns a tuple with the ItemData field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetItemDataOk() (*SkyBlockProfileMemberItemData, bool) {
+	if o == nil || IsNil(o.ItemData) {
+		return nil, false
+	}
+	return o.ItemData, true
+}
+
+// HasItemData returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasItemData() bool {
+	if o != nil && !IsNil(o.ItemData) {
+		return true
+	}
+
+	return false
+}
+
+// SetItemData gets a reference to the given SkyBlockProfileMemberItemData and assigns it to the ItemData field.
+func (o *SkyBlockProfileMember) SetItemData(v SkyBlockProfileMemberItemData) {
+	o.ItemData = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -545,6 +578,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Inventory) {
 		toSerialize["inventory"] = o.Inventory
+	}
+	if !IsNil(o.ItemData) {
+		toSerialize["item_data"] = o.ItemData
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId

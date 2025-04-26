@@ -615,6 +615,9 @@
                     "inventory": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberInventory"
                     },
+                    "item_data": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberItemData"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -1685,6 +1688,20 @@
                     },
                     "type": {
                         "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberItemData": {
+                "properties": {
+                    "favorite_arrow": {
+                        "type": "string"
+                    },
+                    "soulflow": {
+                        "type": "integer"
+                    },
+                    "teleporter_pill_consumed": {
+                        "type": "boolean"
                     }
                 },
                 "type": "object"
