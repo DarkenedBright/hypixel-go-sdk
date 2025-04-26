@@ -32,6 +32,7 @@ type SkyBlockProfileMember struct {
 	GlacitePlayerData   *SkyBlockProfileMemberGlacitePlayerData   `json:"glacite_player_data,omitempty"`
 	Inventory           *SkyBlockProfileMemberInventory           `json:"inventory,omitempty"`
 	ItemData            *SkyBlockProfileMemberItemData            `json:"item_data,omitempty"`
+	JacobsContest       *SkyBlockProfileMemberJacobsContest       `json:"jacobs_contest,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -469,6 +470,38 @@ func (o *SkyBlockProfileMember) SetItemData(v SkyBlockProfileMemberItemData) {
 	o.ItemData = &v
 }
 
+// GetJacobsContest returns the JacobsContest field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetJacobsContest() SkyBlockProfileMemberJacobsContest {
+	if o == nil || IsNil(o.JacobsContest) {
+		var ret SkyBlockProfileMemberJacobsContest
+		return ret
+	}
+	return *o.JacobsContest
+}
+
+// GetJacobsContestOk returns a tuple with the JacobsContest field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetJacobsContestOk() (*SkyBlockProfileMemberJacobsContest, bool) {
+	if o == nil || IsNil(o.JacobsContest) {
+		return nil, false
+	}
+	return o.JacobsContest, true
+}
+
+// HasJacobsContest returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasJacobsContest() bool {
+	if o != nil && !IsNil(o.JacobsContest) {
+		return true
+	}
+
+	return false
+}
+
+// SetJacobsContest gets a reference to the given SkyBlockProfileMemberJacobsContest and assigns it to the JacobsContest field.
+func (o *SkyBlockProfileMember) SetJacobsContest(v SkyBlockProfileMemberJacobsContest) {
+	o.JacobsContest = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -581,6 +614,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.ItemData) {
 		toSerialize["item_data"] = o.ItemData
+	}
+	if !IsNil(o.JacobsContest) {
+		toSerialize["jacobs_contest"] = o.JacobsContest
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId

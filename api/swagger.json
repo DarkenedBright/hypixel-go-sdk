@@ -618,6 +618,9 @@
                     "item_data": {
                         "$ref": "#/components/schemas/SkyBlockProfileMemberItemData"
                     },
+                    "jacobs_contest": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberJacobsContest"
+                    },
                     "player_id": {
                         "format": "uuid",
                         "type": "string"
@@ -1703,6 +1706,95 @@
                     "teleporter_pill_consumed": {
                         "type": "boolean"
                     }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberJacobsContest": {
+                "properties": {
+                    "contests": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberJacobsContestContests"
+                    },
+                    "medals_inv": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberJacobsContestMedalsInv"
+                    },
+                    "migration": {
+                        "type": "boolean"
+                    },
+                    "perks": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberJacobsContestPerks"
+                    },
+                    "personal_bests": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberJacobsContestPersonalBests"
+                    },
+                    "talked": {
+                        "type": "boolean"
+                    },
+                    "unique_brackets": {
+                        "$ref": "#/components/schemas/SkyBlockProfileMemberJacobsContestUniqueBrackets"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberJacobsContestContests": {
+                "additionalProperties": {
+                    "properties": {
+                        "claimed_participants": {
+                            "type": "integer"
+                        },
+                        "claimed_position": {
+                            "type": "integer"
+                        },
+                        "claimed_rewards": {
+                            "type": "boolean"
+                        },
+                        "collected": {
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberJacobsContestMedalsInv": {
+                "properties": {
+                    "bronze": {
+                        "type": "integer"
+                    },
+                    "gold": {
+                        "type": "integer"
+                    },
+                    "silver": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberJacobsContestPerks": {
+                "properties": {
+                    "double_drops": {
+                        "type": "integer"
+                    },
+                    "farming_level_cap": {
+                        "type": "integer"
+                    },
+                    "personal_bests": {
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberJacobsContestPersonalBests": {
+                "additionalProperties": {
+                    "type": "integer"
+                },
+                "type": "object"
+            },
+            "SkyBlockProfileMemberJacobsContestUniqueBrackets": {
+                "additionalProperties": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "type": "object"
             },

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **GlacitePlayerData** | Pointer to [**SkyBlockProfileMemberGlacitePlayerData**](SkyBlockProfileMemberGlacitePlayerData.md) |  | [optional] 
 **Inventory** | Pointer to [**SkyBlockProfileMemberInventory**](SkyBlockProfileMemberInventory.md) |  | [optional] 
 **ItemData** | Pointer to [**SkyBlockProfileMemberItemData**](SkyBlockProfileMemberItemData.md) |  | [optional] 
+**JacobsContest** | Pointer to [**SkyBlockProfileMemberJacobsContest**](SkyBlockProfileMemberJacobsContest.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -363,6 +364,31 @@ SetItemData sets ItemData field to given value.
 `func (o *SkyBlockProfileMember) HasItemData() bool`
 
 HasItemData returns a boolean if a field has been set.
+
+### GetJacobsContest
+
+`func (o *SkyBlockProfileMember) GetJacobsContest() SkyBlockProfileMemberJacobsContest`
+
+GetJacobsContest returns the JacobsContest field if non-nil, zero value otherwise.
+
+### GetJacobsContestOk
+
+`func (o *SkyBlockProfileMember) GetJacobsContestOk() (*SkyBlockProfileMemberJacobsContest, bool)`
+
+GetJacobsContestOk returns a tuple with the JacobsContest field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetJacobsContest
+
+`func (o *SkyBlockProfileMember) SetJacobsContest(v SkyBlockProfileMemberJacobsContest)`
+
+SetJacobsContest sets JacobsContest field to given value.
+
+### HasJacobsContest
+
+`func (o *SkyBlockProfileMember) HasJacobsContest() bool`
+
+HasJacobsContest returns a boolean if a field has been set.
 
 ### GetPlayerId
 
