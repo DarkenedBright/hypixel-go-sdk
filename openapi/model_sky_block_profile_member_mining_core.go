@@ -21,32 +21,32 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCore{}
 
 // SkyBlockProfileMemberMiningCore struct for SkyBlockProfileMemberMiningCore
 type SkyBlockProfileMemberMiningCore struct {
-	Biomes                      *SkyBlockProfileMemberMiningCoreBiomes  `json:"biomes,omitempty"`
-	Crystals                    SkyBlockProfileMemberMiningCoreCrystals `json:"crystals"`
-	DailyOresMined              *int64                                  `json:"daily_ores_mined,omitempty"`
-	DailyOresMinedDay           *int64                                  `json:"daily_ores_mined_day,omitempty"`
-	DailyOresMinedDayGemstone   *int64                                  `json:"daily_ores_mined_day_gemstone,omitempty"`
-	DailyOresMinedDayGlacite    *int64                                  `json:"daily_ores_mined_day_glacite,omitempty"`
-	DailyOresMinedDayMithrilOre *int64                                  `json:"daily_ores_mined_day_mithril_ore,omitempty"`
-	DailyOresMinedGemstone      *int64                                  `json:"daily_ores_mined_gemstone,omitempty"`
-	DailyOresMinedGlacite       *int64                                  `json:"daily_ores_mined_glacite,omitempty"`
-	DailyOresMinedMithrilOre    *int64                                  `json:"daily_ores_mined_mithril_ore,omitempty"`
-	Experience                  int64                                   `json:"experience"`
-	GreaterMinesLastAccess      *int64                                  `json:"greater_mines_last_access,omitempty"`
-	LastReset                   *int64                                  `json:"last_reset,omitempty"`
-	Nodes                       SkyBlockProfileMemberMiningCoreNodes    `json:"nodes"`
-	PowderGemstone              *int64                                  `json:"powder_gemstone,omitempty"`
-	PowderGemstoneTotal         *int64                                  `json:"powder_gemstone_total,omitempty"`
-	PowderGlacite               *int64                                  `json:"powder_glacite,omitempty"`
-	PowderGlaciteTotal          *int64                                  `json:"powder_glacite_total,omitempty"`
-	PowderMithril               int64                                   `json:"powder_mithril"`
-	PowderMithrilTotal          int64                                   `json:"powder_mithril_total"`
-	PowderSpentGemstone         *int64                                  `json:"powder_spent_gemstone,omitempty"`
-	PowderSpentGlacite          *int64                                  `json:"powder_spent_glacite,omitempty"`
-	PowderSpentMithril          *int64                                  `json:"powder_spent_mithril,omitempty"`
-	ReceivedFreeTier            bool                                    `json:"received_free_tier"`
-	RetroactiveTier2Token       bool                                    `json:"retroactive_tier2_token"`
-	TokensSpent                 int64                                   `json:"tokens_spent"`
+	Biomes                      *SkyBlockProfileMemberMiningCoreBiomes   `json:"biomes,omitempty"`
+	Crystals                    *SkyBlockProfileMemberMiningCoreCrystals `json:"crystals,omitempty"`
+	DailyOresMined              *int64                                   `json:"daily_ores_mined,omitempty"`
+	DailyOresMinedDay           *int64                                   `json:"daily_ores_mined_day,omitempty"`
+	DailyOresMinedDayGemstone   *int64                                   `json:"daily_ores_mined_day_gemstone,omitempty"`
+	DailyOresMinedDayGlacite    *int64                                   `json:"daily_ores_mined_day_glacite,omitempty"`
+	DailyOresMinedDayMithrilOre *int64                                   `json:"daily_ores_mined_day_mithril_ore,omitempty"`
+	DailyOresMinedGemstone      *int64                                   `json:"daily_ores_mined_gemstone,omitempty"`
+	DailyOresMinedGlacite       *int64                                   `json:"daily_ores_mined_glacite,omitempty"`
+	DailyOresMinedMithrilOre    *int64                                   `json:"daily_ores_mined_mithril_ore,omitempty"`
+	Experience                  int64                                    `json:"experience"`
+	GreaterMinesLastAccess      *int64                                   `json:"greater_mines_last_access,omitempty"`
+	LastReset                   *int64                                   `json:"last_reset,omitempty"`
+	Nodes                       SkyBlockProfileMemberMiningCoreNodes     `json:"nodes"`
+	PowderGemstone              *int64                                   `json:"powder_gemstone,omitempty"`
+	PowderGemstoneTotal         *int64                                   `json:"powder_gemstone_total,omitempty"`
+	PowderGlacite               *int64                                   `json:"powder_glacite,omitempty"`
+	PowderGlaciteTotal          *int64                                   `json:"powder_glacite_total,omitempty"`
+	PowderMithril               int64                                    `json:"powder_mithril"`
+	PowderMithrilTotal          int64                                    `json:"powder_mithril_total"`
+	PowderSpentGemstone         *int64                                   `json:"powder_spent_gemstone,omitempty"`
+	PowderSpentGlacite          *int64                                   `json:"powder_spent_glacite,omitempty"`
+	PowderSpentMithril          *int64                                   `json:"powder_spent_mithril,omitempty"`
+	ReceivedFreeTier            bool                                     `json:"received_free_tier"`
+	RetroactiveTier2Token       bool                                     `json:"retroactive_tier2_token"`
+	TokensSpent                 int64                                    `json:"tokens_spent"`
 }
 
 type _SkyBlockProfileMemberMiningCore SkyBlockProfileMemberMiningCore
@@ -55,9 +55,8 @@ type _SkyBlockProfileMemberMiningCore SkyBlockProfileMemberMiningCore
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberMiningCore(crystals SkyBlockProfileMemberMiningCoreCrystals, experience int64, nodes SkyBlockProfileMemberMiningCoreNodes, powderMithril int64, powderMithrilTotal int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64) *SkyBlockProfileMemberMiningCore {
+func NewSkyBlockProfileMemberMiningCore(experience int64, nodes SkyBlockProfileMemberMiningCoreNodes, powderMithril int64, powderMithrilTotal int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64) *SkyBlockProfileMemberMiningCore {
 	this := SkyBlockProfileMemberMiningCore{}
-	this.Crystals = crystals
 	this.Experience = experience
 	this.Nodes = nodes
 	this.PowderMithril = powderMithril
@@ -108,28 +107,36 @@ func (o *SkyBlockProfileMemberMiningCore) SetBiomes(v SkyBlockProfileMemberMinin
 	o.Biomes = &v
 }
 
-// GetCrystals returns the Crystals field value
+// GetCrystals returns the Crystals field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetCrystals() SkyBlockProfileMemberMiningCoreCrystals {
-	if o == nil {
+	if o == nil || IsNil(o.Crystals) {
 		var ret SkyBlockProfileMemberMiningCoreCrystals
 		return ret
 	}
-
-	return o.Crystals
+	return *o.Crystals
 }
 
-// GetCrystalsOk returns a tuple with the Crystals field value
+// GetCrystalsOk returns a tuple with the Crystals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetCrystalsOk() (*SkyBlockProfileMemberMiningCoreCrystals, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Crystals) {
 		return nil, false
 	}
-	return &o.Crystals, true
+	return o.Crystals, true
 }
 
-// SetCrystals sets field value
+// HasCrystals returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasCrystals() bool {
+	if o != nil && !IsNil(o.Crystals) {
+		return true
+	}
+
+	return false
+}
+
+// SetCrystals gets a reference to the given SkyBlockProfileMemberMiningCoreCrystals and assigns it to the Crystals field.
 func (o *SkyBlockProfileMemberMiningCore) SetCrystals(v SkyBlockProfileMemberMiningCoreCrystals) {
-	o.Crystals = v
+	o.Crystals = &v
 }
 
 // GetDailyOresMined returns the DailyOresMined field value if set, zero value otherwise.
@@ -857,7 +864,9 @@ func (o SkyBlockProfileMemberMiningCore) ToMap() (map[string]interface{}, error)
 	if !IsNil(o.Biomes) {
 		toSerialize["biomes"] = o.Biomes
 	}
-	toSerialize["crystals"] = o.Crystals
+	if !IsNil(o.Crystals) {
+		toSerialize["crystals"] = o.Crystals
+	}
 	if !IsNil(o.DailyOresMined) {
 		toSerialize["daily_ores_mined"] = o.DailyOresMined
 	}
@@ -924,7 +933,6 @@ func (o *SkyBlockProfileMemberMiningCore) UnmarshalJSON(data []byte) (err error)
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
-		"crystals",
 		"experience",
 		"nodes",
 		"powder_mithril",

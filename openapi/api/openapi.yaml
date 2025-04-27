@@ -4094,7 +4094,6 @@ components:
         tokens_spent:
           type: integer
       required:
-      - crystals
       - experience
       - nodes
       - powder_mithril

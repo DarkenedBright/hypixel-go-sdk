@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Biomes** | Pointer to [**SkyBlockProfileMemberMiningCoreBiomes**](SkyBlockProfileMemberMiningCoreBiomes.md) |  | [optional] 
-**Crystals** | [**SkyBlockProfileMemberMiningCoreCrystals**](SkyBlockProfileMemberMiningCoreCrystals.md) |  | 
+**Crystals** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystals**](SkyBlockProfileMemberMiningCoreCrystals.md) |  | [optional] 
 **DailyOresMined** | Pointer to **int64** |  | [optional] 
 **DailyOresMinedDay** | Pointer to **int64** |  | [optional] 
 **DailyOresMinedDayGemstone** | Pointer to **int64** |  | [optional] 
@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberMiningCore
 
-`func NewSkyBlockProfileMemberMiningCore(crystals SkyBlockProfileMemberMiningCoreCrystals, experience int64, nodes SkyBlockProfileMemberMiningCoreNodes, powderMithril int64, powderMithrilTotal int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64, ) *SkyBlockProfileMemberMiningCore`
+`func NewSkyBlockProfileMemberMiningCore(experience int64, nodes SkyBlockProfileMemberMiningCoreNodes, powderMithril int64, powderMithrilTotal int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64, ) *SkyBlockProfileMemberMiningCore`
 
 NewSkyBlockProfileMemberMiningCore instantiates a new SkyBlockProfileMemberMiningCore object
 This constructor will assign default values to properties that have it defined,
@@ -94,6 +94,11 @@ and a boolean to check if the value has been set.
 
 SetCrystals sets Crystals field to given value.
 
+### HasCrystals
+
+`func (o *SkyBlockProfileMemberMiningCore) HasCrystals() bool`
+
+HasCrystals returns a boolean if a field has been set.
 
 ### GetDailyOresMined
 
