@@ -529,6 +529,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContest'
         leveling:
           $ref: '#/components/schemas/SkyBlockProfileMemberLeveling'
+        mining_core:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCore'
         player_id:
           format: uuid
           type: string
@@ -1344,6 +1346,307 @@ components:
         REAPER_PEPPERS:
           type: integer
         REFINED_DARK_CACAO_TRUFFLE:
+          type: integer
+      type: object
+    SkyBlockProfileMemberMiningCore:
+      additionalProperties: false
+      properties:
+        biomes:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomes'
+        crystals:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystals'
+        daily_ores_mined:
+          type: integer
+        daily_ores_mined_day:
+          type: integer
+        daily_ores_mined_day_gemstone:
+          type: integer
+        daily_ores_mined_day_glacite:
+          type: integer
+        daily_ores_mined_day_mithril_ore:
+          type: integer
+        daily_ores_mined_gemstone:
+          type: integer
+        daily_ores_mined_glacite:
+          type: integer
+        daily_ores_mined_mithril_ore:
+          type: integer
+        experience:
+          type: integer
+        greater_mines_last_access:
+          type: integer
+        last_reset:
+          type: integer
+        nodes:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreNodes'
+        powder_gemstone:
+          type: integer
+        powder_gemstone_total:
+          type: integer
+        powder_glacite:
+          type: integer
+        powder_glacite_total:
+          type: integer
+        powder_mithril:
+          type: integer
+        powder_mithril_total:
+          type: integer
+        powder_spent_gemstone:
+          type: integer
+        powder_spent_glacite:
+          type: integer
+        powder_spent_mithril:
+          type: integer
+        received_free_tier:
+          type: boolean
+        retroactive_tier2_token:
+          type: boolean
+        tokens_spent:
+          type: integer
+      required:
+        - biomes
+        - crystals
+        - daily_ores_mined
+        - daily_ores_mined_day
+        - daily_ores_mined_day_gemstone
+        - daily_ores_mined_day_glacite
+        - daily_ores_mined_day_mithril_ore
+        - daily_ores_mined_gemstone
+        - daily_ores_mined_glacite
+        - daily_ores_mined_mithril_ore
+        - experience
+        - greater_mines_last_access
+        - last_reset
+        - nodes
+        - powder_gemstone
+        - powder_gemstone_total
+        - powder_glacite
+        - powder_glacite_total
+        - powder_mithril
+        - powder_mithril_total
+        - powder_spent_gemstone
+        - powder_spent_glacite
+        - powder_spent_mithril
+        - received_free_tier
+        - retroactive_tier2_token
+        - tokens_spent
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomes:
+      additionalProperties: false
+      properties:
+        dwarven:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesDwarven'
+        goblin:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesGoblin'
+        jungle:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesJungle'
+        precursor:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesPrecursor'
+      required:
+        - dwarven
+        - goblin
+        - jungle
+        - precursor
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesDwarven:
+      additionalProperties: false
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesGoblin:
+      additionalProperties: false
+      properties:
+        king_quest_active:
+          type: boolean
+        king_quests_completed:
+          type: integer
+      required:
+        - king_quest_active
+        - king_quests_completed
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesJungle:
+      additionalProperties: false
+      properties:
+        jungle_temple_chest_uses:
+          type: integer
+        jungle_temple_open:
+          type: boolean
+      required:
+        - jungle_temple_chest_uses
+        - jungle_temple_open
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesPrecursor:
+      additionalProperties: false
+      properties:
+        claiming_with_precursor_apparatus:
+          type: boolean
+        parts_delivered:
+          items:
+            enum:
+              - CONTROL_SWITCH
+              - ELECTRON_TRANSMITTER
+              - FTX_3070
+              - ROBOTRON_REFLECTOR
+              - SUPERLITE_MOTOR
+              - SYNTHETIC_HEART
+            type: string
+          type: array
+        talked_to_professor:
+          type: boolean
+      required:
+        - claiming_with_precursor_apparatus
+        - talked_to_professor
+      type: object
+    SkyBlockProfileMemberMiningCoreCrystals:
+      additionalProperties: false
+      properties:
+        amber_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        amethyst_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        aquamarine_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        citrine_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        jade_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        jasper_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        onyx_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        opal_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        peridot_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        ruby_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        sapphire_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        topaz_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+      required:
+        - amber_crystal
+        - amethyst_crystal
+        - aquamarine_crystal
+        - citrine_crystal
+        - jade_crystal
+        - jasper_crystal
+        - onyx_crystal
+        - opal_crystal
+        - peridot_crystal
+        - ruby_crystal
+        - sapphire_crystal
+        - topaz_crystal
+      type: object
+    SkyBlockProfileMemberMiningCoreCrystalsCrystal:
+      additionalProperties: false
+      properties:
+        state:
+          enum:
+            - FOUND
+            - NOT_FOUND
+            - PLACED
+          type: string
+        total_found:
+          type: integer
+        total_placed:
+          type: integer
+      required:
+        - state
+        - total_found
+      type: object
+    SkyBlockProfileMemberMiningCoreNodes:
+      additionalProperties: false
+      properties:
+        anomalous_desire:
+          type: integer
+        blockhead:
+          type: integer
+        core_of_the_mountain:
+          type: integer
+        crystalline:
+          type: integer
+        daily_grind:
+          type: integer
+        daily_powder:
+          type: integer
+        dead_mans_chest:
+          type: integer
+        eager_adventurer:
+          type: integer
+        efficient_miner:
+          type: integer
+        fortunate_mineman:
+          type: integer
+        front_loaded:
+          type: integer
+        gem_lover:
+          type: integer
+        gemstone_infusion:
+          type: integer
+        gifts_from_the_departed:
+          type: integer
+        great_explorer:
+          type: integer
+        keep_it_cool:
+          type: integer
+        lonesome_miner:
+          type: integer
+        luck_of_the_cave:
+          type: integer
+        maniac_miner:
+          type: integer
+        metal_head:
+          type: integer
+        miners_blessing:
+          type: integer
+        mineshaft_mayhem:
+          type: integer
+        mining_fortune:
+          type: integer
+        mining_master:
+          type: integer
+        mining_speed:
+          type: integer
+        mining_speed_boost:
+          type: integer
+        mole:
+          type: integer
+        no_stone_unturned:
+          type: integer
+        old_school:
+          type: integer
+        pickobulus:
+          type: integer
+        powder_buff:
+          type: integer
+        precision_mining:
+          type: integer
+        professional:
+          type: integer
+        quick_forge:
+          type: integer
+        rags_to_riches:
+          type: integer
+        seasoned_mineman:
+          type: integer
+        sheer_force:
+          type: integer
+        sky_mall:
+          type: integer
+        speedy_mineman:
+          type: integer
+        steady_hand:
+          type: integer
+        strong_arm:
+          type: integer
+        subterranean_fisher:
+          type: integer
+        surveyor:
+          type: integer
+        titanium_insanium:
+          type: integer
+        vanguard_seeker:
+          type: integer
+        warm_hearted:
           type: integer
       type: object
     SkyBlockProfileMemberRift:

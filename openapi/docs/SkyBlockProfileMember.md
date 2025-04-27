@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **ItemData** | Pointer to [**SkyBlockProfileMemberItemData**](SkyBlockProfileMemberItemData.md) |  | [optional] 
 **JacobsContest** | Pointer to [**SkyBlockProfileMemberJacobsContest**](SkyBlockProfileMemberJacobsContest.md) |  | [optional] 
 **Leveling** | Pointer to [**SkyBlockProfileMemberLeveling**](SkyBlockProfileMemberLeveling.md) |  | [optional] 
+**MiningCore** | Pointer to [**SkyBlockProfileMemberMiningCore**](SkyBlockProfileMemberMiningCore.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -415,6 +416,31 @@ SetLeveling sets Leveling field to given value.
 `func (o *SkyBlockProfileMember) HasLeveling() bool`
 
 HasLeveling returns a boolean if a field has been set.
+
+### GetMiningCore
+
+`func (o *SkyBlockProfileMember) GetMiningCore() SkyBlockProfileMemberMiningCore`
+
+GetMiningCore returns the MiningCore field if non-nil, zero value otherwise.
+
+### GetMiningCoreOk
+
+`func (o *SkyBlockProfileMember) GetMiningCoreOk() (*SkyBlockProfileMemberMiningCore, bool)`
+
+GetMiningCoreOk returns a tuple with the MiningCore field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMiningCore
+
+`func (o *SkyBlockProfileMember) SetMiningCore(v SkyBlockProfileMemberMiningCore)`
+
+SetMiningCore sets MiningCore field to given value.
+
+### HasMiningCore
+
+`func (o *SkyBlockProfileMember) HasMiningCore() bool`
+
+HasMiningCore returns a boolean if a field has been set.
 
 ### GetPlayerId
 

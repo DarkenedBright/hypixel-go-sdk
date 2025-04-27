@@ -1137,18 +1137,18 @@ components:
                 bronze: 1
             rift:
               wizard_tower:
-                wizard_quest_step: 2
+                wizard_quest_step: 0
                 crumbs_laid_out: 8
               enigma:
                 found_souls:
                 - found_souls
                 - found_souls
                 bought_cloak: true
-                claimed_bonus_index: 2
+                claimed_bonus_index: 6
               black_lagoon:
                 received_science_paper: true
                 delivered_science_paper: true
-                completed_step: 2
+                completed_step: 9
                 talked_to_edwin: true
               dead_cats:
                 unlocked_pet: true
@@ -1177,10 +1177,10 @@ components:
                       HEALTH: 20
                     tier: RARE
                   active: true
-                  exp: 0.4008378390304357
+                  exp: 8.289598895249666
                   type: type
                   uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                  candyUsed: 8
+                  candyUsed: 9
                   uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                 found_cats:
                 - found_cats
@@ -1189,22 +1189,22 @@ components:
                 talked_to_jacquelle: true
               village_plaza:
                 murder:
-                  step_index_pt3: 6
-                  step_index: 7
-                  step_index_pt2: 6
+                  step_index_pt3: 7
+                  step_index: 5
+                  step_index_pt2: 8
                   room_clues:
                   - room_clues
                   - room_clues
                 cowboy:
-                  stage: 2
-                  hay_eaten: 9
+                  stage: 9
+                  hay_eaten: 0
                   rabbit_name: rabbit_name
                 barter_bank: "{}"
                 got_scammed: true
                 seraphine:
                   step_index: 9
                 lonely:
-                  seconds_sitting: 7
+                  seconds_sitting: 3
                 barry_center:
                   first_talk_to_barry: true
                   convinced:
@@ -1219,14 +1219,148 @@ components:
                 sent_trophy_dialogues:
                 - sent_trophy_dialogues
                 - sent_trophy_dialogues
-                elise_step: 4
+                elise_step: 6
                 secured_trophies:
-                - visits: 5
+                - visits: 6
                   type: type
-                  timestamp: 3
-                - visits: 5
+                  timestamp: 7
+                - visits: 6
                   type: type
-                  timestamp: 3
+                  timestamp: 7
+            mining_core:
+              greater_mines_last_access: 9
+              experience: 6
+              daily_ores_mined_day_mithril_ore: 2
+              daily_ores_mined_day_gemstone: 5
+              daily_ores_mined_day_glacite: 9
+              powder_spent_gemstone: 0
+              last_reset: 8
+              powder_spent_glacite: 9
+              powder_glacite: 9
+              retroactive_tier2_token: true
+              received_free_tier: true
+              daily_ores_mined_gemstone: 7
+              crystals:
+                amethyst_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                jasper_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                peridot_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                topaz_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                amber_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                onyx_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                opal_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                ruby_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                sapphire_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                jade_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                citrine_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+                aquamarine_crystal:
+                  total_placed: 2
+                  state: FOUND
+                  total_found: 0
+              tokens_spent: 6
+              biomes:
+                dwarven: "{}"
+                precursor:
+                  claiming_with_precursor_apparatus: true
+                  talked_to_professor: true
+                  parts_delivered:
+                  - CONTROL_SWITCH
+                  - CONTROL_SWITCH
+                goblin:
+                  king_quests_completed: 2
+                  king_quest_active: true
+                jungle:
+                  jungle_temple_open: true
+                  jungle_temple_chest_uses: 8
+              daily_ores_mined_day: 3
+              daily_ores_mined_glacite: 7
+              powder_mithril_total: 7
+              daily_ores_mined_mithril_ore: 6
+              powder_glacite_total: 9
+              powder_spent_mithril: 1
+              nodes:
+                mining_speed: 5
+                mining_speed_boost: 8
+                daily_powder: 1
+                vanguard_seeker: 8
+                quick_forge: 1
+                crystalline: 3
+                gifts_from_the_departed: 8
+                mining_fortune: 2
+                subterranean_fisher: 3
+                no_stone_unturned: 8
+                professional: 2
+                strong_arm: 3
+                efficient_miner: 2
+                seasoned_mineman: 7
+                sheer_force: 1
+                steady_hand: 1
+                metal_head: 8
+                anomalous_desire: 2
+                rags_to_riches: 7
+                eager_adventurer: 2
+                keep_it_cool: 0
+                luck_of_the_cave: 8
+                fortunate_mineman: 8
+                maniac_miner: 2
+                blockhead: 6
+                daily_grind: 9
+                mole: 4
+                dead_mans_chest: 4
+                surveyor: 1
+                gemstone_infusion: 5
+                miners_blessing: 5
+                powder_buff: 7
+                mineshaft_mayhem: 9
+                pickobulus: 6
+                old_school: 8
+                precision_mining: 1
+                lonesome_miner: 1
+                speedy_mineman: 4
+                front_loaded: 2
+                great_explorer: 5
+                sky_mall: 4
+                gem_lover: 6
+                mining_master: 5
+                core_of_the_mountain: 1
+                warm_hearted: 0
+                titanium_insanium: 4
+              powder_mithril: 6
+              powder_gemstone_total: 5
+              daily_ores_mined: 4
+              powder_gemstone: 8
             player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             glacite_player_data:
               corpses_looted:
@@ -1707,18 +1841,18 @@ components:
             bronze: 1
         rift:
           wizard_tower:
-            wizard_quest_step: 2
+            wizard_quest_step: 0
             crumbs_laid_out: 8
           enigma:
             found_souls:
             - found_souls
             - found_souls
             bought_cloak: true
-            claimed_bonus_index: 2
+            claimed_bonus_index: 6
           black_lagoon:
             received_science_paper: true
             delivered_science_paper: true
-            completed_step: 2
+            completed_step: 9
             talked_to_edwin: true
           dead_cats:
             unlocked_pet: true
@@ -1747,10 +1881,10 @@ components:
                   HEALTH: 20
                 tier: RARE
               active: true
-              exp: 0.4008378390304357
+              exp: 8.289598895249666
               type: type
               uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              candyUsed: 8
+              candyUsed: 9
               uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             found_cats:
             - found_cats
@@ -1759,22 +1893,22 @@ components:
             talked_to_jacquelle: true
           village_plaza:
             murder:
-              step_index_pt3: 6
-              step_index: 7
-              step_index_pt2: 6
+              step_index_pt3: 7
+              step_index: 5
+              step_index_pt2: 8
               room_clues:
               - room_clues
               - room_clues
             cowboy:
-              stage: 2
-              hay_eaten: 9
+              stage: 9
+              hay_eaten: 0
               rabbit_name: rabbit_name
             barter_bank: "{}"
             got_scammed: true
             seraphine:
               step_index: 9
             lonely:
-              seconds_sitting: 7
+              seconds_sitting: 3
             barry_center:
               first_talk_to_barry: true
               convinced:
@@ -1789,14 +1923,148 @@ components:
             sent_trophy_dialogues:
             - sent_trophy_dialogues
             - sent_trophy_dialogues
-            elise_step: 4
+            elise_step: 6
             secured_trophies:
-            - visits: 5
+            - visits: 6
               type: type
-              timestamp: 3
-            - visits: 5
+              timestamp: 7
+            - visits: 6
               type: type
-              timestamp: 3
+              timestamp: 7
+        mining_core:
+          greater_mines_last_access: 9
+          experience: 6
+          daily_ores_mined_day_mithril_ore: 2
+          daily_ores_mined_day_gemstone: 5
+          daily_ores_mined_day_glacite: 9
+          powder_spent_gemstone: 0
+          last_reset: 8
+          powder_spent_glacite: 9
+          powder_glacite: 9
+          retroactive_tier2_token: true
+          received_free_tier: true
+          daily_ores_mined_gemstone: 7
+          crystals:
+            amethyst_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            jasper_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            peridot_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            topaz_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            amber_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            onyx_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            opal_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            ruby_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            sapphire_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            jade_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            citrine_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+            aquamarine_crystal:
+              total_placed: 2
+              state: FOUND
+              total_found: 0
+          tokens_spent: 6
+          biomes:
+            dwarven: "{}"
+            precursor:
+              claiming_with_precursor_apparatus: true
+              talked_to_professor: true
+              parts_delivered:
+              - CONTROL_SWITCH
+              - CONTROL_SWITCH
+            goblin:
+              king_quests_completed: 2
+              king_quest_active: true
+            jungle:
+              jungle_temple_open: true
+              jungle_temple_chest_uses: 8
+          daily_ores_mined_day: 3
+          daily_ores_mined_glacite: 7
+          powder_mithril_total: 7
+          daily_ores_mined_mithril_ore: 6
+          powder_glacite_total: 9
+          powder_spent_mithril: 1
+          nodes:
+            mining_speed: 5
+            mining_speed_boost: 8
+            daily_powder: 1
+            vanguard_seeker: 8
+            quick_forge: 1
+            crystalline: 3
+            gifts_from_the_departed: 8
+            mining_fortune: 2
+            subterranean_fisher: 3
+            no_stone_unturned: 8
+            professional: 2
+            strong_arm: 3
+            efficient_miner: 2
+            seasoned_mineman: 7
+            sheer_force: 1
+            steady_hand: 1
+            metal_head: 8
+            anomalous_desire: 2
+            rags_to_riches: 7
+            eager_adventurer: 2
+            keep_it_cool: 0
+            luck_of_the_cave: 8
+            fortunate_mineman: 8
+            maniac_miner: 2
+            blockhead: 6
+            daily_grind: 9
+            mole: 4
+            dead_mans_chest: 4
+            surveyor: 1
+            gemstone_infusion: 5
+            miners_blessing: 5
+            powder_buff: 7
+            mineshaft_mayhem: 9
+            pickobulus: 6
+            old_school: 8
+            precision_mining: 1
+            lonesome_miner: 1
+            speedy_mineman: 4
+            front_loaded: 2
+            great_explorer: 5
+            sky_mall: 4
+            gem_lover: 6
+            mining_master: 5
+            core_of_the_mountain: 1
+            warm_hearted: 0
+            titanium_insanium: 4
+          powder_mithril: 6
+          powder_gemstone_total: 5
+          daily_ores_mined: 4
+          powder_gemstone: 8
         player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         glacite_player_data:
           corpses_looted:
@@ -1970,6 +2238,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContest'
         leveling:
           $ref: '#/components/schemas/SkyBlockProfileMemberLeveling'
+        mining_core:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCore'
         player_id:
           format: uuid
           type: string
@@ -3634,21 +3904,572 @@ components:
         REFINED_DARK_CACAO_TRUFFLE:
           type: integer
       type: object
+    SkyBlockProfileMemberMiningCore:
+      additionalProperties: false
+      example:
+        greater_mines_last_access: 9
+        experience: 6
+        daily_ores_mined_day_mithril_ore: 2
+        daily_ores_mined_day_gemstone: 5
+        daily_ores_mined_day_glacite: 9
+        powder_spent_gemstone: 0
+        last_reset: 8
+        powder_spent_glacite: 9
+        powder_glacite: 9
+        retroactive_tier2_token: true
+        received_free_tier: true
+        daily_ores_mined_gemstone: 7
+        crystals:
+          amethyst_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          jasper_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          peridot_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          topaz_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          amber_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          onyx_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          opal_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          ruby_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          sapphire_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          jade_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          citrine_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+          aquamarine_crystal:
+            total_placed: 2
+            state: FOUND
+            total_found: 0
+        tokens_spent: 6
+        biomes:
+          dwarven: "{}"
+          precursor:
+            claiming_with_precursor_apparatus: true
+            talked_to_professor: true
+            parts_delivered:
+            - CONTROL_SWITCH
+            - CONTROL_SWITCH
+          goblin:
+            king_quests_completed: 2
+            king_quest_active: true
+          jungle:
+            jungle_temple_open: true
+            jungle_temple_chest_uses: 8
+        daily_ores_mined_day: 3
+        daily_ores_mined_glacite: 7
+        powder_mithril_total: 7
+        daily_ores_mined_mithril_ore: 6
+        powder_glacite_total: 9
+        powder_spent_mithril: 1
+        nodes:
+          mining_speed: 5
+          mining_speed_boost: 8
+          daily_powder: 1
+          vanguard_seeker: 8
+          quick_forge: 1
+          crystalline: 3
+          gifts_from_the_departed: 8
+          mining_fortune: 2
+          subterranean_fisher: 3
+          no_stone_unturned: 8
+          professional: 2
+          strong_arm: 3
+          efficient_miner: 2
+          seasoned_mineman: 7
+          sheer_force: 1
+          steady_hand: 1
+          metal_head: 8
+          anomalous_desire: 2
+          rags_to_riches: 7
+          eager_adventurer: 2
+          keep_it_cool: 0
+          luck_of_the_cave: 8
+          fortunate_mineman: 8
+          maniac_miner: 2
+          blockhead: 6
+          daily_grind: 9
+          mole: 4
+          dead_mans_chest: 4
+          surveyor: 1
+          gemstone_infusion: 5
+          miners_blessing: 5
+          powder_buff: 7
+          mineshaft_mayhem: 9
+          pickobulus: 6
+          old_school: 8
+          precision_mining: 1
+          lonesome_miner: 1
+          speedy_mineman: 4
+          front_loaded: 2
+          great_explorer: 5
+          sky_mall: 4
+          gem_lover: 6
+          mining_master: 5
+          core_of_the_mountain: 1
+          warm_hearted: 0
+          titanium_insanium: 4
+        powder_mithril: 6
+        powder_gemstone_total: 5
+        daily_ores_mined: 4
+        powder_gemstone: 8
+      properties:
+        biomes:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomes'
+        crystals:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystals'
+        daily_ores_mined:
+          type: integer
+        daily_ores_mined_day:
+          type: integer
+        daily_ores_mined_day_gemstone:
+          type: integer
+        daily_ores_mined_day_glacite:
+          type: integer
+        daily_ores_mined_day_mithril_ore:
+          type: integer
+        daily_ores_mined_gemstone:
+          type: integer
+        daily_ores_mined_glacite:
+          type: integer
+        daily_ores_mined_mithril_ore:
+          type: integer
+        experience:
+          type: integer
+        greater_mines_last_access:
+          type: integer
+        last_reset:
+          type: integer
+        nodes:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreNodes'
+        powder_gemstone:
+          type: integer
+        powder_gemstone_total:
+          type: integer
+        powder_glacite:
+          type: integer
+        powder_glacite_total:
+          type: integer
+        powder_mithril:
+          type: integer
+        powder_mithril_total:
+          type: integer
+        powder_spent_gemstone:
+          type: integer
+        powder_spent_glacite:
+          type: integer
+        powder_spent_mithril:
+          type: integer
+        received_free_tier:
+          type: boolean
+        retroactive_tier2_token:
+          type: boolean
+        tokens_spent:
+          type: integer
+      required:
+      - biomes
+      - crystals
+      - daily_ores_mined
+      - daily_ores_mined_day
+      - daily_ores_mined_day_gemstone
+      - daily_ores_mined_day_glacite
+      - daily_ores_mined_day_mithril_ore
+      - daily_ores_mined_gemstone
+      - daily_ores_mined_glacite
+      - daily_ores_mined_mithril_ore
+      - experience
+      - greater_mines_last_access
+      - last_reset
+      - nodes
+      - powder_gemstone
+      - powder_gemstone_total
+      - powder_glacite
+      - powder_glacite_total
+      - powder_mithril
+      - powder_mithril_total
+      - powder_spent_gemstone
+      - powder_spent_glacite
+      - powder_spent_mithril
+      - received_free_tier
+      - retroactive_tier2_token
+      - tokens_spent
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomes:
+      additionalProperties: false
+      example:
+        dwarven: "{}"
+        precursor:
+          claiming_with_precursor_apparatus: true
+          talked_to_professor: true
+          parts_delivered:
+          - CONTROL_SWITCH
+          - CONTROL_SWITCH
+        goblin:
+          king_quests_completed: 2
+          king_quest_active: true
+        jungle:
+          jungle_temple_open: true
+          jungle_temple_chest_uses: 8
+      properties:
+        dwarven:
+          additionalProperties: false
+          type: object
+        goblin:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesGoblin'
+        jungle:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesJungle'
+        precursor:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesPrecursor'
+      required:
+      - dwarven
+      - goblin
+      - jungle
+      - precursor
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesDwarven:
+      additionalProperties: false
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesGoblin:
+      additionalProperties: false
+      example:
+        king_quests_completed: 2
+        king_quest_active: true
+      properties:
+        king_quest_active:
+          type: boolean
+        king_quests_completed:
+          type: integer
+      required:
+      - king_quest_active
+      - king_quests_completed
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesJungle:
+      additionalProperties: false
+      example:
+        jungle_temple_open: true
+        jungle_temple_chest_uses: 8
+      properties:
+        jungle_temple_chest_uses:
+          type: integer
+        jungle_temple_open:
+          type: boolean
+      required:
+      - jungle_temple_chest_uses
+      - jungle_temple_open
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesPrecursor:
+      additionalProperties: false
+      example:
+        claiming_with_precursor_apparatus: true
+        talked_to_professor: true
+        parts_delivered:
+        - CONTROL_SWITCH
+        - CONTROL_SWITCH
+      properties:
+        claiming_with_precursor_apparatus:
+          type: boolean
+        parts_delivered:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesPrecursor_parts_delivered_inner'
+          type: array
+        talked_to_professor:
+          type: boolean
+      required:
+      - claiming_with_precursor_apparatus
+      - talked_to_professor
+      type: object
+    SkyBlockProfileMemberMiningCoreCrystals:
+      additionalProperties: false
+      example:
+        amethyst_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        jasper_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        peridot_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        topaz_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        amber_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        onyx_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        opal_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        ruby_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        sapphire_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        jade_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        citrine_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+        aquamarine_crystal:
+          total_placed: 2
+          state: FOUND
+          total_found: 0
+      properties:
+        amber_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        amethyst_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        aquamarine_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        citrine_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        jade_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        jasper_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        onyx_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        opal_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        peridot_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        ruby_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        sapphire_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        topaz_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+      required:
+      - amber_crystal
+      - amethyst_crystal
+      - aquamarine_crystal
+      - citrine_crystal
+      - jade_crystal
+      - jasper_crystal
+      - onyx_crystal
+      - opal_crystal
+      - peridot_crystal
+      - ruby_crystal
+      - sapphire_crystal
+      - topaz_crystal
+      type: object
+    SkyBlockProfileMemberMiningCoreCrystalsCrystal:
+      additionalProperties: false
+      example:
+        total_placed: 2
+        state: FOUND
+        total_found: 0
+      properties:
+        state:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal_state'
+        total_found:
+          type: integer
+        total_placed:
+          type: integer
+      required:
+      - state
+      - total_found
+      type: object
+    SkyBlockProfileMemberMiningCoreNodes:
+      additionalProperties: false
+      example:
+        mining_speed: 5
+        mining_speed_boost: 8
+        daily_powder: 1
+        vanguard_seeker: 8
+        quick_forge: 1
+        crystalline: 3
+        gifts_from_the_departed: 8
+        mining_fortune: 2
+        subterranean_fisher: 3
+        no_stone_unturned: 8
+        professional: 2
+        strong_arm: 3
+        efficient_miner: 2
+        seasoned_mineman: 7
+        sheer_force: 1
+        steady_hand: 1
+        metal_head: 8
+        anomalous_desire: 2
+        rags_to_riches: 7
+        eager_adventurer: 2
+        keep_it_cool: 0
+        luck_of_the_cave: 8
+        fortunate_mineman: 8
+        maniac_miner: 2
+        blockhead: 6
+        daily_grind: 9
+        mole: 4
+        dead_mans_chest: 4
+        surveyor: 1
+        gemstone_infusion: 5
+        miners_blessing: 5
+        powder_buff: 7
+        mineshaft_mayhem: 9
+        pickobulus: 6
+        old_school: 8
+        precision_mining: 1
+        lonesome_miner: 1
+        speedy_mineman: 4
+        front_loaded: 2
+        great_explorer: 5
+        sky_mall: 4
+        gem_lover: 6
+        mining_master: 5
+        core_of_the_mountain: 1
+        warm_hearted: 0
+        titanium_insanium: 4
+      properties:
+        anomalous_desire:
+          type: integer
+        blockhead:
+          type: integer
+        core_of_the_mountain:
+          type: integer
+        crystalline:
+          type: integer
+        daily_grind:
+          type: integer
+        daily_powder:
+          type: integer
+        dead_mans_chest:
+          type: integer
+        eager_adventurer:
+          type: integer
+        efficient_miner:
+          type: integer
+        fortunate_mineman:
+          type: integer
+        front_loaded:
+          type: integer
+        gem_lover:
+          type: integer
+        gemstone_infusion:
+          type: integer
+        gifts_from_the_departed:
+          type: integer
+        great_explorer:
+          type: integer
+        keep_it_cool:
+          type: integer
+        lonesome_miner:
+          type: integer
+        luck_of_the_cave:
+          type: integer
+        maniac_miner:
+          type: integer
+        metal_head:
+          type: integer
+        miners_blessing:
+          type: integer
+        mineshaft_mayhem:
+          type: integer
+        mining_fortune:
+          type: integer
+        mining_master:
+          type: integer
+        mining_speed:
+          type: integer
+        mining_speed_boost:
+          type: integer
+        mole:
+          type: integer
+        no_stone_unturned:
+          type: integer
+        old_school:
+          type: integer
+        pickobulus:
+          type: integer
+        powder_buff:
+          type: integer
+        precision_mining:
+          type: integer
+        professional:
+          type: integer
+        quick_forge:
+          type: integer
+        rags_to_riches:
+          type: integer
+        seasoned_mineman:
+          type: integer
+        sheer_force:
+          type: integer
+        sky_mall:
+          type: integer
+        speedy_mineman:
+          type: integer
+        steady_hand:
+          type: integer
+        strong_arm:
+          type: integer
+        subterranean_fisher:
+          type: integer
+        surveyor:
+          type: integer
+        titanium_insanium:
+          type: integer
+        vanguard_seeker:
+          type: integer
+        warm_hearted:
+          type: integer
+      type: object
     SkyBlockProfileMemberRift:
       example:
         wizard_tower:
-          wizard_quest_step: 2
+          wizard_quest_step: 0
           crumbs_laid_out: 8
         enigma:
           found_souls:
           - found_souls
           - found_souls
           bought_cloak: true
-          claimed_bonus_index: 2
+          claimed_bonus_index: 6
         black_lagoon:
           received_science_paper: true
           delivered_science_paper: true
-          completed_step: 2
+          completed_step: 9
           talked_to_edwin: true
         dead_cats:
           unlocked_pet: true
@@ -3677,10 +4498,10 @@ components:
                 HEALTH: 20
               tier: RARE
             active: true
-            exp: 0.4008378390304357
+            exp: 8.289598895249666
             type: type
             uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            candyUsed: 8
+            candyUsed: 9
             uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           found_cats:
           - found_cats
@@ -3689,22 +4510,22 @@ components:
           talked_to_jacquelle: true
         village_plaza:
           murder:
-            step_index_pt3: 6
-            step_index: 7
-            step_index_pt2: 6
+            step_index_pt3: 7
+            step_index: 5
+            step_index_pt2: 8
             room_clues:
             - room_clues
             - room_clues
           cowboy:
-            stage: 2
-            hay_eaten: 9
+            stage: 9
+            hay_eaten: 0
             rabbit_name: rabbit_name
           barter_bank: "{}"
           got_scammed: true
           seraphine:
             step_index: 9
           lonely:
-            seconds_sitting: 7
+            seconds_sitting: 3
           barry_center:
             first_talk_to_barry: true
             convinced:
@@ -3719,14 +4540,14 @@ components:
           sent_trophy_dialogues:
           - sent_trophy_dialogues
           - sent_trophy_dialogues
-          elise_step: 4
+          elise_step: 6
           secured_trophies:
-          - visits: 5
+          - visits: 6
             type: type
-            timestamp: 3
-          - visits: 5
+            timestamp: 7
+          - visits: 6
             type: type
-            timestamp: 3
+            timestamp: 7
       properties:
         black_lagoon:
           $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
@@ -3747,7 +4568,7 @@ components:
       example:
         received_science_paper: true
         delivered_science_paper: true
-        completed_step: 2
+        completed_step: 9
         talked_to_edwin: true
       properties:
         completed_step:
@@ -3787,10 +4608,10 @@ components:
               HEALTH: 20
             tier: RARE
           active: true
-          exp: 0.4008378390304357
+          exp: 8.289598895249666
           type: type
           uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          candyUsed: 8
+          candyUsed: 9
           uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         found_cats:
         - found_cats
@@ -3837,10 +4658,10 @@ components:
             HEALTH: 20
           tier: RARE
         active: true
-        exp: 0.4008378390304357
+        exp: 8.289598895249666
         type: type
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        candyUsed: 8
+        candyUsed: 9
         uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         active:
@@ -3870,7 +4691,7 @@ components:
         - found_souls
         - found_souls
         bought_cloak: true
-        claimed_bonus_index: 2
+        claimed_bonus_index: 6
       properties:
         bought_cloak:
           type: boolean
@@ -3886,14 +4707,14 @@ components:
         sent_trophy_dialogues:
         - sent_trophy_dialogues
         - sent_trophy_dialogues
-        elise_step: 4
+        elise_step: 6
         secured_trophies:
-        - visits: 5
+        - visits: 6
           type: type
-          timestamp: 3
-        - visits: 5
+          timestamp: 7
+        - visits: 6
           type: type
-          timestamp: 3
+          timestamp: 7
       properties:
         elise_step:
           type: integer
@@ -3909,22 +4730,22 @@ components:
     SkyBlockProfileMemberRiftVillagePlaza:
       example:
         murder:
-          step_index_pt3: 6
-          step_index: 7
-          step_index_pt2: 6
+          step_index_pt3: 7
+          step_index: 5
+          step_index_pt2: 8
           room_clues:
           - room_clues
           - room_clues
         cowboy:
-          stage: 2
-          hay_eaten: 9
+          stage: 9
+          hay_eaten: 0
           rabbit_name: rabbit_name
         barter_bank: "{}"
         got_scammed: true
         seraphine:
           step_index: 9
         lonely:
-          seconds_sitting: 7
+          seconds_sitting: 3
         barry_center:
           first_talk_to_barry: true
           convinced:
@@ -3970,8 +4791,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaCowboy:
       example:
-        stage: 2
-        hay_eaten: 9
+        stage: 9
+        hay_eaten: 0
         rabbit_name: rabbit_name
       properties:
         hay_eaten:
@@ -3983,16 +4804,16 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaLonely:
       example:
-        seconds_sitting: 7
+        seconds_sitting: 3
       properties:
         seconds_sitting:
           type: integer
       type: object
     SkyBlockProfileMemberRiftVillagePlazaMurder:
       example:
-        step_index_pt3: 6
-        step_index: 7
-        step_index_pt2: 6
+        step_index_pt3: 7
+        step_index: 5
+        step_index_pt2: 8
         room_clues:
         - room_clues
         - room_clues
@@ -4028,7 +4849,7 @@ components:
       type: object
     SkyBlockProfileMemberRiftWizardTower:
       example:
-        wizard_quest_step: 2
+        wizard_quest_step: 0
         crumbs_laid_out: 8
       properties:
         crumbs_laid_out:
@@ -5537,18 +6358,18 @@ components:
                   bronze: 1
               rift:
                 wizard_tower:
-                  wizard_quest_step: 2
+                  wizard_quest_step: 0
                   crumbs_laid_out: 8
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 2
+                  claimed_bonus_index: 6
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 2
+                  completed_step: 9
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -5577,10 +6398,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 0.4008378390304357
+                    exp: 8.289598895249666
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 8
+                    candyUsed: 9
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -5589,22 +6410,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 6
-                    step_index: 7
-                    step_index_pt2: 6
+                    step_index_pt3: 7
+                    step_index: 5
+                    step_index_pt2: 8
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 2
-                    hay_eaten: 9
+                    stage: 9
+                    hay_eaten: 0
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
                     step_index: 9
                   lonely:
-                    seconds_sitting: 7
+                    seconds_sitting: 3
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -5619,14 +6440,148 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 4
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 5
+                  - visits: 6
                     type: type
-                    timestamp: 3
-                  - visits: 5
+                    timestamp: 7
+                  - visits: 6
                     type: type
-                    timestamp: 3
+                    timestamp: 7
+              mining_core:
+                greater_mines_last_access: 9
+                experience: 6
+                daily_ores_mined_day_mithril_ore: 2
+                daily_ores_mined_day_gemstone: 5
+                daily_ores_mined_day_glacite: 9
+                powder_spent_gemstone: 0
+                last_reset: 8
+                powder_spent_glacite: 9
+                powder_glacite: 9
+                retroactive_tier2_token: true
+                received_free_tier: true
+                daily_ores_mined_gemstone: 7
+                crystals:
+                  amethyst_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  jasper_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  peridot_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  topaz_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  amber_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  onyx_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  opal_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  ruby_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  sapphire_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  jade_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  citrine_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  aquamarine_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                tokens_spent: 6
+                biomes:
+                  dwarven: "{}"
+                  precursor:
+                    claiming_with_precursor_apparatus: true
+                    talked_to_professor: true
+                    parts_delivered:
+                    - CONTROL_SWITCH
+                    - CONTROL_SWITCH
+                  goblin:
+                    king_quests_completed: 2
+                    king_quest_active: true
+                  jungle:
+                    jungle_temple_open: true
+                    jungle_temple_chest_uses: 8
+                daily_ores_mined_day: 3
+                daily_ores_mined_glacite: 7
+                powder_mithril_total: 7
+                daily_ores_mined_mithril_ore: 6
+                powder_glacite_total: 9
+                powder_spent_mithril: 1
+                nodes:
+                  mining_speed: 5
+                  mining_speed_boost: 8
+                  daily_powder: 1
+                  vanguard_seeker: 8
+                  quick_forge: 1
+                  crystalline: 3
+                  gifts_from_the_departed: 8
+                  mining_fortune: 2
+                  subterranean_fisher: 3
+                  no_stone_unturned: 8
+                  professional: 2
+                  strong_arm: 3
+                  efficient_miner: 2
+                  seasoned_mineman: 7
+                  sheer_force: 1
+                  steady_hand: 1
+                  metal_head: 8
+                  anomalous_desire: 2
+                  rags_to_riches: 7
+                  eager_adventurer: 2
+                  keep_it_cool: 0
+                  luck_of_the_cave: 8
+                  fortunate_mineman: 8
+                  maniac_miner: 2
+                  blockhead: 6
+                  daily_grind: 9
+                  mole: 4
+                  dead_mans_chest: 4
+                  surveyor: 1
+                  gemstone_infusion: 5
+                  miners_blessing: 5
+                  powder_buff: 7
+                  mineshaft_mayhem: 9
+                  pickobulus: 6
+                  old_school: 8
+                  precision_mining: 1
+                  lonesome_miner: 1
+                  speedy_mineman: 4
+                  front_loaded: 2
+                  great_explorer: 5
+                  sky_mall: 4
+                  gem_lover: 6
+                  mining_master: 5
+                  core_of_the_mountain: 1
+                  warm_hearted: 0
+                  titanium_insanium: 4
+                powder_mithril: 6
+                powder_gemstone_total: 5
+                daily_ores_mined: 4
+                powder_gemstone: 8
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -6095,18 +7050,18 @@ components:
                   bronze: 1
               rift:
                 wizard_tower:
-                  wizard_quest_step: 2
+                  wizard_quest_step: 0
                   crumbs_laid_out: 8
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 2
+                  claimed_bonus_index: 6
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 2
+                  completed_step: 9
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -6135,10 +7090,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 0.4008378390304357
+                    exp: 8.289598895249666
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 8
+                    candyUsed: 9
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -6147,22 +7102,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 6
-                    step_index: 7
-                    step_index_pt2: 6
+                    step_index_pt3: 7
+                    step_index: 5
+                    step_index_pt2: 8
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 2
-                    hay_eaten: 9
+                    stage: 9
+                    hay_eaten: 0
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
                     step_index: 9
                   lonely:
-                    seconds_sitting: 7
+                    seconds_sitting: 3
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -6177,14 +7132,148 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 4
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 5
+                  - visits: 6
                     type: type
-                    timestamp: 3
-                  - visits: 5
+                    timestamp: 7
+                  - visits: 6
                     type: type
-                    timestamp: 3
+                    timestamp: 7
+              mining_core:
+                greater_mines_last_access: 9
+                experience: 6
+                daily_ores_mined_day_mithril_ore: 2
+                daily_ores_mined_day_gemstone: 5
+                daily_ores_mined_day_glacite: 9
+                powder_spent_gemstone: 0
+                last_reset: 8
+                powder_spent_glacite: 9
+                powder_glacite: 9
+                retroactive_tier2_token: true
+                received_free_tier: true
+                daily_ores_mined_gemstone: 7
+                crystals:
+                  amethyst_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  jasper_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  peridot_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  topaz_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  amber_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  onyx_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  opal_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  ruby_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  sapphire_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  jade_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  citrine_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  aquamarine_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                tokens_spent: 6
+                biomes:
+                  dwarven: "{}"
+                  precursor:
+                    claiming_with_precursor_apparatus: true
+                    talked_to_professor: true
+                    parts_delivered:
+                    - CONTROL_SWITCH
+                    - CONTROL_SWITCH
+                  goblin:
+                    king_quests_completed: 2
+                    king_quest_active: true
+                  jungle:
+                    jungle_temple_open: true
+                    jungle_temple_chest_uses: 8
+                daily_ores_mined_day: 3
+                daily_ores_mined_glacite: 7
+                powder_mithril_total: 7
+                daily_ores_mined_mithril_ore: 6
+                powder_glacite_total: 9
+                powder_spent_mithril: 1
+                nodes:
+                  mining_speed: 5
+                  mining_speed_boost: 8
+                  daily_powder: 1
+                  vanguard_seeker: 8
+                  quick_forge: 1
+                  crystalline: 3
+                  gifts_from_the_departed: 8
+                  mining_fortune: 2
+                  subterranean_fisher: 3
+                  no_stone_unturned: 8
+                  professional: 2
+                  strong_arm: 3
+                  efficient_miner: 2
+                  seasoned_mineman: 7
+                  sheer_force: 1
+                  steady_hand: 1
+                  metal_head: 8
+                  anomalous_desire: 2
+                  rags_to_riches: 7
+                  eager_adventurer: 2
+                  keep_it_cool: 0
+                  luck_of_the_cave: 8
+                  fortunate_mineman: 8
+                  maniac_miner: 2
+                  blockhead: 6
+                  daily_grind: 9
+                  mole: 4
+                  dead_mans_chest: 4
+                  surveyor: 1
+                  gemstone_infusion: 5
+                  miners_blessing: 5
+                  powder_buff: 7
+                  mineshaft_mayhem: 9
+                  pickobulus: 6
+                  old_school: 8
+                  precision_mining: 1
+                  lonesome_miner: 1
+                  speedy_mineman: 4
+                  front_loaded: 2
+                  great_explorer: 5
+                  sky_mall: 4
+                  gem_lover: 6
+                  mining_master: 5
+                  core_of_the_mountain: 1
+                  warm_hearted: 0
+                  titanium_insanium: 4
+                powder_mithril: 6
+                powder_gemstone_total: 5
+                daily_ores_mined: 4
+                powder_gemstone: 8
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -6643,18 +7732,18 @@ components:
                   bronze: 1
               rift:
                 wizard_tower:
-                  wizard_quest_step: 2
+                  wizard_quest_step: 0
                   crumbs_laid_out: 8
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 2
+                  claimed_bonus_index: 6
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 2
+                  completed_step: 9
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -6683,10 +7772,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 0.4008378390304357
+                    exp: 8.289598895249666
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 8
+                    candyUsed: 9
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -6695,22 +7784,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 6
-                    step_index: 7
-                    step_index_pt2: 6
+                    step_index_pt3: 7
+                    step_index: 5
+                    step_index_pt2: 8
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 2
-                    hay_eaten: 9
+                    stage: 9
+                    hay_eaten: 0
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
                     step_index: 9
                   lonely:
-                    seconds_sitting: 7
+                    seconds_sitting: 3
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -6725,14 +7814,148 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 4
+                  elise_step: 6
                   secured_trophies:
-                  - visits: 5
+                  - visits: 6
                     type: type
-                    timestamp: 3
-                  - visits: 5
+                    timestamp: 7
+                  - visits: 6
                     type: type
-                    timestamp: 3
+                    timestamp: 7
+              mining_core:
+                greater_mines_last_access: 9
+                experience: 6
+                daily_ores_mined_day_mithril_ore: 2
+                daily_ores_mined_day_gemstone: 5
+                daily_ores_mined_day_glacite: 9
+                powder_spent_gemstone: 0
+                last_reset: 8
+                powder_spent_glacite: 9
+                powder_glacite: 9
+                retroactive_tier2_token: true
+                received_free_tier: true
+                daily_ores_mined_gemstone: 7
+                crystals:
+                  amethyst_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  jasper_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  peridot_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  topaz_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  amber_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  onyx_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  opal_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  ruby_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  sapphire_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  jade_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  citrine_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                  aquamarine_crystal:
+                    total_placed: 2
+                    state: FOUND
+                    total_found: 0
+                tokens_spent: 6
+                biomes:
+                  dwarven: "{}"
+                  precursor:
+                    claiming_with_precursor_apparatus: true
+                    talked_to_professor: true
+                    parts_delivered:
+                    - CONTROL_SWITCH
+                    - CONTROL_SWITCH
+                  goblin:
+                    king_quests_completed: 2
+                    king_quest_active: true
+                  jungle:
+                    jungle_temple_open: true
+                    jungle_temple_chest_uses: 8
+                daily_ores_mined_day: 3
+                daily_ores_mined_glacite: 7
+                powder_mithril_total: 7
+                daily_ores_mined_mithril_ore: 6
+                powder_glacite_total: 9
+                powder_spent_mithril: 1
+                nodes:
+                  mining_speed: 5
+                  mining_speed_boost: 8
+                  daily_powder: 1
+                  vanguard_seeker: 8
+                  quick_forge: 1
+                  crystalline: 3
+                  gifts_from_the_departed: 8
+                  mining_fortune: 2
+                  subterranean_fisher: 3
+                  no_stone_unturned: 8
+                  professional: 2
+                  strong_arm: 3
+                  efficient_miner: 2
+                  seasoned_mineman: 7
+                  sheer_force: 1
+                  steady_hand: 1
+                  metal_head: 8
+                  anomalous_desire: 2
+                  rags_to_riches: 7
+                  eager_adventurer: 2
+                  keep_it_cool: 0
+                  luck_of_the_cave: 8
+                  fortunate_mineman: 8
+                  maniac_miner: 2
+                  blockhead: 6
+                  daily_grind: 9
+                  mole: 4
+                  dead_mans_chest: 4
+                  surveyor: 1
+                  gemstone_infusion: 5
+                  miners_blessing: 5
+                  powder_buff: 7
+                  mineshaft_mayhem: 9
+                  pickobulus: 6
+                  old_school: 8
+                  precision_mining: 1
+                  lonesome_miner: 1
+                  speedy_mineman: 4
+                  front_loaded: 2
+                  great_explorer: 5
+                  sky_mall: 4
+                  gem_lover: 6
+                  mining_master: 5
+                  core_of_the_mountain: 1
+                  warm_hearted: 0
+                  titanium_insanium: 4
+                powder_mithril: 6
+                powder_gemstone_total: 5
+                daily_ores_mined: 4
+                powder_gemstone: 8
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -7031,11 +8254,26 @@ components:
         collected:
           type: integer
       type: object
+    SkyBlockProfileMemberMiningCoreBiomesPrecursor_parts_delivered_inner:
+      enum:
+      - CONTROL_SWITCH
+      - ELECTRON_TRANSMITTER
+      - FTX_3070
+      - ROBOTRON_REFLECTOR
+      - SUPERLITE_MOTOR
+      - SYNTHETIC_HEART
+      type: string
+    SkyBlockProfileMemberMiningCoreCrystalsCrystal_state:
+      enum:
+      - FOUND
+      - NOT_FOUND
+      - PLACED
+      type: string
     SkyBlockProfileMemberRiftGallery_secured_trophies_inner:
       example:
-        visits: 5
+        visits: 6
         type: type
-        timestamp: 3
+        timestamp: 7
       properties:
         timestamp:
           type: integer

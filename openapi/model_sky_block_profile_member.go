@@ -34,6 +34,7 @@ type SkyBlockProfileMember struct {
 	ItemData            *SkyBlockProfileMemberItemData            `json:"item_data,omitempty"`
 	JacobsContest       *SkyBlockProfileMemberJacobsContest       `json:"jacobs_contest,omitempty"`
 	Leveling            *SkyBlockProfileMemberLeveling            `json:"leveling,omitempty"`
+	MiningCore          *SkyBlockProfileMemberMiningCore          `json:"mining_core,omitempty"`
 	PlayerId            *string                                   `json:"player_id,omitempty"`
 	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
 }
@@ -535,6 +536,38 @@ func (o *SkyBlockProfileMember) SetLeveling(v SkyBlockProfileMemberLeveling) {
 	o.Leveling = &v
 }
 
+// GetMiningCore returns the MiningCore field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetMiningCore() SkyBlockProfileMemberMiningCore {
+	if o == nil || IsNil(o.MiningCore) {
+		var ret SkyBlockProfileMemberMiningCore
+		return ret
+	}
+	return *o.MiningCore
+}
+
+// GetMiningCoreOk returns a tuple with the MiningCore field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetMiningCoreOk() (*SkyBlockProfileMemberMiningCore, bool) {
+	if o == nil || IsNil(o.MiningCore) {
+		return nil, false
+	}
+	return o.MiningCore, true
+}
+
+// HasMiningCore returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasMiningCore() bool {
+	if o != nil && !IsNil(o.MiningCore) {
+		return true
+	}
+
+	return false
+}
+
+// SetMiningCore gets a reference to the given SkyBlockProfileMemberMiningCore and assigns it to the MiningCore field.
+func (o *SkyBlockProfileMember) SetMiningCore(v SkyBlockProfileMemberMiningCore) {
+	o.MiningCore = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -653,6 +686,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Leveling) {
 		toSerialize["leveling"] = o.Leveling
+	}
+	if !IsNil(o.MiningCore) {
+		toSerialize["mining_core"] = o.MiningCore
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId
