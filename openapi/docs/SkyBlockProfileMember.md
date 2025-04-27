@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **Inventory** | Pointer to [**SkyBlockProfileMemberInventory**](SkyBlockProfileMemberInventory.md) |  | [optional] 
 **ItemData** | Pointer to [**SkyBlockProfileMemberItemData**](SkyBlockProfileMemberItemData.md) |  | [optional] 
 **JacobsContest** | Pointer to [**SkyBlockProfileMemberJacobsContest**](SkyBlockProfileMemberJacobsContest.md) |  | [optional] 
+**Leveling** | Pointer to [**SkyBlockProfileMemberLeveling**](SkyBlockProfileMemberLeveling.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
@@ -389,6 +390,31 @@ SetJacobsContest sets JacobsContest field to given value.
 `func (o *SkyBlockProfileMember) HasJacobsContest() bool`
 
 HasJacobsContest returns a boolean if a field has been set.
+
+### GetLeveling
+
+`func (o *SkyBlockProfileMember) GetLeveling() SkyBlockProfileMemberLeveling`
+
+GetLeveling returns the Leveling field if non-nil, zero value otherwise.
+
+### GetLevelingOk
+
+`func (o *SkyBlockProfileMember) GetLevelingOk() (*SkyBlockProfileMemberLeveling, bool)`
+
+GetLevelingOk returns a tuple with the Leveling field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLeveling
+
+`func (o *SkyBlockProfileMember) SetLeveling(v SkyBlockProfileMemberLeveling)`
+
+SetLeveling sets Leveling field to given value.
+
+### HasLeveling
+
+`func (o *SkyBlockProfileMember) HasLeveling() bool`
+
+HasLeveling returns a boolean if a field has been set.
 
 ### GetPlayerId
 

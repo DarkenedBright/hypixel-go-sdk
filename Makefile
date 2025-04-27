@@ -15,13 +15,14 @@ generate:
 	
 	@echo -n "Running 'openapi-generator generate'..."
 	@openapi-generator generate \
-		--input-spec api/swagger.json \
+		--input-spec api/openapi-spec.yaml \
 		--git-host github.com \
 		--git-repo-id hypixel-go-sdk \
 		--git-user-id DarkenedBright \
 		--generator-name go \
 		--type-mappings=integer=int64,number=float64 \
-		--additional-properties=enumClassPrefix=true,useOneOfDiscriminatorLookup=true,withGoMod=false \
+		--additional-properties=useOneOfDiscriminatorLookup=true,withGoMod=false \
+		--inline-schema-options RESOLVE_INLINE_ENUMS=true \
 		--output openapi \
 		|| { echo " FAILED"; exit 1; }
 

@@ -3,59 +3,6 @@ info:
   contact:
     name: Hypixel Support
     url: https://developer.hypixel.net
-  description: "# Introduction\nThis is the official Hypixel API documentation. [Hypixel\
-    \ Website](https://hypixel.net/) - [GitHub Repo](https://github.com/HypixelDev/PublicAPI)\
-    \ - [API Help Forum](https://hypixel.net/forums/api-help.111/)\n\nAll use of the\
-    \ API must conform to the [API policies](https://developer.hypixel.net/policies),\
-    \ violation of these policies may lead to applications being revoked or users\
-    \ banned from the API.\n## Limits\nAPI keys are limited to a maximum amount of\
-    \ requests per 5 minute intervals. These limits will depend on the type of application\
-    \ that the key is assigned to.\n\nEndpoints which require the use of an API key\
-    \ will also respond with headers to assist with managing the rate limit:\n- 'RateLimit-Limit'\
-    \ - The limit of requests per minute for the provided API key.\n- 'RateLimit-Remaining'\
-    \ - The remaining amount of requests allowed for the current minute.\n- 'RateLimit-Reset'\
-    \ - The amount of seconds until the next minute and the reset of the API key usages.\n\
-    \n## GameTypes\n| ID | Type Name      | Database Name | Clean Name           |\n\
-    \ |----|----------------|---------------|----------------------|\n | 2  | QUAKECRAFT\
-    \     | Quake         | Quake                |\n | 3  | WALLS          | Walls\
-    \         | Walls                |\n | 4  | PAINTBALL      | Paintball     | Paintball\
-    \            |\n | 5  | SURVIVAL_GAMES | HungerGames   | Blitz Survival Games\
-    \ |\n | 6  | TNTGAMES       | TNTGames      | TNT Games            |\n | 7  |\
-    \ VAMPIREZ       | VampireZ      | VampireZ             |\n | 13 | WALLS3    \
-    \     | Walls3        | Mega Walls           |\n | 14 | ARCADE         | Arcade\
-    \        | Arcade               |\n | 17 | ARENA          | Arena         | Arena\
-    \                |\n | 20 | UHC            | UHC           | UHC Champions   \
-    \     |\n | 21 | MCGO           | MCGO          | Cops and Crims       |\n | 23\
-    \ | BATTLEGROUND   | Battleground  | Warlords             |\n | 24 | SUPER_SMASH\
-    \    | SuperSmash    | Smash Heroes         |\n | 25 | GINGERBREAD    | GingerBread\
-    \   | Turbo Kart Racers    |\n | 26 | HOUSING        | Housing       | Housing\
-    \              |\n | 51 | SKYWARS        | SkyWars       | SkyWars           \
-    \   |\n | 52 | TRUE_COMBAT    | TrueCombat    | Crazy Walls          |\n | 54\
-    \ | SPEED_UHC      | SpeedUHC      | Speed UHC            |\n | 55 | SKYCLASH\
-    \       | SkyClash      | SkyClash             |\n | 56 | LEGACY         | Legacy\
-    \        | Classic Games        |\n | 57 | PROTOTYPE      | Prototype     | Prototype\
-    \            |\n | 58 | BEDWARS        | Bedwars       | Bed Wars            \
-    \ |\n | 59 | MURDER_MYSTERY | MurderMystery | Murder Mystery       |\n | 60 |\
-    \ BUILD_BATTLE   | BuildBattle   | Build Battle         |\n | 61 | DUELS     \
-    \     | Duels         | Duels                |\n | 63 | SKYBLOCK       | SkyBlock\
-    \      | SkyBlock             |\n | 64 | PIT            | Pit           | Pit\
-    \                  |\n | 65 | REPLAY         | Replay        | Replay        \
-    \       |\n | 67 | SMP            | SMP           | SMP                  |\n |\
-    \ 68 | WOOL_GAMES     | WoolGames     | Wool Wars            |\n\n### Storage\n\
-    Games store their respective stats and data in a Player's `stats` collection.\
-    \ The game's specific data is held within a JSON object named after it's `Database\
-    \ Name` (seen above.)\n### GameType Notes\n* Clean names are what is displayed\
-    \ to the user when referencing the name.\n* Database names or IDs are used when\
-    \ the API references a specific GameType.\n## Notes\n\n### Date and Time\nGenerally\
-    \ dates are stored as a Unix Epoch times in milliseconds.\n### Response Format\n\
-    Responses are served in JSON format.\n### UUID Parameters\nAll uuid parameters\
-    \ support both dashed and undashed versions.\n### SkyBlock items and inventories\n\
-    Items and inventory data are stored as a base64 encoded string containing gzipped\
-    \ nbt data.\nIf a method is missing important information about an item or inventory,\
-    \ you should try checking this!\n>Note: the base64 string may contain a unicode\
-    \ escape for non-alphabetical symbols, and some programming languages may have\
-    \ silent defects when interpreting the string. \n\n# Authentication\n\n<!-- ReDoc-Inject:\
-    \ <security-definitions> -->"
   termsOfService: https://hypixel.net/tos
   title: Hypixel Public API
   version: v2
@@ -519,6 +466,111 @@ components:
           stacked:
             type: boolean
         type: object
+    SkyBlockEmblem:
+      enum:
+      - ALCHEMY_BREW
+      - ARCHER_MASTER
+      - ARCHER_SPADE
+      - ARC_REACTOR
+      - BADGE
+      - BERSERKER_EXPLOSION
+      - BERSERKER_MASTER
+      - BIOHAZARD
+      - BOXES
+      - BROODMOTHER_STRING
+      - CARPENTRY_HOUSE
+      - CATACOMBS_SWORDS
+      - CENTURY_CELEBRANT
+      - CENTURY_PARTYGOER
+      - CENTURY_RAFFLE_BLUE
+      - CENTURY_RAFFLE_GREEN
+      - CENTURY_RAFFLE_PINK
+      - CENTURY_RAFFLE_RED
+      - CENTURY_RAFFLE_YELLOW
+      - CHOCOLATE_BAR
+      - CLASS_MASTER
+      - COLLECTING_TOP_HAT
+      - COMBAT_EXPLOSION
+      - COMBAT_MASTER
+      - DIAMOND
+      - DIAMOND_CLASS_GRANDMASTER
+      - DIAMOND_JACOBS_CONTEST_COMPLETIONIST
+      - DIAMOND_MINING_HELIX
+      - DIAMOND_TROPHY_KING
+      - DUNGEON_MASTER
+      - DUNGEON_RUNNER
+      - ENCHANTING_MASTER
+      - ENCHANTING_PENCIL
+      - EXTREME_BANKER
+      - FARMING_FLOWER
+      - FARMING_MASTER
+      - FISHING_FISH
+      - FLORETTE
+      - FORAGING_LEAF
+      - GARDENER
+      - GIFT_OF_GIVING
+      - GLOBE
+      - GOLDEN_BROODMOTHER_STRING
+      - GOLDEN_CATACOMBS_SWORDS
+      - GOLDEN_CHILI_PEPPER
+      - GOLDEN_CHOCOLATE_BAR
+      - GOLDEN_CLASS_MASTER
+      - GOLDEN_COLLECTING_TOP_HAT
+      - GOLDEN_FLEUR_DE_LIS
+      - GOLDEN_GARDENER
+      - GOLDEN_INFERNO_RODS
+      - GOLDEN_JACOBS_CONTEST_COMPLETIONIST
+      - GOLDEN_MAGICAL_SIGMA
+      - GOLDEN_MINING_HELIX
+      - GOLDEN_REVENANT_HORROR_BRAIN
+      - GOLDEN_RIFTSTALKER_STRANGE_TIME
+      - GOLDEN_SVEN_SHIELD
+      - GOLDEN_TROPHY_KING
+      - GOLDEN_VOIDGLOOM_RUNE
+      - GREAT_SPOOK
+      - HARP_MASTER
+      - HARP_NOTE
+      - HEALER_MASTER
+      - HEALER_STAFF
+      - HEART
+      - HELMET
+      - HYPIXEL
+      - INFERNO_RODS
+      - JACOBS_CONTEST_COMPLETIONIST
+      - JERRY
+      - KUUDRA_MASTER_SLAYER
+      - KUUDRA_SLAYER
+      - MAGE_LIGHTNING
+      - MAGE_MASTER
+      - MAGICAL_SIGMA
+      - MARKER
+      - MINING_HELIX
+      - MINING_MASTER
+      - MINING_PICKAXE
+      - MUSTACHE
+      - PRISTINE
+      - REVENANT_HORROR_BRAIN
+      - RIFTSTALKER_STRANGE_TIME
+      - RIFT_TIME
+      - SIDEWAYS_SMILEY
+      - SNOWMAN
+      - SOCIAL_MASTER
+      - SOCIAL_STATEMENT
+      - SOULFLOW
+      - SPACESHIP
+      - SPADE
+      - STAR
+      - SVEN_SHIELD
+      - TAMING_CLOVER
+      - TAMING_MASTER
+      - TANK_ANCHOR
+      - TANK_MASTER
+      - TOXIC
+      - TROPHY_KING
+      - ULTRA_BANKER
+      - VOIDGLOOM_RUNE
+      - WARNING
+      type: string
     SkyBlockFireSale:
       example:
         amount: 0
@@ -758,18 +810,7 @@ components:
           description: The skin value for a skull based item
           type: string
         tier:
-          description: The rarity tier of the item
-          enum:
-          - COMMON
-          - EPIC
-          - LEGENDARY
-          - MYTHIC
-          - RARE
-          - SPECIAL
-          - SUPREME
-          - UNCOMMON
-          - VERY_SPECIAL
-          type: string
+          $ref: '#/components/schemas/SkyBlockItem_tier'
     SkyBlockMuseum:
       example:
         special:
@@ -1042,6 +1083,31 @@ components:
                 key:
                   data: data
                   type: 9
+            leveling:
+              category_expanded: true
+              highest_pet_score: 8
+              mining_fiesta_ores_mined: 7
+              bop_bonus: bop_bonus
+              completions:
+                REAPER_PEPPERS: 3
+                NUCLEUS_RUNS: 5
+                REFINED_DARK_CACAO_TRUFFLE: 1
+              completed_tasks:
+              - ABIPHONE_alchemist
+              - ABIPHONE_alchemist
+              experience: 5
+              emblem_unlocks:
+              - ALCHEMY_BREW
+              - ALCHEMY_BREW
+              claimed_talisman: true
+              last_viewed_tasks:
+              - null
+              - null
+              migrated_completions_2: true
+              selected_symbol: null
+              fishing_festival_sharks_killed: 3
+              migrated: true
+              migrated_completions: true
             item_data:
               soulflow: 0
               teleporter_pill_consumed: true
@@ -1072,17 +1138,17 @@ components:
             rift:
               wizard_tower:
                 wizard_quest_step: 2
-                crumbs_laid_out: 9
+                crumbs_laid_out: 8
               enigma:
                 found_souls:
                 - found_souls
                 - found_souls
                 bought_cloak: true
-                claimed_bonus_index: 5
+                claimed_bonus_index: 2
               black_lagoon:
                 received_science_paper: true
                 delivered_science_paper: true
-                completed_step: 5
+                completed_step: 2
                 talked_to_edwin: true
               dead_cats:
                 unlocked_pet: true
@@ -1111,10 +1177,10 @@ components:
                       HEALTH: 20
                     tier: RARE
                   active: true
-                  exp: 1.9626702727164813
+                  exp: 0.4008378390304357
                   type: type
                   uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                  candyUsed: 3
+                  candyUsed: 8
                   uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                 found_cats:
                 - found_cats
@@ -1123,22 +1189,22 @@ components:
                 talked_to_jacquelle: true
               village_plaza:
                 murder:
-                  step_index_pt3: 3
-                  step_index: 2
-                  step_index_pt2: 4
+                  step_index_pt3: 6
+                  step_index: 7
+                  step_index_pt2: 6
                   room_clues:
                   - room_clues
                   - room_clues
                 cowboy:
-                  stage: 8
-                  hay_eaten: 2
+                  stage: 2
+                  hay_eaten: 9
                   rabbit_name: rabbit_name
                 barter_bank: "{}"
                 got_scammed: true
                 seraphine:
-                  step_index: 5
+                  step_index: 9
                 lonely:
-                  seconds_sitting: 0
+                  seconds_sitting: 7
                 barry_center:
                   first_talk_to_barry: true
                   convinced:
@@ -1153,14 +1219,14 @@ components:
                 sent_trophy_dialogues:
                 - sent_trophy_dialogues
                 - sent_trophy_dialogues
-                elise_step: 3
+                elise_step: 4
                 secured_trophies:
-                - visits: 7
+                - visits: 5
                   type: type
-                  timestamp: 8
-                - visits: 7
+                  timestamp: 3
+                - visits: 5
                   type: type
-                  timestamp: 8
+                  timestamp: 3
             player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             glacite_player_data:
               corpses_looted:
@@ -1326,13 +1392,7 @@ components:
             \ endpoint"
           type: string
         game_mode:
-          description: "The SkyBlock game mode of the profile, not present if normal\
-            \ mode"
-          enum:
-          - bingo
-          - ironman
-          - island
-          type: string
+          $ref: '#/components/schemas/SkyBlockProfile_game_mode'
         members:
           additionalProperties:
             $ref: '#/components/schemas/SkyBlockProfileMember'
@@ -1593,6 +1653,31 @@ components:
             key:
               data: data
               type: 9
+        leveling:
+          category_expanded: true
+          highest_pet_score: 8
+          mining_fiesta_ores_mined: 7
+          bop_bonus: bop_bonus
+          completions:
+            REAPER_PEPPERS: 3
+            NUCLEUS_RUNS: 5
+            REFINED_DARK_CACAO_TRUFFLE: 1
+          completed_tasks:
+          - ABIPHONE_alchemist
+          - ABIPHONE_alchemist
+          experience: 5
+          emblem_unlocks:
+          - ALCHEMY_BREW
+          - ALCHEMY_BREW
+          claimed_talisman: true
+          last_viewed_tasks:
+          - null
+          - null
+          migrated_completions_2: true
+          selected_symbol: null
+          fishing_festival_sharks_killed: 3
+          migrated: true
+          migrated_completions: true
         item_data:
           soulflow: 0
           teleporter_pill_consumed: true
@@ -1623,17 +1708,17 @@ components:
         rift:
           wizard_tower:
             wizard_quest_step: 2
-            crumbs_laid_out: 9
+            crumbs_laid_out: 8
           enigma:
             found_souls:
             - found_souls
             - found_souls
             bought_cloak: true
-            claimed_bonus_index: 5
+            claimed_bonus_index: 2
           black_lagoon:
             received_science_paper: true
             delivered_science_paper: true
-            completed_step: 5
+            completed_step: 2
             talked_to_edwin: true
           dead_cats:
             unlocked_pet: true
@@ -1662,10 +1747,10 @@ components:
                   HEALTH: 20
                 tier: RARE
               active: true
-              exp: 1.9626702727164813
+              exp: 0.4008378390304357
               type: type
               uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              candyUsed: 3
+              candyUsed: 8
               uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             found_cats:
             - found_cats
@@ -1674,22 +1759,22 @@ components:
             talked_to_jacquelle: true
           village_plaza:
             murder:
-              step_index_pt3: 3
-              step_index: 2
-              step_index_pt2: 4
+              step_index_pt3: 6
+              step_index: 7
+              step_index_pt2: 6
               room_clues:
               - room_clues
               - room_clues
             cowboy:
-              stage: 8
-              hay_eaten: 2
+              stage: 2
+              hay_eaten: 9
               rabbit_name: rabbit_name
             barter_bank: "{}"
             got_scammed: true
             seraphine:
-              step_index: 5
+              step_index: 9
             lonely:
-              seconds_sitting: 0
+              seconds_sitting: 7
             barry_center:
               first_talk_to_barry: true
               convinced:
@@ -1704,14 +1789,14 @@ components:
             sent_trophy_dialogues:
             - sent_trophy_dialogues
             - sent_trophy_dialogues
-            elise_step: 3
+            elise_step: 4
             secured_trophies:
-            - visits: 7
+            - visits: 5
               type: type
-              timestamp: 8
-            - visits: 7
+              timestamp: 3
+            - visits: 5
               type: type
-              timestamp: 8
+              timestamp: 3
         player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         glacite_player_data:
           corpses_looted:
@@ -1883,6 +1968,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberItemData'
         jacobs_contest:
           $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContest'
+        leveling:
+          $ref: '#/components/schemas/SkyBlockProfileMemberLeveling'
         player_id:
           format: uuid
           type: string
@@ -3470,21 +3557,98 @@ components:
           type: string
         type: array
       type: object
+    SkyBlockProfileMemberLeveling:
+      example:
+        category_expanded: true
+        highest_pet_score: 8
+        mining_fiesta_ores_mined: 7
+        bop_bonus: bop_bonus
+        completions:
+          REAPER_PEPPERS: 3
+          NUCLEUS_RUNS: 5
+          REFINED_DARK_CACAO_TRUFFLE: 1
+        completed_tasks:
+        - ABIPHONE_alchemist
+        - ABIPHONE_alchemist
+        experience: 5
+        emblem_unlocks:
+        - ALCHEMY_BREW
+        - ALCHEMY_BREW
+        claimed_talisman: true
+        last_viewed_tasks:
+        - null
+        - null
+        migrated_completions_2: true
+        selected_symbol: null
+        fishing_festival_sharks_killed: 3
+        migrated: true
+        migrated_completions: true
+      properties:
+        bop_bonus:
+          type: string
+        category_expanded:
+          type: boolean
+        claimed_talisman:
+          type: boolean
+        completed_tasks:
+          items:
+            $ref: '#/components/schemas/SkyBlockXPTask'
+          type: array
+        completions:
+          $ref: '#/components/schemas/SkyBlockProfileMemberLevelingCompletions'
+        emblem_unlocks:
+          items:
+            $ref: '#/components/schemas/SkyBlockEmblem'
+          type: array
+        experience:
+          type: integer
+        fishing_festival_sharks_killed:
+          type: integer
+        highest_pet_score:
+          type: integer
+        last_viewed_tasks:
+          items:
+            $ref: '#/components/schemas/SkyBlockXPTask'
+          type: array
+        migrated:
+          type: boolean
+        migrated_completions:
+          type: boolean
+        migrated_completions_2:
+          type: boolean
+        mining_fiesta_ores_mined:
+          type: integer
+        selected_symbol:
+          $ref: '#/components/schemas/SkyBlockEmblem'
+      type: object
+    SkyBlockProfileMemberLevelingCompletions:
+      example:
+        REAPER_PEPPERS: 3
+        NUCLEUS_RUNS: 5
+        REFINED_DARK_CACAO_TRUFFLE: 1
+      properties:
+        NUCLEUS_RUNS:
+          type: integer
+        REAPER_PEPPERS:
+          type: integer
+        REFINED_DARK_CACAO_TRUFFLE:
+          type: integer
+      type: object
     SkyBlockProfileMemberRift:
       example:
         wizard_tower:
           wizard_quest_step: 2
-          crumbs_laid_out: 9
+          crumbs_laid_out: 8
         enigma:
           found_souls:
           - found_souls
           - found_souls
           bought_cloak: true
-          claimed_bonus_index: 5
+          claimed_bonus_index: 2
         black_lagoon:
           received_science_paper: true
           delivered_science_paper: true
-          completed_step: 5
+          completed_step: 2
           talked_to_edwin: true
         dead_cats:
           unlocked_pet: true
@@ -3513,10 +3677,10 @@ components:
                 HEALTH: 20
               tier: RARE
             active: true
-            exp: 1.9626702727164813
+            exp: 0.4008378390304357
             type: type
             uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            candyUsed: 3
+            candyUsed: 8
             uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           found_cats:
           - found_cats
@@ -3525,22 +3689,22 @@ components:
           talked_to_jacquelle: true
         village_plaza:
           murder:
-            step_index_pt3: 3
-            step_index: 2
-            step_index_pt2: 4
+            step_index_pt3: 6
+            step_index: 7
+            step_index_pt2: 6
             room_clues:
             - room_clues
             - room_clues
           cowboy:
-            stage: 8
-            hay_eaten: 2
+            stage: 2
+            hay_eaten: 9
             rabbit_name: rabbit_name
           barter_bank: "{}"
           got_scammed: true
           seraphine:
-            step_index: 5
+            step_index: 9
           lonely:
-            seconds_sitting: 0
+            seconds_sitting: 7
           barry_center:
             first_talk_to_barry: true
             convinced:
@@ -3555,14 +3719,14 @@ components:
           sent_trophy_dialogues:
           - sent_trophy_dialogues
           - sent_trophy_dialogues
-          elise_step: 3
+          elise_step: 4
           secured_trophies:
-          - visits: 7
+          - visits: 5
             type: type
-            timestamp: 8
-          - visits: 7
+            timestamp: 3
+          - visits: 5
             type: type
-            timestamp: 8
+            timestamp: 3
       properties:
         black_lagoon:
           $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
@@ -3583,7 +3747,7 @@ components:
       example:
         received_science_paper: true
         delivered_science_paper: true
-        completed_step: 5
+        completed_step: 2
         talked_to_edwin: true
       properties:
         completed_step:
@@ -3623,10 +3787,10 @@ components:
               HEALTH: 20
             tier: RARE
           active: true
-          exp: 1.9626702727164813
+          exp: 0.4008378390304357
           type: type
           uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          candyUsed: 3
+          candyUsed: 8
           uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         found_cats:
         - found_cats
@@ -3673,10 +3837,10 @@ components:
             HEALTH: 20
           tier: RARE
         active: true
-        exp: 1.9626702727164813
+        exp: 0.4008378390304357
         type: type
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        candyUsed: 3
+        candyUsed: 8
         uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         active:
@@ -3706,7 +3870,7 @@ components:
         - found_souls
         - found_souls
         bought_cloak: true
-        claimed_bonus_index: 5
+        claimed_bonus_index: 2
       properties:
         bought_cloak:
           type: boolean
@@ -3722,14 +3886,14 @@ components:
         sent_trophy_dialogues:
         - sent_trophy_dialogues
         - sent_trophy_dialogues
-        elise_step: 3
+        elise_step: 4
         secured_trophies:
-        - visits: 7
+        - visits: 5
           type: type
-          timestamp: 8
-        - visits: 7
+          timestamp: 3
+        - visits: 5
           type: type
-          timestamp: 8
+          timestamp: 3
       properties:
         elise_step:
           type: integer
@@ -3745,22 +3909,22 @@ components:
     SkyBlockProfileMemberRiftVillagePlaza:
       example:
         murder:
-          step_index_pt3: 3
-          step_index: 2
-          step_index_pt2: 4
+          step_index_pt3: 6
+          step_index: 7
+          step_index_pt2: 6
           room_clues:
           - room_clues
           - room_clues
         cowboy:
-          stage: 8
-          hay_eaten: 2
+          stage: 2
+          hay_eaten: 9
           rabbit_name: rabbit_name
         barter_bank: "{}"
         got_scammed: true
         seraphine:
-          step_index: 5
+          step_index: 9
         lonely:
-          seconds_sitting: 0
+          seconds_sitting: 7
         barry_center:
           first_talk_to_barry: true
           convinced:
@@ -3806,8 +3970,8 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaCowboy:
       example:
-        stage: 8
-        hay_eaten: 2
+        stage: 2
+        hay_eaten: 9
         rabbit_name: rabbit_name
       properties:
         hay_eaten:
@@ -3819,16 +3983,16 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaLonely:
       example:
-        seconds_sitting: 0
+        seconds_sitting: 7
       properties:
         seconds_sitting:
           type: integer
       type: object
     SkyBlockProfileMemberRiftVillagePlazaMurder:
       example:
-        step_index_pt3: 3
-        step_index: 2
-        step_index_pt2: 4
+        step_index_pt3: 6
+        step_index: 7
+        step_index_pt2: 6
         room_clues:
         - room_clues
         - room_clues
@@ -3846,7 +4010,7 @@ components:
       type: object
     SkyBlockProfileMemberRiftVillagePlazaSeraphine:
       example:
-        step_index: 5
+        step_index: 9
       properties:
         step_index:
           type: integer
@@ -3865,13 +4029,703 @@ components:
     SkyBlockProfileMemberRiftWizardTower:
       example:
         wizard_quest_step: 2
-        crumbs_laid_out: 9
+        crumbs_laid_out: 8
       properties:
         crumbs_laid_out:
           type: integer
         wizard_quest_step:
           type: integer
       type: object
+    SkyBlockXPTask:
+      enum:
+      - ABIPHONE_alchemist
+      - ABIPHONE_anita
+      - ABIPHONE_aranya
+      - ABIPHONE_arrow_forger
+      - ABIPHONE_blacksmith
+      - ABIPHONE_brynmor
+      - ABIPHONE_builder
+      - ABIPHONE_captain_ahone
+      - ABIPHONE_community_shop
+      - ABIPHONE_dean
+      - ABIPHONE_drill_fuel_mechanic
+      - ABIPHONE_duncan
+      - ABIPHONE_dusk
+      - ABIPHONE_einary
+      - ABIPHONE_elle
+      - ABIPHONE_fairy
+      - ABIPHONE_forge_foreman
+      - ABIPHONE_gatekeeper
+      - ABIPHONE_gemstone
+      - ABIPHONE_hoppity
+      - ABIPHONE_igrupan
+      - ABIPHONE_jacob
+      - ABIPHONE_kaus
+      - ABIPHONE_kuudra_gatekeeper
+      - ABIPHONE_lumber_merchant
+      - ABIPHONE_odger
+      - ABIPHONE_ophelia
+      - ABIPHONE_oringo
+      - ABIPHONE_pablo
+      - ABIPHONE_pet_collector
+      - ABIPHONE_pet_sitter
+      - ABIPHONE_pet_trainer
+      - ABIPHONE_plumber
+      - ABIPHONE_queen
+      - ABIPHONE_queen_mismyla
+      - ABIPHONE_roddy
+      - ABIPHONE_rollim
+      - ABIPHONE_shady_bartender
+      - ABIPHONE_sirih
+      - ABIPHONE_sirius
+      - ABIPHONE_slayer
+      - ABIPHONE_spooky
+      - ABIPHONE_st_jerry
+      - ABIPHONE_suus
+      - ABIPHONE_telekinesis_applier
+      - ABIPHONE_thaumaturgist
+      - ABIPHONE_tomioka
+      - ABIPHONE_trevor_the_trapper
+      - ABIPHONE_trinity
+      - ABIPHONE_vincent
+      - ABIPHONE_walter
+      - ABIPHONE_wool_weaver
+      - ABIPHONE_zog
+      - BANK_UPGRADE_DELUXE
+      - BANK_UPGRADE_GOLD
+      - BANK_UPGRADE_LUXURIOUS
+      - BANK_UPGRADE_PALATIAL
+      - BANK_UPGRADE_PREMIER
+      - BANK_UPGRADE_SUPER_DELUXE
+      - BARBARIANS_FRIENDLY
+      - BARBARIANS_HERO
+      - BARBARIANS_HONORED
+      - BARBARIANS_TRUSTED
+      - COMPLETE_CATACOMBS0
+      - COMPLETE_CATACOMBS1
+      - COMPLETE_CATACOMBS2
+      - COMPLETE_CATACOMBS3
+      - COMPLETE_CATACOMBS4
+      - COMPLETE_CATACOMBS5
+      - COMPLETE_CATACOMBS6
+      - COMPLETE_CATACOMBS7
+      - COMPLETE_MASTER_CATACOMBS1
+      - COMPLETE_MASTER_CATACOMBS2
+      - COMPLETE_MASTER_CATACOMBS3
+      - COMPLETE_MASTER_CATACOMBS4
+      - COMPLETE_MASTER_CATACOMBS5
+      - COMPLETE_MASTER_CATACOMBS6
+      - COMPLETE_MASTER_CATACOMBS7
+      - CRIMSON_ESSENCE_CRIMSON_TRAINING_1
+      - CRIMSON_ESSENCE_CRIMSON_TRAINING_2
+      - CRIMSON_ESSENCE_CRIMSON_TRAINING_3
+      - CRIMSON_ESSENCE_FRESH_TOOLS_KUUDRA_1
+      - CRIMSON_ESSENCE_FRESH_TOOLS_KUUDRA_2
+      - CRIMSON_ESSENCE_FRESH_TOOLS_KUUDRA_3
+      - CRIMSON_ESSENCE_FRESH_TOOLS_KUUDRA_4
+      - CRIMSON_ESSENCE_FRESH_TOOLS_KUUDRA_5
+      - CRIMSON_ESSENCE_FUNGUS_FORTUNA_1
+      - CRIMSON_ESSENCE_FUNGUS_FORTUNA_10
+      - CRIMSON_ESSENCE_FUNGUS_FORTUNA_2
+      - CRIMSON_ESSENCE_FUNGUS_FORTUNA_3
+      - CRIMSON_ESSENCE_FUNGUS_FORTUNA_4
+      - CRIMSON_ESSENCE_FUNGUS_FORTUNA_5
+      - CRIMSON_ESSENCE_FUNGUS_FORTUNA_6
+      - CRIMSON_ESSENCE_FUNGUS_FORTUNA_7
+      - CRIMSON_ESSENCE_FUNGUS_FORTUNA_8
+      - CRIMSON_ESSENCE_FUNGUS_FORTUNA_9
+      - CRIMSON_ESSENCE_HARENA_FORTUNA_1
+      - CRIMSON_ESSENCE_HARENA_FORTUNA_10
+      - CRIMSON_ESSENCE_HARENA_FORTUNA_2
+      - CRIMSON_ESSENCE_HARENA_FORTUNA_3
+      - CRIMSON_ESSENCE_HARENA_FORTUNA_4
+      - CRIMSON_ESSENCE_HARENA_FORTUNA_5
+      - CRIMSON_ESSENCE_HARENA_FORTUNA_6
+      - CRIMSON_ESSENCE_HARENA_FORTUNA_7
+      - CRIMSON_ESSENCE_HARENA_FORTUNA_8
+      - CRIMSON_ESSENCE_HARENA_FORTUNA_9
+      - CRIMSON_ESSENCE_HEADSTART_KUUDRA_1
+      - CRIMSON_ESSENCE_HEADSTART_KUUDRA_2
+      - CRIMSON_ESSENCE_HEADSTART_KUUDRA_3
+      - CRIMSON_ESSENCE_HEADSTART_KUUDRA_4
+      - CRIMSON_ESSENCE_HEADSTART_KUUDRA_5
+      - CRIMSON_ESSENCE_MASTER_KUUDRA_1
+      - CRIMSON_ESSENCE_STRONGARM_KUUDRA_1
+      - CRIMSON_ESSENCE_STRONGARM_KUUDRA_2
+      - CRIMSON_ESSENCE_WITHER_PIPER_1
+      - CRIMSON_ESSENCE_WITHER_PIPER_2
+      - CRIMSON_ESSENCE_WITHER_PIPER_3
+      - CRIMSON_ESSENCE_WITHER_PIPER_4
+      - CRIMSON_ESSENCE_WITHER_PIPER_5
+      - DEFEAT_BLAZE_SLAYER_FOUR
+      - DEFEAT_BLAZE_SLAYER_ONE
+      - DEFEAT_BLAZE_SLAYER_THREE
+      - DEFEAT_BLAZE_SLAYER_TWO
+      - DEFEAT_ENDERMAN_SLAYER_FOUR
+      - DEFEAT_ENDERMAN_SLAYER_ONE
+      - DEFEAT_ENDERMAN_SLAYER_THREE
+      - DEFEAT_ENDERMAN_SLAYER_TWO
+      - DEFEAT_SPIDER_SLAYER_FOUR
+      - DEFEAT_SPIDER_SLAYER_ONE
+      - DEFEAT_SPIDER_SLAYER_THREE
+      - DEFEAT_SPIDER_SLAYER_TWO
+      - DEFEAT_VAMPIRE_SLAYER_FIVE
+      - DEFEAT_VAMPIRE_SLAYER_FOUR
+      - DEFEAT_VAMPIRE_SLAYER_ONE
+      - DEFEAT_VAMPIRE_SLAYER_THREE
+      - DEFEAT_VAMPIRE_SLAYER_TWO
+      - DEFEAT_WOLF_SLAYER_FOUR
+      - DEFEAT_WOLF_SLAYER_ONE
+      - DEFEAT_WOLF_SLAYER_THREE
+      - DEFEAT_WOLF_SLAYER_TWO
+      - DEFEAT_ZOMBIE_SLAYER_FIVE
+      - DEFEAT_ZOMBIE_SLAYER_FOUR
+      - DEFEAT_ZOMBIE_SLAYER_ONE
+      - DEFEAT_ZOMBIE_SLAYER_THREE
+      - DEFEAT_ZOMBIE_SLAYER_TWO
+      - DIAMOND_ESSENCE_DIAMOND_IN_THE_ROUGH_1
+      - DIAMOND_ESSENCE_DIAMOND_IN_THE_ROUGH_2
+      - DIAMOND_ESSENCE_DIAMOND_IN_THE_ROUGH_3
+      - DIAMOND_ESSENCE_DIAMOND_IN_THE_ROUGH_4
+      - DIAMOND_ESSENCE_DIAMOND_IN_THE_ROUGH_5
+      - DIAMOND_ESSENCE_HIGH_ROLLER_1
+      - DIAMOND_ESSENCE_RADIANT_FISHER_1
+      - DIAMOND_ESSENCE_RADIANT_FISHER_10
+      - DIAMOND_ESSENCE_RADIANT_FISHER_2
+      - DIAMOND_ESSENCE_RADIANT_FISHER_3
+      - DIAMOND_ESSENCE_RADIANT_FISHER_4
+      - DIAMOND_ESSENCE_RADIANT_FISHER_5
+      - DIAMOND_ESSENCE_RADIANT_FISHER_6
+      - DIAMOND_ESSENCE_RADIANT_FISHER_7
+      - DIAMOND_ESSENCE_RADIANT_FISHER_8
+      - DIAMOND_ESSENCE_RADIANT_FISHER_9
+      - DIAMOND_ESSENCE_RETURN_TO_SENDER_1
+      - DIAMOND_ESSENCE_RETURN_TO_SENDER_10
+      - DIAMOND_ESSENCE_RETURN_TO_SENDER_2
+      - DIAMOND_ESSENCE_RETURN_TO_SENDER_3
+      - DIAMOND_ESSENCE_RETURN_TO_SENDER_4
+      - DIAMOND_ESSENCE_RETURN_TO_SENDER_5
+      - DIAMOND_ESSENCE_RETURN_TO_SENDER_6
+      - DIAMOND_ESSENCE_RETURN_TO_SENDER_7
+      - DIAMOND_ESSENCE_RETURN_TO_SENDER_8
+      - DIAMOND_ESSENCE_RETURN_TO_SENDER_9
+      - DIAMOND_ESSENCE_RHINESTONE_INFUSION_1
+      - DIAMOND_ESSENCE_RHINESTONE_INFUSION_10
+      - DIAMOND_ESSENCE_RHINESTONE_INFUSION_2
+      - DIAMOND_ESSENCE_RHINESTONE_INFUSION_3
+      - DIAMOND_ESSENCE_RHINESTONE_INFUSION_4
+      - DIAMOND_ESSENCE_RHINESTONE_INFUSION_5
+      - DIAMOND_ESSENCE_RHINESTONE_INFUSION_6
+      - DIAMOND_ESSENCE_RHINESTONE_INFUSION_7
+      - DIAMOND_ESSENCE_RHINESTONE_INFUSION_8
+      - DIAMOND_ESSENCE_RHINESTONE_INFUSION_9
+      - DIAMOND_ESSENCE_UNDER_PRESSURE_1
+      - DIAMOND_ESSENCE_UNDER_PRESSURE_2
+      - DIAMOND_ESSENCE_UNDER_PRESSURE_3
+      - DIAMOND_ESSENCE_UNDER_PRESSURE_4
+      - DIAMOND_ESSENCE_UNDER_PRESSURE_5
+      - DOJO_BELT_BLACK
+      - DOJO_BELT_BLUE
+      - DOJO_BELT_BROWN
+      - DOJO_BELT_GREEN
+      - DOJO_BELT_WHITE
+      - DOJO_BELT_YELLOW
+      - DOLPHIN_MILESTONE_COMMON
+      - DOLPHIN_MILESTONE_EPIC
+      - DOLPHIN_MILESTONE_LEGENDARY
+      - DOLPHIN_MILESTONE_RARE
+      - DOLPHIN_MILESTONE_UNCOMMON
+      - DRAGON_ESSENCE_COMBAT_WISDOM_IN_END_1
+      - DRAGON_ESSENCE_COMBAT_WISDOM_IN_END_2
+      - DRAGON_ESSENCE_COMBAT_WISDOM_IN_END_3
+      - DRAGON_ESSENCE_DRAGON_REFORGES_BUFF_1
+      - DRAGON_ESSENCE_DRAGON_REFORGES_BUFF_2
+      - DRAGON_ESSENCE_DRAGON_REFORGES_BUFF_3
+      - DRAGON_ESSENCE_DRAGON_REFORGES_BUFF_4
+      - DRAGON_ESSENCE_DRAGON_REFORGES_BUFF_5
+      - DRAGON_ESSENCE_EDRAG_CD_1
+      - DRAGON_ESSENCE_EDRAG_CD_2
+      - DRAGON_ESSENCE_EDRAG_CD_3
+      - DRAGON_ESSENCE_EDRAG_CD_4
+      - DRAGON_ESSENCE_EDRAG_CD_5
+      - DRAGON_ESSENCE_FERO_VS_DRAGONS_1
+      - DRAGON_ESSENCE_FERO_VS_DRAGONS_2
+      - DRAGON_ESSENCE_FERO_VS_DRAGONS_3
+      - DRAGON_ESSENCE_FERO_VS_DRAGONS_4
+      - DRAGON_ESSENCE_FERO_VS_DRAGONS_5
+      - DRAGON_ESSENCE_FLAT_DAMAGE_VS_ENDER_1
+      - DRAGON_ESSENCE_FLAT_DAMAGE_VS_ENDER_2
+      - DRAGON_ESSENCE_FLAT_DAMAGE_VS_ENDER_3
+      - DRAGON_ESSENCE_FLAT_DAMAGE_VS_ENDER_4
+      - DRAGON_ESSENCE_FLAT_DAMAGE_VS_ENDER_5
+      - DRAGON_ESSENCE_INCREASED_SUP_CHANCES_1
+      - DRAGON_ESSENCE_INC_ZEALOTS_ODDS_1
+      - DRAGON_ESSENCE_INC_ZEALOTS_ODDS_2
+      - DRAGON_ESSENCE_INC_ZEALOTS_ODDS_3
+      - DRAGON_ESSENCE_INC_ZEALOTS_ODDS_4
+      - DRAGON_ESSENCE_INC_ZEALOTS_ODDS_5
+      - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_1
+      - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_10
+      - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_2
+      - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_3
+      - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_4
+      - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_5
+      - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_6
+      - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_7
+      - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_8
+      - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_9
+      - DRAGON_ESSENCE_UNBRIDLED_RAGE_1
+      - DRAGON_ESSENCE_UNBRIDLED_RAGE_2
+      - DRAGON_ESSENCE_UNBRIDLED_RAGE_3
+      - DRAGON_ESSENCE_UNBRIDLED_RAGE_4
+      - DRAGON_ESSENCE_UNBRIDLED_RAGE_5
+      - FARMING_CONTEST_CACTUS
+      - FARMING_CONTEST_CARROT_ITEM
+      - FARMING_CONTEST_INK_SACK:3
+      - FARMING_CONTEST_MELON
+      - FARMING_CONTEST_MUSHROOM_COLLECTION
+      - FARMING_CONTEST_NETHER_STALK
+      - FARMING_CONTEST_POTATO_ITEM
+      - FARMING_CONTEST_PUMPKIN
+      - FARMING_CONTEST_SUGAR_CANE
+      - FARMING_CONTEST_WHEAT
+      - FAST_TRAVEL_BARN
+      - FAST_TRAVEL_BAYOU
+      - FAST_TRAVEL_CRYSTAL_HOLLOWS
+      - FAST_TRAVEL_DEEP
+      - FAST_TRAVEL_DWARVEN_BASE_CAMP
+      - FAST_TRAVEL_DWARVEN_FORGE
+      - FAST_TRAVEL_DWARVEN_MINES
+      - FAST_TRAVEL_END
+      - FAST_TRAVEL_GOLD
+      - FAST_TRAVEL_MUSEUM
+      - FAST_TRAVEL_MUSHROOM
+      - FAST_TRAVEL_NETHER_FORTRESS
+      - FAST_TRAVEL_PARK
+      - FAST_TRAVEL_SPIDER_DEN
+      - FAST_TRAVEL_THE_RIFT
+      - FAST_TRAVEL_TRAPPERS_DEN
+      - FAST_TRAVEL_WIZARD_TOWER
+      - FISHING_FESTIVAL_DENTURE_COLLECTOR_1
+      - FISHING_FESTIVAL_DENTURE_COLLECTOR_2
+      - FISHING_FESTIVAL_DENTURE_COLLECTOR_3
+      - FISHING_FESTIVAL_ELASMOBRANCHII_AFFINITY_1
+      - FISHING_FESTIVAL_ELASMOBRANCHII_AFFINITY_2
+      - FISHING_FESTIVAL_FISHING_PRODIGY_1
+      - FISHING_FESTIVAL_FISHING_PRODIGY_2
+      - FISHING_FESTIVAL_FISHING_PRODIGY_3
+      - FISHING_FESTIVAL_FISHING_PRODIGY_4
+      - FISHING_FESTIVAL_FISHING_PRODIGY_5
+      - FISHING_FESTIVAL_SHARK_SONAR_1
+      - FISHING_FESTIVAL_SHARK_SONAR_2
+      - FISHING_FESTIVAL_SHARK_SONAR_3
+      - FISHING_FESTIVAL_SHARK_SONAR_4
+      - FISHING_FESTIVAL_SHARK_SONAR_5
+      - GOLD_ESSENCE_DWARVEN_TRAINING_1
+      - GOLD_ESSENCE_DWARVEN_TRAINING_2
+      - GOLD_ESSENCE_DWARVEN_TRAINING_3
+      - GOLD_ESSENCE_EAGER_MINER_1
+      - GOLD_ESSENCE_EAGER_MINER_10
+      - GOLD_ESSENCE_EAGER_MINER_2
+      - GOLD_ESSENCE_EAGER_MINER_3
+      - GOLD_ESSENCE_EAGER_MINER_4
+      - GOLD_ESSENCE_EAGER_MINER_5
+      - GOLD_ESSENCE_EAGER_MINER_6
+      - GOLD_ESSENCE_EAGER_MINER_7
+      - GOLD_ESSENCE_EAGER_MINER_8
+      - GOLD_ESSENCE_EAGER_MINER_9
+      - GOLD_ESSENCE_HEART_OF_GOLD_1
+      - GOLD_ESSENCE_HEART_OF_GOLD_2
+      - GOLD_ESSENCE_HEART_OF_GOLD_3
+      - GOLD_ESSENCE_HEART_OF_GOLD_4
+      - GOLD_ESSENCE_HEART_OF_GOLD_5
+      - GOLD_ESSENCE_MIDAS_LURE_1
+      - GOLD_ESSENCE_MIDAS_LURE_10
+      - GOLD_ESSENCE_MIDAS_LURE_2
+      - GOLD_ESSENCE_MIDAS_LURE_3
+      - GOLD_ESSENCE_MIDAS_LURE_4
+      - GOLD_ESSENCE_MIDAS_LURE_5
+      - GOLD_ESSENCE_MIDAS_LURE_6
+      - GOLD_ESSENCE_MIDAS_LURE_7
+      - GOLD_ESSENCE_MIDAS_LURE_8
+      - GOLD_ESSENCE_MIDAS_LURE_9
+      - GOLD_ESSENCE_TREASURES_OF_THE_EARTH_1
+      - GOLD_ESSENCE_TREASURES_OF_THE_EARTH_2
+      - GOLD_ESSENCE_TREASURES_OF_THE_EARTH_3
+      - GOLD_ESSENCE_TREASURES_OF_THE_EARTH_4
+      - GOLD_ESSENCE_TREASURES_OF_THE_EARTH_5
+      - GOLD_ESSENCE_UNBREAKING_1
+      - GOLD_ESSENCE_UNBREAKING_2
+      - GOLD_ESSENCE_UNBREAKING_3
+      - GOLD_ESSENCE_UNBREAKING_4
+      - GOLD_ESSENCE_UNBREAKING_5
+      - ICE_ESSENCE_COLD_EFFICIENCY_1
+      - ICE_ESSENCE_COLD_EFFICIENCY_2
+      - ICE_ESSENCE_COLD_EFFICIENCY_3
+      - ICE_ESSENCE_COLD_EFFICIENCY_4
+      - ICE_ESSENCE_COLD_EFFICIENCY_5
+      - ICE_ESSENCE_COOLED_FORGES_1
+      - ICE_ESSENCE_COOLED_FORGES_2
+      - ICE_ESSENCE_COOLED_FORGES_3
+      - ICE_ESSENCE_COOLED_FORGES_4
+      - ICE_ESSENCE_COOLED_FORGES_5
+      - ICE_ESSENCE_DRAKE_PIPER_1
+      - ICE_ESSENCE_FROZEN_SKIN_1
+      - ICE_ESSENCE_FROZEN_SKIN_2
+      - ICE_ESSENCE_FROZEN_SKIN_3
+      - ICE_ESSENCE_FROZEN_SKIN_4
+      - ICE_ESSENCE_FROZEN_SKIN_5
+      - ICE_ESSENCE_SEASON_OF_JOY_1
+      - ICE_ESSENCE_SEASON_OF_JOY_10
+      - ICE_ESSENCE_SEASON_OF_JOY_2
+      - ICE_ESSENCE_SEASON_OF_JOY_3
+      - ICE_ESSENCE_SEASON_OF_JOY_4
+      - ICE_ESSENCE_SEASON_OF_JOY_5
+      - ICE_ESSENCE_SEASON_OF_JOY_6
+      - ICE_ESSENCE_SEASON_OF_JOY_7
+      - ICE_ESSENCE_SEASON_OF_JOY_8
+      - ICE_ESSENCE_SEASON_OF_JOY_9
+      - KILL_ARACHNE_TIER_1
+      - KILL_ARACHNE_TIER_2
+      - KILL_KUUDRA_BURNING
+      - KILL_KUUDRA_FIERY
+      - KILL_KUUDRA_HOT
+      - KILL_KUUDRA_INFERNAL
+      - KILL_KUUDRA_NONE
+      - KILL_OLD_DRAGON
+      - KILL_PROTECTOR_DRAGON
+      - KILL_STRONG_DRAGON
+      - KILL_SUPERIOR_DRAGON
+      - KILL_UNSTABLE_DRAGON
+      - KILL_WISE_DRAGON
+      - KILL_YOUNG_DRAGON
+      - MAGES_FRIENDLY
+      - MAGES_HERO
+      - MAGES_HONORED
+      - MAGES_TRUSTED
+      - NATIONAL_MINING_MONTH_FORTUNATE_FESTIVITY_1
+      - NATIONAL_MINING_MONTH_FORTUNATE_FESTIVITY_2
+      - NATIONAL_MINING_MONTH_FORTUNATE_FESTIVITY_3
+      - NATIONAL_MINING_MONTH_FORTUNATE_FESTIVITY_4
+      - NATIONAL_MINING_MONTH_FORTUNATE_FESTIVITY_5
+      - NATIONAL_MINING_MONTH_POWDER_HOARDER_1
+      - NATIONAL_MINING_MONTH_POWDER_HOARDER_2
+      - NATIONAL_MINING_MONTH_POWDER_HOARDER_3
+      - NATIONAL_MINING_MONTH_REFINED_MIND_1
+      - NATIONAL_MINING_MONTH_REFINED_MIND_2
+      - NATIONAL_MINING_MONTH_REFINED_MIND_3
+      - NATIONAL_MINING_MONTH_REFINED_MIND_4
+      - NATIONAL_MINING_MONTH_REFINED_MIND_5
+      - NATIONAL_MINING_MONTH_TITANIUM_TENACITY_1
+      - NATIONAL_MINING_MONTH_TITANIUM_TENACITY_2
+      - OBJECTIVE_APPLY_ENGINE
+      - OBJECTIVE_APPLY_ROD_PART
+      - OBJECTIVE_CLEAN_CROP_PLOT
+      - OBJECTIVE_COMPLETE_THE_CHICKEN_RACE_4
+      - OBJECTIVE_COMPLETE_THE_END_RACE_4
+      - OBJECTIVE_COMPLETE_THE_WOODS_RACE_4
+      - OBJECTIVE_EXPLORE_HUB
+      - OBJECTIVE_EXPLORE_NETHER_ISLAND
+      - OBJECTIVE_EXPLORE_VILLAGE
+      - OBJECTIVE_GIVE_PICKAXE_LAPIS_MINER
+      - OBJECTIVE_GIVE_SAM_COMPOST
+      - OBJECTIVE_GIVE_SAM_WHEAT
+      - OBJECTIVE_GO_TO_BASE_CAMP
+      - OBJECTIVE_HELP_ELLE
+      - OBJECTIVE_INCREASE_FARMING_SKILL_5
+      - OBJECTIVE_INCREASE_FORAGING_SKILL_5
+      - OBJECTIVE_KILL_DANGER_MOBS
+      - OBJECTIVE_MINE_COAL
+      - OBJECTIVE_SERVE_FIRST_CUSTOMER
+      - OBJECTIVE_TALK_TO_BANKER
+      - OBJECTIVE_TALK_TO_ENID_2
+      - OBJECTIVE_TALK_TO_FARMER
+      - OBJECTIVE_TALK_TO_FARMHAND_1
+      - OBJECTIVE_TALK_TO_FISHERMAN_2
+      - OBJECTIVE_TALK_TO_GUBER_5
+      - OBJECTIVE_TALK_TO_GULLIVER_4
+      - OBJECTIVE_TALK_TO_GUSTAVE_5
+      - OBJECTIVE_TALK_TO_HATTIE_2
+      - OBJECTIVE_TALK_TO_LAZY_MINER
+      - OBJECTIVE_TALK_TO_LIBRARIAN
+      - OBJECTIVE_TALK_TO_LUMBERJACK
+      - OBJECTIVE_TALK_TO_REDSTONE_MINER_6
+      - PERSONAL_BANK_ONE
+      - PERSONAL_BANK_THREE
+      - PERSONAL_BANK_TWO
+      - ROCK_MILESTONE_COMMON
+      - ROCK_MILESTONE_EPIC
+      - ROCK_MILESTONE_LEGENDARY
+      - ROCK_MILESTONE_RARE
+      - ROCK_MILESTONE_UNCOMMON
+      - SONG_AMAZING_GRACE_100
+      - SONG_AMAZING_GRACE_50
+      - SONG_AMAZING_GRACE_70
+      - SONG_AMAZING_GRACE_90
+      - SONG_BRAHMS_100
+      - SONG_BRAHMS_50
+      - SONG_BRAHMS_70
+      - SONG_BRAHMS_90
+      - SONG_FIRE_AND_FLAMES_100
+      - SONG_FIRE_AND_FLAMES_50
+      - SONG_FIRE_AND_FLAMES_70
+      - SONG_FIRE_AND_FLAMES_90
+      - SONG_FRERE_JACQUES_100
+      - SONG_FRERE_JACQUES_50
+      - SONG_FRERE_JACQUES_70
+      - SONG_FRERE_JACQUES_90
+      - SONG_GREENSLEEVES_100
+      - SONG_GREENSLEEVES_50
+      - SONG_GREENSLEEVES_70
+      - SONG_GREENSLEEVES_90
+      - SONG_HAPPY_BIRTHDAY_100
+      - SONG_HAPPY_BIRTHDAY_50
+      - SONG_HAPPY_BIRTHDAY_70
+      - SONG_HAPPY_BIRTHDAY_90
+      - SONG_HYMN_JOY_100
+      - SONG_HYMN_JOY_50
+      - SONG_HYMN_JOY_70
+      - SONG_HYMN_JOY_90
+      - SONG_JEOPARDY_100
+      - SONG_JEOPARDY_50
+      - SONG_JEOPARDY_70
+      - SONG_JEOPARDY_90
+      - SONG_JOY_WORLD_100
+      - SONG_JOY_WORLD_50
+      - SONG_JOY_WORLD_70
+      - SONG_JOY_WORLD_90
+      - SONG_MINUET_100
+      - SONG_MINUET_50
+      - SONG_MINUET_70
+      - SONG_MINUET_90
+      - SONG_PACHELBEL_100
+      - SONG_PACHELBEL_50
+      - SONG_PACHELBEL_70
+      - SONG_PACHELBEL_90
+      - SONG_PURE_IMAGINATION_100
+      - SONG_PURE_IMAGINATION_50
+      - SONG_PURE_IMAGINATION_70
+      - SONG_PURE_IMAGINATION_90
+      - SONG_VIE_EN_ROSE_100
+      - SONG_VIE_EN_ROSE_50
+      - SONG_VIE_EN_ROSE_70
+      - SONG_VIE_EN_ROSE_90
+      - SPIDER_ESSENCE_BANE_1
+      - SPIDER_ESSENCE_BANE_2
+      - SPIDER_ESSENCE_BANE_3
+      - SPIDER_ESSENCE_BANE_4
+      - SPIDER_ESSENCE_BANE_5
+      - SPIDER_ESSENCE_EMPOWERED_AGILITY_1
+      - SPIDER_ESSENCE_EMPOWERED_AGILITY_10
+      - SPIDER_ESSENCE_EMPOWERED_AGILITY_2
+      - SPIDER_ESSENCE_EMPOWERED_AGILITY_3
+      - SPIDER_ESSENCE_EMPOWERED_AGILITY_4
+      - SPIDER_ESSENCE_EMPOWERED_AGILITY_5
+      - SPIDER_ESSENCE_EMPOWERED_AGILITY_6
+      - SPIDER_ESSENCE_EMPOWERED_AGILITY_7
+      - SPIDER_ESSENCE_EMPOWERED_AGILITY_8
+      - SPIDER_ESSENCE_EMPOWERED_AGILITY_9
+      - SPIDER_ESSENCE_SPIDER_TRAINING_1
+      - SPIDER_ESSENCE_SPIDER_TRAINING_2
+      - SPIDER_ESSENCE_SPIDER_TRAINING_3
+      - SPIDER_ESSENCE_TOXOPHILITE_1
+      - SPIDER_ESSENCE_TOXOPHILITE_2
+      - SPIDER_ESSENCE_TOXOPHILITE_3
+      - SPIDER_ESSENCE_TOXOPHILITE_4
+      - SPIDER_ESSENCE_TOXOPHILITE_5
+      - SPIDER_ESSENCE_VERMIN_CONTROL_1
+      - SPIDER_ESSENCE_VERMIN_CONTROL_2
+      - SPIDER_ESSENCE_VERMIN_CONTROL_3
+      - SPIDER_ESSENCE_VERMIN_CONTROL_4
+      - SPIDER_ESSENCE_VERMIN_CONTROL_5
+      - SPOOKY_FESTIVAL_CANDY_SCAVENGER_1
+      - SPOOKY_FESTIVAL_CANDY_SCAVENGER_2
+      - SPOOKY_FESTIVAL_CANDY_SCAVENGER_3
+      - SPOOKY_FESTIVAL_CANDY_SCAVENGER_4
+      - SPOOKY_FESTIVAL_CANDY_SCAVENGER_5
+      - SPOOKY_FESTIVAL_DIAMOND
+      - SPOOKY_FESTIVAL_EMERALD
+      - SPOOKY_FESTIVAL_GOLD
+      - SPOOKY_FESTIVAL_IRON
+      - SPOOKY_FESTIVAL_PURPLE_VOGUE_1
+      - SPOOKY_FESTIVAL_PURPLE_VOGUE_2
+      - SPOOKY_FESTIVAL_PURPLE_VOGUE_3
+      - SPOOKY_FESTIVAL_SPOOKY_HOOK_1
+      - SPOOKY_FESTIVAL_SPOOKY_HOOK_2
+      - SPOOKY_FESTIVAL_SPOOKY_HOOK_3
+      - SPOOKY_FESTIVAL_SPOOKY_HOOK_4
+      - SPOOKY_FESTIVAL_SPOOKY_HOOK_5
+      - SPOOKY_FESTIVAL_STONE
+      - SPOOKY_FESTIVAL_TRICK_OR_TREAT_ENTHUSIAST_1
+      - SPOOKY_FESTIVAL_TRICK_OR_TREAT_ENTHUSIAST_2
+      - SPOOKY_FESTIVAL_WOOD
+      - TROPHY_BLOBFISH_BRONZE
+      - TROPHY_BLOBFISH_DIAMOND
+      - TROPHY_BLOBFISH_GOLD
+      - TROPHY_BLOBFISH_SILVER
+      - TROPHY_FLYFISH_BRONZE
+      - TROPHY_FLYFISH_DIAMOND
+      - TROPHY_FLYFISH_GOLD
+      - TROPHY_FLYFISH_SILVER
+      - TROPHY_GOLDEN_FISH_BRONZE
+      - TROPHY_GOLDEN_FISH_DIAMOND
+      - TROPHY_GOLDEN_FISH_GOLD
+      - TROPHY_GOLDEN_FISH_SILVER
+      - TROPHY_GUSHER_BRONZE
+      - TROPHY_GUSHER_DIAMOND
+      - TROPHY_GUSHER_GOLD
+      - TROPHY_GUSHER_SILVER
+      - TROPHY_KARATE_FISH_BRONZE
+      - TROPHY_KARATE_FISH_DIAMOND
+      - TROPHY_KARATE_FISH_GOLD
+      - TROPHY_KARATE_FISH_SILVER
+      - TROPHY_LAVA_HORSE_BRONZE
+      - TROPHY_LAVA_HORSE_DIAMOND
+      - TROPHY_LAVA_HORSE_GOLD
+      - TROPHY_LAVA_HORSE_SILVER
+      - TROPHY_MANA_RAY_BRONZE
+      - TROPHY_MANA_RAY_DIAMOND
+      - TROPHY_MANA_RAY_GOLD
+      - TROPHY_MANA_RAY_SILVER
+      - TROPHY_MOLDFIN_BRONZE
+      - TROPHY_MOLDFIN_DIAMOND
+      - TROPHY_MOLDFIN_GOLD
+      - TROPHY_MOLDFIN_SILVER
+      - TROPHY_OBFUSCATED_FISH_1_BRONZE
+      - TROPHY_OBFUSCATED_FISH_1_DIAMOND
+      - TROPHY_OBFUSCATED_FISH_1_GOLD
+      - TROPHY_OBFUSCATED_FISH_1_SILVER
+      - TROPHY_OBFUSCATED_FISH_2_BRONZE
+      - TROPHY_OBFUSCATED_FISH_2_DIAMOND
+      - TROPHY_OBFUSCATED_FISH_2_GOLD
+      - TROPHY_OBFUSCATED_FISH_2_SILVER
+      - TROPHY_OBFUSCATED_FISH_3_BRONZE
+      - TROPHY_OBFUSCATED_FISH_3_DIAMOND
+      - TROPHY_OBFUSCATED_FISH_3_GOLD
+      - TROPHY_OBFUSCATED_FISH_3_SILVER
+      - TROPHY_SKELETON_FISH_BRONZE
+      - TROPHY_SKELETON_FISH_DIAMOND
+      - TROPHY_SKELETON_FISH_GOLD
+      - TROPHY_SKELETON_FISH_SILVER
+      - TROPHY_SLUGFISH_BRONZE
+      - TROPHY_SLUGFISH_DIAMOND
+      - TROPHY_SLUGFISH_GOLD
+      - TROPHY_SLUGFISH_SILVER
+      - TROPHY_SOUL_FISH_BRONZE
+      - TROPHY_SOUL_FISH_DIAMOND
+      - TROPHY_SOUL_FISH_GOLD
+      - TROPHY_SOUL_FISH_SILVER
+      - TROPHY_STEAMING_HOT_FLOUNDER_BRONZE
+      - TROPHY_STEAMING_HOT_FLOUNDER_DIAMOND
+      - TROPHY_STEAMING_HOT_FLOUNDER_GOLD
+      - TROPHY_STEAMING_HOT_FLOUNDER_SILVER
+      - TROPHY_SULPHUR_SKITTER_BRONZE
+      - TROPHY_SULPHUR_SKITTER_DIAMOND
+      - TROPHY_SULPHUR_SKITTER_GOLD
+      - TROPHY_SULPHUR_SKITTER_SILVER
+      - TROPHY_VANILLE_BRONZE
+      - TROPHY_VANILLE_DIAMOND
+      - TROPHY_VANILLE_GOLD
+      - TROPHY_VANILLE_SILVER
+      - TROPHY_VOLCANIC_STONEFISH_BRONZE
+      - TROPHY_VOLCANIC_STONEFISH_DIAMOND
+      - TROPHY_VOLCANIC_STONEFISH_GOLD
+      - TROPHY_VOLCANIC_STONEFISH_SILVER
+      - UNDEAD_ESSENCE_CATACOMBS_BOSS_LUCK_1
+      - UNDEAD_ESSENCE_CATACOMBS_BOSS_LUCK_2
+      - UNDEAD_ESSENCE_CATACOMBS_BOSS_LUCK_3
+      - UNDEAD_ESSENCE_CATACOMBS_BOSS_LUCK_4
+      - UNDEAD_ESSENCE_CATACOMBS_CRIT_DAMAGE_1
+      - UNDEAD_ESSENCE_CATACOMBS_CRIT_DAMAGE_2
+      - UNDEAD_ESSENCE_CATACOMBS_CRIT_DAMAGE_3
+      - UNDEAD_ESSENCE_CATACOMBS_CRIT_DAMAGE_4
+      - UNDEAD_ESSENCE_CATACOMBS_CRIT_DAMAGE_5
+      - UNDEAD_ESSENCE_CATACOMBS_DEFENSE_1
+      - UNDEAD_ESSENCE_CATACOMBS_DEFENSE_2
+      - UNDEAD_ESSENCE_CATACOMBS_DEFENSE_3
+      - UNDEAD_ESSENCE_CATACOMBS_DEFENSE_4
+      - UNDEAD_ESSENCE_CATACOMBS_DEFENSE_5
+      - UNDEAD_ESSENCE_CATACOMBS_HEALTH_1
+      - UNDEAD_ESSENCE_CATACOMBS_HEALTH_2
+      - UNDEAD_ESSENCE_CATACOMBS_HEALTH_3
+      - UNDEAD_ESSENCE_CATACOMBS_HEALTH_4
+      - UNDEAD_ESSENCE_CATACOMBS_HEALTH_5
+      - UNDEAD_ESSENCE_CATACOMBS_INTELLIGENCE_1
+      - UNDEAD_ESSENCE_CATACOMBS_INTELLIGENCE_2
+      - UNDEAD_ESSENCE_CATACOMBS_INTELLIGENCE_3
+      - UNDEAD_ESSENCE_CATACOMBS_INTELLIGENCE_4
+      - UNDEAD_ESSENCE_CATACOMBS_INTELLIGENCE_5
+      - UNDEAD_ESSENCE_CATACOMBS_LOOTING_1
+      - UNDEAD_ESSENCE_CATACOMBS_LOOTING_2
+      - UNDEAD_ESSENCE_CATACOMBS_LOOTING_3
+      - UNDEAD_ESSENCE_CATACOMBS_LOOTING_4
+      - UNDEAD_ESSENCE_CATACOMBS_LOOTING_5
+      - UNDEAD_ESSENCE_CATACOMBS_STRENGTH_1
+      - UNDEAD_ESSENCE_CATACOMBS_STRENGTH_2
+      - UNDEAD_ESSENCE_CATACOMBS_STRENGTH_3
+      - UNDEAD_ESSENCE_CATACOMBS_STRENGTH_4
+      - UNDEAD_ESSENCE_CATACOMBS_STRENGTH_5
+      - UNDEAD_ESSENCE_REVIVE_STONE_1
+      - UPGRADE_COINS_ALLOWANCE_1
+      - UPGRADE_COINS_ALLOWANCE_2
+      - UPGRADE_COINS_ALLOWANCE_3
+      - UPGRADE_COINS_ALLOWANCE_4
+      - UPGRADE_COINS_ALLOWANCE_5
+      - UPGRADE_GUESTS_COUNT_1
+      - UPGRADE_ISLAND_SIZE_1
+      - UPGRADE_MINION_SLOTS_1
+      - UPGRADE_MINION_SLOTS_2
+      - UPGRADE_MINION_SLOTS_3
+      - UPGRADE_MINION_SLOTS_4
+      - UPGRADE_MINION_SLOTS_5
+      - WINTER_ICY_HOOK_1
+      - WINTER_ICY_HOOK_2
+      - WINTER_ICY_HOOK_3
+      - WINTER_ICY_HOOK_4
+      - WINTER_ICY_HOOK_5
+      - WINTER_PRESENT_CONNOISSEUR_1
+      - WINTER_PRESENT_CONNOISSEUR_2
+      - WINTER_PRESENT_CONNOISSEUR_3
+      - WINTER_PRESENT_CONNOISSEUR_4
+      - WINTER_PRESENT_CONNOISSEUR_5
+      - WINTER_PROFESSIONAL_GIFTER_1
+      - WINTER_PROFESSIONAL_GIFTER_2
+      - WINTER_RED_FAD_1
+      - WINTER_RED_FAD_2
+      - WINTER_RED_FAD_3
+      - WITHER_ESSENCE_FORBIDDEN_BLESSING_1
+      - WITHER_ESSENCE_FORBIDDEN_BLESSING_10
+      - WITHER_ESSENCE_FORBIDDEN_BLESSING_2
+      - WITHER_ESSENCE_FORBIDDEN_BLESSING_3
+      - WITHER_ESSENCE_FORBIDDEN_BLESSING_4
+      - WITHER_ESSENCE_FORBIDDEN_BLESSING_5
+      - WITHER_ESSENCE_FORBIDDEN_BLESSING_6
+      - WITHER_ESSENCE_FORBIDDEN_BLESSING_7
+      - WITHER_ESSENCE_FORBIDDEN_BLESSING_8
+      - WITHER_ESSENCE_FORBIDDEN_BLESSING_9
+      - WITHER_ESSENCE_PERMANENT_DEFENSE_1
+      - WITHER_ESSENCE_PERMANENT_DEFENSE_2
+      - WITHER_ESSENCE_PERMANENT_DEFENSE_3
+      - WITHER_ESSENCE_PERMANENT_DEFENSE_4
+      - WITHER_ESSENCE_PERMANENT_DEFENSE_5
+      - WITHER_ESSENCE_PERMANENT_HEALTH_1
+      - WITHER_ESSENCE_PERMANENT_HEALTH_2
+      - WITHER_ESSENCE_PERMANENT_HEALTH_3
+      - WITHER_ESSENCE_PERMANENT_HEALTH_4
+      - WITHER_ESSENCE_PERMANENT_HEALTH_5
+      - WITHER_ESSENCE_PERMANENT_INTELLIGENCE_1
+      - WITHER_ESSENCE_PERMANENT_INTELLIGENCE_2
+      - WITHER_ESSENCE_PERMANENT_INTELLIGENCE_3
+      - WITHER_ESSENCE_PERMANENT_INTELLIGENCE_4
+      - WITHER_ESSENCE_PERMANENT_INTELLIGENCE_5
+      - WITHER_ESSENCE_PERMANENT_SPEED_1
+      - WITHER_ESSENCE_PERMANENT_SPEED_2
+      - WITHER_ESSENCE_PERMANENT_STRENGTH_1
+      - WITHER_ESSENCE_PERMANENT_STRENGTH_2
+      - WITHER_ESSENCE_PERMANENT_STRENGTH_3
+      - WITHER_ESSENCE_PERMANENT_STRENGTH_4
+      - WITHER_ESSENCE_PERMANENT_STRENGTH_5
+      type: string
     _v2_resources_skyblock_bingo_get_200_response_goals_inner:
       example:
         tiers:
@@ -3915,6 +4769,14 @@ components:
       - id
       - name
       type: object
+    _v2_resources_skyblock_bingo_get_200_response_modifier:
+      description: The modifier for the current bingo event
+      enum:
+      - EXTREME
+      - NORMAL
+      - SECRET
+      example: NORMAL
+      type: string
     _v2_resources_skyblock_bingo_get_200_response:
       example:
         lastUpdated: 5
@@ -3967,13 +4829,7 @@ components:
             was updated
           type: integer
         modifier:
-          description: The modifier for the current bingo event
-          enum:
-          - EXTREME
-          - NORMAL
-          - SECRET
-          example: NORMAL
-          type: string
+          $ref: '#/components/schemas/_v2_resources_skyblock_bingo_get_200_response_modifier'
         name:
           description: The display name for the current bingo event
           example: March 2024
@@ -4627,6 +5483,31 @@ components:
                   key:
                     data: data
                     type: 9
+              leveling:
+                category_expanded: true
+                highest_pet_score: 8
+                mining_fiesta_ores_mined: 7
+                bop_bonus: bop_bonus
+                completions:
+                  REAPER_PEPPERS: 3
+                  NUCLEUS_RUNS: 5
+                  REFINED_DARK_CACAO_TRUFFLE: 1
+                completed_tasks:
+                - ABIPHONE_alchemist
+                - ABIPHONE_alchemist
+                experience: 5
+                emblem_unlocks:
+                - ALCHEMY_BREW
+                - ALCHEMY_BREW
+                claimed_talisman: true
+                last_viewed_tasks:
+                - null
+                - null
+                migrated_completions_2: true
+                selected_symbol: null
+                fishing_festival_sharks_killed: 3
+                migrated: true
+                migrated_completions: true
               item_data:
                 soulflow: 0
                 teleporter_pill_consumed: true
@@ -4657,17 +5538,17 @@ components:
               rift:
                 wizard_tower:
                   wizard_quest_step: 2
-                  crumbs_laid_out: 9
+                  crumbs_laid_out: 8
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 5
+                  claimed_bonus_index: 2
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 5
+                  completed_step: 2
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -4696,10 +5577,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 1.9626702727164813
+                    exp: 0.4008378390304357
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 3
+                    candyUsed: 8
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -4708,22 +5589,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 3
-                    step_index: 2
-                    step_index_pt2: 4
+                    step_index_pt3: 6
+                    step_index: 7
+                    step_index_pt2: 6
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 8
-                    hay_eaten: 2
+                    stage: 2
+                    hay_eaten: 9
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 5
+                    step_index: 9
                   lonely:
-                    seconds_sitting: 0
+                    seconds_sitting: 7
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -4738,14 +5619,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 3
+                  elise_step: 4
                   secured_trophies:
-                  - visits: 7
+                  - visits: 5
                     type: type
-                    timestamp: 8
-                  - visits: 7
+                    timestamp: 3
+                  - visits: 5
                     type: type
-                    timestamp: 8
+                    timestamp: 3
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -5160,6 +6041,31 @@ components:
                   key:
                     data: data
                     type: 9
+              leveling:
+                category_expanded: true
+                highest_pet_score: 8
+                mining_fiesta_ores_mined: 7
+                bop_bonus: bop_bonus
+                completions:
+                  REAPER_PEPPERS: 3
+                  NUCLEUS_RUNS: 5
+                  REFINED_DARK_CACAO_TRUFFLE: 1
+                completed_tasks:
+                - ABIPHONE_alchemist
+                - ABIPHONE_alchemist
+                experience: 5
+                emblem_unlocks:
+                - ALCHEMY_BREW
+                - ALCHEMY_BREW
+                claimed_talisman: true
+                last_viewed_tasks:
+                - null
+                - null
+                migrated_completions_2: true
+                selected_symbol: null
+                fishing_festival_sharks_killed: 3
+                migrated: true
+                migrated_completions: true
               item_data:
                 soulflow: 0
                 teleporter_pill_consumed: true
@@ -5190,17 +6096,17 @@ components:
               rift:
                 wizard_tower:
                   wizard_quest_step: 2
-                  crumbs_laid_out: 9
+                  crumbs_laid_out: 8
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 5
+                  claimed_bonus_index: 2
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 5
+                  completed_step: 2
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -5229,10 +6135,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 1.9626702727164813
+                    exp: 0.4008378390304357
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 3
+                    candyUsed: 8
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -5241,22 +6147,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 3
-                    step_index: 2
-                    step_index_pt2: 4
+                    step_index_pt3: 6
+                    step_index: 7
+                    step_index_pt2: 6
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 8
-                    hay_eaten: 2
+                    stage: 2
+                    hay_eaten: 9
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 5
+                    step_index: 9
                   lonely:
-                    seconds_sitting: 0
+                    seconds_sitting: 7
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -5271,14 +6177,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 3
+                  elise_step: 4
                   secured_trophies:
-                  - visits: 7
+                  - visits: 5
                     type: type
-                    timestamp: 8
-                  - visits: 7
+                    timestamp: 3
+                  - visits: 5
                     type: type
-                    timestamp: 8
+                    timestamp: 3
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -5683,6 +6589,31 @@ components:
                   key:
                     data: data
                     type: 9
+              leveling:
+                category_expanded: true
+                highest_pet_score: 8
+                mining_fiesta_ores_mined: 7
+                bop_bonus: bop_bonus
+                completions:
+                  REAPER_PEPPERS: 3
+                  NUCLEUS_RUNS: 5
+                  REFINED_DARK_CACAO_TRUFFLE: 1
+                completed_tasks:
+                - ABIPHONE_alchemist
+                - ABIPHONE_alchemist
+                experience: 5
+                emblem_unlocks:
+                - ALCHEMY_BREW
+                - ALCHEMY_BREW
+                claimed_talisman: true
+                last_viewed_tasks:
+                - null
+                - null
+                migrated_completions_2: true
+                selected_symbol: null
+                fishing_festival_sharks_killed: 3
+                migrated: true
+                migrated_completions: true
               item_data:
                 soulflow: 0
                 teleporter_pill_consumed: true
@@ -5713,17 +6644,17 @@ components:
               rift:
                 wizard_tower:
                   wizard_quest_step: 2
-                  crumbs_laid_out: 9
+                  crumbs_laid_out: 8
                 enigma:
                   found_souls:
                   - found_souls
                   - found_souls
                   bought_cloak: true
-                  claimed_bonus_index: 5
+                  claimed_bonus_index: 2
                 black_lagoon:
                   received_science_paper: true
                   delivered_science_paper: true
-                  completed_step: 5
+                  completed_step: 2
                   talked_to_edwin: true
                 dead_cats:
                   unlocked_pet: true
@@ -5752,10 +6683,10 @@ components:
                         HEALTH: 20
                       tier: RARE
                     active: true
-                    exp: 1.9626702727164813
+                    exp: 0.4008378390304357
                     type: type
                     uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-                    candyUsed: 3
+                    candyUsed: 8
                     uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
                   found_cats:
                   - found_cats
@@ -5764,22 +6695,22 @@ components:
                   talked_to_jacquelle: true
                 village_plaza:
                   murder:
-                    step_index_pt3: 3
-                    step_index: 2
-                    step_index_pt2: 4
+                    step_index_pt3: 6
+                    step_index: 7
+                    step_index_pt2: 6
                     room_clues:
                     - room_clues
                     - room_clues
                   cowboy:
-                    stage: 8
-                    hay_eaten: 2
+                    stage: 2
+                    hay_eaten: 9
                     rabbit_name: rabbit_name
                   barter_bank: "{}"
                   got_scammed: true
                   seraphine:
-                    step_index: 5
+                    step_index: 9
                   lonely:
-                    seconds_sitting: 0
+                    seconds_sitting: 7
                   barry_center:
                     first_talk_to_barry: true
                     convinced:
@@ -5794,14 +6725,14 @@ components:
                   sent_trophy_dialogues:
                   - sent_trophy_dialogues
                   - sent_trophy_dialogues
-                  elise_step: 3
+                  elise_step: 4
                   secured_trophies:
-                  - visits: 7
+                  - visits: 5
                     type: type
-                    timestamp: 8
-                  - visits: 7
+                    timestamp: 3
+                  - visits: 5
                     type: type
-                    timestamp: 8
+                    timestamp: 3
               player_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
               glacite_player_data:
                 corpses_looted:
@@ -5997,6 +6928,19 @@ components:
             jerry: 1
           type: object
       type: object
+    SkyBlockItem_tier:
+      description: The rarity tier of the item
+      enum:
+      - COMMON
+      - EPIC
+      - LEGENDARY
+      - MYTHIC
+      - RARE
+      - SPECIAL
+      - SUPREME
+      - UNCOMMON
+      - VERY_SPECIAL
+      type: string
     SkyBlockMuseum_special_inner:
       example:
         donated_time: 0
@@ -6007,6 +6951,11 @@ components:
         items:
           type: object
       type: object
+    SkyBlockProfile_banking_transactions_inner_action:
+      enum:
+      - DEPOSIT
+      - WITHDRAW
+      type: string
     SkyBlockProfile_banking_transactions_inner:
       example:
         amount: 6.027456183070403
@@ -6015,10 +6964,7 @@ components:
         timestamp: 1
       properties:
         action:
-          enum:
-          - DEPOSIT
-          - WITHDRAW
-          type: string
+          $ref: '#/components/schemas/SkyBlockProfile_banking_transactions_inner_action'
         amount:
           type: number
         initiator_name:
@@ -6048,6 +6994,13 @@ components:
             $ref: '#/components/schemas/SkyBlockProfile_banking_transactions_inner'
           type: array
       type: object
+    SkyBlockProfile_game_mode:
+      description: "The SkyBlock game mode of the profile, not present if normal mode"
+      enum:
+      - bingo
+      - ironman
+      - island
+      type: string
     SkyBlockProfileMemberCurrenciesEssence_value:
       example:
         current: 4
@@ -6080,9 +7033,9 @@ components:
       type: object
     SkyBlockProfileMemberRiftGallery_secured_trophies_inner:
       example:
-        visits: 7
+        visits: 5
         type: type
-        timestamp: 8
+        timestamp: 3
       properties:
         timestamp:
           type: integer

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Action** | Pointer to **string** |  | [optional] 
+**Action** | Pointer to [**SkyBlockProfileBankingTransactionsInnerAction**](SkyBlockProfileBankingTransactionsInnerAction.md) |  | [optional] 
 **Amount** | Pointer to **float64** |  | [optional] 
 **InitiatorName** | Pointer to **string** |  | [optional] 
 **Timestamp** | Pointer to **int64** |  | [optional] 
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetAction
 
-`func (o *SkyBlockProfileBankingTransactionsInner) GetAction() string`
+`func (o *SkyBlockProfileBankingTransactionsInner) GetAction() SkyBlockProfileBankingTransactionsInnerAction`
 
 GetAction returns the Action field if non-nil, zero value otherwise.
 
 ### GetActionOk
 
-`func (o *SkyBlockProfileBankingTransactionsInner) GetActionOk() (*string, bool)`
+`func (o *SkyBlockProfileBankingTransactionsInner) GetActionOk() (*SkyBlockProfileBankingTransactionsInnerAction, bool)`
 
 GetActionOk returns a tuple with the Action field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAction
 
-`func (o *SkyBlockProfileBankingTransactionsInner) SetAction(v string)`
+`func (o *SkyBlockProfileBankingTransactionsInner) SetAction(v SkyBlockProfileBankingTransactionsInnerAction)`
 
 SetAction sets Action field to given value.
 

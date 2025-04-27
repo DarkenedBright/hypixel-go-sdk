@@ -1,0 +1,2667 @@
+---
+components:
+  responses:
+    DataMissing:
+      content:
+        application/json:
+          schema:
+            properties:
+              cause:
+                example: Missing one or more fields [...]
+                type: string
+              success:
+                example: false
+                type: boolean
+            type: object
+      description: Some data is missing, this is usually a field.
+    InvalidKey:
+      content:
+        application/json:
+          schema:
+            properties:
+              cause:
+                example: Invalid API key
+                type: string
+              success:
+                example: false
+                type: boolean
+            type: object
+      description: Access is forbidden, usually due to an invalid API key being used.
+    InvalidPage:
+      content:
+        application/json:
+          schema:
+            properties:
+              cause:
+                example: Invalid page
+                type: string
+              success:
+                example: false
+                type: boolean
+            type: object
+      description: The page provided is invalid.
+    MalformedData:
+      content:
+        application/json:
+          schema:
+            properties:
+              cause:
+                example: Malformed UUID
+                type: string
+              success:
+                example: false
+                type: boolean
+            type: object
+      description: Some data provided is invalid.
+    MissingPage:
+      content:
+        application/json:
+          schema:
+            properties:
+              cause:
+                example: Page not found
+                type: string
+              success:
+                example: false
+                type: boolean
+            type: object
+      description: The page provided does not exist.
+    NoResult:
+      content:
+        application/json:
+          schema:
+            properties:
+              cause:
+                example: No result was found
+                type: string
+              success:
+                example: false
+                type: boolean
+            type: object
+      description: The request responded with no result.
+    NotPopulated:
+      content:
+        application/json:
+          schema:
+            properties:
+              cause:
+                example: Leaderboard data has not yet been populated
+                type: string
+              success:
+                example: false
+                type: boolean
+            type: object
+      description: The data is not yet populated and should be available shortly
+    RateLimited:
+      content:
+        application/json:
+          schema:
+            properties:
+              cause:
+                example: Key throttle
+                type: string
+              global:
+                description: When this boolean exists and is true, the throttle occurring is a global throttle applied to all users
+                example: true
+                type: boolean
+              success:
+                example: false
+                type: boolean
+              throttle:
+                example: true
+                type: boolean
+            type: object
+      description: A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle.
+  schemas:
+    ActiveBooster:
+      allOf:
+        - $ref: '#/components/schemas/Booster'
+        - properties:
+            stacked:
+              items:
+                description: UUID of the player in a dashed format
+                example: ad8fefaa-8351-454b-b739-a4eaa872173f
+                format: uuid
+                type: string
+              type: array
+          type: object
+    Booster:
+      properties:
+        _id:
+          format: objectid
+          type: string
+        amount:
+          type: integer
+        dateActivated:
+          type: integer
+        gameType:
+          type: integer
+        length:
+          type: integer
+        originalLength:
+          type: integer
+        purchaserUuid:
+          example: ad8fefaa8351454bb739a4eaa872173f
+          format: uuid
+          type: string
+    QueuedBooster:
+      allOf:
+        - $ref: '#/components/schemas/Booster'
+        - properties:
+            stacked:
+              type: boolean
+          type: object
+    SkyBlockEmblem:
+      enum:
+        - ALCHEMY_BREW
+        - ARCHER_MASTER
+        - ARCHER_SPADE
+        - ARC_REACTOR
+        - BADGE
+        - BERSERKER_EXPLOSION
+        - BERSERKER_MASTER
+        - BIOHAZARD
+        - BOXES
+        - BROODMOTHER_STRING
+        - CARPENTRY_HOUSE
+        - CATACOMBS_SWORDS
+        - CENTURY_CELEBRANT
+        - CENTURY_PARTYGOER
+        - CENTURY_RAFFLE_BLUE
+        - CENTURY_RAFFLE_GREEN
+        - CENTURY_RAFFLE_PINK
+        - CENTURY_RAFFLE_RED
+        - CENTURY_RAFFLE_YELLOW
+        - CHOCOLATE_BAR
+        - CLASS_MASTER
+        - COLLECTING_TOP_HAT
+        - COMBAT_EXPLOSION
+        - COMBAT_MASTER
+        - DIAMOND
+        - DIAMOND_CLASS_GRANDMASTER
+        - DIAMOND_JACOBS_CONTEST_COMPLETIONIST
+        - DIAMOND_MINING_HELIX
+        - DIAMOND_TROPHY_KING
+        - DUNGEON_MASTER
+        - DUNGEON_RUNNER
+        - ENCHANTING_MASTER
+        - ENCHANTING_PENCIL
+        - EXTREME_BANKER
+        - FARMING_FLOWER
+        - FARMING_MASTER
+        - FISHING_FISH
+        - FLORETTE
+        - FORAGING_LEAF
+        - GARDENER
+        - GIFT_OF_GIVING
+        - GLOBE
+        - GOLDEN_BROODMOTHER_STRING
+        - GOLDEN_CATACOMBS_SWORDS
+        - GOLDEN_CHILI_PEPPER
+        - GOLDEN_CHOCOLATE_BAR
+        - GOLDEN_CLASS_MASTER
+        - GOLDEN_COLLECTING_TOP_HAT
+        - GOLDEN_FLEUR_DE_LIS
+        - GOLDEN_GARDENER
+        - GOLDEN_INFERNO_RODS
+        - GOLDEN_JACOBS_CONTEST_COMPLETIONIST
+        - GOLDEN_MAGICAL_SIGMA
+        - GOLDEN_MINING_HELIX
+        - GOLDEN_REVENANT_HORROR_BRAIN
+        - GOLDEN_RIFTSTALKER_STRANGE_TIME
+        - GOLDEN_SVEN_SHIELD
+        - GOLDEN_TROPHY_KING
+        - GOLDEN_VOIDGLOOM_RUNE
+        - GREAT_SPOOK
+        - HARP_MASTER
+        - HARP_NOTE
+        - HEALER_MASTER
+        - HEALER_STAFF
+        - HEART
+        - HELMET
+        - HYPIXEL
+        - INFERNO_RODS
+        - JACOBS_CONTEST_COMPLETIONIST
+        - JERRY
+        - KUUDRA_MASTER_SLAYER
+        - KUUDRA_SLAYER
+        - MAGE_LIGHTNING
+        - MAGE_MASTER
+        - MAGICAL_SIGMA
+        - MARKER
+        - MINING_HELIX
+        - MINING_MASTER
+        - MINING_PICKAXE
+        - MUSTACHE
+        - PRISTINE
+        - REVENANT_HORROR_BRAIN
+        - RIFTSTALKER_STRANGE_TIME
+        - RIFT_TIME
+        - SIDEWAYS_SMILEY
+        - SNOWMAN
+        - SOCIAL_MASTER
+        - SOCIAL_STATEMENT
+        - SOULFLOW
+        - SPACESHIP
+        - SPADE
+        - STAR
+        - SVEN_SHIELD
+        - TAMING_CLOVER
+        - TAMING_MASTER
+        - TANK_ANCHOR
+        - TANK_MASTER
+        - TOXIC
+        - TROPHY_KING
+        - ULTRA_BANKER
+        - VOIDGLOOM_RUNE
+        - WARNING
+      type: string
+    SkyBlockFireSale:
+      properties:
+        amount:
+          description: The amount of items available for this sale
+          type: integer
+        end:
+          description: The end time in unix milliseconds for the sale
+          type: integer
+        item_id:
+          description: The SkyBlock item ID for this sale
+          type: string
+        price:
+          description: The price in Gems for this sale
+          type: integer
+        start:
+          description: The start time in unix milliseconds for the sale
+          type: integer
+    SkyBlockGarden:
+      description: Information about a player's SkyBlock garden, the only guaranteed field is the `uuid` field.
+      properties:
+        active_commissions:
+          example:
+            fear_mongerer:
+              extra_rewards:
+                - candy: PURPLE_CANDY
+              position: 5
+              requirement:
+                - amount: 1
+                  item: POLISHED_PUMPKIN
+                  original_amount: 27709
+                  original_item: PUMPKIN
+              status: NOT_STARTED
+            liam:
+              position: 1
+              requirement:
+                - amount: 4
+                  item: MUTANT_NETHER_STALK
+                  original_amount: 93995
+                  original_item: NETHER_STALK
+              status: NOT_STARTED
+            lumberjack:
+              position: 2
+              requirement:
+                - amount: 3
+                  item: ENCHANTED_BAKED_POTATO
+                  original_amount: 81380
+                  original_item: POTATO_ITEM
+              status: NOT_STARTED
+            oringo:
+              position: 3
+              requirement:
+                - amount: 21
+                  item: ENCHANTED_HAY_BLOCK
+                  original_amount: 26798
+                  original_item: WHEAT
+              status: NOT_STARTED
+            rhys:
+              position: 4
+              requirement:
+                - amount: 512
+                  item: JACK_O_LANTERN
+                  original_amount: 512
+                  original_item: JACK_O_LANTERN
+              status: NOT_STARTED
+          type: object
+        commission_data:
+          properties:
+            completed:
+              description: A map of visitor identifier to completed count
+              example:
+                andrew: 2
+                jacob: 1
+                jerry: 1
+              type: object
+            total_completed:
+              type: integer
+            unique_npcs_served:
+              type: integer
+            visits:
+              description: A map of visitor identifier to visit count
+              example:
+                andrew: 3
+                jacob: 2
+                jerry: 1
+              type: object
+          type: object
+        composter_data:
+          example:
+            compost_items: 2
+            compost_units: 0
+            conversion_ticks: 300
+            fuel_units: 17000
+            last_save: 1721039418436
+            organic_matter: 1772.8
+            upgrades:
+              cost_reduction: 25
+              fuel_cap: 22
+              multi_drop: 25
+              organic_matter_cap: 25
+              speed: 25
+          type: object
+        crop_upgrade_levels:
+          example:
+            INK_SACK:3: 3
+            POTATO_ITEM: 2
+            WHEAT: 1
+          type: object
+        garden_experience:
+          type: number
+        resources_collected:
+          description: A map of resource ID to amount collected
+          example:
+            INK_SACK:3: 100
+            POTATO_ITEM: 100
+            WHEAT: 100
+          type: object
+        selected_barn_skin:
+          type: string
+        unlocked_barn_skins:
+          items:
+            type: string
+          type: array
+        unlocked_plots_ids:
+          example:
+            - beginner_1
+            - intermediate_3
+          items:
+            type: string
+          type: array
+        uuid:
+          description: The UUID of the profile for this garden.
+          format: uuid
+          type: string
+      required:
+        - uuid
+    SkyBlockItem:
+      example:
+        category: CHESTPLATE
+        color: 255,215,0
+        id: FARM_ARMOR_CHESTPLATE
+        material: LEATHER_CHESTPLATE
+        name: Farm Armor Chestplate
+        npc_sell_price: 5200
+        stats:
+          DEFENSE: 75
+          HEALTH: 20
+        tier: RARE
+      properties:
+        color:
+          description: The color metadata to be applied to an item, usually leather armor pieces
+          pattern: ^(?:(?:^|,\s*)([01]?\d\d?|2[0-4]\d|25[0-5])){3}$
+          type: string
+        id:
+          description: The unique identifier for this item
+          type: string
+        material:
+          description: The Bukkit material enum value for the item
+          type: string
+        name:
+          description: The name of the item
+          type: string
+        skin:
+          description: The skin value for a skull based item
+          type: string
+        tier:
+          description: The rarity tier of the item
+          enum:
+            - COMMON
+            - EPIC
+            - LEGENDARY
+            - MYTHIC
+            - RARE
+            - SPECIAL
+            - SUPREME
+            - UNCOMMON
+            - VERY_SPECIAL
+          type: string
+    SkyBlockMuseum:
+      properties:
+        appraisal:
+          type: boolean
+        items:
+          type: object
+        special:
+          items:
+            properties:
+              donated_time:
+                type: integer
+              items:
+                type: object
+            type: object
+          type: array
+        value:
+          type: integer
+    SkyBlockProfile:
+      properties:
+        banking:
+          description: Information about the bank account for this profile, only present if the API banking setting is enabled
+          properties:
+            balance:
+              type: number
+            transactions:
+              items:
+                properties:
+                  action:
+                    enum:
+                      - DEPOSIT
+                      - WITHDRAW
+                    type: string
+                  amount:
+                    type: number
+                  initiator_name:
+                    type: string
+                  timestamp:
+                    type: integer
+                type: object
+              type: array
+          type: object
+        community_upgrades:
+          type: object
+        cute_name:
+          description: The cute name of the profile, only provided on the profiles endpoint
+          type: string
+        game_mode:
+          description: The SkyBlock game mode of the profile, not present if normal mode
+          enum:
+            - bingo
+            - ironman
+            - island
+          type: string
+        members:
+          additionalProperties:
+            $ref: '#/components/schemas/SkyBlockProfileMember'
+          description: A map of profile member UUIDs to profile member objects
+          type: object
+        profile_id:
+          format: uuid
+          type: string
+        selected:
+          description: Whether or not this is the currently selected profile, only provided on the profiles endpoint
+          type: boolean
+    SkyBlockProfileMember:
+      properties:
+        accessory_bag_storage:
+          $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorage'
+        bestiary:
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiary'
+        collection:
+          $ref: '#/components/schemas/SkyBlockProfileMemberCollection'
+        currencies:
+          $ref: '#/components/schemas/SkyBlockProfileMemberCurrencies'
+        dungeons:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeons'
+        events:
+          $ref: '#/components/schemas/SkyBlockProfileMemberEvents'
+        experimentation:
+          $ref: '#/components/schemas/SkyBlockProfileMemberExperimentation'
+        fairy_soul:
+          $ref: '#/components/schemas/SkyBlockProfileMemberFairySoul'
+        forge:
+          $ref: '#/components/schemas/SkyBlockProfileMemberForge'
+        garden_player_data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberGardenPlayerData'
+        glacite_player_data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberGlacitePlayerData'
+        inventory:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventory'
+        item_data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberItemData'
+        jacobs_contest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContest'
+        leveling:
+          $ref: '#/components/schemas/SkyBlockProfileMemberLeveling'
+        player_id:
+          format: uuid
+          type: string
+        rift:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRift'
+      type: object
+    SkyBlockProfileMemberAccessoryBagStorage:
+      properties:
+        bag_upgrades_purchased:
+          type: integer
+        highest_magical_power:
+          type: integer
+        selected_power:
+          type: string
+        tuning:
+          $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuning'
+        unlocked_powers:
+          items:
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberAccessoryBagStorageTuning:
+      properties:
+        highest_unlocked_slot:
+          type: integer
+        slot_0:
+          $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot'
+        slot_1:
+          $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot'
+        slot_2:
+          $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot'
+        slot_3:
+          $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot'
+        slot_4:
+          $ref: '#/components/schemas/SkyBlockProfileMemberAccessoryBagStorageTuningSlot'
+      type: object
+    SkyBlockProfileMemberAccessoryBagStorageTuningSlot:
+      properties:
+        attack_speed:
+          type: integer
+        critical_chance:
+          type: integer
+        critical_damage:
+          type: integer
+        defense:
+          type: integer
+        health:
+          type: integer
+        intelligence:
+          type: integer
+        strength:
+          type: integer
+        walk_speed:
+          type: integer
+      type: object
+    SkyBlockProfileMemberBestiary:
+      properties:
+        deaths:
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiaryDeaths'
+        kills:
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiaryKills'
+        migrated_stats:
+          type: boolean
+        migration:
+          type: boolean
+        milestone:
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiaryMilestone'
+        miscellaneous:
+          $ref: '#/components/schemas/SkyBlockProfileMemberBestiaryMiscellaneous'
+      type: object
+    SkyBlockProfileMemberBestiaryDeaths:
+      additionalProperties:
+        type: integer
+      type: object
+    SkyBlockProfileMemberBestiaryKills:
+      additionalProperties:
+        type: integer
+      properties:
+        last_killed_mob:
+          type: string
+      type: object
+    SkyBlockProfileMemberBestiaryMilestone:
+      properties:
+        last_claimed_milestone:
+          type: integer
+      type: object
+    SkyBlockProfileMemberBestiaryMiscellaneous:
+      properties:
+        max_kills_visible:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberCollection:
+      additionalProperties:
+        type: integer
+      type: object
+    SkyBlockProfileMemberCurrencies:
+      properties:
+        coin_purse:
+          type: number
+        essence:
+          $ref: '#/components/schemas/SkyBlockProfileMemberCurrenciesEssence'
+        motes_purse:
+          type: number
+      type: object
+    SkyBlockProfileMemberCurrenciesEssence:
+      additionalProperties:
+        properties:
+          current:
+            type: integer
+        type: object
+      type: object
+    SkyBlockProfileMemberDungeons:
+      properties:
+        daily_runs:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDailyRuns'
+        dungeon_hub_race_settings:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonHubRaceSettings'
+        dungeon_journal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonJournal'
+        dungeon_types:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonTypes'
+        dungeons_blah_blah:
+          items:
+            type: string
+          type: array
+        last_dungeon_run:
+          type: string
+        player_classes:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsPlayerClasses'
+        secrets:
+          type: integer
+        selected_dungeon_class:
+          type: string
+        treasures:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsTreasures'
+      type: object
+    SkyBlockProfileMemberDungeonsDailyRuns:
+      properties:
+        completed_runs_count:
+          type: integer
+        current_day_stamp:
+          type: integer
+      type: object
+    SkyBlockProfileMemberDungeonsDungeonHubRaceSettings:
+      properties:
+        runback:
+          type: boolean
+        selected_race:
+          type: string
+        selected_setting:
+          type: string
+      type: object
+    SkyBlockProfileMemberDungeonsDungeonJournal:
+      properties:
+        unlocked_journals:
+          items:
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberDungeonsDungeonTypes:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonTypesType'
+      type: object
+    SkyBlockProfileMemberDungeonsDungeonTypesBestRuns:
+      properties:
+        ally_healing:
+          type: number
+        damage_dealt:
+          type: number
+        damage_mitigated:
+          type: number
+        deaths:
+          type: integer
+        dungeon_class:
+          type: string
+        elapsed_time:
+          type: integer
+        mobs_killed:
+          type: integer
+        score_bonus:
+          type: integer
+        score_exploration:
+          type: integer
+        score_skill:
+          type: integer
+        score_speed:
+          type: integer
+        secrets_found:
+          type: integer
+        teammates:
+          items:
+            type: string
+          type: array
+        timestamp:
+          type: integer
+      type: object
+    SkyBlockProfileMemberDungeonsDungeonTypesType:
+      properties:
+        best_runs:
+          additionalProperties:
+            items:
+              $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonTypesBestRuns'
+            type: array
+          type: object
+        best_score:
+          additionalProperties:
+            type: number
+          type: object
+        experience:
+          type: number
+        fastest_time:
+          additionalProperties:
+            type: number
+          type: object
+        fastest_time_s:
+          additionalProperties:
+            type: number
+          type: object
+        fastest_time_s_plus:
+          additionalProperties:
+            type: number
+          type: object
+        highest_tier_completed:
+          type: integer
+        milestone_completions:
+          additionalProperties:
+            type: number
+          type: object
+        mobs_killed:
+          additionalProperties:
+            type: number
+          type: object
+        most_damage_archer:
+          additionalProperties:
+            type: number
+          type: object
+        most_damage_berserk:
+          additionalProperties:
+            type: number
+          type: object
+        most_damage_healer:
+          additionalProperties:
+            type: number
+          type: object
+        most_damage_mage:
+          additionalProperties:
+            type: number
+          type: object
+        most_damage_tank:
+          additionalProperties:
+            type: number
+          type: object
+        most_healing:
+          additionalProperties:
+            type: number
+          type: object
+        most_mobs_killed:
+          additionalProperties:
+            type: number
+          type: object
+        tier_completions:
+          additionalProperties:
+            type: number
+          type: object
+        times_played:
+          additionalProperties:
+            type: number
+          type: object
+        watcher_kills:
+          additionalProperties:
+            type: number
+          type: object
+      type: object
+    SkyBlockProfileMemberDungeonsPlayerClasses:
+      additionalProperties:
+        properties:
+          experience:
+            type: number
+        type: object
+      type: object
+    SkyBlockProfileMemberDungeonsTreasures:
+      properties:
+        chests:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsTreasuresChest'
+          type: array
+        runs:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsTreasuresRun'
+          type: array
+      type: object
+    SkyBlockProfileMemberDungeonsTreasuresChest:
+      properties:
+        chest_id:
+          type: string
+        paid:
+          type: boolean
+        quality:
+          type: integer
+        rerolls:
+          type: integer
+        rewards:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsTreasuresChestRewards'
+        run_id:
+          type: string
+        shiny_eligible:
+          type: boolean
+        treasure_type:
+          type: string
+      type: object
+    SkyBlockProfileMemberDungeonsTreasuresChestRewards:
+      properties:
+        rewards:
+          items:
+            type: string
+          type: array
+        rolled_rng_meter_randomly:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberDungeonsTreasuresRun:
+      properties:
+        completion_ts:
+          type: integer
+        dungeon_tier:
+          type: integer
+        dungeon_type:
+          type: string
+        participants:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsTreasuresRunParticipant'
+          type: array
+        run_id:
+          type: string
+      type: object
+    SkyBlockProfileMemberDungeonsTreasuresRunParticipant:
+      properties:
+        class_milestone:
+          type: integer
+        display_name:
+          type: string
+        player_uuid:
+          type: string
+      type: object
+    SkyBlockProfileMemberEvents:
+      properties:
+        easter:
+          $ref: '#/components/schemas/SkyBlockProfileMemberEventsEaster'
+      type: object
+    SkyBlockProfileMemberEventsEaster:
+      properties:
+        chocolate:
+          type: integer
+        chocolate_level:
+          type: integer
+        chocolate_multiplier_upgrades:
+          type: integer
+        chocolate_since_prestige:
+          type: integer
+        click_upgrades:
+          type: integer
+        el_dorado_progress:
+          type: integer
+        employees:
+          $ref: '#/components/schemas/SkyBlockProfileMemberEventsEasterEmployees'
+        golden_click_amount:
+          type: integer
+        golden_click_year:
+          type: integer
+        last_viewed_chocolate_factory:
+          type: integer
+        rabbit_barn_capacity_level:
+          type: integer
+        rabbit_filter:
+          type: string
+        rabbit_hitmen:
+          $ref: '#/components/schemas/SkyBlockProfileMemberEventsEasterRabbitHitmen'
+        rabbit_hotspot_filer:
+          type: string
+        rabbit_rarity_upgrades:
+          type: integer
+        rabbit_sort:
+          type: string
+        rabbits:
+          $ref: '#/components/schemas/SkyBlockProfileMemberEventsEasterRabbits'
+        refined_dark_cacao_truffles:
+          type: integer
+        shop:
+          $ref: '#/components/schemas/SkyBlockProfileMemberEventsEasterShop'
+        supreme_chocolate_bars:
+          type: integer
+        time_tower:
+          $ref: '#/components/schemas/SkyBlockProfileMemberEventsEasterTimeTower'
+        total_chocolate:
+          type: integer
+      type: object
+    SkyBlockProfileMemberEventsEasterEmployees:
+      additionalProperties:
+        type: integer
+      type: object
+    SkyBlockProfileMemberEventsEasterRabbitHitmen:
+      properties:
+        egg_slot_cooldown_mark:
+          type: integer
+        egg_slot_cooldown_sum:
+          type: integer
+        missed_uncollected_eggs:
+          type: integer
+        rabbit_hitmen_slots:
+          type: integer
+      type: object
+    SkyBlockProfileMemberEventsEasterRabbits:
+      additionalProperties:
+        type: integer
+      properties:
+        collected_eggs:
+          additionalProperties:
+            type: integer
+          type: object
+        collected_locations:
+          additionalProperties:
+            items:
+              type: string
+            type: array
+          type: object
+      type: object
+    SkyBlockProfileMemberEventsEasterShop:
+      properties:
+        chocolate_spent:
+          type: integer
+        cocoa_fortune_upgrades:
+          type: integer
+        rabbits:
+          items:
+            type: string
+          type: array
+        rabbits_purchased:
+          items:
+            type: string
+          type: array
+        year:
+          type: integer
+    SkyBlockProfileMemberEventsEasterTimeTower:
+      properties:
+        activation_time:
+          type: integer
+        charges:
+          type: integer
+        last_charge_time:
+          type: integer
+        level:
+          type: integer
+      type: object
+    SkyBlockProfileMemberExperimentation:
+      properties:
+        charge_track_timestamp:
+          type: integer
+        claimed_retroactive_rng:
+          type: boolean
+        claims_resets:
+          type: integer
+        claims_resets_timestamp:
+          type: integer
+        numbers:
+          $ref: '#/components/schemas/SkyBlockProfileMemberExperimentationNumbers'
+        pairings:
+          $ref: '#/components/schemas/SkyBlockProfileMemberExperimentationPairings'
+        serums_drank:
+          type: integer
+        simon:
+          $ref: '#/components/schemas/SkyBlockProfileMemberExperimentationSimon'
+      type: object
+    SkyBlockProfileMemberExperimentationNumbers:
+      properties:
+        attempts_1:
+          type: integer
+        attempts_2:
+          type: integer
+        attempts_3:
+          type: integer
+        best_score_1:
+          type: integer
+        best_score_2:
+          type: integer
+        best_score_3:
+          type: integer
+        bonus_clicks:
+          type: integer
+        claimed:
+          type: boolean
+        claims_1:
+          type: integer
+        claims_2:
+          type: integer
+        claims_3:
+          type: integer
+        last_attempt:
+          type: integer
+        last_claimed:
+          type: integer
+      type: object
+    SkyBlockProfileMemberExperimentationPairings:
+      properties:
+        best_score_0:
+          type: integer
+        best_score_1:
+          type: integer
+        best_score_2:
+          type: integer
+        best_score_3:
+          type: integer
+        best_score_4:
+          type: integer
+        best_score_5:
+          type: integer
+        bonus_clicks:
+          type: integer
+        claimed:
+          type: boolean
+        claims_0:
+          type: integer
+        claims_1:
+          type: integer
+        claims_2:
+          type: integer
+        claims_3:
+          type: integer
+        claims_4:
+          type: integer
+        claims_5:
+          type: integer
+        last_attempt:
+          type: integer
+        last_claimed:
+          type: integer
+      type: object
+    SkyBlockProfileMemberExperimentationSimon:
+      properties:
+        attempts_0:
+          type: integer
+        attempts_1:
+          type: integer
+        attempts_2:
+          type: integer
+        attempts_3:
+          type: integer
+        attempts_5:
+          type: integer
+        best_score_0:
+          type: integer
+        best_score_1:
+          type: integer
+        best_score_2:
+          type: integer
+        best_score_3:
+          type: integer
+        best_score_5:
+          type: integer
+        bonus_clicks:
+          type: integer
+        claimed:
+          type: boolean
+        claims_0:
+          type: integer
+        claims_1:
+          type: integer
+        claims_2:
+          type: integer
+        claims_3:
+          type: integer
+        claims_5:
+          type: integer
+        last_attempt:
+          type: integer
+        last_claimed:
+          type: integer
+      type: object
+    SkyBlockProfileMemberFairySoul:
+      properties:
+        fairy_exchanges:
+          type: integer
+        total_collected:
+          type: integer
+        unspent_souls:
+          type: integer
+      type: object
+    SkyBlockProfileMemberForge:
+      properties:
+        forge_processes:
+          $ref: '#/components/schemas/SkyBlockProfileMemberForgeProcesses'
+      type: object
+    SkyBlockProfileMemberForgeProcesses:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberForgeProcessesProcess'
+      type: object
+    SkyBlockProfileMemberForgeProcessesProcess:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberForgeProcessesProcessSlot'
+      type: object
+    SkyBlockProfileMemberForgeProcessesProcessSlot:
+      properties:
+        id:
+          type: string
+        notified:
+          type: boolean
+        oldItem:
+          nullable: true
+          type: string
+        processTimeModifier:
+          type: integer
+        slot:
+          type: integer
+        startTime:
+          type: integer
+        type:
+          type: string
+      type: object
+    SkyBlockProfileMemberGardenPlayerData:
+      properties:
+        copper:
+          type: integer
+        larva_consumed:
+          type: integer
+      type: object
+    SkyBlockProfileMemberGlacitePlayerData:
+      properties:
+        corpses_looted:
+          $ref: '#/components/schemas/SkyBlockProfileMemberGlacitePlayerDataCorpsesLooted'
+        fossil_dust:
+          type: number
+        fossils_donated:
+          items:
+            type: string
+          type: array
+        mineshafts_entered:
+          type: integer
+      type: object
+    SkyBlockProfileMemberGlacitePlayerDataCorpsesLooted:
+      properties:
+        lapis:
+          type: integer
+        tungsten:
+          type: integer
+        umber:
+          type: integer
+        vanguard:
+          type: integer
+      type: object
+    SkyBlockProfileMemberInventory:
+      properties:
+        backpack_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBackpackContents'
+        backpack_icons:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBackpackIcons'
+        bag_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBagContents'
+        ender_chest_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        equipment_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        inv_armor:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        inv_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        personal_vault_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        sacks_counts:
+          additionalProperties:
+            type: integer
+          type: object
+        wardrobe_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        wardrobe_equipped_slot:
+          type: integer
+      type: object
+    SkyBlockProfileMemberInventoryBackpackContents:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+      type: object
+    SkyBlockProfileMemberInventoryBackpackIcons:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+      type: object
+    SkyBlockProfileMemberInventoryBagContents:
+      properties:
+        fishing_bag:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        potion_bag:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        quiver:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        sacks_bag:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        talisman_bag:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+      type: object
+    SkyBlockProfileMemberInventoryBase64GzipData:
+      properties:
+        data:
+          type: string
+        type:
+          type: integer
+      type: object
+    SkyBlockProfileMemberItemData:
+      properties:
+        favorite_arrow:
+          type: string
+        soulflow:
+          type: integer
+        teleporter_pill_consumed:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberJacobsContest:
+      properties:
+        contests:
+          $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContestContests'
+        medals_inv:
+          $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContestMedalsInv'
+        migration:
+          type: boolean
+        perks:
+          $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContestPerks'
+        personal_bests:
+          $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContestPersonalBests'
+        talked:
+          type: boolean
+        unique_brackets:
+          $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContestUniqueBrackets'
+      type: object
+    SkyBlockProfileMemberJacobsContestContests:
+      additionalProperties:
+        properties:
+          claimed_participants:
+            type: integer
+          claimed_position:
+            type: integer
+          claimed_rewards:
+            type: boolean
+          collected:
+            type: integer
+        type: object
+      type: object
+    SkyBlockProfileMemberJacobsContestMedalsInv:
+      properties:
+        bronze:
+          type: integer
+        gold:
+          type: integer
+        silver:
+          type: integer
+      type: object
+    SkyBlockProfileMemberJacobsContestPerks:
+      properties:
+        double_drops:
+          type: integer
+        farming_level_cap:
+          type: integer
+        personal_bests:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberJacobsContestPersonalBests:
+      additionalProperties:
+        type: integer
+      type: object
+    SkyBlockProfileMemberJacobsContestUniqueBrackets:
+      additionalProperties:
+        items:
+          type: string
+        type: array
+      type: object
+    SkyBlockProfileMemberLeveling:
+      properties:
+        bop_bonus:
+          type: string
+        category_expanded:
+          type: boolean
+        claimed_talisman:
+          type: boolean
+        completed_tasks:
+          items:
+            $ref: '#/components/schemas/SkyBlockXPTask'
+          type: array
+        completions:
+          $ref: '#/components/schemas/SkyBlockProfileMemberLevelingCompletions'
+        emblem_unlocks:
+          items:
+            $ref: '#/components/schemas/SkyBlockEmblem'
+          type: array
+        experience:
+          type: integer
+        fishing_festival_sharks_killed:
+          type: integer
+        highest_pet_score:
+          type: integer
+        last_viewed_tasks:
+          items:
+            $ref: '#/components/schemas/SkyBlockXPTask'
+          type: array
+        migrated:
+          type: boolean
+        migrated_completions:
+          type: boolean
+        migrated_completions_2:
+          type: boolean
+        mining_fiesta_ores_mined:
+          type: integer
+        selected_symbol:
+          $ref: '#/components/schemas/SkyBlockEmblem'
+      type: object
+    SkyBlockProfileMemberLevelingCompletions:
+      properties:
+        NUCLEUS_RUNS:
+          type: integer
+        REAPER_PEPPERS:
+          type: integer
+        REFINED_DARK_CACAO_TRUFFLE:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRift:
+      properties:
+        black_lagoon:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
+        dead_cats:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftDeadCats'
+        enigma:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftEnigma'
+        gallery:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftGallery'
+        village_plaza:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlaza'
+        wither_cage:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWitherCage'
+        wizard_tower:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWizardTower'
+      type: object
+    SkyBlockProfileMemberRiftBlackLagoon:
+      properties:
+        completed_step:
+          type: integer
+        delivered_science_paper:
+          type: boolean
+        received_science_paper:
+          type: boolean
+        talked_to_edwin:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftDeadCats:
+      properties:
+        found_cats:
+          items:
+            type: string
+          type: array
+        montezuma:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftDeadCatsMontezuma'
+        picked_up_detector:
+          type: boolean
+        talked_to_jacquelle:
+          type: boolean
+        unlocked_pet:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftDeadCatsMontezuma:
+      properties:
+        active:
+          type: boolean
+        candyUsed:
+          type: integer
+        exp:
+          type: number
+        heldItem:
+          $ref: '#/components/schemas/SkyBlockItem'
+          nullable: true
+        skin:
+          $ref: '#/components/schemas/SkyBlockItem'
+          nullable: true
+        tier:
+          type: string
+        type:
+          type: string
+        uniqueId:
+          format: uuid
+          type: string
+        uuid:
+          format: uuid
+          type: string
+      type: object
+    SkyBlockProfileMemberRiftEnigma:
+      properties:
+        bought_cloak:
+          type: boolean
+        claimed_bonus_index:
+          type: integer
+        found_souls:
+          items:
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberRiftGallery:
+      properties:
+        elise_step:
+          type: integer
+        secured_trophies:
+          items:
+            properties:
+              timestamp:
+                type: integer
+              type:
+                type: string
+              visits:
+                type: integer
+            type: object
+          type: array
+        sent_trophy_dialogues:
+          items:
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberRiftVillagePlaza:
+      properties:
+        barry_center:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarryCenter'
+        barter_bank:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarterBank'
+        cowboy:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaCowboy'
+        got_scammed:
+          type: boolean
+        lonely:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaLonely'
+        murder:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaMurder'
+        seraphine:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaSeraphine'
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaBarryCenter:
+      properties:
+        convinced:
+          items:
+            type: string
+          type: array
+        first_talk_to_barry:
+          type: boolean
+        received_reward:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaBarterBank:
+      properties: {}
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaCowboy:
+      properties:
+        hay_eaten:
+          type: integer
+        rabbit_name:
+          type: string
+        stage:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaLonely:
+      properties:
+        seconds_sitting:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaMurder:
+      properties:
+        room_clues:
+          items:
+            type: string
+          type: array
+        step_index:
+          type: integer
+        step_index_pt2:
+          type: integer
+        step_index_pt3:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaSeraphine:
+      properties:
+        step_index:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftWitherCage:
+      properties:
+        killed_eyes:
+          items:
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberRiftWizardTower:
+      properties:
+        crumbs_laid_out:
+          type: integer
+        wizard_quest_step:
+          type: integer
+      type: object
+    SkyBlockXPTask:
+      enum:
+        - ABIPHONE_alchemist
+        - ABIPHONE_anita
+        - ABIPHONE_aranya
+        - ABIPHONE_arrow_forger
+        - ABIPHONE_blacksmith
+        - ABIPHONE_brynmor
+        - ABIPHONE_builder
+        - ABIPHONE_captain_ahone
+        - ABIPHONE_community_shop
+        - ABIPHONE_dean
+        - ABIPHONE_drill_fuel_mechanic
+        - ABIPHONE_duncan
+        - ABIPHONE_dusk
+        - ABIPHONE_einary
+        - ABIPHONE_elle
+        - ABIPHONE_fairy
+        - ABIPHONE_forge_foreman
+        - ABIPHONE_gatekeeper
+        - ABIPHONE_gemstone
+        - ABIPHONE_hoppity
+        - ABIPHONE_igrupan
+        - ABIPHONE_jacob
+        - ABIPHONE_kaus
+        - ABIPHONE_kuudra_gatekeeper
+        - ABIPHONE_lumber_merchant
+        - ABIPHONE_odger
+        - ABIPHONE_ophelia
+        - ABIPHONE_oringo
+        - ABIPHONE_pablo
+        - ABIPHONE_pet_collector
+        - ABIPHONE_pet_sitter
+        - ABIPHONE_pet_trainer
+        - ABIPHONE_plumber
+        - ABIPHONE_queen
+        - ABIPHONE_queen_mismyla
+        - ABIPHONE_roddy
+        - ABIPHONE_rollim
+        - ABIPHONE_shady_bartender
+        - ABIPHONE_sirih
+        - ABIPHONE_sirius
+        - ABIPHONE_slayer
+        - ABIPHONE_spooky
+        - ABIPHONE_st_jerry
+        - ABIPHONE_suus
+        - ABIPHONE_telekinesis_applier
+        - ABIPHONE_thaumaturgist
+        - ABIPHONE_tomioka
+        - ABIPHONE_trevor_the_trapper
+        - ABIPHONE_trinity
+        - ABIPHONE_vincent
+        - ABIPHONE_walter
+        - ABIPHONE_wool_weaver
+        - ABIPHONE_zog
+        - BANK_UPGRADE_DELUXE
+        - BANK_UPGRADE_GOLD
+        - BANK_UPGRADE_LUXURIOUS
+        - BANK_UPGRADE_PALATIAL
+        - BANK_UPGRADE_PREMIER
+        - BANK_UPGRADE_SUPER_DELUXE
+        - BARBARIANS_FRIENDLY
+        - BARBARIANS_HERO
+        - BARBARIANS_HONORED
+        - BARBARIANS_TRUSTED
+        - COMPLETE_CATACOMBS0
+        - COMPLETE_CATACOMBS1
+        - COMPLETE_CATACOMBS2
+        - COMPLETE_CATACOMBS3
+        - COMPLETE_CATACOMBS4
+        - COMPLETE_CATACOMBS5
+        - COMPLETE_CATACOMBS6
+        - COMPLETE_CATACOMBS7
+        - COMPLETE_MASTER_CATACOMBS1
+        - COMPLETE_MASTER_CATACOMBS2
+        - COMPLETE_MASTER_CATACOMBS3
+        - COMPLETE_MASTER_CATACOMBS4
+        - COMPLETE_MASTER_CATACOMBS5
+        - COMPLETE_MASTER_CATACOMBS6
+        - COMPLETE_MASTER_CATACOMBS7
+        - CRIMSON_ESSENCE_CRIMSON_TRAINING_1
+        - CRIMSON_ESSENCE_CRIMSON_TRAINING_2
+        - CRIMSON_ESSENCE_CRIMSON_TRAINING_3
+        - CRIMSON_ESSENCE_FRESH_TOOLS_KUUDRA_1
+        - CRIMSON_ESSENCE_FRESH_TOOLS_KUUDRA_2
+        - CRIMSON_ESSENCE_FRESH_TOOLS_KUUDRA_3
+        - CRIMSON_ESSENCE_FRESH_TOOLS_KUUDRA_4
+        - CRIMSON_ESSENCE_FRESH_TOOLS_KUUDRA_5
+        - CRIMSON_ESSENCE_FUNGUS_FORTUNA_1
+        - CRIMSON_ESSENCE_FUNGUS_FORTUNA_10
+        - CRIMSON_ESSENCE_FUNGUS_FORTUNA_2
+        - CRIMSON_ESSENCE_FUNGUS_FORTUNA_3
+        - CRIMSON_ESSENCE_FUNGUS_FORTUNA_4
+        - CRIMSON_ESSENCE_FUNGUS_FORTUNA_5
+        - CRIMSON_ESSENCE_FUNGUS_FORTUNA_6
+        - CRIMSON_ESSENCE_FUNGUS_FORTUNA_7
+        - CRIMSON_ESSENCE_FUNGUS_FORTUNA_8
+        - CRIMSON_ESSENCE_FUNGUS_FORTUNA_9
+        - CRIMSON_ESSENCE_HARENA_FORTUNA_1
+        - CRIMSON_ESSENCE_HARENA_FORTUNA_10
+        - CRIMSON_ESSENCE_HARENA_FORTUNA_2
+        - CRIMSON_ESSENCE_HARENA_FORTUNA_3
+        - CRIMSON_ESSENCE_HARENA_FORTUNA_4
+        - CRIMSON_ESSENCE_HARENA_FORTUNA_5
+        - CRIMSON_ESSENCE_HARENA_FORTUNA_6
+        - CRIMSON_ESSENCE_HARENA_FORTUNA_7
+        - CRIMSON_ESSENCE_HARENA_FORTUNA_8
+        - CRIMSON_ESSENCE_HARENA_FORTUNA_9
+        - CRIMSON_ESSENCE_HEADSTART_KUUDRA_1
+        - CRIMSON_ESSENCE_HEADSTART_KUUDRA_2
+        - CRIMSON_ESSENCE_HEADSTART_KUUDRA_3
+        - CRIMSON_ESSENCE_HEADSTART_KUUDRA_4
+        - CRIMSON_ESSENCE_HEADSTART_KUUDRA_5
+        - CRIMSON_ESSENCE_MASTER_KUUDRA_1
+        - CRIMSON_ESSENCE_STRONGARM_KUUDRA_1
+        - CRIMSON_ESSENCE_STRONGARM_KUUDRA_2
+        - CRIMSON_ESSENCE_WITHER_PIPER_1
+        - CRIMSON_ESSENCE_WITHER_PIPER_2
+        - CRIMSON_ESSENCE_WITHER_PIPER_3
+        - CRIMSON_ESSENCE_WITHER_PIPER_4
+        - CRIMSON_ESSENCE_WITHER_PIPER_5
+        - DEFEAT_BLAZE_SLAYER_FOUR
+        - DEFEAT_BLAZE_SLAYER_ONE
+        - DEFEAT_BLAZE_SLAYER_THREE
+        - DEFEAT_BLAZE_SLAYER_TWO
+        - DEFEAT_ENDERMAN_SLAYER_FOUR
+        - DEFEAT_ENDERMAN_SLAYER_ONE
+        - DEFEAT_ENDERMAN_SLAYER_THREE
+        - DEFEAT_ENDERMAN_SLAYER_TWO
+        - DEFEAT_SPIDER_SLAYER_FOUR
+        - DEFEAT_SPIDER_SLAYER_ONE
+        - DEFEAT_SPIDER_SLAYER_THREE
+        - DEFEAT_SPIDER_SLAYER_TWO
+        - DEFEAT_VAMPIRE_SLAYER_FIVE
+        - DEFEAT_VAMPIRE_SLAYER_FOUR
+        - DEFEAT_VAMPIRE_SLAYER_ONE
+        - DEFEAT_VAMPIRE_SLAYER_THREE
+        - DEFEAT_VAMPIRE_SLAYER_TWO
+        - DEFEAT_WOLF_SLAYER_FOUR
+        - DEFEAT_WOLF_SLAYER_ONE
+        - DEFEAT_WOLF_SLAYER_THREE
+        - DEFEAT_WOLF_SLAYER_TWO
+        - DEFEAT_ZOMBIE_SLAYER_FIVE
+        - DEFEAT_ZOMBIE_SLAYER_FOUR
+        - DEFEAT_ZOMBIE_SLAYER_ONE
+        - DEFEAT_ZOMBIE_SLAYER_THREE
+        - DEFEAT_ZOMBIE_SLAYER_TWO
+        - DIAMOND_ESSENCE_DIAMOND_IN_THE_ROUGH_1
+        - DIAMOND_ESSENCE_DIAMOND_IN_THE_ROUGH_2
+        - DIAMOND_ESSENCE_DIAMOND_IN_THE_ROUGH_3
+        - DIAMOND_ESSENCE_DIAMOND_IN_THE_ROUGH_4
+        - DIAMOND_ESSENCE_DIAMOND_IN_THE_ROUGH_5
+        - DIAMOND_ESSENCE_HIGH_ROLLER_1
+        - DIAMOND_ESSENCE_RADIANT_FISHER_1
+        - DIAMOND_ESSENCE_RADIANT_FISHER_10
+        - DIAMOND_ESSENCE_RADIANT_FISHER_2
+        - DIAMOND_ESSENCE_RADIANT_FISHER_3
+        - DIAMOND_ESSENCE_RADIANT_FISHER_4
+        - DIAMOND_ESSENCE_RADIANT_FISHER_5
+        - DIAMOND_ESSENCE_RADIANT_FISHER_6
+        - DIAMOND_ESSENCE_RADIANT_FISHER_7
+        - DIAMOND_ESSENCE_RADIANT_FISHER_8
+        - DIAMOND_ESSENCE_RADIANT_FISHER_9
+        - DIAMOND_ESSENCE_RETURN_TO_SENDER_1
+        - DIAMOND_ESSENCE_RETURN_TO_SENDER_10
+        - DIAMOND_ESSENCE_RETURN_TO_SENDER_2
+        - DIAMOND_ESSENCE_RETURN_TO_SENDER_3
+        - DIAMOND_ESSENCE_RETURN_TO_SENDER_4
+        - DIAMOND_ESSENCE_RETURN_TO_SENDER_5
+        - DIAMOND_ESSENCE_RETURN_TO_SENDER_6
+        - DIAMOND_ESSENCE_RETURN_TO_SENDER_7
+        - DIAMOND_ESSENCE_RETURN_TO_SENDER_8
+        - DIAMOND_ESSENCE_RETURN_TO_SENDER_9
+        - DIAMOND_ESSENCE_RHINESTONE_INFUSION_1
+        - DIAMOND_ESSENCE_RHINESTONE_INFUSION_10
+        - DIAMOND_ESSENCE_RHINESTONE_INFUSION_2
+        - DIAMOND_ESSENCE_RHINESTONE_INFUSION_3
+        - DIAMOND_ESSENCE_RHINESTONE_INFUSION_4
+        - DIAMOND_ESSENCE_RHINESTONE_INFUSION_5
+        - DIAMOND_ESSENCE_RHINESTONE_INFUSION_6
+        - DIAMOND_ESSENCE_RHINESTONE_INFUSION_7
+        - DIAMOND_ESSENCE_RHINESTONE_INFUSION_8
+        - DIAMOND_ESSENCE_RHINESTONE_INFUSION_9
+        - DIAMOND_ESSENCE_UNDER_PRESSURE_1
+        - DIAMOND_ESSENCE_UNDER_PRESSURE_2
+        - DIAMOND_ESSENCE_UNDER_PRESSURE_3
+        - DIAMOND_ESSENCE_UNDER_PRESSURE_4
+        - DIAMOND_ESSENCE_UNDER_PRESSURE_5
+        - DOJO_BELT_BLACK
+        - DOJO_BELT_BLUE
+        - DOJO_BELT_BROWN
+        - DOJO_BELT_GREEN
+        - DOJO_BELT_WHITE
+        - DOJO_BELT_YELLOW
+        - DOLPHIN_MILESTONE_COMMON
+        - DOLPHIN_MILESTONE_EPIC
+        - DOLPHIN_MILESTONE_LEGENDARY
+        - DOLPHIN_MILESTONE_RARE
+        - DOLPHIN_MILESTONE_UNCOMMON
+        - DRAGON_ESSENCE_COMBAT_WISDOM_IN_END_1
+        - DRAGON_ESSENCE_COMBAT_WISDOM_IN_END_2
+        - DRAGON_ESSENCE_COMBAT_WISDOM_IN_END_3
+        - DRAGON_ESSENCE_DRAGON_REFORGES_BUFF_1
+        - DRAGON_ESSENCE_DRAGON_REFORGES_BUFF_2
+        - DRAGON_ESSENCE_DRAGON_REFORGES_BUFF_3
+        - DRAGON_ESSENCE_DRAGON_REFORGES_BUFF_4
+        - DRAGON_ESSENCE_DRAGON_REFORGES_BUFF_5
+        - DRAGON_ESSENCE_EDRAG_CD_1
+        - DRAGON_ESSENCE_EDRAG_CD_2
+        - DRAGON_ESSENCE_EDRAG_CD_3
+        - DRAGON_ESSENCE_EDRAG_CD_4
+        - DRAGON_ESSENCE_EDRAG_CD_5
+        - DRAGON_ESSENCE_FERO_VS_DRAGONS_1
+        - DRAGON_ESSENCE_FERO_VS_DRAGONS_2
+        - DRAGON_ESSENCE_FERO_VS_DRAGONS_3
+        - DRAGON_ESSENCE_FERO_VS_DRAGONS_4
+        - DRAGON_ESSENCE_FERO_VS_DRAGONS_5
+        - DRAGON_ESSENCE_FLAT_DAMAGE_VS_ENDER_1
+        - DRAGON_ESSENCE_FLAT_DAMAGE_VS_ENDER_2
+        - DRAGON_ESSENCE_FLAT_DAMAGE_VS_ENDER_3
+        - DRAGON_ESSENCE_FLAT_DAMAGE_VS_ENDER_4
+        - DRAGON_ESSENCE_FLAT_DAMAGE_VS_ENDER_5
+        - DRAGON_ESSENCE_INCREASED_SUP_CHANCES_1
+        - DRAGON_ESSENCE_INC_ZEALOTS_ODDS_1
+        - DRAGON_ESSENCE_INC_ZEALOTS_ODDS_2
+        - DRAGON_ESSENCE_INC_ZEALOTS_ODDS_3
+        - DRAGON_ESSENCE_INC_ZEALOTS_ODDS_4
+        - DRAGON_ESSENCE_INC_ZEALOTS_ODDS_5
+        - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_1
+        - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_10
+        - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_2
+        - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_3
+        - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_4
+        - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_5
+        - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_6
+        - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_7
+        - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_8
+        - DRAGON_ESSENCE_MANA_AFTER_ENDER_KILL_9
+        - DRAGON_ESSENCE_UNBRIDLED_RAGE_1
+        - DRAGON_ESSENCE_UNBRIDLED_RAGE_2
+        - DRAGON_ESSENCE_UNBRIDLED_RAGE_3
+        - DRAGON_ESSENCE_UNBRIDLED_RAGE_4
+        - DRAGON_ESSENCE_UNBRIDLED_RAGE_5
+        - FARMING_CONTEST_CACTUS
+        - FARMING_CONTEST_CARROT_ITEM
+        - FARMING_CONTEST_INK_SACK:3
+        - FARMING_CONTEST_MELON
+        - FARMING_CONTEST_MUSHROOM_COLLECTION
+        - FARMING_CONTEST_NETHER_STALK
+        - FARMING_CONTEST_POTATO_ITEM
+        - FARMING_CONTEST_PUMPKIN
+        - FARMING_CONTEST_SUGAR_CANE
+        - FARMING_CONTEST_WHEAT
+        - FAST_TRAVEL_BARN
+        - FAST_TRAVEL_BAYOU
+        - FAST_TRAVEL_CRYSTAL_HOLLOWS
+        - FAST_TRAVEL_DEEP
+        - FAST_TRAVEL_DWARVEN_BASE_CAMP
+        - FAST_TRAVEL_DWARVEN_FORGE
+        - FAST_TRAVEL_DWARVEN_MINES
+        - FAST_TRAVEL_END
+        - FAST_TRAVEL_GOLD
+        - FAST_TRAVEL_MUSEUM
+        - FAST_TRAVEL_MUSHROOM
+        - FAST_TRAVEL_NETHER_FORTRESS
+        - FAST_TRAVEL_PARK
+        - FAST_TRAVEL_SPIDER_DEN
+        - FAST_TRAVEL_THE_RIFT
+        - FAST_TRAVEL_TRAPPERS_DEN
+        - FAST_TRAVEL_WIZARD_TOWER
+        - FISHING_FESTIVAL_DENTURE_COLLECTOR_1
+        - FISHING_FESTIVAL_DENTURE_COLLECTOR_2
+        - FISHING_FESTIVAL_DENTURE_COLLECTOR_3
+        - FISHING_FESTIVAL_ELASMOBRANCHII_AFFINITY_1
+        - FISHING_FESTIVAL_ELASMOBRANCHII_AFFINITY_2
+        - FISHING_FESTIVAL_FISHING_PRODIGY_1
+        - FISHING_FESTIVAL_FISHING_PRODIGY_2
+        - FISHING_FESTIVAL_FISHING_PRODIGY_3
+        - FISHING_FESTIVAL_FISHING_PRODIGY_4
+        - FISHING_FESTIVAL_FISHING_PRODIGY_5
+        - FISHING_FESTIVAL_SHARK_SONAR_1
+        - FISHING_FESTIVAL_SHARK_SONAR_2
+        - FISHING_FESTIVAL_SHARK_SONAR_3
+        - FISHING_FESTIVAL_SHARK_SONAR_4
+        - FISHING_FESTIVAL_SHARK_SONAR_5
+        - GOLD_ESSENCE_DWARVEN_TRAINING_1
+        - GOLD_ESSENCE_DWARVEN_TRAINING_2
+        - GOLD_ESSENCE_DWARVEN_TRAINING_3
+        - GOLD_ESSENCE_EAGER_MINER_1
+        - GOLD_ESSENCE_EAGER_MINER_10
+        - GOLD_ESSENCE_EAGER_MINER_2
+        - GOLD_ESSENCE_EAGER_MINER_3
+        - GOLD_ESSENCE_EAGER_MINER_4
+        - GOLD_ESSENCE_EAGER_MINER_5
+        - GOLD_ESSENCE_EAGER_MINER_6
+        - GOLD_ESSENCE_EAGER_MINER_7
+        - GOLD_ESSENCE_EAGER_MINER_8
+        - GOLD_ESSENCE_EAGER_MINER_9
+        - GOLD_ESSENCE_HEART_OF_GOLD_1
+        - GOLD_ESSENCE_HEART_OF_GOLD_2
+        - GOLD_ESSENCE_HEART_OF_GOLD_3
+        - GOLD_ESSENCE_HEART_OF_GOLD_4
+        - GOLD_ESSENCE_HEART_OF_GOLD_5
+        - GOLD_ESSENCE_MIDAS_LURE_1
+        - GOLD_ESSENCE_MIDAS_LURE_10
+        - GOLD_ESSENCE_MIDAS_LURE_2
+        - GOLD_ESSENCE_MIDAS_LURE_3
+        - GOLD_ESSENCE_MIDAS_LURE_4
+        - GOLD_ESSENCE_MIDAS_LURE_5
+        - GOLD_ESSENCE_MIDAS_LURE_6
+        - GOLD_ESSENCE_MIDAS_LURE_7
+        - GOLD_ESSENCE_MIDAS_LURE_8
+        - GOLD_ESSENCE_MIDAS_LURE_9
+        - GOLD_ESSENCE_TREASURES_OF_THE_EARTH_1
+        - GOLD_ESSENCE_TREASURES_OF_THE_EARTH_2
+        - GOLD_ESSENCE_TREASURES_OF_THE_EARTH_3
+        - GOLD_ESSENCE_TREASURES_OF_THE_EARTH_4
+        - GOLD_ESSENCE_TREASURES_OF_THE_EARTH_5
+        - GOLD_ESSENCE_UNBREAKING_1
+        - GOLD_ESSENCE_UNBREAKING_2
+        - GOLD_ESSENCE_UNBREAKING_3
+        - GOLD_ESSENCE_UNBREAKING_4
+        - GOLD_ESSENCE_UNBREAKING_5
+        - ICE_ESSENCE_COLD_EFFICIENCY_1
+        - ICE_ESSENCE_COLD_EFFICIENCY_2
+        - ICE_ESSENCE_COLD_EFFICIENCY_3
+        - ICE_ESSENCE_COLD_EFFICIENCY_4
+        - ICE_ESSENCE_COLD_EFFICIENCY_5
+        - ICE_ESSENCE_COOLED_FORGES_1
+        - ICE_ESSENCE_COOLED_FORGES_2
+        - ICE_ESSENCE_COOLED_FORGES_3
+        - ICE_ESSENCE_COOLED_FORGES_4
+        - ICE_ESSENCE_COOLED_FORGES_5
+        - ICE_ESSENCE_DRAKE_PIPER_1
+        - ICE_ESSENCE_FROZEN_SKIN_1
+        - ICE_ESSENCE_FROZEN_SKIN_2
+        - ICE_ESSENCE_FROZEN_SKIN_3
+        - ICE_ESSENCE_FROZEN_SKIN_4
+        - ICE_ESSENCE_FROZEN_SKIN_5
+        - ICE_ESSENCE_SEASON_OF_JOY_1
+        - ICE_ESSENCE_SEASON_OF_JOY_10
+        - ICE_ESSENCE_SEASON_OF_JOY_2
+        - ICE_ESSENCE_SEASON_OF_JOY_3
+        - ICE_ESSENCE_SEASON_OF_JOY_4
+        - ICE_ESSENCE_SEASON_OF_JOY_5
+        - ICE_ESSENCE_SEASON_OF_JOY_6
+        - ICE_ESSENCE_SEASON_OF_JOY_7
+        - ICE_ESSENCE_SEASON_OF_JOY_8
+        - ICE_ESSENCE_SEASON_OF_JOY_9
+        - KILL_ARACHNE_TIER_1
+        - KILL_ARACHNE_TIER_2
+        - KILL_KUUDRA_BURNING
+        - KILL_KUUDRA_FIERY
+        - KILL_KUUDRA_HOT
+        - KILL_KUUDRA_INFERNAL
+        - KILL_KUUDRA_NONE
+        - KILL_OLD_DRAGON
+        - KILL_PROTECTOR_DRAGON
+        - KILL_STRONG_DRAGON
+        - KILL_SUPERIOR_DRAGON
+        - KILL_UNSTABLE_DRAGON
+        - KILL_WISE_DRAGON
+        - KILL_YOUNG_DRAGON
+        - MAGES_FRIENDLY
+        - MAGES_HERO
+        - MAGES_HONORED
+        - MAGES_TRUSTED
+        - NATIONAL_MINING_MONTH_FORTUNATE_FESTIVITY_1
+        - NATIONAL_MINING_MONTH_FORTUNATE_FESTIVITY_2
+        - NATIONAL_MINING_MONTH_FORTUNATE_FESTIVITY_3
+        - NATIONAL_MINING_MONTH_FORTUNATE_FESTIVITY_4
+        - NATIONAL_MINING_MONTH_FORTUNATE_FESTIVITY_5
+        - NATIONAL_MINING_MONTH_POWDER_HOARDER_1
+        - NATIONAL_MINING_MONTH_POWDER_HOARDER_2
+        - NATIONAL_MINING_MONTH_POWDER_HOARDER_3
+        - NATIONAL_MINING_MONTH_REFINED_MIND_1
+        - NATIONAL_MINING_MONTH_REFINED_MIND_2
+        - NATIONAL_MINING_MONTH_REFINED_MIND_3
+        - NATIONAL_MINING_MONTH_REFINED_MIND_4
+        - NATIONAL_MINING_MONTH_REFINED_MIND_5
+        - NATIONAL_MINING_MONTH_TITANIUM_TENACITY_1
+        - NATIONAL_MINING_MONTH_TITANIUM_TENACITY_2
+        - OBJECTIVE_APPLY_ENGINE
+        - OBJECTIVE_APPLY_ROD_PART
+        - OBJECTIVE_CLEAN_CROP_PLOT
+        - OBJECTIVE_COMPLETE_THE_CHICKEN_RACE_4
+        - OBJECTIVE_COMPLETE_THE_END_RACE_4
+        - OBJECTIVE_COMPLETE_THE_WOODS_RACE_4
+        - OBJECTIVE_EXPLORE_HUB
+        - OBJECTIVE_EXPLORE_NETHER_ISLAND
+        - OBJECTIVE_EXPLORE_VILLAGE
+        - OBJECTIVE_GIVE_PICKAXE_LAPIS_MINER
+        - OBJECTIVE_GIVE_SAM_COMPOST
+        - OBJECTIVE_GIVE_SAM_WHEAT
+        - OBJECTIVE_GO_TO_BASE_CAMP
+        - OBJECTIVE_HELP_ELLE
+        - OBJECTIVE_INCREASE_FARMING_SKILL_5
+        - OBJECTIVE_INCREASE_FORAGING_SKILL_5
+        - OBJECTIVE_KILL_DANGER_MOBS
+        - OBJECTIVE_MINE_COAL
+        - OBJECTIVE_SERVE_FIRST_CUSTOMER
+        - OBJECTIVE_TALK_TO_BANKER
+        - OBJECTIVE_TALK_TO_ENID_2
+        - OBJECTIVE_TALK_TO_FARMER
+        - OBJECTIVE_TALK_TO_FARMHAND_1
+        - OBJECTIVE_TALK_TO_FISHERMAN_2
+        - OBJECTIVE_TALK_TO_GUBER_5
+        - OBJECTIVE_TALK_TO_GULLIVER_4
+        - OBJECTIVE_TALK_TO_GUSTAVE_5
+        - OBJECTIVE_TALK_TO_HATTIE_2
+        - OBJECTIVE_TALK_TO_LAZY_MINER
+        - OBJECTIVE_TALK_TO_LIBRARIAN
+        - OBJECTIVE_TALK_TO_LUMBERJACK
+        - OBJECTIVE_TALK_TO_REDSTONE_MINER_6
+        - PERSONAL_BANK_ONE
+        - PERSONAL_BANK_THREE
+        - PERSONAL_BANK_TWO
+        - ROCK_MILESTONE_COMMON
+        - ROCK_MILESTONE_EPIC
+        - ROCK_MILESTONE_LEGENDARY
+        - ROCK_MILESTONE_RARE
+        - ROCK_MILESTONE_UNCOMMON
+        - SONG_AMAZING_GRACE_100
+        - SONG_AMAZING_GRACE_50
+        - SONG_AMAZING_GRACE_70
+        - SONG_AMAZING_GRACE_90
+        - SONG_BRAHMS_100
+        - SONG_BRAHMS_50
+        - SONG_BRAHMS_70
+        - SONG_BRAHMS_90
+        - SONG_FIRE_AND_FLAMES_100
+        - SONG_FIRE_AND_FLAMES_50
+        - SONG_FIRE_AND_FLAMES_70
+        - SONG_FIRE_AND_FLAMES_90
+        - SONG_FRERE_JACQUES_100
+        - SONG_FRERE_JACQUES_50
+        - SONG_FRERE_JACQUES_70
+        - SONG_FRERE_JACQUES_90
+        - SONG_GREENSLEEVES_100
+        - SONG_GREENSLEEVES_50
+        - SONG_GREENSLEEVES_70
+        - SONG_GREENSLEEVES_90
+        - SONG_HAPPY_BIRTHDAY_100
+        - SONG_HAPPY_BIRTHDAY_50
+        - SONG_HAPPY_BIRTHDAY_70
+        - SONG_HAPPY_BIRTHDAY_90
+        - SONG_HYMN_JOY_100
+        - SONG_HYMN_JOY_50
+        - SONG_HYMN_JOY_70
+        - SONG_HYMN_JOY_90
+        - SONG_JEOPARDY_100
+        - SONG_JEOPARDY_50
+        - SONG_JEOPARDY_70
+        - SONG_JEOPARDY_90
+        - SONG_JOY_WORLD_100
+        - SONG_JOY_WORLD_50
+        - SONG_JOY_WORLD_70
+        - SONG_JOY_WORLD_90
+        - SONG_MINUET_100
+        - SONG_MINUET_50
+        - SONG_MINUET_70
+        - SONG_MINUET_90
+        - SONG_PACHELBEL_100
+        - SONG_PACHELBEL_50
+        - SONG_PACHELBEL_70
+        - SONG_PACHELBEL_90
+        - SONG_PURE_IMAGINATION_100
+        - SONG_PURE_IMAGINATION_50
+        - SONG_PURE_IMAGINATION_70
+        - SONG_PURE_IMAGINATION_90
+        - SONG_VIE_EN_ROSE_100
+        - SONG_VIE_EN_ROSE_50
+        - SONG_VIE_EN_ROSE_70
+        - SONG_VIE_EN_ROSE_90
+        - SPIDER_ESSENCE_BANE_1
+        - SPIDER_ESSENCE_BANE_2
+        - SPIDER_ESSENCE_BANE_3
+        - SPIDER_ESSENCE_BANE_4
+        - SPIDER_ESSENCE_BANE_5
+        - SPIDER_ESSENCE_EMPOWERED_AGILITY_1
+        - SPIDER_ESSENCE_EMPOWERED_AGILITY_10
+        - SPIDER_ESSENCE_EMPOWERED_AGILITY_2
+        - SPIDER_ESSENCE_EMPOWERED_AGILITY_3
+        - SPIDER_ESSENCE_EMPOWERED_AGILITY_4
+        - SPIDER_ESSENCE_EMPOWERED_AGILITY_5
+        - SPIDER_ESSENCE_EMPOWERED_AGILITY_6
+        - SPIDER_ESSENCE_EMPOWERED_AGILITY_7
+        - SPIDER_ESSENCE_EMPOWERED_AGILITY_8
+        - SPIDER_ESSENCE_EMPOWERED_AGILITY_9
+        - SPIDER_ESSENCE_SPIDER_TRAINING_1
+        - SPIDER_ESSENCE_SPIDER_TRAINING_2
+        - SPIDER_ESSENCE_SPIDER_TRAINING_3
+        - SPIDER_ESSENCE_TOXOPHILITE_1
+        - SPIDER_ESSENCE_TOXOPHILITE_2
+        - SPIDER_ESSENCE_TOXOPHILITE_3
+        - SPIDER_ESSENCE_TOXOPHILITE_4
+        - SPIDER_ESSENCE_TOXOPHILITE_5
+        - SPIDER_ESSENCE_VERMIN_CONTROL_1
+        - SPIDER_ESSENCE_VERMIN_CONTROL_2
+        - SPIDER_ESSENCE_VERMIN_CONTROL_3
+        - SPIDER_ESSENCE_VERMIN_CONTROL_4
+        - SPIDER_ESSENCE_VERMIN_CONTROL_5
+        - SPOOKY_FESTIVAL_CANDY_SCAVENGER_1
+        - SPOOKY_FESTIVAL_CANDY_SCAVENGER_2
+        - SPOOKY_FESTIVAL_CANDY_SCAVENGER_3
+        - SPOOKY_FESTIVAL_CANDY_SCAVENGER_4
+        - SPOOKY_FESTIVAL_CANDY_SCAVENGER_5
+        - SPOOKY_FESTIVAL_DIAMOND
+        - SPOOKY_FESTIVAL_EMERALD
+        - SPOOKY_FESTIVAL_GOLD
+        - SPOOKY_FESTIVAL_IRON
+        - SPOOKY_FESTIVAL_PURPLE_VOGUE_1
+        - SPOOKY_FESTIVAL_PURPLE_VOGUE_2
+        - SPOOKY_FESTIVAL_PURPLE_VOGUE_3
+        - SPOOKY_FESTIVAL_SPOOKY_HOOK_1
+        - SPOOKY_FESTIVAL_SPOOKY_HOOK_2
+        - SPOOKY_FESTIVAL_SPOOKY_HOOK_3
+        - SPOOKY_FESTIVAL_SPOOKY_HOOK_4
+        - SPOOKY_FESTIVAL_SPOOKY_HOOK_5
+        - SPOOKY_FESTIVAL_STONE
+        - SPOOKY_FESTIVAL_TRICK_OR_TREAT_ENTHUSIAST_1
+        - SPOOKY_FESTIVAL_TRICK_OR_TREAT_ENTHUSIAST_2
+        - SPOOKY_FESTIVAL_WOOD
+        - TROPHY_BLOBFISH_BRONZE
+        - TROPHY_BLOBFISH_DIAMOND
+        - TROPHY_BLOBFISH_GOLD
+        - TROPHY_BLOBFISH_SILVER
+        - TROPHY_FLYFISH_BRONZE
+        - TROPHY_FLYFISH_DIAMOND
+        - TROPHY_FLYFISH_GOLD
+        - TROPHY_FLYFISH_SILVER
+        - TROPHY_GOLDEN_FISH_BRONZE
+        - TROPHY_GOLDEN_FISH_DIAMOND
+        - TROPHY_GOLDEN_FISH_GOLD
+        - TROPHY_GOLDEN_FISH_SILVER
+        - TROPHY_GUSHER_BRONZE
+        - TROPHY_GUSHER_DIAMOND
+        - TROPHY_GUSHER_GOLD
+        - TROPHY_GUSHER_SILVER
+        - TROPHY_KARATE_FISH_BRONZE
+        - TROPHY_KARATE_FISH_DIAMOND
+        - TROPHY_KARATE_FISH_GOLD
+        - TROPHY_KARATE_FISH_SILVER
+        - TROPHY_LAVA_HORSE_BRONZE
+        - TROPHY_LAVA_HORSE_DIAMOND
+        - TROPHY_LAVA_HORSE_GOLD
+        - TROPHY_LAVA_HORSE_SILVER
+        - TROPHY_MANA_RAY_BRONZE
+        - TROPHY_MANA_RAY_DIAMOND
+        - TROPHY_MANA_RAY_GOLD
+        - TROPHY_MANA_RAY_SILVER
+        - TROPHY_MOLDFIN_BRONZE
+        - TROPHY_MOLDFIN_DIAMOND
+        - TROPHY_MOLDFIN_GOLD
+        - TROPHY_MOLDFIN_SILVER
+        - TROPHY_OBFUSCATED_FISH_1_BRONZE
+        - TROPHY_OBFUSCATED_FISH_1_DIAMOND
+        - TROPHY_OBFUSCATED_FISH_1_GOLD
+        - TROPHY_OBFUSCATED_FISH_1_SILVER
+        - TROPHY_OBFUSCATED_FISH_2_BRONZE
+        - TROPHY_OBFUSCATED_FISH_2_DIAMOND
+        - TROPHY_OBFUSCATED_FISH_2_GOLD
+        - TROPHY_OBFUSCATED_FISH_2_SILVER
+        - TROPHY_OBFUSCATED_FISH_3_BRONZE
+        - TROPHY_OBFUSCATED_FISH_3_DIAMOND
+        - TROPHY_OBFUSCATED_FISH_3_GOLD
+        - TROPHY_OBFUSCATED_FISH_3_SILVER
+        - TROPHY_SKELETON_FISH_BRONZE
+        - TROPHY_SKELETON_FISH_DIAMOND
+        - TROPHY_SKELETON_FISH_GOLD
+        - TROPHY_SKELETON_FISH_SILVER
+        - TROPHY_SLUGFISH_BRONZE
+        - TROPHY_SLUGFISH_DIAMOND
+        - TROPHY_SLUGFISH_GOLD
+        - TROPHY_SLUGFISH_SILVER
+        - TROPHY_SOUL_FISH_BRONZE
+        - TROPHY_SOUL_FISH_DIAMOND
+        - TROPHY_SOUL_FISH_GOLD
+        - TROPHY_SOUL_FISH_SILVER
+        - TROPHY_STEAMING_HOT_FLOUNDER_BRONZE
+        - TROPHY_STEAMING_HOT_FLOUNDER_DIAMOND
+        - TROPHY_STEAMING_HOT_FLOUNDER_GOLD
+        - TROPHY_STEAMING_HOT_FLOUNDER_SILVER
+        - TROPHY_SULPHUR_SKITTER_BRONZE
+        - TROPHY_SULPHUR_SKITTER_DIAMOND
+        - TROPHY_SULPHUR_SKITTER_GOLD
+        - TROPHY_SULPHUR_SKITTER_SILVER
+        - TROPHY_VANILLE_BRONZE
+        - TROPHY_VANILLE_DIAMOND
+        - TROPHY_VANILLE_GOLD
+        - TROPHY_VANILLE_SILVER
+        - TROPHY_VOLCANIC_STONEFISH_BRONZE
+        - TROPHY_VOLCANIC_STONEFISH_DIAMOND
+        - TROPHY_VOLCANIC_STONEFISH_GOLD
+        - TROPHY_VOLCANIC_STONEFISH_SILVER
+        - UNDEAD_ESSENCE_CATACOMBS_BOSS_LUCK_1
+        - UNDEAD_ESSENCE_CATACOMBS_BOSS_LUCK_2
+        - UNDEAD_ESSENCE_CATACOMBS_BOSS_LUCK_3
+        - UNDEAD_ESSENCE_CATACOMBS_BOSS_LUCK_4
+        - UNDEAD_ESSENCE_CATACOMBS_CRIT_DAMAGE_1
+        - UNDEAD_ESSENCE_CATACOMBS_CRIT_DAMAGE_2
+        - UNDEAD_ESSENCE_CATACOMBS_CRIT_DAMAGE_3
+        - UNDEAD_ESSENCE_CATACOMBS_CRIT_DAMAGE_4
+        - UNDEAD_ESSENCE_CATACOMBS_CRIT_DAMAGE_5
+        - UNDEAD_ESSENCE_CATACOMBS_DEFENSE_1
+        - UNDEAD_ESSENCE_CATACOMBS_DEFENSE_2
+        - UNDEAD_ESSENCE_CATACOMBS_DEFENSE_3
+        - UNDEAD_ESSENCE_CATACOMBS_DEFENSE_4
+        - UNDEAD_ESSENCE_CATACOMBS_DEFENSE_5
+        - UNDEAD_ESSENCE_CATACOMBS_HEALTH_1
+        - UNDEAD_ESSENCE_CATACOMBS_HEALTH_2
+        - UNDEAD_ESSENCE_CATACOMBS_HEALTH_3
+        - UNDEAD_ESSENCE_CATACOMBS_HEALTH_4
+        - UNDEAD_ESSENCE_CATACOMBS_HEALTH_5
+        - UNDEAD_ESSENCE_CATACOMBS_INTELLIGENCE_1
+        - UNDEAD_ESSENCE_CATACOMBS_INTELLIGENCE_2
+        - UNDEAD_ESSENCE_CATACOMBS_INTELLIGENCE_3
+        - UNDEAD_ESSENCE_CATACOMBS_INTELLIGENCE_4
+        - UNDEAD_ESSENCE_CATACOMBS_INTELLIGENCE_5
+        - UNDEAD_ESSENCE_CATACOMBS_LOOTING_1
+        - UNDEAD_ESSENCE_CATACOMBS_LOOTING_2
+        - UNDEAD_ESSENCE_CATACOMBS_LOOTING_3
+        - UNDEAD_ESSENCE_CATACOMBS_LOOTING_4
+        - UNDEAD_ESSENCE_CATACOMBS_LOOTING_5
+        - UNDEAD_ESSENCE_CATACOMBS_STRENGTH_1
+        - UNDEAD_ESSENCE_CATACOMBS_STRENGTH_2
+        - UNDEAD_ESSENCE_CATACOMBS_STRENGTH_3
+        - UNDEAD_ESSENCE_CATACOMBS_STRENGTH_4
+        - UNDEAD_ESSENCE_CATACOMBS_STRENGTH_5
+        - UNDEAD_ESSENCE_REVIVE_STONE_1
+        - UPGRADE_COINS_ALLOWANCE_1
+        - UPGRADE_COINS_ALLOWANCE_2
+        - UPGRADE_COINS_ALLOWANCE_3
+        - UPGRADE_COINS_ALLOWANCE_4
+        - UPGRADE_COINS_ALLOWANCE_5
+        - UPGRADE_GUESTS_COUNT_1
+        - UPGRADE_ISLAND_SIZE_1
+        - UPGRADE_MINION_SLOTS_1
+        - UPGRADE_MINION_SLOTS_2
+        - UPGRADE_MINION_SLOTS_3
+        - UPGRADE_MINION_SLOTS_4
+        - UPGRADE_MINION_SLOTS_5
+        - WINTER_ICY_HOOK_1
+        - WINTER_ICY_HOOK_2
+        - WINTER_ICY_HOOK_3
+        - WINTER_ICY_HOOK_4
+        - WINTER_ICY_HOOK_5
+        - WINTER_PRESENT_CONNOISSEUR_1
+        - WINTER_PRESENT_CONNOISSEUR_2
+        - WINTER_PRESENT_CONNOISSEUR_3
+        - WINTER_PRESENT_CONNOISSEUR_4
+        - WINTER_PRESENT_CONNOISSEUR_5
+        - WINTER_PROFESSIONAL_GIFTER_1
+        - WINTER_PROFESSIONAL_GIFTER_2
+        - WINTER_RED_FAD_1
+        - WINTER_RED_FAD_2
+        - WINTER_RED_FAD_3
+        - WITHER_ESSENCE_FORBIDDEN_BLESSING_1
+        - WITHER_ESSENCE_FORBIDDEN_BLESSING_10
+        - WITHER_ESSENCE_FORBIDDEN_BLESSING_2
+        - WITHER_ESSENCE_FORBIDDEN_BLESSING_3
+        - WITHER_ESSENCE_FORBIDDEN_BLESSING_4
+        - WITHER_ESSENCE_FORBIDDEN_BLESSING_5
+        - WITHER_ESSENCE_FORBIDDEN_BLESSING_6
+        - WITHER_ESSENCE_FORBIDDEN_BLESSING_7
+        - WITHER_ESSENCE_FORBIDDEN_BLESSING_8
+        - WITHER_ESSENCE_FORBIDDEN_BLESSING_9
+        - WITHER_ESSENCE_PERMANENT_DEFENSE_1
+        - WITHER_ESSENCE_PERMANENT_DEFENSE_2
+        - WITHER_ESSENCE_PERMANENT_DEFENSE_3
+        - WITHER_ESSENCE_PERMANENT_DEFENSE_4
+        - WITHER_ESSENCE_PERMANENT_DEFENSE_5
+        - WITHER_ESSENCE_PERMANENT_HEALTH_1
+        - WITHER_ESSENCE_PERMANENT_HEALTH_2
+        - WITHER_ESSENCE_PERMANENT_HEALTH_3
+        - WITHER_ESSENCE_PERMANENT_HEALTH_4
+        - WITHER_ESSENCE_PERMANENT_HEALTH_5
+        - WITHER_ESSENCE_PERMANENT_INTELLIGENCE_1
+        - WITHER_ESSENCE_PERMANENT_INTELLIGENCE_2
+        - WITHER_ESSENCE_PERMANENT_INTELLIGENCE_3
+        - WITHER_ESSENCE_PERMANENT_INTELLIGENCE_4
+        - WITHER_ESSENCE_PERMANENT_INTELLIGENCE_5
+        - WITHER_ESSENCE_PERMANENT_SPEED_1
+        - WITHER_ESSENCE_PERMANENT_SPEED_2
+        - WITHER_ESSENCE_PERMANENT_STRENGTH_1
+        - WITHER_ESSENCE_PERMANENT_STRENGTH_2
+        - WITHER_ESSENCE_PERMANENT_STRENGTH_3
+        - WITHER_ESSENCE_PERMANENT_STRENGTH_4
+        - WITHER_ESSENCE_PERMANENT_STRENGTH_5
+      type: string
+  securitySchemes:
+    ApiKey:
+      description: Obtained via the [Hypixel Developer Dashboard](https://developer.hypixel.net) when creating an application. You can also request higher limits for production applications in this dashboard.
+      in: header
+      name: API-Key
+      type: apiKey
+info:
+  contact:
+    name: Hypixel Support
+    url: https://developer.hypixel.net
+  termsOfService: https://hypixel.net/tos
+  title: Hypixel Public API
+  version: v2
+  x-logo:
+    altText: Hypixel Logo
+    href: '#'
+    url: https://api.hypixel.net/assets/images/logo.png
+openapi: 3.0.3
+paths:
+  /v2/resources/skyblock/bingo:
+    get:
+      description: Information regarding the current bingo event and its goals.
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  end:
+                    description: The end time of the current bingo event in unix milliseconds
+                    example: 1709874000000
+                    type: integer
+                  goals:
+                    description: The goals for the current bingo event, as well as their progress
+                    items:
+                      properties:
+                        fullLore:
+                          description: The full description of this goal
+                          items:
+                            type: string
+                          type: array
+                        id:
+                          description: The backend ID for this goal
+                          type: string
+                        lore:
+                          description: Description of this goal
+                          type: string
+                        name:
+                          description: The user friendly display name for this goal
+                          type: string
+                        progress:
+                          description: The global progress of this goal
+                          type: integer
+                        requiredAmount:
+                          description: The required amount for this specific goal
+                          type: integer
+                        tiers:
+                          description: The tiers of this goal, if a global goal
+                          items:
+                            type: integer
+                          type: array
+                      required:
+                        - id
+                        - name
+                      type: object
+                    type: array
+                  id:
+                    description: The current bingo event ID, increments by 1 for each bingo hosted
+                    example: 27
+                    type: integer
+                  lastUpdated:
+                    description: The unix milliseconds timestamp of the last time this data was updated
+                    type: integer
+                  modifier:
+                    description: The modifier for the current bingo event
+                    enum:
+                      - EXTREME
+                      - NORMAL
+                      - SECRET
+                    example: NORMAL
+                    type: string
+                  name:
+                    description: The display name for the current bingo event
+                    example: March 2024
+                    type: string
+                  start:
+                    description: The start time of the current bingo event in unix milliseconds
+                    example: 1709269200000
+                    type: integer
+                  success:
+                    type: boolean
+                required:
+                  - end
+                  - goals
+                  - id
+                  - lastUpdated
+                  - modifier
+                  - name
+                  - start
+                  - success
+                type: object
+          description: A successful response
+      summary: Current Bingo Event
+      tags:
+        - SkyBlock
+  /v2/resources/skyblock/collections:
+    get:
+      description: Information regarding Collections in the SkyBlock game.
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  collections:
+                    type: object
+                  lastUpdated:
+                    type: integer
+                  success:
+                    type: boolean
+                  version:
+                    example: 0.11.22
+                    type: string
+                type: object
+          description: A successful response
+      summary: Collections
+      tags:
+        - SkyBlock
+  /v2/resources/skyblock/election:
+    get:
+      description: Information regarding the current mayor and ongoing election in SkyBlock.
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  current:
+                    description: Data regarding the current election, will not be provided if there is no open election ongoing
+                    type: object
+                  lastUpdated:
+                    type: integer
+                  mayor:
+                    description: Data regarding the current mayor
+                    type: object
+                  success:
+                    type: boolean
+                type: object
+          description: A successful response
+      summary: Election and Mayor
+      tags:
+        - SkyBlock
+  /v2/resources/skyblock/items:
+    get:
+      description: Information regarding items in the SkyBlock game.
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  items:
+                    items:
+                      $ref: '#/components/schemas/SkyBlockItem'
+                    type: array
+                  lastUpdated:
+                    type: integer
+                  success:
+                    type: boolean
+                type: object
+          description: A successful response
+      summary: Items
+      tags:
+        - SkyBlock
+  /v2/resources/skyblock/skills:
+    get:
+      description: Information regarding skills in the SkyBlock game.
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  lastUpdated:
+                    type: integer
+                  skills:
+                    type: object
+                  success:
+                    type: boolean
+                  version:
+                    example: 0.11.22
+                    type: string
+                type: object
+          description: A successful response
+      summary: Skills
+      tags:
+        - SkyBlock
+  /v2/skyblock/bingo:
+    get:
+      description: Bingo data for participated events of the provided player.
+      parameters:
+        - in: query
+          name: uuid
+          schema:
+            format: uuid
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  events:
+                    items:
+                      properties:
+                        completed_goals:
+                          description: The completed goal IDs
+                          items:
+                            example:
+                              - KILL_TRAPPER_MOB
+                              - stat_walk_speed
+                            type: string
+                          type: array
+                        key:
+                          description: The id for this event
+                          example: 2
+                          type: integer
+                        points:
+                          description: The amount of points earned
+                          example: 117
+                          type: integer
+                      required:
+                        - completed_goals
+                        - key
+                        - points
+                      type: object
+                    type: array
+                  success:
+                    type: boolean
+                type: object
+          description: A successful response
+        '400':
+          $ref: '#/components/responses/DataMissing'
+        '403':
+          $ref: '#/components/responses/InvalidKey'
+        '404':
+          content:
+            application/json:
+              schema:
+                properties:
+                  cause:
+                    example: No bingo data could be found
+                    type: string
+                  success:
+                    example: false
+                    type: boolean
+                type: object
+          description: No data could be found for the provided player uuid.
+        '422':
+          $ref: '#/components/responses/MalformedData'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+      security:
+        - ApiKey: []
+      summary: Bingo data by player
+      tags:
+        - SkyBlock
+  /v2/skyblock/firesales:
+    get:
+      description: Retrieve the currently active or upcoming Fire Sales for SkyBlock.
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  sales:
+                    items:
+                      $ref: '#/components/schemas/SkyBlockFireSale'
+                    type: array
+                  success:
+                    type: boolean
+                type: object
+          description: A successful response
+      summary: Active/Upcoming Fire Sales
+      tags:
+        - SkyBlock
+  /v2/skyblock/garden:
+    get:
+      description: SkyBlock garden data for the provided profile.
+      parameters:
+        - in: query
+          name: profile
+          schema:
+            format: uuid
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  garden:
+                    $ref: '#/components/schemas/SkyBlockGarden'
+                  success:
+                    type: boolean
+                type: object
+          description: A successful response
+        '403':
+          $ref: '#/components/responses/InvalidKey'
+        '404':
+          $ref: '#/components/responses/NoResult'
+        '422':
+          $ref: '#/components/responses/MalformedData'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+      security:
+        - ApiKey: []
+      summary: Garden data by profile ID
+      tags:
+        - SkyBlock
+  /v2/skyblock/museum:
+    get:
+      description: SkyBlock museum data for all members of the provided profile. The data returned can differ depending on the players in-game API settings.
+      parameters:
+        - in: query
+          name: profile
+          schema:
+            format: uuid
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  profile:
+                    $ref: '#/components/schemas/SkyBlockMuseum'
+                  success:
+                    type: boolean
+                type: object
+          description: A successful response
+        '403':
+          $ref: '#/components/responses/InvalidKey'
+        '422':
+          $ref: '#/components/responses/MalformedData'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+      security:
+        - ApiKey: []
+      summary: Museum data by profile ID
+      tags:
+        - SkyBlock
+  /v2/skyblock/news:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  items:
+                    items:
+                      example:
+                        item:
+                          material: DIAMOND
+                        link: https://hypixel.net
+                        text: 15th January 2021
+                        title: SkyBlock v0.11
+                  success:
+                    type: boolean
+                type: object
+          description: A successful response
+        '403':
+          $ref: '#/components/responses/InvalidKey'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+      security:
+        - ApiKey: []
+      summary: News
+      tags:
+        - SkyBlock
+  /v2/skyblock/profile:
+    get:
+      description: SkyBlock profile data, such as stats, objectives etc. The data returned can differ depending on the players in-game API settings.
+      parameters:
+        - in: query
+          name: profile
+          schema:
+            format: uuid
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  profile:
+                    $ref: '#/components/schemas/SkyBlockProfile'
+                  success:
+                    type: boolean
+                type: object
+          description: A successful response
+        '400':
+          $ref: '#/components/responses/DataMissing'
+        '403':
+          $ref: '#/components/responses/InvalidKey'
+        '422':
+          $ref: '#/components/responses/MalformedData'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+      security:
+        - ApiKey: []
+      summary: Profile by UUID
+      tags:
+        - SkyBlock
+  /v2/skyblock/profiles:
+    get:
+      parameters:
+        - in: query
+          name: uuid
+          schema:
+            format: uuid
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  profiles:
+                    items:
+                      $ref: '#/components/schemas/SkyBlockProfile'
+                    type: array
+                  success:
+                    type: boolean
+                type: object
+          description: A successful response
+        '400':
+          $ref: '#/components/responses/DataMissing'
+        '403':
+          $ref: '#/components/responses/InvalidKey'
+        '422':
+          $ref: '#/components/responses/MalformedData'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+      security:
+        - ApiKey: []
+      summary: Profiles by player
+      tags:
+        - SkyBlock
+servers:
+  - url: https://api.hypixel.net

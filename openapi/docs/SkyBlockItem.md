@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Material** | Pointer to **string** | The Bukkit material enum value for the item | [optional] 
 **Name** | Pointer to **string** | The name of the item | [optional] 
 **Skin** | Pointer to **string** | The skin value for a skull based item | [optional] 
-**Tier** | Pointer to **string** | The rarity tier of the item | [optional] 
+**Tier** | Pointer to [**SkyBlockItemTier**](SkyBlockItemTier.md) |  | [optional] 
 
 ## Methods
 
@@ -157,20 +157,20 @@ HasSkin returns a boolean if a field has been set.
 
 ### GetTier
 
-`func (o *SkyBlockItem) GetTier() string`
+`func (o *SkyBlockItem) GetTier() SkyBlockItemTier`
 
 GetTier returns the Tier field if non-nil, zero value otherwise.
 
 ### GetTierOk
 
-`func (o *SkyBlockItem) GetTierOk() (*string, bool)`
+`func (o *SkyBlockItem) GetTierOk() (*SkyBlockItemTier, bool)`
 
 GetTierOk returns a tuple with the Tier field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTier
 
-`func (o *SkyBlockItem) SetTier(v string)`
+`func (o *SkyBlockItem) SetTier(v SkyBlockItemTier)`
 
 SetTier sets Tier field to given value.
 

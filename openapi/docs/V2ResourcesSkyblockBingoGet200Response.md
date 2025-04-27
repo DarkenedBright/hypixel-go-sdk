@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Goals** | [**[]V2ResourcesSkyblockBingoGet200ResponseGoalsInner**](V2ResourcesSkyblockBingoGet200ResponseGoalsInner.md) | The goals for the current bingo event, as well as their progress | 
 **Id** | **int64** | The current bingo event ID, increments by 1 for each bingo hosted | 
 **LastUpdated** | **int64** | The unix milliseconds timestamp of the last time this data was updated | 
-**Modifier** | **string** | The modifier for the current bingo event | 
+**Modifier** | [**V2ResourcesSkyblockBingoGet200ResponseModifier**](V2ResourcesSkyblockBingoGet200ResponseModifier.md) |  | 
 **Name** | **string** | The display name for the current bingo event | 
 **Start** | **int64** | The start time of the current bingo event in unix milliseconds | 
 **Success** | **bool** |  | 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewV2ResourcesSkyblockBingoGet200Response
 
-`func NewV2ResourcesSkyblockBingoGet200Response(end int64, goals []V2ResourcesSkyblockBingoGet200ResponseGoalsInner, id int64, lastUpdated int64, modifier string, name string, start int64, success bool, ) *V2ResourcesSkyblockBingoGet200Response`
+`func NewV2ResourcesSkyblockBingoGet200Response(end int64, goals []V2ResourcesSkyblockBingoGet200ResponseGoalsInner, id int64, lastUpdated int64, modifier V2ResourcesSkyblockBingoGet200ResponseModifier, name string, start int64, success bool, ) *V2ResourcesSkyblockBingoGet200Response`
 
 NewV2ResourcesSkyblockBingoGet200Response instantiates a new V2ResourcesSkyblockBingoGet200Response object
 This constructor will assign default values to properties that have it defined,
@@ -114,20 +114,20 @@ SetLastUpdated sets LastUpdated field to given value.
 
 ### GetModifier
 
-`func (o *V2ResourcesSkyblockBingoGet200Response) GetModifier() string`
+`func (o *V2ResourcesSkyblockBingoGet200Response) GetModifier() V2ResourcesSkyblockBingoGet200ResponseModifier`
 
 GetModifier returns the Modifier field if non-nil, zero value otherwise.
 
 ### GetModifierOk
 
-`func (o *V2ResourcesSkyblockBingoGet200Response) GetModifierOk() (*string, bool)`
+`func (o *V2ResourcesSkyblockBingoGet200Response) GetModifierOk() (*V2ResourcesSkyblockBingoGet200ResponseModifier, bool)`
 
 GetModifierOk returns a tuple with the Modifier field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetModifier
 
-`func (o *V2ResourcesSkyblockBingoGet200Response) SetModifier(v string)`
+`func (o *V2ResourcesSkyblockBingoGet200Response) SetModifier(v V2ResourcesSkyblockBingoGet200ResponseModifier)`
 
 SetModifier sets Modifier field to given value.
 

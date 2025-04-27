@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Banking** | Pointer to [**SkyBlockProfileBanking**](SkyBlockProfileBanking.md) |  | [optional] 
 **CommunityUpgrades** | Pointer to **map[string]interface{}** |  | [optional] 
 **CuteName** | Pointer to **string** | The cute name of the profile, only provided on the profiles endpoint | [optional] 
-**GameMode** | Pointer to **string** | The SkyBlock game mode of the profile, not present if normal mode | [optional] 
+**GameMode** | Pointer to [**SkyBlockProfileGameMode**](SkyBlockProfileGameMode.md) |  | [optional] 
 **Members** | Pointer to [**map[string]SkyBlockProfileMember**](SkyBlockProfileMember.md) | A map of profile member UUIDs to profile member objects | [optional] 
 **ProfileId** | Pointer to **string** |  | [optional] 
 **Selected** | Pointer to **bool** | Whether or not this is the currently selected profile, only provided on the profiles endpoint | [optional] 
@@ -108,20 +108,20 @@ HasCuteName returns a boolean if a field has been set.
 
 ### GetGameMode
 
-`func (o *SkyBlockProfile) GetGameMode() string`
+`func (o *SkyBlockProfile) GetGameMode() SkyBlockProfileGameMode`
 
 GetGameMode returns the GameMode field if non-nil, zero value otherwise.
 
 ### GetGameModeOk
 
-`func (o *SkyBlockProfile) GetGameModeOk() (*string, bool)`
+`func (o *SkyBlockProfile) GetGameModeOk() (*SkyBlockProfileGameMode, bool)`
 
 GetGameModeOk returns a tuple with the GameMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGameMode
 
-`func (o *SkyBlockProfile) SetGameMode(v string)`
+`func (o *SkyBlockProfile) SetGameMode(v SkyBlockProfileGameMode)`
 
 SetGameMode sets GameMode field to given value.
 
