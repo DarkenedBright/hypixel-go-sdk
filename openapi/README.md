@@ -172,6 +172,7 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberMiningCoreCrystalsCrystal](docs/SkyBlockProfileMemberMiningCoreCrystalsCrystal.md)
  - [SkyBlockProfileMemberMiningCoreCrystalsCrystalState](docs/SkyBlockProfileMemberMiningCoreCrystalsCrystalState.md)
  - [SkyBlockProfileMemberMiningCoreNodes](docs/SkyBlockProfileMemberMiningCoreNodes.md)
+ - [SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility](docs/SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility.md)
  - [SkyBlockProfileMemberRift](docs/SkyBlockProfileMemberRift.md)
  - [SkyBlockProfileMemberRiftBlackLagoon](docs/SkyBlockProfileMemberRiftBlackLagoon.md)
  - [SkyBlockProfileMemberRiftDeadCats](docs/SkyBlockProfileMemberRiftDeadCats.md)

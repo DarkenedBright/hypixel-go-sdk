@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **DailyOresMinedGemstone** | Pointer to **int64** |  | [optional] 
 **DailyOresMinedGlacite** | Pointer to **int64** |  | [optional] 
 **DailyOresMinedMithrilOre** | Pointer to **int64** |  | [optional] 
-**Experience** | **int64** |  | 
+**Experience** | **float64** |  | 
 **GreaterMinesLastAccess** | Pointer to **int64** |  | [optional] 
 **LastReset** | Pointer to **int64** |  | [optional] 
 **Nodes** | [**SkyBlockProfileMemberMiningCoreNodes**](SkyBlockProfileMemberMiningCoreNodes.md) |  | 
@@ -25,17 +25,20 @@ Name | Type | Description | Notes
 **PowderMithril** | **int64** |  | 
 **PowderMithrilTotal** | **int64** |  | 
 **PowderSpentGemstone** | Pointer to **int64** |  | [optional] 
+**CurrentDailyEffect** | Pointer to **string** |  | [optional] 
+**CurrentDailyEffectLastChanged** | Pointer to **int64** |  | [optional] 
 **PowderSpentGlacite** | Pointer to **int64** |  | [optional] 
 **PowderSpentMithril** | Pointer to **int64** |  | [optional] 
 **ReceivedFreeTier** | **bool** |  | 
 **RetroactiveTier2Token** | **bool** |  | 
+**SelectedPickaxeAbility** | Pointer to [**SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility**](SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility.md) |  | [optional] 
 **TokensSpent** | **int64** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberMiningCore
 
-`func NewSkyBlockProfileMemberMiningCore(experience int64, nodes SkyBlockProfileMemberMiningCoreNodes, powderMithril int64, powderMithrilTotal int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64, ) *SkyBlockProfileMemberMiningCore`
+`func NewSkyBlockProfileMemberMiningCore(experience float64, nodes SkyBlockProfileMemberMiningCoreNodes, powderMithril int64, powderMithrilTotal int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64, ) *SkyBlockProfileMemberMiningCore`
 
 NewSkyBlockProfileMemberMiningCore instantiates a new SkyBlockProfileMemberMiningCore object
 This constructor will assign default values to properties that have it defined,
@@ -302,20 +305,20 @@ HasDailyOresMinedMithrilOre returns a boolean if a field has been set.
 
 ### GetExperience
 
-`func (o *SkyBlockProfileMemberMiningCore) GetExperience() int64`
+`func (o *SkyBlockProfileMemberMiningCore) GetExperience() float64`
 
 GetExperience returns the Experience field if non-nil, zero value otherwise.
 
 ### GetExperienceOk
 
-`func (o *SkyBlockProfileMemberMiningCore) GetExperienceOk() (*int64, bool)`
+`func (o *SkyBlockProfileMemberMiningCore) GetExperienceOk() (*float64, bool)`
 
 GetExperienceOk returns a tuple with the Experience field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExperience
 
-`func (o *SkyBlockProfileMemberMiningCore) SetExperience(v int64)`
+`func (o *SkyBlockProfileMemberMiningCore) SetExperience(v float64)`
 
 SetExperience sets Experience field to given value.
 
@@ -555,6 +558,56 @@ SetPowderSpentGemstone sets PowderSpentGemstone field to given value.
 
 HasPowderSpentGemstone returns a boolean if a field has been set.
 
+### GetCurrentDailyEffect
+
+`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffect() string`
+
+GetCurrentDailyEffect returns the CurrentDailyEffect field if non-nil, zero value otherwise.
+
+### GetCurrentDailyEffectOk
+
+`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectOk() (*string, bool)`
+
+GetCurrentDailyEffectOk returns a tuple with the CurrentDailyEffect field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCurrentDailyEffect
+
+`func (o *SkyBlockProfileMemberMiningCore) SetCurrentDailyEffect(v string)`
+
+SetCurrentDailyEffect sets CurrentDailyEffect field to given value.
+
+### HasCurrentDailyEffect
+
+`func (o *SkyBlockProfileMemberMiningCore) HasCurrentDailyEffect() bool`
+
+HasCurrentDailyEffect returns a boolean if a field has been set.
+
+### GetCurrentDailyEffectLastChanged
+
+`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectLastChanged() int64`
+
+GetCurrentDailyEffectLastChanged returns the CurrentDailyEffectLastChanged field if non-nil, zero value otherwise.
+
+### GetCurrentDailyEffectLastChangedOk
+
+`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectLastChangedOk() (*int64, bool)`
+
+GetCurrentDailyEffectLastChangedOk returns a tuple with the CurrentDailyEffectLastChanged field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCurrentDailyEffectLastChanged
+
+`func (o *SkyBlockProfileMemberMiningCore) SetCurrentDailyEffectLastChanged(v int64)`
+
+SetCurrentDailyEffectLastChanged sets CurrentDailyEffectLastChanged field to given value.
+
+### HasCurrentDailyEffectLastChanged
+
+`func (o *SkyBlockProfileMemberMiningCore) HasCurrentDailyEffectLastChanged() bool`
+
+HasCurrentDailyEffectLastChanged returns a boolean if a field has been set.
+
 ### GetPowderSpentGlacite
 
 `func (o *SkyBlockProfileMemberMiningCore) GetPowderSpentGlacite() int64`
@@ -644,6 +697,31 @@ and a boolean to check if the value has been set.
 
 SetRetroactiveTier2Token sets RetroactiveTier2Token field to given value.
 
+
+### GetSelectedPickaxeAbility
+
+`func (o *SkyBlockProfileMemberMiningCore) GetSelectedPickaxeAbility() SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility`
+
+GetSelectedPickaxeAbility returns the SelectedPickaxeAbility field if non-nil, zero value otherwise.
+
+### GetSelectedPickaxeAbilityOk
+
+`func (o *SkyBlockProfileMemberMiningCore) GetSelectedPickaxeAbilityOk() (*SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility, bool)`
+
+GetSelectedPickaxeAbilityOk returns a tuple with the SelectedPickaxeAbility field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSelectedPickaxeAbility
+
+`func (o *SkyBlockProfileMemberMiningCore) SetSelectedPickaxeAbility(v SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility)`
+
+SetSelectedPickaxeAbility sets SelectedPickaxeAbility field to given value.
+
+### HasSelectedPickaxeAbility
+
+`func (o *SkyBlockProfileMemberMiningCore) HasSelectedPickaxeAbility() bool`
+
+HasSelectedPickaxeAbility returns a boolean if a field has been set.
 
 ### GetTokensSpent
 

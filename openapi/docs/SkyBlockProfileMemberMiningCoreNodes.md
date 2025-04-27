@@ -6,29 +6,32 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AnomalousDesire** | Pointer to **int64** |  | [optional] 
 **Blockhead** | Pointer to **int64** |  | [optional] 
-**CoreOfTheMountain** | Pointer to **int64** |  | [optional] 
 **Crystalline** | Pointer to **int64** |  | [optional] 
+**DailyEffect** | Pointer to **int64** |  | [optional] 
 **DailyGrind** | Pointer to **int64** |  | [optional] 
 **DailyPowder** | Pointer to **int64** |  | [optional] 
 **DeadMansChest** | Pointer to **int64** |  | [optional] 
 **EagerAdventurer** | Pointer to **int64** |  | [optional] 
 **EfficientMiner** | Pointer to **int64** |  | [optional] 
-**FortunateMineman** | Pointer to **int64** |  | [optional] 
+**ForgeTime** | Pointer to **int64** |  | [optional] 
+**Fortunate** | Pointer to **int64** |  | [optional] 
 **FrontLoaded** | Pointer to **int64** |  | [optional] 
-**GemLover** | Pointer to **int64** |  | [optional] 
 **GemstoneInfusion** | Pointer to **int64** |  | [optional] 
 **GiftsFromTheDeparted** | Pointer to **int64** |  | [optional] 
 **GreatExplorer** | Pointer to **int64** |  | [optional] 
 **KeepItCool** | Pointer to **int64** |  | [optional] 
 **LonesomeMiner** | Pointer to **int64** |  | [optional] 
-**LuckOfTheCave** | Pointer to **int64** |  | [optional] 
 **ManiacMiner** | Pointer to **int64** |  | [optional] 
 **MetalHead** | Pointer to **int64** |  | [optional] 
 **MinersBlessing** | Pointer to **int64** |  | [optional] 
 **MineshaftMayhem** | Pointer to **int64** |  | [optional] 
+**MiningExperience** | Pointer to **int64** |  | [optional] 
 **MiningFortune** | Pointer to **int64** |  | [optional] 
+**MiningFortune2** | Pointer to **int64** |  | [optional] 
+**MiningMadness** | Pointer to **int64** |  | [optional] 
 **MiningMaster** | Pointer to **int64** |  | [optional] 
 **MiningSpeed** | Pointer to **int64** |  | [optional] 
+**MiningSpeed2** | Pointer to **int64** |  | [optional] 
 **MiningSpeedBoost** | Pointer to **int64** |  | [optional] 
 **Mole** | Pointer to **int64** |  | [optional] 
 **NoStoneUnturned** | Pointer to **int64** |  | [optional] 
@@ -37,12 +40,10 @@ Name | Type | Description | Notes
 **PowderBuff** | Pointer to **int64** |  | [optional] 
 **PrecisionMining** | Pointer to **int64** |  | [optional] 
 **Professional** | Pointer to **int64** |  | [optional] 
-**QuickForge** | Pointer to **int64** |  | [optional] 
 **RagsToRiches** | Pointer to **int64** |  | [optional] 
-**SeasonedMineman** | Pointer to **int64** |  | [optional] 
+**RandomEvent** | Pointer to **int64** |  | [optional] 
 **SheerForce** | Pointer to **int64** |  | [optional] 
-**SkyMall** | Pointer to **int64** |  | [optional] 
-**SpeedyMineman** | Pointer to **int64** |  | [optional] 
+**Special0** | Pointer to **int64** |  | [optional] 
 **SteadyHand** | Pointer to **int64** |  | [optional] 
 **StrongArm** | Pointer to **int64** |  | [optional] 
 **SubterraneanFisher** | Pointer to **int64** |  | [optional] 
@@ -120,31 +121,6 @@ SetBlockhead sets Blockhead field to given value.
 
 HasBlockhead returns a boolean if a field has been set.
 
-### GetCoreOfTheMountain
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetCoreOfTheMountain() int64`
-
-GetCoreOfTheMountain returns the CoreOfTheMountain field if non-nil, zero value otherwise.
-
-### GetCoreOfTheMountainOk
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetCoreOfTheMountainOk() (*int64, bool)`
-
-GetCoreOfTheMountainOk returns a tuple with the CoreOfTheMountain field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCoreOfTheMountain
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) SetCoreOfTheMountain(v int64)`
-
-SetCoreOfTheMountain sets CoreOfTheMountain field to given value.
-
-### HasCoreOfTheMountain
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) HasCoreOfTheMountain() bool`
-
-HasCoreOfTheMountain returns a boolean if a field has been set.
-
 ### GetCrystalline
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetCrystalline() int64`
@@ -169,6 +145,31 @@ SetCrystalline sets Crystalline field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasCrystalline() bool`
 
 HasCrystalline returns a boolean if a field has been set.
+
+### GetDailyEffect
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetDailyEffect() int64`
+
+GetDailyEffect returns the DailyEffect field if non-nil, zero value otherwise.
+
+### GetDailyEffectOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetDailyEffectOk() (*int64, bool)`
+
+GetDailyEffectOk returns a tuple with the DailyEffect field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDailyEffect
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetDailyEffect(v int64)`
+
+SetDailyEffect sets DailyEffect field to given value.
+
+### HasDailyEffect
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasDailyEffect() bool`
+
+HasDailyEffect returns a boolean if a field has been set.
 
 ### GetDailyGrind
 
@@ -295,30 +296,55 @@ SetEfficientMiner sets EfficientMiner field to given value.
 
 HasEfficientMiner returns a boolean if a field has been set.
 
-### GetFortunateMineman
+### GetForgeTime
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetFortunateMineman() int64`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetForgeTime() int64`
 
-GetFortunateMineman returns the FortunateMineman field if non-nil, zero value otherwise.
+GetForgeTime returns the ForgeTime field if non-nil, zero value otherwise.
 
-### GetFortunateMinemanOk
+### GetForgeTimeOk
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetFortunateMinemanOk() (*int64, bool)`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetForgeTimeOk() (*int64, bool)`
 
-GetFortunateMinemanOk returns a tuple with the FortunateMineman field if it's non-nil, zero value otherwise
+GetForgeTimeOk returns a tuple with the ForgeTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFortunateMineman
+### SetForgeTime
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) SetFortunateMineman(v int64)`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetForgeTime(v int64)`
 
-SetFortunateMineman sets FortunateMineman field to given value.
+SetForgeTime sets ForgeTime field to given value.
 
-### HasFortunateMineman
+### HasForgeTime
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) HasFortunateMineman() bool`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasForgeTime() bool`
 
-HasFortunateMineman returns a boolean if a field has been set.
+HasForgeTime returns a boolean if a field has been set.
+
+### GetFortunate
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetFortunate() int64`
+
+GetFortunate returns the Fortunate field if non-nil, zero value otherwise.
+
+### GetFortunateOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetFortunateOk() (*int64, bool)`
+
+GetFortunateOk returns a tuple with the Fortunate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFortunate
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetFortunate(v int64)`
+
+SetFortunate sets Fortunate field to given value.
+
+### HasFortunate
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasFortunate() bool`
+
+HasFortunate returns a boolean if a field has been set.
 
 ### GetFrontLoaded
 
@@ -344,31 +370,6 @@ SetFrontLoaded sets FrontLoaded field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasFrontLoaded() bool`
 
 HasFrontLoaded returns a boolean if a field has been set.
-
-### GetGemLover
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetGemLover() int64`
-
-GetGemLover returns the GemLover field if non-nil, zero value otherwise.
-
-### GetGemLoverOk
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetGemLoverOk() (*int64, bool)`
-
-GetGemLoverOk returns a tuple with the GemLover field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGemLover
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) SetGemLover(v int64)`
-
-SetGemLover sets GemLover field to given value.
-
-### HasGemLover
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) HasGemLover() bool`
-
-HasGemLover returns a boolean if a field has been set.
 
 ### GetGemstoneInfusion
 
@@ -495,31 +496,6 @@ SetLonesomeMiner sets LonesomeMiner field to given value.
 
 HasLonesomeMiner returns a boolean if a field has been set.
 
-### GetLuckOfTheCave
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetLuckOfTheCave() int64`
-
-GetLuckOfTheCave returns the LuckOfTheCave field if non-nil, zero value otherwise.
-
-### GetLuckOfTheCaveOk
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetLuckOfTheCaveOk() (*int64, bool)`
-
-GetLuckOfTheCaveOk returns a tuple with the LuckOfTheCave field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLuckOfTheCave
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) SetLuckOfTheCave(v int64)`
-
-SetLuckOfTheCave sets LuckOfTheCave field to given value.
-
-### HasLuckOfTheCave
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) HasLuckOfTheCave() bool`
-
-HasLuckOfTheCave returns a boolean if a field has been set.
-
 ### GetManiacMiner
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetManiacMiner() int64`
@@ -620,6 +596,31 @@ SetMineshaftMayhem sets MineshaftMayhem field to given value.
 
 HasMineshaftMayhem returns a boolean if a field has been set.
 
+### GetMiningExperience
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningExperience() int64`
+
+GetMiningExperience returns the MiningExperience field if non-nil, zero value otherwise.
+
+### GetMiningExperienceOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningExperienceOk() (*int64, bool)`
+
+GetMiningExperienceOk returns a tuple with the MiningExperience field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMiningExperience
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetMiningExperience(v int64)`
+
+SetMiningExperience sets MiningExperience field to given value.
+
+### HasMiningExperience
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningExperience() bool`
+
+HasMiningExperience returns a boolean if a field has been set.
+
 ### GetMiningFortune
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningFortune() int64`
@@ -644,6 +645,56 @@ SetMiningFortune sets MiningFortune field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningFortune() bool`
 
 HasMiningFortune returns a boolean if a field has been set.
+
+### GetMiningFortune2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningFortune2() int64`
+
+GetMiningFortune2 returns the MiningFortune2 field if non-nil, zero value otherwise.
+
+### GetMiningFortune2Ok
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningFortune2Ok() (*int64, bool)`
+
+GetMiningFortune2Ok returns a tuple with the MiningFortune2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMiningFortune2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetMiningFortune2(v int64)`
+
+SetMiningFortune2 sets MiningFortune2 field to given value.
+
+### HasMiningFortune2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningFortune2() bool`
+
+HasMiningFortune2 returns a boolean if a field has been set.
+
+### GetMiningMadness
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningMadness() int64`
+
+GetMiningMadness returns the MiningMadness field if non-nil, zero value otherwise.
+
+### GetMiningMadnessOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningMadnessOk() (*int64, bool)`
+
+GetMiningMadnessOk returns a tuple with the MiningMadness field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMiningMadness
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetMiningMadness(v int64)`
+
+SetMiningMadness sets MiningMadness field to given value.
+
+### HasMiningMadness
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningMadness() bool`
+
+HasMiningMadness returns a boolean if a field has been set.
 
 ### GetMiningMaster
 
@@ -694,6 +745,31 @@ SetMiningSpeed sets MiningSpeed field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningSpeed() bool`
 
 HasMiningSpeed returns a boolean if a field has been set.
+
+### GetMiningSpeed2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningSpeed2() int64`
+
+GetMiningSpeed2 returns the MiningSpeed2 field if non-nil, zero value otherwise.
+
+### GetMiningSpeed2Ok
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningSpeed2Ok() (*int64, bool)`
+
+GetMiningSpeed2Ok returns a tuple with the MiningSpeed2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMiningSpeed2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetMiningSpeed2(v int64)`
+
+SetMiningSpeed2 sets MiningSpeed2 field to given value.
+
+### HasMiningSpeed2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningSpeed2() bool`
+
+HasMiningSpeed2 returns a boolean if a field has been set.
 
 ### GetMiningSpeedBoost
 
@@ -895,31 +971,6 @@ SetProfessional sets Professional field to given value.
 
 HasProfessional returns a boolean if a field has been set.
 
-### GetQuickForge
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetQuickForge() int64`
-
-GetQuickForge returns the QuickForge field if non-nil, zero value otherwise.
-
-### GetQuickForgeOk
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetQuickForgeOk() (*int64, bool)`
-
-GetQuickForgeOk returns a tuple with the QuickForge field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetQuickForge
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) SetQuickForge(v int64)`
-
-SetQuickForge sets QuickForge field to given value.
-
-### HasQuickForge
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) HasQuickForge() bool`
-
-HasQuickForge returns a boolean if a field has been set.
-
 ### GetRagsToRiches
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetRagsToRiches() int64`
@@ -945,30 +996,30 @@ SetRagsToRiches sets RagsToRiches field to given value.
 
 HasRagsToRiches returns a boolean if a field has been set.
 
-### GetSeasonedMineman
+### GetRandomEvent
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetSeasonedMineman() int64`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetRandomEvent() int64`
 
-GetSeasonedMineman returns the SeasonedMineman field if non-nil, zero value otherwise.
+GetRandomEvent returns the RandomEvent field if non-nil, zero value otherwise.
 
-### GetSeasonedMinemanOk
+### GetRandomEventOk
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetSeasonedMinemanOk() (*int64, bool)`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetRandomEventOk() (*int64, bool)`
 
-GetSeasonedMinemanOk returns a tuple with the SeasonedMineman field if it's non-nil, zero value otherwise
+GetRandomEventOk returns a tuple with the RandomEvent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSeasonedMineman
+### SetRandomEvent
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) SetSeasonedMineman(v int64)`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetRandomEvent(v int64)`
 
-SetSeasonedMineman sets SeasonedMineman field to given value.
+SetRandomEvent sets RandomEvent field to given value.
 
-### HasSeasonedMineman
+### HasRandomEvent
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) HasSeasonedMineman() bool`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasRandomEvent() bool`
 
-HasSeasonedMineman returns a boolean if a field has been set.
+HasRandomEvent returns a boolean if a field has been set.
 
 ### GetSheerForce
 
@@ -995,55 +1046,30 @@ SetSheerForce sets SheerForce field to given value.
 
 HasSheerForce returns a boolean if a field has been set.
 
-### GetSkyMall
+### GetSpecial0
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetSkyMall() int64`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetSpecial0() int64`
 
-GetSkyMall returns the SkyMall field if non-nil, zero value otherwise.
+GetSpecial0 returns the Special0 field if non-nil, zero value otherwise.
 
-### GetSkyMallOk
+### GetSpecial0Ok
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetSkyMallOk() (*int64, bool)`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetSpecial0Ok() (*int64, bool)`
 
-GetSkyMallOk returns a tuple with the SkyMall field if it's non-nil, zero value otherwise
+GetSpecial0Ok returns a tuple with the Special0 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSkyMall
+### SetSpecial0
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) SetSkyMall(v int64)`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetSpecial0(v int64)`
 
-SetSkyMall sets SkyMall field to given value.
+SetSpecial0 sets Special0 field to given value.
 
-### HasSkyMall
+### HasSpecial0
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) HasSkyMall() bool`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasSpecial0() bool`
 
-HasSkyMall returns a boolean if a field has been set.
-
-### GetSpeedyMineman
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetSpeedyMineman() int64`
-
-GetSpeedyMineman returns the SpeedyMineman field if non-nil, zero value otherwise.
-
-### GetSpeedyMinemanOk
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetSpeedyMinemanOk() (*int64, bool)`
-
-GetSpeedyMinemanOk returns a tuple with the SpeedyMineman field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSpeedyMineman
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) SetSpeedyMineman(v int64)`
-
-SetSpeedyMineman sets SpeedyMineman field to given value.
-
-### HasSpeedyMineman
-
-`func (o *SkyBlockProfileMemberMiningCoreNodes) HasSpeedyMineman() bool`
-
-HasSpeedyMineman returns a boolean if a field has been set.
+HasSpecial0 returns a boolean if a field has been set.
 
 ### GetSteadyHand
 

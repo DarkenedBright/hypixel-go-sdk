@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**State** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystalState**](SkyBlockProfileMemberMiningCoreCrystalsCrystalState.md) |  | 
-**TotalFound** | **int64** |  | 
+**State** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystalState**](SkyBlockProfileMemberMiningCoreCrystalsCrystalState.md) |  | [optional] 
+**TotalFound** | Pointer to **int64** |  | [optional] 
 **TotalPlaced** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberMiningCoreCrystalsCrystal
 
-`func NewSkyBlockProfileMemberMiningCoreCrystalsCrystal(state SkyBlockProfileMemberMiningCoreCrystalsCrystalState, totalFound int64, ) *SkyBlockProfileMemberMiningCoreCrystalsCrystal`
+`func NewSkyBlockProfileMemberMiningCoreCrystalsCrystal() *SkyBlockProfileMemberMiningCoreCrystalsCrystal`
 
 NewSkyBlockProfileMemberMiningCoreCrystalsCrystal instantiates a new SkyBlockProfileMemberMiningCoreCrystalsCrystal object
 This constructor will assign default values to properties that have it defined,
@@ -46,6 +46,11 @@ and a boolean to check if the value has been set.
 
 SetState sets State field to given value.
 
+### HasState
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) HasState() bool`
+
+HasState returns a boolean if a field has been set.
 
 ### GetTotalFound
 
@@ -66,6 +71,11 @@ and a boolean to check if the value has been set.
 
 SetTotalFound sets TotalFound field to given value.
 
+### HasTotalFound
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) HasTotalFound() bool`
+
+HasTotalFound returns a boolean if a field has been set.
 
 ### GetTotalPlaced
 

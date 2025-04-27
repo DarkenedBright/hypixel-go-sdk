@@ -21,29 +21,32 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCoreNodes{}
 type SkyBlockProfileMemberMiningCoreNodes struct {
 	AnomalousDesire      *int64 `json:"anomalous_desire,omitempty"`
 	Blockhead            *int64 `json:"blockhead,omitempty"`
-	CoreOfTheMountain    *int64 `json:"core_of_the_mountain,omitempty"`
 	Crystalline          *int64 `json:"crystalline,omitempty"`
+	DailyEffect          *int64 `json:"daily_effect,omitempty"`
 	DailyGrind           *int64 `json:"daily_grind,omitempty"`
 	DailyPowder          *int64 `json:"daily_powder,omitempty"`
 	DeadMansChest        *int64 `json:"dead_mans_chest,omitempty"`
 	EagerAdventurer      *int64 `json:"eager_adventurer,omitempty"`
 	EfficientMiner       *int64 `json:"efficient_miner,omitempty"`
-	FortunateMineman     *int64 `json:"fortunate_mineman,omitempty"`
+	ForgeTime            *int64 `json:"forge_time,omitempty"`
+	Fortunate            *int64 `json:"fortunate,omitempty"`
 	FrontLoaded          *int64 `json:"front_loaded,omitempty"`
-	GemLover             *int64 `json:"gem_lover,omitempty"`
 	GemstoneInfusion     *int64 `json:"gemstone_infusion,omitempty"`
 	GiftsFromTheDeparted *int64 `json:"gifts_from_the_departed,omitempty"`
 	GreatExplorer        *int64 `json:"great_explorer,omitempty"`
 	KeepItCool           *int64 `json:"keep_it_cool,omitempty"`
 	LonesomeMiner        *int64 `json:"lonesome_miner,omitempty"`
-	LuckOfTheCave        *int64 `json:"luck_of_the_cave,omitempty"`
 	ManiacMiner          *int64 `json:"maniac_miner,omitempty"`
 	MetalHead            *int64 `json:"metal_head,omitempty"`
 	MinersBlessing       *int64 `json:"miners_blessing,omitempty"`
 	MineshaftMayhem      *int64 `json:"mineshaft_mayhem,omitempty"`
+	MiningExperience     *int64 `json:"mining_experience,omitempty"`
 	MiningFortune        *int64 `json:"mining_fortune,omitempty"`
+	MiningFortune2       *int64 `json:"mining_fortune_2,omitempty"`
+	MiningMadness        *int64 `json:"mining_madness,omitempty"`
 	MiningMaster         *int64 `json:"mining_master,omitempty"`
 	MiningSpeed          *int64 `json:"mining_speed,omitempty"`
+	MiningSpeed2         *int64 `json:"mining_speed_2,omitempty"`
 	MiningSpeedBoost     *int64 `json:"mining_speed_boost,omitempty"`
 	Mole                 *int64 `json:"mole,omitempty"`
 	NoStoneUnturned      *int64 `json:"no_stone_unturned,omitempty"`
@@ -52,12 +55,10 @@ type SkyBlockProfileMemberMiningCoreNodes struct {
 	PowderBuff           *int64 `json:"powder_buff,omitempty"`
 	PrecisionMining      *int64 `json:"precision_mining,omitempty"`
 	Professional         *int64 `json:"professional,omitempty"`
-	QuickForge           *int64 `json:"quick_forge,omitempty"`
 	RagsToRiches         *int64 `json:"rags_to_riches,omitempty"`
-	SeasonedMineman      *int64 `json:"seasoned_mineman,omitempty"`
+	RandomEvent          *int64 `json:"random_event,omitempty"`
 	SheerForce           *int64 `json:"sheer_force,omitempty"`
-	SkyMall              *int64 `json:"sky_mall,omitempty"`
-	SpeedyMineman        *int64 `json:"speedy_mineman,omitempty"`
+	Special0             *int64 `json:"special_0,omitempty"`
 	SteadyHand           *int64 `json:"steady_hand,omitempty"`
 	StrongArm            *int64 `json:"strong_arm,omitempty"`
 	SubterraneanFisher   *int64 `json:"subterranean_fisher,omitempty"`
@@ -148,38 +149,6 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetBlockhead(v int64) {
 	o.Blockhead = &v
 }
 
-// GetCoreOfTheMountain returns the CoreOfTheMountain field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetCoreOfTheMountain() int64 {
-	if o == nil || IsNil(o.CoreOfTheMountain) {
-		var ret int64
-		return ret
-	}
-	return *o.CoreOfTheMountain
-}
-
-// GetCoreOfTheMountainOk returns a tuple with the CoreOfTheMountain field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetCoreOfTheMountainOk() (*int64, bool) {
-	if o == nil || IsNil(o.CoreOfTheMountain) {
-		return nil, false
-	}
-	return o.CoreOfTheMountain, true
-}
-
-// HasCoreOfTheMountain returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) HasCoreOfTheMountain() bool {
-	if o != nil && !IsNil(o.CoreOfTheMountain) {
-		return true
-	}
-
-	return false
-}
-
-// SetCoreOfTheMountain gets a reference to the given int64 and assigns it to the CoreOfTheMountain field.
-func (o *SkyBlockProfileMemberMiningCoreNodes) SetCoreOfTheMountain(v int64) {
-	o.CoreOfTheMountain = &v
-}
-
 // GetCrystalline returns the Crystalline field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetCrystalline() int64 {
 	if o == nil || IsNil(o.Crystalline) {
@@ -210,6 +179,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasCrystalline() bool {
 // SetCrystalline gets a reference to the given int64 and assigns it to the Crystalline field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetCrystalline(v int64) {
 	o.Crystalline = &v
+}
+
+// GetDailyEffect returns the DailyEffect field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetDailyEffect() int64 {
+	if o == nil || IsNil(o.DailyEffect) {
+		var ret int64
+		return ret
+	}
+	return *o.DailyEffect
+}
+
+// GetDailyEffectOk returns a tuple with the DailyEffect field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetDailyEffectOk() (*int64, bool) {
+	if o == nil || IsNil(o.DailyEffect) {
+		return nil, false
+	}
+	return o.DailyEffect, true
+}
+
+// HasDailyEffect returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasDailyEffect() bool {
+	if o != nil && !IsNil(o.DailyEffect) {
+		return true
+	}
+
+	return false
+}
+
+// SetDailyEffect gets a reference to the given int64 and assigns it to the DailyEffect field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetDailyEffect(v int64) {
+	o.DailyEffect = &v
 }
 
 // GetDailyGrind returns the DailyGrind field value if set, zero value otherwise.
@@ -372,36 +373,68 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetEfficientMiner(v int64) {
 	o.EfficientMiner = &v
 }
 
-// GetFortunateMineman returns the FortunateMineman field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetFortunateMineman() int64 {
-	if o == nil || IsNil(o.FortunateMineman) {
+// GetForgeTime returns the ForgeTime field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetForgeTime() int64 {
+	if o == nil || IsNil(o.ForgeTime) {
 		var ret int64
 		return ret
 	}
-	return *o.FortunateMineman
+	return *o.ForgeTime
 }
 
-// GetFortunateMinemanOk returns a tuple with the FortunateMineman field value if set, nil otherwise
+// GetForgeTimeOk returns a tuple with the ForgeTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetFortunateMinemanOk() (*int64, bool) {
-	if o == nil || IsNil(o.FortunateMineman) {
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetForgeTimeOk() (*int64, bool) {
+	if o == nil || IsNil(o.ForgeTime) {
 		return nil, false
 	}
-	return o.FortunateMineman, true
+	return o.ForgeTime, true
 }
 
-// HasFortunateMineman returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) HasFortunateMineman() bool {
-	if o != nil && !IsNil(o.FortunateMineman) {
+// HasForgeTime returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasForgeTime() bool {
+	if o != nil && !IsNil(o.ForgeTime) {
 		return true
 	}
 
 	return false
 }
 
-// SetFortunateMineman gets a reference to the given int64 and assigns it to the FortunateMineman field.
-func (o *SkyBlockProfileMemberMiningCoreNodes) SetFortunateMineman(v int64) {
-	o.FortunateMineman = &v
+// SetForgeTime gets a reference to the given int64 and assigns it to the ForgeTime field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetForgeTime(v int64) {
+	o.ForgeTime = &v
+}
+
+// GetFortunate returns the Fortunate field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetFortunate() int64 {
+	if o == nil || IsNil(o.Fortunate) {
+		var ret int64
+		return ret
+	}
+	return *o.Fortunate
+}
+
+// GetFortunateOk returns a tuple with the Fortunate field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetFortunateOk() (*int64, bool) {
+	if o == nil || IsNil(o.Fortunate) {
+		return nil, false
+	}
+	return o.Fortunate, true
+}
+
+// HasFortunate returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasFortunate() bool {
+	if o != nil && !IsNil(o.Fortunate) {
+		return true
+	}
+
+	return false
+}
+
+// SetFortunate gets a reference to the given int64 and assigns it to the Fortunate field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetFortunate(v int64) {
+	o.Fortunate = &v
 }
 
 // GetFrontLoaded returns the FrontLoaded field value if set, zero value otherwise.
@@ -434,38 +467,6 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasFrontLoaded() bool {
 // SetFrontLoaded gets a reference to the given int64 and assigns it to the FrontLoaded field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetFrontLoaded(v int64) {
 	o.FrontLoaded = &v
-}
-
-// GetGemLover returns the GemLover field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetGemLover() int64 {
-	if o == nil || IsNil(o.GemLover) {
-		var ret int64
-		return ret
-	}
-	return *o.GemLover
-}
-
-// GetGemLoverOk returns a tuple with the GemLover field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetGemLoverOk() (*int64, bool) {
-	if o == nil || IsNil(o.GemLover) {
-		return nil, false
-	}
-	return o.GemLover, true
-}
-
-// HasGemLover returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) HasGemLover() bool {
-	if o != nil && !IsNil(o.GemLover) {
-		return true
-	}
-
-	return false
-}
-
-// SetGemLover gets a reference to the given int64 and assigns it to the GemLover field.
-func (o *SkyBlockProfileMemberMiningCoreNodes) SetGemLover(v int64) {
-	o.GemLover = &v
 }
 
 // GetGemstoneInfusion returns the GemstoneInfusion field value if set, zero value otherwise.
@@ -628,38 +629,6 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetLonesomeMiner(v int64) {
 	o.LonesomeMiner = &v
 }
 
-// GetLuckOfTheCave returns the LuckOfTheCave field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetLuckOfTheCave() int64 {
-	if o == nil || IsNil(o.LuckOfTheCave) {
-		var ret int64
-		return ret
-	}
-	return *o.LuckOfTheCave
-}
-
-// GetLuckOfTheCaveOk returns a tuple with the LuckOfTheCave field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetLuckOfTheCaveOk() (*int64, bool) {
-	if o == nil || IsNil(o.LuckOfTheCave) {
-		return nil, false
-	}
-	return o.LuckOfTheCave, true
-}
-
-// HasLuckOfTheCave returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) HasLuckOfTheCave() bool {
-	if o != nil && !IsNil(o.LuckOfTheCave) {
-		return true
-	}
-
-	return false
-}
-
-// SetLuckOfTheCave gets a reference to the given int64 and assigns it to the LuckOfTheCave field.
-func (o *SkyBlockProfileMemberMiningCoreNodes) SetLuckOfTheCave(v int64) {
-	o.LuckOfTheCave = &v
-}
-
 // GetManiacMiner returns the ManiacMiner field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetManiacMiner() int64 {
 	if o == nil || IsNil(o.ManiacMiner) {
@@ -788,6 +757,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetMineshaftMayhem(v int64) {
 	o.MineshaftMayhem = &v
 }
 
+// GetMiningExperience returns the MiningExperience field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningExperience() int64 {
+	if o == nil || IsNil(o.MiningExperience) {
+		var ret int64
+		return ret
+	}
+	return *o.MiningExperience
+}
+
+// GetMiningExperienceOk returns a tuple with the MiningExperience field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningExperienceOk() (*int64, bool) {
+	if o == nil || IsNil(o.MiningExperience) {
+		return nil, false
+	}
+	return o.MiningExperience, true
+}
+
+// HasMiningExperience returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningExperience() bool {
+	if o != nil && !IsNil(o.MiningExperience) {
+		return true
+	}
+
+	return false
+}
+
+// SetMiningExperience gets a reference to the given int64 and assigns it to the MiningExperience field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetMiningExperience(v int64) {
+	o.MiningExperience = &v
+}
+
 // GetMiningFortune returns the MiningFortune field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningFortune() int64 {
 	if o == nil || IsNil(o.MiningFortune) {
@@ -818,6 +819,70 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningFortune() bool {
 // SetMiningFortune gets a reference to the given int64 and assigns it to the MiningFortune field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetMiningFortune(v int64) {
 	o.MiningFortune = &v
+}
+
+// GetMiningFortune2 returns the MiningFortune2 field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningFortune2() int64 {
+	if o == nil || IsNil(o.MiningFortune2) {
+		var ret int64
+		return ret
+	}
+	return *o.MiningFortune2
+}
+
+// GetMiningFortune2Ok returns a tuple with the MiningFortune2 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningFortune2Ok() (*int64, bool) {
+	if o == nil || IsNil(o.MiningFortune2) {
+		return nil, false
+	}
+	return o.MiningFortune2, true
+}
+
+// HasMiningFortune2 returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningFortune2() bool {
+	if o != nil && !IsNil(o.MiningFortune2) {
+		return true
+	}
+
+	return false
+}
+
+// SetMiningFortune2 gets a reference to the given int64 and assigns it to the MiningFortune2 field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetMiningFortune2(v int64) {
+	o.MiningFortune2 = &v
+}
+
+// GetMiningMadness returns the MiningMadness field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningMadness() int64 {
+	if o == nil || IsNil(o.MiningMadness) {
+		var ret int64
+		return ret
+	}
+	return *o.MiningMadness
+}
+
+// GetMiningMadnessOk returns a tuple with the MiningMadness field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningMadnessOk() (*int64, bool) {
+	if o == nil || IsNil(o.MiningMadness) {
+		return nil, false
+	}
+	return o.MiningMadness, true
+}
+
+// HasMiningMadness returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningMadness() bool {
+	if o != nil && !IsNil(o.MiningMadness) {
+		return true
+	}
+
+	return false
+}
+
+// SetMiningMadness gets a reference to the given int64 and assigns it to the MiningMadness field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetMiningMadness(v int64) {
+	o.MiningMadness = &v
 }
 
 // GetMiningMaster returns the MiningMaster field value if set, zero value otherwise.
@@ -882,6 +947,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningSpeed() bool {
 // SetMiningSpeed gets a reference to the given int64 and assigns it to the MiningSpeed field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetMiningSpeed(v int64) {
 	o.MiningSpeed = &v
+}
+
+// GetMiningSpeed2 returns the MiningSpeed2 field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningSpeed2() int64 {
+	if o == nil || IsNil(o.MiningSpeed2) {
+		var ret int64
+		return ret
+	}
+	return *o.MiningSpeed2
+}
+
+// GetMiningSpeed2Ok returns a tuple with the MiningSpeed2 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetMiningSpeed2Ok() (*int64, bool) {
+	if o == nil || IsNil(o.MiningSpeed2) {
+		return nil, false
+	}
+	return o.MiningSpeed2, true
+}
+
+// HasMiningSpeed2 returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasMiningSpeed2() bool {
+	if o != nil && !IsNil(o.MiningSpeed2) {
+		return true
+	}
+
+	return false
+}
+
+// SetMiningSpeed2 gets a reference to the given int64 and assigns it to the MiningSpeed2 field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetMiningSpeed2(v int64) {
+	o.MiningSpeed2 = &v
 }
 
 // GetMiningSpeedBoost returns the MiningSpeedBoost field value if set, zero value otherwise.
@@ -1140,38 +1237,6 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetProfessional(v int64) {
 	o.Professional = &v
 }
 
-// GetQuickForge returns the QuickForge field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetQuickForge() int64 {
-	if o == nil || IsNil(o.QuickForge) {
-		var ret int64
-		return ret
-	}
-	return *o.QuickForge
-}
-
-// GetQuickForgeOk returns a tuple with the QuickForge field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetQuickForgeOk() (*int64, bool) {
-	if o == nil || IsNil(o.QuickForge) {
-		return nil, false
-	}
-	return o.QuickForge, true
-}
-
-// HasQuickForge returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) HasQuickForge() bool {
-	if o != nil && !IsNil(o.QuickForge) {
-		return true
-	}
-
-	return false
-}
-
-// SetQuickForge gets a reference to the given int64 and assigns it to the QuickForge field.
-func (o *SkyBlockProfileMemberMiningCoreNodes) SetQuickForge(v int64) {
-	o.QuickForge = &v
-}
-
 // GetRagsToRiches returns the RagsToRiches field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetRagsToRiches() int64 {
 	if o == nil || IsNil(o.RagsToRiches) {
@@ -1204,36 +1269,36 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetRagsToRiches(v int64) {
 	o.RagsToRiches = &v
 }
 
-// GetSeasonedMineman returns the SeasonedMineman field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetSeasonedMineman() int64 {
-	if o == nil || IsNil(o.SeasonedMineman) {
+// GetRandomEvent returns the RandomEvent field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetRandomEvent() int64 {
+	if o == nil || IsNil(o.RandomEvent) {
 		var ret int64
 		return ret
 	}
-	return *o.SeasonedMineman
+	return *o.RandomEvent
 }
 
-// GetSeasonedMinemanOk returns a tuple with the SeasonedMineman field value if set, nil otherwise
+// GetRandomEventOk returns a tuple with the RandomEvent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetSeasonedMinemanOk() (*int64, bool) {
-	if o == nil || IsNil(o.SeasonedMineman) {
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetRandomEventOk() (*int64, bool) {
+	if o == nil || IsNil(o.RandomEvent) {
 		return nil, false
 	}
-	return o.SeasonedMineman, true
+	return o.RandomEvent, true
 }
 
-// HasSeasonedMineman returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) HasSeasonedMineman() bool {
-	if o != nil && !IsNil(o.SeasonedMineman) {
+// HasRandomEvent returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasRandomEvent() bool {
+	if o != nil && !IsNil(o.RandomEvent) {
 		return true
 	}
 
 	return false
 }
 
-// SetSeasonedMineman gets a reference to the given int64 and assigns it to the SeasonedMineman field.
-func (o *SkyBlockProfileMemberMiningCoreNodes) SetSeasonedMineman(v int64) {
-	o.SeasonedMineman = &v
+// SetRandomEvent gets a reference to the given int64 and assigns it to the RandomEvent field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetRandomEvent(v int64) {
+	o.RandomEvent = &v
 }
 
 // GetSheerForce returns the SheerForce field value if set, zero value otherwise.
@@ -1268,68 +1333,36 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetSheerForce(v int64) {
 	o.SheerForce = &v
 }
 
-// GetSkyMall returns the SkyMall field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetSkyMall() int64 {
-	if o == nil || IsNil(o.SkyMall) {
+// GetSpecial0 returns the Special0 field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetSpecial0() int64 {
+	if o == nil || IsNil(o.Special0) {
 		var ret int64
 		return ret
 	}
-	return *o.SkyMall
+	return *o.Special0
 }
 
-// GetSkyMallOk returns a tuple with the SkyMall field value if set, nil otherwise
+// GetSpecial0Ok returns a tuple with the Special0 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetSkyMallOk() (*int64, bool) {
-	if o == nil || IsNil(o.SkyMall) {
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetSpecial0Ok() (*int64, bool) {
+	if o == nil || IsNil(o.Special0) {
 		return nil, false
 	}
-	return o.SkyMall, true
+	return o.Special0, true
 }
 
-// HasSkyMall returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) HasSkyMall() bool {
-	if o != nil && !IsNil(o.SkyMall) {
+// HasSpecial0 returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasSpecial0() bool {
+	if o != nil && !IsNil(o.Special0) {
 		return true
 	}
 
 	return false
 }
 
-// SetSkyMall gets a reference to the given int64 and assigns it to the SkyMall field.
-func (o *SkyBlockProfileMemberMiningCoreNodes) SetSkyMall(v int64) {
-	o.SkyMall = &v
-}
-
-// GetSpeedyMineman returns the SpeedyMineman field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetSpeedyMineman() int64 {
-	if o == nil || IsNil(o.SpeedyMineman) {
-		var ret int64
-		return ret
-	}
-	return *o.SpeedyMineman
-}
-
-// GetSpeedyMinemanOk returns a tuple with the SpeedyMineman field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetSpeedyMinemanOk() (*int64, bool) {
-	if o == nil || IsNil(o.SpeedyMineman) {
-		return nil, false
-	}
-	return o.SpeedyMineman, true
-}
-
-// HasSpeedyMineman returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) HasSpeedyMineman() bool {
-	if o != nil && !IsNil(o.SpeedyMineman) {
-		return true
-	}
-
-	return false
-}
-
-// SetSpeedyMineman gets a reference to the given int64 and assigns it to the SpeedyMineman field.
-func (o *SkyBlockProfileMemberMiningCoreNodes) SetSpeedyMineman(v int64) {
-	o.SpeedyMineman = &v
+// SetSpecial0 gets a reference to the given int64 and assigns it to the Special0 field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetSpecial0(v int64) {
+	o.Special0 = &v
 }
 
 // GetSteadyHand returns the SteadyHand field value if set, zero value otherwise.
@@ -1572,11 +1605,11 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.Blockhead) {
 		toSerialize["blockhead"] = o.Blockhead
 	}
-	if !IsNil(o.CoreOfTheMountain) {
-		toSerialize["core_of_the_mountain"] = o.CoreOfTheMountain
-	}
 	if !IsNil(o.Crystalline) {
 		toSerialize["crystalline"] = o.Crystalline
+	}
+	if !IsNil(o.DailyEffect) {
+		toSerialize["daily_effect"] = o.DailyEffect
 	}
 	if !IsNil(o.DailyGrind) {
 		toSerialize["daily_grind"] = o.DailyGrind
@@ -1593,14 +1626,14 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.EfficientMiner) {
 		toSerialize["efficient_miner"] = o.EfficientMiner
 	}
-	if !IsNil(o.FortunateMineman) {
-		toSerialize["fortunate_mineman"] = o.FortunateMineman
+	if !IsNil(o.ForgeTime) {
+		toSerialize["forge_time"] = o.ForgeTime
+	}
+	if !IsNil(o.Fortunate) {
+		toSerialize["fortunate"] = o.Fortunate
 	}
 	if !IsNil(o.FrontLoaded) {
 		toSerialize["front_loaded"] = o.FrontLoaded
-	}
-	if !IsNil(o.GemLover) {
-		toSerialize["gem_lover"] = o.GemLover
 	}
 	if !IsNil(o.GemstoneInfusion) {
 		toSerialize["gemstone_infusion"] = o.GemstoneInfusion
@@ -1617,9 +1650,6 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.LonesomeMiner) {
 		toSerialize["lonesome_miner"] = o.LonesomeMiner
 	}
-	if !IsNil(o.LuckOfTheCave) {
-		toSerialize["luck_of_the_cave"] = o.LuckOfTheCave
-	}
 	if !IsNil(o.ManiacMiner) {
 		toSerialize["maniac_miner"] = o.ManiacMiner
 	}
@@ -1632,14 +1662,26 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.MineshaftMayhem) {
 		toSerialize["mineshaft_mayhem"] = o.MineshaftMayhem
 	}
+	if !IsNil(o.MiningExperience) {
+		toSerialize["mining_experience"] = o.MiningExperience
+	}
 	if !IsNil(o.MiningFortune) {
 		toSerialize["mining_fortune"] = o.MiningFortune
+	}
+	if !IsNil(o.MiningFortune2) {
+		toSerialize["mining_fortune_2"] = o.MiningFortune2
+	}
+	if !IsNil(o.MiningMadness) {
+		toSerialize["mining_madness"] = o.MiningMadness
 	}
 	if !IsNil(o.MiningMaster) {
 		toSerialize["mining_master"] = o.MiningMaster
 	}
 	if !IsNil(o.MiningSpeed) {
 		toSerialize["mining_speed"] = o.MiningSpeed
+	}
+	if !IsNil(o.MiningSpeed2) {
+		toSerialize["mining_speed_2"] = o.MiningSpeed2
 	}
 	if !IsNil(o.MiningSpeedBoost) {
 		toSerialize["mining_speed_boost"] = o.MiningSpeedBoost
@@ -1665,23 +1707,17 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.Professional) {
 		toSerialize["professional"] = o.Professional
 	}
-	if !IsNil(o.QuickForge) {
-		toSerialize["quick_forge"] = o.QuickForge
-	}
 	if !IsNil(o.RagsToRiches) {
 		toSerialize["rags_to_riches"] = o.RagsToRiches
 	}
-	if !IsNil(o.SeasonedMineman) {
-		toSerialize["seasoned_mineman"] = o.SeasonedMineman
+	if !IsNil(o.RandomEvent) {
+		toSerialize["random_event"] = o.RandomEvent
 	}
 	if !IsNil(o.SheerForce) {
 		toSerialize["sheer_force"] = o.SheerForce
 	}
-	if !IsNil(o.SkyMall) {
-		toSerialize["sky_mall"] = o.SkyMall
-	}
-	if !IsNil(o.SpeedyMineman) {
-		toSerialize["speedy_mineman"] = o.SpeedyMineman
+	if !IsNil(o.Special0) {
+		toSerialize["special_0"] = o.Special0
 	}
 	if !IsNil(o.SteadyHand) {
 		toSerialize["steady_hand"] = o.SteadyHand

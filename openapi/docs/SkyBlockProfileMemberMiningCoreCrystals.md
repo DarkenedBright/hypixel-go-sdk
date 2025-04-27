@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **JadeCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
 **JasperCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
 **OnyxCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
-**OpalCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
+**OpalCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
 **PeridotCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
 **RubyCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
 **SapphireCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberMiningCoreCrystals
 
-`func NewSkyBlockProfileMemberMiningCoreCrystals(amberCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, amethystCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, aquamarineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, citrineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, jadeCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, jasperCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, onyxCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, opalCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, peridotCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, rubyCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, sapphireCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, topazCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, ) *SkyBlockProfileMemberMiningCoreCrystals`
+`func NewSkyBlockProfileMemberMiningCoreCrystals(amberCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, amethystCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, aquamarineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, citrineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, jadeCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, jasperCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, onyxCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, peridotCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, rubyCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, sapphireCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, topazCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, ) *SkyBlockProfileMemberMiningCoreCrystals`
 
 NewSkyBlockProfileMemberMiningCoreCrystals instantiates a new SkyBlockProfileMemberMiningCoreCrystals object
 This constructor will assign default values to properties that have it defined,
@@ -195,6 +195,11 @@ and a boolean to check if the value has been set.
 
 SetOpalCrystal sets OpalCrystal field to given value.
 
+### HasOpalCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasOpalCrystal() bool`
+
+HasOpalCrystal returns a boolean if a field has been set.
 
 ### GetPeridotCrystal
 

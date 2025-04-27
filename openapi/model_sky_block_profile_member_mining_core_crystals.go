@@ -21,18 +21,18 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCoreCrystals{}
 
 // SkyBlockProfileMemberMiningCoreCrystals struct for SkyBlockProfileMemberMiningCoreCrystals
 type SkyBlockProfileMemberMiningCoreCrystals struct {
-	AmberCrystal      SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"amber_crystal"`
-	AmethystCrystal   SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"amethyst_crystal"`
-	AquamarineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"aquamarine_crystal"`
-	CitrineCrystal    SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"citrine_crystal"`
-	JadeCrystal       SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"jade_crystal"`
-	JasperCrystal     SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"jasper_crystal"`
-	OnyxCrystal       SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"onyx_crystal"`
-	OpalCrystal       SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"opal_crystal"`
-	PeridotCrystal    SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"peridot_crystal"`
-	RubyCrystal       SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"ruby_crystal"`
-	SapphireCrystal   SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"sapphire_crystal"`
-	TopazCrystal      SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"topaz_crystal"`
+	AmberCrystal      SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"amber_crystal"`
+	AmethystCrystal   SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"amethyst_crystal"`
+	AquamarineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"aquamarine_crystal"`
+	CitrineCrystal    SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"citrine_crystal"`
+	JadeCrystal       SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"jade_crystal"`
+	JasperCrystal     SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"jasper_crystal"`
+	OnyxCrystal       SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"onyx_crystal"`
+	OpalCrystal       *SkyBlockProfileMemberMiningCoreCrystalsCrystal `json:"opal_crystal,omitempty"`
+	PeridotCrystal    SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"peridot_crystal"`
+	RubyCrystal       SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"ruby_crystal"`
+	SapphireCrystal   SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"sapphire_crystal"`
+	TopazCrystal      SkyBlockProfileMemberMiningCoreCrystalsCrystal  `json:"topaz_crystal"`
 }
 
 type _SkyBlockProfileMemberMiningCoreCrystals SkyBlockProfileMemberMiningCoreCrystals
@@ -41,7 +41,7 @@ type _SkyBlockProfileMemberMiningCoreCrystals SkyBlockProfileMemberMiningCoreCry
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberMiningCoreCrystals(amberCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, amethystCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, aquamarineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, citrineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, jadeCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, jasperCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, onyxCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, opalCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, peridotCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, rubyCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, sapphireCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, topazCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal) *SkyBlockProfileMemberMiningCoreCrystals {
+func NewSkyBlockProfileMemberMiningCoreCrystals(amberCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, amethystCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, aquamarineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, citrineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, jadeCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, jasperCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, onyxCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, peridotCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, rubyCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, sapphireCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, topazCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal) *SkyBlockProfileMemberMiningCoreCrystals {
 	this := SkyBlockProfileMemberMiningCoreCrystals{}
 	this.AmberCrystal = amberCrystal
 	this.AmethystCrystal = amethystCrystal
@@ -50,7 +50,6 @@ func NewSkyBlockProfileMemberMiningCoreCrystals(amberCrystal SkyBlockProfileMemb
 	this.JadeCrystal = jadeCrystal
 	this.JasperCrystal = jasperCrystal
 	this.OnyxCrystal = onyxCrystal
-	this.OpalCrystal = opalCrystal
 	this.PeridotCrystal = peridotCrystal
 	this.RubyCrystal = rubyCrystal
 	this.SapphireCrystal = sapphireCrystal
@@ -234,28 +233,36 @@ func (o *SkyBlockProfileMemberMiningCoreCrystals) SetOnyxCrystal(v SkyBlockProfi
 	o.OnyxCrystal = v
 }
 
-// GetOpalCrystal returns the OpalCrystal field value
+// GetOpalCrystal returns the OpalCrystal field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreCrystals) GetOpalCrystal() SkyBlockProfileMemberMiningCoreCrystalsCrystal {
-	if o == nil {
+	if o == nil || IsNil(o.OpalCrystal) {
 		var ret SkyBlockProfileMemberMiningCoreCrystalsCrystal
 		return ret
 	}
-
-	return o.OpalCrystal
+	return *o.OpalCrystal
 }
 
-// GetOpalCrystalOk returns a tuple with the OpalCrystal field value
+// GetOpalCrystalOk returns a tuple with the OpalCrystal field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreCrystals) GetOpalCrystalOk() (*SkyBlockProfileMemberMiningCoreCrystalsCrystal, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.OpalCrystal) {
 		return nil, false
 	}
-	return &o.OpalCrystal, true
+	return o.OpalCrystal, true
 }
 
-// SetOpalCrystal sets field value
+// HasOpalCrystal returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreCrystals) HasOpalCrystal() bool {
+	if o != nil && !IsNil(o.OpalCrystal) {
+		return true
+	}
+
+	return false
+}
+
+// SetOpalCrystal gets a reference to the given SkyBlockProfileMemberMiningCoreCrystalsCrystal and assigns it to the OpalCrystal field.
 func (o *SkyBlockProfileMemberMiningCoreCrystals) SetOpalCrystal(v SkyBlockProfileMemberMiningCoreCrystalsCrystal) {
-	o.OpalCrystal = v
+	o.OpalCrystal = &v
 }
 
 // GetPeridotCrystal returns the PeridotCrystal field value
@@ -371,7 +378,9 @@ func (o SkyBlockProfileMemberMiningCoreCrystals) ToMap() (map[string]interface{}
 	toSerialize["jade_crystal"] = o.JadeCrystal
 	toSerialize["jasper_crystal"] = o.JasperCrystal
 	toSerialize["onyx_crystal"] = o.OnyxCrystal
-	toSerialize["opal_crystal"] = o.OpalCrystal
+	if !IsNil(o.OpalCrystal) {
+		toSerialize["opal_crystal"] = o.OpalCrystal
+	}
 	toSerialize["peridot_crystal"] = o.PeridotCrystal
 	toSerialize["ruby_crystal"] = o.RubyCrystal
 	toSerialize["sapphire_crystal"] = o.SapphireCrystal
@@ -391,7 +400,6 @@ func (o *SkyBlockProfileMemberMiningCoreCrystals) UnmarshalJSON(data []byte) (er
 		"jade_crystal",
 		"jasper_crystal",
 		"onyx_crystal",
-		"opal_crystal",
 		"peridot_crystal",
 		"ruby_crystal",
 		"sapphire_crystal",

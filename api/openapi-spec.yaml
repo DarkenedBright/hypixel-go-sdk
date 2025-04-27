@@ -1372,7 +1372,7 @@ components:
         daily_ores_mined_mithril_ore:
           type: integer
         experience:
-          type: integer
+          type: number
         greater_mines_last_access:
           type: integer
         last_reset:
@@ -1393,6 +1393,10 @@ components:
           type: integer
         powder_spent_gemstone:
           type: integer
+        current_daily_effect:
+          type: string
+        current_daily_effect_last_changed:
+          type: integer
         powder_spent_glacite:
           type: integer
         powder_spent_mithril:
@@ -1401,6 +1405,15 @@ components:
           type: boolean
         retroactive_tier2_token:
           type: boolean
+        selected_pickaxe_ability:
+          enum:
+            - anomalous_desire
+            - gemstone_infusion
+            - maniac_miner
+            - mining_speed_boost
+            - pickaxe_toss
+            - sheer_force
+          type: string
         tokens_spent:
           type: integer
       required:
@@ -1511,7 +1524,6 @@ components:
         - jade_crystal
         - jasper_crystal
         - onyx_crystal
-        - opal_crystal
         - peridot_crystal
         - ruby_crystal
         - sapphire_crystal
@@ -1530,9 +1542,6 @@ components:
           type: integer
         total_placed:
           type: integer
-      required:
-        - state
-        - total_found
       type: object
     SkyBlockProfileMemberMiningCoreNodes:
       additionalProperties: false
@@ -1541,9 +1550,9 @@ components:
           type: integer
         blockhead:
           type: integer
-        core_of_the_mountain:
-          type: integer
         crystalline:
+          type: integer
+        daily_effect:
           type: integer
         daily_grind:
           type: integer
@@ -1555,11 +1564,11 @@ components:
           type: integer
         efficient_miner:
           type: integer
-        fortunate_mineman:
+        forge_time:
+          type: integer
+        fortunate:
           type: integer
         front_loaded:
-          type: integer
-        gem_lover:
           type: integer
         gemstone_infusion:
           type: integer
@@ -1571,8 +1580,6 @@ components:
           type: integer
         lonesome_miner:
           type: integer
-        luck_of_the_cave:
-          type: integer
         maniac_miner:
           type: integer
         metal_head:
@@ -1581,11 +1588,19 @@ components:
           type: integer
         mineshaft_mayhem:
           type: integer
+        mining_experience:
+          type: integer
         mining_fortune:
+          type: integer
+        mining_fortune_2:
+          type: integer
+        mining_madness:
           type: integer
         mining_master:
           type: integer
         mining_speed:
+          type: integer
+        mining_speed_2:
           type: integer
         mining_speed_boost:
           type: integer
@@ -1603,17 +1618,13 @@ components:
           type: integer
         professional:
           type: integer
-        quick_forge:
-          type: integer
         rags_to_riches:
           type: integer
-        seasoned_mineman:
+        random_event:
           type: integer
         sheer_force:
           type: integer
-        sky_mall:
-          type: integer
-        speedy_mineman:
+        special_0:
           type: integer
         steady_hand:
           type: integer

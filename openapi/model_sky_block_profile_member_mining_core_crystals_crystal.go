@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberMiningCoreCrystalsCrystal type satisfies the MappedNullable interface at compile time
@@ -21,21 +19,17 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCoreCrystalsCrystal{}
 
 // SkyBlockProfileMemberMiningCoreCrystalsCrystal struct for SkyBlockProfileMemberMiningCoreCrystalsCrystal
 type SkyBlockProfileMemberMiningCoreCrystalsCrystal struct {
-	State       SkyBlockProfileMemberMiningCoreCrystalsCrystalState `json:"state"`
-	TotalFound  int64                                               `json:"total_found"`
-	TotalPlaced *int64                                              `json:"total_placed,omitempty"`
+	State       *SkyBlockProfileMemberMiningCoreCrystalsCrystalState `json:"state,omitempty"`
+	TotalFound  *int64                                               `json:"total_found,omitempty"`
+	TotalPlaced *int64                                               `json:"total_placed,omitempty"`
 }
-
-type _SkyBlockProfileMemberMiningCoreCrystalsCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal
 
 // NewSkyBlockProfileMemberMiningCoreCrystalsCrystal instantiates a new SkyBlockProfileMemberMiningCoreCrystalsCrystal object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberMiningCoreCrystalsCrystal(state SkyBlockProfileMemberMiningCoreCrystalsCrystalState, totalFound int64) *SkyBlockProfileMemberMiningCoreCrystalsCrystal {
+func NewSkyBlockProfileMemberMiningCoreCrystalsCrystal() *SkyBlockProfileMemberMiningCoreCrystalsCrystal {
 	this := SkyBlockProfileMemberMiningCoreCrystalsCrystal{}
-	this.State = state
-	this.TotalFound = totalFound
 	return &this
 }
 
@@ -47,52 +41,68 @@ func NewSkyBlockProfileMemberMiningCoreCrystalsCrystalWithDefaults() *SkyBlockPr
 	return &this
 }
 
-// GetState returns the State field value
+// GetState returns the State field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) GetState() SkyBlockProfileMemberMiningCoreCrystalsCrystalState {
-	if o == nil {
+	if o == nil || IsNil(o.State) {
 		var ret SkyBlockProfileMemberMiningCoreCrystalsCrystalState
 		return ret
 	}
-
-	return o.State
+	return *o.State
 }
 
-// GetStateOk returns a tuple with the State field value
+// GetStateOk returns a tuple with the State field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) GetStateOk() (*SkyBlockProfileMemberMiningCoreCrystalsCrystalState, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.State) {
 		return nil, false
 	}
-	return &o.State, true
+	return o.State, true
 }
 
-// SetState sets field value
+// HasState returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) HasState() bool {
+	if o != nil && !IsNil(o.State) {
+		return true
+	}
+
+	return false
+}
+
+// SetState gets a reference to the given SkyBlockProfileMemberMiningCoreCrystalsCrystalState and assigns it to the State field.
 func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) SetState(v SkyBlockProfileMemberMiningCoreCrystalsCrystalState) {
-	o.State = v
+	o.State = &v
 }
 
-// GetTotalFound returns the TotalFound field value
+// GetTotalFound returns the TotalFound field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) GetTotalFound() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.TotalFound) {
 		var ret int64
 		return ret
 	}
-
-	return o.TotalFound
+	return *o.TotalFound
 }
 
-// GetTotalFoundOk returns a tuple with the TotalFound field value
+// GetTotalFoundOk returns a tuple with the TotalFound field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) GetTotalFoundOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.TotalFound) {
 		return nil, false
 	}
-	return &o.TotalFound, true
+	return o.TotalFound, true
 }
 
-// SetTotalFound sets field value
+// HasTotalFound returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) HasTotalFound() bool {
+	if o != nil && !IsNil(o.TotalFound) {
+		return true
+	}
+
+	return false
+}
+
+// SetTotalFound gets a reference to the given int64 and assigns it to the TotalFound field.
 func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) SetTotalFound(v int64) {
-	o.TotalFound = v
+	o.TotalFound = &v
 }
 
 // GetTotalPlaced returns the TotalPlaced field value if set, zero value otherwise.
@@ -137,50 +147,16 @@ func (o SkyBlockProfileMemberMiningCoreCrystalsCrystal) MarshalJSON() ([]byte, e
 
 func (o SkyBlockProfileMemberMiningCoreCrystalsCrystal) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["state"] = o.State
-	toSerialize["total_found"] = o.TotalFound
+	if !IsNil(o.State) {
+		toSerialize["state"] = o.State
+	}
+	if !IsNil(o.TotalFound) {
+		toSerialize["total_found"] = o.TotalFound
+	}
 	if !IsNil(o.TotalPlaced) {
 		toSerialize["total_placed"] = o.TotalPlaced
 	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberMiningCoreCrystalsCrystal) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"state",
-		"total_found",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberMiningCoreCrystalsCrystal := _SkyBlockProfileMemberMiningCoreCrystalsCrystal{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberMiningCoreCrystalsCrystal)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberMiningCoreCrystalsCrystal(varSkyBlockProfileMemberMiningCoreCrystalsCrystal)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberMiningCoreCrystalsCrystal struct {
