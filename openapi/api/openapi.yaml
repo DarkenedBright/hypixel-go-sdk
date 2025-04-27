@@ -4094,29 +4094,11 @@ components:
         tokens_spent:
           type: integer
       required:
-      - biomes
       - crystals
-      - daily_ores_mined
-      - daily_ores_mined_day
-      - daily_ores_mined_day_gemstone
-      - daily_ores_mined_day_glacite
-      - daily_ores_mined_day_mithril_ore
-      - daily_ores_mined_gemstone
-      - daily_ores_mined_glacite
-      - daily_ores_mined_mithril_ore
       - experience
-      - greater_mines_last_access
-      - last_reset
       - nodes
-      - powder_gemstone
-      - powder_gemstone_total
-      - powder_glacite
-      - powder_glacite_total
       - powder_mithril
       - powder_mithril_total
-      - powder_spent_gemstone
-      - powder_spent_glacite
-      - powder_spent_mithril
       - received_free_tier
       - retroactive_tier2_token
       - tokens_spent

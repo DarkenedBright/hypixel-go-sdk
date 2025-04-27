@@ -21,29 +21,29 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCore{}
 
 // SkyBlockProfileMemberMiningCore struct for SkyBlockProfileMemberMiningCore
 type SkyBlockProfileMemberMiningCore struct {
-	Biomes                      SkyBlockProfileMemberMiningCoreBiomes   `json:"biomes"`
+	Biomes                      *SkyBlockProfileMemberMiningCoreBiomes  `json:"biomes,omitempty"`
 	Crystals                    SkyBlockProfileMemberMiningCoreCrystals `json:"crystals"`
-	DailyOresMined              int64                                   `json:"daily_ores_mined"`
-	DailyOresMinedDay           int64                                   `json:"daily_ores_mined_day"`
-	DailyOresMinedDayGemstone   int64                                   `json:"daily_ores_mined_day_gemstone"`
-	DailyOresMinedDayGlacite    int64                                   `json:"daily_ores_mined_day_glacite"`
-	DailyOresMinedDayMithrilOre int64                                   `json:"daily_ores_mined_day_mithril_ore"`
-	DailyOresMinedGemstone      int64                                   `json:"daily_ores_mined_gemstone"`
-	DailyOresMinedGlacite       int64                                   `json:"daily_ores_mined_glacite"`
-	DailyOresMinedMithrilOre    int64                                   `json:"daily_ores_mined_mithril_ore"`
+	DailyOresMined              *int64                                  `json:"daily_ores_mined,omitempty"`
+	DailyOresMinedDay           *int64                                  `json:"daily_ores_mined_day,omitempty"`
+	DailyOresMinedDayGemstone   *int64                                  `json:"daily_ores_mined_day_gemstone,omitempty"`
+	DailyOresMinedDayGlacite    *int64                                  `json:"daily_ores_mined_day_glacite,omitempty"`
+	DailyOresMinedDayMithrilOre *int64                                  `json:"daily_ores_mined_day_mithril_ore,omitempty"`
+	DailyOresMinedGemstone      *int64                                  `json:"daily_ores_mined_gemstone,omitempty"`
+	DailyOresMinedGlacite       *int64                                  `json:"daily_ores_mined_glacite,omitempty"`
+	DailyOresMinedMithrilOre    *int64                                  `json:"daily_ores_mined_mithril_ore,omitempty"`
 	Experience                  int64                                   `json:"experience"`
-	GreaterMinesLastAccess      int64                                   `json:"greater_mines_last_access"`
-	LastReset                   int64                                   `json:"last_reset"`
+	GreaterMinesLastAccess      *int64                                  `json:"greater_mines_last_access,omitempty"`
+	LastReset                   *int64                                  `json:"last_reset,omitempty"`
 	Nodes                       SkyBlockProfileMemberMiningCoreNodes    `json:"nodes"`
-	PowderGemstone              int64                                   `json:"powder_gemstone"`
-	PowderGemstoneTotal         int64                                   `json:"powder_gemstone_total"`
-	PowderGlacite               int64                                   `json:"powder_glacite"`
-	PowderGlaciteTotal          int64                                   `json:"powder_glacite_total"`
+	PowderGemstone              *int64                                  `json:"powder_gemstone,omitempty"`
+	PowderGemstoneTotal         *int64                                  `json:"powder_gemstone_total,omitempty"`
+	PowderGlacite               *int64                                  `json:"powder_glacite,omitempty"`
+	PowderGlaciteTotal          *int64                                  `json:"powder_glacite_total,omitempty"`
 	PowderMithril               int64                                   `json:"powder_mithril"`
 	PowderMithrilTotal          int64                                   `json:"powder_mithril_total"`
-	PowderSpentGemstone         int64                                   `json:"powder_spent_gemstone"`
-	PowderSpentGlacite          int64                                   `json:"powder_spent_glacite"`
-	PowderSpentMithril          int64                                   `json:"powder_spent_mithril"`
+	PowderSpentGemstone         *int64                                  `json:"powder_spent_gemstone,omitempty"`
+	PowderSpentGlacite          *int64                                  `json:"powder_spent_glacite,omitempty"`
+	PowderSpentMithril          *int64                                  `json:"powder_spent_mithril,omitempty"`
 	ReceivedFreeTier            bool                                    `json:"received_free_tier"`
 	RetroactiveTier2Token       bool                                    `json:"retroactive_tier2_token"`
 	TokensSpent                 int64                                   `json:"tokens_spent"`
@@ -55,31 +55,13 @@ type _SkyBlockProfileMemberMiningCore SkyBlockProfileMemberMiningCore
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberMiningCore(biomes SkyBlockProfileMemberMiningCoreBiomes, crystals SkyBlockProfileMemberMiningCoreCrystals, dailyOresMined int64, dailyOresMinedDay int64, dailyOresMinedDayGemstone int64, dailyOresMinedDayGlacite int64, dailyOresMinedDayMithrilOre int64, dailyOresMinedGemstone int64, dailyOresMinedGlacite int64, dailyOresMinedMithrilOre int64, experience int64, greaterMinesLastAccess int64, lastReset int64, nodes SkyBlockProfileMemberMiningCoreNodes, powderGemstone int64, powderGemstoneTotal int64, powderGlacite int64, powderGlaciteTotal int64, powderMithril int64, powderMithrilTotal int64, powderSpentGemstone int64, powderSpentGlacite int64, powderSpentMithril int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64) *SkyBlockProfileMemberMiningCore {
+func NewSkyBlockProfileMemberMiningCore(crystals SkyBlockProfileMemberMiningCoreCrystals, experience int64, nodes SkyBlockProfileMemberMiningCoreNodes, powderMithril int64, powderMithrilTotal int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64) *SkyBlockProfileMemberMiningCore {
 	this := SkyBlockProfileMemberMiningCore{}
-	this.Biomes = biomes
 	this.Crystals = crystals
-	this.DailyOresMined = dailyOresMined
-	this.DailyOresMinedDay = dailyOresMinedDay
-	this.DailyOresMinedDayGemstone = dailyOresMinedDayGemstone
-	this.DailyOresMinedDayGlacite = dailyOresMinedDayGlacite
-	this.DailyOresMinedDayMithrilOre = dailyOresMinedDayMithrilOre
-	this.DailyOresMinedGemstone = dailyOresMinedGemstone
-	this.DailyOresMinedGlacite = dailyOresMinedGlacite
-	this.DailyOresMinedMithrilOre = dailyOresMinedMithrilOre
 	this.Experience = experience
-	this.GreaterMinesLastAccess = greaterMinesLastAccess
-	this.LastReset = lastReset
 	this.Nodes = nodes
-	this.PowderGemstone = powderGemstone
-	this.PowderGemstoneTotal = powderGemstoneTotal
-	this.PowderGlacite = powderGlacite
-	this.PowderGlaciteTotal = powderGlaciteTotal
 	this.PowderMithril = powderMithril
 	this.PowderMithrilTotal = powderMithrilTotal
-	this.PowderSpentGemstone = powderSpentGemstone
-	this.PowderSpentGlacite = powderSpentGlacite
-	this.PowderSpentMithril = powderSpentMithril
 	this.ReceivedFreeTier = receivedFreeTier
 	this.RetroactiveTier2Token = retroactiveTier2Token
 	this.TokensSpent = tokensSpent
@@ -94,28 +76,36 @@ func NewSkyBlockProfileMemberMiningCoreWithDefaults() *SkyBlockProfileMemberMini
 	return &this
 }
 
-// GetBiomes returns the Biomes field value
+// GetBiomes returns the Biomes field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetBiomes() SkyBlockProfileMemberMiningCoreBiomes {
-	if o == nil {
+	if o == nil || IsNil(o.Biomes) {
 		var ret SkyBlockProfileMemberMiningCoreBiomes
 		return ret
 	}
-
-	return o.Biomes
+	return *o.Biomes
 }
 
-// GetBiomesOk returns a tuple with the Biomes field value
+// GetBiomesOk returns a tuple with the Biomes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetBiomesOk() (*SkyBlockProfileMemberMiningCoreBiomes, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Biomes) {
 		return nil, false
 	}
-	return &o.Biomes, true
+	return o.Biomes, true
 }
 
-// SetBiomes sets field value
+// HasBiomes returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasBiomes() bool {
+	if o != nil && !IsNil(o.Biomes) {
+		return true
+	}
+
+	return false
+}
+
+// SetBiomes gets a reference to the given SkyBlockProfileMemberMiningCoreBiomes and assigns it to the Biomes field.
 func (o *SkyBlockProfileMemberMiningCore) SetBiomes(v SkyBlockProfileMemberMiningCoreBiomes) {
-	o.Biomes = v
+	o.Biomes = &v
 }
 
 // GetCrystals returns the Crystals field value
@@ -142,196 +132,260 @@ func (o *SkyBlockProfileMemberMiningCore) SetCrystals(v SkyBlockProfileMemberMin
 	o.Crystals = v
 }
 
-// GetDailyOresMined returns the DailyOresMined field value
+// GetDailyOresMined returns the DailyOresMined field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMined() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMined) {
 		var ret int64
 		return ret
 	}
-
-	return o.DailyOresMined
+	return *o.DailyOresMined
 }
 
-// GetDailyOresMinedOk returns a tuple with the DailyOresMined field value
+// GetDailyOresMinedOk returns a tuple with the DailyOresMined field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMined) {
 		return nil, false
 	}
-	return &o.DailyOresMined, true
+	return o.DailyOresMined, true
 }
 
-// SetDailyOresMined sets field value
+// HasDailyOresMined returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMined() bool {
+	if o != nil && !IsNil(o.DailyOresMined) {
+		return true
+	}
+
+	return false
+}
+
+// SetDailyOresMined gets a reference to the given int64 and assigns it to the DailyOresMined field.
 func (o *SkyBlockProfileMemberMiningCore) SetDailyOresMined(v int64) {
-	o.DailyOresMined = v
+	o.DailyOresMined = &v
 }
 
-// GetDailyOresMinedDay returns the DailyOresMinedDay field value
+// GetDailyOresMinedDay returns the DailyOresMinedDay field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedDay() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedDay) {
 		var ret int64
 		return ret
 	}
-
-	return o.DailyOresMinedDay
+	return *o.DailyOresMinedDay
 }
 
-// GetDailyOresMinedDayOk returns a tuple with the DailyOresMinedDay field value
+// GetDailyOresMinedDayOk returns a tuple with the DailyOresMinedDay field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedDayOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedDay) {
 		return nil, false
 	}
-	return &o.DailyOresMinedDay, true
+	return o.DailyOresMinedDay, true
 }
 
-// SetDailyOresMinedDay sets field value
+// HasDailyOresMinedDay returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedDay() bool {
+	if o != nil && !IsNil(o.DailyOresMinedDay) {
+		return true
+	}
+
+	return false
+}
+
+// SetDailyOresMinedDay gets a reference to the given int64 and assigns it to the DailyOresMinedDay field.
 func (o *SkyBlockProfileMemberMiningCore) SetDailyOresMinedDay(v int64) {
-	o.DailyOresMinedDay = v
+	o.DailyOresMinedDay = &v
 }
 
-// GetDailyOresMinedDayGemstone returns the DailyOresMinedDayGemstone field value
+// GetDailyOresMinedDayGemstone returns the DailyOresMinedDayGemstone field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedDayGemstone() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedDayGemstone) {
 		var ret int64
 		return ret
 	}
-
-	return o.DailyOresMinedDayGemstone
+	return *o.DailyOresMinedDayGemstone
 }
 
-// GetDailyOresMinedDayGemstoneOk returns a tuple with the DailyOresMinedDayGemstone field value
+// GetDailyOresMinedDayGemstoneOk returns a tuple with the DailyOresMinedDayGemstone field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedDayGemstoneOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedDayGemstone) {
 		return nil, false
 	}
-	return &o.DailyOresMinedDayGemstone, true
+	return o.DailyOresMinedDayGemstone, true
 }
 
-// SetDailyOresMinedDayGemstone sets field value
+// HasDailyOresMinedDayGemstone returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedDayGemstone() bool {
+	if o != nil && !IsNil(o.DailyOresMinedDayGemstone) {
+		return true
+	}
+
+	return false
+}
+
+// SetDailyOresMinedDayGemstone gets a reference to the given int64 and assigns it to the DailyOresMinedDayGemstone field.
 func (o *SkyBlockProfileMemberMiningCore) SetDailyOresMinedDayGemstone(v int64) {
-	o.DailyOresMinedDayGemstone = v
+	o.DailyOresMinedDayGemstone = &v
 }
 
-// GetDailyOresMinedDayGlacite returns the DailyOresMinedDayGlacite field value
+// GetDailyOresMinedDayGlacite returns the DailyOresMinedDayGlacite field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedDayGlacite() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedDayGlacite) {
 		var ret int64
 		return ret
 	}
-
-	return o.DailyOresMinedDayGlacite
+	return *o.DailyOresMinedDayGlacite
 }
 
-// GetDailyOresMinedDayGlaciteOk returns a tuple with the DailyOresMinedDayGlacite field value
+// GetDailyOresMinedDayGlaciteOk returns a tuple with the DailyOresMinedDayGlacite field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedDayGlaciteOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedDayGlacite) {
 		return nil, false
 	}
-	return &o.DailyOresMinedDayGlacite, true
+	return o.DailyOresMinedDayGlacite, true
 }
 
-// SetDailyOresMinedDayGlacite sets field value
+// HasDailyOresMinedDayGlacite returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedDayGlacite() bool {
+	if o != nil && !IsNil(o.DailyOresMinedDayGlacite) {
+		return true
+	}
+
+	return false
+}
+
+// SetDailyOresMinedDayGlacite gets a reference to the given int64 and assigns it to the DailyOresMinedDayGlacite field.
 func (o *SkyBlockProfileMemberMiningCore) SetDailyOresMinedDayGlacite(v int64) {
-	o.DailyOresMinedDayGlacite = v
+	o.DailyOresMinedDayGlacite = &v
 }
 
-// GetDailyOresMinedDayMithrilOre returns the DailyOresMinedDayMithrilOre field value
+// GetDailyOresMinedDayMithrilOre returns the DailyOresMinedDayMithrilOre field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedDayMithrilOre() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedDayMithrilOre) {
 		var ret int64
 		return ret
 	}
-
-	return o.DailyOresMinedDayMithrilOre
+	return *o.DailyOresMinedDayMithrilOre
 }
 
-// GetDailyOresMinedDayMithrilOreOk returns a tuple with the DailyOresMinedDayMithrilOre field value
+// GetDailyOresMinedDayMithrilOreOk returns a tuple with the DailyOresMinedDayMithrilOre field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedDayMithrilOreOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedDayMithrilOre) {
 		return nil, false
 	}
-	return &o.DailyOresMinedDayMithrilOre, true
+	return o.DailyOresMinedDayMithrilOre, true
 }
 
-// SetDailyOresMinedDayMithrilOre sets field value
+// HasDailyOresMinedDayMithrilOre returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedDayMithrilOre() bool {
+	if o != nil && !IsNil(o.DailyOresMinedDayMithrilOre) {
+		return true
+	}
+
+	return false
+}
+
+// SetDailyOresMinedDayMithrilOre gets a reference to the given int64 and assigns it to the DailyOresMinedDayMithrilOre field.
 func (o *SkyBlockProfileMemberMiningCore) SetDailyOresMinedDayMithrilOre(v int64) {
-	o.DailyOresMinedDayMithrilOre = v
+	o.DailyOresMinedDayMithrilOre = &v
 }
 
-// GetDailyOresMinedGemstone returns the DailyOresMinedGemstone field value
+// GetDailyOresMinedGemstone returns the DailyOresMinedGemstone field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedGemstone() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedGemstone) {
 		var ret int64
 		return ret
 	}
-
-	return o.DailyOresMinedGemstone
+	return *o.DailyOresMinedGemstone
 }
 
-// GetDailyOresMinedGemstoneOk returns a tuple with the DailyOresMinedGemstone field value
+// GetDailyOresMinedGemstoneOk returns a tuple with the DailyOresMinedGemstone field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedGemstoneOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedGemstone) {
 		return nil, false
 	}
-	return &o.DailyOresMinedGemstone, true
+	return o.DailyOresMinedGemstone, true
 }
 
-// SetDailyOresMinedGemstone sets field value
+// HasDailyOresMinedGemstone returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedGemstone() bool {
+	if o != nil && !IsNil(o.DailyOresMinedGemstone) {
+		return true
+	}
+
+	return false
+}
+
+// SetDailyOresMinedGemstone gets a reference to the given int64 and assigns it to the DailyOresMinedGemstone field.
 func (o *SkyBlockProfileMemberMiningCore) SetDailyOresMinedGemstone(v int64) {
-	o.DailyOresMinedGemstone = v
+	o.DailyOresMinedGemstone = &v
 }
 
-// GetDailyOresMinedGlacite returns the DailyOresMinedGlacite field value
+// GetDailyOresMinedGlacite returns the DailyOresMinedGlacite field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedGlacite() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedGlacite) {
 		var ret int64
 		return ret
 	}
-
-	return o.DailyOresMinedGlacite
+	return *o.DailyOresMinedGlacite
 }
 
-// GetDailyOresMinedGlaciteOk returns a tuple with the DailyOresMinedGlacite field value
+// GetDailyOresMinedGlaciteOk returns a tuple with the DailyOresMinedGlacite field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedGlaciteOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedGlacite) {
 		return nil, false
 	}
-	return &o.DailyOresMinedGlacite, true
+	return o.DailyOresMinedGlacite, true
 }
 
-// SetDailyOresMinedGlacite sets field value
+// HasDailyOresMinedGlacite returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedGlacite() bool {
+	if o != nil && !IsNil(o.DailyOresMinedGlacite) {
+		return true
+	}
+
+	return false
+}
+
+// SetDailyOresMinedGlacite gets a reference to the given int64 and assigns it to the DailyOresMinedGlacite field.
 func (o *SkyBlockProfileMemberMiningCore) SetDailyOresMinedGlacite(v int64) {
-	o.DailyOresMinedGlacite = v
+	o.DailyOresMinedGlacite = &v
 }
 
-// GetDailyOresMinedMithrilOre returns the DailyOresMinedMithrilOre field value
+// GetDailyOresMinedMithrilOre returns the DailyOresMinedMithrilOre field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedMithrilOre() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedMithrilOre) {
 		var ret int64
 		return ret
 	}
-
-	return o.DailyOresMinedMithrilOre
+	return *o.DailyOresMinedMithrilOre
 }
 
-// GetDailyOresMinedMithrilOreOk returns a tuple with the DailyOresMinedMithrilOre field value
+// GetDailyOresMinedMithrilOreOk returns a tuple with the DailyOresMinedMithrilOre field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetDailyOresMinedMithrilOreOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DailyOresMinedMithrilOre) {
 		return nil, false
 	}
-	return &o.DailyOresMinedMithrilOre, true
+	return o.DailyOresMinedMithrilOre, true
 }
 
-// SetDailyOresMinedMithrilOre sets field value
+// HasDailyOresMinedMithrilOre returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedMithrilOre() bool {
+	if o != nil && !IsNil(o.DailyOresMinedMithrilOre) {
+		return true
+	}
+
+	return false
+}
+
+// SetDailyOresMinedMithrilOre gets a reference to the given int64 and assigns it to the DailyOresMinedMithrilOre field.
 func (o *SkyBlockProfileMemberMiningCore) SetDailyOresMinedMithrilOre(v int64) {
-	o.DailyOresMinedMithrilOre = v
+	o.DailyOresMinedMithrilOre = &v
 }
 
 // GetExperience returns the Experience field value
@@ -358,52 +412,68 @@ func (o *SkyBlockProfileMemberMiningCore) SetExperience(v int64) {
 	o.Experience = v
 }
 
-// GetGreaterMinesLastAccess returns the GreaterMinesLastAccess field value
+// GetGreaterMinesLastAccess returns the GreaterMinesLastAccess field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetGreaterMinesLastAccess() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.GreaterMinesLastAccess) {
 		var ret int64
 		return ret
 	}
-
-	return o.GreaterMinesLastAccess
+	return *o.GreaterMinesLastAccess
 }
 
-// GetGreaterMinesLastAccessOk returns a tuple with the GreaterMinesLastAccess field value
+// GetGreaterMinesLastAccessOk returns a tuple with the GreaterMinesLastAccess field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetGreaterMinesLastAccessOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.GreaterMinesLastAccess) {
 		return nil, false
 	}
-	return &o.GreaterMinesLastAccess, true
+	return o.GreaterMinesLastAccess, true
 }
 
-// SetGreaterMinesLastAccess sets field value
+// HasGreaterMinesLastAccess returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasGreaterMinesLastAccess() bool {
+	if o != nil && !IsNil(o.GreaterMinesLastAccess) {
+		return true
+	}
+
+	return false
+}
+
+// SetGreaterMinesLastAccess gets a reference to the given int64 and assigns it to the GreaterMinesLastAccess field.
 func (o *SkyBlockProfileMemberMiningCore) SetGreaterMinesLastAccess(v int64) {
-	o.GreaterMinesLastAccess = v
+	o.GreaterMinesLastAccess = &v
 }
 
-// GetLastReset returns the LastReset field value
+// GetLastReset returns the LastReset field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetLastReset() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.LastReset) {
 		var ret int64
 		return ret
 	}
-
-	return o.LastReset
+	return *o.LastReset
 }
 
-// GetLastResetOk returns a tuple with the LastReset field value
+// GetLastResetOk returns a tuple with the LastReset field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetLastResetOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.LastReset) {
 		return nil, false
 	}
-	return &o.LastReset, true
+	return o.LastReset, true
 }
 
-// SetLastReset sets field value
+// HasLastReset returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasLastReset() bool {
+	if o != nil && !IsNil(o.LastReset) {
+		return true
+	}
+
+	return false
+}
+
+// SetLastReset gets a reference to the given int64 and assigns it to the LastReset field.
 func (o *SkyBlockProfileMemberMiningCore) SetLastReset(v int64) {
-	o.LastReset = v
+	o.LastReset = &v
 }
 
 // GetNodes returns the Nodes field value
@@ -430,100 +500,132 @@ func (o *SkyBlockProfileMemberMiningCore) SetNodes(v SkyBlockProfileMemberMining
 	o.Nodes = v
 }
 
-// GetPowderGemstone returns the PowderGemstone field value
+// GetPowderGemstone returns the PowderGemstone field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderGemstone() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.PowderGemstone) {
 		var ret int64
 		return ret
 	}
-
-	return o.PowderGemstone
+	return *o.PowderGemstone
 }
 
-// GetPowderGemstoneOk returns a tuple with the PowderGemstone field value
+// GetPowderGemstoneOk returns a tuple with the PowderGemstone field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderGemstoneOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PowderGemstone) {
 		return nil, false
 	}
-	return &o.PowderGemstone, true
+	return o.PowderGemstone, true
 }
 
-// SetPowderGemstone sets field value
+// HasPowderGemstone returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasPowderGemstone() bool {
+	if o != nil && !IsNil(o.PowderGemstone) {
+		return true
+	}
+
+	return false
+}
+
+// SetPowderGemstone gets a reference to the given int64 and assigns it to the PowderGemstone field.
 func (o *SkyBlockProfileMemberMiningCore) SetPowderGemstone(v int64) {
-	o.PowderGemstone = v
+	o.PowderGemstone = &v
 }
 
-// GetPowderGemstoneTotal returns the PowderGemstoneTotal field value
+// GetPowderGemstoneTotal returns the PowderGemstoneTotal field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderGemstoneTotal() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.PowderGemstoneTotal) {
 		var ret int64
 		return ret
 	}
-
-	return o.PowderGemstoneTotal
+	return *o.PowderGemstoneTotal
 }
 
-// GetPowderGemstoneTotalOk returns a tuple with the PowderGemstoneTotal field value
+// GetPowderGemstoneTotalOk returns a tuple with the PowderGemstoneTotal field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderGemstoneTotalOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PowderGemstoneTotal) {
 		return nil, false
 	}
-	return &o.PowderGemstoneTotal, true
+	return o.PowderGemstoneTotal, true
 }
 
-// SetPowderGemstoneTotal sets field value
+// HasPowderGemstoneTotal returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasPowderGemstoneTotal() bool {
+	if o != nil && !IsNil(o.PowderGemstoneTotal) {
+		return true
+	}
+
+	return false
+}
+
+// SetPowderGemstoneTotal gets a reference to the given int64 and assigns it to the PowderGemstoneTotal field.
 func (o *SkyBlockProfileMemberMiningCore) SetPowderGemstoneTotal(v int64) {
-	o.PowderGemstoneTotal = v
+	o.PowderGemstoneTotal = &v
 }
 
-// GetPowderGlacite returns the PowderGlacite field value
+// GetPowderGlacite returns the PowderGlacite field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderGlacite() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.PowderGlacite) {
 		var ret int64
 		return ret
 	}
-
-	return o.PowderGlacite
+	return *o.PowderGlacite
 }
 
-// GetPowderGlaciteOk returns a tuple with the PowderGlacite field value
+// GetPowderGlaciteOk returns a tuple with the PowderGlacite field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderGlaciteOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PowderGlacite) {
 		return nil, false
 	}
-	return &o.PowderGlacite, true
+	return o.PowderGlacite, true
 }
 
-// SetPowderGlacite sets field value
+// HasPowderGlacite returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasPowderGlacite() bool {
+	if o != nil && !IsNil(o.PowderGlacite) {
+		return true
+	}
+
+	return false
+}
+
+// SetPowderGlacite gets a reference to the given int64 and assigns it to the PowderGlacite field.
 func (o *SkyBlockProfileMemberMiningCore) SetPowderGlacite(v int64) {
-	o.PowderGlacite = v
+	o.PowderGlacite = &v
 }
 
-// GetPowderGlaciteTotal returns the PowderGlaciteTotal field value
+// GetPowderGlaciteTotal returns the PowderGlaciteTotal field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderGlaciteTotal() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.PowderGlaciteTotal) {
 		var ret int64
 		return ret
 	}
-
-	return o.PowderGlaciteTotal
+	return *o.PowderGlaciteTotal
 }
 
-// GetPowderGlaciteTotalOk returns a tuple with the PowderGlaciteTotal field value
+// GetPowderGlaciteTotalOk returns a tuple with the PowderGlaciteTotal field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderGlaciteTotalOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PowderGlaciteTotal) {
 		return nil, false
 	}
-	return &o.PowderGlaciteTotal, true
+	return o.PowderGlaciteTotal, true
 }
 
-// SetPowderGlaciteTotal sets field value
+// HasPowderGlaciteTotal returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasPowderGlaciteTotal() bool {
+	if o != nil && !IsNil(o.PowderGlaciteTotal) {
+		return true
+	}
+
+	return false
+}
+
+// SetPowderGlaciteTotal gets a reference to the given int64 and assigns it to the PowderGlaciteTotal field.
 func (o *SkyBlockProfileMemberMiningCore) SetPowderGlaciteTotal(v int64) {
-	o.PowderGlaciteTotal = v
+	o.PowderGlaciteTotal = &v
 }
 
 // GetPowderMithril returns the PowderMithril field value
@@ -574,76 +676,100 @@ func (o *SkyBlockProfileMemberMiningCore) SetPowderMithrilTotal(v int64) {
 	o.PowderMithrilTotal = v
 }
 
-// GetPowderSpentGemstone returns the PowderSpentGemstone field value
+// GetPowderSpentGemstone returns the PowderSpentGemstone field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderSpentGemstone() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.PowderSpentGemstone) {
 		var ret int64
 		return ret
 	}
-
-	return o.PowderSpentGemstone
+	return *o.PowderSpentGemstone
 }
 
-// GetPowderSpentGemstoneOk returns a tuple with the PowderSpentGemstone field value
+// GetPowderSpentGemstoneOk returns a tuple with the PowderSpentGemstone field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderSpentGemstoneOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PowderSpentGemstone) {
 		return nil, false
 	}
-	return &o.PowderSpentGemstone, true
+	return o.PowderSpentGemstone, true
 }
 
-// SetPowderSpentGemstone sets field value
+// HasPowderSpentGemstone returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasPowderSpentGemstone() bool {
+	if o != nil && !IsNil(o.PowderSpentGemstone) {
+		return true
+	}
+
+	return false
+}
+
+// SetPowderSpentGemstone gets a reference to the given int64 and assigns it to the PowderSpentGemstone field.
 func (o *SkyBlockProfileMemberMiningCore) SetPowderSpentGemstone(v int64) {
-	o.PowderSpentGemstone = v
+	o.PowderSpentGemstone = &v
 }
 
-// GetPowderSpentGlacite returns the PowderSpentGlacite field value
+// GetPowderSpentGlacite returns the PowderSpentGlacite field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderSpentGlacite() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.PowderSpentGlacite) {
 		var ret int64
 		return ret
 	}
-
-	return o.PowderSpentGlacite
+	return *o.PowderSpentGlacite
 }
 
-// GetPowderSpentGlaciteOk returns a tuple with the PowderSpentGlacite field value
+// GetPowderSpentGlaciteOk returns a tuple with the PowderSpentGlacite field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderSpentGlaciteOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PowderSpentGlacite) {
 		return nil, false
 	}
-	return &o.PowderSpentGlacite, true
+	return o.PowderSpentGlacite, true
 }
 
-// SetPowderSpentGlacite sets field value
+// HasPowderSpentGlacite returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasPowderSpentGlacite() bool {
+	if o != nil && !IsNil(o.PowderSpentGlacite) {
+		return true
+	}
+
+	return false
+}
+
+// SetPowderSpentGlacite gets a reference to the given int64 and assigns it to the PowderSpentGlacite field.
 func (o *SkyBlockProfileMemberMiningCore) SetPowderSpentGlacite(v int64) {
-	o.PowderSpentGlacite = v
+	o.PowderSpentGlacite = &v
 }
 
-// GetPowderSpentMithril returns the PowderSpentMithril field value
+// GetPowderSpentMithril returns the PowderSpentMithril field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderSpentMithril() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.PowderSpentMithril) {
 		var ret int64
 		return ret
 	}
-
-	return o.PowderSpentMithril
+	return *o.PowderSpentMithril
 }
 
-// GetPowderSpentMithrilOk returns a tuple with the PowderSpentMithril field value
+// GetPowderSpentMithrilOk returns a tuple with the PowderSpentMithril field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderSpentMithrilOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PowderSpentMithril) {
 		return nil, false
 	}
-	return &o.PowderSpentMithril, true
+	return o.PowderSpentMithril, true
 }
 
-// SetPowderSpentMithril sets field value
+// HasPowderSpentMithril returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasPowderSpentMithril() bool {
+	if o != nil && !IsNil(o.PowderSpentMithril) {
+		return true
+	}
+
+	return false
+}
+
+// SetPowderSpentMithril gets a reference to the given int64 and assigns it to the PowderSpentMithril field.
 func (o *SkyBlockProfileMemberMiningCore) SetPowderSpentMithril(v int64) {
-	o.PowderSpentMithril = v
+	o.PowderSpentMithril = &v
 }
 
 // GetReceivedFreeTier returns the ReceivedFreeTier field value
@@ -728,29 +854,65 @@ func (o SkyBlockProfileMemberMiningCore) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileMemberMiningCore) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["biomes"] = o.Biomes
+	if !IsNil(o.Biomes) {
+		toSerialize["biomes"] = o.Biomes
+	}
 	toSerialize["crystals"] = o.Crystals
-	toSerialize["daily_ores_mined"] = o.DailyOresMined
-	toSerialize["daily_ores_mined_day"] = o.DailyOresMinedDay
-	toSerialize["daily_ores_mined_day_gemstone"] = o.DailyOresMinedDayGemstone
-	toSerialize["daily_ores_mined_day_glacite"] = o.DailyOresMinedDayGlacite
-	toSerialize["daily_ores_mined_day_mithril_ore"] = o.DailyOresMinedDayMithrilOre
-	toSerialize["daily_ores_mined_gemstone"] = o.DailyOresMinedGemstone
-	toSerialize["daily_ores_mined_glacite"] = o.DailyOresMinedGlacite
-	toSerialize["daily_ores_mined_mithril_ore"] = o.DailyOresMinedMithrilOre
+	if !IsNil(o.DailyOresMined) {
+		toSerialize["daily_ores_mined"] = o.DailyOresMined
+	}
+	if !IsNil(o.DailyOresMinedDay) {
+		toSerialize["daily_ores_mined_day"] = o.DailyOresMinedDay
+	}
+	if !IsNil(o.DailyOresMinedDayGemstone) {
+		toSerialize["daily_ores_mined_day_gemstone"] = o.DailyOresMinedDayGemstone
+	}
+	if !IsNil(o.DailyOresMinedDayGlacite) {
+		toSerialize["daily_ores_mined_day_glacite"] = o.DailyOresMinedDayGlacite
+	}
+	if !IsNil(o.DailyOresMinedDayMithrilOre) {
+		toSerialize["daily_ores_mined_day_mithril_ore"] = o.DailyOresMinedDayMithrilOre
+	}
+	if !IsNil(o.DailyOresMinedGemstone) {
+		toSerialize["daily_ores_mined_gemstone"] = o.DailyOresMinedGemstone
+	}
+	if !IsNil(o.DailyOresMinedGlacite) {
+		toSerialize["daily_ores_mined_glacite"] = o.DailyOresMinedGlacite
+	}
+	if !IsNil(o.DailyOresMinedMithrilOre) {
+		toSerialize["daily_ores_mined_mithril_ore"] = o.DailyOresMinedMithrilOre
+	}
 	toSerialize["experience"] = o.Experience
-	toSerialize["greater_mines_last_access"] = o.GreaterMinesLastAccess
-	toSerialize["last_reset"] = o.LastReset
+	if !IsNil(o.GreaterMinesLastAccess) {
+		toSerialize["greater_mines_last_access"] = o.GreaterMinesLastAccess
+	}
+	if !IsNil(o.LastReset) {
+		toSerialize["last_reset"] = o.LastReset
+	}
 	toSerialize["nodes"] = o.Nodes
-	toSerialize["powder_gemstone"] = o.PowderGemstone
-	toSerialize["powder_gemstone_total"] = o.PowderGemstoneTotal
-	toSerialize["powder_glacite"] = o.PowderGlacite
-	toSerialize["powder_glacite_total"] = o.PowderGlaciteTotal
+	if !IsNil(o.PowderGemstone) {
+		toSerialize["powder_gemstone"] = o.PowderGemstone
+	}
+	if !IsNil(o.PowderGemstoneTotal) {
+		toSerialize["powder_gemstone_total"] = o.PowderGemstoneTotal
+	}
+	if !IsNil(o.PowderGlacite) {
+		toSerialize["powder_glacite"] = o.PowderGlacite
+	}
+	if !IsNil(o.PowderGlaciteTotal) {
+		toSerialize["powder_glacite_total"] = o.PowderGlaciteTotal
+	}
 	toSerialize["powder_mithril"] = o.PowderMithril
 	toSerialize["powder_mithril_total"] = o.PowderMithrilTotal
-	toSerialize["powder_spent_gemstone"] = o.PowderSpentGemstone
-	toSerialize["powder_spent_glacite"] = o.PowderSpentGlacite
-	toSerialize["powder_spent_mithril"] = o.PowderSpentMithril
+	if !IsNil(o.PowderSpentGemstone) {
+		toSerialize["powder_spent_gemstone"] = o.PowderSpentGemstone
+	}
+	if !IsNil(o.PowderSpentGlacite) {
+		toSerialize["powder_spent_glacite"] = o.PowderSpentGlacite
+	}
+	if !IsNil(o.PowderSpentMithril) {
+		toSerialize["powder_spent_mithril"] = o.PowderSpentMithril
+	}
 	toSerialize["received_free_tier"] = o.ReceivedFreeTier
 	toSerialize["retroactive_tier2_token"] = o.RetroactiveTier2Token
 	toSerialize["tokens_spent"] = o.TokensSpent
@@ -762,29 +924,11 @@ func (o *SkyBlockProfileMemberMiningCore) UnmarshalJSON(data []byte) (err error)
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
-		"biomes",
 		"crystals",
-		"daily_ores_mined",
-		"daily_ores_mined_day",
-		"daily_ores_mined_day_gemstone",
-		"daily_ores_mined_day_glacite",
-		"daily_ores_mined_day_mithril_ore",
-		"daily_ores_mined_gemstone",
-		"daily_ores_mined_glacite",
-		"daily_ores_mined_mithril_ore",
 		"experience",
-		"greater_mines_last_access",
-		"last_reset",
 		"nodes",
-		"powder_gemstone",
-		"powder_gemstone_total",
-		"powder_glacite",
-		"powder_glacite_total",
 		"powder_mithril",
 		"powder_mithril_total",
-		"powder_spent_gemstone",
-		"powder_spent_glacite",
-		"powder_spent_mithril",
 		"received_free_tier",
 		"retroactive_tier2_token",
 		"tokens_spent",

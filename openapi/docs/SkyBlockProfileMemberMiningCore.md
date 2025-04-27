@@ -4,29 +4,29 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Biomes** | [**SkyBlockProfileMemberMiningCoreBiomes**](SkyBlockProfileMemberMiningCoreBiomes.md) |  | 
+**Biomes** | Pointer to [**SkyBlockProfileMemberMiningCoreBiomes**](SkyBlockProfileMemberMiningCoreBiomes.md) |  | [optional] 
 **Crystals** | [**SkyBlockProfileMemberMiningCoreCrystals**](SkyBlockProfileMemberMiningCoreCrystals.md) |  | 
-**DailyOresMined** | **int64** |  | 
-**DailyOresMinedDay** | **int64** |  | 
-**DailyOresMinedDayGemstone** | **int64** |  | 
-**DailyOresMinedDayGlacite** | **int64** |  | 
-**DailyOresMinedDayMithrilOre** | **int64** |  | 
-**DailyOresMinedGemstone** | **int64** |  | 
-**DailyOresMinedGlacite** | **int64** |  | 
-**DailyOresMinedMithrilOre** | **int64** |  | 
+**DailyOresMined** | Pointer to **int64** |  | [optional] 
+**DailyOresMinedDay** | Pointer to **int64** |  | [optional] 
+**DailyOresMinedDayGemstone** | Pointer to **int64** |  | [optional] 
+**DailyOresMinedDayGlacite** | Pointer to **int64** |  | [optional] 
+**DailyOresMinedDayMithrilOre** | Pointer to **int64** |  | [optional] 
+**DailyOresMinedGemstone** | Pointer to **int64** |  | [optional] 
+**DailyOresMinedGlacite** | Pointer to **int64** |  | [optional] 
+**DailyOresMinedMithrilOre** | Pointer to **int64** |  | [optional] 
 **Experience** | **int64** |  | 
-**GreaterMinesLastAccess** | **int64** |  | 
-**LastReset** | **int64** |  | 
+**GreaterMinesLastAccess** | Pointer to **int64** |  | [optional] 
+**LastReset** | Pointer to **int64** |  | [optional] 
 **Nodes** | [**SkyBlockProfileMemberMiningCoreNodes**](SkyBlockProfileMemberMiningCoreNodes.md) |  | 
-**PowderGemstone** | **int64** |  | 
-**PowderGemstoneTotal** | **int64** |  | 
-**PowderGlacite** | **int64** |  | 
-**PowderGlaciteTotal** | **int64** |  | 
+**PowderGemstone** | Pointer to **int64** |  | [optional] 
+**PowderGemstoneTotal** | Pointer to **int64** |  | [optional] 
+**PowderGlacite** | Pointer to **int64** |  | [optional] 
+**PowderGlaciteTotal** | Pointer to **int64** |  | [optional] 
 **PowderMithril** | **int64** |  | 
 **PowderMithrilTotal** | **int64** |  | 
-**PowderSpentGemstone** | **int64** |  | 
-**PowderSpentGlacite** | **int64** |  | 
-**PowderSpentMithril** | **int64** |  | 
+**PowderSpentGemstone** | Pointer to **int64** |  | [optional] 
+**PowderSpentGlacite** | Pointer to **int64** |  | [optional] 
+**PowderSpentMithril** | Pointer to **int64** |  | [optional] 
 **ReceivedFreeTier** | **bool** |  | 
 **RetroactiveTier2Token** | **bool** |  | 
 **TokensSpent** | **int64** |  | 
@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberMiningCore
 
-`func NewSkyBlockProfileMemberMiningCore(biomes SkyBlockProfileMemberMiningCoreBiomes, crystals SkyBlockProfileMemberMiningCoreCrystals, dailyOresMined int64, dailyOresMinedDay int64, dailyOresMinedDayGemstone int64, dailyOresMinedDayGlacite int64, dailyOresMinedDayMithrilOre int64, dailyOresMinedGemstone int64, dailyOresMinedGlacite int64, dailyOresMinedMithrilOre int64, experience int64, greaterMinesLastAccess int64, lastReset int64, nodes SkyBlockProfileMemberMiningCoreNodes, powderGemstone int64, powderGemstoneTotal int64, powderGlacite int64, powderGlaciteTotal int64, powderMithril int64, powderMithrilTotal int64, powderSpentGemstone int64, powderSpentGlacite int64, powderSpentMithril int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64, ) *SkyBlockProfileMemberMiningCore`
+`func NewSkyBlockProfileMemberMiningCore(crystals SkyBlockProfileMemberMiningCoreCrystals, experience int64, nodes SkyBlockProfileMemberMiningCoreNodes, powderMithril int64, powderMithrilTotal int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64, ) *SkyBlockProfileMemberMiningCore`
 
 NewSkyBlockProfileMemberMiningCore instantiates a new SkyBlockProfileMemberMiningCore object
 This constructor will assign default values to properties that have it defined,
@@ -69,6 +69,11 @@ and a boolean to check if the value has been set.
 
 SetBiomes sets Biomes field to given value.
 
+### HasBiomes
+
+`func (o *SkyBlockProfileMemberMiningCore) HasBiomes() bool`
+
+HasBiomes returns a boolean if a field has been set.
 
 ### GetCrystals
 
@@ -109,6 +114,11 @@ and a boolean to check if the value has been set.
 
 SetDailyOresMined sets DailyOresMined field to given value.
 
+### HasDailyOresMined
+
+`func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMined() bool`
+
+HasDailyOresMined returns a boolean if a field has been set.
 
 ### GetDailyOresMinedDay
 
@@ -129,6 +139,11 @@ and a boolean to check if the value has been set.
 
 SetDailyOresMinedDay sets DailyOresMinedDay field to given value.
 
+### HasDailyOresMinedDay
+
+`func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedDay() bool`
+
+HasDailyOresMinedDay returns a boolean if a field has been set.
 
 ### GetDailyOresMinedDayGemstone
 
@@ -149,6 +164,11 @@ and a boolean to check if the value has been set.
 
 SetDailyOresMinedDayGemstone sets DailyOresMinedDayGemstone field to given value.
 
+### HasDailyOresMinedDayGemstone
+
+`func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedDayGemstone() bool`
+
+HasDailyOresMinedDayGemstone returns a boolean if a field has been set.
 
 ### GetDailyOresMinedDayGlacite
 
@@ -169,6 +189,11 @@ and a boolean to check if the value has been set.
 
 SetDailyOresMinedDayGlacite sets DailyOresMinedDayGlacite field to given value.
 
+### HasDailyOresMinedDayGlacite
+
+`func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedDayGlacite() bool`
+
+HasDailyOresMinedDayGlacite returns a boolean if a field has been set.
 
 ### GetDailyOresMinedDayMithrilOre
 
@@ -189,6 +214,11 @@ and a boolean to check if the value has been set.
 
 SetDailyOresMinedDayMithrilOre sets DailyOresMinedDayMithrilOre field to given value.
 
+### HasDailyOresMinedDayMithrilOre
+
+`func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedDayMithrilOre() bool`
+
+HasDailyOresMinedDayMithrilOre returns a boolean if a field has been set.
 
 ### GetDailyOresMinedGemstone
 
@@ -209,6 +239,11 @@ and a boolean to check if the value has been set.
 
 SetDailyOresMinedGemstone sets DailyOresMinedGemstone field to given value.
 
+### HasDailyOresMinedGemstone
+
+`func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedGemstone() bool`
+
+HasDailyOresMinedGemstone returns a boolean if a field has been set.
 
 ### GetDailyOresMinedGlacite
 
@@ -229,6 +264,11 @@ and a boolean to check if the value has been set.
 
 SetDailyOresMinedGlacite sets DailyOresMinedGlacite field to given value.
 
+### HasDailyOresMinedGlacite
+
+`func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedGlacite() bool`
+
+HasDailyOresMinedGlacite returns a boolean if a field has been set.
 
 ### GetDailyOresMinedMithrilOre
 
@@ -249,6 +289,11 @@ and a boolean to check if the value has been set.
 
 SetDailyOresMinedMithrilOre sets DailyOresMinedMithrilOre field to given value.
 
+### HasDailyOresMinedMithrilOre
+
+`func (o *SkyBlockProfileMemberMiningCore) HasDailyOresMinedMithrilOre() bool`
+
+HasDailyOresMinedMithrilOre returns a boolean if a field has been set.
 
 ### GetExperience
 
@@ -289,6 +334,11 @@ and a boolean to check if the value has been set.
 
 SetGreaterMinesLastAccess sets GreaterMinesLastAccess field to given value.
 
+### HasGreaterMinesLastAccess
+
+`func (o *SkyBlockProfileMemberMiningCore) HasGreaterMinesLastAccess() bool`
+
+HasGreaterMinesLastAccess returns a boolean if a field has been set.
 
 ### GetLastReset
 
@@ -309,6 +359,11 @@ and a boolean to check if the value has been set.
 
 SetLastReset sets LastReset field to given value.
 
+### HasLastReset
+
+`func (o *SkyBlockProfileMemberMiningCore) HasLastReset() bool`
+
+HasLastReset returns a boolean if a field has been set.
 
 ### GetNodes
 
@@ -349,6 +404,11 @@ and a boolean to check if the value has been set.
 
 SetPowderGemstone sets PowderGemstone field to given value.
 
+### HasPowderGemstone
+
+`func (o *SkyBlockProfileMemberMiningCore) HasPowderGemstone() bool`
+
+HasPowderGemstone returns a boolean if a field has been set.
 
 ### GetPowderGemstoneTotal
 
@@ -369,6 +429,11 @@ and a boolean to check if the value has been set.
 
 SetPowderGemstoneTotal sets PowderGemstoneTotal field to given value.
 
+### HasPowderGemstoneTotal
+
+`func (o *SkyBlockProfileMemberMiningCore) HasPowderGemstoneTotal() bool`
+
+HasPowderGemstoneTotal returns a boolean if a field has been set.
 
 ### GetPowderGlacite
 
@@ -389,6 +454,11 @@ and a boolean to check if the value has been set.
 
 SetPowderGlacite sets PowderGlacite field to given value.
 
+### HasPowderGlacite
+
+`func (o *SkyBlockProfileMemberMiningCore) HasPowderGlacite() bool`
+
+HasPowderGlacite returns a boolean if a field has been set.
 
 ### GetPowderGlaciteTotal
 
@@ -409,6 +479,11 @@ and a boolean to check if the value has been set.
 
 SetPowderGlaciteTotal sets PowderGlaciteTotal field to given value.
 
+### HasPowderGlaciteTotal
+
+`func (o *SkyBlockProfileMemberMiningCore) HasPowderGlaciteTotal() bool`
+
+HasPowderGlaciteTotal returns a boolean if a field has been set.
 
 ### GetPowderMithril
 
@@ -469,6 +544,11 @@ and a boolean to check if the value has been set.
 
 SetPowderSpentGemstone sets PowderSpentGemstone field to given value.
 
+### HasPowderSpentGemstone
+
+`func (o *SkyBlockProfileMemberMiningCore) HasPowderSpentGemstone() bool`
+
+HasPowderSpentGemstone returns a boolean if a field has been set.
 
 ### GetPowderSpentGlacite
 
@@ -489,6 +569,11 @@ and a boolean to check if the value has been set.
 
 SetPowderSpentGlacite sets PowderSpentGlacite field to given value.
 
+### HasPowderSpentGlacite
+
+`func (o *SkyBlockProfileMemberMiningCore) HasPowderSpentGlacite() bool`
+
+HasPowderSpentGlacite returns a boolean if a field has been set.
 
 ### GetPowderSpentMithril
 
@@ -509,6 +594,11 @@ and a boolean to check if the value has been set.
 
 SetPowderSpentMithril sets PowderSpentMithril field to given value.
 
+### HasPowderSpentMithril
+
+`func (o *SkyBlockProfileMemberMiningCore) HasPowderSpentMithril() bool`
+
+HasPowderSpentMithril returns a boolean if a field has been set.
 
 ### GetReceivedFreeTier
 
