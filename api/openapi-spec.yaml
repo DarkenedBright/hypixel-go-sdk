@@ -113,343 +113,6 @@ components:
             type: object
       description: A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle.
   schemas:
-    ActiveBooster:
-      allOf:
-        - $ref: '#/components/schemas/Booster'
-        - properties:
-            stacked:
-              items:
-                description: UUID of the player in a dashed format
-                example: ad8fefaa-8351-454b-b739-a4eaa872173f
-                format: uuid
-                type: string
-              type: array
-          type: object
-    Booster:
-      properties:
-        _id:
-          format: objectid
-          type: string
-        amount:
-          type: integer
-        dateActivated:
-          type: integer
-        gameType:
-          type: integer
-        length:
-          type: integer
-        originalLength:
-          type: integer
-        purchaserUuid:
-          example: ad8fefaa8351454bb739a4eaa872173f
-          format: uuid
-          type: string
-    QueuedBooster:
-      allOf:
-        - $ref: '#/components/schemas/Booster'
-        - properties:
-            stacked:
-              type: boolean
-          type: object
-    SkyBlockEmblem:
-      enum:
-        - ALCHEMY_BREW
-        - ARCHER_MASTER
-        - ARCHER_SPADE
-        - ARC_REACTOR
-        - BADGE
-        - BERSERKER_EXPLOSION
-        - BERSERKER_MASTER
-        - BIOHAZARD
-        - BOXES
-        - BROODMOTHER_STRING
-        - CARPENTRY_HOUSE
-        - CATACOMBS_SWORDS
-        - CENTURY_CELEBRANT
-        - CENTURY_PARTYGOER
-        - CENTURY_RAFFLE_BLUE
-        - CENTURY_RAFFLE_GREEN
-        - CENTURY_RAFFLE_PINK
-        - CENTURY_RAFFLE_RED
-        - CENTURY_RAFFLE_YELLOW
-        - CHOCOLATE_BAR
-        - CLASS_MASTER
-        - COLLECTING_TOP_HAT
-        - COMBAT_EXPLOSION
-        - COMBAT_MASTER
-        - DIAMOND
-        - DIAMOND_CLASS_GRANDMASTER
-        - DIAMOND_JACOBS_CONTEST_COMPLETIONIST
-        - DIAMOND_MINING_HELIX
-        - DIAMOND_TROPHY_KING
-        - DUNGEON_MASTER
-        - DUNGEON_RUNNER
-        - ENCHANTING_MASTER
-        - ENCHANTING_PENCIL
-        - EXTREME_BANKER
-        - FARMING_FLOWER
-        - FARMING_MASTER
-        - FISHING_FISH
-        - FLORETTE
-        - FORAGING_LEAF
-        - GARDENER
-        - GIFT_OF_GIVING
-        - GLOBE
-        - GOLDEN_BROODMOTHER_STRING
-        - GOLDEN_CATACOMBS_SWORDS
-        - GOLDEN_CHILI_PEPPER
-        - GOLDEN_CHOCOLATE_BAR
-        - GOLDEN_CLASS_MASTER
-        - GOLDEN_COLLECTING_TOP_HAT
-        - GOLDEN_FLEUR_DE_LIS
-        - GOLDEN_GARDENER
-        - GOLDEN_INFERNO_RODS
-        - GOLDEN_JACOBS_CONTEST_COMPLETIONIST
-        - GOLDEN_MAGICAL_SIGMA
-        - GOLDEN_MINING_HELIX
-        - GOLDEN_REVENANT_HORROR_BRAIN
-        - GOLDEN_RIFTSTALKER_STRANGE_TIME
-        - GOLDEN_SVEN_SHIELD
-        - GOLDEN_TROPHY_KING
-        - GOLDEN_VOIDGLOOM_RUNE
-        - GREAT_SPOOK
-        - HARP_MASTER
-        - HARP_NOTE
-        - HEALER_MASTER
-        - HEALER_STAFF
-        - HEART
-        - HELMET
-        - HYPIXEL
-        - INFERNO_RODS
-        - JACOBS_CONTEST_COMPLETIONIST
-        - JERRY
-        - KUUDRA_MASTER_SLAYER
-        - KUUDRA_SLAYER
-        - MAGE_LIGHTNING
-        - MAGE_MASTER
-        - MAGICAL_SIGMA
-        - MARKER
-        - MINING_HELIX
-        - MINING_MASTER
-        - MINING_PICKAXE
-        - MUSTACHE
-        - PRISTINE
-        - REVENANT_HORROR_BRAIN
-        - RIFTSTALKER_STRANGE_TIME
-        - RIFT_TIME
-        - SIDEWAYS_SMILEY
-        - SNOWMAN
-        - SOCIAL_MASTER
-        - SOCIAL_STATEMENT
-        - SOULFLOW
-        - SPACESHIP
-        - SPADE
-        - STAR
-        - SVEN_SHIELD
-        - TAMING_CLOVER
-        - TAMING_MASTER
-        - TANK_ANCHOR
-        - TANK_MASTER
-        - TOXIC
-        - TROPHY_KING
-        - ULTRA_BANKER
-        - VOIDGLOOM_RUNE
-        - WARNING
-      type: string
-    SkyBlockFireSale:
-      properties:
-        amount:
-          description: The amount of items available for this sale
-          type: integer
-        end:
-          description: The end time in unix milliseconds for the sale
-          type: integer
-        item_id:
-          description: The SkyBlock item ID for this sale
-          type: string
-        price:
-          description: The price in Gems for this sale
-          type: integer
-        start:
-          description: The start time in unix milliseconds for the sale
-          type: integer
-    SkyBlockGarden:
-      description: Information about a player's SkyBlock garden, the only guaranteed field is the `uuid` field.
-      properties:
-        active_commissions:
-          example:
-            fear_mongerer:
-              extra_rewards:
-                - candy: PURPLE_CANDY
-              position: 5
-              requirement:
-                - amount: 1
-                  item: POLISHED_PUMPKIN
-                  original_amount: 27709
-                  original_item: PUMPKIN
-              status: NOT_STARTED
-            liam:
-              position: 1
-              requirement:
-                - amount: 4
-                  item: MUTANT_NETHER_STALK
-                  original_amount: 93995
-                  original_item: NETHER_STALK
-              status: NOT_STARTED
-            lumberjack:
-              position: 2
-              requirement:
-                - amount: 3
-                  item: ENCHANTED_BAKED_POTATO
-                  original_amount: 81380
-                  original_item: POTATO_ITEM
-              status: NOT_STARTED
-            oringo:
-              position: 3
-              requirement:
-                - amount: 21
-                  item: ENCHANTED_HAY_BLOCK
-                  original_amount: 26798
-                  original_item: WHEAT
-              status: NOT_STARTED
-            rhys:
-              position: 4
-              requirement:
-                - amount: 512
-                  item: JACK_O_LANTERN
-                  original_amount: 512
-                  original_item: JACK_O_LANTERN
-              status: NOT_STARTED
-          type: object
-        commission_data:
-          properties:
-            completed:
-              description: A map of visitor identifier to completed count
-              example:
-                andrew: 2
-                jacob: 1
-                jerry: 1
-              type: object
-            total_completed:
-              type: integer
-            unique_npcs_served:
-              type: integer
-            visits:
-              description: A map of visitor identifier to visit count
-              example:
-                andrew: 3
-                jacob: 2
-                jerry: 1
-              type: object
-          type: object
-        composter_data:
-          example:
-            compost_items: 2
-            compost_units: 0
-            conversion_ticks: 300
-            fuel_units: 17000
-            last_save: 1721039418436
-            organic_matter: 1772.8
-            upgrades:
-              cost_reduction: 25
-              fuel_cap: 22
-              multi_drop: 25
-              organic_matter_cap: 25
-              speed: 25
-          type: object
-        crop_upgrade_levels:
-          example:
-            INK_SACK:3: 3
-            POTATO_ITEM: 2
-            WHEAT: 1
-          type: object
-        garden_experience:
-          type: number
-        resources_collected:
-          description: A map of resource ID to amount collected
-          example:
-            INK_SACK:3: 100
-            POTATO_ITEM: 100
-            WHEAT: 100
-          type: object
-        selected_barn_skin:
-          type: string
-        unlocked_barn_skins:
-          items:
-            type: string
-          type: array
-        unlocked_plots_ids:
-          example:
-            - beginner_1
-            - intermediate_3
-          items:
-            type: string
-          type: array
-        uuid:
-          description: The UUID of the profile for this garden.
-          format: uuid
-          type: string
-      required:
-        - uuid
-    SkyBlockItem:
-      example:
-        category: CHESTPLATE
-        color: 255,215,0
-        id: FARM_ARMOR_CHESTPLATE
-        material: LEATHER_CHESTPLATE
-        name: Farm Armor Chestplate
-        npc_sell_price: 5200
-        stats:
-          DEFENSE: 75
-          HEALTH: 20
-        tier: RARE
-      properties:
-        color:
-          description: The color metadata to be applied to an item, usually leather armor pieces
-          pattern: ^(?:(?:^|,\s*)([01]?\d\d?|2[0-4]\d|25[0-5])){3}$
-          type: string
-        id:
-          description: The unique identifier for this item
-          type: string
-        material:
-          description: The Bukkit material enum value for the item
-          type: string
-        name:
-          description: The name of the item
-          type: string
-        skin:
-          description: The skin value for a skull based item
-          type: string
-        tier:
-          description: The rarity tier of the item
-          enum:
-            - COMMON
-            - EPIC
-            - LEGENDARY
-            - MYTHIC
-            - RARE
-            - SPECIAL
-            - SUPREME
-            - UNCOMMON
-            - VERY_SPECIAL
-          type: string
-    SkyBlockMuseum:
-      properties:
-        appraisal:
-          type: boolean
-        items:
-          type: object
-        special:
-          items:
-            properties:
-              donated_time:
-                type: integer
-              items:
-                type: object
-            type: object
-          type: array
-        value:
-          type: integer
     SkyBlockProfile:
       properties:
         banking:
@@ -531,11 +194,11 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberLeveling'
         mining_core:
           $ref: '#/components/schemas/SkyBlockProfileMemberMiningCore'
+        nether_island_player_data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerData'
         player_id:
           format: uuid
           type: string
-        rift:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRift'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       properties:
@@ -1310,13 +973,13 @@ components:
           type: boolean
         completed_tasks:
           items:
-            $ref: '#/components/schemas/SkyBlockXPTask'
+            $ref: '#/components/schemas/SkyBlockProfileMemberLevelingXPTask'
           type: array
         completions:
           $ref: '#/components/schemas/SkyBlockProfileMemberLevelingCompletions'
         emblem_unlocks:
           items:
-            $ref: '#/components/schemas/SkyBlockEmblem'
+            $ref: '#/components/schemas/SkyBlockProfileMemberLevelingEmblem'
           type: array
         experience:
           type: integer
@@ -1337,7 +1000,7 @@ components:
         mining_fiesta_ores_mined:
           type: integer
         selected_symbol:
-          $ref: '#/components/schemas/SkyBlockEmblem'
+          $ref: '#/components/schemas/SkyBlockProfileMemberLevelingEmblem'
       type: object
     SkyBlockProfileMemberLevelingCompletions:
       properties:
@@ -1348,476 +1011,112 @@ components:
         REFINED_DARK_CACAO_TRUFFLE:
           type: integer
       type: object
-    SkyBlockProfileMemberMiningCore:
-      additionalProperties: false
-      properties:
-        biomes:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomes'
-        crystals:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystals'
-        daily_ores_mined:
-          type: integer
-        daily_ores_mined_day:
-          type: integer
-        daily_ores_mined_day_gemstone:
-          type: integer
-        daily_ores_mined_day_glacite:
-          type: integer
-        daily_ores_mined_day_mithril_ore:
-          type: integer
-        daily_ores_mined_gemstone:
-          type: integer
-        daily_ores_mined_glacite:
-          type: integer
-        daily_ores_mined_mithril_ore:
-          type: integer
-        experience:
-          type: number
-        greater_mines_last_access:
-          type: integer
-        last_reset:
-          type: integer
-        nodes:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreNodes'
-        powder_gemstone:
-          type: integer
-        powder_gemstone_total:
-          type: integer
-        powder_glacite:
-          type: integer
-        powder_glacite_total:
-          type: integer
-        powder_mithril:
-          type: integer
-        powder_mithril_total:
-          type: integer
-        powder_spent_gemstone:
-          type: integer
-        current_daily_effect:
-          type: string
-        current_daily_effect_last_changed:
-          type: integer
-        powder_spent_glacite:
-          type: integer
-        powder_spent_mithril:
-          type: integer
-        received_free_tier:
-          type: boolean
-        retroactive_tier2_token:
-          type: boolean
-        selected_pickaxe_ability:
-          enum:
-            - anomalous_desire
-            - gemstone_infusion
-            - maniac_miner
-            - mining_speed_boost
-            - pickaxe_toss
-            - sheer_force
-          type: string
-        tokens_spent:
-          type: integer
-      required:
-        - experience
-        - nodes
-        - powder_mithril
-        - powder_mithril_total
-        - received_free_tier
-        - retroactive_tier2_token
-        - tokens_spent
-      type: object
-    SkyBlockProfileMemberMiningCoreBiomes:
-      additionalProperties: false
-      properties:
-        dwarven:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesDwarven'
-        goblin:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesGoblin'
-        jungle:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesJungle'
-        precursor:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesPrecursor'
-      required:
-        - dwarven
-        - goblin
-        - jungle
-        - precursor
-      type: object
-    SkyBlockProfileMemberMiningCoreBiomesDwarven:
-      additionalProperties: false
-      type: object
-    SkyBlockProfileMemberMiningCoreBiomesGoblin:
-      additionalProperties: false
-      properties:
-        king_quest_active:
-          type: boolean
-        king_quests_completed:
-          type: integer
-      required:
-        - king_quest_active
-        - king_quests_completed
-      type: object
-    SkyBlockProfileMemberMiningCoreBiomesJungle:
-      additionalProperties: false
-      properties:
-        jungle_temple_chest_uses:
-          type: integer
-        jungle_temple_open:
-          type: boolean
-      required:
-        - jungle_temple_chest_uses
-        - jungle_temple_open
-      type: object
-    SkyBlockProfileMemberMiningCoreBiomesPrecursor:
-      additionalProperties: false
-      properties:
-        claiming_with_precursor_apparatus:
-          type: boolean
-        parts_delivered:
-          items:
-            enum:
-              - CONTROL_SWITCH
-              - ELECTRON_TRANSMITTER
-              - FTX_3070
-              - ROBOTRON_REFLECTOR
-              - SUPERLITE_MOTOR
-              - SYNTHETIC_HEART
-            type: string
-          type: array
-        talked_to_professor:
-          type: boolean
-      required:
-        - claiming_with_precursor_apparatus
-        - talked_to_professor
-      type: object
-    SkyBlockProfileMemberMiningCoreCrystals:
-      additionalProperties: false
-      properties:
-        amber_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        amethyst_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        aquamarine_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        citrine_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        jade_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        jasper_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        onyx_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        opal_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        peridot_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        ruby_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        sapphire_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-        topaz_crystal:
-          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
-      required:
-        - amber_crystal
-        - amethyst_crystal
-        - aquamarine_crystal
-        - citrine_crystal
-        - jade_crystal
-        - jasper_crystal
-        - onyx_crystal
-        - peridot_crystal
-        - ruby_crystal
-        - sapphire_crystal
-        - topaz_crystal
-      type: object
-    SkyBlockProfileMemberMiningCoreCrystalsCrystal:
-      additionalProperties: false
-      properties:
-        state:
-          enum:
-            - FOUND
-            - NOT_FOUND
-            - PLACED
-          type: string
-        total_found:
-          type: integer
-        total_placed:
-          type: integer
-      type: object
-    SkyBlockProfileMemberMiningCoreNodes:
-      additionalProperties: false
-      properties:
-        anomalous_desire:
-          type: integer
-        blockhead:
-          type: integer
-        crystalline:
-          type: integer
-        daily_effect:
-          type: integer
-        daily_grind:
-          type: integer
-        daily_powder:
-          type: integer
-        dead_mans_chest:
-          type: integer
-        eager_adventurer:
-          type: integer
-        efficient_miner:
-          type: integer
-        forge_time:
-          type: integer
-        fortunate:
-          type: integer
-        front_loaded:
-          type: integer
-        gemstone_infusion:
-          type: integer
-        gifts_from_the_departed:
-          type: integer
-        great_explorer:
-          type: integer
-        keep_it_cool:
-          type: integer
-        lonesome_miner:
-          type: integer
-        maniac_miner:
-          type: integer
-        metal_head:
-          type: integer
-        miners_blessing:
-          type: integer
-        mineshaft_mayhem:
-          type: integer
-        mining_experience:
-          type: integer
-        mining_fortune:
-          type: integer
-        mining_fortune_2:
-          type: integer
-        mining_madness:
-          type: integer
-        mining_master:
-          type: integer
-        mining_speed:
-          type: integer
-        mining_speed_2:
-          type: integer
-        mining_speed_boost:
-          type: integer
-        mole:
-          type: integer
-        no_stone_unturned:
-          type: integer
-        old_school:
-          type: integer
-        pickaxe_toss:
-          type: integer
-        powder_buff:
-          type: integer
-        precision_mining:
-          type: integer
-        professional:
-          type: integer
-        rags_to_riches:
-          type: integer
-        random_event:
-          type: integer
-        sheer_force:
-          type: integer
-        special_0:
-          type: integer
-        steady_hand:
-          type: integer
-        strong_arm:
-          type: integer
-        subterranean_fisher:
-          type: integer
-        surveyor:
-          type: integer
-        titanium_insanium:
-          type: integer
-        vanguard_seeker:
-          type: integer
-        warm_hearted:
-          type: integer
-      type: object
-    SkyBlockProfileMemberRift:
-      properties:
-        black_lagoon:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
-        dead_cats:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftDeadCats'
-        enigma:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftEnigma'
-        gallery:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftGallery'
-        village_plaza:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlaza'
-        wither_cage:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWitherCage'
-        wizard_tower:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWizardTower'
-      type: object
-    SkyBlockProfileMemberRiftBlackLagoon:
-      properties:
-        completed_step:
-          type: integer
-        delivered_science_paper:
-          type: boolean
-        received_science_paper:
-          type: boolean
-        talked_to_edwin:
-          type: boolean
-      type: object
-    SkyBlockProfileMemberRiftDeadCats:
-      properties:
-        found_cats:
-          items:
-            type: string
-          type: array
-        montezuma:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftDeadCatsMontezuma'
-        picked_up_detector:
-          type: boolean
-        talked_to_jacquelle:
-          type: boolean
-        unlocked_pet:
-          type: boolean
-      type: object
-    SkyBlockProfileMemberRiftDeadCatsMontezuma:
-      properties:
-        active:
-          type: boolean
-        candyUsed:
-          type: integer
-        exp:
-          type: number
-        heldItem:
-          $ref: '#/components/schemas/SkyBlockItem'
-          nullable: true
-        skin:
-          $ref: '#/components/schemas/SkyBlockItem'
-          nullable: true
-        tier:
-          type: string
-        type:
-          type: string
-        uniqueId:
-          format: uuid
-          type: string
-        uuid:
-          format: uuid
-          type: string
-      type: object
-    SkyBlockProfileMemberRiftEnigma:
-      properties:
-        bought_cloak:
-          type: boolean
-        claimed_bonus_index:
-          type: integer
-        found_souls:
-          items:
-            type: string
-          type: array
-      type: object
-    SkyBlockProfileMemberRiftGallery:
-      properties:
-        elise_step:
-          type: integer
-        secured_trophies:
-          items:
-            properties:
-              timestamp:
-                type: integer
-              type:
-                type: string
-              visits:
-                type: integer
-            type: object
-          type: array
-        sent_trophy_dialogues:
-          items:
-            type: string
-          type: array
-      type: object
-    SkyBlockProfileMemberRiftVillagePlaza:
-      properties:
-        barry_center:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarryCenter'
-        barter_bank:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarterBank'
-        cowboy:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaCowboy'
-        got_scammed:
-          type: boolean
-        lonely:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaLonely'
-        murder:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaMurder'
-        seraphine:
-          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaSeraphine'
-      type: object
-    SkyBlockProfileMemberRiftVillagePlazaBarryCenter:
-      properties:
-        convinced:
-          items:
-            type: string
-          type: array
-        first_talk_to_barry:
-          type: boolean
-        received_reward:
-          type: boolean
-      type: object
-    SkyBlockProfileMemberRiftVillagePlazaBarterBank:
-      properties: {}
-      type: object
-    SkyBlockProfileMemberRiftVillagePlazaCowboy:
-      properties:
-        hay_eaten:
-          type: integer
-        rabbit_name:
-          type: string
-        stage:
-          type: integer
-      type: object
-    SkyBlockProfileMemberRiftVillagePlazaLonely:
-      properties:
-        seconds_sitting:
-          type: integer
-      type: object
-    SkyBlockProfileMemberRiftVillagePlazaMurder:
-      properties:
-        room_clues:
-          items:
-            type: string
-          type: array
-        step_index:
-          type: integer
-        step_index_pt2:
-          type: integer
-        step_index_pt3:
-          type: integer
-      type: object
-    SkyBlockProfileMemberRiftVillagePlazaSeraphine:
-      properties:
-        step_index:
-          type: integer
-      type: object
-    SkyBlockProfileMemberRiftWitherCage:
-      properties:
-        killed_eyes:
-          items:
-            type: string
-          type: array
-      type: object
-    SkyBlockProfileMemberRiftWizardTower:
-      properties:
-        crumbs_laid_out:
-          type: integer
-        wizard_quest_step:
-          type: integer
-      type: object
-    SkyBlockXPTask:
+    SkyBlockProfileMemberLevelingEmblem:
+      enum:
+        - ALCHEMY_BREW
+        - ARCHER_MASTER
+        - ARCHER_SPADE
+        - ARC_REACTOR
+        - BADGE
+        - BERSERKER_EXPLOSION
+        - BERSERKER_MASTER
+        - BIOHAZARD
+        - BOXES
+        - BROODMOTHER_STRING
+        - CARPENTRY_HOUSE
+        - CATACOMBS_SWORDS
+        - CENTURY_CELEBRANT
+        - CENTURY_PARTYGOER
+        - CENTURY_RAFFLE_BLUE
+        - CENTURY_RAFFLE_GREEN
+        - CENTURY_RAFFLE_PINK
+        - CENTURY_RAFFLE_RED
+        - CENTURY_RAFFLE_YELLOW
+        - CHOCOLATE_BAR
+        - CLASS_MASTER
+        - COLLECTING_TOP_HAT
+        - COMBAT_EXPLOSION
+        - COMBAT_MASTER
+        - DIAMOND
+        - DIAMOND_CLASS_GRANDMASTER
+        - DIAMOND_JACOBS_CONTEST_COMPLETIONIST
+        - DIAMOND_MINING_HELIX
+        - DIAMOND_TROPHY_KING
+        - DUNGEON_MASTER
+        - DUNGEON_RUNNER
+        - ENCHANTING_MASTER
+        - ENCHANTING_PENCIL
+        - EXTREME_BANKER
+        - FARMING_FLOWER
+        - FARMING_MASTER
+        - FISHING_FISH
+        - FLORETTE
+        - FORAGING_LEAF
+        - GARDENER
+        - GIFT_OF_GIVING
+        - GLOBE
+        - GOLDEN_BROODMOTHER_STRING
+        - GOLDEN_CATACOMBS_SWORDS
+        - GOLDEN_CHILI_PEPPER
+        - GOLDEN_CHOCOLATE_BAR
+        - GOLDEN_CLASS_MASTER
+        - GOLDEN_COLLECTING_TOP_HAT
+        - GOLDEN_FLEUR_DE_LIS
+        - GOLDEN_GARDENER
+        - GOLDEN_INFERNO_RODS
+        - GOLDEN_JACOBS_CONTEST_COMPLETIONIST
+        - GOLDEN_MAGICAL_SIGMA
+        - GOLDEN_MINING_HELIX
+        - GOLDEN_REVENANT_HORROR_BRAIN
+        - GOLDEN_RIFTSTALKER_STRANGE_TIME
+        - GOLDEN_SVEN_SHIELD
+        - GOLDEN_TROPHY_KING
+        - GOLDEN_VOIDGLOOM_RUNE
+        - GREAT_SPOOK
+        - HARP_MASTER
+        - HARP_NOTE
+        - HEALER_MASTER
+        - HEALER_STAFF
+        - HEART
+        - HELMET
+        - HYPIXEL
+        - INFERNO_RODS
+        - JACOBS_CONTEST_COMPLETIONIST
+        - JERRY
+        - KUUDRA_MASTER_SLAYER
+        - KUUDRA_SLAYER
+        - MAGE_LIGHTNING
+        - MAGE_MASTER
+        - MAGICAL_SIGMA
+        - MARKER
+        - MINING_HELIX
+        - MINING_MASTER
+        - MINING_PICKAXE
+        - MUSTACHE
+        - PRISTINE
+        - REVENANT_HORROR_BRAIN
+        - RIFTSTALKER_STRANGE_TIME
+        - RIFT_TIME
+        - SIDEWAYS_SMILEY
+        - SNOWMAN
+        - SOCIAL_MASTER
+        - SOCIAL_STATEMENT
+        - SOULFLOW
+        - SPACESHIP
+        - SPADE
+        - STAR
+        - SVEN_SHIELD
+        - TAMING_CLOVER
+        - TAMING_MASTER
+        - TANK_ANCHOR
+        - TANK_MASTER
+        - TOXIC
+        - TROPHY_KING
+        - ULTRA_BANKER
+        - VOIDGLOOM_RUNE
+        - WARNING
+      type: string
+    SkyBlockProfileMemberLevelingXPTask:
       enum:
         - ABIPHONE_alchemist
         - ABIPHONE_anita
@@ -2507,6 +1806,1028 @@ components:
         - WITHER_ESSENCE_PERMANENT_STRENGTH_4
         - WITHER_ESSENCE_PERMANENT_STRENGTH_5
       type: string
+    SkyBlockProfileMemberMiningCore:
+      additionalProperties: false
+      properties:
+        biomes:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomes'
+        crystals:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystals'
+        current_daily_effect:
+          type: string
+        current_daily_effect_last_changed:
+          type: integer
+        daily_ores_mined:
+          type: integer
+        daily_ores_mined_day:
+          type: integer
+        daily_ores_mined_day_gemstone:
+          type: integer
+        daily_ores_mined_day_glacite:
+          type: integer
+        daily_ores_mined_day_mithril_ore:
+          type: integer
+        daily_ores_mined_gemstone:
+          type: integer
+        daily_ores_mined_glacite:
+          type: integer
+        daily_ores_mined_mithril_ore:
+          type: integer
+        experience:
+          type: number
+        greater_mines_last_access:
+          type: integer
+        last_reset:
+          type: integer
+        nodes:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreNodes'
+        powder_gemstone:
+          type: integer
+        powder_gemstone_total:
+          type: integer
+        powder_glacite:
+          type: integer
+        powder_glacite_total:
+          type: integer
+        powder_mithril:
+          type: integer
+        powder_mithril_total:
+          type: integer
+        powder_spent_gemstone:
+          type: integer
+        powder_spent_glacite:
+          type: integer
+        powder_spent_mithril:
+          type: integer
+        received_free_tier:
+          type: boolean
+        retroactive_tier2_token:
+          type: boolean
+        selected_pickaxe_ability:
+          enum:
+            - anomalous_desire
+            - gemstone_infusion
+            - maniac_miner
+            - mining_speed_boost
+            - pickaxe_toss
+            - sheer_force
+          type: string
+        tokens_spent:
+          type: integer
+      required:
+        - experience
+        - nodes
+        - powder_mithril
+        - powder_mithril_total
+        - received_free_tier
+        - retroactive_tier2_token
+        - tokens_spent
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomes:
+      additionalProperties: false
+      properties:
+        dwarven:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesDwarven'
+        goblin:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesGoblin'
+        jungle:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesJungle'
+        precursor:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreBiomesPrecursor'
+      required:
+        - dwarven
+        - goblin
+        - jungle
+        - precursor
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesDwarven:
+      additionalProperties: false
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesGoblin:
+      additionalProperties: false
+      properties:
+        king_quest_active:
+          type: boolean
+        king_quests_completed:
+          type: integer
+      required:
+        - king_quest_active
+        - king_quests_completed
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesJungle:
+      additionalProperties: false
+      properties:
+        jungle_temple_chest_uses:
+          type: integer
+        jungle_temple_open:
+          type: boolean
+      required:
+        - jungle_temple_chest_uses
+        - jungle_temple_open
+      type: object
+    SkyBlockProfileMemberMiningCoreBiomesPrecursor:
+      additionalProperties: false
+      properties:
+        claiming_with_precursor_apparatus:
+          type: boolean
+        parts_delivered:
+          items:
+            enum:
+              - CONTROL_SWITCH
+              - ELECTRON_TRANSMITTER
+              - FTX_3070
+              - ROBOTRON_REFLECTOR
+              - SUPERLITE_MOTOR
+              - SYNTHETIC_HEART
+            type: string
+          type: array
+        talked_to_professor:
+          type: boolean
+      required:
+        - claiming_with_precursor_apparatus
+        - talked_to_professor
+      type: object
+    SkyBlockProfileMemberMiningCoreCrystals:
+      additionalProperties: false
+      properties:
+        amber_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        amethyst_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        aquamarine_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        citrine_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        jade_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        jasper_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        onyx_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        opal_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        peridot_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        ruby_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        sapphire_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+        topaz_crystal:
+          $ref: '#/components/schemas/SkyBlockProfileMemberMiningCoreCrystalsCrystal'
+      required:
+        - amber_crystal
+        - amethyst_crystal
+        - aquamarine_crystal
+        - citrine_crystal
+        - jade_crystal
+        - jasper_crystal
+        - onyx_crystal
+        - peridot_crystal
+        - ruby_crystal
+        - sapphire_crystal
+        - topaz_crystal
+      type: object
+    SkyBlockProfileMemberMiningCoreCrystalsCrystal:
+      additionalProperties: false
+      properties:
+        state:
+          enum:
+            - FOUND
+            - NOT_FOUND
+            - PLACED
+          type: string
+        total_found:
+          type: integer
+        total_placed:
+          type: integer
+      type: object
+    SkyBlockProfileMemberMiningCoreNodes:
+      additionalProperties: false
+      properties:
+        anomalous_desire:
+          type: integer
+        blockhead:
+          type: integer
+        crystalline:
+          type: integer
+        daily_effect:
+          type: integer
+        daily_grind:
+          type: integer
+        daily_powder:
+          type: integer
+        dead_mans_chest:
+          type: integer
+        eager_adventurer:
+          type: integer
+        efficient_miner:
+          type: integer
+        forge_time:
+          type: integer
+        fortunate:
+          type: integer
+        front_loaded:
+          type: integer
+        gemstone_infusion:
+          type: integer
+        gifts_from_the_departed:
+          type: integer
+        great_explorer:
+          type: integer
+        keep_it_cool:
+          type: integer
+        lonesome_miner:
+          type: integer
+        maniac_miner:
+          type: integer
+        metal_head:
+          type: integer
+        miners_blessing:
+          type: integer
+        mineshaft_mayhem:
+          type: integer
+        mining_experience:
+          type: integer
+        mining_fortune:
+          type: integer
+        mining_fortune_2:
+          type: integer
+        mining_madness:
+          type: integer
+        mining_master:
+          type: integer
+        mining_speed:
+          type: integer
+        mining_speed_2:
+          type: integer
+        mining_speed_boost:
+          type: integer
+        mole:
+          type: integer
+        no_stone_unturned:
+          type: integer
+        old_school:
+          type: integer
+        pickaxe_toss:
+          type: integer
+        powder_buff:
+          type: integer
+        precision_mining:
+          type: integer
+        professional:
+          type: integer
+        rags_to_riches:
+          type: integer
+        random_event:
+          type: integer
+        sheer_force:
+          type: integer
+        special_0:
+          type: integer
+        steady_hand:
+          type: integer
+        strong_arm:
+          type: integer
+        subterranean_fisher:
+          type: integer
+        surveyor:
+          type: integer
+        titanium_insanium:
+          type: integer
+        vanguard_seeker:
+          type: integer
+        warm_hearted:
+          type: integer
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerData:
+      additionalProperties: false
+      properties:
+        abiphone:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphone'
+        barbarians_reputation:
+          type: number
+        dojo:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataDojo'
+        kuudra_completed_tiers:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers'
+        kuudra_party_finder:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder'
+        last_minibosses_killed:
+          items:
+            enum:
+              - ASHFANG
+              - BARBARIAN_DUKE_X
+              - BLADESOUL
+              - MAGE_OUTLAW
+              - MAGMA_BOSS
+            type: string
+          type: array
+        mages_reputation:
+          type: number
+        matriarch:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerMatriarch'
+        quests:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuests'
+        selected_faction:
+          enum:
+            - barbarians
+            - mages
+          type: string
+      required:
+        - abiphone
+        - kuudra_completed_tiers
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataAbiphone:
+      additionalProperties: false
+      properties:
+        active_contacts:
+          items:
+            enum:
+              - alchemist
+              - anita
+              - aranya
+              - arrow_forger
+              - blacksmith
+              - brynmor
+              - builder
+              - captain_ahone
+              - community_shop
+              - dean
+              - drill_fuel_mechanic
+              - duncan
+              - dusk
+              - einary
+              - elle
+              - fairy
+              - forge_foreman
+              - gatekeeper
+              - gemstone
+              - hoppity
+              - igrupan
+              - jacob
+              - kaus
+              - kuudra_gatekeeper
+              - lumber_merchant
+              - odger
+              - ophelia
+              - oringo
+              - pablo
+              - pet_collector
+              - pet_sitter
+              - pet_trainer
+              - plumber
+              - queen
+              - queen_mismyla
+              - roddy
+              - rollim
+              - shady_bartender
+              - sirih
+              - sirius
+              - slayer
+              - spooky
+              - st_jerry
+              - suus
+              - telekinesis_applier
+              - thaumaturgist
+              - tomioka
+              - trevor_the_trapper
+              - trinity
+              - vincent
+              - walter
+              - wool_weaver
+              - zog
+            type: string
+          type: array
+        contact_data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactData'
+        games:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneGames'
+        has_used_sirius_personal_phone_number_item:
+          type: boolean
+        last_dye_called_year:
+          type: integer
+        operator_chip:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip'
+        selected_ringtone:
+          enum:
+            - TARREGA
+          type: string
+        selected_sort:
+          enum:
+            - most_called
+          type: string
+        trio_contact_addons:
+          type: integer
+      required:
+        - active_contacts
+        - contact_data
+        - games
+        - operator_chip
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactData:
+      additionalProperties: false
+      properties:
+        alchemist:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        alixer:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        anita:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        aranya:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        arrow_forger:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        bingo:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        blacksmith:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        brynmor:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        builder:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        captain_ahone:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        community_shop:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        dean:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        drill_fuel_mechanic:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        duncan:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        dusk:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        einary:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        elle:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        fairy:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        forge_foreman:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        gatekeeper:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        gemstone:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        hoppity:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        igrupan:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        jacob:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        kaus:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        kuudra_gatekeeper:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        lumber_merchant:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        odger:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        ophelia:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        oringo:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        pablo:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        pet_collector:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        pet_sitter:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        pet_trainer:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        plumber:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        queen:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        queen_mismyla:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        roddy:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        rollim:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        shady_bartender:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        sirih:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        sirius:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        slayer:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        spooky:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        st_jerry:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        suus:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        telekinesis_applier:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        thaumaturgist:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        tomioka:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        trevor_the_trapper:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        trinity:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        vincent:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        walter:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        wool_weaver:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+        zog:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact'
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContact:
+      additionalProperties: false
+      properties:
+        completed_quest:
+          type: boolean
+        dnd_enabled:
+          type: boolean
+        incoming_calls_count:
+          type: integer
+        last_call:
+          type: integer
+        last_call_incoming:
+          type: integer
+        specific:
+          additionalProperties:
+            oneOf:
+              - type: string
+              - type: boolean
+              - type: integer
+          type: object
+        talked_to:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneGames:
+      additionalProperties: false
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip:
+      additionalProperties: false
+      properties:
+        repaired_index:
+          type: integer
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataDojo:
+      additionalProperties: false
+      properties:
+        dojo_points_archer:
+          type: integer
+        dojo_points_fireball:
+          type: integer
+        dojo_points_lock_head:
+          type: integer
+        dojo_points_mob_kb:
+          type: integer
+        dojo_points_snake:
+          type: integer
+        dojo_points_sword_swap:
+          type: integer
+        dojo_points_wall_jump:
+          type: integer
+        dojo_time_archer:
+          type: integer
+        dojo_time_fireball:
+          type: integer
+        dojo_time_lock_head:
+          type: integer
+        dojo_time_mob_kb:
+          type: integer
+        dojo_time_snake:
+          type: integer
+        dojo_time_sword_swap:
+          type: integer
+        dojo_time_wall_jump:
+          type: integer
+      required:
+        - dojo_points_archer
+        - dojo_points_fireball
+        - dojo_points_lock_head
+        - dojo_points_mob_kb
+        - dojo_points_snake
+        - dojo_points_sword_swap
+        - dojo_points_wall_jump
+        - dojo_time_archer
+        - dojo_time_fireball
+        - dojo_time_lock_head
+        - dojo_time_mob_kb
+        - dojo_time_snake
+        - dojo_time_sword_swap
+        - dojo_time_wall_jump
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers:
+      additionalProperties: false
+      properties:
+        burning:
+          type: integer
+        fiery:
+          type: integer
+        highest_wave_burning:
+          type: integer
+        highest_wave_fiery:
+          type: integer
+        highest_wave_hot:
+          type: integer
+        highest_wave_infernal:
+          type: integer
+        highest_wave_none:
+          type: integer
+        hot:
+          type: integer
+        infernal:
+          type: integer
+        none:
+          type: integer
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder:
+      additionalProperties: false
+      properties:
+        group_builder:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder'
+        search_settings:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings'
+      required:
+        - group_builder
+        - search_settings
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder:
+      additionalProperties: false
+      properties:
+        combat_level_required:
+          type: integer
+        note:
+          type: string
+        tier:
+          enum:
+            - BURNING
+            - FIERY
+            - HOT
+            - INFERNAL
+            - NONE
+          type: string
+      required:
+        - combat_level_required
+        - note
+        - tier
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings:
+      additionalProperties: false
+      properties:
+        tier:
+          enum:
+            - BURNING
+            - FIERY
+            - HOT
+            - INFERNAL
+            - NONE
+          type: string
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerMatriarch:
+      additionalProperties: false
+      properties:
+        last_attempt:
+          type: integer
+        pearls_collected:
+          type: integer
+        recent_refreshes:
+          items:
+            type: integer
+          type: array
+      required:
+        - last_attempt
+        - pearls_collected
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuests:
+      additionalProperties: false
+      properties:
+        alchemist_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsAlchemistQuest'
+        aranya_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsAranyaQuest'
+        cavity_rarity:
+          enum:
+            - SPECIAL
+          type: string
+        chicken_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest'
+        chicken_quest_handed_in:
+          type: integer
+        duel_training_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsDuelTrainingQuest'
+        edelis_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest'
+        fished_wet_napkin:
+          type: boolean
+        found_kuudra_book:
+          type: boolean
+        found_kuudra_boots:
+          type: boolean
+        found_kuudra_chestplate:
+          type: boolean
+        found_kuudra_helmet:
+          type: boolean
+        found_kuudra_leggings:
+          type: boolean
+        kuuda_boss_daily:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsKuudraBossDaily'
+        kuudra_loremaster:
+          type: boolean
+        last_believer_blessing:
+          type: integer
+        last_kuudra_relic:
+          type: integer
+        last_reset:
+          type: integer
+        last_vampire_blood:
+          type: integer
+        miniboss_daily:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossDaily'
+        miniboss_data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData'
+        mollim_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest'
+        pablo_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest'
+        paid_bruuh:
+          type: boolean
+        pomtair_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsPomtairQuest'
+        quest_data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData'
+        quest_rewards:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards'
+        rulenor:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsRulenor'
+        sirih_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsSirihQuest'
+        suus_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest'
+        unlocked_cavity_npcs:
+          items:
+            enum:
+              - arch
+              - drakuu
+              - final
+              - kuudra_archaeologist
+              - kuudra_loremaster
+              - kuudrabeliever
+            type: string
+          type: array
+        weird_sailor:
+          type: boolean
+      required:
+        - alchemist_quest
+        - aranya_quest
+        - chicken_quest
+        - chicken_quest_handed_in
+        - duel_training_quest
+        - edelis_quest
+        - kuuda_boss_daily
+        - last_reset
+        - miniboss_daily
+        - miniboss_data
+        - mollim_quest
+        - pablo_quest
+        - paid_bruuh
+        - pomtair_quest
+        - quest_data
+        - quest_rewards
+        - rulenor
+        - sirih_quest
+        - suus_quest
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsAlchemistQuest:
+      additionalProperties: false
+      properties:
+        alchemist_quest_progress:
+          type: integer
+        alchemist_quest_start:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsAranyaQuest:
+      additionalProperties: false
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest:
+      additionalProperties: false
+      properties:
+        chicken_quest_collected:
+          items:
+            enum:
+              - Chickovsky
+              - Chikira
+              - Cluckles
+              - Hennifer
+              - Henrietta
+            type: string
+          type: array
+        chicken_quest_progress:
+          type: integer
+        chicken_quest_start:
+          type: boolean
+      required:
+        - chicken_quest_collected
+        - chicken_quest_progress
+        - chicken_quest_start
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsDuelTrainingQuest:
+      additionalProperties: false
+      properties:
+        duel_training_last_complete_barbarians:
+          type: integer
+        duel_training_last_complete_mages:
+          type: integer
+        duel_training_phase_barbarians:
+          type: integer
+        duel_training_phase_mages:
+          type: integer
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest:
+      additionalProperties: false
+      properties:
+        heard_story_statue:
+          type: boolean
+      required:
+        - heard_story_statue
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsKuudraBossDaily:
+      additionalProperties: false
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossDaily:
+      additionalProperties: false
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData:
+      additionalProperties: false
+      properties:
+        ASHFANG:
+          type: boolean
+        BARBARIAN_DUKE_X:
+          type: boolean
+        BLADESOUL:
+          type: boolean
+        MAGE_OUTLAW:
+          type: boolean
+        MAGMA_BOSS:
+          type: boolean
+      required:
+        - ASHFANG
+        - BARBARIAN_DUKE_X
+        - BLADESOUL
+        - MAGE_OUTLAW
+        - MAGMA_BOSS
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest:
+      additionalProperties: false
+      properties:
+        completed_quest:
+          type: boolean
+        talked_to_npc:
+          type: boolean
+      required:
+        - talked_to_npc
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest:
+      additionalProperties: false
+      properties:
+        pablo_active:
+          type: boolean
+        pablo_item:
+          type: string
+        pablo_last_give:
+          type: integer
+      required:
+        - pablo_active
+        - pablo_item
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsPomtairQuest:
+      additionalProperties: false
+      properties:
+        last_completion:
+          type: integer
+        talked_to_npc:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData:
+      additionalProperties: false
+      properties:
+        dojo:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest'
+        fetch:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest'
+        fishing:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest'
+        quest_list:
+          items:
+            enum:
+              - crimson_isle_dojo_test_of_lock_head_drating_c
+              - crimson_isle_dojo_test_of_mob_kb_arating_s
+              - crimson_isle_fetch_digested_mushrooms_b
+              - crimson_isle_fetch_sulphur_c
+              - crimson_isle_kill_ashfang_c
+              - crimson_isle_kill_mage_outlaw_b
+              - crimson_isle_rescue_a
+              - crimson_isle_skeletonfish_b
+              - crimson_isle_steaming_hot_flounder_c
+            type: string
+          type: array
+        rescue:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest'
+        wanted_mini_boss:
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest'
+      required:
+        - dojo
+        - fetch
+        - fishing
+        - quest_list
+        - rescue
+        - wanted_mini_boss
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest:
+      additionalProperties: false
+      properties:
+        claimed_rewards:
+          type: boolean
+        completed_at:
+          type: integer
+        progress:
+          type: integer
+        status:
+          enum:
+            - ACTIVE
+            - COMPLETE
+          type: string
+      required:
+        - completed_at
+        - progress
+        - status
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards:
+      additionalProperties: false
+      properties:
+        BEZOS:
+          type: integer
+        CUP_OF_BLOOD:
+          type: integer
+        DIGESTED_MUSHROOMS:
+          type: integer
+        GAZING_PEARL:
+          type: integer
+        HALLOWED_SKULL:
+          type: integer
+        KADA_LEAD:
+          type: integer
+        SPELL_POWDER:
+          type: integer
+        TENTACLE_MEAT:
+          type: integer
+        crimson_isle_dojo_test_of_lock_head_drating_c:
+          type: string
+        crimson_isle_dojo_test_of_mob_kb_arating_s:
+          type: string
+        crimson_isle_fetch_digested_mushrooms_b:
+          type: string
+        crimson_isle_fetch_sulphur_c:
+          type: string
+        crimson_isle_kill_ashfang_c:
+          type: string
+        crimson_isle_kill_mage_outlaw_b:
+          type: string
+        crimson_isle_rescue_a:
+          type: string
+        crimson_isle_skeletonfish_b:
+          type: string
+        crimson_isle_steaming_hot_flounder_c:
+          type: string
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsRulenor:
+      additionalProperties: false
+      properties:
+        last_payment:
+          type: integer
+        talked_to:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsSirihQuest:
+      additionalProperties: false
+      properties:
+        dialogue_index:
+          type: integer
+        last_give:
+          type: integer
+        sulphur_given:
+          type: integer
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest:
+      additionalProperties: false
+      properties:
+        last_completion:
+          type: integer
+        last_toy_drop:
+          type: integer
+        talked_to_npc:
+          type: boolean
+      type: object
   securitySchemes:
     ApiKey:
       description: Obtained via the [Hypixel Developer Dashboard](https://developer.hypixel.net) when creating an application. You can also request higher limits for production applications in this dashboard.
@@ -2526,369 +2847,6 @@ info:
     url: https://api.hypixel.net/assets/images/logo.png
 openapi: 3.0.3
 paths:
-  /v2/resources/skyblock/bingo:
-    get:
-      description: Information regarding the current bingo event and its goals.
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                properties:
-                  end:
-                    description: The end time of the current bingo event in unix milliseconds
-                    example: 1709874000000
-                    type: integer
-                  goals:
-                    description: The goals for the current bingo event, as well as their progress
-                    items:
-                      properties:
-                        fullLore:
-                          description: The full description of this goal
-                          items:
-                            type: string
-                          type: array
-                        id:
-                          description: The backend ID for this goal
-                          type: string
-                        lore:
-                          description: Description of this goal
-                          type: string
-                        name:
-                          description: The user friendly display name for this goal
-                          type: string
-                        progress:
-                          description: The global progress of this goal
-                          type: integer
-                        requiredAmount:
-                          description: The required amount for this specific goal
-                          type: integer
-                        tiers:
-                          description: The tiers of this goal, if a global goal
-                          items:
-                            type: integer
-                          type: array
-                      required:
-                        - id
-                        - name
-                      type: object
-                    type: array
-                  id:
-                    description: The current bingo event ID, increments by 1 for each bingo hosted
-                    example: 27
-                    type: integer
-                  lastUpdated:
-                    description: The unix milliseconds timestamp of the last time this data was updated
-                    type: integer
-                  modifier:
-                    description: The modifier for the current bingo event
-                    enum:
-                      - EXTREME
-                      - NORMAL
-                      - SECRET
-                    example: NORMAL
-                    type: string
-                  name:
-                    description: The display name for the current bingo event
-                    example: March 2024
-                    type: string
-                  start:
-                    description: The start time of the current bingo event in unix milliseconds
-                    example: 1709269200000
-                    type: integer
-                  success:
-                    type: boolean
-                required:
-                  - end
-                  - goals
-                  - id
-                  - lastUpdated
-                  - modifier
-                  - name
-                  - start
-                  - success
-                type: object
-          description: A successful response
-      summary: Current Bingo Event
-      tags:
-        - SkyBlock
-  /v2/resources/skyblock/collections:
-    get:
-      description: Information regarding Collections in the SkyBlock game.
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                properties:
-                  collections:
-                    type: object
-                  lastUpdated:
-                    type: integer
-                  success:
-                    type: boolean
-                  version:
-                    example: 0.11.22
-                    type: string
-                type: object
-          description: A successful response
-      summary: Collections
-      tags:
-        - SkyBlock
-  /v2/resources/skyblock/election:
-    get:
-      description: Information regarding the current mayor and ongoing election in SkyBlock.
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                properties:
-                  current:
-                    description: Data regarding the current election, will not be provided if there is no open election ongoing
-                    type: object
-                  lastUpdated:
-                    type: integer
-                  mayor:
-                    description: Data regarding the current mayor
-                    type: object
-                  success:
-                    type: boolean
-                type: object
-          description: A successful response
-      summary: Election and Mayor
-      tags:
-        - SkyBlock
-  /v2/resources/skyblock/items:
-    get:
-      description: Information regarding items in the SkyBlock game.
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                properties:
-                  items:
-                    items:
-                      $ref: '#/components/schemas/SkyBlockItem'
-                    type: array
-                  lastUpdated:
-                    type: integer
-                  success:
-                    type: boolean
-                type: object
-          description: A successful response
-      summary: Items
-      tags:
-        - SkyBlock
-  /v2/resources/skyblock/skills:
-    get:
-      description: Information regarding skills in the SkyBlock game.
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                properties:
-                  lastUpdated:
-                    type: integer
-                  skills:
-                    type: object
-                  success:
-                    type: boolean
-                  version:
-                    example: 0.11.22
-                    type: string
-                type: object
-          description: A successful response
-      summary: Skills
-      tags:
-        - SkyBlock
-  /v2/skyblock/bingo:
-    get:
-      description: Bingo data for participated events of the provided player.
-      parameters:
-        - in: query
-          name: uuid
-          schema:
-            format: uuid
-            type: string
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                properties:
-                  events:
-                    items:
-                      properties:
-                        completed_goals:
-                          description: The completed goal IDs
-                          items:
-                            example:
-                              - KILL_TRAPPER_MOB
-                              - stat_walk_speed
-                            type: string
-                          type: array
-                        key:
-                          description: The id for this event
-                          example: 2
-                          type: integer
-                        points:
-                          description: The amount of points earned
-                          example: 117
-                          type: integer
-                      required:
-                        - completed_goals
-                        - key
-                        - points
-                      type: object
-                    type: array
-                  success:
-                    type: boolean
-                type: object
-          description: A successful response
-        '400':
-          $ref: '#/components/responses/DataMissing'
-        '403':
-          $ref: '#/components/responses/InvalidKey'
-        '404':
-          content:
-            application/json:
-              schema:
-                properties:
-                  cause:
-                    example: No bingo data could be found
-                    type: string
-                  success:
-                    example: false
-                    type: boolean
-                type: object
-          description: No data could be found for the provided player uuid.
-        '422':
-          $ref: '#/components/responses/MalformedData'
-        '429':
-          $ref: '#/components/responses/RateLimited'
-      security:
-        - ApiKey: []
-      summary: Bingo data by player
-      tags:
-        - SkyBlock
-  /v2/skyblock/firesales:
-    get:
-      description: Retrieve the currently active or upcoming Fire Sales for SkyBlock.
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                properties:
-                  sales:
-                    items:
-                      $ref: '#/components/schemas/SkyBlockFireSale'
-                    type: array
-                  success:
-                    type: boolean
-                type: object
-          description: A successful response
-      summary: Active/Upcoming Fire Sales
-      tags:
-        - SkyBlock
-  /v2/skyblock/garden:
-    get:
-      description: SkyBlock garden data for the provided profile.
-      parameters:
-        - in: query
-          name: profile
-          schema:
-            format: uuid
-            type: string
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                properties:
-                  garden:
-                    $ref: '#/components/schemas/SkyBlockGarden'
-                  success:
-                    type: boolean
-                type: object
-          description: A successful response
-        '403':
-          $ref: '#/components/responses/InvalidKey'
-        '404':
-          $ref: '#/components/responses/NoResult'
-        '422':
-          $ref: '#/components/responses/MalformedData'
-        '429':
-          $ref: '#/components/responses/RateLimited'
-      security:
-        - ApiKey: []
-      summary: Garden data by profile ID
-      tags:
-        - SkyBlock
-  /v2/skyblock/museum:
-    get:
-      description: SkyBlock museum data for all members of the provided profile. The data returned can differ depending on the players in-game API settings.
-      parameters:
-        - in: query
-          name: profile
-          schema:
-            format: uuid
-            type: string
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                properties:
-                  profile:
-                    $ref: '#/components/schemas/SkyBlockMuseum'
-                  success:
-                    type: boolean
-                type: object
-          description: A successful response
-        '403':
-          $ref: '#/components/responses/InvalidKey'
-        '422':
-          $ref: '#/components/responses/MalformedData'
-        '429':
-          $ref: '#/components/responses/RateLimited'
-      security:
-        - ApiKey: []
-      summary: Museum data by profile ID
-      tags:
-        - SkyBlock
-  /v2/skyblock/news:
-    get:
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                properties:
-                  items:
-                    items:
-                      example:
-                        item:
-                          material: DIAMOND
-                        link: https://hypixel.net
-                        text: 15th January 2021
-                        title: SkyBlock v0.11
-                  success:
-                    type: boolean
-                type: object
-          description: A successful response
-        '403':
-          $ref: '#/components/responses/InvalidKey'
-        '429':
-          $ref: '#/components/responses/RateLimited'
-      security:
-        - ApiKey: []
-      summary: News
-      tags:
-        - SkyBlock
   /v2/skyblock/profile:
     get:
       description: SkyBlock profile data, such as stats, objectives etc. The data returned can differ depending on the players in-game API settings.

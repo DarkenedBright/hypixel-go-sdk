@@ -20,8 +20,8 @@ Name | Type | Description | Notes
 **JacobsContest** | Pointer to [**SkyBlockProfileMemberJacobsContest**](SkyBlockProfileMemberJacobsContest.md) |  | [optional] 
 **Leveling** | Pointer to [**SkyBlockProfileMemberLeveling**](SkyBlockProfileMemberLeveling.md) |  | [optional] 
 **MiningCore** | Pointer to [**SkyBlockProfileMemberMiningCore**](SkyBlockProfileMemberMiningCore.md) |  | [optional] 
+**NetherIslandPlayerData** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerData**](SkyBlockProfileMemberNetherIslandPlayerData.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
-**Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
 ## Methods
 
@@ -442,6 +442,31 @@ SetMiningCore sets MiningCore field to given value.
 
 HasMiningCore returns a boolean if a field has been set.
 
+### GetNetherIslandPlayerData
+
+`func (o *SkyBlockProfileMember) GetNetherIslandPlayerData() SkyBlockProfileMemberNetherIslandPlayerData`
+
+GetNetherIslandPlayerData returns the NetherIslandPlayerData field if non-nil, zero value otherwise.
+
+### GetNetherIslandPlayerDataOk
+
+`func (o *SkyBlockProfileMember) GetNetherIslandPlayerDataOk() (*SkyBlockProfileMemberNetherIslandPlayerData, bool)`
+
+GetNetherIslandPlayerDataOk returns a tuple with the NetherIslandPlayerData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetherIslandPlayerData
+
+`func (o *SkyBlockProfileMember) SetNetherIslandPlayerData(v SkyBlockProfileMemberNetherIslandPlayerData)`
+
+SetNetherIslandPlayerData sets NetherIslandPlayerData field to given value.
+
+### HasNetherIslandPlayerData
+
+`func (o *SkyBlockProfileMember) HasNetherIslandPlayerData() bool`
+
+HasNetherIslandPlayerData returns a boolean if a field has been set.
+
 ### GetPlayerId
 
 `func (o *SkyBlockProfileMember) GetPlayerId() string`
@@ -466,31 +491,6 @@ SetPlayerId sets PlayerId field to given value.
 `func (o *SkyBlockProfileMember) HasPlayerId() bool`
 
 HasPlayerId returns a boolean if a field has been set.
-
-### GetRift
-
-`func (o *SkyBlockProfileMember) GetRift() SkyBlockProfileMemberRift`
-
-GetRift returns the Rift field if non-nil, zero value otherwise.
-
-### GetRiftOk
-
-`func (o *SkyBlockProfileMember) GetRiftOk() (*SkyBlockProfileMemberRift, bool)`
-
-GetRiftOk returns a tuple with the Rift field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRift
-
-`func (o *SkyBlockProfileMember) SetRift(v SkyBlockProfileMemberRift)`
-
-SetRift sets Rift field to given value.
-
-### HasRift
-
-`func (o *SkyBlockProfileMember) HasRift() bool`
-
-HasRift returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

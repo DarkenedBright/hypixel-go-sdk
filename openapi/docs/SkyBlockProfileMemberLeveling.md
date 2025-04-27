@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 **BopBonus** | Pointer to **string** |  | [optional] 
 **CategoryExpanded** | Pointer to **bool** |  | [optional] 
 **ClaimedTalisman** | Pointer to **bool** |  | [optional] 
-**CompletedTasks** | Pointer to [**[]SkyBlockXPTask**](SkyBlockXPTask.md) |  | [optional] 
+**CompletedTasks** | Pointer to [**[]SkyBlockProfileMemberLevelingXPTask**](SkyBlockProfileMemberLevelingXPTask.md) |  | [optional] 
 **Completions** | Pointer to [**SkyBlockProfileMemberLevelingCompletions**](SkyBlockProfileMemberLevelingCompletions.md) |  | [optional] 
-**EmblemUnlocks** | Pointer to [**[]SkyBlockEmblem**](SkyBlockEmblem.md) |  | [optional] 
+**EmblemUnlocks** | Pointer to [**[]SkyBlockProfileMemberLevelingEmblem**](SkyBlockProfileMemberLevelingEmblem.md) |  | [optional] 
 **Experience** | Pointer to **int64** |  | [optional] 
 **FishingFestivalSharksKilled** | Pointer to **int64** |  | [optional] 
 **HighestPetScore** | Pointer to **int64** |  | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **MigratedCompletions** | Pointer to **bool** |  | [optional] 
 **MigratedCompletions2** | Pointer to **bool** |  | [optional] 
 **MiningFiestaOresMined** | Pointer to **int64** |  | [optional] 
-**SelectedSymbol** | Pointer to [**SkyBlockEmblem**](SkyBlockEmblem.md) |  | [optional] 
+**SelectedSymbol** | Pointer to [**SkyBlockProfileMemberLevelingEmblem**](SkyBlockProfileMemberLevelingEmblem.md) |  | [optional] 
 
 ## Methods
 
@@ -116,20 +116,20 @@ HasClaimedTalisman returns a boolean if a field has been set.
 
 ### GetCompletedTasks
 
-`func (o *SkyBlockProfileMemberLeveling) GetCompletedTasks() []SkyBlockXPTask`
+`func (o *SkyBlockProfileMemberLeveling) GetCompletedTasks() []SkyBlockProfileMemberLevelingXPTask`
 
 GetCompletedTasks returns the CompletedTasks field if non-nil, zero value otherwise.
 
 ### GetCompletedTasksOk
 
-`func (o *SkyBlockProfileMemberLeveling) GetCompletedTasksOk() (*[]SkyBlockXPTask, bool)`
+`func (o *SkyBlockProfileMemberLeveling) GetCompletedTasksOk() (*[]SkyBlockProfileMemberLevelingXPTask, bool)`
 
 GetCompletedTasksOk returns a tuple with the CompletedTasks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCompletedTasks
 
-`func (o *SkyBlockProfileMemberLeveling) SetCompletedTasks(v []SkyBlockXPTask)`
+`func (o *SkyBlockProfileMemberLeveling) SetCompletedTasks(v []SkyBlockProfileMemberLevelingXPTask)`
 
 SetCompletedTasks sets CompletedTasks field to given value.
 
@@ -166,20 +166,20 @@ HasCompletions returns a boolean if a field has been set.
 
 ### GetEmblemUnlocks
 
-`func (o *SkyBlockProfileMemberLeveling) GetEmblemUnlocks() []SkyBlockEmblem`
+`func (o *SkyBlockProfileMemberLeveling) GetEmblemUnlocks() []SkyBlockProfileMemberLevelingEmblem`
 
 GetEmblemUnlocks returns the EmblemUnlocks field if non-nil, zero value otherwise.
 
 ### GetEmblemUnlocksOk
 
-`func (o *SkyBlockProfileMemberLeveling) GetEmblemUnlocksOk() (*[]SkyBlockEmblem, bool)`
+`func (o *SkyBlockProfileMemberLeveling) GetEmblemUnlocksOk() (*[]SkyBlockProfileMemberLevelingEmblem, bool)`
 
 GetEmblemUnlocksOk returns a tuple with the EmblemUnlocks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEmblemUnlocks
 
-`func (o *SkyBlockProfileMemberLeveling) SetEmblemUnlocks(v []SkyBlockEmblem)`
+`func (o *SkyBlockProfileMemberLeveling) SetEmblemUnlocks(v []SkyBlockProfileMemberLevelingEmblem)`
 
 SetEmblemUnlocks sets EmblemUnlocks field to given value.
 
@@ -391,20 +391,20 @@ HasMiningFiestaOresMined returns a boolean if a field has been set.
 
 ### GetSelectedSymbol
 
-`func (o *SkyBlockProfileMemberLeveling) GetSelectedSymbol() SkyBlockEmblem`
+`func (o *SkyBlockProfileMemberLeveling) GetSelectedSymbol() SkyBlockProfileMemberLevelingEmblem`
 
 GetSelectedSymbol returns the SelectedSymbol field if non-nil, zero value otherwise.
 
 ### GetSelectedSymbolOk
 
-`func (o *SkyBlockProfileMemberLeveling) GetSelectedSymbolOk() (*SkyBlockEmblem, bool)`
+`func (o *SkyBlockProfileMemberLeveling) GetSelectedSymbolOk() (*SkyBlockProfileMemberLevelingEmblem, bool)`
 
 GetSelectedSymbolOk returns a tuple with the SelectedSymbol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSelectedSymbol
 
-`func (o *SkyBlockProfileMemberLeveling) SetSelectedSymbol(v SkyBlockEmblem)`
+`func (o *SkyBlockProfileMemberLeveling) SetSelectedSymbol(v SkyBlockProfileMemberLevelingEmblem)`
 
 SetSelectedSymbol sets SelectedSymbol field to given value.
 

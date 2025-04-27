@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Biomes** | Pointer to [**SkyBlockProfileMemberMiningCoreBiomes**](SkyBlockProfileMemberMiningCoreBiomes.md) |  | [optional] 
 **Crystals** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystals**](SkyBlockProfileMemberMiningCoreCrystals.md) |  | [optional] 
+**CurrentDailyEffect** | Pointer to **string** |  | [optional] 
+**CurrentDailyEffectLastChanged** | Pointer to **int64** |  | [optional] 
 **DailyOresMined** | Pointer to **int64** |  | [optional] 
 **DailyOresMinedDay** | Pointer to **int64** |  | [optional] 
 **DailyOresMinedDayGemstone** | Pointer to **int64** |  | [optional] 
@@ -25,8 +27,6 @@ Name | Type | Description | Notes
 **PowderMithril** | **int64** |  | 
 **PowderMithrilTotal** | **int64** |  | 
 **PowderSpentGemstone** | Pointer to **int64** |  | [optional] 
-**CurrentDailyEffect** | Pointer to **string** |  | [optional] 
-**CurrentDailyEffectLastChanged** | Pointer to **int64** |  | [optional] 
 **PowderSpentGlacite** | Pointer to **int64** |  | [optional] 
 **PowderSpentMithril** | Pointer to **int64** |  | [optional] 
 **ReceivedFreeTier** | **bool** |  | 
@@ -102,6 +102,56 @@ SetCrystals sets Crystals field to given value.
 `func (o *SkyBlockProfileMemberMiningCore) HasCrystals() bool`
 
 HasCrystals returns a boolean if a field has been set.
+
+### GetCurrentDailyEffect
+
+`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffect() string`
+
+GetCurrentDailyEffect returns the CurrentDailyEffect field if non-nil, zero value otherwise.
+
+### GetCurrentDailyEffectOk
+
+`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectOk() (*string, bool)`
+
+GetCurrentDailyEffectOk returns a tuple with the CurrentDailyEffect field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCurrentDailyEffect
+
+`func (o *SkyBlockProfileMemberMiningCore) SetCurrentDailyEffect(v string)`
+
+SetCurrentDailyEffect sets CurrentDailyEffect field to given value.
+
+### HasCurrentDailyEffect
+
+`func (o *SkyBlockProfileMemberMiningCore) HasCurrentDailyEffect() bool`
+
+HasCurrentDailyEffect returns a boolean if a field has been set.
+
+### GetCurrentDailyEffectLastChanged
+
+`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectLastChanged() int64`
+
+GetCurrentDailyEffectLastChanged returns the CurrentDailyEffectLastChanged field if non-nil, zero value otherwise.
+
+### GetCurrentDailyEffectLastChangedOk
+
+`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectLastChangedOk() (*int64, bool)`
+
+GetCurrentDailyEffectLastChangedOk returns a tuple with the CurrentDailyEffectLastChanged field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCurrentDailyEffectLastChanged
+
+`func (o *SkyBlockProfileMemberMiningCore) SetCurrentDailyEffectLastChanged(v int64)`
+
+SetCurrentDailyEffectLastChanged sets CurrentDailyEffectLastChanged field to given value.
+
+### HasCurrentDailyEffectLastChanged
+
+`func (o *SkyBlockProfileMemberMiningCore) HasCurrentDailyEffectLastChanged() bool`
+
+HasCurrentDailyEffectLastChanged returns a boolean if a field has been set.
 
 ### GetDailyOresMined
 
@@ -557,56 +607,6 @@ SetPowderSpentGemstone sets PowderSpentGemstone field to given value.
 `func (o *SkyBlockProfileMemberMiningCore) HasPowderSpentGemstone() bool`
 
 HasPowderSpentGemstone returns a boolean if a field has been set.
-
-### GetCurrentDailyEffect
-
-`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffect() string`
-
-GetCurrentDailyEffect returns the CurrentDailyEffect field if non-nil, zero value otherwise.
-
-### GetCurrentDailyEffectOk
-
-`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectOk() (*string, bool)`
-
-GetCurrentDailyEffectOk returns a tuple with the CurrentDailyEffect field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCurrentDailyEffect
-
-`func (o *SkyBlockProfileMemberMiningCore) SetCurrentDailyEffect(v string)`
-
-SetCurrentDailyEffect sets CurrentDailyEffect field to given value.
-
-### HasCurrentDailyEffect
-
-`func (o *SkyBlockProfileMemberMiningCore) HasCurrentDailyEffect() bool`
-
-HasCurrentDailyEffect returns a boolean if a field has been set.
-
-### GetCurrentDailyEffectLastChanged
-
-`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectLastChanged() int64`
-
-GetCurrentDailyEffectLastChanged returns the CurrentDailyEffectLastChanged field if non-nil, zero value otherwise.
-
-### GetCurrentDailyEffectLastChangedOk
-
-`func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectLastChangedOk() (*int64, bool)`
-
-GetCurrentDailyEffectLastChangedOk returns a tuple with the CurrentDailyEffectLastChanged field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCurrentDailyEffectLastChanged
-
-`func (o *SkyBlockProfileMemberMiningCore) SetCurrentDailyEffectLastChanged(v int64)`
-
-SetCurrentDailyEffectLastChanged sets CurrentDailyEffectLastChanged field to given value.
-
-### HasCurrentDailyEffectLastChanged
-
-`func (o *SkyBlockProfileMemberMiningCore) HasCurrentDailyEffectLastChanged() bool`
-
-HasCurrentDailyEffectLastChanged returns a boolean if a field has been set.
 
 ### GetPowderSpentGlacite
 

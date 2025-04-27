@@ -22,9 +22,9 @@ type SkyBlockProfileMemberLeveling struct {
 	BopBonus                    *string                                   `json:"bop_bonus,omitempty"`
 	CategoryExpanded            *bool                                     `json:"category_expanded,omitempty"`
 	ClaimedTalisman             *bool                                     `json:"claimed_talisman,omitempty"`
-	CompletedTasks              []SkyBlockXPTask                          `json:"completed_tasks,omitempty"`
+	CompletedTasks              []SkyBlockProfileMemberLevelingXPTask     `json:"completed_tasks,omitempty"`
 	Completions                 *SkyBlockProfileMemberLevelingCompletions `json:"completions,omitempty"`
-	EmblemUnlocks               []SkyBlockEmblem                          `json:"emblem_unlocks,omitempty"`
+	EmblemUnlocks               []SkyBlockProfileMemberLevelingEmblem     `json:"emblem_unlocks,omitempty"`
 	Experience                  *int64                                    `json:"experience,omitempty"`
 	FishingFestivalSharksKilled *int64                                    `json:"fishing_festival_sharks_killed,omitempty"`
 	HighestPetScore             *int64                                    `json:"highest_pet_score,omitempty"`
@@ -33,7 +33,7 @@ type SkyBlockProfileMemberLeveling struct {
 	MigratedCompletions         *bool                                     `json:"migrated_completions,omitempty"`
 	MigratedCompletions2        *bool                                     `json:"migrated_completions_2,omitempty"`
 	MiningFiestaOresMined       *int64                                    `json:"mining_fiesta_ores_mined,omitempty"`
-	SelectedSymbol              *SkyBlockEmblem                           `json:"selected_symbol,omitempty"`
+	SelectedSymbol              *SkyBlockProfileMemberLevelingEmblem      `json:"selected_symbol,omitempty"`
 }
 
 // NewSkyBlockProfileMemberLeveling instantiates a new SkyBlockProfileMemberLeveling object
@@ -150,9 +150,9 @@ func (o *SkyBlockProfileMemberLeveling) SetClaimedTalisman(v bool) {
 }
 
 // GetCompletedTasks returns the CompletedTasks field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberLeveling) GetCompletedTasks() []SkyBlockXPTask {
+func (o *SkyBlockProfileMemberLeveling) GetCompletedTasks() []SkyBlockProfileMemberLevelingXPTask {
 	if o == nil || IsNil(o.CompletedTasks) {
-		var ret []SkyBlockXPTask
+		var ret []SkyBlockProfileMemberLevelingXPTask
 		return ret
 	}
 	return o.CompletedTasks
@@ -160,7 +160,7 @@ func (o *SkyBlockProfileMemberLeveling) GetCompletedTasks() []SkyBlockXPTask {
 
 // GetCompletedTasksOk returns a tuple with the CompletedTasks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberLeveling) GetCompletedTasksOk() ([]SkyBlockXPTask, bool) {
+func (o *SkyBlockProfileMemberLeveling) GetCompletedTasksOk() ([]SkyBlockProfileMemberLevelingXPTask, bool) {
 	if o == nil || IsNil(o.CompletedTasks) {
 		return nil, false
 	}
@@ -176,8 +176,8 @@ func (o *SkyBlockProfileMemberLeveling) HasCompletedTasks() bool {
 	return false
 }
 
-// SetCompletedTasks gets a reference to the given []SkyBlockXPTask and assigns it to the CompletedTasks field.
-func (o *SkyBlockProfileMemberLeveling) SetCompletedTasks(v []SkyBlockXPTask) {
+// SetCompletedTasks gets a reference to the given []SkyBlockProfileMemberLevelingXPTask and assigns it to the CompletedTasks field.
+func (o *SkyBlockProfileMemberLeveling) SetCompletedTasks(v []SkyBlockProfileMemberLevelingXPTask) {
 	o.CompletedTasks = v
 }
 
@@ -214,9 +214,9 @@ func (o *SkyBlockProfileMemberLeveling) SetCompletions(v SkyBlockProfileMemberLe
 }
 
 // GetEmblemUnlocks returns the EmblemUnlocks field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberLeveling) GetEmblemUnlocks() []SkyBlockEmblem {
+func (o *SkyBlockProfileMemberLeveling) GetEmblemUnlocks() []SkyBlockProfileMemberLevelingEmblem {
 	if o == nil || IsNil(o.EmblemUnlocks) {
-		var ret []SkyBlockEmblem
+		var ret []SkyBlockProfileMemberLevelingEmblem
 		return ret
 	}
 	return o.EmblemUnlocks
@@ -224,7 +224,7 @@ func (o *SkyBlockProfileMemberLeveling) GetEmblemUnlocks() []SkyBlockEmblem {
 
 // GetEmblemUnlocksOk returns a tuple with the EmblemUnlocks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberLeveling) GetEmblemUnlocksOk() ([]SkyBlockEmblem, bool) {
+func (o *SkyBlockProfileMemberLeveling) GetEmblemUnlocksOk() ([]SkyBlockProfileMemberLevelingEmblem, bool) {
 	if o == nil || IsNil(o.EmblemUnlocks) {
 		return nil, false
 	}
@@ -240,8 +240,8 @@ func (o *SkyBlockProfileMemberLeveling) HasEmblemUnlocks() bool {
 	return false
 }
 
-// SetEmblemUnlocks gets a reference to the given []SkyBlockEmblem and assigns it to the EmblemUnlocks field.
-func (o *SkyBlockProfileMemberLeveling) SetEmblemUnlocks(v []SkyBlockEmblem) {
+// SetEmblemUnlocks gets a reference to the given []SkyBlockProfileMemberLevelingEmblem and assigns it to the EmblemUnlocks field.
+func (o *SkyBlockProfileMemberLeveling) SetEmblemUnlocks(v []SkyBlockProfileMemberLevelingEmblem) {
 	o.EmblemUnlocks = v
 }
 
@@ -502,9 +502,9 @@ func (o *SkyBlockProfileMemberLeveling) SetMiningFiestaOresMined(v int64) {
 }
 
 // GetSelectedSymbol returns the SelectedSymbol field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberLeveling) GetSelectedSymbol() SkyBlockEmblem {
+func (o *SkyBlockProfileMemberLeveling) GetSelectedSymbol() SkyBlockProfileMemberLevelingEmblem {
 	if o == nil || IsNil(o.SelectedSymbol) {
-		var ret SkyBlockEmblem
+		var ret SkyBlockProfileMemberLevelingEmblem
 		return ret
 	}
 	return *o.SelectedSymbol
@@ -512,7 +512,7 @@ func (o *SkyBlockProfileMemberLeveling) GetSelectedSymbol() SkyBlockEmblem {
 
 // GetSelectedSymbolOk returns a tuple with the SelectedSymbol field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberLeveling) GetSelectedSymbolOk() (*SkyBlockEmblem, bool) {
+func (o *SkyBlockProfileMemberLeveling) GetSelectedSymbolOk() (*SkyBlockProfileMemberLevelingEmblem, bool) {
 	if o == nil || IsNil(o.SelectedSymbol) {
 		return nil, false
 	}
@@ -528,8 +528,8 @@ func (o *SkyBlockProfileMemberLeveling) HasSelectedSymbol() bool {
 	return false
 }
 
-// SetSelectedSymbol gets a reference to the given SkyBlockEmblem and assigns it to the SelectedSymbol field.
-func (o *SkyBlockProfileMemberLeveling) SetSelectedSymbol(v SkyBlockEmblem) {
+// SetSelectedSymbol gets a reference to the given SkyBlockProfileMemberLevelingEmblem and assigns it to the SelectedSymbol field.
+func (o *SkyBlockProfileMemberLeveling) SetSelectedSymbol(v SkyBlockProfileMemberLevelingEmblem) {
 	o.SelectedSymbol = &v
 }
 

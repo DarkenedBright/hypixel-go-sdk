@@ -19,24 +19,24 @@ var _ MappedNullable = &SkyBlockProfileMember{}
 
 // SkyBlockProfileMember struct for SkyBlockProfileMember
 type SkyBlockProfileMember struct {
-	AccessoryBagStorage *SkyBlockProfileMemberAccessoryBagStorage `json:"accessory_bag_storage,omitempty"`
-	Bestiary            *SkyBlockProfileMemberBestiary            `json:"bestiary,omitempty"`
-	Collection          *map[string]int64                         `json:"collection,omitempty"`
-	Currencies          *SkyBlockProfileMemberCurrencies          `json:"currencies,omitempty"`
-	Dungeons            *SkyBlockProfileMemberDungeons            `json:"dungeons,omitempty"`
-	Events              *SkyBlockProfileMemberEvents              `json:"events,omitempty"`
-	Experimentation     *SkyBlockProfileMemberExperimentation     `json:"experimentation,omitempty"`
-	FairySoul           *SkyBlockProfileMemberFairySoul           `json:"fairy_soul,omitempty"`
-	Forge               *SkyBlockProfileMemberForge               `json:"forge,omitempty"`
-	GardenPlayerData    *SkyBlockProfileMemberGardenPlayerData    `json:"garden_player_data,omitempty"`
-	GlacitePlayerData   *SkyBlockProfileMemberGlacitePlayerData   `json:"glacite_player_data,omitempty"`
-	Inventory           *SkyBlockProfileMemberInventory           `json:"inventory,omitempty"`
-	ItemData            *SkyBlockProfileMemberItemData            `json:"item_data,omitempty"`
-	JacobsContest       *SkyBlockProfileMemberJacobsContest       `json:"jacobs_contest,omitempty"`
-	Leveling            *SkyBlockProfileMemberLeveling            `json:"leveling,omitempty"`
-	MiningCore          *SkyBlockProfileMemberMiningCore          `json:"mining_core,omitempty"`
-	PlayerId            *string                                   `json:"player_id,omitempty"`
-	Rift                *SkyBlockProfileMemberRift                `json:"rift,omitempty"`
+	AccessoryBagStorage    *SkyBlockProfileMemberAccessoryBagStorage    `json:"accessory_bag_storage,omitempty"`
+	Bestiary               *SkyBlockProfileMemberBestiary               `json:"bestiary,omitempty"`
+	Collection             *map[string]int64                            `json:"collection,omitempty"`
+	Currencies             *SkyBlockProfileMemberCurrencies             `json:"currencies,omitempty"`
+	Dungeons               *SkyBlockProfileMemberDungeons               `json:"dungeons,omitempty"`
+	Events                 *SkyBlockProfileMemberEvents                 `json:"events,omitempty"`
+	Experimentation        *SkyBlockProfileMemberExperimentation        `json:"experimentation,omitempty"`
+	FairySoul              *SkyBlockProfileMemberFairySoul              `json:"fairy_soul,omitempty"`
+	Forge                  *SkyBlockProfileMemberForge                  `json:"forge,omitempty"`
+	GardenPlayerData       *SkyBlockProfileMemberGardenPlayerData       `json:"garden_player_data,omitempty"`
+	GlacitePlayerData      *SkyBlockProfileMemberGlacitePlayerData      `json:"glacite_player_data,omitempty"`
+	Inventory              *SkyBlockProfileMemberInventory              `json:"inventory,omitempty"`
+	ItemData               *SkyBlockProfileMemberItemData               `json:"item_data,omitempty"`
+	JacobsContest          *SkyBlockProfileMemberJacobsContest          `json:"jacobs_contest,omitempty"`
+	Leveling               *SkyBlockProfileMemberLeveling               `json:"leveling,omitempty"`
+	MiningCore             *SkyBlockProfileMemberMiningCore             `json:"mining_core,omitempty"`
+	NetherIslandPlayerData *SkyBlockProfileMemberNetherIslandPlayerData `json:"nether_island_player_data,omitempty"`
+	PlayerId               *string                                      `json:"player_id,omitempty"`
 }
 
 // NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
@@ -568,6 +568,38 @@ func (o *SkyBlockProfileMember) SetMiningCore(v SkyBlockProfileMemberMiningCore)
 	o.MiningCore = &v
 }
 
+// GetNetherIslandPlayerData returns the NetherIslandPlayerData field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetNetherIslandPlayerData() SkyBlockProfileMemberNetherIslandPlayerData {
+	if o == nil || IsNil(o.NetherIslandPlayerData) {
+		var ret SkyBlockProfileMemberNetherIslandPlayerData
+		return ret
+	}
+	return *o.NetherIslandPlayerData
+}
+
+// GetNetherIslandPlayerDataOk returns a tuple with the NetherIslandPlayerData field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetNetherIslandPlayerDataOk() (*SkyBlockProfileMemberNetherIslandPlayerData, bool) {
+	if o == nil || IsNil(o.NetherIslandPlayerData) {
+		return nil, false
+	}
+	return o.NetherIslandPlayerData, true
+}
+
+// HasNetherIslandPlayerData returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasNetherIslandPlayerData() bool {
+	if o != nil && !IsNil(o.NetherIslandPlayerData) {
+		return true
+	}
+
+	return false
+}
+
+// SetNetherIslandPlayerData gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerData and assigns it to the NetherIslandPlayerData field.
+func (o *SkyBlockProfileMember) SetNetherIslandPlayerData(v SkyBlockProfileMemberNetherIslandPlayerData) {
+	o.NetherIslandPlayerData = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -598,38 +630,6 @@ func (o *SkyBlockProfileMember) HasPlayerId() bool {
 // SetPlayerId gets a reference to the given string and assigns it to the PlayerId field.
 func (o *SkyBlockProfileMember) SetPlayerId(v string) {
 	o.PlayerId = &v
-}
-
-// GetRift returns the Rift field value if set, zero value otherwise.
-func (o *SkyBlockProfileMember) GetRift() SkyBlockProfileMemberRift {
-	if o == nil || IsNil(o.Rift) {
-		var ret SkyBlockProfileMemberRift
-		return ret
-	}
-	return *o.Rift
-}
-
-// GetRiftOk returns a tuple with the Rift field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMember) GetRiftOk() (*SkyBlockProfileMemberRift, bool) {
-	if o == nil || IsNil(o.Rift) {
-		return nil, false
-	}
-	return o.Rift, true
-}
-
-// HasRift returns a boolean if a field has been set.
-func (o *SkyBlockProfileMember) HasRift() bool {
-	if o != nil && !IsNil(o.Rift) {
-		return true
-	}
-
-	return false
-}
-
-// SetRift gets a reference to the given SkyBlockProfileMemberRift and assigns it to the Rift field.
-func (o *SkyBlockProfileMember) SetRift(v SkyBlockProfileMemberRift) {
-	o.Rift = &v
 }
 
 func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
@@ -690,11 +690,11 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.MiningCore) {
 		toSerialize["mining_core"] = o.MiningCore
 	}
+	if !IsNil(o.NetherIslandPlayerData) {
+		toSerialize["nether_island_player_data"] = o.NetherIslandPlayerData
+	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId
-	}
-	if !IsNil(o.Rift) {
-		toSerialize["rift"] = o.Rift
 	}
 	return toSerialize, nil
 }

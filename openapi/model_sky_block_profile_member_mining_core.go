@@ -23,6 +23,8 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCore{}
 type SkyBlockProfileMemberMiningCore struct {
 	Biomes                        *SkyBlockProfileMemberMiningCoreBiomes                 `json:"biomes,omitempty"`
 	Crystals                      *SkyBlockProfileMemberMiningCoreCrystals               `json:"crystals,omitempty"`
+	CurrentDailyEffect            *string                                                `json:"current_daily_effect,omitempty"`
+	CurrentDailyEffectLastChanged *int64                                                 `json:"current_daily_effect_last_changed,omitempty"`
 	DailyOresMined                *int64                                                 `json:"daily_ores_mined,omitempty"`
 	DailyOresMinedDay             *int64                                                 `json:"daily_ores_mined_day,omitempty"`
 	DailyOresMinedDayGemstone     *int64                                                 `json:"daily_ores_mined_day_gemstone,omitempty"`
@@ -42,8 +44,6 @@ type SkyBlockProfileMemberMiningCore struct {
 	PowderMithril                 int64                                                  `json:"powder_mithril"`
 	PowderMithrilTotal            int64                                                  `json:"powder_mithril_total"`
 	PowderSpentGemstone           *int64                                                 `json:"powder_spent_gemstone,omitempty"`
-	CurrentDailyEffect            *string                                                `json:"current_daily_effect,omitempty"`
-	CurrentDailyEffectLastChanged *int64                                                 `json:"current_daily_effect_last_changed,omitempty"`
 	PowderSpentGlacite            *int64                                                 `json:"powder_spent_glacite,omitempty"`
 	PowderSpentMithril            *int64                                                 `json:"powder_spent_mithril,omitempty"`
 	ReceivedFreeTier              bool                                                   `json:"received_free_tier"`
@@ -140,6 +140,70 @@ func (o *SkyBlockProfileMemberMiningCore) HasCrystals() bool {
 // SetCrystals gets a reference to the given SkyBlockProfileMemberMiningCoreCrystals and assigns it to the Crystals field.
 func (o *SkyBlockProfileMemberMiningCore) SetCrystals(v SkyBlockProfileMemberMiningCoreCrystals) {
 	o.Crystals = &v
+}
+
+// GetCurrentDailyEffect returns the CurrentDailyEffect field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffect() string {
+	if o == nil || IsNil(o.CurrentDailyEffect) {
+		var ret string
+		return ret
+	}
+	return *o.CurrentDailyEffect
+}
+
+// GetCurrentDailyEffectOk returns a tuple with the CurrentDailyEffect field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectOk() (*string, bool) {
+	if o == nil || IsNil(o.CurrentDailyEffect) {
+		return nil, false
+	}
+	return o.CurrentDailyEffect, true
+}
+
+// HasCurrentDailyEffect returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasCurrentDailyEffect() bool {
+	if o != nil && !IsNil(o.CurrentDailyEffect) {
+		return true
+	}
+
+	return false
+}
+
+// SetCurrentDailyEffect gets a reference to the given string and assigns it to the CurrentDailyEffect field.
+func (o *SkyBlockProfileMemberMiningCore) SetCurrentDailyEffect(v string) {
+	o.CurrentDailyEffect = &v
+}
+
+// GetCurrentDailyEffectLastChanged returns the CurrentDailyEffectLastChanged field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectLastChanged() int64 {
+	if o == nil || IsNil(o.CurrentDailyEffectLastChanged) {
+		var ret int64
+		return ret
+	}
+	return *o.CurrentDailyEffectLastChanged
+}
+
+// GetCurrentDailyEffectLastChangedOk returns a tuple with the CurrentDailyEffectLastChanged field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectLastChangedOk() (*int64, bool) {
+	if o == nil || IsNil(o.CurrentDailyEffectLastChanged) {
+		return nil, false
+	}
+	return o.CurrentDailyEffectLastChanged, true
+}
+
+// HasCurrentDailyEffectLastChanged returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasCurrentDailyEffectLastChanged() bool {
+	if o != nil && !IsNil(o.CurrentDailyEffectLastChanged) {
+		return true
+	}
+
+	return false
+}
+
+// SetCurrentDailyEffectLastChanged gets a reference to the given int64 and assigns it to the CurrentDailyEffectLastChanged field.
+func (o *SkyBlockProfileMemberMiningCore) SetCurrentDailyEffectLastChanged(v int64) {
+	o.CurrentDailyEffectLastChanged = &v
 }
 
 // GetDailyOresMined returns the DailyOresMined field value if set, zero value otherwise.
@@ -718,70 +782,6 @@ func (o *SkyBlockProfileMemberMiningCore) SetPowderSpentGemstone(v int64) {
 	o.PowderSpentGemstone = &v
 }
 
-// GetCurrentDailyEffect returns the CurrentDailyEffect field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffect() string {
-	if o == nil || IsNil(o.CurrentDailyEffect) {
-		var ret string
-		return ret
-	}
-	return *o.CurrentDailyEffect
-}
-
-// GetCurrentDailyEffectOk returns a tuple with the CurrentDailyEffect field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectOk() (*string, bool) {
-	if o == nil || IsNil(o.CurrentDailyEffect) {
-		return nil, false
-	}
-	return o.CurrentDailyEffect, true
-}
-
-// HasCurrentDailyEffect returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCore) HasCurrentDailyEffect() bool {
-	if o != nil && !IsNil(o.CurrentDailyEffect) {
-		return true
-	}
-
-	return false
-}
-
-// SetCurrentDailyEffect gets a reference to the given string and assigns it to the CurrentDailyEffect field.
-func (o *SkyBlockProfileMemberMiningCore) SetCurrentDailyEffect(v string) {
-	o.CurrentDailyEffect = &v
-}
-
-// GetCurrentDailyEffectLastChanged returns the CurrentDailyEffectLastChanged field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectLastChanged() int64 {
-	if o == nil || IsNil(o.CurrentDailyEffectLastChanged) {
-		var ret int64
-		return ret
-	}
-	return *o.CurrentDailyEffectLastChanged
-}
-
-// GetCurrentDailyEffectLastChangedOk returns a tuple with the CurrentDailyEffectLastChanged field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCore) GetCurrentDailyEffectLastChangedOk() (*int64, bool) {
-	if o == nil || IsNil(o.CurrentDailyEffectLastChanged) {
-		return nil, false
-	}
-	return o.CurrentDailyEffectLastChanged, true
-}
-
-// HasCurrentDailyEffectLastChanged returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCore) HasCurrentDailyEffectLastChanged() bool {
-	if o != nil && !IsNil(o.CurrentDailyEffectLastChanged) {
-		return true
-	}
-
-	return false
-}
-
-// SetCurrentDailyEffectLastChanged gets a reference to the given int64 and assigns it to the CurrentDailyEffectLastChanged field.
-func (o *SkyBlockProfileMemberMiningCore) SetCurrentDailyEffectLastChanged(v int64) {
-	o.CurrentDailyEffectLastChanged = &v
-}
-
 // GetPowderSpentGlacite returns the PowderSpentGlacite field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetPowderSpentGlacite() int64 {
 	if o == nil || IsNil(o.PowderSpentGlacite) {
@@ -966,6 +966,12 @@ func (o SkyBlockProfileMemberMiningCore) ToMap() (map[string]interface{}, error)
 	if !IsNil(o.Crystals) {
 		toSerialize["crystals"] = o.Crystals
 	}
+	if !IsNil(o.CurrentDailyEffect) {
+		toSerialize["current_daily_effect"] = o.CurrentDailyEffect
+	}
+	if !IsNil(o.CurrentDailyEffectLastChanged) {
+		toSerialize["current_daily_effect_last_changed"] = o.CurrentDailyEffectLastChanged
+	}
 	if !IsNil(o.DailyOresMined) {
 		toSerialize["daily_ores_mined"] = o.DailyOresMined
 	}
@@ -1014,12 +1020,6 @@ func (o SkyBlockProfileMemberMiningCore) ToMap() (map[string]interface{}, error)
 	toSerialize["powder_mithril_total"] = o.PowderMithrilTotal
 	if !IsNil(o.PowderSpentGemstone) {
 		toSerialize["powder_spent_gemstone"] = o.PowderSpentGemstone
-	}
-	if !IsNil(o.CurrentDailyEffect) {
-		toSerialize["current_daily_effect"] = o.CurrentDailyEffect
-	}
-	if !IsNil(o.CurrentDailyEffectLastChanged) {
-		toSerialize["current_daily_effect_last_changed"] = o.CurrentDailyEffectLastChanged
 	}
 	if !IsNil(o.PowderSpentGlacite) {
 		toSerialize["powder_spent_glacite"] = o.PowderSpentGlacite
