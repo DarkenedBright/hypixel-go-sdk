@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **Experience** | Pointer to **int64** |  | [optional] 
 **FishingFestivalSharksKilled** | Pointer to **int64** |  | [optional] 
 **HighestPetScore** | Pointer to **int64** |  | [optional] 
-**LastViewedTasks** | Pointer to [**[]SkyBlockXPTask**](SkyBlockXPTask.md) |  | [optional] 
+**LastViewedTasks** | Pointer to **[]string** |  | [optional] 
 **Migrated** | Pointer to **bool** |  | [optional] 
 **MigratedCompletions** | Pointer to **bool** |  | [optional] 
 **MigratedCompletions2** | Pointer to **bool** |  | [optional] 
@@ -266,20 +266,20 @@ HasHighestPetScore returns a boolean if a field has been set.
 
 ### GetLastViewedTasks
 
-`func (o *SkyBlockProfileMemberLeveling) GetLastViewedTasks() []SkyBlockXPTask`
+`func (o *SkyBlockProfileMemberLeveling) GetLastViewedTasks() []string`
 
 GetLastViewedTasks returns the LastViewedTasks field if non-nil, zero value otherwise.
 
 ### GetLastViewedTasksOk
 
-`func (o *SkyBlockProfileMemberLeveling) GetLastViewedTasksOk() (*[]SkyBlockXPTask, bool)`
+`func (o *SkyBlockProfileMemberLeveling) GetLastViewedTasksOk() (*[]string, bool)`
 
 GetLastViewedTasksOk returns a tuple with the LastViewedTasks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastViewedTasks
 
-`func (o *SkyBlockProfileMemberLeveling) SetLastViewedTasks(v []SkyBlockXPTask)`
+`func (o *SkyBlockProfileMemberLeveling) SetLastViewedTasks(v []string)`
 
 SetLastViewedTasks sets LastViewedTasks field to given value.
 

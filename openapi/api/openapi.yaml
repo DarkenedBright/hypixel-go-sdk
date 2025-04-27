@@ -1101,8 +1101,8 @@ components:
               - ALCHEMY_BREW
               claimed_talisman: true
               last_viewed_tasks:
-              - null
-              - null
+              - last_viewed_tasks
+              - last_viewed_tasks
               migrated_completions_2: true
               selected_symbol: null
               fishing_festival_sharks_killed: 3
@@ -1671,8 +1671,8 @@ components:
           - ALCHEMY_BREW
           claimed_talisman: true
           last_viewed_tasks:
-          - null
-          - null
+          - last_viewed_tasks
+          - last_viewed_tasks
           migrated_completions_2: true
           selected_symbol: null
           fishing_festival_sharks_killed: 3
@@ -3576,8 +3576,8 @@ components:
         - ALCHEMY_BREW
         claimed_talisman: true
         last_viewed_tasks:
-        - null
-        - null
+        - last_viewed_tasks
+        - last_viewed_tasks
         migrated_completions_2: true
         selected_symbol: null
         fishing_festival_sharks_killed: 3
@@ -3608,7 +3608,7 @@ components:
           type: integer
         last_viewed_tasks:
           items:
-            $ref: '#/components/schemas/SkyBlockXPTask'
+            type: string
           type: array
         migrated:
           type: boolean
@@ -5501,8 +5501,8 @@ components:
                 - ALCHEMY_BREW
                 claimed_talisman: true
                 last_viewed_tasks:
-                - null
-                - null
+                - last_viewed_tasks
+                - last_viewed_tasks
                 migrated_completions_2: true
                 selected_symbol: null
                 fishing_festival_sharks_killed: 3
@@ -6059,8 +6059,8 @@ components:
                 - ALCHEMY_BREW
                 claimed_talisman: true
                 last_viewed_tasks:
-                - null
-                - null
+                - last_viewed_tasks
+                - last_viewed_tasks
                 migrated_completions_2: true
                 selected_symbol: null
                 fishing_festival_sharks_killed: 3
@@ -6607,8 +6607,8 @@ components:
                 - ALCHEMY_BREW
                 claimed_talisman: true
                 last_viewed_tasks:
-                - null
-                - null
+                - last_viewed_tasks
+                - last_viewed_tasks
                 migrated_completions_2: true
                 selected_symbol: null
                 fishing_festival_sharks_killed: 3

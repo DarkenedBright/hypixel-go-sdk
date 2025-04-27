@@ -28,7 +28,7 @@ type SkyBlockProfileMemberLeveling struct {
 	Experience                  *int64                                    `json:"experience,omitempty"`
 	FishingFestivalSharksKilled *int64                                    `json:"fishing_festival_sharks_killed,omitempty"`
 	HighestPetScore             *int64                                    `json:"highest_pet_score,omitempty"`
-	LastViewedTasks             []SkyBlockXPTask                          `json:"last_viewed_tasks,omitempty"`
+	LastViewedTasks             []string                                  `json:"last_viewed_tasks,omitempty"`
 	Migrated                    *bool                                     `json:"migrated,omitempty"`
 	MigratedCompletions         *bool                                     `json:"migrated_completions,omitempty"`
 	MigratedCompletions2        *bool                                     `json:"migrated_completions_2,omitempty"`
@@ -342,9 +342,9 @@ func (o *SkyBlockProfileMemberLeveling) SetHighestPetScore(v int64) {
 }
 
 // GetLastViewedTasks returns the LastViewedTasks field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberLeveling) GetLastViewedTasks() []SkyBlockXPTask {
+func (o *SkyBlockProfileMemberLeveling) GetLastViewedTasks() []string {
 	if o == nil || IsNil(o.LastViewedTasks) {
-		var ret []SkyBlockXPTask
+		var ret []string
 		return ret
 	}
 	return o.LastViewedTasks
@@ -352,7 +352,7 @@ func (o *SkyBlockProfileMemberLeveling) GetLastViewedTasks() []SkyBlockXPTask {
 
 // GetLastViewedTasksOk returns a tuple with the LastViewedTasks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberLeveling) GetLastViewedTasksOk() ([]SkyBlockXPTask, bool) {
+func (o *SkyBlockProfileMemberLeveling) GetLastViewedTasksOk() ([]string, bool) {
 	if o == nil || IsNil(o.LastViewedTasks) {
 		return nil, false
 	}
@@ -368,8 +368,8 @@ func (o *SkyBlockProfileMemberLeveling) HasLastViewedTasks() bool {
 	return false
 }
 
-// SetLastViewedTasks gets a reference to the given []SkyBlockXPTask and assigns it to the LastViewedTasks field.
-func (o *SkyBlockProfileMemberLeveling) SetLastViewedTasks(v []SkyBlockXPTask) {
+// SetLastViewedTasks gets a reference to the given []string and assigns it to the LastViewedTasks field.
+func (o *SkyBlockProfileMemberLeveling) SetLastViewedTasks(v []string) {
 	o.LastViewedTasks = v
 }
 

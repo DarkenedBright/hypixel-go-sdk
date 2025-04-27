@@ -1324,7 +1324,7 @@ components:
           type: integer
         last_viewed_tasks:
           items:
-            $ref: '#/components/schemas/SkyBlockXPTask'
+            type: string
           type: array
         migrated:
           type: boolean
