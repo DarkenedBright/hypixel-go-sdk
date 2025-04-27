@@ -37,6 +37,7 @@ type SkyBlockProfileMember struct {
 	MiningCore             *SkyBlockProfileMemberMiningCore             `json:"mining_core,omitempty"`
 	NetherIslandPlayerData *SkyBlockProfileMemberNetherIslandPlayerData `json:"nether_island_player_data,omitempty"`
 	Objectives             *SkyBlockProfileMemberObjectives             `json:"objectives,omitempty"`
+	PetsData               *SkyBlockProfileMemberPetsData               `json:"pets_data,omitempty"`
 	PlayerId               *string                                      `json:"player_id,omitempty"`
 }
 
@@ -633,6 +634,38 @@ func (o *SkyBlockProfileMember) SetObjectives(v SkyBlockProfileMemberObjectives)
 	o.Objectives = &v
 }
 
+// GetPetsData returns the PetsData field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetPetsData() SkyBlockProfileMemberPetsData {
+	if o == nil || IsNil(o.PetsData) {
+		var ret SkyBlockProfileMemberPetsData
+		return ret
+	}
+	return *o.PetsData
+}
+
+// GetPetsDataOk returns a tuple with the PetsData field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetPetsDataOk() (*SkyBlockProfileMemberPetsData, bool) {
+	if o == nil || IsNil(o.PetsData) {
+		return nil, false
+	}
+	return o.PetsData, true
+}
+
+// HasPetsData returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasPetsData() bool {
+	if o != nil && !IsNil(o.PetsData) {
+		return true
+	}
+
+	return false
+}
+
+// SetPetsData gets a reference to the given SkyBlockProfileMemberPetsData and assigns it to the PetsData field.
+func (o *SkyBlockProfileMember) SetPetsData(v SkyBlockProfileMemberPetsData) {
+	o.PetsData = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -728,6 +761,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Objectives) {
 		toSerialize["objectives"] = o.Objectives
+	}
+	if !IsNil(o.PetsData) {
+		toSerialize["pets_data"] = o.PetsData
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId

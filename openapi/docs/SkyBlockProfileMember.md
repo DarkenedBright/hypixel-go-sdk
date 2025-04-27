@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **MiningCore** | Pointer to [**SkyBlockProfileMemberMiningCore**](SkyBlockProfileMemberMiningCore.md) |  | [optional] 
 **NetherIslandPlayerData** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerData**](SkyBlockProfileMemberNetherIslandPlayerData.md) |  | [optional] 
 **Objectives** | Pointer to [**SkyBlockProfileMemberObjectives**](SkyBlockProfileMemberObjectives.md) |  | [optional] 
+**PetsData** | Pointer to [**SkyBlockProfileMemberPetsData**](SkyBlockProfileMemberPetsData.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -492,6 +493,31 @@ SetObjectives sets Objectives field to given value.
 `func (o *SkyBlockProfileMember) HasObjectives() bool`
 
 HasObjectives returns a boolean if a field has been set.
+
+### GetPetsData
+
+`func (o *SkyBlockProfileMember) GetPetsData() SkyBlockProfileMemberPetsData`
+
+GetPetsData returns the PetsData field if non-nil, zero value otherwise.
+
+### GetPetsDataOk
+
+`func (o *SkyBlockProfileMember) GetPetsDataOk() (*SkyBlockProfileMemberPetsData, bool)`
+
+GetPetsDataOk returns a tuple with the PetsData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPetsData
+
+`func (o *SkyBlockProfileMember) SetPetsData(v SkyBlockProfileMemberPetsData)`
+
+SetPetsData sets PetsData field to given value.
+
+### HasPetsData
+
+`func (o *SkyBlockProfileMember) HasPetsData() bool`
+
+HasPetsData returns a boolean if a field has been set.
 
 ### GetPlayerId
 

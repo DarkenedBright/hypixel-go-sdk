@@ -198,6 +198,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerData'
         objectives:
           $ref: '#/components/schemas/SkyBlockProfileMemberObjectives'
+        pets_data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsData'
         player_id:
           format: uuid
           type: string
@@ -4529,6 +4531,278 @@ components:
         - completed_at
         - progress
         - status
+      type: object
+    SkyBlockProfileMemberPetsData:
+      additionalProperties: false
+      properties:
+        autopet:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopet'
+        pet_care:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataPetCare'
+        pets:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataPet'
+          type: array
+      required:
+        - autopet
+        - pets
+      type: object
+    SkyBlockProfileMemberPetsDataAutopet:
+      additionalProperties: false
+      properties:
+        migrated:
+          type: boolean
+        migrated_2:
+          type: boolean
+        rules:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopetRule'
+          type: array
+        rules_limit:
+          type: integer
+      type: object
+    SkyBlockProfileMemberPetsDataAutopetRule:
+      additionalProperties: false
+      properties:
+        data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopetRuleData'
+        disabled:
+          type: boolean
+        exceptions:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopetRuleException'
+          type: array
+        id:
+          enum:
+            - BOSS_SPAWN
+            - DIG_BURROW
+            - ENTER_COMBAT
+            - ENTER_ISLAND
+            - EQUIP_WARDROBE_SLOT
+            - FISH
+            - KILL_ENTITY
+            - START_CATACOMBS_FLOOR
+            - START_SLAYER_QUEST
+            - TALK_TO_VISITOR_IN_GARDEN
+          type: string
+        name:
+          type: string
+        uniqueId:
+          format: uuid
+          type: string
+        uuid:
+          format: uuid
+          type: string
+      required:
+        - data
+        - disabled
+        - exceptions
+        - id
+        - name
+        - uniqueId
+        - uuid
+      type: object
+    SkyBlockProfileMemberPetsDataAutopetRuleData:
+      additionalProperties: false
+      properties:
+        boss:
+          type: string
+        category:
+          type: string
+        entity_type:
+          type: string
+      type: object
+    SkyBlockProfileMemberPetsDataAutopetRuleException:
+      additionalProperties: false
+      properties:
+        data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopetRuleExceptionData'
+        id:
+          enum:
+            - HAS_EQUIPPED_PET
+            - NOT_IN_ISLAND
+          type: string
+      required:
+        - data
+        - id
+      type: object
+    SkyBlockProfileMemberPetsDataAutopetRuleExceptionData:
+      additionalProperties: false
+      properties:
+        island:
+          type: string
+        pet:
+          type: string
+      type: object
+    SkyBlockProfileMemberPetsDataPet:
+      additionalProperties: false
+      properties:
+        active:
+          type: boolean
+        candyUsed:
+          type: integer
+        exp:
+          type: number
+        extra:
+          additionalProperties:
+            type: integer
+          type: object
+        heldItem:
+          enum:
+            - ALL_SKILLS_SUPER_BOOST
+            - ANTIQUE_REMEDIES
+            - BEJEWELED_COLLAR
+            - CROCHET_TIGER_PLUSHIE
+            - DWARF_TURTLE_SHELMET
+            - GRANDMAS_KNITTING_NEEDLE
+            - GREEN_BANDANA
+            - MINOS_RELIC
+            - PET_ITEM_ALL_SKILLS_BOOST_COMMON
+            - PET_ITEM_BUBBLEGUM
+            - PET_ITEM_COMBAT_SKILL_BOOST_COMMON
+            - PET_ITEM_COMBAT_SKILL_BOOST_UNCOMMON
+            - PET_ITEM_EXP_SHARE
+            - PET_ITEM_FARMING_SKILL_BOOST_EPIC
+            - PET_ITEM_FARMING_SKILL_BOOST_RARE
+            - PET_ITEM_FISHING_SKILL_BOOST_RARE
+            - PET_ITEM_FISHING_SKILL_BOOST_UNCOMMON
+            - PET_ITEM_FLYING_PIG
+            - PET_ITEM_FORAGING_SKILL_BOOST_COMMON
+            - PET_ITEM_LUCKY_CLOVER
+            - PET_ITEM_MINING_SKILL_BOOST_RARE
+            - PET_ITEM_QUICK_CLAW
+            - PET_ITEM_SPOOKY_CUPCAKE
+            - PET_ITEM_TEXTBOOK
+            - PET_ITEM_TIER_BOOST
+            - REINFORCED_SCALES
+            - UNCOMMON_PARTY_HAT
+          nullable: true
+          type: string
+        skin:
+          type: string
+        tier:
+          enum:
+            - COMMON
+            - EPIC
+            - LEGENDARY
+            - MYTHIC
+            - RARE
+            - UNCOMMON
+          type: string
+        type:
+          enum:
+            - AMMONITE
+            - ANKYLOSAURUS
+            - ARMADILLO
+            - BABY_YETI
+            - BAL
+            - BAT
+            - BEE
+            - BINGO
+            - BLACK_CAT
+            - BLAZE
+            - BLUE_WHALE
+            - CHICKEN
+            - DOLPHIN
+            - EERIE
+            - ELEPHANT
+            - ENDERMAN
+            - ENDERMITE
+            - ENDER_DRAGON
+            - FLYING_FISH
+            - GHOUL
+            - GIRAFFE
+            - GLACITE_GOLEM
+            - GOBLIN
+            - GOLDEN_DRAGON
+            - GOLEM
+            - GRANDMA_WOLF
+            - GRIFFIN
+            - GUARDIAN
+            - HEDGEHOG
+            - HORSE
+            - JELLYFISH
+            - JERRY
+            - KUUDRA
+            - LION
+            - MAGMA_CUBE
+            - MAMMOTH
+            - MEGALODON
+            - MITHRIL_GOLEM
+            - MOLE
+            - MONKEY
+            - MOOSHROOM_COW
+            - OCELOT
+            - OWL
+            - PARROT
+            - PENGUIN
+            - PHOENIX
+            - PIG
+            - PIGMAN
+            - RABBIT
+            - RAT
+            - REINDEER
+            - RIFT_FERRET
+            - ROCK
+            - SCATHA
+            - SHEEP
+            - SILVERFISH
+            - SKELETON
+            - SKELETON_HORSE
+            - SLUG
+            - SNAIL
+            - SNOWMAN
+            - SPIDER
+            - SPINOSAURUS
+            - SPIRIT
+            - SQUID
+            - TARANTULA
+            - TIGER
+            - TYRANNOSAURUS
+            - WITHER_SKELETON
+            - WOLF
+            - ZOMBIE
+          type: string
+        uniqueId:
+          format: uuid
+          type: string
+        uuid:
+          format: uuid
+          type: string
+      required:
+        - active
+        - candyUsed
+        - exp
+        - heldItem
+        - skin
+        - tier
+        - type
+        - uniqueId
+        - uuid
+      type: object
+    SkyBlockProfileMemberPetsDataPetCare:
+      additionalProperties: false
+      properties:
+        coins_spent:
+          type: number
+        pet_types_sacrificed:
+          items:
+            enum:
+              - BABY_YETI
+              - BAL
+              - BLACK_CAT
+              - ENDERMAN
+              - FROST_WISP
+              - GIRAFFE
+              - JELLYFISH
+              - RIFT_FERRET
+              - SLUG
+              - SPIRIT
+            type: string
+          type: array
+      required:
+        - coins_spent
+        - pet_types_sacrificed
       type: object
   securitySchemes:
     ApiKey:

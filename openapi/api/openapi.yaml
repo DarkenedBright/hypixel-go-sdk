@@ -1286,6 +1286,76 @@ components:
               - fossils_donated
               - fossils_donated
               fossil_dust: 0.4867146239815201
+            pets_data:
+              pets:
+              - tier: COMMON
+                extra:
+                  key: 1
+                heldItem: ALL_SKILLS_SUPER_BOOST
+                skin: skin
+                active: true
+                exp: 2.7105647837031563
+                type: AMMONITE
+                uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                candyUsed: 5
+                uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              - tier: COMMON
+                extra:
+                  key: 1
+                heldItem: ALL_SKILLS_SUPER_BOOST
+                skin: skin
+                active: true
+                exp: 2.7105647837031563
+                type: AMMONITE
+                uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                candyUsed: 5
+                uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              pet_care:
+                pet_types_sacrificed:
+                - BABY_YETI
+                - BABY_YETI
+                coins_spent: 2.4062866311545816
+              autopet:
+                migrated_2: true
+                rules_limit: 5
+                rules:
+                - data:
+                    boss: boss
+                    entity_type: entity_type
+                    category: category
+                  name: name
+                  disabled: true
+                  id: BOSS_SPAWN
+                  uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  exceptions:
+                  - data:
+                      island: island
+                      pet: pet
+                    id: HAS_EQUIPPED_PET
+                  - data:
+                      island: island
+                      pet: pet
+                    id: HAS_EQUIPPED_PET
+                  uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                - data:
+                    boss: boss
+                    entity_type: entity_type
+                    category: category
+                  name: name
+                  disabled: true
+                  id: BOSS_SPAWN
+                  uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  exceptions:
+                  - data:
+                      island: island
+                      pet: pet
+                    id: HAS_EQUIPPED_PET
+                  - data:
+                      island: island
+                      pet: pet
+                    id: HAS_EQUIPPED_PET
+                  uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                migrated: true
             experimentation:
               claims_resets: 5
               simon:
@@ -5128,6 +5198,76 @@ components:
           - fossils_donated
           - fossils_donated
           fossil_dust: 0.4867146239815201
+        pets_data:
+          pets:
+          - tier: COMMON
+            extra:
+              key: 1
+            heldItem: ALL_SKILLS_SUPER_BOOST
+            skin: skin
+            active: true
+            exp: 2.7105647837031563
+            type: AMMONITE
+            uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            candyUsed: 5
+            uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          - tier: COMMON
+            extra:
+              key: 1
+            heldItem: ALL_SKILLS_SUPER_BOOST
+            skin: skin
+            active: true
+            exp: 2.7105647837031563
+            type: AMMONITE
+            uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            candyUsed: 5
+            uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          pet_care:
+            pet_types_sacrificed:
+            - BABY_YETI
+            - BABY_YETI
+            coins_spent: 2.4062866311545816
+          autopet:
+            migrated_2: true
+            rules_limit: 5
+            rules:
+            - data:
+                boss: boss
+                entity_type: entity_type
+                category: category
+              name: name
+              disabled: true
+              id: BOSS_SPAWN
+              uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              exceptions:
+              - data:
+                  island: island
+                  pet: pet
+                id: HAS_EQUIPPED_PET
+              - data:
+                  island: island
+                  pet: pet
+                id: HAS_EQUIPPED_PET
+              uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            - data:
+                boss: boss
+                entity_type: entity_type
+                category: category
+              name: name
+              disabled: true
+              id: BOSS_SPAWN
+              uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+              exceptions:
+              - data:
+                  island: island
+                  pet: pet
+                id: HAS_EQUIPPED_PET
+              - data:
+                  island: island
+                  pet: pet
+                id: HAS_EQUIPPED_PET
+              uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            migrated: true
         experimentation:
           claims_resets: 5
           simon:
@@ -7855,6 +7995,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerData'
         objectives:
           $ref: '#/components/schemas/SkyBlockProfileMemberObjectives'
+        pets_data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsData'
         player_id:
           format: uuid
           type: string
@@ -17717,6 +17859,304 @@ components:
       - progress
       - status
       type: object
+    SkyBlockProfileMemberPetsData:
+      additionalProperties: false
+      example:
+        pets:
+        - tier: COMMON
+          extra:
+            key: 1
+          heldItem: ALL_SKILLS_SUPER_BOOST
+          skin: skin
+          active: true
+          exp: 2.7105647837031563
+          type: AMMONITE
+          uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          candyUsed: 5
+          uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        - tier: COMMON
+          extra:
+            key: 1
+          heldItem: ALL_SKILLS_SUPER_BOOST
+          skin: skin
+          active: true
+          exp: 2.7105647837031563
+          type: AMMONITE
+          uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          candyUsed: 5
+          uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        pet_care:
+          pet_types_sacrificed:
+          - BABY_YETI
+          - BABY_YETI
+          coins_spent: 2.4062866311545816
+        autopet:
+          migrated_2: true
+          rules_limit: 5
+          rules:
+          - data:
+              boss: boss
+              entity_type: entity_type
+              category: category
+            name: name
+            disabled: true
+            id: BOSS_SPAWN
+            uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            exceptions:
+            - data:
+                island: island
+                pet: pet
+              id: HAS_EQUIPPED_PET
+            - data:
+                island: island
+                pet: pet
+              id: HAS_EQUIPPED_PET
+            uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          - data:
+              boss: boss
+              entity_type: entity_type
+              category: category
+            name: name
+            disabled: true
+            id: BOSS_SPAWN
+            uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            exceptions:
+            - data:
+                island: island
+                pet: pet
+              id: HAS_EQUIPPED_PET
+            - data:
+                island: island
+                pet: pet
+              id: HAS_EQUIPPED_PET
+            uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          migrated: true
+      properties:
+        autopet:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopet'
+        pet_care:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataPetCare'
+        pets:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataPet'
+          type: array
+      required:
+      - autopet
+      - pets
+      type: object
+    SkyBlockProfileMemberPetsDataAutopet:
+      additionalProperties: false
+      example:
+        migrated_2: true
+        rules_limit: 5
+        rules:
+        - data:
+            boss: boss
+            entity_type: entity_type
+            category: category
+          name: name
+          disabled: true
+          id: BOSS_SPAWN
+          uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          exceptions:
+          - data:
+              island: island
+              pet: pet
+            id: HAS_EQUIPPED_PET
+          - data:
+              island: island
+              pet: pet
+            id: HAS_EQUIPPED_PET
+          uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        - data:
+            boss: boss
+            entity_type: entity_type
+            category: category
+          name: name
+          disabled: true
+          id: BOSS_SPAWN
+          uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          exceptions:
+          - data:
+              island: island
+              pet: pet
+            id: HAS_EQUIPPED_PET
+          - data:
+              island: island
+              pet: pet
+            id: HAS_EQUIPPED_PET
+          uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        migrated: true
+      properties:
+        migrated:
+          type: boolean
+        migrated_2:
+          type: boolean
+        rules:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopetRule'
+          type: array
+        rules_limit:
+          type: integer
+      type: object
+    SkyBlockProfileMemberPetsDataAutopetRule:
+      additionalProperties: false
+      example:
+        data:
+          boss: boss
+          entity_type: entity_type
+          category: category
+        name: name
+        disabled: true
+        id: BOSS_SPAWN
+        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        exceptions:
+        - data:
+            island: island
+            pet: pet
+          id: HAS_EQUIPPED_PET
+        - data:
+            island: island
+            pet: pet
+          id: HAS_EQUIPPED_PET
+        uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopetRuleData'
+        disabled:
+          type: boolean
+        exceptions:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopetRuleException'
+          type: array
+        id:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopetRule_id'
+        name:
+          type: string
+        uniqueId:
+          format: uuid
+          type: string
+        uuid:
+          format: uuid
+          type: string
+      required:
+      - data
+      - disabled
+      - exceptions
+      - id
+      - name
+      - uniqueId
+      - uuid
+      type: object
+    SkyBlockProfileMemberPetsDataAutopetRuleData:
+      additionalProperties: false
+      example:
+        boss: boss
+        entity_type: entity_type
+        category: category
+      properties:
+        boss:
+          type: string
+        category:
+          type: string
+        entity_type:
+          type: string
+      type: object
+    SkyBlockProfileMemberPetsDataAutopetRuleException:
+      additionalProperties: false
+      example:
+        data:
+          island: island
+          pet: pet
+        id: HAS_EQUIPPED_PET
+      properties:
+        data:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopetRuleExceptionData'
+        id:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataAutopetRuleException_id'
+      required:
+      - data
+      - id
+      type: object
+    SkyBlockProfileMemberPetsDataAutopetRuleExceptionData:
+      additionalProperties: false
+      example:
+        island: island
+        pet: pet
+      properties:
+        island:
+          type: string
+        pet:
+          type: string
+      type: object
+    SkyBlockProfileMemberPetsDataPet:
+      additionalProperties: false
+      example:
+        tier: COMMON
+        extra:
+          key: 1
+        heldItem: ALL_SKILLS_SUPER_BOOST
+        skin: skin
+        active: true
+        exp: 2.7105647837031563
+        type: AMMONITE
+        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        candyUsed: 5
+        uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        active:
+          type: boolean
+        candyUsed:
+          type: integer
+        exp:
+          type: number
+        extra:
+          additionalProperties:
+            type: integer
+          type: object
+        heldItem:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataPet_heldItem'
+        skin:
+          type: string
+        tier:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataPet_tier'
+        type:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataPet_type'
+        uniqueId:
+          format: uuid
+          type: string
+        uuid:
+          format: uuid
+          type: string
+      required:
+      - active
+      - candyUsed
+      - exp
+      - heldItem
+      - skin
+      - tier
+      - type
+      - uniqueId
+      - uuid
+      type: object
+    SkyBlockProfileMemberPetsDataPetCare:
+      additionalProperties: false
+      example:
+        pet_types_sacrificed:
+        - BABY_YETI
+        - BABY_YETI
+        coins_spent: 2.4062866311545816
+      properties:
+        coins_spent:
+          type: number
+        pet_types_sacrificed:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataPetCare_pet_types_sacrificed_inner'
+          type: array
+      required:
+      - coins_spent
+      - pet_types_sacrificed
+      type: object
     _v2_skyblock_profile_get_200_response:
       example:
         success: true
@@ -18838,6 +19278,76 @@ components:
                 - fossils_donated
                 - fossils_donated
                 fossil_dust: 0.4867146239815201
+              pets_data:
+                pets:
+                - tier: COMMON
+                  extra:
+                    key: 1
+                  heldItem: ALL_SKILLS_SUPER_BOOST
+                  skin: skin
+                  active: true
+                  exp: 2.7105647837031563
+                  type: AMMONITE
+                  uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  candyUsed: 5
+                  uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                - tier: COMMON
+                  extra:
+                    key: 1
+                  heldItem: ALL_SKILLS_SUPER_BOOST
+                  skin: skin
+                  active: true
+                  exp: 2.7105647837031563
+                  type: AMMONITE
+                  uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  candyUsed: 5
+                  uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                pet_care:
+                  pet_types_sacrificed:
+                  - BABY_YETI
+                  - BABY_YETI
+                  coins_spent: 2.4062866311545816
+                autopet:
+                  migrated_2: true
+                  rules_limit: 5
+                  rules:
+                  - data:
+                      boss: boss
+                      entity_type: entity_type
+                      category: category
+                    name: name
+                    disabled: true
+                    id: BOSS_SPAWN
+                    uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                    exceptions:
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  - data:
+                      boss: boss
+                      entity_type: entity_type
+                      category: category
+                    name: name
+                    disabled: true
+                    id: BOSS_SPAWN
+                    uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                    exceptions:
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  migrated: true
               experimentation:
                 claims_resets: 5
                 simon:
@@ -22726,6 +23236,76 @@ components:
                 - fossils_donated
                 - fossils_donated
                 fossil_dust: 0.4867146239815201
+              pets_data:
+                pets:
+                - tier: COMMON
+                  extra:
+                    key: 1
+                  heldItem: ALL_SKILLS_SUPER_BOOST
+                  skin: skin
+                  active: true
+                  exp: 2.7105647837031563
+                  type: AMMONITE
+                  uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  candyUsed: 5
+                  uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                - tier: COMMON
+                  extra:
+                    key: 1
+                  heldItem: ALL_SKILLS_SUPER_BOOST
+                  skin: skin
+                  active: true
+                  exp: 2.7105647837031563
+                  type: AMMONITE
+                  uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  candyUsed: 5
+                  uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                pet_care:
+                  pet_types_sacrificed:
+                  - BABY_YETI
+                  - BABY_YETI
+                  coins_spent: 2.4062866311545816
+                autopet:
+                  migrated_2: true
+                  rules_limit: 5
+                  rules:
+                  - data:
+                      boss: boss
+                      entity_type: entity_type
+                      category: category
+                    name: name
+                    disabled: true
+                    id: BOSS_SPAWN
+                    uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                    exceptions:
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  - data:
+                      boss: boss
+                      entity_type: entity_type
+                      category: category
+                    name: name
+                    disabled: true
+                    id: BOSS_SPAWN
+                    uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                    exceptions:
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  migrated: true
               experimentation:
                 claims_resets: 5
                 simon:
@@ -26546,6 +27126,76 @@ components:
                 - fossils_donated
                 - fossils_donated
                 fossil_dust: 0.4867146239815201
+              pets_data:
+                pets:
+                - tier: COMMON
+                  extra:
+                    key: 1
+                  heldItem: ALL_SKILLS_SUPER_BOOST
+                  skin: skin
+                  active: true
+                  exp: 2.7105647837031563
+                  type: AMMONITE
+                  uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  candyUsed: 5
+                  uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                - tier: COMMON
+                  extra:
+                    key: 1
+                  heldItem: ALL_SKILLS_SUPER_BOOST
+                  skin: skin
+                  active: true
+                  exp: 2.7105647837031563
+                  type: AMMONITE
+                  uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  candyUsed: 5
+                  uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                pet_care:
+                  pet_types_sacrificed:
+                  - BABY_YETI
+                  - BABY_YETI
+                  coins_spent: 2.4062866311545816
+                autopet:
+                  migrated_2: true
+                  rules_limit: 5
+                  rules:
+                  - data:
+                      boss: boss
+                      entity_type: entity_type
+                      category: category
+                    name: name
+                    disabled: true
+                    id: BOSS_SPAWN
+                    uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                    exceptions:
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  - data:
+                      boss: boss
+                      entity_type: entity_type
+                      category: category
+                    name: name
+                    disabled: true
+                    id: BOSS_SPAWN
+                    uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                    exceptions:
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    - data:
+                        island: island
+                        pet: pet
+                      id: HAS_EQUIPPED_PET
+                    uniqueId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  migrated: true
               experimentation:
                 claims_resets: 5
                 simon:
@@ -29494,6 +30144,151 @@ components:
       - ACTIVE
       - COMPLETE
       - INACTIVE
+      type: string
+    SkyBlockProfileMemberPetsDataAutopetRule_id:
+      enum:
+      - BOSS_SPAWN
+      - DIG_BURROW
+      - ENTER_COMBAT
+      - ENTER_ISLAND
+      - EQUIP_WARDROBE_SLOT
+      - FISH
+      - KILL_ENTITY
+      - START_CATACOMBS_FLOOR
+      - START_SLAYER_QUEST
+      - TALK_TO_VISITOR_IN_GARDEN
+      type: string
+    SkyBlockProfileMemberPetsDataAutopetRuleException_id:
+      enum:
+      - HAS_EQUIPPED_PET
+      - NOT_IN_ISLAND
+      type: string
+    SkyBlockProfileMemberPetsDataPet_heldItem:
+      enum:
+      - ALL_SKILLS_SUPER_BOOST
+      - ANTIQUE_REMEDIES
+      - BEJEWELED_COLLAR
+      - CROCHET_TIGER_PLUSHIE
+      - DWARF_TURTLE_SHELMET
+      - GRANDMAS_KNITTING_NEEDLE
+      - GREEN_BANDANA
+      - MINOS_RELIC
+      - PET_ITEM_ALL_SKILLS_BOOST_COMMON
+      - PET_ITEM_BUBBLEGUM
+      - PET_ITEM_COMBAT_SKILL_BOOST_COMMON
+      - PET_ITEM_COMBAT_SKILL_BOOST_UNCOMMON
+      - PET_ITEM_EXP_SHARE
+      - PET_ITEM_FARMING_SKILL_BOOST_EPIC
+      - PET_ITEM_FARMING_SKILL_BOOST_RARE
+      - PET_ITEM_FISHING_SKILL_BOOST_RARE
+      - PET_ITEM_FISHING_SKILL_BOOST_UNCOMMON
+      - PET_ITEM_FLYING_PIG
+      - PET_ITEM_FORAGING_SKILL_BOOST_COMMON
+      - PET_ITEM_LUCKY_CLOVER
+      - PET_ITEM_MINING_SKILL_BOOST_RARE
+      - PET_ITEM_QUICK_CLAW
+      - PET_ITEM_SPOOKY_CUPCAKE
+      - PET_ITEM_TEXTBOOK
+      - PET_ITEM_TIER_BOOST
+      - REINFORCED_SCALES
+      - UNCOMMON_PARTY_HAT
+      nullable: true
+      type: string
+    SkyBlockProfileMemberPetsDataPet_tier:
+      enum:
+      - COMMON
+      - EPIC
+      - LEGENDARY
+      - MYTHIC
+      - RARE
+      - UNCOMMON
+      type: string
+    SkyBlockProfileMemberPetsDataPet_type:
+      enum:
+      - AMMONITE
+      - ANKYLOSAURUS
+      - ARMADILLO
+      - BABY_YETI
+      - BAL
+      - BAT
+      - BEE
+      - BINGO
+      - BLACK_CAT
+      - BLAZE
+      - BLUE_WHALE
+      - CHICKEN
+      - DOLPHIN
+      - EERIE
+      - ELEPHANT
+      - ENDERMAN
+      - ENDERMITE
+      - ENDER_DRAGON
+      - FLYING_FISH
+      - GHOUL
+      - GIRAFFE
+      - GLACITE_GOLEM
+      - GOBLIN
+      - GOLDEN_DRAGON
+      - GOLEM
+      - GRANDMA_WOLF
+      - GRIFFIN
+      - GUARDIAN
+      - HEDGEHOG
+      - HORSE
+      - JELLYFISH
+      - JERRY
+      - KUUDRA
+      - LION
+      - MAGMA_CUBE
+      - MAMMOTH
+      - MEGALODON
+      - MITHRIL_GOLEM
+      - MOLE
+      - MONKEY
+      - MOOSHROOM_COW
+      - OCELOT
+      - OWL
+      - PARROT
+      - PENGUIN
+      - PHOENIX
+      - PIG
+      - PIGMAN
+      - RABBIT
+      - RAT
+      - REINDEER
+      - RIFT_FERRET
+      - ROCK
+      - SCATHA
+      - SHEEP
+      - SILVERFISH
+      - SKELETON
+      - SKELETON_HORSE
+      - SLUG
+      - SNAIL
+      - SNOWMAN
+      - SPIDER
+      - SPINOSAURUS
+      - SPIRIT
+      - SQUID
+      - TARANTULA
+      - TIGER
+      - TYRANNOSAURUS
+      - WITHER_SKELETON
+      - WOLF
+      - ZOMBIE
+      type: string
+    SkyBlockProfileMemberPetsDataPetCare_pet_types_sacrificed_inner:
+      enum:
+      - BABY_YETI
+      - BAL
+      - BLACK_CAT
+      - ENDERMAN
+      - FROST_WISP
+      - GIRAFFE
+      - JELLYFISH
+      - RIFT_FERRET
+      - SLUG
+      - SPIRIT
       type: string
     inline_object:
       properties:
