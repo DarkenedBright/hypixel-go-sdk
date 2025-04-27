@@ -1313,6 +1313,7 @@ components:
               nodes:
                 mining_speed: 5
                 mining_speed_boost: 8
+                pickaxe_toss: 6
                 daily_powder: 1
                 vanguard_seeker: 8
                 quick_forge: 1
@@ -1344,7 +1345,6 @@ components:
                 miners_blessing: 5
                 powder_buff: 7
                 mineshaft_mayhem: 9
-                pickobulus: 6
                 old_school: 8
                 precision_mining: 1
                 lonesome_miner: 1
@@ -2017,6 +2017,7 @@ components:
           nodes:
             mining_speed: 5
             mining_speed_boost: 8
+            pickaxe_toss: 6
             daily_powder: 1
             vanguard_seeker: 8
             quick_forge: 1
@@ -2048,7 +2049,6 @@ components:
             miners_blessing: 5
             powder_buff: 7
             mineshaft_mayhem: 9
-            pickobulus: 6
             old_school: 8
             precision_mining: 1
             lonesome_miner: 1
@@ -3992,6 +3992,7 @@ components:
         nodes:
           mining_speed: 5
           mining_speed_boost: 8
+          pickaxe_toss: 6
           daily_powder: 1
           vanguard_seeker: 8
           quick_forge: 1
@@ -4023,7 +4024,6 @@ components:
           miners_blessing: 5
           powder_buff: 7
           mineshaft_mayhem: 9
-          pickobulus: 6
           old_school: 8
           precision_mining: 1
           lonesome_miner: 1
@@ -4298,6 +4298,7 @@ components:
       example:
         mining_speed: 5
         mining_speed_boost: 8
+        pickaxe_toss: 6
         daily_powder: 1
         vanguard_seeker: 8
         quick_forge: 1
@@ -4329,7 +4330,6 @@ components:
         miners_blessing: 5
         powder_buff: 7
         mineshaft_mayhem: 9
-        pickobulus: 6
         old_school: 8
         precision_mining: 1
         lonesome_miner: 1
@@ -4401,7 +4401,7 @@ components:
           type: integer
         old_school:
           type: integer
-        pickobulus:
+        pickaxe_toss:
           type: integer
         powder_buff:
           type: integer
@@ -6515,6 +6515,7 @@ components:
                 nodes:
                   mining_speed: 5
                   mining_speed_boost: 8
+                  pickaxe_toss: 6
                   daily_powder: 1
                   vanguard_seeker: 8
                   quick_forge: 1
@@ -6546,7 +6547,6 @@ components:
                   miners_blessing: 5
                   powder_buff: 7
                   mineshaft_mayhem: 9
-                  pickobulus: 6
                   old_school: 8
                   precision_mining: 1
                   lonesome_miner: 1
@@ -7207,6 +7207,7 @@ components:
                 nodes:
                   mining_speed: 5
                   mining_speed_boost: 8
+                  pickaxe_toss: 6
                   daily_powder: 1
                   vanguard_seeker: 8
                   quick_forge: 1
@@ -7238,7 +7239,6 @@ components:
                   miners_blessing: 5
                   powder_buff: 7
                   mineshaft_mayhem: 9
-                  pickobulus: 6
                   old_school: 8
                   precision_mining: 1
                   lonesome_miner: 1
@@ -7889,6 +7889,7 @@ components:
                 nodes:
                   mining_speed: 5
                   mining_speed_boost: 8
+                  pickaxe_toss: 6
                   daily_powder: 1
                   vanguard_seeker: 8
                   quick_forge: 1
@@ -7920,7 +7921,6 @@ components:
                   miners_blessing: 5
                   powder_buff: 7
                   mineshaft_mayhem: 9
-                  pickobulus: 6
                   old_school: 8
                   precision_mining: 1
                   lonesome_miner: 1

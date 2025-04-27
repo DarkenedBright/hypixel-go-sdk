@@ -1595,7 +1595,7 @@ components:
           type: integer
         old_school:
           type: integer
-        pickobulus:
+        pickaxe_toss:
           type: integer
         powder_buff:
           type: integer

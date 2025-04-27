@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 **Mole** | Pointer to **int64** |  | [optional] 
 **NoStoneUnturned** | Pointer to **int64** |  | [optional] 
 **OldSchool** | Pointer to **int64** |  | [optional] 
-**Pickobulus** | Pointer to **int64** |  | [optional] 
+**PickaxeToss** | Pointer to **int64** |  | [optional] 
 **PowderBuff** | Pointer to **int64** |  | [optional] 
 **PrecisionMining** | Pointer to **int64** |  | [optional] 
 **Professional** | Pointer to **int64** |  | [optional] 
@@ -795,30 +795,30 @@ SetOldSchool sets OldSchool field to given value.
 
 HasOldSchool returns a boolean if a field has been set.
 
-### GetPickobulus
+### GetPickaxeToss
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetPickobulus() int64`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetPickaxeToss() int64`
 
-GetPickobulus returns the Pickobulus field if non-nil, zero value otherwise.
+GetPickaxeToss returns the PickaxeToss field if non-nil, zero value otherwise.
 
-### GetPickobulusOk
+### GetPickaxeTossOk
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) GetPickobulusOk() (*int64, bool)`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetPickaxeTossOk() (*int64, bool)`
 
-GetPickobulusOk returns a tuple with the Pickobulus field if it's non-nil, zero value otherwise
+GetPickaxeTossOk returns a tuple with the PickaxeToss field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPickobulus
+### SetPickaxeToss
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) SetPickobulus(v int64)`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetPickaxeToss(v int64)`
 
-SetPickobulus sets Pickobulus field to given value.
+SetPickaxeToss sets PickaxeToss field to given value.
 
-### HasPickobulus
+### HasPickaxeToss
 
-`func (o *SkyBlockProfileMemberMiningCoreNodes) HasPickobulus() bool`
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasPickaxeToss() bool`
 
-HasPickobulus returns a boolean if a field has been set.
+HasPickaxeToss returns a boolean if a field has been set.
 
 ### GetPowderBuff
 

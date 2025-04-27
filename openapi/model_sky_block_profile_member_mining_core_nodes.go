@@ -48,7 +48,7 @@ type SkyBlockProfileMemberMiningCoreNodes struct {
 	Mole                 *int64 `json:"mole,omitempty"`
 	NoStoneUnturned      *int64 `json:"no_stone_unturned,omitempty"`
 	OldSchool            *int64 `json:"old_school,omitempty"`
-	Pickobulus           *int64 `json:"pickobulus,omitempty"`
+	PickaxeToss          *int64 `json:"pickaxe_toss,omitempty"`
 	PowderBuff           *int64 `json:"powder_buff,omitempty"`
 	PrecisionMining      *int64 `json:"precision_mining,omitempty"`
 	Professional         *int64 `json:"professional,omitempty"`
@@ -1012,36 +1012,36 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetOldSchool(v int64) {
 	o.OldSchool = &v
 }
 
-// GetPickobulus returns the Pickobulus field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetPickobulus() int64 {
-	if o == nil || IsNil(o.Pickobulus) {
+// GetPickaxeToss returns the PickaxeToss field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetPickaxeToss() int64 {
+	if o == nil || IsNil(o.PickaxeToss) {
 		var ret int64
 		return ret
 	}
-	return *o.Pickobulus
+	return *o.PickaxeToss
 }
 
-// GetPickobulusOk returns a tuple with the Pickobulus field value if set, nil otherwise
+// GetPickaxeTossOk returns a tuple with the PickaxeToss field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) GetPickobulusOk() (*int64, bool) {
-	if o == nil || IsNil(o.Pickobulus) {
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetPickaxeTossOk() (*int64, bool) {
+	if o == nil || IsNil(o.PickaxeToss) {
 		return nil, false
 	}
-	return o.Pickobulus, true
+	return o.PickaxeToss, true
 }
 
-// HasPickobulus returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberMiningCoreNodes) HasPickobulus() bool {
-	if o != nil && !IsNil(o.Pickobulus) {
+// HasPickaxeToss returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasPickaxeToss() bool {
+	if o != nil && !IsNil(o.PickaxeToss) {
 		return true
 	}
 
 	return false
 }
 
-// SetPickobulus gets a reference to the given int64 and assigns it to the Pickobulus field.
-func (o *SkyBlockProfileMemberMiningCoreNodes) SetPickobulus(v int64) {
-	o.Pickobulus = &v
+// SetPickaxeToss gets a reference to the given int64 and assigns it to the PickaxeToss field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetPickaxeToss(v int64) {
+	o.PickaxeToss = &v
 }
 
 // GetPowderBuff returns the PowderBuff field value if set, zero value otherwise.
@@ -1653,8 +1653,8 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.OldSchool) {
 		toSerialize["old_school"] = o.OldSchool
 	}
-	if !IsNil(o.Pickobulus) {
-		toSerialize["pickobulus"] = o.Pickobulus
+	if !IsNil(o.PickaxeToss) {
+		toSerialize["pickaxe_toss"] = o.PickaxeToss
 	}
 	if !IsNil(o.PowderBuff) {
 		toSerialize["powder_buff"] = o.PowderBuff
