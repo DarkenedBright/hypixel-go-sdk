@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **LastCompletion** | Pointer to **int64** |  | [optional] 
 **LastToyDrop** | Pointer to **int64** |  | [optional] 
+**MobId** | Pointer to **string** |  | [optional] 
 **TalkedToNpc** | Pointer to **bool** |  | [optional] 
 
 ## Methods
@@ -76,6 +77,31 @@ SetLastToyDrop sets LastToyDrop field to given value.
 `func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) HasLastToyDrop() bool`
 
 HasLastToyDrop returns a boolean if a field has been set.
+
+### GetMobId
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) GetMobId() string`
+
+GetMobId returns the MobId field if non-nil, zero value otherwise.
+
+### GetMobIdOk
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) GetMobIdOk() (*string, bool)`
+
+GetMobIdOk returns a tuple with the MobId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMobId
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) SetMobId(v string)`
+
+SetMobId sets MobId field to given value.
+
+### HasMobId
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) HasMobId() bool`
+
+HasMobId returns a boolean if a field has been set.
 
 ### GetTalkedToNpc
 

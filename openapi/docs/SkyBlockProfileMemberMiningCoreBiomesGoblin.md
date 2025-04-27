@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **KingQuestActive** | **bool** |  | 
-**KingQuestsCompleted** | **int64** |  | 
+**KingQuestsCompleted** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberMiningCoreBiomesGoblin
 
-`func NewSkyBlockProfileMemberMiningCoreBiomesGoblin(kingQuestActive bool, kingQuestsCompleted int64, ) *SkyBlockProfileMemberMiningCoreBiomesGoblin`
+`func NewSkyBlockProfileMemberMiningCoreBiomesGoblin(kingQuestActive bool, ) *SkyBlockProfileMemberMiningCoreBiomesGoblin`
 
 NewSkyBlockProfileMemberMiningCoreBiomesGoblin instantiates a new SkyBlockProfileMemberMiningCoreBiomesGoblin object
 This constructor will assign default values to properties that have it defined,
@@ -65,6 +65,11 @@ and a boolean to check if the value has been set.
 
 SetKingQuestsCompleted sets KingQuestsCompleted field to given value.
 
+### HasKingQuestsCompleted
+
+`func (o *SkyBlockProfileMemberMiningCoreBiomesGoblin) HasKingQuestsCompleted() bool`
+
+HasKingQuestsCompleted returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **STRING** | Pointer to **bool** |  | [optional] 
 **CompletedAt** | **int64** |  | 
 **Progress** | **int64** |  | 
-**Status** | [**SkyBlockProfileMemberObjectivesCatchLaseasFishStatus**](SkyBlockProfileMemberObjectivesCatchLaseasFishStatus.md) |  | 
+**Status** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus.md) |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberObjectivesCollectSpider
 
-`func NewSkyBlockProfileMemberObjectivesCollectSpider(completedAt int64, progress int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, ) *SkyBlockProfileMemberObjectivesCollectSpider`
+`func NewSkyBlockProfileMemberObjectivesCollectSpider(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, ) *SkyBlockProfileMemberObjectivesCollectSpider`
 
 NewSkyBlockProfileMemberObjectivesCollectSpider instantiates a new SkyBlockProfileMemberObjectivesCollectSpider object
 This constructor will assign default values to properties that have it defined,
@@ -121,20 +121,20 @@ SetProgress sets Progress field to given value.
 
 ### GetStatus
 
-`func (o *SkyBlockProfileMemberObjectivesCollectSpider) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus`
+`func (o *SkyBlockProfileMemberObjectivesCollectSpider) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *SkyBlockProfileMemberObjectivesCollectSpider) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool)`
+`func (o *SkyBlockProfileMemberObjectivesCollectSpider) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *SkyBlockProfileMemberObjectivesCollectSpider) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus)`
+`func (o *SkyBlockProfileMemberObjectivesCollectSpider) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus)`
 
 SetStatus sets Status field to given value.
 

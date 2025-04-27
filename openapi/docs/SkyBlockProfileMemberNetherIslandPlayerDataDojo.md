@@ -4,26 +4,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DojoPointsArcher** | **int64** |  | 
-**DojoPointsFireball** | **int64** |  | 
-**DojoPointsLockHead** | **int64** |  | 
-**DojoPointsMobKb** | **int64** |  | 
-**DojoPointsSnake** | **int64** |  | 
-**DojoPointsSwordSwap** | **int64** |  | 
-**DojoPointsWallJump** | **int64** |  | 
-**DojoTimeArcher** | **int64** |  | 
-**DojoTimeFireball** | **int64** |  | 
-**DojoTimeLockHead** | **int64** |  | 
-**DojoTimeMobKb** | **int64** |  | 
-**DojoTimeSnake** | **int64** |  | 
-**DojoTimeSwordSwap** | **int64** |  | 
-**DojoTimeWallJump** | **int64** |  | 
+**DojoPointsArcher** | Pointer to **int64** |  | [optional] 
+**DojoPointsFireball** | Pointer to **int64** |  | [optional] 
+**DojoPointsLockHead** | Pointer to **int64** |  | [optional] 
+**DojoPointsMobKb** | Pointer to **int64** |  | [optional] 
+**DojoPointsSnake** | Pointer to **int64** |  | [optional] 
+**DojoPointsSwordSwap** | Pointer to **int64** |  | [optional] 
+**DojoPointsWallJump** | Pointer to **int64** |  | [optional] 
+**DojoTimeArcher** | Pointer to **int64** |  | [optional] 
+**DojoTimeFireball** | Pointer to **int64** |  | [optional] 
+**DojoTimeLockHead** | Pointer to **int64** |  | [optional] 
+**DojoTimeMobKb** | Pointer to **int64** |  | [optional] 
+**DojoTimeSnake** | Pointer to **int64** |  | [optional] 
+**DojoTimeSwordSwap** | Pointer to **int64** |  | [optional] 
+**DojoTimeWallJump** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerDataDojo
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerDataDojo(dojoPointsArcher int64, dojoPointsFireball int64, dojoPointsLockHead int64, dojoPointsMobKb int64, dojoPointsSnake int64, dojoPointsSwordSwap int64, dojoPointsWallJump int64, dojoTimeArcher int64, dojoTimeFireball int64, dojoTimeLockHead int64, dojoTimeMobKb int64, dojoTimeSnake int64, dojoTimeSwordSwap int64, dojoTimeWallJump int64, ) *SkyBlockProfileMemberNetherIslandPlayerDataDojo`
+`func NewSkyBlockProfileMemberNetherIslandPlayerDataDojo() *SkyBlockProfileMemberNetherIslandPlayerDataDojo`
 
 NewSkyBlockProfileMemberNetherIslandPlayerDataDojo instantiates a new SkyBlockProfileMemberNetherIslandPlayerDataDojo object
 This constructor will assign default values to properties that have it defined,
@@ -57,6 +57,11 @@ and a boolean to check if the value has been set.
 
 SetDojoPointsArcher sets DojoPointsArcher field to given value.
 
+### HasDojoPointsArcher
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsArcher() bool`
+
+HasDojoPointsArcher returns a boolean if a field has been set.
 
 ### GetDojoPointsFireball
 
@@ -77,6 +82,11 @@ and a boolean to check if the value has been set.
 
 SetDojoPointsFireball sets DojoPointsFireball field to given value.
 
+### HasDojoPointsFireball
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsFireball() bool`
+
+HasDojoPointsFireball returns a boolean if a field has been set.
 
 ### GetDojoPointsLockHead
 
@@ -97,6 +107,11 @@ and a boolean to check if the value has been set.
 
 SetDojoPointsLockHead sets DojoPointsLockHead field to given value.
 
+### HasDojoPointsLockHead
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsLockHead() bool`
+
+HasDojoPointsLockHead returns a boolean if a field has been set.
 
 ### GetDojoPointsMobKb
 
@@ -117,6 +132,11 @@ and a boolean to check if the value has been set.
 
 SetDojoPointsMobKb sets DojoPointsMobKb field to given value.
 
+### HasDojoPointsMobKb
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsMobKb() bool`
+
+HasDojoPointsMobKb returns a boolean if a field has been set.
 
 ### GetDojoPointsSnake
 
@@ -137,6 +157,11 @@ and a boolean to check if the value has been set.
 
 SetDojoPointsSnake sets DojoPointsSnake field to given value.
 
+### HasDojoPointsSnake
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsSnake() bool`
+
+HasDojoPointsSnake returns a boolean if a field has been set.
 
 ### GetDojoPointsSwordSwap
 
@@ -157,6 +182,11 @@ and a boolean to check if the value has been set.
 
 SetDojoPointsSwordSwap sets DojoPointsSwordSwap field to given value.
 
+### HasDojoPointsSwordSwap
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsSwordSwap() bool`
+
+HasDojoPointsSwordSwap returns a boolean if a field has been set.
 
 ### GetDojoPointsWallJump
 
@@ -177,6 +207,11 @@ and a boolean to check if the value has been set.
 
 SetDojoPointsWallJump sets DojoPointsWallJump field to given value.
 
+### HasDojoPointsWallJump
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsWallJump() bool`
+
+HasDojoPointsWallJump returns a boolean if a field has been set.
 
 ### GetDojoTimeArcher
 
@@ -197,6 +232,11 @@ and a boolean to check if the value has been set.
 
 SetDojoTimeArcher sets DojoTimeArcher field to given value.
 
+### HasDojoTimeArcher
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeArcher() bool`
+
+HasDojoTimeArcher returns a boolean if a field has been set.
 
 ### GetDojoTimeFireball
 
@@ -217,6 +257,11 @@ and a boolean to check if the value has been set.
 
 SetDojoTimeFireball sets DojoTimeFireball field to given value.
 
+### HasDojoTimeFireball
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeFireball() bool`
+
+HasDojoTimeFireball returns a boolean if a field has been set.
 
 ### GetDojoTimeLockHead
 
@@ -237,6 +282,11 @@ and a boolean to check if the value has been set.
 
 SetDojoTimeLockHead sets DojoTimeLockHead field to given value.
 
+### HasDojoTimeLockHead
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeLockHead() bool`
+
+HasDojoTimeLockHead returns a boolean if a field has been set.
 
 ### GetDojoTimeMobKb
 
@@ -257,6 +307,11 @@ and a boolean to check if the value has been set.
 
 SetDojoTimeMobKb sets DojoTimeMobKb field to given value.
 
+### HasDojoTimeMobKb
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeMobKb() bool`
+
+HasDojoTimeMobKb returns a boolean if a field has been set.
 
 ### GetDojoTimeSnake
 
@@ -277,6 +332,11 @@ and a boolean to check if the value has been set.
 
 SetDojoTimeSnake sets DojoTimeSnake field to given value.
 
+### HasDojoTimeSnake
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeSnake() bool`
+
+HasDojoTimeSnake returns a boolean if a field has been set.
 
 ### GetDojoTimeSwordSwap
 
@@ -297,6 +357,11 @@ and a boolean to check if the value has been set.
 
 SetDojoTimeSwordSwap sets DojoTimeSwordSwap field to given value.
 
+### HasDojoTimeSwordSwap
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeSwordSwap() bool`
+
+HasDojoTimeSwordSwap returns a boolean if a field has been set.
 
 ### GetDojoTimeWallJump
 
@@ -317,6 +382,11 @@ and a boolean to check if the value has been set.
 
 SetDojoTimeWallJump sets DojoTimeWallJump field to given value.
 
+### HasDojoTimeWallJump
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeWallJump() bool`
+
+HasDojoTimeWallJump returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

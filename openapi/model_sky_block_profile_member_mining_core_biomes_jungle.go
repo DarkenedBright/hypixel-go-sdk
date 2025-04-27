@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberMiningCoreBiomesJungle type satisfies the MappedNullable interface at compile time
@@ -21,20 +19,16 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCoreBiomesJungle{}
 
 // SkyBlockProfileMemberMiningCoreBiomesJungle struct for SkyBlockProfileMemberMiningCoreBiomesJungle
 type SkyBlockProfileMemberMiningCoreBiomesJungle struct {
-	JungleTempleChestUses int64 `json:"jungle_temple_chest_uses"`
-	JungleTempleOpen      bool  `json:"jungle_temple_open"`
+	JungleTempleChestUses *int64 `json:"jungle_temple_chest_uses,omitempty"`
+	JungleTempleOpen      *bool  `json:"jungle_temple_open,omitempty"`
 }
-
-type _SkyBlockProfileMemberMiningCoreBiomesJungle SkyBlockProfileMemberMiningCoreBiomesJungle
 
 // NewSkyBlockProfileMemberMiningCoreBiomesJungle instantiates a new SkyBlockProfileMemberMiningCoreBiomesJungle object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberMiningCoreBiomesJungle(jungleTempleChestUses int64, jungleTempleOpen bool) *SkyBlockProfileMemberMiningCoreBiomesJungle {
+func NewSkyBlockProfileMemberMiningCoreBiomesJungle() *SkyBlockProfileMemberMiningCoreBiomesJungle {
 	this := SkyBlockProfileMemberMiningCoreBiomesJungle{}
-	this.JungleTempleChestUses = jungleTempleChestUses
-	this.JungleTempleOpen = jungleTempleOpen
 	return &this
 }
 
@@ -46,52 +40,68 @@ func NewSkyBlockProfileMemberMiningCoreBiomesJungleWithDefaults() *SkyBlockProfi
 	return &this
 }
 
-// GetJungleTempleChestUses returns the JungleTempleChestUses field value
+// GetJungleTempleChestUses returns the JungleTempleChestUses field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) GetJungleTempleChestUses() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.JungleTempleChestUses) {
 		var ret int64
 		return ret
 	}
-
-	return o.JungleTempleChestUses
+	return *o.JungleTempleChestUses
 }
 
-// GetJungleTempleChestUsesOk returns a tuple with the JungleTempleChestUses field value
+// GetJungleTempleChestUsesOk returns a tuple with the JungleTempleChestUses field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) GetJungleTempleChestUsesOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.JungleTempleChestUses) {
 		return nil, false
 	}
-	return &o.JungleTempleChestUses, true
+	return o.JungleTempleChestUses, true
 }
 
-// SetJungleTempleChestUses sets field value
+// HasJungleTempleChestUses returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) HasJungleTempleChestUses() bool {
+	if o != nil && !IsNil(o.JungleTempleChestUses) {
+		return true
+	}
+
+	return false
+}
+
+// SetJungleTempleChestUses gets a reference to the given int64 and assigns it to the JungleTempleChestUses field.
 func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) SetJungleTempleChestUses(v int64) {
-	o.JungleTempleChestUses = v
+	o.JungleTempleChestUses = &v
 }
 
-// GetJungleTempleOpen returns the JungleTempleOpen field value
+// GetJungleTempleOpen returns the JungleTempleOpen field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) GetJungleTempleOpen() bool {
-	if o == nil {
+	if o == nil || IsNil(o.JungleTempleOpen) {
 		var ret bool
 		return ret
 	}
-
-	return o.JungleTempleOpen
+	return *o.JungleTempleOpen
 }
 
-// GetJungleTempleOpenOk returns a tuple with the JungleTempleOpen field value
+// GetJungleTempleOpenOk returns a tuple with the JungleTempleOpen field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) GetJungleTempleOpenOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.JungleTempleOpen) {
 		return nil, false
 	}
-	return &o.JungleTempleOpen, true
+	return o.JungleTempleOpen, true
 }
 
-// SetJungleTempleOpen sets field value
+// HasJungleTempleOpen returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) HasJungleTempleOpen() bool {
+	if o != nil && !IsNil(o.JungleTempleOpen) {
+		return true
+	}
+
+	return false
+}
+
+// SetJungleTempleOpen gets a reference to the given bool and assigns it to the JungleTempleOpen field.
 func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) SetJungleTempleOpen(v bool) {
-	o.JungleTempleOpen = v
+	o.JungleTempleOpen = &v
 }
 
 func (o SkyBlockProfileMemberMiningCoreBiomesJungle) MarshalJSON() ([]byte, error) {
@@ -104,47 +114,13 @@ func (o SkyBlockProfileMemberMiningCoreBiomesJungle) MarshalJSON() ([]byte, erro
 
 func (o SkyBlockProfileMemberMiningCoreBiomesJungle) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["jungle_temple_chest_uses"] = o.JungleTempleChestUses
-	toSerialize["jungle_temple_open"] = o.JungleTempleOpen
+	if !IsNil(o.JungleTempleChestUses) {
+		toSerialize["jungle_temple_chest_uses"] = o.JungleTempleChestUses
+	}
+	if !IsNil(o.JungleTempleOpen) {
+		toSerialize["jungle_temple_open"] = o.JungleTempleOpen
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"jungle_temple_chest_uses",
-		"jungle_temple_open",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberMiningCoreBiomesJungle := _SkyBlockProfileMemberMiningCoreBiomesJungle{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberMiningCoreBiomesJungle)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberMiningCoreBiomesJungle(varSkyBlockProfileMemberMiningCoreBiomesJungle)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberMiningCoreBiomesJungle struct {

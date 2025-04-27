@@ -21,11 +21,11 @@ var _ MappedNullable = &SkyBlockProfileMemberObjectivesCatchLaseasFish{}
 
 // SkyBlockProfileMemberObjectivesCatchLaseasFish struct for SkyBlockProfileMemberObjectivesCatchLaseasFish
 type SkyBlockProfileMemberObjectivesCatchLaseasFish struct {
-	CompletedAt        int64                                                `json:"completed_at"`
-	FlyfishFished      int64                                                `json:"flyfish_fished"`
-	Progress           int64                                                `json:"progress"`
-	SkeletonFishFished int64                                                `json:"skeleton_fish_fished"`
-	Status             SkyBlockProfileMemberObjectivesCatchLaseasFishStatus `json:"status"`
+	CompletedAt        int64                                                             `json:"completed_at"`
+	FlyfishFished      int64                                                             `json:"flyfish_fished"`
+	Progress           int64                                                             `json:"progress"`
+	SkeletonFishFished *int64                                                            `json:"skeleton_fish_fished,omitempty"`
+	Status             SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus `json:"status"`
 }
 
 type _SkyBlockProfileMemberObjectivesCatchLaseasFish SkyBlockProfileMemberObjectivesCatchLaseasFish
@@ -34,12 +34,11 @@ type _SkyBlockProfileMemberObjectivesCatchLaseasFish SkyBlockProfileMemberObject
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberObjectivesCatchLaseasFish(completedAt int64, flyfishFished int64, progress int64, skeletonFishFished int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) *SkyBlockProfileMemberObjectivesCatchLaseasFish {
+func NewSkyBlockProfileMemberObjectivesCatchLaseasFish(completedAt int64, flyfishFished int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) *SkyBlockProfileMemberObjectivesCatchLaseasFish {
 	this := SkyBlockProfileMemberObjectivesCatchLaseasFish{}
 	this.CompletedAt = completedAt
 	this.FlyfishFished = flyfishFished
 	this.Progress = progress
-	this.SkeletonFishFished = skeletonFishFished
 	this.Status = status
 	return &this
 }
@@ -124,34 +123,42 @@ func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) SetProgress(v int64) {
 	o.Progress = v
 }
 
-// GetSkeletonFishFished returns the SkeletonFishFished field value
+// GetSkeletonFishFished returns the SkeletonFishFished field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetSkeletonFishFished() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.SkeletonFishFished) {
 		var ret int64
 		return ret
 	}
-
-	return o.SkeletonFishFished
+	return *o.SkeletonFishFished
 }
 
-// GetSkeletonFishFishedOk returns a tuple with the SkeletonFishFished field value
+// GetSkeletonFishFishedOk returns a tuple with the SkeletonFishFished field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetSkeletonFishFishedOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.SkeletonFishFished) {
 		return nil, false
 	}
-	return &o.SkeletonFishFished, true
+	return o.SkeletonFishFished, true
 }
 
-// SetSkeletonFishFished sets field value
+// HasSkeletonFishFished returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) HasSkeletonFishFished() bool {
+	if o != nil && !IsNil(o.SkeletonFishFished) {
+		return true
+	}
+
+	return false
+}
+
+// SetSkeletonFishFished gets a reference to the given int64 and assigns it to the SkeletonFishFished field.
 func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) SetSkeletonFishFished(v int64) {
-	o.SkeletonFishFished = v
+	o.SkeletonFishFished = &v
 }
 
 // GetStatus returns the Status field value
-func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus {
+func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus {
 	if o == nil {
-		var ret SkyBlockProfileMemberObjectivesCatchLaseasFishStatus
+		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus
 		return ret
 	}
 
@@ -160,7 +167,7 @@ func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetStatus() SkyBlockPro
 
 // GetStatusOk returns a tuple with the Status field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool) {
+func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -168,7 +175,7 @@ func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetStatusOk() (*SkyBloc
 }
 
 // SetStatus sets field value
-func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) {
+func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) {
 	o.Status = v
 }
 
@@ -185,7 +192,9 @@ func (o SkyBlockProfileMemberObjectivesCatchLaseasFish) ToMap() (map[string]inte
 	toSerialize["completed_at"] = o.CompletedAt
 	toSerialize["flyfish_fished"] = o.FlyfishFished
 	toSerialize["progress"] = o.Progress
-	toSerialize["skeleton_fish_fished"] = o.SkeletonFishFished
+	if !IsNil(o.SkeletonFishFished) {
+		toSerialize["skeleton_fish_fished"] = o.SkeletonFishFished
+	}
 	toSerialize["status"] = o.Status
 	return toSerialize, nil
 }
@@ -198,7 +207,6 @@ func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) UnmarshalJSON(data []by
 		"completed_at",
 		"flyfish_fished",
 		"progress",
-		"skeleton_fish_fished",
 		"status",
 	}
 

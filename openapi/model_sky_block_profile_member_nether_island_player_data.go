@@ -21,16 +21,17 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerData{}
 
 // SkyBlockProfileMemberNetherIslandPlayerData struct for SkyBlockProfileMemberNetherIslandPlayerData
 type SkyBlockProfileMemberNetherIslandPlayerData struct {
-	Abiphone             SkyBlockProfileMemberNetherIslandPlayerDataAbiphone                    `json:"abiphone"`
-	BarbariansReputation *float64                                                               `json:"barbarians_reputation,omitempty"`
-	Dojo                 *SkyBlockProfileMemberNetherIslandPlayerDataDojo                       `json:"dojo,omitempty"`
-	KuudraCompletedTiers SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers        `json:"kuudra_completed_tiers"`
-	KuudraPartyFinder    *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder          `json:"kuudra_party_finder,omitempty"`
-	LastMinibossesKilled []SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner `json:"last_minibosses_killed,omitempty"`
-	MagesReputation      *float64                                                               `json:"mages_reputation,omitempty"`
-	Matriarch            *SkyBlockProfileMemberNetherIslandPlayerMatriarch                      `json:"matriarch,omitempty"`
-	Quests               *SkyBlockProfileMemberNetherIslandPlayerQuests                         `json:"quests,omitempty"`
-	SelectedFaction      *SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction            `json:"selected_faction,omitempty"`
+	Abiphone             SkyBlockProfileMemberNetherIslandPlayerDataAbiphone              `json:"abiphone"`
+	BarbariansReputation *float64                                                         `json:"barbarians_reputation,omitempty"`
+	Dojo                 *SkyBlockProfileMemberNetherIslandPlayerDataDojo                 `json:"dojo,omitempty"`
+	KuudraCompletedTiers *SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers `json:"kuudra_completed_tiers,omitempty"`
+	KuudraPartyFinder    *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder    `json:"kuudra_party_finder,omitempty"`
+	LastMinibossesKilled []*string                                                        `json:"last_minibosses_killed,omitempty"`
+	MagesReputation      *float64                                                         `json:"mages_reputation,omitempty"`
+	Matriarch            *SkyBlockProfileMemberNetherIslandPlayerMatriarch                `json:"matriarch,omitempty"`
+	NpcPath              *SkyBlockProfileMemberNetherIslandPlayerNpcPath                  `json:"npc_path,omitempty"`
+	Quests               *SkyBlockProfileMemberNetherIslandPlayerQuests                   `json:"quests,omitempty"`
+	SelectedFaction      *SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction      `json:"selected_faction,omitempty"`
 }
 
 type _SkyBlockProfileMemberNetherIslandPlayerData SkyBlockProfileMemberNetherIslandPlayerData
@@ -39,10 +40,9 @@ type _SkyBlockProfileMemberNetherIslandPlayerData SkyBlockProfileMemberNetherIsl
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerData(abiphone SkyBlockProfileMemberNetherIslandPlayerDataAbiphone, kuudraCompletedTiers SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers) *SkyBlockProfileMemberNetherIslandPlayerData {
+func NewSkyBlockProfileMemberNetherIslandPlayerData(abiphone SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) *SkyBlockProfileMemberNetherIslandPlayerData {
 	this := SkyBlockProfileMemberNetherIslandPlayerData{}
 	this.Abiphone = abiphone
-	this.KuudraCompletedTiers = kuudraCompletedTiers
 	return &this
 }
 
@@ -142,28 +142,36 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerData) SetDojo(v SkyBlockProfileM
 	o.Dojo = &v
 }
 
-// GetKuudraCompletedTiers returns the KuudraCompletedTiers field value
+// GetKuudraCompletedTiers returns the KuudraCompletedTiers field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetKuudraCompletedTiers() SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers {
-	if o == nil {
+	if o == nil || IsNil(o.KuudraCompletedTiers) {
 		var ret SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers
 		return ret
 	}
-
-	return o.KuudraCompletedTiers
+	return *o.KuudraCompletedTiers
 }
 
-// GetKuudraCompletedTiersOk returns a tuple with the KuudraCompletedTiers field value
+// GetKuudraCompletedTiersOk returns a tuple with the KuudraCompletedTiers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetKuudraCompletedTiersOk() (*SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.KuudraCompletedTiers) {
 		return nil, false
 	}
-	return &o.KuudraCompletedTiers, true
+	return o.KuudraCompletedTiers, true
 }
 
-// SetKuudraCompletedTiers sets field value
+// HasKuudraCompletedTiers returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerData) HasKuudraCompletedTiers() bool {
+	if o != nil && !IsNil(o.KuudraCompletedTiers) {
+		return true
+	}
+
+	return false
+}
+
+// SetKuudraCompletedTiers gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers and assigns it to the KuudraCompletedTiers field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerData) SetKuudraCompletedTiers(v SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers) {
-	o.KuudraCompletedTiers = v
+	o.KuudraCompletedTiers = &v
 }
 
 // GetKuudraPartyFinder returns the KuudraPartyFinder field value if set, zero value otherwise.
@@ -199,9 +207,9 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerData) SetKuudraPartyFinder(v Sky
 }
 
 // GetLastMinibossesKilled returns the LastMinibossesKilled field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetLastMinibossesKilled() []SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner {
+func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetLastMinibossesKilled() []*string {
 	if o == nil || IsNil(o.LastMinibossesKilled) {
-		var ret []SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner
+		var ret []*string
 		return ret
 	}
 	return o.LastMinibossesKilled
@@ -209,7 +217,7 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetLastMinibossesKilled() 
 
 // GetLastMinibossesKilledOk returns a tuple with the LastMinibossesKilled field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetLastMinibossesKilledOk() ([]SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner, bool) {
+func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetLastMinibossesKilledOk() ([]*string, bool) {
 	if o == nil || IsNil(o.LastMinibossesKilled) {
 		return nil, false
 	}
@@ -225,8 +233,8 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerData) HasLastMinibossesKilled() 
 	return false
 }
 
-// SetLastMinibossesKilled gets a reference to the given []SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner and assigns it to the LastMinibossesKilled field.
-func (o *SkyBlockProfileMemberNetherIslandPlayerData) SetLastMinibossesKilled(v []SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner) {
+// SetLastMinibossesKilled gets a reference to the given []*string and assigns it to the LastMinibossesKilled field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerData) SetLastMinibossesKilled(v []*string) {
 	o.LastMinibossesKilled = v
 }
 
@@ -292,6 +300,38 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerData) HasMatriarch() bool {
 // SetMatriarch gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerMatriarch and assigns it to the Matriarch field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerData) SetMatriarch(v SkyBlockProfileMemberNetherIslandPlayerMatriarch) {
 	o.Matriarch = &v
+}
+
+// GetNpcPath returns the NpcPath field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetNpcPath() SkyBlockProfileMemberNetherIslandPlayerNpcPath {
+	if o == nil || IsNil(o.NpcPath) {
+		var ret SkyBlockProfileMemberNetherIslandPlayerNpcPath
+		return ret
+	}
+	return *o.NpcPath
+}
+
+// GetNpcPathOk returns a tuple with the NpcPath field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetNpcPathOk() (*SkyBlockProfileMemberNetherIslandPlayerNpcPath, bool) {
+	if o == nil || IsNil(o.NpcPath) {
+		return nil, false
+	}
+	return o.NpcPath, true
+}
+
+// HasNpcPath returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerData) HasNpcPath() bool {
+	if o != nil && !IsNil(o.NpcPath) {
+		return true
+	}
+
+	return false
+}
+
+// SetNpcPath gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerNpcPath and assigns it to the NpcPath field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerData) SetNpcPath(v SkyBlockProfileMemberNetherIslandPlayerNpcPath) {
+	o.NpcPath = &v
 }
 
 // GetQuests returns the Quests field value if set, zero value otherwise.
@@ -375,7 +415,9 @@ func (o SkyBlockProfileMemberNetherIslandPlayerData) ToMap() (map[string]interfa
 	if !IsNil(o.Dojo) {
 		toSerialize["dojo"] = o.Dojo
 	}
-	toSerialize["kuudra_completed_tiers"] = o.KuudraCompletedTiers
+	if !IsNil(o.KuudraCompletedTiers) {
+		toSerialize["kuudra_completed_tiers"] = o.KuudraCompletedTiers
+	}
 	if !IsNil(o.KuudraPartyFinder) {
 		toSerialize["kuudra_party_finder"] = o.KuudraPartyFinder
 	}
@@ -387,6 +429,9 @@ func (o SkyBlockProfileMemberNetherIslandPlayerData) ToMap() (map[string]interfa
 	}
 	if !IsNil(o.Matriarch) {
 		toSerialize["matriarch"] = o.Matriarch
+	}
+	if !IsNil(o.NpcPath) {
+		toSerialize["npc_path"] = o.NpcPath
 	}
 	if !IsNil(o.Quests) {
 		toSerialize["quests"] = o.Quests
@@ -403,7 +448,6 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerData) UnmarshalJSON(data []byte)
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"abiphone",
-		"kuudra_completed_tiers",
 	}
 
 	allProperties := make(map[string]interface{})

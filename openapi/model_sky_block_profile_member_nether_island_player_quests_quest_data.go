@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData type satisfies the MappedNullable interface at compile time
@@ -21,28 +19,21 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData{}
 
 // SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData struct for SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData
 type SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData struct {
-	Dojo           SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest            `json:"dojo"`
-	Fetch          SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest            `json:"fetch"`
-	Fishing        SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest            `json:"fishing"`
-	QuestList      []SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner `json:"quest_list"`
-	Rescue         SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest            `json:"rescue"`
-	WantedMiniBoss SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest            `json:"wanted_mini_boss"`
+	Boss           *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest `json:"boss,omitempty"`
+	Dojo           *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest `json:"dojo,omitempty"`
+	Fetch          *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest `json:"fetch,omitempty"`
+	Fishing        *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest `json:"fishing,omitempty"`
+	QuestList      []string                                                     `json:"quest_list,omitempty"`
+	Rescue         *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest `json:"rescue,omitempty"`
+	WantedMiniBoss *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest `json:"wanted_mini_boss,omitempty"`
 }
-
-type _SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData
 
 // NewSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData(dojo SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, fetch SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, fishing SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, questList []SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner, rescue SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, wantedMiniBoss SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest) *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData {
+func NewSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData() *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData {
 	this := SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData{}
-	this.Dojo = dojo
-	this.Fetch = fetch
-	this.Fishing = fishing
-	this.QuestList = questList
-	this.Rescue = rescue
-	this.WantedMiniBoss = wantedMiniBoss
 	return &this
 }
 
@@ -54,148 +45,228 @@ func NewSkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataWithDefaults() *Sk
 	return &this
 }
 
-// GetDojo returns the Dojo field value
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetDojo() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest {
-	if o == nil {
+// GetBoss returns the Boss field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetBoss() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest {
+	if o == nil || IsNil(o.Boss) {
 		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest
 		return ret
 	}
-
-	return o.Dojo
+	return *o.Boss
 }
 
-// GetDojoOk returns a tuple with the Dojo field value
+// GetBossOk returns a tuple with the Boss field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetBossOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, bool) {
+	if o == nil || IsNil(o.Boss) {
+		return nil, false
+	}
+	return o.Boss, true
+}
+
+// HasBoss returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasBoss() bool {
+	if o != nil && !IsNil(o.Boss) {
+		return true
+	}
+
+	return false
+}
+
+// SetBoss gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest and assigns it to the Boss field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetBoss(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest) {
+	o.Boss = &v
+}
+
+// GetDojo returns the Dojo field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetDojo() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest {
+	if o == nil || IsNil(o.Dojo) {
+		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest
+		return ret
+	}
+	return *o.Dojo
+}
+
+// GetDojoOk returns a tuple with the Dojo field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetDojoOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Dojo) {
 		return nil, false
 	}
-	return &o.Dojo, true
+	return o.Dojo, true
 }
 
-// SetDojo sets field value
+// HasDojo returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasDojo() bool {
+	if o != nil && !IsNil(o.Dojo) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojo gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest and assigns it to the Dojo field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetDojo(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest) {
-	o.Dojo = v
+	o.Dojo = &v
 }
 
-// GetFetch returns the Fetch field value
+// GetFetch returns the Fetch field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetFetch() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest {
-	if o == nil {
+	if o == nil || IsNil(o.Fetch) {
 		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest
 		return ret
 	}
-
-	return o.Fetch
+	return *o.Fetch
 }
 
-// GetFetchOk returns a tuple with the Fetch field value
+// GetFetchOk returns a tuple with the Fetch field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetFetchOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Fetch) {
 		return nil, false
 	}
-	return &o.Fetch, true
+	return o.Fetch, true
 }
 
-// SetFetch sets field value
+// HasFetch returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasFetch() bool {
+	if o != nil && !IsNil(o.Fetch) {
+		return true
+	}
+
+	return false
+}
+
+// SetFetch gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest and assigns it to the Fetch field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetFetch(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest) {
-	o.Fetch = v
+	o.Fetch = &v
 }
 
-// GetFishing returns the Fishing field value
+// GetFishing returns the Fishing field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetFishing() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest {
-	if o == nil {
+	if o == nil || IsNil(o.Fishing) {
 		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest
 		return ret
 	}
-
-	return o.Fishing
+	return *o.Fishing
 }
 
-// GetFishingOk returns a tuple with the Fishing field value
+// GetFishingOk returns a tuple with the Fishing field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetFishingOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Fishing) {
 		return nil, false
 	}
-	return &o.Fishing, true
+	return o.Fishing, true
 }
 
-// SetFishing sets field value
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetFishing(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest) {
-	o.Fishing = v
-}
-
-// GetQuestList returns the QuestList field value
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetQuestList() []SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner {
-	if o == nil {
-		var ret []SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner
-		return ret
+// HasFishing returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasFishing() bool {
+	if o != nil && !IsNil(o.Fishing) {
+		return true
 	}
 
+	return false
+}
+
+// SetFishing gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest and assigns it to the Fishing field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetFishing(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest) {
+	o.Fishing = &v
+}
+
+// GetQuestList returns the QuestList field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetQuestList() []string {
+	if o == nil || IsNil(o.QuestList) {
+		var ret []string
+		return ret
+	}
 	return o.QuestList
 }
 
-// GetQuestListOk returns a tuple with the QuestList field value
+// GetQuestListOk returns a tuple with the QuestList field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetQuestListOk() ([]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner, bool) {
-	if o == nil {
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetQuestListOk() ([]string, bool) {
+	if o == nil || IsNil(o.QuestList) {
 		return nil, false
 	}
 	return o.QuestList, true
 }
 
-// SetQuestList sets field value
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetQuestList(v []SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner) {
+// HasQuestList returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasQuestList() bool {
+	if o != nil && !IsNil(o.QuestList) {
+		return true
+	}
+
+	return false
+}
+
+// SetQuestList gets a reference to the given []string and assigns it to the QuestList field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetQuestList(v []string) {
 	o.QuestList = v
 }
 
-// GetRescue returns the Rescue field value
+// GetRescue returns the Rescue field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetRescue() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest {
-	if o == nil {
+	if o == nil || IsNil(o.Rescue) {
 		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest
 		return ret
 	}
-
-	return o.Rescue
+	return *o.Rescue
 }
 
-// GetRescueOk returns a tuple with the Rescue field value
+// GetRescueOk returns a tuple with the Rescue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetRescueOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Rescue) {
 		return nil, false
 	}
-	return &o.Rescue, true
+	return o.Rescue, true
 }
 
-// SetRescue sets field value
+// HasRescue returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasRescue() bool {
+	if o != nil && !IsNil(o.Rescue) {
+		return true
+	}
+
+	return false
+}
+
+// SetRescue gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest and assigns it to the Rescue field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetRescue(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest) {
-	o.Rescue = v
+	o.Rescue = &v
 }
 
-// GetWantedMiniBoss returns the WantedMiniBoss field value
+// GetWantedMiniBoss returns the WantedMiniBoss field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetWantedMiniBoss() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest {
-	if o == nil {
+	if o == nil || IsNil(o.WantedMiniBoss) {
 		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest
 		return ret
 	}
-
-	return o.WantedMiniBoss
+	return *o.WantedMiniBoss
 }
 
-// GetWantedMiniBossOk returns a tuple with the WantedMiniBoss field value
+// GetWantedMiniBossOk returns a tuple with the WantedMiniBoss field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetWantedMiniBossOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.WantedMiniBoss) {
 		return nil, false
 	}
-	return &o.WantedMiniBoss, true
+	return o.WantedMiniBoss, true
 }
 
-// SetWantedMiniBoss sets field value
+// HasWantedMiniBoss returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasWantedMiniBoss() bool {
+	if o != nil && !IsNil(o.WantedMiniBoss) {
+		return true
+	}
+
+	return false
+}
+
+// SetWantedMiniBoss gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest and assigns it to the WantedMiniBoss field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetWantedMiniBoss(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest) {
-	o.WantedMiniBoss = v
+	o.WantedMiniBoss = &v
 }
 
 func (o SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) MarshalJSON() ([]byte, error) {
@@ -208,55 +279,28 @@ func (o SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) MarshalJSON() ([
 
 func (o SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["dojo"] = o.Dojo
-	toSerialize["fetch"] = o.Fetch
-	toSerialize["fishing"] = o.Fishing
-	toSerialize["quest_list"] = o.QuestList
-	toSerialize["rescue"] = o.Rescue
-	toSerialize["wanted_mini_boss"] = o.WantedMiniBoss
+	if !IsNil(o.Boss) {
+		toSerialize["boss"] = o.Boss
+	}
+	if !IsNil(o.Dojo) {
+		toSerialize["dojo"] = o.Dojo
+	}
+	if !IsNil(o.Fetch) {
+		toSerialize["fetch"] = o.Fetch
+	}
+	if !IsNil(o.Fishing) {
+		toSerialize["fishing"] = o.Fishing
+	}
+	if !IsNil(o.QuestList) {
+		toSerialize["quest_list"] = o.QuestList
+	}
+	if !IsNil(o.Rescue) {
+		toSerialize["rescue"] = o.Rescue
+	}
+	if !IsNil(o.WantedMiniBoss) {
+		toSerialize["wanted_mini_boss"] = o.WantedMiniBoss
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"dojo",
-		"fetch",
-		"fishing",
-		"quest_list",
-		"rescue",
-		"wanted_mini_boss",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData := _SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData(varSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData struct {

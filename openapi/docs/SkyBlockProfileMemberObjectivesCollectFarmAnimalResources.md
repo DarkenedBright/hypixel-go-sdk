@@ -9,13 +9,13 @@ Name | Type | Description | Notes
 **RAW_CHICKEN** | Pointer to **bool** |  | [optional] 
 **CompletedAt** | **int64** |  | 
 **Progress** | **int64** |  | 
-**Status** | [**SkyBlockProfileMemberObjectivesCatchLaseasFishStatus**](SkyBlockProfileMemberObjectivesCatchLaseasFishStatus.md) |  | 
+**Status** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus.md) |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberObjectivesCollectFarmAnimalResources
 
-`func NewSkyBlockProfileMemberObjectivesCollectFarmAnimalResources(completedAt int64, progress int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, ) *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources`
+`func NewSkyBlockProfileMemberObjectivesCollectFarmAnimalResources(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, ) *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources`
 
 NewSkyBlockProfileMemberObjectivesCollectFarmAnimalResources instantiates a new SkyBlockProfileMemberObjectivesCollectFarmAnimalResources object
 This constructor will assign default values to properties that have it defined,
@@ -147,20 +147,20 @@ SetProgress sets Progress field to given value.
 
 ### GetStatus
 
-`func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus`
+`func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool)`
+`func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus)`
+`func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus)`
 
 SetStatus sets Status field to given value.
 

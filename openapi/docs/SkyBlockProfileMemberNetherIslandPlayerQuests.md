@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **AranyaQuest** | **map[string]interface{}** |  | 
 **CavityRarity** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerQuestsCavityRarity**](SkyBlockProfileMemberNetherIslandPlayerQuestsCavityRarity.md) |  | [optional] 
 **ChickenQuest** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest.md) |  | 
-**ChickenQuestHandedIn** | **int64** |  | 
+**ChickenQuestHandedIn** | Pointer to **int64** |  | [optional] 
 **DuelTrainingQuest** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsDuelTrainingQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsDuelTrainingQuest.md) |  | 
 **EdelisQuest** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest.md) |  | 
 **FishedWetNapkin** | Pointer to **bool** |  | [optional] 
@@ -21,16 +21,16 @@ Name | Type | Description | Notes
 **KuudraLoremaster** | Pointer to **bool** |  | [optional] 
 **LastBelieverBlessing** | Pointer to **int64** |  | [optional] 
 **LastKuudraRelic** | Pointer to **int64** |  | [optional] 
-**LastReset** | **int64** |  | 
+**LastReset** | Pointer to **int64** |  | [optional] 
 **LastVampireBlood** | Pointer to **int64** |  | [optional] 
 **MinibossDaily** | **map[string]interface{}** |  | 
-**MinibossData** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData**](SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData.md) |  | 
+**MinibossData** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData**](SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData.md) |  | [optional] 
 **MollimQuest** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest.md) |  | 
 **PabloQuest** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest.md) |  | 
-**PaidBruuh** | **bool** |  | 
+**PaidBruuh** | Pointer to **bool** |  | [optional] 
 **PomtairQuest** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsPomtairQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsPomtairQuest.md) |  | 
 **QuestData** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData.md) |  | 
-**QuestRewards** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards.md) |  | 
+**QuestRewards** | [**map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue.md) |  | 
 **Rulenor** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsRulenor**](SkyBlockProfileMemberNetherIslandPlayerQuestsRulenor.md) |  | 
 **SirihQuest** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsSirihQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsSirihQuest.md) |  | 
 **SuusQuest** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest.md) |  | 
@@ -41,7 +41,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerQuests
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerQuests(alchemistQuest SkyBlockProfileMemberNetherIslandPlayerQuestsAlchemistQuest, aranyaQuest map[string]interface{}, chickenQuest SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest, chickenQuestHandedIn int64, duelTrainingQuest SkyBlockProfileMemberNetherIslandPlayerQuestsDuelTrainingQuest, edelisQuest SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest, kuudaBossDaily map[string]interface{}, lastReset int64, minibossDaily map[string]interface{}, minibossData SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData, mollimQuest SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest, pabloQuest SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest, paidBruuh bool, pomtairQuest SkyBlockProfileMemberNetherIslandPlayerQuestsPomtairQuest, questData SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData, questRewards SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards, rulenor SkyBlockProfileMemberNetherIslandPlayerQuestsRulenor, sirihQuest SkyBlockProfileMemberNetherIslandPlayerQuestsSirihQuest, suusQuest SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest, ) *SkyBlockProfileMemberNetherIslandPlayerQuests`
+`func NewSkyBlockProfileMemberNetherIslandPlayerQuests(alchemistQuest SkyBlockProfileMemberNetherIslandPlayerQuestsAlchemistQuest, aranyaQuest map[string]interface{}, chickenQuest SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest, duelTrainingQuest SkyBlockProfileMemberNetherIslandPlayerQuestsDuelTrainingQuest, edelisQuest SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest, kuudaBossDaily map[string]interface{}, minibossDaily map[string]interface{}, mollimQuest SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest, pabloQuest SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest, pomtairQuest SkyBlockProfileMemberNetherIslandPlayerQuestsPomtairQuest, questData SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData, questRewards map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue, rulenor SkyBlockProfileMemberNetherIslandPlayerQuestsRulenor, sirihQuest SkyBlockProfileMemberNetherIslandPlayerQuestsSirihQuest, suusQuest SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest, ) *SkyBlockProfileMemberNetherIslandPlayerQuests`
 
 NewSkyBlockProfileMemberNetherIslandPlayerQuests instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuests object
 This constructor will assign default values to properties that have it defined,
@@ -160,6 +160,11 @@ and a boolean to check if the value has been set.
 
 SetChickenQuestHandedIn sets ChickenQuestHandedIn field to given value.
 
+### HasChickenQuestHandedIn
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) HasChickenQuestHandedIn() bool`
+
+HasChickenQuestHandedIn returns a boolean if a field has been set.
 
 ### GetDuelTrainingQuest
 
@@ -465,6 +470,11 @@ and a boolean to check if the value has been set.
 
 SetLastReset sets LastReset field to given value.
 
+### HasLastReset
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) HasLastReset() bool`
+
+HasLastReset returns a boolean if a field has been set.
 
 ### GetLastVampireBlood
 
@@ -530,6 +540,11 @@ and a boolean to check if the value has been set.
 
 SetMinibossData sets MinibossData field to given value.
 
+### HasMinibossData
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) HasMinibossData() bool`
+
+HasMinibossData returns a boolean if a field has been set.
 
 ### GetMollimQuest
 
@@ -590,6 +605,11 @@ and a boolean to check if the value has been set.
 
 SetPaidBruuh sets PaidBruuh field to given value.
 
+### HasPaidBruuh
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) HasPaidBruuh() bool`
+
+HasPaidBruuh returns a boolean if a field has been set.
 
 ### GetPomtairQuest
 
@@ -633,20 +653,20 @@ SetQuestData sets QuestData field to given value.
 
 ### GetQuestRewards
 
-`func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetQuestRewards() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards`
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetQuestRewards() map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue`
 
 GetQuestRewards returns the QuestRewards field if non-nil, zero value otherwise.
 
 ### GetQuestRewardsOk
 
-`func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetQuestRewardsOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards, bool)`
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetQuestRewardsOk() (*map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue, bool)`
 
 GetQuestRewardsOk returns a tuple with the QuestRewards field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQuestRewards
 
-`func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetQuestRewards(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards)`
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetQuestRewards(v map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue)`
 
 SetQuestRewards sets QuestRewards field to given value.
 

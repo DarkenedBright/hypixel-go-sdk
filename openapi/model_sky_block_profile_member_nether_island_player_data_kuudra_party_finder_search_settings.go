@@ -19,7 +19,10 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFi
 
 // SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings struct for SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings
 type SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings struct {
-	Tier *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilderTier `json:"tier,omitempty"`
+	CombatLevel *string                                                                         `json:"combat_level,omitempty"`
+	Search      *string                                                                         `json:"search,omitempty"`
+	Sort        *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettingsSort `json:"sort,omitempty"`
+	Tier        *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilderTier   `json:"tier,omitempty"`
 }
 
 // NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings instantiates a new SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings object
@@ -37,6 +40,102 @@ func NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettin
 func NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettingsWithDefaults() *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings {
 	this := SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings{}
 	return &this
+}
+
+// GetCombatLevel returns the CombatLevel field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) GetCombatLevel() string {
+	if o == nil || IsNil(o.CombatLevel) {
+		var ret string
+		return ret
+	}
+	return *o.CombatLevel
+}
+
+// GetCombatLevelOk returns a tuple with the CombatLevel field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) GetCombatLevelOk() (*string, bool) {
+	if o == nil || IsNil(o.CombatLevel) {
+		return nil, false
+	}
+	return o.CombatLevel, true
+}
+
+// HasCombatLevel returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) HasCombatLevel() bool {
+	if o != nil && !IsNil(o.CombatLevel) {
+		return true
+	}
+
+	return false
+}
+
+// SetCombatLevel gets a reference to the given string and assigns it to the CombatLevel field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) SetCombatLevel(v string) {
+	o.CombatLevel = &v
+}
+
+// GetSearch returns the Search field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) GetSearch() string {
+	if o == nil || IsNil(o.Search) {
+		var ret string
+		return ret
+	}
+	return *o.Search
+}
+
+// GetSearchOk returns a tuple with the Search field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) GetSearchOk() (*string, bool) {
+	if o == nil || IsNil(o.Search) {
+		return nil, false
+	}
+	return o.Search, true
+}
+
+// HasSearch returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) HasSearch() bool {
+	if o != nil && !IsNil(o.Search) {
+		return true
+	}
+
+	return false
+}
+
+// SetSearch gets a reference to the given string and assigns it to the Search field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) SetSearch(v string) {
+	o.Search = &v
+}
+
+// GetSort returns the Sort field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) GetSort() SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettingsSort {
+	if o == nil || IsNil(o.Sort) {
+		var ret SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettingsSort
+		return ret
+	}
+	return *o.Sort
+}
+
+// GetSortOk returns a tuple with the Sort field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) GetSortOk() (*SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettingsSort, bool) {
+	if o == nil || IsNil(o.Sort) {
+		return nil, false
+	}
+	return o.Sort, true
+}
+
+// HasSort returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) HasSort() bool {
+	if o != nil && !IsNil(o.Sort) {
+		return true
+	}
+
+	return false
+}
+
+// SetSort gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettingsSort and assigns it to the Sort field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) SetSort(v SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettingsSort) {
+	o.Sort = &v
 }
 
 // GetTier returns the Tier field value if set, zero value otherwise.
@@ -81,6 +180,15 @@ func (o SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettin
 
 func (o SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.CombatLevel) {
+		toSerialize["combat_level"] = o.CombatLevel
+	}
+	if !IsNil(o.Search) {
+		toSerialize["search"] = o.Search
+	}
+	if !IsNil(o.Sort) {
+		toSerialize["sort"] = o.Sort
+	}
 	if !IsNil(o.Tier) {
 		toSerialize["tier"] = o.Tier
 	}

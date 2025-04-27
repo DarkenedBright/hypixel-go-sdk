@@ -21,7 +21,7 @@ var _ MappedNullable = &SkyBlockProfileMemberPetsData{}
 
 // SkyBlockProfileMemberPetsData struct for SkyBlockProfileMemberPetsData
 type SkyBlockProfileMemberPetsData struct {
-	Autopet SkyBlockProfileMemberPetsDataAutopet  `json:"autopet"`
+	Autopet *SkyBlockProfileMemberPetsDataAutopet `json:"autopet,omitempty"`
 	PetCare *SkyBlockProfileMemberPetsDataPetCare `json:"pet_care,omitempty"`
 	Pets    []SkyBlockProfileMemberPetsDataPet    `json:"pets"`
 }
@@ -32,9 +32,8 @@ type _SkyBlockProfileMemberPetsData SkyBlockProfileMemberPetsData
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberPetsData(autopet SkyBlockProfileMemberPetsDataAutopet, pets []SkyBlockProfileMemberPetsDataPet) *SkyBlockProfileMemberPetsData {
+func NewSkyBlockProfileMemberPetsData(pets []SkyBlockProfileMemberPetsDataPet) *SkyBlockProfileMemberPetsData {
 	this := SkyBlockProfileMemberPetsData{}
-	this.Autopet = autopet
 	this.Pets = pets
 	return &this
 }
@@ -47,28 +46,36 @@ func NewSkyBlockProfileMemberPetsDataWithDefaults() *SkyBlockProfileMemberPetsDa
 	return &this
 }
 
-// GetAutopet returns the Autopet field value
+// GetAutopet returns the Autopet field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberPetsData) GetAutopet() SkyBlockProfileMemberPetsDataAutopet {
-	if o == nil {
+	if o == nil || IsNil(o.Autopet) {
 		var ret SkyBlockProfileMemberPetsDataAutopet
 		return ret
 	}
-
-	return o.Autopet
+	return *o.Autopet
 }
 
-// GetAutopetOk returns a tuple with the Autopet field value
+// GetAutopetOk returns a tuple with the Autopet field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberPetsData) GetAutopetOk() (*SkyBlockProfileMemberPetsDataAutopet, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Autopet) {
 		return nil, false
 	}
-	return &o.Autopet, true
+	return o.Autopet, true
 }
 
-// SetAutopet sets field value
+// HasAutopet returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsData) HasAutopet() bool {
+	if o != nil && !IsNil(o.Autopet) {
+		return true
+	}
+
+	return false
+}
+
+// SetAutopet gets a reference to the given SkyBlockProfileMemberPetsDataAutopet and assigns it to the Autopet field.
 func (o *SkyBlockProfileMemberPetsData) SetAutopet(v SkyBlockProfileMemberPetsDataAutopet) {
-	o.Autopet = v
+	o.Autopet = &v
 }
 
 // GetPetCare returns the PetCare field value if set, zero value otherwise.
@@ -137,7 +144,9 @@ func (o SkyBlockProfileMemberPetsData) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileMemberPetsData) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["autopet"] = o.Autopet
+	if !IsNil(o.Autopet) {
+		toSerialize["autopet"] = o.Autopet
+	}
 	if !IsNil(o.PetCare) {
 		toSerialize["pet_care"] = o.PetCare
 	}
@@ -150,7 +159,6 @@ func (o *SkyBlockProfileMemberPetsData) UnmarshalJSON(data []byte) (err error) {
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
-		"autopet",
 		"pets",
 	}
 

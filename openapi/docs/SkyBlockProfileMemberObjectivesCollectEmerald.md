@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **EMERALD** | Pointer to **bool** |  | [optional] 
 **CompletedAt** | **int64** |  | 
 **Progress** | **int64** |  | 
-**Status** | [**SkyBlockProfileMemberObjectivesCatchLaseasFishStatus**](SkyBlockProfileMemberObjectivesCatchLaseasFishStatus.md) |  | 
+**Status** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus.md) |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberObjectivesCollectEmerald
 
-`func NewSkyBlockProfileMemberObjectivesCollectEmerald(completedAt int64, progress int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, ) *SkyBlockProfileMemberObjectivesCollectEmerald`
+`func NewSkyBlockProfileMemberObjectivesCollectEmerald(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, ) *SkyBlockProfileMemberObjectivesCollectEmerald`
 
 NewSkyBlockProfileMemberObjectivesCollectEmerald instantiates a new SkyBlockProfileMemberObjectivesCollectEmerald object
 This constructor will assign default values to properties that have it defined,
@@ -95,20 +95,20 @@ SetProgress sets Progress field to given value.
 
 ### GetStatus
 
-`func (o *SkyBlockProfileMemberObjectivesCollectEmerald) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus`
+`func (o *SkyBlockProfileMemberObjectivesCollectEmerald) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *SkyBlockProfileMemberObjectivesCollectEmerald) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool)`
+`func (o *SkyBlockProfileMemberObjectivesCollectEmerald) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *SkyBlockProfileMemberObjectivesCollectEmerald) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus)`
+`func (o *SkyBlockProfileMemberObjectivesCollectEmerald) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus)`
 
 SetStatus sets Status field to given value.
 

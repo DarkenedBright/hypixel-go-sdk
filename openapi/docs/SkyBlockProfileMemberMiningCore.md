@@ -16,29 +16,32 @@ Name | Type | Description | Notes
 **DailyOresMinedGemstone** | Pointer to **int64** |  | [optional] 
 **DailyOresMinedGlacite** | Pointer to **int64** |  | [optional] 
 **DailyOresMinedMithrilOre** | Pointer to **int64** |  | [optional] 
-**Experience** | **float64** |  | 
+**Experience** | Pointer to **float64** |  | [optional] 
 **GreaterMinesLastAccess** | Pointer to **int64** |  | [optional] 
+**HotmMigratorTreeResetSendMessage** | Pointer to **bool** |  | [optional] 
 **LastReset** | Pointer to **int64** |  | [optional] 
 **Nodes** | [**SkyBlockProfileMemberMiningCoreNodes**](SkyBlockProfileMemberMiningCoreNodes.md) |  | 
 **PowderGemstone** | Pointer to **int64** |  | [optional] 
 **PowderGemstoneTotal** | Pointer to **int64** |  | [optional] 
 **PowderGlacite** | Pointer to **int64** |  | [optional] 
 **PowderGlaciteTotal** | Pointer to **int64** |  | [optional] 
-**PowderMithril** | **int64** |  | 
-**PowderMithrilTotal** | **int64** |  | 
+**PowderMithril** | Pointer to **int64** |  | [optional] 
+**PowderMithrilTotal** | Pointer to **int64** |  | [optional] 
 **PowderSpentGemstone** | Pointer to **int64** |  | [optional] 
 **PowderSpentGlacite** | Pointer to **int64** |  | [optional] 
 **PowderSpentMithril** | Pointer to **int64** |  | [optional] 
-**ReceivedFreeTier** | **bool** |  | 
-**RetroactiveTier2Token** | **bool** |  | 
+**ReceivedFreeTier** | Pointer to **bool** |  | [optional] 
+**RetroactiveTier2Token** | Pointer to **bool** |  | [optional] 
 **SelectedPickaxeAbility** | Pointer to [**SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility**](SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility.md) |  | [optional] 
-**TokensSpent** | **int64** |  | 
+**StashIfFullNotification** | Pointer to **bool** |  | [optional] 
+**Tokens** | Pointer to **int64** |  | [optional] 
+**TokensSpent** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberMiningCore
 
-`func NewSkyBlockProfileMemberMiningCore(experience float64, nodes SkyBlockProfileMemberMiningCoreNodes, powderMithril int64, powderMithrilTotal int64, receivedFreeTier bool, retroactiveTier2Token bool, tokensSpent int64, ) *SkyBlockProfileMemberMiningCore`
+`func NewSkyBlockProfileMemberMiningCore(nodes SkyBlockProfileMemberMiningCoreNodes, ) *SkyBlockProfileMemberMiningCore`
 
 NewSkyBlockProfileMemberMiningCore instantiates a new SkyBlockProfileMemberMiningCore object
 This constructor will assign default values to properties that have it defined,
@@ -372,6 +375,11 @@ and a boolean to check if the value has been set.
 
 SetExperience sets Experience field to given value.
 
+### HasExperience
+
+`func (o *SkyBlockProfileMemberMiningCore) HasExperience() bool`
+
+HasExperience returns a boolean if a field has been set.
 
 ### GetGreaterMinesLastAccess
 
@@ -397,6 +405,31 @@ SetGreaterMinesLastAccess sets GreaterMinesLastAccess field to given value.
 `func (o *SkyBlockProfileMemberMiningCore) HasGreaterMinesLastAccess() bool`
 
 HasGreaterMinesLastAccess returns a boolean if a field has been set.
+
+### GetHotmMigratorTreeResetSendMessage
+
+`func (o *SkyBlockProfileMemberMiningCore) GetHotmMigratorTreeResetSendMessage() bool`
+
+GetHotmMigratorTreeResetSendMessage returns the HotmMigratorTreeResetSendMessage field if non-nil, zero value otherwise.
+
+### GetHotmMigratorTreeResetSendMessageOk
+
+`func (o *SkyBlockProfileMemberMiningCore) GetHotmMigratorTreeResetSendMessageOk() (*bool, bool)`
+
+GetHotmMigratorTreeResetSendMessageOk returns a tuple with the HotmMigratorTreeResetSendMessage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHotmMigratorTreeResetSendMessage
+
+`func (o *SkyBlockProfileMemberMiningCore) SetHotmMigratorTreeResetSendMessage(v bool)`
+
+SetHotmMigratorTreeResetSendMessage sets HotmMigratorTreeResetSendMessage field to given value.
+
+### HasHotmMigratorTreeResetSendMessage
+
+`func (o *SkyBlockProfileMemberMiningCore) HasHotmMigratorTreeResetSendMessage() bool`
+
+HasHotmMigratorTreeResetSendMessage returns a boolean if a field has been set.
 
 ### GetLastReset
 
@@ -562,6 +595,11 @@ and a boolean to check if the value has been set.
 
 SetPowderMithril sets PowderMithril field to given value.
 
+### HasPowderMithril
+
+`func (o *SkyBlockProfileMemberMiningCore) HasPowderMithril() bool`
+
+HasPowderMithril returns a boolean if a field has been set.
 
 ### GetPowderMithrilTotal
 
@@ -582,6 +620,11 @@ and a boolean to check if the value has been set.
 
 SetPowderMithrilTotal sets PowderMithrilTotal field to given value.
 
+### HasPowderMithrilTotal
+
+`func (o *SkyBlockProfileMemberMiningCore) HasPowderMithrilTotal() bool`
+
+HasPowderMithrilTotal returns a boolean if a field has been set.
 
 ### GetPowderSpentGemstone
 
@@ -677,6 +720,11 @@ and a boolean to check if the value has been set.
 
 SetReceivedFreeTier sets ReceivedFreeTier field to given value.
 
+### HasReceivedFreeTier
+
+`func (o *SkyBlockProfileMemberMiningCore) HasReceivedFreeTier() bool`
+
+HasReceivedFreeTier returns a boolean if a field has been set.
 
 ### GetRetroactiveTier2Token
 
@@ -697,6 +745,11 @@ and a boolean to check if the value has been set.
 
 SetRetroactiveTier2Token sets RetroactiveTier2Token field to given value.
 
+### HasRetroactiveTier2Token
+
+`func (o *SkyBlockProfileMemberMiningCore) HasRetroactiveTier2Token() bool`
+
+HasRetroactiveTier2Token returns a boolean if a field has been set.
 
 ### GetSelectedPickaxeAbility
 
@@ -723,6 +776,56 @@ SetSelectedPickaxeAbility sets SelectedPickaxeAbility field to given value.
 
 HasSelectedPickaxeAbility returns a boolean if a field has been set.
 
+### GetStashIfFullNotification
+
+`func (o *SkyBlockProfileMemberMiningCore) GetStashIfFullNotification() bool`
+
+GetStashIfFullNotification returns the StashIfFullNotification field if non-nil, zero value otherwise.
+
+### GetStashIfFullNotificationOk
+
+`func (o *SkyBlockProfileMemberMiningCore) GetStashIfFullNotificationOk() (*bool, bool)`
+
+GetStashIfFullNotificationOk returns a tuple with the StashIfFullNotification field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStashIfFullNotification
+
+`func (o *SkyBlockProfileMemberMiningCore) SetStashIfFullNotification(v bool)`
+
+SetStashIfFullNotification sets StashIfFullNotification field to given value.
+
+### HasStashIfFullNotification
+
+`func (o *SkyBlockProfileMemberMiningCore) HasStashIfFullNotification() bool`
+
+HasStashIfFullNotification returns a boolean if a field has been set.
+
+### GetTokens
+
+`func (o *SkyBlockProfileMemberMiningCore) GetTokens() int64`
+
+GetTokens returns the Tokens field if non-nil, zero value otherwise.
+
+### GetTokensOk
+
+`func (o *SkyBlockProfileMemberMiningCore) GetTokensOk() (*int64, bool)`
+
+GetTokensOk returns a tuple with the Tokens field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTokens
+
+`func (o *SkyBlockProfileMemberMiningCore) SetTokens(v int64)`
+
+SetTokens sets Tokens field to given value.
+
+### HasTokens
+
+`func (o *SkyBlockProfileMemberMiningCore) HasTokens() bool`
+
+HasTokens returns a boolean if a field has been set.
+
 ### GetTokensSpent
 
 `func (o *SkyBlockProfileMemberMiningCore) GetTokensSpent() int64`
@@ -742,6 +845,11 @@ and a boolean to check if the value has been set.
 
 SetTokensSpent sets TokensSpent field to given value.
 
+### HasTokensSpent
+
+`func (o *SkyBlockProfileMemberMiningCore) HasTokensSpent() bool`
+
+HasTokensSpent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

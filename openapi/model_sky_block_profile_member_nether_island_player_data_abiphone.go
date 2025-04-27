@@ -21,12 +21,12 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerDataAbiphone{}
 
 // SkyBlockProfileMemberNetherIslandPlayerDataAbiphone struct for SkyBlockProfileMemberNetherIslandPlayerDataAbiphone
 type SkyBlockProfileMemberNetherIslandPlayerDataAbiphone struct {
-	ActiveContacts                       []SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner `json:"active_contacts"`
+	ActiveContacts                       []SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner `json:"active_contacts,omitempty"`
 	ContactData                          SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactData           `json:"contact_data"`
-	Games                                map[string]interface{}                                                   `json:"games"`
+	Games                                map[string]interface{}                                                   `json:"games,omitempty"`
 	HasUsedSiriusPersonalPhoneNumberItem *bool                                                                    `json:"has_used_sirius_personal_phone_number_item,omitempty"`
 	LastDyeCalledYear                    *int64                                                                   `json:"last_dye_called_year,omitempty"`
-	OperatorChip                         SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip          `json:"operator_chip"`
+	OperatorChip                         *SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip         `json:"operator_chip,omitempty"`
 	SelectedRingtone                     *SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone     `json:"selected_ringtone,omitempty"`
 	SelectedSort                         *SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedSort         `json:"selected_sort,omitempty"`
 	TrioContactAddons                    *int64                                                                   `json:"trio_contact_addons,omitempty"`
@@ -38,12 +38,9 @@ type _SkyBlockProfileMemberNetherIslandPlayerDataAbiphone SkyBlockProfileMemberN
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerDataAbiphone(activeContacts []SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner, contactData SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactData, games map[string]interface{}, operatorChip SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip) *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone {
+func NewSkyBlockProfileMemberNetherIslandPlayerDataAbiphone(contactData SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactData) *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone {
 	this := SkyBlockProfileMemberNetherIslandPlayerDataAbiphone{}
-	this.ActiveContacts = activeContacts
 	this.ContactData = contactData
-	this.Games = games
-	this.OperatorChip = operatorChip
 	return &this
 }
 
@@ -55,26 +52,34 @@ func NewSkyBlockProfileMemberNetherIslandPlayerDataAbiphoneWithDefaults() *SkyBl
 	return &this
 }
 
-// GetActiveContacts returns the ActiveContacts field value
+// GetActiveContacts returns the ActiveContacts field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) GetActiveContacts() []SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner {
-	if o == nil {
+	if o == nil || IsNil(o.ActiveContacts) {
 		var ret []SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner
 		return ret
 	}
-
 	return o.ActiveContacts
 }
 
-// GetActiveContactsOk returns a tuple with the ActiveContacts field value
+// GetActiveContactsOk returns a tuple with the ActiveContacts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) GetActiveContactsOk() ([]SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ActiveContacts) {
 		return nil, false
 	}
 	return o.ActiveContacts, true
 }
 
-// SetActiveContacts sets field value
+// HasActiveContacts returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) HasActiveContacts() bool {
+	if o != nil && !IsNil(o.ActiveContacts) {
+		return true
+	}
+
+	return false
+}
+
+// SetActiveContacts gets a reference to the given []SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner and assigns it to the ActiveContacts field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) SetActiveContacts(v []SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner) {
 	o.ActiveContacts = v
 }
@@ -103,26 +108,34 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) SetContactData(v S
 	o.ContactData = v
 }
 
-// GetGames returns the Games field value
+// GetGames returns the Games field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) GetGames() map[string]interface{} {
-	if o == nil {
+	if o == nil || IsNil(o.Games) {
 		var ret map[string]interface{}
 		return ret
 	}
-
 	return o.Games
 }
 
-// GetGamesOk returns a tuple with the Games field value
+// GetGamesOk returns a tuple with the Games field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) GetGamesOk() (map[string]interface{}, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Games) {
 		return map[string]interface{}{}, false
 	}
 	return o.Games, true
 }
 
-// SetGames sets field value
+// HasGames returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) HasGames() bool {
+	if o != nil && !IsNil(o.Games) {
+		return true
+	}
+
+	return false
+}
+
+// SetGames gets a reference to the given map[string]interface{} and assigns it to the Games field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) SetGames(v map[string]interface{}) {
 	o.Games = v
 }
@@ -191,28 +204,36 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) SetLastDyeCalledYe
 	o.LastDyeCalledYear = &v
 }
 
-// GetOperatorChip returns the OperatorChip field value
+// GetOperatorChip returns the OperatorChip field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) GetOperatorChip() SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip {
-	if o == nil {
+	if o == nil || IsNil(o.OperatorChip) {
 		var ret SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip
 		return ret
 	}
-
-	return o.OperatorChip
+	return *o.OperatorChip
 }
 
-// GetOperatorChipOk returns a tuple with the OperatorChip field value
+// GetOperatorChipOk returns a tuple with the OperatorChip field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) GetOperatorChipOk() (*SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.OperatorChip) {
 		return nil, false
 	}
-	return &o.OperatorChip, true
+	return o.OperatorChip, true
 }
 
-// SetOperatorChip sets field value
+// HasOperatorChip returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) HasOperatorChip() bool {
+	if o != nil && !IsNil(o.OperatorChip) {
+		return true
+	}
+
+	return false
+}
+
+// SetOperatorChip gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip and assigns it to the OperatorChip field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) SetOperatorChip(v SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip) {
-	o.OperatorChip = v
+	o.OperatorChip = &v
 }
 
 // GetSelectedRingtone returns the SelectedRingtone field value if set, zero value otherwise.
@@ -321,16 +342,22 @@ func (o SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) MarshalJSON() ([]by
 
 func (o SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["active_contacts"] = o.ActiveContacts
+	if !IsNil(o.ActiveContacts) {
+		toSerialize["active_contacts"] = o.ActiveContacts
+	}
 	toSerialize["contact_data"] = o.ContactData
-	toSerialize["games"] = o.Games
+	if !IsNil(o.Games) {
+		toSerialize["games"] = o.Games
+	}
 	if !IsNil(o.HasUsedSiriusPersonalPhoneNumberItem) {
 		toSerialize["has_used_sirius_personal_phone_number_item"] = o.HasUsedSiriusPersonalPhoneNumberItem
 	}
 	if !IsNil(o.LastDyeCalledYear) {
 		toSerialize["last_dye_called_year"] = o.LastDyeCalledYear
 	}
-	toSerialize["operator_chip"] = o.OperatorChip
+	if !IsNil(o.OperatorChip) {
+		toSerialize["operator_chip"] = o.OperatorChip
+	}
 	if !IsNil(o.SelectedRingtone) {
 		toSerialize["selected_ringtone"] = o.SelectedRingtone
 	}
@@ -348,10 +375,7 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) UnmarshalJSON(data
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
-		"active_contacts",
 		"contact_data",
-		"games",
-		"operator_chip",
 	}
 
 	allProperties := make(map[string]interface{})

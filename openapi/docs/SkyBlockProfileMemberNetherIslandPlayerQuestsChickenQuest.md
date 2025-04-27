@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChickenQuestCollected** | [**[]SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner**](SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner.md) |  | 
-**ChickenQuestProgress** | **int64** |  | 
-**ChickenQuestStart** | **bool** |  | 
+**ChickenQuestCollected** | Pointer to [**[]SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner**](SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner.md) |  | [optional] 
+**ChickenQuestProgress** | Pointer to **int64** |  | [optional] 
+**ChickenQuestStart** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest(chickenQuestCollected []SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner, chickenQuestProgress int64, chickenQuestStart bool, ) *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest`
+`func NewSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest() *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest`
 
 NewSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest object
 This constructor will assign default values to properties that have it defined,
@@ -46,6 +46,11 @@ and a boolean to check if the value has been set.
 
 SetChickenQuestCollected sets ChickenQuestCollected field to given value.
 
+### HasChickenQuestCollected
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) HasChickenQuestCollected() bool`
+
+HasChickenQuestCollected returns a boolean if a field has been set.
 
 ### GetChickenQuestProgress
 
@@ -66,6 +71,11 @@ and a boolean to check if the value has been set.
 
 SetChickenQuestProgress sets ChickenQuestProgress field to given value.
 
+### HasChickenQuestProgress
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) HasChickenQuestProgress() bool`
+
+HasChickenQuestProgress returns a boolean if a field has been set.
 
 ### GetChickenQuestStart
 
@@ -86,6 +96,11 @@ and a boolean to check if the value has been set.
 
 SetChickenQuestStart sets ChickenQuestStart field to given value.
 
+### HasChickenQuestStart
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) HasChickenQuestStart() bool`
+
+HasChickenQuestStart returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

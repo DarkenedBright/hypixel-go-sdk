@@ -22,12 +22,14 @@ type SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus string
 const (
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTSTATUS_ACTIVE   SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus = "ACTIVE"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTSTATUS_COMPLETE SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus = "COMPLETE"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTSTATUS_INACTIVE SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus = "INACTIVE"
 )
 
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus enum
 var AllowedSkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatusEnumValues = []SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus{
 	"ACTIVE",
 	"COMPLETE",
+	"INACTIVE",
 }
 
 func (v *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) UnmarshalJSON(src []byte) error {

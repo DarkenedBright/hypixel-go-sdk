@@ -20,14 +20,34 @@ type SkyBlockProfileMemberPetsDataAutopetRuleExceptionId string
 
 // List of SkyBlockProfileMemberPetsDataAutopetRuleException_id
 const (
-	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_HAS_EQUIPPED_PET SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "HAS_EQUIPPED_PET"
-	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_NOT_IN_ISLAND    SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "NOT_IN_ISLAND"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_DURING_EVENT        SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "DURING_EVENT"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_FRIDAY              SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "FRIDAY"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_HAS_EQUIPPED_PET    SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "HAS_EQUIPPED_PET"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_IS_IN_ISLAND        SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "IS_IN_ISLAND"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_MONDAY              SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "MONDAY"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_NOT_IN_ISLAND       SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "NOT_IN_ISLAND"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_SATURDAY            SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "SATURDAY"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_SPAWNED_SLAYER_BOSS SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "SPAWNED_SLAYER_BOSS"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_SUNDAY              SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "SUNDAY"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_THURSDAY            SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "THURSDAY"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_TUESDAY             SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "TUESDAY"
+	SKYBLOCKPROFILEMEMBERPETSDATAAUTOPETRULEEXCEPTIONID_WEDNESDAY           SkyBlockProfileMemberPetsDataAutopetRuleExceptionId = "WEDNESDAY"
 )
 
 // All allowed values of SkyBlockProfileMemberPetsDataAutopetRuleExceptionId enum
 var AllowedSkyBlockProfileMemberPetsDataAutopetRuleExceptionIdEnumValues = []SkyBlockProfileMemberPetsDataAutopetRuleExceptionId{
+	"DURING_EVENT",
+	"FRIDAY",
 	"HAS_EQUIPPED_PET",
+	"IS_IN_ISLAND",
+	"MONDAY",
 	"NOT_IN_ISLAND",
+	"SATURDAY",
+	"SPAWNED_SLAYER_BOSS",
+	"SUNDAY",
+	"THURSDAY",
+	"TUESDAY",
+	"WEDNESDAY",
 }
 
 func (v *SkyBlockProfileMemberPetsDataAutopetRuleExceptionId) UnmarshalJSON(src []byte) error {

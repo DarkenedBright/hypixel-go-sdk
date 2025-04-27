@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest type satisfies the MappedNullable interface at compile time
@@ -21,18 +19,16 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest
 
 // SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest struct for SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest
 type SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest struct {
-	HeardStoryStatue bool `json:"heard_story_statue"`
+	HeardStoryHome   *bool `json:"heard_story_home,omitempty"`
+	HeardStoryStatue *bool `json:"heard_story_statue,omitempty"`
 }
-
-type _SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest
 
 // NewSkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest(heardStoryStatue bool) *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest {
+func NewSkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest() *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest {
 	this := SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest{}
-	this.HeardStoryStatue = heardStoryStatue
 	return &this
 }
 
@@ -44,28 +40,68 @@ func NewSkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuestWithDefaults() *
 	return &this
 }
 
-// GetHeardStoryStatue returns the HeardStoryStatue field value
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) GetHeardStoryStatue() bool {
-	if o == nil {
+// GetHeardStoryHome returns the HeardStoryHome field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) GetHeardStoryHome() bool {
+	if o == nil || IsNil(o.HeardStoryHome) {
 		var ret bool
 		return ret
 	}
-
-	return o.HeardStoryStatue
+	return *o.HeardStoryHome
 }
 
-// GetHeardStoryStatueOk returns a tuple with the HeardStoryStatue field value
+// GetHeardStoryHomeOk returns a tuple with the HeardStoryHome field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) GetHeardStoryStatueOk() (*bool, bool) {
-	if o == nil {
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) GetHeardStoryHomeOk() (*bool, bool) {
+	if o == nil || IsNil(o.HeardStoryHome) {
 		return nil, false
 	}
-	return &o.HeardStoryStatue, true
+	return o.HeardStoryHome, true
 }
 
-// SetHeardStoryStatue sets field value
+// HasHeardStoryHome returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) HasHeardStoryHome() bool {
+	if o != nil && !IsNil(o.HeardStoryHome) {
+		return true
+	}
+
+	return false
+}
+
+// SetHeardStoryHome gets a reference to the given bool and assigns it to the HeardStoryHome field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) SetHeardStoryHome(v bool) {
+	o.HeardStoryHome = &v
+}
+
+// GetHeardStoryStatue returns the HeardStoryStatue field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) GetHeardStoryStatue() bool {
+	if o == nil || IsNil(o.HeardStoryStatue) {
+		var ret bool
+		return ret
+	}
+	return *o.HeardStoryStatue
+}
+
+// GetHeardStoryStatueOk returns a tuple with the HeardStoryStatue field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) GetHeardStoryStatueOk() (*bool, bool) {
+	if o == nil || IsNil(o.HeardStoryStatue) {
+		return nil, false
+	}
+	return o.HeardStoryStatue, true
+}
+
+// HasHeardStoryStatue returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) HasHeardStoryStatue() bool {
+	if o != nil && !IsNil(o.HeardStoryStatue) {
+		return true
+	}
+
+	return false
+}
+
+// SetHeardStoryStatue gets a reference to the given bool and assigns it to the HeardStoryStatue field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) SetHeardStoryStatue(v bool) {
-	o.HeardStoryStatue = v
+	o.HeardStoryStatue = &v
 }
 
 func (o SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) MarshalJSON() ([]byte, error) {
@@ -78,45 +114,13 @@ func (o SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) MarshalJSON() 
 
 func (o SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["heard_story_statue"] = o.HeardStoryStatue
+	if !IsNil(o.HeardStoryHome) {
+		toSerialize["heard_story_home"] = o.HeardStoryHome
+	}
+	if !IsNil(o.HeardStoryStatue) {
+		toSerialize["heard_story_statue"] = o.HeardStoryStatue
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"heard_story_statue",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest := _SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest(varSkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest struct {

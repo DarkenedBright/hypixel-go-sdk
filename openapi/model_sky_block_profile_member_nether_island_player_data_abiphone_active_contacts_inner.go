@@ -21,6 +21,7 @@ type SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner stri
 // List of SkyBlockProfileMemberNetherIslandPlayerDataAbiphone_active_contacts_inner
 const (
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_ALCHEMIST           SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "alchemist"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_ALIXER              SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "alixer"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_ANITA               SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "anita"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_ARANYA              SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "aranya"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_ARROW_FORGER        SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "arrow_forger"
@@ -78,6 +79,7 @@ const (
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner enum
 var AllowedSkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInnerEnumValues = []SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner{
 	"alchemist",
+	"alixer",
 	"anita",
 	"aranya",
 	"arrow_forger",

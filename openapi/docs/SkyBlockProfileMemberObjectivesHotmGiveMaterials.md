@@ -14,14 +14,14 @@ Name | Type | Description | Notes
 **AmountGiven** | Pointer to **int64** |  | [optional] 
 **CompletedAt** | **int64** |  | 
 **Progress** | **int64** |  | 
-**Started** | **bool** |  | 
-**Status** | [**SkyBlockProfileMemberObjectivesCatchLaseasFishStatus**](SkyBlockProfileMemberObjectivesCatchLaseasFishStatus.md) |  | 
+**Started** | Pointer to **bool** |  | [optional] 
+**Status** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus.md) |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberObjectivesHotmGiveMaterials
 
-`func NewSkyBlockProfileMemberObjectivesHotmGiveMaterials(completedAt int64, progress int64, started bool, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, ) *SkyBlockProfileMemberObjectivesHotmGiveMaterials`
+`func NewSkyBlockProfileMemberObjectivesHotmGiveMaterials(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, ) *SkyBlockProfileMemberObjectivesHotmGiveMaterials`
 
 NewSkyBlockProfileMemberObjectivesHotmGiveMaterials instantiates a new SkyBlockProfileMemberObjectivesHotmGiveMaterials object
 This constructor will assign default values to properties that have it defined,
@@ -295,23 +295,28 @@ and a boolean to check if the value has been set.
 
 SetStarted sets Started field to given value.
 
+### HasStarted
+
+`func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) HasStarted() bool`
+
+HasStarted returns a boolean if a field has been set.
 
 ### GetStatus
 
-`func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus`
+`func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool)`
+`func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus)`
+`func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus)`
 
 SetStatus sets Status field to given value.
 

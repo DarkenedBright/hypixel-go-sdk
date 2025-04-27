@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ActiveContacts** | [**[]SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner**](SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner.md) |  | 
+**ActiveContacts** | Pointer to [**[]SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner**](SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner.md) |  | [optional] 
 **ContactData** | [**SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactData**](SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactData.md) |  | 
-**Games** | **map[string]interface{}** |  | 
+**Games** | Pointer to **map[string]interface{}** |  | [optional] 
 **HasUsedSiriusPersonalPhoneNumberItem** | Pointer to **bool** |  | [optional] 
 **LastDyeCalledYear** | Pointer to **int64** |  | [optional] 
-**OperatorChip** | [**SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip**](SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip.md) |  | 
+**OperatorChip** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip**](SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip.md) |  | [optional] 
 **SelectedRingtone** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone**](SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone.md) |  | [optional] 
 **SelectedSort** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedSort**](SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedSort.md) |  | [optional] 
 **TrioContactAddons** | Pointer to **int64** |  | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerDataAbiphone
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerDataAbiphone(activeContacts []SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner, contactData SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactData, games map[string]interface{}, operatorChip SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneOperatorChip, ) *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone`
+`func NewSkyBlockProfileMemberNetherIslandPlayerDataAbiphone(contactData SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactData, ) *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone`
 
 NewSkyBlockProfileMemberNetherIslandPlayerDataAbiphone instantiates a new SkyBlockProfileMemberNetherIslandPlayerDataAbiphone object
 This constructor will assign default values to properties that have it defined,
@@ -52,6 +52,11 @@ and a boolean to check if the value has been set.
 
 SetActiveContacts sets ActiveContacts field to given value.
 
+### HasActiveContacts
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) HasActiveContacts() bool`
+
+HasActiveContacts returns a boolean if a field has been set.
 
 ### GetContactData
 
@@ -92,6 +97,11 @@ and a boolean to check if the value has been set.
 
 SetGames sets Games field to given value.
 
+### HasGames
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) HasGames() bool`
+
+HasGames returns a boolean if a field has been set.
 
 ### GetHasUsedSiriusPersonalPhoneNumberItem
 
@@ -162,6 +172,11 @@ and a boolean to check if the value has been set.
 
 SetOperatorChip sets OperatorChip field to given value.
 
+### HasOperatorChip
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataAbiphone) HasOperatorChip() bool`
+
+HasOperatorChip returns a boolean if a field has been set.
 
 ### GetSelectedRingtone
 

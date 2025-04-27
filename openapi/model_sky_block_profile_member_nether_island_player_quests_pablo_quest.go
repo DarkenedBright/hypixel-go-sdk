@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest type satisfies the MappedNullable interface at compile time
@@ -21,21 +19,17 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest{
 
 // SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest struct for SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest
 type SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest struct {
-	PabloActive   bool   `json:"pablo_active"`
-	PabloItem     string `json:"pablo_item"`
-	PabloLastGive *int64 `json:"pablo_last_give,omitempty"`
+	PabloActive   *bool   `json:"pablo_active,omitempty"`
+	PabloItem     *string `json:"pablo_item,omitempty"`
+	PabloLastGive *int64  `json:"pablo_last_give,omitempty"`
 }
-
-type _SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest
 
 // NewSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest(pabloActive bool, pabloItem string) *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest {
+func NewSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest() *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest {
 	this := SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest{}
-	this.PabloActive = pabloActive
-	this.PabloItem = pabloItem
 	return &this
 }
 
@@ -47,52 +41,68 @@ func NewSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuestWithDefaults() *S
 	return &this
 }
 
-// GetPabloActive returns the PabloActive field value
+// GetPabloActive returns the PabloActive field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) GetPabloActive() bool {
-	if o == nil {
+	if o == nil || IsNil(o.PabloActive) {
 		var ret bool
 		return ret
 	}
-
-	return o.PabloActive
+	return *o.PabloActive
 }
 
-// GetPabloActiveOk returns a tuple with the PabloActive field value
+// GetPabloActiveOk returns a tuple with the PabloActive field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) GetPabloActiveOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PabloActive) {
 		return nil, false
 	}
-	return &o.PabloActive, true
+	return o.PabloActive, true
 }
 
-// SetPabloActive sets field value
+// HasPabloActive returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) HasPabloActive() bool {
+	if o != nil && !IsNil(o.PabloActive) {
+		return true
+	}
+
+	return false
+}
+
+// SetPabloActive gets a reference to the given bool and assigns it to the PabloActive field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) SetPabloActive(v bool) {
-	o.PabloActive = v
+	o.PabloActive = &v
 }
 
-// GetPabloItem returns the PabloItem field value
+// GetPabloItem returns the PabloItem field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) GetPabloItem() string {
-	if o == nil {
+	if o == nil || IsNil(o.PabloItem) {
 		var ret string
 		return ret
 	}
-
-	return o.PabloItem
+	return *o.PabloItem
 }
 
-// GetPabloItemOk returns a tuple with the PabloItem field value
+// GetPabloItemOk returns a tuple with the PabloItem field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) GetPabloItemOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PabloItem) {
 		return nil, false
 	}
-	return &o.PabloItem, true
+	return o.PabloItem, true
 }
 
-// SetPabloItem sets field value
+// HasPabloItem returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) HasPabloItem() bool {
+	if o != nil && !IsNil(o.PabloItem) {
+		return true
+	}
+
+	return false
+}
+
+// SetPabloItem gets a reference to the given string and assigns it to the PabloItem field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) SetPabloItem(v string) {
-	o.PabloItem = v
+	o.PabloItem = &v
 }
 
 // GetPabloLastGive returns the PabloLastGive field value if set, zero value otherwise.
@@ -137,50 +147,16 @@ func (o SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) MarshalJSON() (
 
 func (o SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["pablo_active"] = o.PabloActive
-	toSerialize["pablo_item"] = o.PabloItem
+	if !IsNil(o.PabloActive) {
+		toSerialize["pablo_active"] = o.PabloActive
+	}
+	if !IsNil(o.PabloItem) {
+		toSerialize["pablo_item"] = o.PabloItem
+	}
 	if !IsNil(o.PabloLastGive) {
 		toSerialize["pablo_last_give"] = o.PabloLastGive
 	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"pablo_active",
-		"pablo_item",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest := _SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest(varSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest struct {

@@ -20,12 +20,22 @@ type SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone string
 
 // List of SkyBlockProfileMemberNetherIslandPlayerDataAbiphone_selected_ringtone
 const (
-	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONESELECTEDRINGTONE_TARREGA SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone = "TARREGA"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONESELECTEDRINGTONE_DEFAULT     SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone = "DEFAULT"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONESELECTEDRINGTONE_ENTERTAINER SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone = "ENTERTAINER"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONESELECTEDRINGTONE_FUR_ELISE   SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone = "FUR_ELISE"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONESELECTEDRINGTONE_TARREGA     SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone = "TARREGA"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONESELECTEDRINGTONE_TECHY       SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone = "TECHY"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONESELECTEDRINGTONE_VIBRATE     SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone = "VIBRATE"
 )
 
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone enum
 var AllowedSkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtoneEnumValues = []SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone{
+	"DEFAULT",
+	"ENTERTAINER",
+	"FUR_ELISE",
 	"TARREGA",
+	"TECHY",
+	"VIBRATE",
 }
 
 func (v *SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone) UnmarshalJSON(src []byte) error {

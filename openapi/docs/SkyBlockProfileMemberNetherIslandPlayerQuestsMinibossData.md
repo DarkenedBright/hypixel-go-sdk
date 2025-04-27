@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ASHFANG** | **bool** |  | 
-**BARBARIAN_DUKE_X** | **bool** |  | 
-**BLADESOUL** | **bool** |  | 
-**MAGE_OUTLAW** | **bool** |  | 
-**MAGMA_BOSS** | **bool** |  | 
+**ASHFANG** | Pointer to **bool** |  | [optional] 
+**BARBARIAN_DUKE_X** | Pointer to **bool** |  | [optional] 
+**BLADESOUL** | Pointer to **bool** |  | [optional] 
+**MAGE_OUTLAW** | Pointer to **bool** |  | [optional] 
+**MAGMA_BOSS** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData(aSHFANG bool, bARBARIANDUKEX bool, bLADESOUL bool, mAGEOUTLAW bool, mAGMABOSS bool, ) *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData`
+`func NewSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData() *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData`
 
 NewSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData object
 This constructor will assign default values to properties that have it defined,
@@ -48,6 +48,11 @@ and a boolean to check if the value has been set.
 
 SetASHFANG sets ASHFANG field to given value.
 
+### HasASHFANG
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) HasASHFANG() bool`
+
+HasASHFANG returns a boolean if a field has been set.
 
 ### GetBARBARIAN_DUKE_X
 
@@ -68,6 +73,11 @@ and a boolean to check if the value has been set.
 
 SetBARBARIAN_DUKE_X sets BARBARIAN_DUKE_X field to given value.
 
+### HasBARBARIAN_DUKE_X
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) HasBARBARIAN_DUKE_X() bool`
+
+HasBARBARIAN_DUKE_X returns a boolean if a field has been set.
 
 ### GetBLADESOUL
 
@@ -88,6 +98,11 @@ and a boolean to check if the value has been set.
 
 SetBLADESOUL sets BLADESOUL field to given value.
 
+### HasBLADESOUL
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) HasBLADESOUL() bool`
+
+HasBLADESOUL returns a boolean if a field has been set.
 
 ### GetMAGE_OUTLAW
 
@@ -108,6 +123,11 @@ and a boolean to check if the value has been set.
 
 SetMAGE_OUTLAW sets MAGE_OUTLAW field to given value.
 
+### HasMAGE_OUTLAW
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) HasMAGE_OUTLAW() bool`
+
+HasMAGE_OUTLAW returns a boolean if a field has been set.
 
 ### GetMAGMA_BOSS
 
@@ -128,6 +148,11 @@ and a boolean to check if the value has been set.
 
 SetMAGMA_BOSS sets MAGMA_BOSS field to given value.
 
+### HasMAGMA_BOSS
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) HasMAGMA_BOSS() bool`
+
+HasMAGMA_BOSS returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

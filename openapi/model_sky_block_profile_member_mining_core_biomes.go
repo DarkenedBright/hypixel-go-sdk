@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberMiningCoreBiomes type satisfies the MappedNullable interface at compile time
@@ -21,24 +19,18 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCoreBiomes{}
 
 // SkyBlockProfileMemberMiningCoreBiomes struct for SkyBlockProfileMemberMiningCoreBiomes
 type SkyBlockProfileMemberMiningCoreBiomes struct {
-	Dwarven   map[string]interface{}                         `json:"dwarven"`
-	Goblin    SkyBlockProfileMemberMiningCoreBiomesGoblin    `json:"goblin"`
-	Jungle    SkyBlockProfileMemberMiningCoreBiomesJungle    `json:"jungle"`
-	Precursor SkyBlockProfileMemberMiningCoreBiomesPrecursor `json:"precursor"`
+	Dwarven   map[string]interface{}                          `json:"dwarven,omitempty"`
+	Goblin    *SkyBlockProfileMemberMiningCoreBiomesGoblin    `json:"goblin,omitempty"`
+	Jungle    *SkyBlockProfileMemberMiningCoreBiomesJungle    `json:"jungle,omitempty"`
+	Precursor *SkyBlockProfileMemberMiningCoreBiomesPrecursor `json:"precursor,omitempty"`
 }
-
-type _SkyBlockProfileMemberMiningCoreBiomes SkyBlockProfileMemberMiningCoreBiomes
 
 // NewSkyBlockProfileMemberMiningCoreBiomes instantiates a new SkyBlockProfileMemberMiningCoreBiomes object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberMiningCoreBiomes(dwarven map[string]interface{}, goblin SkyBlockProfileMemberMiningCoreBiomesGoblin, jungle SkyBlockProfileMemberMiningCoreBiomesJungle, precursor SkyBlockProfileMemberMiningCoreBiomesPrecursor) *SkyBlockProfileMemberMiningCoreBiomes {
+func NewSkyBlockProfileMemberMiningCoreBiomes() *SkyBlockProfileMemberMiningCoreBiomes {
 	this := SkyBlockProfileMemberMiningCoreBiomes{}
-	this.Dwarven = dwarven
-	this.Goblin = goblin
-	this.Jungle = jungle
-	this.Precursor = precursor
 	return &this
 }
 
@@ -50,100 +42,132 @@ func NewSkyBlockProfileMemberMiningCoreBiomesWithDefaults() *SkyBlockProfileMemb
 	return &this
 }
 
-// GetDwarven returns the Dwarven field value
+// GetDwarven returns the Dwarven field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) GetDwarven() map[string]interface{} {
-	if o == nil {
+	if o == nil || IsNil(o.Dwarven) {
 		var ret map[string]interface{}
 		return ret
 	}
-
 	return o.Dwarven
 }
 
-// GetDwarvenOk returns a tuple with the Dwarven field value
+// GetDwarvenOk returns a tuple with the Dwarven field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) GetDwarvenOk() (map[string]interface{}, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Dwarven) {
 		return map[string]interface{}{}, false
 	}
 	return o.Dwarven, true
 }
 
-// SetDwarven sets field value
+// HasDwarven returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreBiomes) HasDwarven() bool {
+	if o != nil && !IsNil(o.Dwarven) {
+		return true
+	}
+
+	return false
+}
+
+// SetDwarven gets a reference to the given map[string]interface{} and assigns it to the Dwarven field.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) SetDwarven(v map[string]interface{}) {
 	o.Dwarven = v
 }
 
-// GetGoblin returns the Goblin field value
+// GetGoblin returns the Goblin field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) GetGoblin() SkyBlockProfileMemberMiningCoreBiomesGoblin {
-	if o == nil {
+	if o == nil || IsNil(o.Goblin) {
 		var ret SkyBlockProfileMemberMiningCoreBiomesGoblin
 		return ret
 	}
-
-	return o.Goblin
+	return *o.Goblin
 }
 
-// GetGoblinOk returns a tuple with the Goblin field value
+// GetGoblinOk returns a tuple with the Goblin field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) GetGoblinOk() (*SkyBlockProfileMemberMiningCoreBiomesGoblin, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Goblin) {
 		return nil, false
 	}
-	return &o.Goblin, true
+	return o.Goblin, true
 }
 
-// SetGoblin sets field value
+// HasGoblin returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreBiomes) HasGoblin() bool {
+	if o != nil && !IsNil(o.Goblin) {
+		return true
+	}
+
+	return false
+}
+
+// SetGoblin gets a reference to the given SkyBlockProfileMemberMiningCoreBiomesGoblin and assigns it to the Goblin field.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) SetGoblin(v SkyBlockProfileMemberMiningCoreBiomesGoblin) {
-	o.Goblin = v
+	o.Goblin = &v
 }
 
-// GetJungle returns the Jungle field value
+// GetJungle returns the Jungle field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) GetJungle() SkyBlockProfileMemberMiningCoreBiomesJungle {
-	if o == nil {
+	if o == nil || IsNil(o.Jungle) {
 		var ret SkyBlockProfileMemberMiningCoreBiomesJungle
 		return ret
 	}
-
-	return o.Jungle
+	return *o.Jungle
 }
 
-// GetJungleOk returns a tuple with the Jungle field value
+// GetJungleOk returns a tuple with the Jungle field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) GetJungleOk() (*SkyBlockProfileMemberMiningCoreBiomesJungle, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Jungle) {
 		return nil, false
 	}
-	return &o.Jungle, true
+	return o.Jungle, true
 }
 
-// SetJungle sets field value
+// HasJungle returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreBiomes) HasJungle() bool {
+	if o != nil && !IsNil(o.Jungle) {
+		return true
+	}
+
+	return false
+}
+
+// SetJungle gets a reference to the given SkyBlockProfileMemberMiningCoreBiomesJungle and assigns it to the Jungle field.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) SetJungle(v SkyBlockProfileMemberMiningCoreBiomesJungle) {
-	o.Jungle = v
+	o.Jungle = &v
 }
 
-// GetPrecursor returns the Precursor field value
+// GetPrecursor returns the Precursor field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) GetPrecursor() SkyBlockProfileMemberMiningCoreBiomesPrecursor {
-	if o == nil {
+	if o == nil || IsNil(o.Precursor) {
 		var ret SkyBlockProfileMemberMiningCoreBiomesPrecursor
 		return ret
 	}
-
-	return o.Precursor
+	return *o.Precursor
 }
 
-// GetPrecursorOk returns a tuple with the Precursor field value
+// GetPrecursorOk returns a tuple with the Precursor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) GetPrecursorOk() (*SkyBlockProfileMemberMiningCoreBiomesPrecursor, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Precursor) {
 		return nil, false
 	}
-	return &o.Precursor, true
+	return o.Precursor, true
 }
 
-// SetPrecursor sets field value
+// HasPrecursor returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreBiomes) HasPrecursor() bool {
+	if o != nil && !IsNil(o.Precursor) {
+		return true
+	}
+
+	return false
+}
+
+// SetPrecursor gets a reference to the given SkyBlockProfileMemberMiningCoreBiomesPrecursor and assigns it to the Precursor field.
 func (o *SkyBlockProfileMemberMiningCoreBiomes) SetPrecursor(v SkyBlockProfileMemberMiningCoreBiomesPrecursor) {
-	o.Precursor = v
+	o.Precursor = &v
 }
 
 func (o SkyBlockProfileMemberMiningCoreBiomes) MarshalJSON() ([]byte, error) {
@@ -156,51 +180,19 @@ func (o SkyBlockProfileMemberMiningCoreBiomes) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileMemberMiningCoreBiomes) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["dwarven"] = o.Dwarven
-	toSerialize["goblin"] = o.Goblin
-	toSerialize["jungle"] = o.Jungle
-	toSerialize["precursor"] = o.Precursor
+	if !IsNil(o.Dwarven) {
+		toSerialize["dwarven"] = o.Dwarven
+	}
+	if !IsNil(o.Goblin) {
+		toSerialize["goblin"] = o.Goblin
+	}
+	if !IsNil(o.Jungle) {
+		toSerialize["jungle"] = o.Jungle
+	}
+	if !IsNil(o.Precursor) {
+		toSerialize["precursor"] = o.Precursor
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberMiningCoreBiomes) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"dwarven",
-		"goblin",
-		"jungle",
-		"precursor",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberMiningCoreBiomes := _SkyBlockProfileMemberMiningCoreBiomes{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberMiningCoreBiomes)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberMiningCoreBiomes(varSkyBlockProfileMemberMiningCoreBiomes)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberMiningCoreBiomes struct {

@@ -7,11 +7,12 @@ Name | Type | Description | Notes
 **Abiphone** | [**SkyBlockProfileMemberNetherIslandPlayerDataAbiphone**](SkyBlockProfileMemberNetherIslandPlayerDataAbiphone.md) |  | 
 **BarbariansReputation** | Pointer to **float64** |  | [optional] 
 **Dojo** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerDataDojo**](SkyBlockProfileMemberNetherIslandPlayerDataDojo.md) |  | [optional] 
-**KuudraCompletedTiers** | [**SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers**](SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers.md) |  | 
+**KuudraCompletedTiers** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers**](SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers.md) |  | [optional] 
 **KuudraPartyFinder** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder**](SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder.md) |  | [optional] 
-**LastMinibossesKilled** | Pointer to [**[]SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner**](SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner.md) |  | [optional] 
+**LastMinibossesKilled** | Pointer to **[]string** |  | [optional] 
 **MagesReputation** | Pointer to **float64** |  | [optional] 
 **Matriarch** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerMatriarch**](SkyBlockProfileMemberNetherIslandPlayerMatriarch.md) |  | [optional] 
+**NpcPath** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerNpcPath**](SkyBlockProfileMemberNetherIslandPlayerNpcPath.md) |  | [optional] 
 **Quests** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerQuests**](SkyBlockProfileMemberNetherIslandPlayerQuests.md) |  | [optional] 
 **SelectedFaction** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction**](SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction.md) |  | [optional] 
 
@@ -19,7 +20,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerData
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerData(abiphone SkyBlockProfileMemberNetherIslandPlayerDataAbiphone, kuudraCompletedTiers SkyBlockProfileMemberNetherIslandPlayerDataKuudraCompletedTiers, ) *SkyBlockProfileMemberNetherIslandPlayerData`
+`func NewSkyBlockProfileMemberNetherIslandPlayerData(abiphone SkyBlockProfileMemberNetherIslandPlayerDataAbiphone, ) *SkyBlockProfileMemberNetherIslandPlayerData`
 
 NewSkyBlockProfileMemberNetherIslandPlayerData instantiates a new SkyBlockProfileMemberNetherIslandPlayerData object
 This constructor will assign default values to properties that have it defined,
@@ -123,6 +124,11 @@ and a boolean to check if the value has been set.
 
 SetKuudraCompletedTiers sets KuudraCompletedTiers field to given value.
 
+### HasKuudraCompletedTiers
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerData) HasKuudraCompletedTiers() bool`
+
+HasKuudraCompletedTiers returns a boolean if a field has been set.
 
 ### GetKuudraPartyFinder
 
@@ -151,20 +157,20 @@ HasKuudraPartyFinder returns a boolean if a field has been set.
 
 ### GetLastMinibossesKilled
 
-`func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetLastMinibossesKilled() []SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner`
+`func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetLastMinibossesKilled() []*string`
 
 GetLastMinibossesKilled returns the LastMinibossesKilled field if non-nil, zero value otherwise.
 
 ### GetLastMinibossesKilledOk
 
-`func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetLastMinibossesKilledOk() (*[]SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner, bool)`
+`func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetLastMinibossesKilledOk() (*[]*string, bool)`
 
 GetLastMinibossesKilledOk returns a tuple with the LastMinibossesKilled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastMinibossesKilled
 
-`func (o *SkyBlockProfileMemberNetherIslandPlayerData) SetLastMinibossesKilled(v []SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner)`
+`func (o *SkyBlockProfileMemberNetherIslandPlayerData) SetLastMinibossesKilled(v []*string)`
 
 SetLastMinibossesKilled sets LastMinibossesKilled field to given value.
 
@@ -223,6 +229,31 @@ SetMatriarch sets Matriarch field to given value.
 `func (o *SkyBlockProfileMemberNetherIslandPlayerData) HasMatriarch() bool`
 
 HasMatriarch returns a boolean if a field has been set.
+
+### GetNpcPath
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetNpcPath() SkyBlockProfileMemberNetherIslandPlayerNpcPath`
+
+GetNpcPath returns the NpcPath field if non-nil, zero value otherwise.
+
+### GetNpcPathOk
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerData) GetNpcPathOk() (*SkyBlockProfileMemberNetherIslandPlayerNpcPath, bool)`
+
+GetNpcPathOk returns a tuple with the NpcPath field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNpcPath
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerData) SetNpcPath(v SkyBlockProfileMemberNetherIslandPlayerNpcPath)`
+
+SetNpcPath sets NpcPath field to given value.
+
+### HasNpcPath
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerData) HasNpcPath() bool`
+
+HasNpcPath returns a boolean if a field has been set.
 
 ### GetQuests
 

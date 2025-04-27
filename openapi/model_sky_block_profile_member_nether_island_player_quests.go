@@ -21,38 +21,38 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerQuests{}
 
 // SkyBlockProfileMemberNetherIslandPlayerQuests struct for SkyBlockProfileMemberNetherIslandPlayerQuests
 type SkyBlockProfileMemberNetherIslandPlayerQuests struct {
-	AlchemistQuest        SkyBlockProfileMemberNetherIslandPlayerQuestsAlchemistQuest            `json:"alchemist_quest"`
-	AranyaQuest           map[string]interface{}                                                 `json:"aranya_quest"`
-	CavityRarity          *SkyBlockProfileMemberNetherIslandPlayerQuestsCavityRarity             `json:"cavity_rarity,omitempty"`
-	ChickenQuest          SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest              `json:"chicken_quest"`
-	ChickenQuestHandedIn  int64                                                                  `json:"chicken_quest_handed_in"`
-	DuelTrainingQuest     SkyBlockProfileMemberNetherIslandPlayerQuestsDuelTrainingQuest         `json:"duel_training_quest"`
-	EdelisQuest           SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest               `json:"edelis_quest"`
-	FishedWetNapkin       *bool                                                                  `json:"fished_wet_napkin,omitempty"`
-	FoundKuudraBook       *bool                                                                  `json:"found_kuudra_book,omitempty"`
-	FoundKuudraBoots      *bool                                                                  `json:"found_kuudra_boots,omitempty"`
-	FoundKuudraChestplate *bool                                                                  `json:"found_kuudra_chestplate,omitempty"`
-	FoundKuudraHelmet     *bool                                                                  `json:"found_kuudra_helmet,omitempty"`
-	FoundKuudraLeggings   *bool                                                                  `json:"found_kuudra_leggings,omitempty"`
-	KuudaBossDaily        map[string]interface{}                                                 `json:"kuuda_boss_daily"`
-	KuudraLoremaster      *bool                                                                  `json:"kuudra_loremaster,omitempty"`
-	LastBelieverBlessing  *int64                                                                 `json:"last_believer_blessing,omitempty"`
-	LastKuudraRelic       *int64                                                                 `json:"last_kuudra_relic,omitempty"`
-	LastReset             int64                                                                  `json:"last_reset"`
-	LastVampireBlood      *int64                                                                 `json:"last_vampire_blood,omitempty"`
-	MinibossDaily         map[string]interface{}                                                 `json:"miniboss_daily"`
-	MinibossData          SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData              `json:"miniboss_data"`
-	MollimQuest           SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest               `json:"mollim_quest"`
-	PabloQuest            SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest                `json:"pablo_quest"`
-	PaidBruuh             bool                                                                   `json:"paid_bruuh"`
-	PomtairQuest          SkyBlockProfileMemberNetherIslandPlayerQuestsPomtairQuest              `json:"pomtair_quest"`
-	QuestData             SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData                 `json:"quest_data"`
-	QuestRewards          SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards              `json:"quest_rewards"`
-	Rulenor               SkyBlockProfileMemberNetherIslandPlayerQuestsRulenor                   `json:"rulenor"`
-	SirihQuest            SkyBlockProfileMemberNetherIslandPlayerQuestsSirihQuest                `json:"sirih_quest"`
-	SuusQuest             SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest                 `json:"suus_quest"`
-	UnlockedCavityNpcs    []SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner `json:"unlocked_cavity_npcs,omitempty"`
-	WeirdSailor           *bool                                                                  `json:"weird_sailor,omitempty"`
+	AlchemistQuest        SkyBlockProfileMemberNetherIslandPlayerQuestsAlchemistQuest               `json:"alchemist_quest"`
+	AranyaQuest           map[string]interface{}                                                    `json:"aranya_quest"`
+	CavityRarity          *SkyBlockProfileMemberNetherIslandPlayerQuestsCavityRarity                `json:"cavity_rarity,omitempty"`
+	ChickenQuest          SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest                 `json:"chicken_quest"`
+	ChickenQuestHandedIn  *int64                                                                    `json:"chicken_quest_handed_in,omitempty"`
+	DuelTrainingQuest     SkyBlockProfileMemberNetherIslandPlayerQuestsDuelTrainingQuest            `json:"duel_training_quest"`
+	EdelisQuest           SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest                  `json:"edelis_quest"`
+	FishedWetNapkin       *bool                                                                     `json:"fished_wet_napkin,omitempty"`
+	FoundKuudraBook       *bool                                                                     `json:"found_kuudra_book,omitempty"`
+	FoundKuudraBoots      *bool                                                                     `json:"found_kuudra_boots,omitempty"`
+	FoundKuudraChestplate *bool                                                                     `json:"found_kuudra_chestplate,omitempty"`
+	FoundKuudraHelmet     *bool                                                                     `json:"found_kuudra_helmet,omitempty"`
+	FoundKuudraLeggings   *bool                                                                     `json:"found_kuudra_leggings,omitempty"`
+	KuudaBossDaily        map[string]interface{}                                                    `json:"kuuda_boss_daily"`
+	KuudraLoremaster      *bool                                                                     `json:"kuudra_loremaster,omitempty"`
+	LastBelieverBlessing  *int64                                                                    `json:"last_believer_blessing,omitempty"`
+	LastKuudraRelic       *int64                                                                    `json:"last_kuudra_relic,omitempty"`
+	LastReset             *int64                                                                    `json:"last_reset,omitempty"`
+	LastVampireBlood      *int64                                                                    `json:"last_vampire_blood,omitempty"`
+	MinibossDaily         map[string]interface{}                                                    `json:"miniboss_daily"`
+	MinibossData          *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData                `json:"miniboss_data,omitempty"`
+	MollimQuest           SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest                  `json:"mollim_quest"`
+	PabloQuest            SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest                   `json:"pablo_quest"`
+	PaidBruuh             *bool                                                                     `json:"paid_bruuh,omitempty"`
+	PomtairQuest          SkyBlockProfileMemberNetherIslandPlayerQuestsPomtairQuest                 `json:"pomtair_quest"`
+	QuestData             SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData                    `json:"quest_data"`
+	QuestRewards          map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue `json:"quest_rewards"`
+	Rulenor               SkyBlockProfileMemberNetherIslandPlayerQuestsRulenor                      `json:"rulenor"`
+	SirihQuest            SkyBlockProfileMemberNetherIslandPlayerQuestsSirihQuest                   `json:"sirih_quest"`
+	SuusQuest             SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest                    `json:"suus_quest"`
+	UnlockedCavityNpcs    []SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner    `json:"unlocked_cavity_npcs,omitempty"`
+	WeirdSailor           *bool                                                                     `json:"weird_sailor,omitempty"`
 }
 
 type _SkyBlockProfileMemberNetherIslandPlayerQuests SkyBlockProfileMemberNetherIslandPlayerQuests
@@ -61,21 +61,17 @@ type _SkyBlockProfileMemberNetherIslandPlayerQuests SkyBlockProfileMemberNetherI
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerQuests(alchemistQuest SkyBlockProfileMemberNetherIslandPlayerQuestsAlchemistQuest, aranyaQuest map[string]interface{}, chickenQuest SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest, chickenQuestHandedIn int64, duelTrainingQuest SkyBlockProfileMemberNetherIslandPlayerQuestsDuelTrainingQuest, edelisQuest SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest, kuudaBossDaily map[string]interface{}, lastReset int64, minibossDaily map[string]interface{}, minibossData SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData, mollimQuest SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest, pabloQuest SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest, paidBruuh bool, pomtairQuest SkyBlockProfileMemberNetherIslandPlayerQuestsPomtairQuest, questData SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData, questRewards SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards, rulenor SkyBlockProfileMemberNetherIslandPlayerQuestsRulenor, sirihQuest SkyBlockProfileMemberNetherIslandPlayerQuestsSirihQuest, suusQuest SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) *SkyBlockProfileMemberNetherIslandPlayerQuests {
+func NewSkyBlockProfileMemberNetherIslandPlayerQuests(alchemistQuest SkyBlockProfileMemberNetherIslandPlayerQuestsAlchemistQuest, aranyaQuest map[string]interface{}, chickenQuest SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest, duelTrainingQuest SkyBlockProfileMemberNetherIslandPlayerQuestsDuelTrainingQuest, edelisQuest SkyBlockProfileMemberNetherIslandPlayerQuestsEdelisQuest, kuudaBossDaily map[string]interface{}, minibossDaily map[string]interface{}, mollimQuest SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest, pabloQuest SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest, pomtairQuest SkyBlockProfileMemberNetherIslandPlayerQuestsPomtairQuest, questData SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData, questRewards map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue, rulenor SkyBlockProfileMemberNetherIslandPlayerQuestsRulenor, sirihQuest SkyBlockProfileMemberNetherIslandPlayerQuestsSirihQuest, suusQuest SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) *SkyBlockProfileMemberNetherIslandPlayerQuests {
 	this := SkyBlockProfileMemberNetherIslandPlayerQuests{}
 	this.AlchemistQuest = alchemistQuest
 	this.AranyaQuest = aranyaQuest
 	this.ChickenQuest = chickenQuest
-	this.ChickenQuestHandedIn = chickenQuestHandedIn
 	this.DuelTrainingQuest = duelTrainingQuest
 	this.EdelisQuest = edelisQuest
 	this.KuudaBossDaily = kuudaBossDaily
-	this.LastReset = lastReset
 	this.MinibossDaily = minibossDaily
-	this.MinibossData = minibossData
 	this.MollimQuest = mollimQuest
 	this.PabloQuest = pabloQuest
-	this.PaidBruuh = paidBruuh
 	this.PomtairQuest = pomtairQuest
 	this.QuestData = questData
 	this.QuestRewards = questRewards
@@ -197,28 +193,36 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetChickenQuest(v SkyBlo
 	o.ChickenQuest = v
 }
 
-// GetChickenQuestHandedIn returns the ChickenQuestHandedIn field value
+// GetChickenQuestHandedIn returns the ChickenQuestHandedIn field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetChickenQuestHandedIn() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.ChickenQuestHandedIn) {
 		var ret int64
 		return ret
 	}
-
-	return o.ChickenQuestHandedIn
+	return *o.ChickenQuestHandedIn
 }
 
-// GetChickenQuestHandedInOk returns a tuple with the ChickenQuestHandedIn field value
+// GetChickenQuestHandedInOk returns a tuple with the ChickenQuestHandedIn field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetChickenQuestHandedInOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ChickenQuestHandedIn) {
 		return nil, false
 	}
-	return &o.ChickenQuestHandedIn, true
+	return o.ChickenQuestHandedIn, true
 }
 
-// SetChickenQuestHandedIn sets field value
+// HasChickenQuestHandedIn returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) HasChickenQuestHandedIn() bool {
+	if o != nil && !IsNil(o.ChickenQuestHandedIn) {
+		return true
+	}
+
+	return false
+}
+
+// SetChickenQuestHandedIn gets a reference to the given int64 and assigns it to the ChickenQuestHandedIn field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetChickenQuestHandedIn(v int64) {
-	o.ChickenQuestHandedIn = v
+	o.ChickenQuestHandedIn = &v
 }
 
 // GetDuelTrainingQuest returns the DuelTrainingQuest field value
@@ -581,28 +585,36 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetLastKuudraRelic(v int
 	o.LastKuudraRelic = &v
 }
 
-// GetLastReset returns the LastReset field value
+// GetLastReset returns the LastReset field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetLastReset() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.LastReset) {
 		var ret int64
 		return ret
 	}
-
-	return o.LastReset
+	return *o.LastReset
 }
 
-// GetLastResetOk returns a tuple with the LastReset field value
+// GetLastResetOk returns a tuple with the LastReset field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetLastResetOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.LastReset) {
 		return nil, false
 	}
-	return &o.LastReset, true
+	return o.LastReset, true
 }
 
-// SetLastReset sets field value
+// HasLastReset returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) HasLastReset() bool {
+	if o != nil && !IsNil(o.LastReset) {
+		return true
+	}
+
+	return false
+}
+
+// SetLastReset gets a reference to the given int64 and assigns it to the LastReset field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetLastReset(v int64) {
-	o.LastReset = v
+	o.LastReset = &v
 }
 
 // GetLastVampireBlood returns the LastVampireBlood field value if set, zero value otherwise.
@@ -661,28 +673,36 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetMinibossDaily(v map[s
 	o.MinibossDaily = v
 }
 
-// GetMinibossData returns the MinibossData field value
+// GetMinibossData returns the MinibossData field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetMinibossData() SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData {
-	if o == nil {
+	if o == nil || IsNil(o.MinibossData) {
 		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData
 		return ret
 	}
-
-	return o.MinibossData
+	return *o.MinibossData
 }
 
-// GetMinibossDataOk returns a tuple with the MinibossData field value
+// GetMinibossDataOk returns a tuple with the MinibossData field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetMinibossDataOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.MinibossData) {
 		return nil, false
 	}
-	return &o.MinibossData, true
+	return o.MinibossData, true
 }
 
-// SetMinibossData sets field value
+// HasMinibossData returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) HasMinibossData() bool {
+	if o != nil && !IsNil(o.MinibossData) {
+		return true
+	}
+
+	return false
+}
+
+// SetMinibossData gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData and assigns it to the MinibossData field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetMinibossData(v SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) {
-	o.MinibossData = v
+	o.MinibossData = &v
 }
 
 // GetMollimQuest returns the MollimQuest field value
@@ -733,28 +753,36 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetPabloQuest(v SkyBlock
 	o.PabloQuest = v
 }
 
-// GetPaidBruuh returns the PaidBruuh field value
+// GetPaidBruuh returns the PaidBruuh field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetPaidBruuh() bool {
-	if o == nil {
+	if o == nil || IsNil(o.PaidBruuh) {
 		var ret bool
 		return ret
 	}
-
-	return o.PaidBruuh
+	return *o.PaidBruuh
 }
 
-// GetPaidBruuhOk returns a tuple with the PaidBruuh field value
+// GetPaidBruuhOk returns a tuple with the PaidBruuh field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetPaidBruuhOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PaidBruuh) {
 		return nil, false
 	}
-	return &o.PaidBruuh, true
+	return o.PaidBruuh, true
 }
 
-// SetPaidBruuh sets field value
+// HasPaidBruuh returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) HasPaidBruuh() bool {
+	if o != nil && !IsNil(o.PaidBruuh) {
+		return true
+	}
+
+	return false
+}
+
+// SetPaidBruuh gets a reference to the given bool and assigns it to the PaidBruuh field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetPaidBruuh(v bool) {
-	o.PaidBruuh = v
+	o.PaidBruuh = &v
 }
 
 // GetPomtairQuest returns the PomtairQuest field value
@@ -806,9 +834,9 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetQuestData(v SkyBlockP
 }
 
 // GetQuestRewards returns the QuestRewards field value
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetQuestRewards() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards {
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetQuestRewards() map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue {
 	if o == nil {
-		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards
+		var ret map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue
 		return ret
 	}
 
@@ -817,15 +845,15 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetQuestRewards() SkyBlo
 
 // GetQuestRewardsOk returns a tuple with the QuestRewards field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetQuestRewardsOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards, bool) {
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) GetQuestRewardsOk() (map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue, bool) {
 	if o == nil {
-		return nil, false
+		return map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue{}, false
 	}
-	return &o.QuestRewards, true
+	return o.QuestRewards, true
 }
 
 // SetQuestRewards sets field value
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetQuestRewards(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewards) {
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) SetQuestRewards(v map[string]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestRewardsValue) {
 	o.QuestRewards = v
 }
 
@@ -981,7 +1009,9 @@ func (o SkyBlockProfileMemberNetherIslandPlayerQuests) ToMap() (map[string]inter
 		toSerialize["cavity_rarity"] = o.CavityRarity
 	}
 	toSerialize["chicken_quest"] = o.ChickenQuest
-	toSerialize["chicken_quest_handed_in"] = o.ChickenQuestHandedIn
+	if !IsNil(o.ChickenQuestHandedIn) {
+		toSerialize["chicken_quest_handed_in"] = o.ChickenQuestHandedIn
+	}
 	toSerialize["duel_training_quest"] = o.DuelTrainingQuest
 	toSerialize["edelis_quest"] = o.EdelisQuest
 	if !IsNil(o.FishedWetNapkin) {
@@ -1012,15 +1042,21 @@ func (o SkyBlockProfileMemberNetherIslandPlayerQuests) ToMap() (map[string]inter
 	if !IsNil(o.LastKuudraRelic) {
 		toSerialize["last_kuudra_relic"] = o.LastKuudraRelic
 	}
-	toSerialize["last_reset"] = o.LastReset
+	if !IsNil(o.LastReset) {
+		toSerialize["last_reset"] = o.LastReset
+	}
 	if !IsNil(o.LastVampireBlood) {
 		toSerialize["last_vampire_blood"] = o.LastVampireBlood
 	}
 	toSerialize["miniboss_daily"] = o.MinibossDaily
-	toSerialize["miniboss_data"] = o.MinibossData
+	if !IsNil(o.MinibossData) {
+		toSerialize["miniboss_data"] = o.MinibossData
+	}
 	toSerialize["mollim_quest"] = o.MollimQuest
 	toSerialize["pablo_quest"] = o.PabloQuest
-	toSerialize["paid_bruuh"] = o.PaidBruuh
+	if !IsNil(o.PaidBruuh) {
+		toSerialize["paid_bruuh"] = o.PaidBruuh
+	}
 	toSerialize["pomtair_quest"] = o.PomtairQuest
 	toSerialize["quest_data"] = o.QuestData
 	toSerialize["quest_rewards"] = o.QuestRewards
@@ -1044,16 +1080,12 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerQuests) UnmarshalJSON(data []byt
 		"alchemist_quest",
 		"aranya_quest",
 		"chicken_quest",
-		"chicken_quest_handed_in",
 		"duel_training_quest",
 		"edelis_quest",
 		"kuuda_boss_daily",
-		"last_reset",
 		"miniboss_daily",
-		"miniboss_data",
 		"mollim_quest",
 		"pablo_quest",
-		"paid_bruuh",
 		"pomtair_quest",
 		"quest_data",
 		"quest_rewards",

@@ -21,10 +21,10 @@ var _ MappedNullable = &SkyBlockProfileMemberObjectivesDefeatTheMonster{}
 
 // SkyBlockProfileMemberObjectivesDefeatTheMonster struct for SkyBlockProfileMemberObjectivesDefeatTheMonster
 type SkyBlockProfileMemberObjectivesDefeatTheMonster struct {
-	CompletedAt int64                                                `json:"completed_at"`
-	Completions int64                                                `json:"completions"`
-	Progress    int64                                                `json:"progress"`
-	Status      SkyBlockProfileMemberObjectivesCatchLaseasFishStatus `json:"status"`
+	CompletedAt int64                                                             `json:"completed_at"`
+	Completions *int64                                                            `json:"completions,omitempty"`
+	Progress    int64                                                             `json:"progress"`
+	Status      SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus `json:"status"`
 }
 
 type _SkyBlockProfileMemberObjectivesDefeatTheMonster SkyBlockProfileMemberObjectivesDefeatTheMonster
@@ -33,10 +33,9 @@ type _SkyBlockProfileMemberObjectivesDefeatTheMonster SkyBlockProfileMemberObjec
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberObjectivesDefeatTheMonster(completedAt int64, completions int64, progress int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) *SkyBlockProfileMemberObjectivesDefeatTheMonster {
+func NewSkyBlockProfileMemberObjectivesDefeatTheMonster(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) *SkyBlockProfileMemberObjectivesDefeatTheMonster {
 	this := SkyBlockProfileMemberObjectivesDefeatTheMonster{}
 	this.CompletedAt = completedAt
-	this.Completions = completions
 	this.Progress = progress
 	this.Status = status
 	return &this
@@ -74,28 +73,36 @@ func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) SetCompletedAt(v int64
 	o.CompletedAt = v
 }
 
-// GetCompletions returns the Completions field value
+// GetCompletions returns the Completions field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) GetCompletions() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.Completions) {
 		var ret int64
 		return ret
 	}
-
-	return o.Completions
+	return *o.Completions
 }
 
-// GetCompletionsOk returns a tuple with the Completions field value
+// GetCompletionsOk returns a tuple with the Completions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) GetCompletionsOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Completions) {
 		return nil, false
 	}
-	return &o.Completions, true
+	return o.Completions, true
 }
 
-// SetCompletions sets field value
+// HasCompletions returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) HasCompletions() bool {
+	if o != nil && !IsNil(o.Completions) {
+		return true
+	}
+
+	return false
+}
+
+// SetCompletions gets a reference to the given int64 and assigns it to the Completions field.
 func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) SetCompletions(v int64) {
-	o.Completions = v
+	o.Completions = &v
 }
 
 // GetProgress returns the Progress field value
@@ -123,9 +130,9 @@ func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) SetProgress(v int64) {
 }
 
 // GetStatus returns the Status field value
-func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus {
+func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus {
 	if o == nil {
-		var ret SkyBlockProfileMemberObjectivesCatchLaseasFishStatus
+		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus
 		return ret
 	}
 
@@ -134,7 +141,7 @@ func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) GetStatus() SkyBlockPr
 
 // GetStatusOk returns a tuple with the Status field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool) {
+func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -142,7 +149,7 @@ func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) GetStatusOk() (*SkyBlo
 }
 
 // SetStatus sets field value
-func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) {
+func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) {
 	o.Status = v
 }
 
@@ -157,7 +164,9 @@ func (o SkyBlockProfileMemberObjectivesDefeatTheMonster) MarshalJSON() ([]byte, 
 func (o SkyBlockProfileMemberObjectivesDefeatTheMonster) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["completed_at"] = o.CompletedAt
-	toSerialize["completions"] = o.Completions
+	if !IsNil(o.Completions) {
+		toSerialize["completions"] = o.Completions
+	}
 	toSerialize["progress"] = o.Progress
 	toSerialize["status"] = o.Status
 	return toSerialize, nil
@@ -169,7 +178,6 @@ func (o *SkyBlockProfileMemberObjectivesDefeatTheMonster) UnmarshalJSON(data []b
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"completed_at",
-		"completions",
 		"progress",
 		"status",
 	}

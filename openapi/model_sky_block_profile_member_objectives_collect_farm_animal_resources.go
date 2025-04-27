@@ -21,12 +21,12 @@ var _ MappedNullable = &SkyBlockProfileMemberObjectivesCollectFarmAnimalResource
 
 // SkyBlockProfileMemberObjectivesCollectFarmAnimalResources struct for SkyBlockProfileMemberObjectivesCollectFarmAnimalResources
 type SkyBlockProfileMemberObjectivesCollectFarmAnimalResources struct {
-	LEATHER     *bool                                                `json:"LEATHER,omitempty"`
-	PORK        *bool                                                `json:"PORK,omitempty"`
-	RAW_CHICKEN *bool                                                `json:"RAW_CHICKEN,omitempty"`
-	CompletedAt int64                                                `json:"completed_at"`
-	Progress    int64                                                `json:"progress"`
-	Status      SkyBlockProfileMemberObjectivesCatchLaseasFishStatus `json:"status"`
+	LEATHER     *bool                                                             `json:"LEATHER,omitempty"`
+	PORK        *bool                                                             `json:"PORK,omitempty"`
+	RAW_CHICKEN *bool                                                             `json:"RAW_CHICKEN,omitempty"`
+	CompletedAt int64                                                             `json:"completed_at"`
+	Progress    int64                                                             `json:"progress"`
+	Status      SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus `json:"status"`
 }
 
 type _SkyBlockProfileMemberObjectivesCollectFarmAnimalResources SkyBlockProfileMemberObjectivesCollectFarmAnimalResources
@@ -35,7 +35,7 @@ type _SkyBlockProfileMemberObjectivesCollectFarmAnimalResources SkyBlockProfileM
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberObjectivesCollectFarmAnimalResources(completedAt int64, progress int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources {
+func NewSkyBlockProfileMemberObjectivesCollectFarmAnimalResources(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources {
 	this := SkyBlockProfileMemberObjectivesCollectFarmAnimalResources{}
 	this.CompletedAt = completedAt
 	this.Progress = progress
@@ -196,9 +196,9 @@ func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) SetProgress(
 }
 
 // GetStatus returns the Status field value
-func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus {
+func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus {
 	if o == nil {
-		var ret SkyBlockProfileMemberObjectivesCatchLaseasFishStatus
+		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus
 		return ret
 	}
 
@@ -207,7 +207,7 @@ func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) GetStatus() 
 
 // GetStatusOk returns a tuple with the Status field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool) {
+func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -215,7 +215,7 @@ func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) GetStatusOk(
 }
 
 // SetStatus sets field value
-func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) {
+func (o *SkyBlockProfileMemberObjectivesCollectFarmAnimalResources) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) {
 	o.Status = v
 }
 

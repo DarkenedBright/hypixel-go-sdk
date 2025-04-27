@@ -7,14 +7,14 @@ Name | Type | Description | Notes
 **CompletedAt** | **int64** |  | 
 **FlyfishFished** | **int64** |  | 
 **Progress** | **int64** |  | 
-**SkeletonFishFished** | **int64** |  | 
-**Status** | [**SkyBlockProfileMemberObjectivesCatchLaseasFishStatus**](SkyBlockProfileMemberObjectivesCatchLaseasFishStatus.md) |  | 
+**SkeletonFishFished** | Pointer to **int64** |  | [optional] 
+**Status** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus.md) |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberObjectivesCatchLaseasFish
 
-`func NewSkyBlockProfileMemberObjectivesCatchLaseasFish(completedAt int64, flyfishFished int64, progress int64, skeletonFishFished int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, ) *SkyBlockProfileMemberObjectivesCatchLaseasFish`
+`func NewSkyBlockProfileMemberObjectivesCatchLaseasFish(completedAt int64, flyfishFished int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, ) *SkyBlockProfileMemberObjectivesCatchLaseasFish`
 
 NewSkyBlockProfileMemberObjectivesCatchLaseasFish instantiates a new SkyBlockProfileMemberObjectivesCatchLaseasFish object
 This constructor will assign default values to properties that have it defined,
@@ -108,23 +108,28 @@ and a boolean to check if the value has been set.
 
 SetSkeletonFishFished sets SkeletonFishFished field to given value.
 
+### HasSkeletonFishFished
+
+`func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) HasSkeletonFishFished() bool`
+
+HasSkeletonFishFished returns a boolean if a field has been set.
 
 ### GetStatus
 
-`func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus`
+`func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool)`
+`func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus)`
+`func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus)`
 
 SetStatus sets Status field to given value.
 

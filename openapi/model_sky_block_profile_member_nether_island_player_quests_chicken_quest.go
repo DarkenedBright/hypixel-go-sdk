@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest type satisfies the MappedNullable interface at compile time
@@ -21,22 +19,17 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQues
 
 // SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest struct for SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest
 type SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest struct {
-	ChickenQuestCollected []SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner `json:"chicken_quest_collected"`
-	ChickenQuestProgress  int64                                                                                 `json:"chicken_quest_progress"`
-	ChickenQuestStart     bool                                                                                  `json:"chicken_quest_start"`
+	ChickenQuestCollected []SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner `json:"chicken_quest_collected,omitempty"`
+	ChickenQuestProgress  *int64                                                                                `json:"chicken_quest_progress,omitempty"`
+	ChickenQuestStart     *bool                                                                                 `json:"chicken_quest_start,omitempty"`
 }
-
-type _SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest
 
 // NewSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest(chickenQuestCollected []SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner, chickenQuestProgress int64, chickenQuestStart bool) *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest {
+func NewSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest() *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest {
 	this := SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest{}
-	this.ChickenQuestCollected = chickenQuestCollected
-	this.ChickenQuestProgress = chickenQuestProgress
-	this.ChickenQuestStart = chickenQuestStart
 	return &this
 }
 
@@ -48,76 +41,100 @@ func NewSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestWithDefaults() 
 	return &this
 }
 
-// GetChickenQuestCollected returns the ChickenQuestCollected field value
+// GetChickenQuestCollected returns the ChickenQuestCollected field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) GetChickenQuestCollected() []SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner {
-	if o == nil {
+	if o == nil || IsNil(o.ChickenQuestCollected) {
 		var ret []SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner
 		return ret
 	}
-
 	return o.ChickenQuestCollected
 }
 
-// GetChickenQuestCollectedOk returns a tuple with the ChickenQuestCollected field value
+// GetChickenQuestCollectedOk returns a tuple with the ChickenQuestCollected field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) GetChickenQuestCollectedOk() ([]SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ChickenQuestCollected) {
 		return nil, false
 	}
 	return o.ChickenQuestCollected, true
 }
 
-// SetChickenQuestCollected sets field value
+// HasChickenQuestCollected returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) HasChickenQuestCollected() bool {
+	if o != nil && !IsNil(o.ChickenQuestCollected) {
+		return true
+	}
+
+	return false
+}
+
+// SetChickenQuestCollected gets a reference to the given []SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner and assigns it to the ChickenQuestCollected field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) SetChickenQuestCollected(v []SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuestChickenQuestCollectedInner) {
 	o.ChickenQuestCollected = v
 }
 
-// GetChickenQuestProgress returns the ChickenQuestProgress field value
+// GetChickenQuestProgress returns the ChickenQuestProgress field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) GetChickenQuestProgress() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.ChickenQuestProgress) {
 		var ret int64
 		return ret
 	}
-
-	return o.ChickenQuestProgress
+	return *o.ChickenQuestProgress
 }
 
-// GetChickenQuestProgressOk returns a tuple with the ChickenQuestProgress field value
+// GetChickenQuestProgressOk returns a tuple with the ChickenQuestProgress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) GetChickenQuestProgressOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ChickenQuestProgress) {
 		return nil, false
 	}
-	return &o.ChickenQuestProgress, true
+	return o.ChickenQuestProgress, true
 }
 
-// SetChickenQuestProgress sets field value
+// HasChickenQuestProgress returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) HasChickenQuestProgress() bool {
+	if o != nil && !IsNil(o.ChickenQuestProgress) {
+		return true
+	}
+
+	return false
+}
+
+// SetChickenQuestProgress gets a reference to the given int64 and assigns it to the ChickenQuestProgress field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) SetChickenQuestProgress(v int64) {
-	o.ChickenQuestProgress = v
+	o.ChickenQuestProgress = &v
 }
 
-// GetChickenQuestStart returns the ChickenQuestStart field value
+// GetChickenQuestStart returns the ChickenQuestStart field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) GetChickenQuestStart() bool {
-	if o == nil {
+	if o == nil || IsNil(o.ChickenQuestStart) {
 		var ret bool
 		return ret
 	}
-
-	return o.ChickenQuestStart
+	return *o.ChickenQuestStart
 }
 
-// GetChickenQuestStartOk returns a tuple with the ChickenQuestStart field value
+// GetChickenQuestStartOk returns a tuple with the ChickenQuestStart field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) GetChickenQuestStartOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ChickenQuestStart) {
 		return nil, false
 	}
-	return &o.ChickenQuestStart, true
+	return o.ChickenQuestStart, true
 }
 
-// SetChickenQuestStart sets field value
+// HasChickenQuestStart returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) HasChickenQuestStart() bool {
+	if o != nil && !IsNil(o.ChickenQuestStart) {
+		return true
+	}
+
+	return false
+}
+
+// SetChickenQuestStart gets a reference to the given bool and assigns it to the ChickenQuestStart field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) SetChickenQuestStart(v bool) {
-	o.ChickenQuestStart = v
+	o.ChickenQuestStart = &v
 }
 
 func (o SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) MarshalJSON() ([]byte, error) {
@@ -130,49 +147,16 @@ func (o SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) MarshalJSON()
 
 func (o SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["chicken_quest_collected"] = o.ChickenQuestCollected
-	toSerialize["chicken_quest_progress"] = o.ChickenQuestProgress
-	toSerialize["chicken_quest_start"] = o.ChickenQuestStart
+	if !IsNil(o.ChickenQuestCollected) {
+		toSerialize["chicken_quest_collected"] = o.ChickenQuestCollected
+	}
+	if !IsNil(o.ChickenQuestProgress) {
+		toSerialize["chicken_quest_progress"] = o.ChickenQuestProgress
+	}
+	if !IsNil(o.ChickenQuestStart) {
+		toSerialize["chicken_quest_start"] = o.ChickenQuestStart
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"chicken_quest_collected",
-		"chicken_quest_progress",
-		"chicken_quest_start",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest := _SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest(varSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberNetherIslandPlayerQuestsChickenQuest struct {

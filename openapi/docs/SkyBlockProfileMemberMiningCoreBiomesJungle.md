@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**JungleTempleChestUses** | **int64** |  | 
-**JungleTempleOpen** | **bool** |  | 
+**JungleTempleChestUses** | Pointer to **int64** |  | [optional] 
+**JungleTempleOpen** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberMiningCoreBiomesJungle
 
-`func NewSkyBlockProfileMemberMiningCoreBiomesJungle(jungleTempleChestUses int64, jungleTempleOpen bool, ) *SkyBlockProfileMemberMiningCoreBiomesJungle`
+`func NewSkyBlockProfileMemberMiningCoreBiomesJungle() *SkyBlockProfileMemberMiningCoreBiomesJungle`
 
 NewSkyBlockProfileMemberMiningCoreBiomesJungle instantiates a new SkyBlockProfileMemberMiningCoreBiomesJungle object
 This constructor will assign default values to properties that have it defined,
@@ -45,6 +45,11 @@ and a boolean to check if the value has been set.
 
 SetJungleTempleChestUses sets JungleTempleChestUses field to given value.
 
+### HasJungleTempleChestUses
+
+`func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) HasJungleTempleChestUses() bool`
+
+HasJungleTempleChestUses returns a boolean if a field has been set.
 
 ### GetJungleTempleOpen
 
@@ -65,6 +70,11 @@ and a boolean to check if the value has been set.
 
 SetJungleTempleOpen sets JungleTempleOpen field to given value.
 
+### HasJungleTempleOpen
+
+`func (o *SkyBlockProfileMemberMiningCoreBiomesJungle) HasJungleTempleOpen() bool`
+
+HasJungleTempleOpen returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

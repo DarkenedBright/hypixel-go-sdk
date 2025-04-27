@@ -29,6 +29,8 @@
 
 * `DOLPHIN` (value: `"DOLPHIN"`)
 
+* `DROPLET_WISP` (value: `"DROPLET_WISP"`)
+
 * `EERIE` (value: `"EERIE"`)
 
 * `ELEPHANT` (value: `"ELEPHANT"`)
@@ -41,9 +43,13 @@
 
 * `FLYING_FISH` (value: `"FLYING_FISH"`)
 
+* `FROST_WISP` (value: `"FROST_WISP"`)
+
 * `GHOUL` (value: `"GHOUL"`)
 
 * `GIRAFFE` (value: `"GIRAFFE"`)
+
+* `GLACIAL_WISP` (value: `"GLACIAL_WISP"`)
 
 * `GLACITE_GOLEM` (value: `"GLACITE_GOLEM"`)
 
@@ -61,7 +67,11 @@
 
 * `HEDGEHOG` (value: `"HEDGEHOG"`)
 
+* `HERMIT_CRAB` (value: `"HERMIT_CRAB"`)
+
 * `HORSE` (value: `"HORSE"`)
+
+* `HOUND` (value: `"HOUND"`)
 
 * `JELLYFISH` (value: `"JELLYFISH"`)
 
@@ -133,9 +143,13 @@
 
 * `SQUID` (value: `"SQUID"`)
 
+* `SUBZERO_WISP` (value: `"SUBZERO_WISP"`)
+
 * `TARANTULA` (value: `"TARANTULA"`)
 
 * `TIGER` (value: `"TIGER"`)
+
+* `TURTLE` (value: `"TURTLE"`)
 
 * `TYRANNOSAURUS` (value: `"TYRANNOSAURUS"`)
 

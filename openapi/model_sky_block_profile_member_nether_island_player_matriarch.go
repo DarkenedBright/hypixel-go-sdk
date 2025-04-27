@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberNetherIslandPlayerMatriarch type satisfies the MappedNullable interface at compile time
@@ -21,21 +19,17 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerMatriarch{}
 
 // SkyBlockProfileMemberNetherIslandPlayerMatriarch struct for SkyBlockProfileMemberNetherIslandPlayerMatriarch
 type SkyBlockProfileMemberNetherIslandPlayerMatriarch struct {
-	LastAttempt     int64   `json:"last_attempt"`
-	PearlsCollected int64   `json:"pearls_collected"`
+	LastAttempt     *int64  `json:"last_attempt,omitempty"`
+	PearlsCollected *int64  `json:"pearls_collected,omitempty"`
 	RecentRefreshes []int64 `json:"recent_refreshes,omitempty"`
 }
-
-type _SkyBlockProfileMemberNetherIslandPlayerMatriarch SkyBlockProfileMemberNetherIslandPlayerMatriarch
 
 // NewSkyBlockProfileMemberNetherIslandPlayerMatriarch instantiates a new SkyBlockProfileMemberNetherIslandPlayerMatriarch object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerMatriarch(lastAttempt int64, pearlsCollected int64) *SkyBlockProfileMemberNetherIslandPlayerMatriarch {
+func NewSkyBlockProfileMemberNetherIslandPlayerMatriarch() *SkyBlockProfileMemberNetherIslandPlayerMatriarch {
 	this := SkyBlockProfileMemberNetherIslandPlayerMatriarch{}
-	this.LastAttempt = lastAttempt
-	this.PearlsCollected = pearlsCollected
 	return &this
 }
 
@@ -47,52 +41,68 @@ func NewSkyBlockProfileMemberNetherIslandPlayerMatriarchWithDefaults() *SkyBlock
 	return &this
 }
 
-// GetLastAttempt returns the LastAttempt field value
+// GetLastAttempt returns the LastAttempt field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) GetLastAttempt() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.LastAttempt) {
 		var ret int64
 		return ret
 	}
-
-	return o.LastAttempt
+	return *o.LastAttempt
 }
 
-// GetLastAttemptOk returns a tuple with the LastAttempt field value
+// GetLastAttemptOk returns a tuple with the LastAttempt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) GetLastAttemptOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.LastAttempt) {
 		return nil, false
 	}
-	return &o.LastAttempt, true
+	return o.LastAttempt, true
 }
 
-// SetLastAttempt sets field value
+// HasLastAttempt returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) HasLastAttempt() bool {
+	if o != nil && !IsNil(o.LastAttempt) {
+		return true
+	}
+
+	return false
+}
+
+// SetLastAttempt gets a reference to the given int64 and assigns it to the LastAttempt field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) SetLastAttempt(v int64) {
-	o.LastAttempt = v
+	o.LastAttempt = &v
 }
 
-// GetPearlsCollected returns the PearlsCollected field value
+// GetPearlsCollected returns the PearlsCollected field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) GetPearlsCollected() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.PearlsCollected) {
 		var ret int64
 		return ret
 	}
-
-	return o.PearlsCollected
+	return *o.PearlsCollected
 }
 
-// GetPearlsCollectedOk returns a tuple with the PearlsCollected field value
+// GetPearlsCollectedOk returns a tuple with the PearlsCollected field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) GetPearlsCollectedOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PearlsCollected) {
 		return nil, false
 	}
-	return &o.PearlsCollected, true
+	return o.PearlsCollected, true
 }
 
-// SetPearlsCollected sets field value
+// HasPearlsCollected returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) HasPearlsCollected() bool {
+	if o != nil && !IsNil(o.PearlsCollected) {
+		return true
+	}
+
+	return false
+}
+
+// SetPearlsCollected gets a reference to the given int64 and assigns it to the PearlsCollected field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) SetPearlsCollected(v int64) {
-	o.PearlsCollected = v
+	o.PearlsCollected = &v
 }
 
 // GetRecentRefreshes returns the RecentRefreshes field value if set, zero value otherwise.
@@ -137,50 +147,16 @@ func (o SkyBlockProfileMemberNetherIslandPlayerMatriarch) MarshalJSON() ([]byte,
 
 func (o SkyBlockProfileMemberNetherIslandPlayerMatriarch) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["last_attempt"] = o.LastAttempt
-	toSerialize["pearls_collected"] = o.PearlsCollected
+	if !IsNil(o.LastAttempt) {
+		toSerialize["last_attempt"] = o.LastAttempt
+	}
+	if !IsNil(o.PearlsCollected) {
+		toSerialize["pearls_collected"] = o.PearlsCollected
+	}
 	if !IsNil(o.RecentRefreshes) {
 		toSerialize["recent_refreshes"] = o.RecentRefreshes
 	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"last_attempt",
-		"pearls_collected",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberNetherIslandPlayerMatriarch := _SkyBlockProfileMemberNetherIslandPlayerMatriarch{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberNetherIslandPlayerMatriarch)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberNetherIslandPlayerMatriarch(varSkyBlockProfileMemberNetherIslandPlayerMatriarch)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberNetherIslandPlayerMatriarch struct {

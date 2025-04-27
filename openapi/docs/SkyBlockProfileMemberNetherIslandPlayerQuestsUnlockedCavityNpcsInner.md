@@ -9,6 +9,8 @@
 
 * `FINAL` (value: `"final"`)
 
+* `FINAL_2` (value: `"final_2"`)
+
 * `KUUDRA_ARCHAEOLOGIST` (value: `"kuudra_archaeologist"`)
 
 * `KUUDRA_LOREMASTER` (value: `"kuudra_loremaster"`)

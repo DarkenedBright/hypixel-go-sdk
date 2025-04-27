@@ -19,9 +19,10 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest{}
 
 // SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest struct for SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest
 type SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest struct {
-	LastCompletion *int64 `json:"last_completion,omitempty"`
-	LastToyDrop    *int64 `json:"last_toy_drop,omitempty"`
-	TalkedToNpc    *bool  `json:"talked_to_npc,omitempty"`
+	LastCompletion *int64  `json:"last_completion,omitempty"`
+	LastToyDrop    *int64  `json:"last_toy_drop,omitempty"`
+	MobId          *string `json:"mob_id,omitempty"`
+	TalkedToNpc    *bool   `json:"talked_to_npc,omitempty"`
 }
 
 // NewSkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest object
@@ -105,6 +106,38 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) SetLastToyDrop(
 	o.LastToyDrop = &v
 }
 
+// GetMobId returns the MobId field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) GetMobId() string {
+	if o == nil || IsNil(o.MobId) {
+		var ret string
+		return ret
+	}
+	return *o.MobId
+}
+
+// GetMobIdOk returns a tuple with the MobId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) GetMobIdOk() (*string, bool) {
+	if o == nil || IsNil(o.MobId) {
+		return nil, false
+	}
+	return o.MobId, true
+}
+
+// HasMobId returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) HasMobId() bool {
+	if o != nil && !IsNil(o.MobId) {
+		return true
+	}
+
+	return false
+}
+
+// SetMobId gets a reference to the given string and assigns it to the MobId field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) SetMobId(v string) {
+	o.MobId = &v
+}
+
 // GetTalkedToNpc returns the TalkedToNpc field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) GetTalkedToNpc() bool {
 	if o == nil || IsNil(o.TalkedToNpc) {
@@ -152,6 +185,9 @@ func (o SkyBlockProfileMemberNetherIslandPlayerQuestsSuusQuest) ToMap() (map[str
 	}
 	if !IsNil(o.LastToyDrop) {
 		toSerialize["last_toy_drop"] = o.LastToyDrop
+	}
+	if !IsNil(o.MobId) {
+		toSerialize["mob_id"] = o.MobId
 	}
 	if !IsNil(o.TalkedToNpc) {
 		toSerialize["talked_to_npc"] = o.TalkedToNpc

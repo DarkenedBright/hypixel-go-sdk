@@ -21,8 +21,8 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCoreBiomesGoblin{}
 
 // SkyBlockProfileMemberMiningCoreBiomesGoblin struct for SkyBlockProfileMemberMiningCoreBiomesGoblin
 type SkyBlockProfileMemberMiningCoreBiomesGoblin struct {
-	KingQuestActive     bool  `json:"king_quest_active"`
-	KingQuestsCompleted int64 `json:"king_quests_completed"`
+	KingQuestActive     bool   `json:"king_quest_active"`
+	KingQuestsCompleted *int64 `json:"king_quests_completed,omitempty"`
 }
 
 type _SkyBlockProfileMemberMiningCoreBiomesGoblin SkyBlockProfileMemberMiningCoreBiomesGoblin
@@ -31,10 +31,9 @@ type _SkyBlockProfileMemberMiningCoreBiomesGoblin SkyBlockProfileMemberMiningCor
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberMiningCoreBiomesGoblin(kingQuestActive bool, kingQuestsCompleted int64) *SkyBlockProfileMemberMiningCoreBiomesGoblin {
+func NewSkyBlockProfileMemberMiningCoreBiomesGoblin(kingQuestActive bool) *SkyBlockProfileMemberMiningCoreBiomesGoblin {
 	this := SkyBlockProfileMemberMiningCoreBiomesGoblin{}
 	this.KingQuestActive = kingQuestActive
-	this.KingQuestsCompleted = kingQuestsCompleted
 	return &this
 }
 
@@ -70,28 +69,36 @@ func (o *SkyBlockProfileMemberMiningCoreBiomesGoblin) SetKingQuestActive(v bool)
 	o.KingQuestActive = v
 }
 
-// GetKingQuestsCompleted returns the KingQuestsCompleted field value
+// GetKingQuestsCompleted returns the KingQuestsCompleted field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreBiomesGoblin) GetKingQuestsCompleted() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.KingQuestsCompleted) {
 		var ret int64
 		return ret
 	}
-
-	return o.KingQuestsCompleted
+	return *o.KingQuestsCompleted
 }
 
-// GetKingQuestsCompletedOk returns a tuple with the KingQuestsCompleted field value
+// GetKingQuestsCompletedOk returns a tuple with the KingQuestsCompleted field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreBiomesGoblin) GetKingQuestsCompletedOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.KingQuestsCompleted) {
 		return nil, false
 	}
-	return &o.KingQuestsCompleted, true
+	return o.KingQuestsCompleted, true
 }
 
-// SetKingQuestsCompleted sets field value
+// HasKingQuestsCompleted returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreBiomesGoblin) HasKingQuestsCompleted() bool {
+	if o != nil && !IsNil(o.KingQuestsCompleted) {
+		return true
+	}
+
+	return false
+}
+
+// SetKingQuestsCompleted gets a reference to the given int64 and assigns it to the KingQuestsCompleted field.
 func (o *SkyBlockProfileMemberMiningCoreBiomesGoblin) SetKingQuestsCompleted(v int64) {
-	o.KingQuestsCompleted = v
+	o.KingQuestsCompleted = &v
 }
 
 func (o SkyBlockProfileMemberMiningCoreBiomesGoblin) MarshalJSON() ([]byte, error) {
@@ -105,7 +112,9 @@ func (o SkyBlockProfileMemberMiningCoreBiomesGoblin) MarshalJSON() ([]byte, erro
 func (o SkyBlockProfileMemberMiningCoreBiomesGoblin) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["king_quest_active"] = o.KingQuestActive
-	toSerialize["king_quests_completed"] = o.KingQuestsCompleted
+	if !IsNil(o.KingQuestsCompleted) {
+		toSerialize["king_quests_completed"] = o.KingQuestsCompleted
+	}
 	return toSerialize, nil
 }
 
@@ -115,7 +124,6 @@ func (o *SkyBlockProfileMemberMiningCoreBiomesGoblin) UnmarshalJSON(data []byte)
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"king_quest_active",
-		"king_quests_completed",
 	}
 
 	allProperties := make(map[string]interface{})

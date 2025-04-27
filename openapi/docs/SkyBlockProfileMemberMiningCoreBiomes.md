@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Dwarven** | **map[string]interface{}** |  | 
-**Goblin** | [**SkyBlockProfileMemberMiningCoreBiomesGoblin**](SkyBlockProfileMemberMiningCoreBiomesGoblin.md) |  | 
-**Jungle** | [**SkyBlockProfileMemberMiningCoreBiomesJungle**](SkyBlockProfileMemberMiningCoreBiomesJungle.md) |  | 
-**Precursor** | [**SkyBlockProfileMemberMiningCoreBiomesPrecursor**](SkyBlockProfileMemberMiningCoreBiomesPrecursor.md) |  | 
+**Dwarven** | Pointer to **map[string]interface{}** |  | [optional] 
+**Goblin** | Pointer to [**SkyBlockProfileMemberMiningCoreBiomesGoblin**](SkyBlockProfileMemberMiningCoreBiomesGoblin.md) |  | [optional] 
+**Jungle** | Pointer to [**SkyBlockProfileMemberMiningCoreBiomesJungle**](SkyBlockProfileMemberMiningCoreBiomesJungle.md) |  | [optional] 
+**Precursor** | Pointer to [**SkyBlockProfileMemberMiningCoreBiomesPrecursor**](SkyBlockProfileMemberMiningCoreBiomesPrecursor.md) |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberMiningCoreBiomes
 
-`func NewSkyBlockProfileMemberMiningCoreBiomes(dwarven map[string]interface{}, goblin SkyBlockProfileMemberMiningCoreBiomesGoblin, jungle SkyBlockProfileMemberMiningCoreBiomesJungle, precursor SkyBlockProfileMemberMiningCoreBiomesPrecursor, ) *SkyBlockProfileMemberMiningCoreBiomes`
+`func NewSkyBlockProfileMemberMiningCoreBiomes() *SkyBlockProfileMemberMiningCoreBiomes`
 
 NewSkyBlockProfileMemberMiningCoreBiomes instantiates a new SkyBlockProfileMemberMiningCoreBiomes object
 This constructor will assign default values to properties that have it defined,
@@ -47,6 +47,11 @@ and a boolean to check if the value has been set.
 
 SetDwarven sets Dwarven field to given value.
 
+### HasDwarven
+
+`func (o *SkyBlockProfileMemberMiningCoreBiomes) HasDwarven() bool`
+
+HasDwarven returns a boolean if a field has been set.
 
 ### GetGoblin
 
@@ -67,6 +72,11 @@ and a boolean to check if the value has been set.
 
 SetGoblin sets Goblin field to given value.
 
+### HasGoblin
+
+`func (o *SkyBlockProfileMemberMiningCoreBiomes) HasGoblin() bool`
+
+HasGoblin returns a boolean if a field has been set.
 
 ### GetJungle
 
@@ -87,6 +97,11 @@ and a boolean to check if the value has been set.
 
 SetJungle sets Jungle field to given value.
 
+### HasJungle
+
+`func (o *SkyBlockProfileMemberMiningCoreBiomes) HasJungle() bool`
+
+HasJungle returns a boolean if a field has been set.
 
 ### GetPrecursor
 
@@ -107,6 +122,11 @@ and a boolean to check if the value has been set.
 
 SetPrecursor sets Precursor field to given value.
 
+### HasPrecursor
+
+`func (o *SkyBlockProfileMemberMiningCoreBiomes) HasPrecursor() bool`
+
+HasPrecursor returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

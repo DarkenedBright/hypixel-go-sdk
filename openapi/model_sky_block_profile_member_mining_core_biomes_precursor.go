@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberMiningCoreBiomesPrecursor type satisfies the MappedNullable interface at compile time
@@ -21,21 +19,17 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCoreBiomesPrecursor{}
 
 // SkyBlockProfileMemberMiningCoreBiomesPrecursor struct for SkyBlockProfileMemberMiningCoreBiomesPrecursor
 type SkyBlockProfileMemberMiningCoreBiomesPrecursor struct {
-	ClaimingWithPrecursorApparatus bool                                                                `json:"claiming_with_precursor_apparatus"`
+	ClaimingWithPrecursorApparatus *bool                                                               `json:"claiming_with_precursor_apparatus,omitempty"`
 	PartsDelivered                 []SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner `json:"parts_delivered,omitempty"`
-	TalkedToProfessor              bool                                                                `json:"talked_to_professor"`
+	TalkedToProfessor              *bool                                                               `json:"talked_to_professor,omitempty"`
 }
-
-type _SkyBlockProfileMemberMiningCoreBiomesPrecursor SkyBlockProfileMemberMiningCoreBiomesPrecursor
 
 // NewSkyBlockProfileMemberMiningCoreBiomesPrecursor instantiates a new SkyBlockProfileMemberMiningCoreBiomesPrecursor object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberMiningCoreBiomesPrecursor(claimingWithPrecursorApparatus bool, talkedToProfessor bool) *SkyBlockProfileMemberMiningCoreBiomesPrecursor {
+func NewSkyBlockProfileMemberMiningCoreBiomesPrecursor() *SkyBlockProfileMemberMiningCoreBiomesPrecursor {
 	this := SkyBlockProfileMemberMiningCoreBiomesPrecursor{}
-	this.ClaimingWithPrecursorApparatus = claimingWithPrecursorApparatus
-	this.TalkedToProfessor = talkedToProfessor
 	return &this
 }
 
@@ -47,28 +41,36 @@ func NewSkyBlockProfileMemberMiningCoreBiomesPrecursorWithDefaults() *SkyBlockPr
 	return &this
 }
 
-// GetClaimingWithPrecursorApparatus returns the ClaimingWithPrecursorApparatus field value
+// GetClaimingWithPrecursorApparatus returns the ClaimingWithPrecursorApparatus field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) GetClaimingWithPrecursorApparatus() bool {
-	if o == nil {
+	if o == nil || IsNil(o.ClaimingWithPrecursorApparatus) {
 		var ret bool
 		return ret
 	}
-
-	return o.ClaimingWithPrecursorApparatus
+	return *o.ClaimingWithPrecursorApparatus
 }
 
-// GetClaimingWithPrecursorApparatusOk returns a tuple with the ClaimingWithPrecursorApparatus field value
+// GetClaimingWithPrecursorApparatusOk returns a tuple with the ClaimingWithPrecursorApparatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) GetClaimingWithPrecursorApparatusOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ClaimingWithPrecursorApparatus) {
 		return nil, false
 	}
-	return &o.ClaimingWithPrecursorApparatus, true
+	return o.ClaimingWithPrecursorApparatus, true
 }
 
-// SetClaimingWithPrecursorApparatus sets field value
+// HasClaimingWithPrecursorApparatus returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) HasClaimingWithPrecursorApparatus() bool {
+	if o != nil && !IsNil(o.ClaimingWithPrecursorApparatus) {
+		return true
+	}
+
+	return false
+}
+
+// SetClaimingWithPrecursorApparatus gets a reference to the given bool and assigns it to the ClaimingWithPrecursorApparatus field.
 func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) SetClaimingWithPrecursorApparatus(v bool) {
-	o.ClaimingWithPrecursorApparatus = v
+	o.ClaimingWithPrecursorApparatus = &v
 }
 
 // GetPartsDelivered returns the PartsDelivered field value if set, zero value otherwise.
@@ -103,28 +105,36 @@ func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) SetPartsDelivered(v []S
 	o.PartsDelivered = v
 }
 
-// GetTalkedToProfessor returns the TalkedToProfessor field value
+// GetTalkedToProfessor returns the TalkedToProfessor field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) GetTalkedToProfessor() bool {
-	if o == nil {
+	if o == nil || IsNil(o.TalkedToProfessor) {
 		var ret bool
 		return ret
 	}
-
-	return o.TalkedToProfessor
+	return *o.TalkedToProfessor
 }
 
-// GetTalkedToProfessorOk returns a tuple with the TalkedToProfessor field value
+// GetTalkedToProfessorOk returns a tuple with the TalkedToProfessor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) GetTalkedToProfessorOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.TalkedToProfessor) {
 		return nil, false
 	}
-	return &o.TalkedToProfessor, true
+	return o.TalkedToProfessor, true
 }
 
-// SetTalkedToProfessor sets field value
+// HasTalkedToProfessor returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) HasTalkedToProfessor() bool {
+	if o != nil && !IsNil(o.TalkedToProfessor) {
+		return true
+	}
+
+	return false
+}
+
+// SetTalkedToProfessor gets a reference to the given bool and assigns it to the TalkedToProfessor field.
 func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) SetTalkedToProfessor(v bool) {
-	o.TalkedToProfessor = v
+	o.TalkedToProfessor = &v
 }
 
 func (o SkyBlockProfileMemberMiningCoreBiomesPrecursor) MarshalJSON() ([]byte, error) {
@@ -137,50 +147,16 @@ func (o SkyBlockProfileMemberMiningCoreBiomesPrecursor) MarshalJSON() ([]byte, e
 
 func (o SkyBlockProfileMemberMiningCoreBiomesPrecursor) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["claiming_with_precursor_apparatus"] = o.ClaimingWithPrecursorApparatus
+	if !IsNil(o.ClaimingWithPrecursorApparatus) {
+		toSerialize["claiming_with_precursor_apparatus"] = o.ClaimingWithPrecursorApparatus
+	}
 	if !IsNil(o.PartsDelivered) {
 		toSerialize["parts_delivered"] = o.PartsDelivered
 	}
-	toSerialize["talked_to_professor"] = o.TalkedToProfessor
+	if !IsNil(o.TalkedToProfessor) {
+		toSerialize["talked_to_professor"] = o.TalkedToProfessor
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"claiming_with_precursor_apparatus",
-		"talked_to_professor",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberMiningCoreBiomesPrecursor := _SkyBlockProfileMemberMiningCoreBiomesPrecursor{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberMiningCoreBiomesPrecursor)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberMiningCoreBiomesPrecursor(varSkyBlockProfileMemberMiningCoreBiomesPrecursor)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberMiningCoreBiomesPrecursor struct {

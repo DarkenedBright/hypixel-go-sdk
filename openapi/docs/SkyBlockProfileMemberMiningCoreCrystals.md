@@ -4,24 +4,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AmberCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
-**AmethystCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
-**AquamarineCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
-**CitrineCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
-**JadeCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
-**JasperCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
-**OnyxCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
+**AmberCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
+**AmethystCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
+**AquamarineCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
+**CitrineCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
+**JadeCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
+**JasperCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
+**OnyxCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
 **OpalCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
-**PeridotCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
-**RubyCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
-**SapphireCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
-**TopazCrystal** | [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | 
+**PeridotCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
+**RubyCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
+**SapphireCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
+**TopazCrystal** | Pointer to [**SkyBlockProfileMemberMiningCoreCrystalsCrystal**](SkyBlockProfileMemberMiningCoreCrystalsCrystal.md) |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberMiningCoreCrystals
 
-`func NewSkyBlockProfileMemberMiningCoreCrystals(amberCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, amethystCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, aquamarineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, citrineCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, jadeCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, jasperCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, onyxCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, peridotCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, rubyCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, sapphireCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, topazCrystal SkyBlockProfileMemberMiningCoreCrystalsCrystal, ) *SkyBlockProfileMemberMiningCoreCrystals`
+`func NewSkyBlockProfileMemberMiningCoreCrystals() *SkyBlockProfileMemberMiningCoreCrystals`
 
 NewSkyBlockProfileMemberMiningCoreCrystals instantiates a new SkyBlockProfileMemberMiningCoreCrystals object
 This constructor will assign default values to properties that have it defined,
@@ -55,6 +55,11 @@ and a boolean to check if the value has been set.
 
 SetAmberCrystal sets AmberCrystal field to given value.
 
+### HasAmberCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasAmberCrystal() bool`
+
+HasAmberCrystal returns a boolean if a field has been set.
 
 ### GetAmethystCrystal
 
@@ -75,6 +80,11 @@ and a boolean to check if the value has been set.
 
 SetAmethystCrystal sets AmethystCrystal field to given value.
 
+### HasAmethystCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasAmethystCrystal() bool`
+
+HasAmethystCrystal returns a boolean if a field has been set.
 
 ### GetAquamarineCrystal
 
@@ -95,6 +105,11 @@ and a boolean to check if the value has been set.
 
 SetAquamarineCrystal sets AquamarineCrystal field to given value.
 
+### HasAquamarineCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasAquamarineCrystal() bool`
+
+HasAquamarineCrystal returns a boolean if a field has been set.
 
 ### GetCitrineCrystal
 
@@ -115,6 +130,11 @@ and a boolean to check if the value has been set.
 
 SetCitrineCrystal sets CitrineCrystal field to given value.
 
+### HasCitrineCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasCitrineCrystal() bool`
+
+HasCitrineCrystal returns a boolean if a field has been set.
 
 ### GetJadeCrystal
 
@@ -135,6 +155,11 @@ and a boolean to check if the value has been set.
 
 SetJadeCrystal sets JadeCrystal field to given value.
 
+### HasJadeCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasJadeCrystal() bool`
+
+HasJadeCrystal returns a boolean if a field has been set.
 
 ### GetJasperCrystal
 
@@ -155,6 +180,11 @@ and a boolean to check if the value has been set.
 
 SetJasperCrystal sets JasperCrystal field to given value.
 
+### HasJasperCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasJasperCrystal() bool`
+
+HasJasperCrystal returns a boolean if a field has been set.
 
 ### GetOnyxCrystal
 
@@ -175,6 +205,11 @@ and a boolean to check if the value has been set.
 
 SetOnyxCrystal sets OnyxCrystal field to given value.
 
+### HasOnyxCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasOnyxCrystal() bool`
+
+HasOnyxCrystal returns a boolean if a field has been set.
 
 ### GetOpalCrystal
 
@@ -220,6 +255,11 @@ and a boolean to check if the value has been set.
 
 SetPeridotCrystal sets PeridotCrystal field to given value.
 
+### HasPeridotCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasPeridotCrystal() bool`
+
+HasPeridotCrystal returns a boolean if a field has been set.
 
 ### GetRubyCrystal
 
@@ -240,6 +280,11 @@ and a boolean to check if the value has been set.
 
 SetRubyCrystal sets RubyCrystal field to given value.
 
+### HasRubyCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasRubyCrystal() bool`
+
+HasRubyCrystal returns a boolean if a field has been set.
 
 ### GetSapphireCrystal
 
@@ -260,6 +305,11 @@ and a boolean to check if the value has been set.
 
 SetSapphireCrystal sets SapphireCrystal field to given value.
 
+### HasSapphireCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasSapphireCrystal() bool`
+
+HasSapphireCrystal returns a boolean if a field has been set.
 
 ### GetTopazCrystal
 
@@ -280,6 +330,11 @@ and a boolean to check if the value has been set.
 
 SetTopazCrystal sets TopazCrystal field to given value.
 
+### HasTopazCrystal
+
+`func (o *SkyBlockProfileMemberMiningCoreCrystals) HasTopazCrystal() bool`
+
+HasTopazCrystal returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

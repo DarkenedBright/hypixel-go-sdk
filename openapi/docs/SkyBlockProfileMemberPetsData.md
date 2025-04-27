@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Autopet** | [**SkyBlockProfileMemberPetsDataAutopet**](SkyBlockProfileMemberPetsDataAutopet.md) |  | 
+**Autopet** | Pointer to [**SkyBlockProfileMemberPetsDataAutopet**](SkyBlockProfileMemberPetsDataAutopet.md) |  | [optional] 
 **PetCare** | Pointer to [**SkyBlockProfileMemberPetsDataPetCare**](SkyBlockProfileMemberPetsDataPetCare.md) |  | [optional] 
 **Pets** | [**[]SkyBlockProfileMemberPetsDataPet**](SkyBlockProfileMemberPetsDataPet.md) |  | 
 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberPetsData
 
-`func NewSkyBlockProfileMemberPetsData(autopet SkyBlockProfileMemberPetsDataAutopet, pets []SkyBlockProfileMemberPetsDataPet, ) *SkyBlockProfileMemberPetsData`
+`func NewSkyBlockProfileMemberPetsData(pets []SkyBlockProfileMemberPetsDataPet, ) *SkyBlockProfileMemberPetsData`
 
 NewSkyBlockProfileMemberPetsData instantiates a new SkyBlockProfileMemberPetsData object
 This constructor will assign default values to properties that have it defined,
@@ -46,6 +46,11 @@ and a boolean to check if the value has been set.
 
 SetAutopet sets Autopet field to given value.
 
+### HasAutopet
+
+`func (o *SkyBlockProfileMemberPetsData) HasAutopet() bool`
+
+HasAutopet returns a boolean if a field has been set.
 
 ### GetPetCare
 

@@ -38,6 +38,7 @@ type SkyBlockProfileMember struct {
 	NetherIslandPlayerData *SkyBlockProfileMemberNetherIslandPlayerData `json:"nether_island_player_data,omitempty"`
 	Objectives             *SkyBlockProfileMemberObjectives             `json:"objectives,omitempty"`
 	PetsData               *SkyBlockProfileMemberPetsData               `json:"pets_data,omitempty"`
+	PlayerData             *SkyBlockProfileMemberPlayerData             `json:"player_data,omitempty"`
 	PlayerId               *string                                      `json:"player_id,omitempty"`
 }
 
@@ -666,6 +667,38 @@ func (o *SkyBlockProfileMember) SetPetsData(v SkyBlockProfileMemberPetsData) {
 	o.PetsData = &v
 }
 
+// GetPlayerData returns the PlayerData field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetPlayerData() SkyBlockProfileMemberPlayerData {
+	if o == nil || IsNil(o.PlayerData) {
+		var ret SkyBlockProfileMemberPlayerData
+		return ret
+	}
+	return *o.PlayerData
+}
+
+// GetPlayerDataOk returns a tuple with the PlayerData field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetPlayerDataOk() (*SkyBlockProfileMemberPlayerData, bool) {
+	if o == nil || IsNil(o.PlayerData) {
+		return nil, false
+	}
+	return o.PlayerData, true
+}
+
+// HasPlayerData returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasPlayerData() bool {
+	if o != nil && !IsNil(o.PlayerData) {
+		return true
+	}
+
+	return false
+}
+
+// SetPlayerData gets a reference to the given SkyBlockProfileMemberPlayerData and assigns it to the PlayerData field.
+func (o *SkyBlockProfileMember) SetPlayerData(v SkyBlockProfileMemberPlayerData) {
+	o.PlayerData = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -764,6 +797,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.PetsData) {
 		toSerialize["pets_data"] = o.PetsData
+	}
+	if !IsNil(o.PlayerData) {
+		toSerialize["player_data"] = o.PlayerData
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId

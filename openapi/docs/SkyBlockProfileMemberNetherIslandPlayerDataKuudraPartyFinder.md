@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupBuilder** | [**SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder**](SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder.md) |  | 
-**SearchSettings** | [**SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings**](SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings.md) |  | 
+**GroupBuilder** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder**](SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder.md) |  | [optional] 
+**SearchSettings** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings**](SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings.md) |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder(groupBuilder SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder, searchSettings SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings, ) *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder`
+`func NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder() *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder`
 
 NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder instantiates a new SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder object
 This constructor will assign default values to properties that have it defined,
@@ -45,6 +45,11 @@ and a boolean to check if the value has been set.
 
 SetGroupBuilder sets GroupBuilder field to given value.
 
+### HasGroupBuilder
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) HasGroupBuilder() bool`
+
+HasGroupBuilder returns a boolean if a field has been set.
 
 ### GetSearchSettings
 
@@ -65,6 +70,11 @@ and a boolean to check if the value has been set.
 
 SetSearchSettings sets SearchSettings field to given value.
 
+### HasSearchSettings
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) HasSearchSettings() bool`
+
+HasSearchSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

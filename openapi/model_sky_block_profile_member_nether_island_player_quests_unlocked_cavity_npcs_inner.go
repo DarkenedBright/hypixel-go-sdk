@@ -23,6 +23,7 @@ const (
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_ARCH                 SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "arch"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_DRAKUU               SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "drakuu"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_FINAL                SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "final"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_FINAL_2              SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "final_2"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_KUUDRA_ARCHAEOLOGIST SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "kuudra_archaeologist"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_KUUDRA_LOREMASTER    SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "kuudra_loremaster"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_KUUDRABELIEVER       SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "kuudrabeliever"
@@ -33,6 +34,7 @@ var AllowedSkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInnerE
 	"arch",
 	"drakuu",
 	"final",
+	"final_2",
 	"kuudra_archaeologist",
 	"kuudra_loremaster",
 	"kuudrabeliever",

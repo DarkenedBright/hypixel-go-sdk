@@ -4,18 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Dojo** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | 
-**Fetch** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | 
-**Fishing** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | 
-**QuestList** | [**[]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner.md) |  | 
-**Rescue** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | 
-**WantedMiniBoss** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | 
+**Boss** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | [optional] 
+**Dojo** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | [optional] 
+**Fetch** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | [optional] 
+**Fishing** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | [optional] 
+**QuestList** | Pointer to **[]string** |  | [optional] 
+**Rescue** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | [optional] 
+**WantedMiniBoss** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest.md) |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData(dojo SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, fetch SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, fishing SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, questList []SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner, rescue SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, wantedMiniBoss SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, ) *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData`
+`func NewSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData() *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData`
 
 NewSkyBlockProfileMemberNetherIslandPlayerQuestsQuestData instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData object
 This constructor will assign default values to properties that have it defined,
@@ -29,6 +30,31 @@ will change when the set of required properties is changed
 NewSkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataWithDefaults instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetBoss
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetBoss() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest`
+
+GetBoss returns the Boss field if non-nil, zero value otherwise.
+
+### GetBossOk
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetBossOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest, bool)`
+
+GetBossOk returns a tuple with the Boss field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBoss
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetBoss(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest)`
+
+SetBoss sets Boss field to given value.
+
+### HasBoss
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasBoss() bool`
+
+HasBoss returns a boolean if a field has been set.
 
 ### GetDojo
 
@@ -49,6 +75,11 @@ and a boolean to check if the value has been set.
 
 SetDojo sets Dojo field to given value.
 
+### HasDojo
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasDojo() bool`
+
+HasDojo returns a boolean if a field has been set.
 
 ### GetFetch
 
@@ -69,6 +100,11 @@ and a boolean to check if the value has been set.
 
 SetFetch sets Fetch field to given value.
 
+### HasFetch
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasFetch() bool`
+
+HasFetch returns a boolean if a field has been set.
 
 ### GetFishing
 
@@ -89,26 +125,36 @@ and a boolean to check if the value has been set.
 
 SetFishing sets Fishing field to given value.
 
+### HasFishing
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasFishing() bool`
+
+HasFishing returns a boolean if a field has been set.
 
 ### GetQuestList
 
-`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetQuestList() []SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner`
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetQuestList() []string`
 
 GetQuestList returns the QuestList field if non-nil, zero value otherwise.
 
 ### GetQuestListOk
 
-`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetQuestListOk() (*[]SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner, bool)`
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) GetQuestListOk() (*[]string, bool)`
 
 GetQuestListOk returns a tuple with the QuestList field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQuestList
 
-`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetQuestList(v []SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner)`
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) SetQuestList(v []string)`
 
 SetQuestList sets QuestList field to given value.
 
+### HasQuestList
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasQuestList() bool`
+
+HasQuestList returns a boolean if a field has been set.
 
 ### GetRescue
 
@@ -129,6 +175,11 @@ and a boolean to check if the value has been set.
 
 SetRescue sets Rescue field to given value.
 
+### HasRescue
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasRescue() bool`
+
+HasRescue returns a boolean if a field has been set.
 
 ### GetWantedMiniBoss
 
@@ -149,6 +200,11 @@ and a boolean to check if the value has been set.
 
 SetWantedMiniBoss sets WantedMiniBoss field to given value.
 
+### HasWantedMiniBoss
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData) HasWantedMiniBoss() bool`
+
+HasWantedMiniBoss returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

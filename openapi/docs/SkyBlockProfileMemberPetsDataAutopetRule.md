@@ -8,15 +8,16 @@ Name | Type | Description | Notes
 **Disabled** | **bool** |  | 
 **Exceptions** | [**[]SkyBlockProfileMemberPetsDataAutopetRuleException**](SkyBlockProfileMemberPetsDataAutopetRuleException.md) |  | 
 **Id** | [**SkyBlockProfileMemberPetsDataAutopetRuleId**](SkyBlockProfileMemberPetsDataAutopetRuleId.md) |  | 
-**Name** | **string** |  | 
-**UniqueId** | **string** |  | 
-**Uuid** | **string** |  | 
+**Name** | Pointer to **string** |  | [optional] 
+**Pet** | Pointer to [**SkyBlockProfileMemberPetsDataPetType**](SkyBlockProfileMemberPetsDataPetType.md) |  | [optional] 
+**UniqueId** | Pointer to **string** |  | [optional] 
+**Uuid** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberPetsDataAutopetRule
 
-`func NewSkyBlockProfileMemberPetsDataAutopetRule(data SkyBlockProfileMemberPetsDataAutopetRuleData, disabled bool, exceptions []SkyBlockProfileMemberPetsDataAutopetRuleException, id SkyBlockProfileMemberPetsDataAutopetRuleId, name string, uniqueId string, uuid string, ) *SkyBlockProfileMemberPetsDataAutopetRule`
+`func NewSkyBlockProfileMemberPetsDataAutopetRule(data SkyBlockProfileMemberPetsDataAutopetRuleData, disabled bool, exceptions []SkyBlockProfileMemberPetsDataAutopetRuleException, id SkyBlockProfileMemberPetsDataAutopetRuleId, ) *SkyBlockProfileMemberPetsDataAutopetRule`
 
 NewSkyBlockProfileMemberPetsDataAutopetRule instantiates a new SkyBlockProfileMemberPetsDataAutopetRule object
 This constructor will assign default values to properties that have it defined,
@@ -130,6 +131,36 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
+
+`func (o *SkyBlockProfileMemberPetsDataAutopetRule) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetPet
+
+`func (o *SkyBlockProfileMemberPetsDataAutopetRule) GetPet() SkyBlockProfileMemberPetsDataPetType`
+
+GetPet returns the Pet field if non-nil, zero value otherwise.
+
+### GetPetOk
+
+`func (o *SkyBlockProfileMemberPetsDataAutopetRule) GetPetOk() (*SkyBlockProfileMemberPetsDataPetType, bool)`
+
+GetPetOk returns a tuple with the Pet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPet
+
+`func (o *SkyBlockProfileMemberPetsDataAutopetRule) SetPet(v SkyBlockProfileMemberPetsDataPetType)`
+
+SetPet sets Pet field to given value.
+
+### HasPet
+
+`func (o *SkyBlockProfileMemberPetsDataAutopetRule) HasPet() bool`
+
+HasPet returns a boolean if a field has been set.
 
 ### GetUniqueId
 
@@ -150,6 +181,11 @@ and a boolean to check if the value has been set.
 
 SetUniqueId sets UniqueId field to given value.
 
+### HasUniqueId
+
+`func (o *SkyBlockProfileMemberPetsDataAutopetRule) HasUniqueId() bool`
+
+HasUniqueId returns a boolean if a field has been set.
 
 ### GetUuid
 
@@ -170,6 +206,11 @@ and a boolean to check if the value has been set.
 
 SetUuid sets Uuid field to given value.
 
+### HasUuid
+
+`func (o *SkyBlockProfileMemberPetsDataAutopetRule) HasUuid() bool`
+
+HasUuid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

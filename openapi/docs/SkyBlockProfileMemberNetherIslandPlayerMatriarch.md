@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LastAttempt** | **int64** |  | 
-**PearlsCollected** | **int64** |  | 
+**LastAttempt** | Pointer to **int64** |  | [optional] 
+**PearlsCollected** | Pointer to **int64** |  | [optional] 
 **RecentRefreshes** | Pointer to **[]int64** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerMatriarch
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerMatriarch(lastAttempt int64, pearlsCollected int64, ) *SkyBlockProfileMemberNetherIslandPlayerMatriarch`
+`func NewSkyBlockProfileMemberNetherIslandPlayerMatriarch() *SkyBlockProfileMemberNetherIslandPlayerMatriarch`
 
 NewSkyBlockProfileMemberNetherIslandPlayerMatriarch instantiates a new SkyBlockProfileMemberNetherIslandPlayerMatriarch object
 This constructor will assign default values to properties that have it defined,
@@ -46,6 +46,11 @@ and a boolean to check if the value has been set.
 
 SetLastAttempt sets LastAttempt field to given value.
 
+### HasLastAttempt
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) HasLastAttempt() bool`
+
+HasLastAttempt returns a boolean if a field has been set.
 
 ### GetPearlsCollected
 
@@ -66,6 +71,11 @@ and a boolean to check if the value has been set.
 
 SetPearlsCollected sets PearlsCollected field to given value.
 
+### HasPearlsCollected
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerMatriarch) HasPearlsCollected() bool`
+
+HasPearlsCollected returns a boolean if a field has been set.
 
 ### GetRecentRefreshes
 

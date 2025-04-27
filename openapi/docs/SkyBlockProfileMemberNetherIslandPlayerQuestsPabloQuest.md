@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PabloActive** | **bool** |  | 
-**PabloItem** | **string** |  | 
+**PabloActive** | Pointer to **bool** |  | [optional] 
+**PabloItem** | Pointer to **string** |  | [optional] 
 **PabloLastGive** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest(pabloActive bool, pabloItem string, ) *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest`
+`func NewSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest() *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest`
 
 NewSkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest object
 This constructor will assign default values to properties that have it defined,
@@ -46,6 +46,11 @@ and a boolean to check if the value has been set.
 
 SetPabloActive sets PabloActive field to given value.
 
+### HasPabloActive
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) HasPabloActive() bool`
+
+HasPabloActive returns a boolean if a field has been set.
 
 ### GetPabloItem
 
@@ -66,6 +71,11 @@ and a boolean to check if the value has been set.
 
 SetPabloItem sets PabloItem field to given value.
 
+### HasPabloItem
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsPabloQuest) HasPabloItem() bool`
+
+HasPabloItem returns a boolean if a field has been set.
 
 ### GetPabloLastGive
 

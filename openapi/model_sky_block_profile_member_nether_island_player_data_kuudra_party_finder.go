@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder type satisfies the MappedNullable interface at compile time
@@ -21,20 +19,16 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFi
 
 // SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder struct for SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder
 type SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder struct {
-	GroupBuilder   SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder   `json:"group_builder"`
-	SearchSettings SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings `json:"search_settings"`
+	GroupBuilder   *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder   `json:"group_builder,omitempty"`
+	SearchSettings *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings `json:"search_settings,omitempty"`
 }
-
-type _SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder
 
 // NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder instantiates a new SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder(groupBuilder SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder, searchSettings SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder {
+func NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder() *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder {
 	this := SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder{}
-	this.GroupBuilder = groupBuilder
-	this.SearchSettings = searchSettings
 	return &this
 }
 
@@ -46,52 +40,68 @@ func NewSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderWithDefaults
 	return &this
 }
 
-// GetGroupBuilder returns the GroupBuilder field value
+// GetGroupBuilder returns the GroupBuilder field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) GetGroupBuilder() SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder {
-	if o == nil {
+	if o == nil || IsNil(o.GroupBuilder) {
 		var ret SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder
 		return ret
 	}
-
-	return o.GroupBuilder
+	return *o.GroupBuilder
 }
 
-// GetGroupBuilderOk returns a tuple with the GroupBuilder field value
+// GetGroupBuilderOk returns a tuple with the GroupBuilder field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) GetGroupBuilderOk() (*SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.GroupBuilder) {
 		return nil, false
 	}
-	return &o.GroupBuilder, true
+	return o.GroupBuilder, true
 }
 
-// SetGroupBuilder sets field value
+// HasGroupBuilder returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) HasGroupBuilder() bool {
+	if o != nil && !IsNil(o.GroupBuilder) {
+		return true
+	}
+
+	return false
+}
+
+// SetGroupBuilder gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder and assigns it to the GroupBuilder field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) SetGroupBuilder(v SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderGroupBuilder) {
-	o.GroupBuilder = v
+	o.GroupBuilder = &v
 }
 
-// GetSearchSettings returns the SearchSettings field value
+// GetSearchSettings returns the SearchSettings field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) GetSearchSettings() SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings {
-	if o == nil {
+	if o == nil || IsNil(o.SearchSettings) {
 		var ret SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings
 		return ret
 	}
-
-	return o.SearchSettings
+	return *o.SearchSettings
 }
 
-// GetSearchSettingsOk returns a tuple with the SearchSettings field value
+// GetSearchSettingsOk returns a tuple with the SearchSettings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) GetSearchSettingsOk() (*SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.SearchSettings) {
 		return nil, false
 	}
-	return &o.SearchSettings, true
+	return o.SearchSettings, true
 }
 
-// SetSearchSettings sets field value
+// HasSearchSettings returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) HasSearchSettings() bool {
+	if o != nil && !IsNil(o.SearchSettings) {
+		return true
+	}
+
+	return false
+}
+
+// SetSearchSettings gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings and assigns it to the SearchSettings field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) SetSearchSettings(v SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinderSearchSettings) {
-	o.SearchSettings = v
+	o.SearchSettings = &v
 }
 
 func (o SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) MarshalJSON() ([]byte, error) {
@@ -104,47 +114,13 @@ func (o SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) MarshalJSO
 
 func (o SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["group_builder"] = o.GroupBuilder
-	toSerialize["search_settings"] = o.SearchSettings
+	if !IsNil(o.GroupBuilder) {
+		toSerialize["group_builder"] = o.GroupBuilder
+	}
+	if !IsNil(o.SearchSettings) {
+		toSerialize["search_settings"] = o.SearchSettings
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"group_builder",
-		"search_settings",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder := _SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder(varSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberNetherIslandPlayerDataKuudraPartyFinder struct {

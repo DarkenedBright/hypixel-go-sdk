@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberPetsDataPetCare type satisfies the MappedNullable interface at compile time
@@ -21,20 +19,16 @@ var _ MappedNullable = &SkyBlockProfileMemberPetsDataPetCare{}
 
 // SkyBlockProfileMemberPetsDataPetCare struct for SkyBlockProfileMemberPetsDataPetCare
 type SkyBlockProfileMemberPetsDataPetCare struct {
-	CoinsSpent         float64                                                       `json:"coins_spent"`
-	PetTypesSacrificed []SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner `json:"pet_types_sacrificed"`
+	CoinsSpent         *float64                                                      `json:"coins_spent,omitempty"`
+	PetTypesSacrificed []SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner `json:"pet_types_sacrificed,omitempty"`
 }
-
-type _SkyBlockProfileMemberPetsDataPetCare SkyBlockProfileMemberPetsDataPetCare
 
 // NewSkyBlockProfileMemberPetsDataPetCare instantiates a new SkyBlockProfileMemberPetsDataPetCare object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberPetsDataPetCare(coinsSpent float64, petTypesSacrificed []SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner) *SkyBlockProfileMemberPetsDataPetCare {
+func NewSkyBlockProfileMemberPetsDataPetCare() *SkyBlockProfileMemberPetsDataPetCare {
 	this := SkyBlockProfileMemberPetsDataPetCare{}
-	this.CoinsSpent = coinsSpent
-	this.PetTypesSacrificed = petTypesSacrificed
 	return &this
 }
 
@@ -46,50 +40,66 @@ func NewSkyBlockProfileMemberPetsDataPetCareWithDefaults() *SkyBlockProfileMembe
 	return &this
 }
 
-// GetCoinsSpent returns the CoinsSpent field value
+// GetCoinsSpent returns the CoinsSpent field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberPetsDataPetCare) GetCoinsSpent() float64 {
-	if o == nil {
+	if o == nil || IsNil(o.CoinsSpent) {
 		var ret float64
 		return ret
 	}
-
-	return o.CoinsSpent
+	return *o.CoinsSpent
 }
 
-// GetCoinsSpentOk returns a tuple with the CoinsSpent field value
+// GetCoinsSpentOk returns a tuple with the CoinsSpent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberPetsDataPetCare) GetCoinsSpentOk() (*float64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.CoinsSpent) {
 		return nil, false
 	}
-	return &o.CoinsSpent, true
+	return o.CoinsSpent, true
 }
 
-// SetCoinsSpent sets field value
+// HasCoinsSpent returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataPetCare) HasCoinsSpent() bool {
+	if o != nil && !IsNil(o.CoinsSpent) {
+		return true
+	}
+
+	return false
+}
+
+// SetCoinsSpent gets a reference to the given float64 and assigns it to the CoinsSpent field.
 func (o *SkyBlockProfileMemberPetsDataPetCare) SetCoinsSpent(v float64) {
-	o.CoinsSpent = v
+	o.CoinsSpent = &v
 }
 
-// GetPetTypesSacrificed returns the PetTypesSacrificed field value
+// GetPetTypesSacrificed returns the PetTypesSacrificed field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberPetsDataPetCare) GetPetTypesSacrificed() []SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner {
-	if o == nil {
+	if o == nil || IsNil(o.PetTypesSacrificed) {
 		var ret []SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner
 		return ret
 	}
-
 	return o.PetTypesSacrificed
 }
 
-// GetPetTypesSacrificedOk returns a tuple with the PetTypesSacrificed field value
+// GetPetTypesSacrificedOk returns a tuple with the PetTypesSacrificed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberPetsDataPetCare) GetPetTypesSacrificedOk() ([]SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PetTypesSacrificed) {
 		return nil, false
 	}
 	return o.PetTypesSacrificed, true
 }
 
-// SetPetTypesSacrificed sets field value
+// HasPetTypesSacrificed returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataPetCare) HasPetTypesSacrificed() bool {
+	if o != nil && !IsNil(o.PetTypesSacrificed) {
+		return true
+	}
+
+	return false
+}
+
+// SetPetTypesSacrificed gets a reference to the given []SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner and assigns it to the PetTypesSacrificed field.
 func (o *SkyBlockProfileMemberPetsDataPetCare) SetPetTypesSacrificed(v []SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner) {
 	o.PetTypesSacrificed = v
 }
@@ -104,47 +114,13 @@ func (o SkyBlockProfileMemberPetsDataPetCare) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileMemberPetsDataPetCare) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["coins_spent"] = o.CoinsSpent
-	toSerialize["pet_types_sacrificed"] = o.PetTypesSacrificed
+	if !IsNil(o.CoinsSpent) {
+		toSerialize["coins_spent"] = o.CoinsSpent
+	}
+	if !IsNil(o.PetTypesSacrificed) {
+		toSerialize["pet_types_sacrificed"] = o.PetTypesSacrificed
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberPetsDataPetCare) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"coins_spent",
-		"pet_types_sacrificed",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberPetsDataPetCare := _SkyBlockProfileMemberPetsDataPetCare{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberPetsDataPetCare)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberPetsDataPetCare(varSkyBlockProfileMemberPetsDataPetCare)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberPetsDataPetCare struct {

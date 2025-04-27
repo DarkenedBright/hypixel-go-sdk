@@ -21,11 +21,11 @@ var _ MappedNullable = &SkyBlockProfileMemberObjectivesCollectIngots{}
 
 // SkyBlockProfileMemberObjectivesCollectIngots struct for SkyBlockProfileMemberObjectivesCollectIngots
 type SkyBlockProfileMemberObjectivesCollectIngots struct {
-	GOLD_INGOT  *bool                                                `json:"GOLD_INGOT,omitempty"`
-	IRON_INGOT  *bool                                                `json:"IRON_INGOT,omitempty"`
-	CompletedAt int64                                                `json:"completed_at"`
-	Progress    int64                                                `json:"progress"`
-	Status      SkyBlockProfileMemberObjectivesCatchLaseasFishStatus `json:"status"`
+	GOLD_INGOT  *bool                                                             `json:"GOLD_INGOT,omitempty"`
+	IRON_INGOT  *bool                                                             `json:"IRON_INGOT,omitempty"`
+	CompletedAt int64                                                             `json:"completed_at"`
+	Progress    int64                                                             `json:"progress"`
+	Status      SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus `json:"status"`
 }
 
 type _SkyBlockProfileMemberObjectivesCollectIngots SkyBlockProfileMemberObjectivesCollectIngots
@@ -34,7 +34,7 @@ type _SkyBlockProfileMemberObjectivesCollectIngots SkyBlockProfileMemberObjectiv
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberObjectivesCollectIngots(completedAt int64, progress int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) *SkyBlockProfileMemberObjectivesCollectIngots {
+func NewSkyBlockProfileMemberObjectivesCollectIngots(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) *SkyBlockProfileMemberObjectivesCollectIngots {
 	this := SkyBlockProfileMemberObjectivesCollectIngots{}
 	this.CompletedAt = completedAt
 	this.Progress = progress
@@ -163,9 +163,9 @@ func (o *SkyBlockProfileMemberObjectivesCollectIngots) SetProgress(v int64) {
 }
 
 // GetStatus returns the Status field value
-func (o *SkyBlockProfileMemberObjectivesCollectIngots) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus {
+func (o *SkyBlockProfileMemberObjectivesCollectIngots) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus {
 	if o == nil {
-		var ret SkyBlockProfileMemberObjectivesCatchLaseasFishStatus
+		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus
 		return ret
 	}
 
@@ -174,7 +174,7 @@ func (o *SkyBlockProfileMemberObjectivesCollectIngots) GetStatus() SkyBlockProfi
 
 // GetStatusOk returns a tuple with the Status field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberObjectivesCollectIngots) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool) {
+func (o *SkyBlockProfileMemberObjectivesCollectIngots) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -182,7 +182,7 @@ func (o *SkyBlockProfileMemberObjectivesCollectIngots) GetStatusOk() (*SkyBlockP
 }
 
 // SetStatus sets field value
-func (o *SkyBlockProfileMemberObjectivesCollectIngots) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) {
+func (o *SkyBlockProfileMemberObjectivesCollectIngots) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) {
 	o.Status = v
 }
 

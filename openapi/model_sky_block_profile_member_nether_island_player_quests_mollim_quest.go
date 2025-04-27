@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest type satisfies the MappedNullable interface at compile time
@@ -21,19 +19,17 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest
 
 // SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest struct for SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest
 type SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest struct {
-	CompletedQuest *bool `json:"completed_quest,omitempty"`
-	TalkedToNpc    bool  `json:"talked_to_npc"`
+	CompletedQuest         *bool `json:"completed_quest,omitempty"`
+	SplashedGrandExpBottle *bool `json:"splashed_grand_exp_bottle,omitempty"`
+	TalkedToNpc            *bool `json:"talked_to_npc,omitempty"`
 }
-
-type _SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest
 
 // NewSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest(talkedToNpc bool) *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest {
+func NewSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest() *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest {
 	this := SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest{}
-	this.TalkedToNpc = talkedToNpc
 	return &this
 }
 
@@ -77,28 +73,68 @@ func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) SetCompletedQ
 	o.CompletedQuest = &v
 }
 
-// GetTalkedToNpc returns the TalkedToNpc field value
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) GetTalkedToNpc() bool {
-	if o == nil {
+// GetSplashedGrandExpBottle returns the SplashedGrandExpBottle field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) GetSplashedGrandExpBottle() bool {
+	if o == nil || IsNil(o.SplashedGrandExpBottle) {
 		var ret bool
 		return ret
 	}
-
-	return o.TalkedToNpc
+	return *o.SplashedGrandExpBottle
 }
 
-// GetTalkedToNpcOk returns a tuple with the TalkedToNpc field value
+// GetSplashedGrandExpBottleOk returns a tuple with the SplashedGrandExpBottle field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) GetTalkedToNpcOk() (*bool, bool) {
-	if o == nil {
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) GetSplashedGrandExpBottleOk() (*bool, bool) {
+	if o == nil || IsNil(o.SplashedGrandExpBottle) {
 		return nil, false
 	}
-	return &o.TalkedToNpc, true
+	return o.SplashedGrandExpBottle, true
 }
 
-// SetTalkedToNpc sets field value
+// HasSplashedGrandExpBottle returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) HasSplashedGrandExpBottle() bool {
+	if o != nil && !IsNil(o.SplashedGrandExpBottle) {
+		return true
+	}
+
+	return false
+}
+
+// SetSplashedGrandExpBottle gets a reference to the given bool and assigns it to the SplashedGrandExpBottle field.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) SetSplashedGrandExpBottle(v bool) {
+	o.SplashedGrandExpBottle = &v
+}
+
+// GetTalkedToNpc returns the TalkedToNpc field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) GetTalkedToNpc() bool {
+	if o == nil || IsNil(o.TalkedToNpc) {
+		var ret bool
+		return ret
+	}
+	return *o.TalkedToNpc
+}
+
+// GetTalkedToNpcOk returns a tuple with the TalkedToNpc field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) GetTalkedToNpcOk() (*bool, bool) {
+	if o == nil || IsNil(o.TalkedToNpc) {
+		return nil, false
+	}
+	return o.TalkedToNpc, true
+}
+
+// HasTalkedToNpc returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) HasTalkedToNpc() bool {
+	if o != nil && !IsNil(o.TalkedToNpc) {
+		return true
+	}
+
+	return false
+}
+
+// SetTalkedToNpc gets a reference to the given bool and assigns it to the TalkedToNpc field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) SetTalkedToNpc(v bool) {
-	o.TalkedToNpc = v
+	o.TalkedToNpc = &v
 }
 
 func (o SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) MarshalJSON() ([]byte, error) {
@@ -114,45 +150,13 @@ func (o SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) ToMap() (map[s
 	if !IsNil(o.CompletedQuest) {
 		toSerialize["completed_quest"] = o.CompletedQuest
 	}
-	toSerialize["talked_to_npc"] = o.TalkedToNpc
+	if !IsNil(o.SplashedGrandExpBottle) {
+		toSerialize["splashed_grand_exp_bottle"] = o.SplashedGrandExpBottle
+	}
+	if !IsNil(o.TalkedToNpc) {
+		toSerialize["talked_to_npc"] = o.TalkedToNpc
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"talked_to_npc",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest := _SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest(varSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest struct {

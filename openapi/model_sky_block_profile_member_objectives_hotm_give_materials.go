@@ -21,18 +21,18 @@ var _ MappedNullable = &SkyBlockProfileMemberObjectivesHotmGiveMaterials{}
 
 // SkyBlockProfileMemberObjectivesHotmGiveMaterials struct for SkyBlockProfileMemberObjectivesHotmGiveMaterials
 type SkyBlockProfileMemberObjectivesHotmGiveMaterials struct {
-	ENCHANTED_COAL         *int64                                               `json:"ENCHANTED_COAL,omitempty"`
-	ENCHANTED_DIAMOND      *int64                                               `json:"ENCHANTED_DIAMOND,omitempty"`
-	ENCHANTED_EMERALD      *int64                                               `json:"ENCHANTED_EMERALD,omitempty"`
-	ENCHANTED_GOLD         *int64                                               `json:"ENCHANTED_GOLD,omitempty"`
-	ENCHANTED_IRON         *int64                                               `json:"ENCHANTED_IRON,omitempty"`
-	ENCHANTED_LAPIS_LAZULI *int64                                               `json:"ENCHANTED_LAPIS_LAZULI,omitempty"`
-	ENCHANTED_REDSTONE     *int64                                               `json:"ENCHANTED_REDSTONE,omitempty"`
-	AmountGiven            *int64                                               `json:"amount_given,omitempty"`
-	CompletedAt            int64                                                `json:"completed_at"`
-	Progress               int64                                                `json:"progress"`
-	Started                bool                                                 `json:"started"`
-	Status                 SkyBlockProfileMemberObjectivesCatchLaseasFishStatus `json:"status"`
+	ENCHANTED_COAL         *int64                                                            `json:"ENCHANTED_COAL,omitempty"`
+	ENCHANTED_DIAMOND      *int64                                                            `json:"ENCHANTED_DIAMOND,omitempty"`
+	ENCHANTED_EMERALD      *int64                                                            `json:"ENCHANTED_EMERALD,omitempty"`
+	ENCHANTED_GOLD         *int64                                                            `json:"ENCHANTED_GOLD,omitempty"`
+	ENCHANTED_IRON         *int64                                                            `json:"ENCHANTED_IRON,omitempty"`
+	ENCHANTED_LAPIS_LAZULI *int64                                                            `json:"ENCHANTED_LAPIS_LAZULI,omitempty"`
+	ENCHANTED_REDSTONE     *int64                                                            `json:"ENCHANTED_REDSTONE,omitempty"`
+	AmountGiven            *int64                                                            `json:"amount_given,omitempty"`
+	CompletedAt            int64                                                             `json:"completed_at"`
+	Progress               int64                                                             `json:"progress"`
+	Started                *bool                                                             `json:"started,omitempty"`
+	Status                 SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus `json:"status"`
 }
 
 type _SkyBlockProfileMemberObjectivesHotmGiveMaterials SkyBlockProfileMemberObjectivesHotmGiveMaterials
@@ -41,11 +41,10 @@ type _SkyBlockProfileMemberObjectivesHotmGiveMaterials SkyBlockProfileMemberObje
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberObjectivesHotmGiveMaterials(completedAt int64, progress int64, started bool, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) *SkyBlockProfileMemberObjectivesHotmGiveMaterials {
+func NewSkyBlockProfileMemberObjectivesHotmGiveMaterials(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) *SkyBlockProfileMemberObjectivesHotmGiveMaterials {
 	this := SkyBlockProfileMemberObjectivesHotmGiveMaterials{}
 	this.CompletedAt = completedAt
 	this.Progress = progress
-	this.Started = started
 	this.Status = status
 	return &this
 }
@@ -362,34 +361,42 @@ func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) SetProgress(v int64) 
 	o.Progress = v
 }
 
-// GetStarted returns the Started field value
+// GetStarted returns the Started field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStarted() bool {
-	if o == nil {
+	if o == nil || IsNil(o.Started) {
 		var ret bool
 		return ret
 	}
-
-	return o.Started
+	return *o.Started
 }
 
-// GetStartedOk returns a tuple with the Started field value
+// GetStartedOk returns a tuple with the Started field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStartedOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Started) {
 		return nil, false
 	}
-	return &o.Started, true
+	return o.Started, true
 }
 
-// SetStarted sets field value
+// HasStarted returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) HasStarted() bool {
+	if o != nil && !IsNil(o.Started) {
+		return true
+	}
+
+	return false
+}
+
+// SetStarted gets a reference to the given bool and assigns it to the Started field.
 func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) SetStarted(v bool) {
-	o.Started = v
+	o.Started = &v
 }
 
 // GetStatus returns the Status field value
-func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus {
+func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus {
 	if o == nil {
-		var ret SkyBlockProfileMemberObjectivesCatchLaseasFishStatus
+		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus
 		return ret
 	}
 
@@ -398,7 +405,7 @@ func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStatus() SkyBlockP
 
 // GetStatusOk returns a tuple with the Status field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool) {
+func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -406,7 +413,7 @@ func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) GetStatusOk() (*SkyBl
 }
 
 // SetStatus sets field value
-func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) {
+func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) {
 	o.Status = v
 }
 
@@ -446,7 +453,9 @@ func (o SkyBlockProfileMemberObjectivesHotmGiveMaterials) ToMap() (map[string]in
 	}
 	toSerialize["completed_at"] = o.CompletedAt
 	toSerialize["progress"] = o.Progress
-	toSerialize["started"] = o.Started
+	if !IsNil(o.Started) {
+		toSerialize["started"] = o.Started
+	}
 	toSerialize["status"] = o.Status
 	return toSerialize, nil
 }
@@ -458,7 +467,6 @@ func (o *SkyBlockProfileMemberObjectivesHotmGiveMaterials) UnmarshalJSON(data []
 	requiredProperties := []string{
 		"completed_at",
 		"progress",
-		"started",
 		"status",
 	}
 

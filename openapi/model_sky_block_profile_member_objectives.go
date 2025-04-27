@@ -12,7 +12,6 @@ package openapi
 
 import (
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberObjectives type satisfies the MappedNullable interface at compile time
@@ -203,7 +202,7 @@ type SkyBlockProfileMemberObjectives struct {
 	FindTheDeansResearch                                *SkyBlockProfileMemberObjectivesObjective                   `json:"find_the_deans_research,omitempty"`
 	FindTheGoblinQueen                                  *SkyBlockProfileMemberObjectivesObjective                   `json:"find_the_goblin_queen,omitempty"`
 	FindUberRelics                                      *SkyBlockProfileMemberObjectivesObjective                   `json:"find_uber_relics,omitempty"`
-	FishABetterTrophyFish                               *SkyBlockProfileMemberObjectivesObjective                   `json:"fish_a_better_trophy_fish,omitempty"`
+	FishABetterTrophyFish                               *SkyBlockProfileMemberObjectivesFishABetterTrophyFish       `json:"fish_a_better_trophy_fish,omitempty"`
 	FishHotspot                                         *SkyBlockProfileMemberObjectivesObjective                   `json:"fish_hotspot,omitempty"`
 	FishRustyEngine                                     *SkyBlockProfileMemberObjectivesObjective                   `json:"fish_rusty_engine,omitempty"`
 	FollowElle                                          *SkyBlockProfileMemberObjectivesObjective                   `json:"follow_elle,omitempty"`
@@ -634,7 +633,7 @@ type SkyBlockProfileMemberObjectives struct {
 	TalkToUgo6                                          *SkyBlockProfileMemberObjectivesObjective                   `json:"talk_to_ugo_6,omitempty"`
 	TalkToUgo7                                          *SkyBlockProfileMemberObjectivesObjective                   `json:"talk_to_ugo_7,omitempty"`
 	TalkToUgo8                                          *SkyBlockProfileMemberObjectivesObjective                   `json:"talk_to_ugo_8,omitempty"`
-	Tutorial                                            []string                                                    `json:"tutorial"`
+	Tutorial                                            []string                                                    `json:"tutorial,omitempty"`
 	UnlockCropPlot                                      *SkyBlockProfileMemberObjectivesObjective                   `json:"unlock_crop_plot,omitempty"`
 	VisitGreaterMines                                   *SkyBlockProfileMemberObjectivesObjective                   `json:"visit_greater_mines,omitempty"`
 	WaitForHelp                                         *SkyBlockProfileMemberObjectivesObjective                   `json:"wait_for_help,omitempty"`
@@ -656,9 +655,8 @@ type _SkyBlockProfileMemberObjectives SkyBlockProfileMemberObjectives
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberObjectives(tutorial []string) *SkyBlockProfileMemberObjectives {
+func NewSkyBlockProfileMemberObjectives() *SkyBlockProfileMemberObjectives {
 	this := SkyBlockProfileMemberObjectives{}
-	this.Tutorial = tutorial
 	return &this
 }
 
@@ -6527,9 +6525,9 @@ func (o *SkyBlockProfileMemberObjectives) SetFindUberRelics(v SkyBlockProfileMem
 }
 
 // GetFishABetterTrophyFish returns the FishABetterTrophyFish field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberObjectives) GetFishABetterTrophyFish() SkyBlockProfileMemberObjectivesObjective {
+func (o *SkyBlockProfileMemberObjectives) GetFishABetterTrophyFish() SkyBlockProfileMemberObjectivesFishABetterTrophyFish {
 	if o == nil || IsNil(o.FishABetterTrophyFish) {
-		var ret SkyBlockProfileMemberObjectivesObjective
+		var ret SkyBlockProfileMemberObjectivesFishABetterTrophyFish
 		return ret
 	}
 	return *o.FishABetterTrophyFish
@@ -6537,7 +6535,7 @@ func (o *SkyBlockProfileMemberObjectives) GetFishABetterTrophyFish() SkyBlockPro
 
 // GetFishABetterTrophyFishOk returns a tuple with the FishABetterTrophyFish field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberObjectives) GetFishABetterTrophyFishOk() (*SkyBlockProfileMemberObjectivesObjective, bool) {
+func (o *SkyBlockProfileMemberObjectives) GetFishABetterTrophyFishOk() (*SkyBlockProfileMemberObjectivesFishABetterTrophyFish, bool) {
 	if o == nil || IsNil(o.FishABetterTrophyFish) {
 		return nil, false
 	}
@@ -6553,8 +6551,8 @@ func (o *SkyBlockProfileMemberObjectives) HasFishABetterTrophyFish() bool {
 	return false
 }
 
-// SetFishABetterTrophyFish gets a reference to the given SkyBlockProfileMemberObjectivesObjective and assigns it to the FishABetterTrophyFish field.
-func (o *SkyBlockProfileMemberObjectives) SetFishABetterTrophyFish(v SkyBlockProfileMemberObjectivesObjective) {
+// SetFishABetterTrophyFish gets a reference to the given SkyBlockProfileMemberObjectivesFishABetterTrophyFish and assigns it to the FishABetterTrophyFish field.
+func (o *SkyBlockProfileMemberObjectives) SetFishABetterTrophyFish(v SkyBlockProfileMemberObjectivesFishABetterTrophyFish) {
 	o.FishABetterTrophyFish = &v
 }
 
@@ -20318,26 +20316,34 @@ func (o *SkyBlockProfileMemberObjectives) SetTalkToUgo8(v SkyBlockProfileMemberO
 	o.TalkToUgo8 = &v
 }
 
-// GetTutorial returns the Tutorial field value
+// GetTutorial returns the Tutorial field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberObjectives) GetTutorial() []string {
-	if o == nil {
+	if o == nil || IsNil(o.Tutorial) {
 		var ret []string
 		return ret
 	}
-
 	return o.Tutorial
 }
 
-// GetTutorialOk returns a tuple with the Tutorial field value
+// GetTutorialOk returns a tuple with the Tutorial field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberObjectives) GetTutorialOk() ([]string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Tutorial) {
 		return nil, false
 	}
 	return o.Tutorial, true
 }
 
-// SetTutorial sets field value
+// HasTutorial returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberObjectives) HasTutorial() bool {
+	if o != nil && !IsNil(o.Tutorial) {
+		return true
+	}
+
+	return false
+}
+
+// SetTutorial gets a reference to the given []string and assigns it to the Tutorial field.
 func (o *SkyBlockProfileMemberObjectives) SetTutorial(v []string) {
 	o.Tutorial = v
 }
@@ -22578,7 +22584,9 @@ func (o SkyBlockProfileMemberObjectives) ToMap() (map[string]interface{}, error)
 	if !IsNil(o.TalkToUgo8) {
 		toSerialize["talk_to_ugo_8"] = o.TalkToUgo8
 	}
-	toSerialize["tutorial"] = o.Tutorial
+	if !IsNil(o.Tutorial) {
+		toSerialize["tutorial"] = o.Tutorial
+	}
 	if !IsNil(o.UnlockCropPlot) {
 		toSerialize["unlock_crop_plot"] = o.UnlockCropPlot
 	}
@@ -22624,27 +22632,6 @@ func (o SkyBlockProfileMemberObjectives) ToMap() (map[string]interface{}, error)
 }
 
 func (o *SkyBlockProfileMemberObjectives) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"tutorial",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
 	varSkyBlockProfileMemberObjectives := _SkyBlockProfileMemberObjectives{}
 
 	err = json.Unmarshal(data, &varSkyBlockProfileMemberObjectives)

@@ -187,7 +187,7 @@ Name | Type | Description | Notes
 **FindTheDeansResearch** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
 **FindTheGoblinQueen** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
 **FindUberRelics** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
-**FishABetterTrophyFish** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
+**FishABetterTrophyFish** | Pointer to [**SkyBlockProfileMemberObjectivesFishABetterTrophyFish**](SkyBlockProfileMemberObjectivesFishABetterTrophyFish.md) |  | [optional] 
 **FishHotspot** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
 **FishRustyEngine** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
 **FollowElle** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
@@ -618,7 +618,7 @@ Name | Type | Description | Notes
 **TalkToUgo6** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
 **TalkToUgo7** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
 **TalkToUgo8** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
-**Tutorial** | **[]string** |  | 
+**Tutorial** | Pointer to **[]string** |  | [optional] 
 **UnlockCropPlot** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
 **VisitGreaterMines** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
 **WaitForHelp** | Pointer to [**SkyBlockProfileMemberObjectivesObjective**](SkyBlockProfileMemberObjectivesObjective.md) |  | [optional] 
@@ -636,7 +636,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberObjectives
 
-`func NewSkyBlockProfileMemberObjectives(tutorial []string, ) *SkyBlockProfileMemberObjectives`
+`func NewSkyBlockProfileMemberObjectives() *SkyBlockProfileMemberObjectives`
 
 NewSkyBlockProfileMemberObjectives instantiates a new SkyBlockProfileMemberObjectives object
 This constructor will assign default values to properties that have it defined,
@@ -5228,20 +5228,20 @@ HasFindUberRelics returns a boolean if a field has been set.
 
 ### GetFishABetterTrophyFish
 
-`func (o *SkyBlockProfileMemberObjectives) GetFishABetterTrophyFish() SkyBlockProfileMemberObjectivesObjective`
+`func (o *SkyBlockProfileMemberObjectives) GetFishABetterTrophyFish() SkyBlockProfileMemberObjectivesFishABetterTrophyFish`
 
 GetFishABetterTrophyFish returns the FishABetterTrophyFish field if non-nil, zero value otherwise.
 
 ### GetFishABetterTrophyFishOk
 
-`func (o *SkyBlockProfileMemberObjectives) GetFishABetterTrophyFishOk() (*SkyBlockProfileMemberObjectivesObjective, bool)`
+`func (o *SkyBlockProfileMemberObjectives) GetFishABetterTrophyFishOk() (*SkyBlockProfileMemberObjectivesFishABetterTrophyFish, bool)`
 
 GetFishABetterTrophyFishOk returns a tuple with the FishABetterTrophyFish field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFishABetterTrophyFish
 
-`func (o *SkyBlockProfileMemberObjectives) SetFishABetterTrophyFish(v SkyBlockProfileMemberObjectivesObjective)`
+`func (o *SkyBlockProfileMemberObjectives) SetFishABetterTrophyFish(v SkyBlockProfileMemberObjectivesFishABetterTrophyFish)`
 
 SetFishABetterTrophyFish sets FishABetterTrophyFish field to given value.
 
@@ -16020,6 +16020,11 @@ and a boolean to check if the value has been set.
 
 SetTutorial sets Tutorial field to given value.
 
+### HasTutorial
+
+`func (o *SkyBlockProfileMemberObjectives) HasTutorial() bool`
+
+HasTutorial returns a boolean if a field has been set.
 
 ### GetUnlockCropPlot
 

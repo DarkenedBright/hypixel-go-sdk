@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData type satisfies the MappedNullable interface at compile time
@@ -21,26 +19,19 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossDat
 
 // SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData struct for SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData
 type SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData struct {
-	ASHFANG          bool `json:"ASHFANG"`
-	BARBARIAN_DUKE_X bool `json:"BARBARIAN_DUKE_X"`
-	BLADESOUL        bool `json:"BLADESOUL"`
-	MAGE_OUTLAW      bool `json:"MAGE_OUTLAW"`
-	MAGMA_BOSS       bool `json:"MAGMA_BOSS"`
+	ASHFANG          *bool `json:"ASHFANG,omitempty"`
+	BARBARIAN_DUKE_X *bool `json:"BARBARIAN_DUKE_X,omitempty"`
+	BLADESOUL        *bool `json:"BLADESOUL,omitempty"`
+	MAGE_OUTLAW      *bool `json:"MAGE_OUTLAW,omitempty"`
+	MAGMA_BOSS       *bool `json:"MAGMA_BOSS,omitempty"`
 }
-
-type _SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData
 
 // NewSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData(aSHFANG bool, bARBARIANDUKEX bool, bLADESOUL bool, mAGEOUTLAW bool, mAGMABOSS bool) *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData {
+func NewSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData() *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData {
 	this := SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData{}
-	this.ASHFANG = aSHFANG
-	this.BARBARIAN_DUKE_X = bARBARIANDUKEX
-	this.BLADESOUL = bLADESOUL
-	this.MAGE_OUTLAW = mAGEOUTLAW
-	this.MAGMA_BOSS = mAGMABOSS
 	return &this
 }
 
@@ -52,124 +43,164 @@ func NewSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossDataWithDefaults() 
 	return &this
 }
 
-// GetASHFANG returns the ASHFANG field value
+// GetASHFANG returns the ASHFANG field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) GetASHFANG() bool {
-	if o == nil {
+	if o == nil || IsNil(o.ASHFANG) {
 		var ret bool
 		return ret
 	}
-
-	return o.ASHFANG
+	return *o.ASHFANG
 }
 
-// GetASHFANGOk returns a tuple with the ASHFANG field value
+// GetASHFANGOk returns a tuple with the ASHFANG field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) GetASHFANGOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ASHFANG) {
 		return nil, false
 	}
-	return &o.ASHFANG, true
+	return o.ASHFANG, true
 }
 
-// SetASHFANG sets field value
+// HasASHFANG returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) HasASHFANG() bool {
+	if o != nil && !IsNil(o.ASHFANG) {
+		return true
+	}
+
+	return false
+}
+
+// SetASHFANG gets a reference to the given bool and assigns it to the ASHFANG field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) SetASHFANG(v bool) {
-	o.ASHFANG = v
+	o.ASHFANG = &v
 }
 
-// GetBARBARIAN_DUKE_X returns the BARBARIAN_DUKE_X field value
+// GetBARBARIAN_DUKE_X returns the BARBARIAN_DUKE_X field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) GetBARBARIAN_DUKE_X() bool {
-	if o == nil {
+	if o == nil || IsNil(o.BARBARIAN_DUKE_X) {
 		var ret bool
 		return ret
 	}
-
-	return o.BARBARIAN_DUKE_X
+	return *o.BARBARIAN_DUKE_X
 }
 
-// GetBARBARIAN_DUKE_XOk returns a tuple with the BARBARIAN_DUKE_X field value
+// GetBARBARIAN_DUKE_XOk returns a tuple with the BARBARIAN_DUKE_X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) GetBARBARIAN_DUKE_XOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.BARBARIAN_DUKE_X) {
 		return nil, false
 	}
-	return &o.BARBARIAN_DUKE_X, true
+	return o.BARBARIAN_DUKE_X, true
 }
 
-// SetBARBARIAN_DUKE_X sets field value
+// HasBARBARIAN_DUKE_X returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) HasBARBARIAN_DUKE_X() bool {
+	if o != nil && !IsNil(o.BARBARIAN_DUKE_X) {
+		return true
+	}
+
+	return false
+}
+
+// SetBARBARIAN_DUKE_X gets a reference to the given bool and assigns it to the BARBARIAN_DUKE_X field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) SetBARBARIAN_DUKE_X(v bool) {
-	o.BARBARIAN_DUKE_X = v
+	o.BARBARIAN_DUKE_X = &v
 }
 
-// GetBLADESOUL returns the BLADESOUL field value
+// GetBLADESOUL returns the BLADESOUL field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) GetBLADESOUL() bool {
-	if o == nil {
+	if o == nil || IsNil(o.BLADESOUL) {
 		var ret bool
 		return ret
 	}
-
-	return o.BLADESOUL
+	return *o.BLADESOUL
 }
 
-// GetBLADESOULOk returns a tuple with the BLADESOUL field value
+// GetBLADESOULOk returns a tuple with the BLADESOUL field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) GetBLADESOULOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.BLADESOUL) {
 		return nil, false
 	}
-	return &o.BLADESOUL, true
+	return o.BLADESOUL, true
 }
 
-// SetBLADESOUL sets field value
+// HasBLADESOUL returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) HasBLADESOUL() bool {
+	if o != nil && !IsNil(o.BLADESOUL) {
+		return true
+	}
+
+	return false
+}
+
+// SetBLADESOUL gets a reference to the given bool and assigns it to the BLADESOUL field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) SetBLADESOUL(v bool) {
-	o.BLADESOUL = v
+	o.BLADESOUL = &v
 }
 
-// GetMAGE_OUTLAW returns the MAGE_OUTLAW field value
+// GetMAGE_OUTLAW returns the MAGE_OUTLAW field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) GetMAGE_OUTLAW() bool {
-	if o == nil {
+	if o == nil || IsNil(o.MAGE_OUTLAW) {
 		var ret bool
 		return ret
 	}
-
-	return o.MAGE_OUTLAW
+	return *o.MAGE_OUTLAW
 }
 
-// GetMAGE_OUTLAWOk returns a tuple with the MAGE_OUTLAW field value
+// GetMAGE_OUTLAWOk returns a tuple with the MAGE_OUTLAW field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) GetMAGE_OUTLAWOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.MAGE_OUTLAW) {
 		return nil, false
 	}
-	return &o.MAGE_OUTLAW, true
+	return o.MAGE_OUTLAW, true
 }
 
-// SetMAGE_OUTLAW sets field value
+// HasMAGE_OUTLAW returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) HasMAGE_OUTLAW() bool {
+	if o != nil && !IsNil(o.MAGE_OUTLAW) {
+		return true
+	}
+
+	return false
+}
+
+// SetMAGE_OUTLAW gets a reference to the given bool and assigns it to the MAGE_OUTLAW field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) SetMAGE_OUTLAW(v bool) {
-	o.MAGE_OUTLAW = v
+	o.MAGE_OUTLAW = &v
 }
 
-// GetMAGMA_BOSS returns the MAGMA_BOSS field value
+// GetMAGMA_BOSS returns the MAGMA_BOSS field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) GetMAGMA_BOSS() bool {
-	if o == nil {
+	if o == nil || IsNil(o.MAGMA_BOSS) {
 		var ret bool
 		return ret
 	}
-
-	return o.MAGMA_BOSS
+	return *o.MAGMA_BOSS
 }
 
-// GetMAGMA_BOSSOk returns a tuple with the MAGMA_BOSS field value
+// GetMAGMA_BOSSOk returns a tuple with the MAGMA_BOSS field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) GetMAGMA_BOSSOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.MAGMA_BOSS) {
 		return nil, false
 	}
-	return &o.MAGMA_BOSS, true
+	return o.MAGMA_BOSS, true
 }
 
-// SetMAGMA_BOSS sets field value
+// HasMAGMA_BOSS returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) HasMAGMA_BOSS() bool {
+	if o != nil && !IsNil(o.MAGMA_BOSS) {
+		return true
+	}
+
+	return false
+}
+
+// SetMAGMA_BOSS gets a reference to the given bool and assigns it to the MAGMA_BOSS field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) SetMAGMA_BOSS(v bool) {
-	o.MAGMA_BOSS = v
+	o.MAGMA_BOSS = &v
 }
 
 func (o SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) MarshalJSON() ([]byte, error) {
@@ -182,53 +213,22 @@ func (o SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) MarshalJSON()
 
 func (o SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["ASHFANG"] = o.ASHFANG
-	toSerialize["BARBARIAN_DUKE_X"] = o.BARBARIAN_DUKE_X
-	toSerialize["BLADESOUL"] = o.BLADESOUL
-	toSerialize["MAGE_OUTLAW"] = o.MAGE_OUTLAW
-	toSerialize["MAGMA_BOSS"] = o.MAGMA_BOSS
+	if !IsNil(o.ASHFANG) {
+		toSerialize["ASHFANG"] = o.ASHFANG
+	}
+	if !IsNil(o.BARBARIAN_DUKE_X) {
+		toSerialize["BARBARIAN_DUKE_X"] = o.BARBARIAN_DUKE_X
+	}
+	if !IsNil(o.BLADESOUL) {
+		toSerialize["BLADESOUL"] = o.BLADESOUL
+	}
+	if !IsNil(o.MAGE_OUTLAW) {
+		toSerialize["MAGE_OUTLAW"] = o.MAGE_OUTLAW
+	}
+	if !IsNil(o.MAGMA_BOSS) {
+		toSerialize["MAGMA_BOSS"] = o.MAGMA_BOSS
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"ASHFANG",
-		"BARBARIAN_DUKE_X",
-		"BLADESOUL",
-		"MAGE_OUTLAW",
-		"MAGMA_BOSS",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData := _SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData(varSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberNetherIslandPlayerQuestsMinibossData struct {

@@ -21,12 +21,12 @@ var _ MappedNullable = &SkyBlockProfileMemberObjectivesCollectFarmingResources2{
 
 // SkyBlockProfileMemberObjectivesCollectFarmingResources2 struct for SkyBlockProfileMemberObjectivesCollectFarmingResources2
 type SkyBlockProfileMemberObjectivesCollectFarmingResources2 struct {
-	CACTUS      *bool                                                `json:"CACTUS,omitempty"`
-	INKSACK3    *bool                                                `json:"INK_SACK:3,omitempty"`
-	SUGAR_CANE  *bool                                                `json:"SUGAR_CANE,omitempty"`
-	CompletedAt int64                                                `json:"completed_at"`
-	Progress    int64                                                `json:"progress"`
-	Status      SkyBlockProfileMemberObjectivesCatchLaseasFishStatus `json:"status"`
+	CACTUS      *bool                                                             `json:"CACTUS,omitempty"`
+	INKSACK3    *bool                                                             `json:"INK_SACK:3,omitempty"`
+	SUGAR_CANE  *bool                                                             `json:"SUGAR_CANE,omitempty"`
+	CompletedAt int64                                                             `json:"completed_at"`
+	Progress    int64                                                             `json:"progress"`
+	Status      SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus `json:"status"`
 }
 
 type _SkyBlockProfileMemberObjectivesCollectFarmingResources2 SkyBlockProfileMemberObjectivesCollectFarmingResources2
@@ -35,7 +35,7 @@ type _SkyBlockProfileMemberObjectivesCollectFarmingResources2 SkyBlockProfileMem
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberObjectivesCollectFarmingResources2(completedAt int64, progress int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) *SkyBlockProfileMemberObjectivesCollectFarmingResources2 {
+func NewSkyBlockProfileMemberObjectivesCollectFarmingResources2(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) *SkyBlockProfileMemberObjectivesCollectFarmingResources2 {
 	this := SkyBlockProfileMemberObjectivesCollectFarmingResources2{}
 	this.CompletedAt = completedAt
 	this.Progress = progress
@@ -196,9 +196,9 @@ func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources2) SetProgress(v 
 }
 
 // GetStatus returns the Status field value
-func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources2) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus {
+func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources2) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus {
 	if o == nil {
-		var ret SkyBlockProfileMemberObjectivesCatchLaseasFishStatus
+		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus
 		return ret
 	}
 
@@ -207,7 +207,7 @@ func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources2) GetStatus() Sk
 
 // GetStatusOk returns a tuple with the Status field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources2) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool) {
+func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources2) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -215,7 +215,7 @@ func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources2) GetStatusOk() 
 }
 
 // SetStatus sets field value
-func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources2) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) {
+func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources2) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) {
 	o.Status = v
 }
 

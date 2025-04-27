@@ -5,6 +5,8 @@
 
 * `ALCHEMIST` (value: `"alchemist"`)
 
+* `ALIXER` (value: `"alixer"`)
+
 * `ANITA` (value: `"anita"`)
 
 * `ARANYA` (value: `"aranya"`)

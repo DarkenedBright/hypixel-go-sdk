@@ -25,9 +25,10 @@ type SkyBlockProfileMemberPetsDataAutopetRule struct {
 	Disabled   bool                                                `json:"disabled"`
 	Exceptions []SkyBlockProfileMemberPetsDataAutopetRuleException `json:"exceptions"`
 	Id         SkyBlockProfileMemberPetsDataAutopetRuleId          `json:"id"`
-	Name       string                                              `json:"name"`
-	UniqueId   string                                              `json:"uniqueId"`
-	Uuid       string                                              `json:"uuid"`
+	Name       *string                                             `json:"name,omitempty"`
+	Pet        *SkyBlockProfileMemberPetsDataPetType               `json:"pet,omitempty"`
+	UniqueId   *string                                             `json:"uniqueId,omitempty"`
+	Uuid       *string                                             `json:"uuid,omitempty"`
 }
 
 type _SkyBlockProfileMemberPetsDataAutopetRule SkyBlockProfileMemberPetsDataAutopetRule
@@ -36,15 +37,12 @@ type _SkyBlockProfileMemberPetsDataAutopetRule SkyBlockProfileMemberPetsDataAuto
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberPetsDataAutopetRule(data SkyBlockProfileMemberPetsDataAutopetRuleData, disabled bool, exceptions []SkyBlockProfileMemberPetsDataAutopetRuleException, id SkyBlockProfileMemberPetsDataAutopetRuleId, name string, uniqueId string, uuid string) *SkyBlockProfileMemberPetsDataAutopetRule {
+func NewSkyBlockProfileMemberPetsDataAutopetRule(data SkyBlockProfileMemberPetsDataAutopetRuleData, disabled bool, exceptions []SkyBlockProfileMemberPetsDataAutopetRuleException, id SkyBlockProfileMemberPetsDataAutopetRuleId) *SkyBlockProfileMemberPetsDataAutopetRule {
 	this := SkyBlockProfileMemberPetsDataAutopetRule{}
 	this.Data = data
 	this.Disabled = disabled
 	this.Exceptions = exceptions
 	this.Id = id
-	this.Name = name
-	this.UniqueId = uniqueId
-	this.Uuid = uuid
 	return &this
 }
 
@@ -152,76 +150,132 @@ func (o *SkyBlockProfileMemberPetsDataAutopetRule) SetId(v SkyBlockProfileMember
 	o.Id = v
 }
 
-// GetName returns the Name field value
+// GetName returns the Name field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberPetsDataAutopetRule) GetName() string {
-	if o == nil {
+	if o == nil || IsNil(o.Name) {
 		var ret string
 		return ret
 	}
-
-	return o.Name
+	return *o.Name
 }
 
-// GetNameOk returns a tuple with the Name field value
+// GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberPetsDataAutopetRule) GetNameOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Name) {
 		return nil, false
 	}
-	return &o.Name, true
+	return o.Name, true
 }
 
-// SetName sets field value
+// HasName returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataAutopetRule) HasName() bool {
+	if o != nil && !IsNil(o.Name) {
+		return true
+	}
+
+	return false
+}
+
+// SetName gets a reference to the given string and assigns it to the Name field.
 func (o *SkyBlockProfileMemberPetsDataAutopetRule) SetName(v string) {
-	o.Name = v
+	o.Name = &v
 }
 
-// GetUniqueId returns the UniqueId field value
+// GetPet returns the Pet field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberPetsDataAutopetRule) GetPet() SkyBlockProfileMemberPetsDataPetType {
+	if o == nil || IsNil(o.Pet) {
+		var ret SkyBlockProfileMemberPetsDataPetType
+		return ret
+	}
+	return *o.Pet
+}
+
+// GetPetOk returns a tuple with the Pet field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberPetsDataAutopetRule) GetPetOk() (*SkyBlockProfileMemberPetsDataPetType, bool) {
+	if o == nil || IsNil(o.Pet) {
+		return nil, false
+	}
+	return o.Pet, true
+}
+
+// HasPet returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataAutopetRule) HasPet() bool {
+	if o != nil && !IsNil(o.Pet) {
+		return true
+	}
+
+	return false
+}
+
+// SetPet gets a reference to the given SkyBlockProfileMemberPetsDataPetType and assigns it to the Pet field.
+func (o *SkyBlockProfileMemberPetsDataAutopetRule) SetPet(v SkyBlockProfileMemberPetsDataPetType) {
+	o.Pet = &v
+}
+
+// GetUniqueId returns the UniqueId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberPetsDataAutopetRule) GetUniqueId() string {
-	if o == nil {
+	if o == nil || IsNil(o.UniqueId) {
 		var ret string
 		return ret
 	}
-
-	return o.UniqueId
+	return *o.UniqueId
 }
 
-// GetUniqueIdOk returns a tuple with the UniqueId field value
+// GetUniqueIdOk returns a tuple with the UniqueId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberPetsDataAutopetRule) GetUniqueIdOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.UniqueId) {
 		return nil, false
 	}
-	return &o.UniqueId, true
+	return o.UniqueId, true
 }
 
-// SetUniqueId sets field value
+// HasUniqueId returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataAutopetRule) HasUniqueId() bool {
+	if o != nil && !IsNil(o.UniqueId) {
+		return true
+	}
+
+	return false
+}
+
+// SetUniqueId gets a reference to the given string and assigns it to the UniqueId field.
 func (o *SkyBlockProfileMemberPetsDataAutopetRule) SetUniqueId(v string) {
-	o.UniqueId = v
+	o.UniqueId = &v
 }
 
-// GetUuid returns the Uuid field value
+// GetUuid returns the Uuid field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberPetsDataAutopetRule) GetUuid() string {
-	if o == nil {
+	if o == nil || IsNil(o.Uuid) {
 		var ret string
 		return ret
 	}
-
-	return o.Uuid
+	return *o.Uuid
 }
 
-// GetUuidOk returns a tuple with the Uuid field value
+// GetUuidOk returns a tuple with the Uuid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberPetsDataAutopetRule) GetUuidOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Uuid) {
 		return nil, false
 	}
-	return &o.Uuid, true
+	return o.Uuid, true
 }
 
-// SetUuid sets field value
+// HasUuid returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataAutopetRule) HasUuid() bool {
+	if o != nil && !IsNil(o.Uuid) {
+		return true
+	}
+
+	return false
+}
+
+// SetUuid gets a reference to the given string and assigns it to the Uuid field.
 func (o *SkyBlockProfileMemberPetsDataAutopetRule) SetUuid(v string) {
-	o.Uuid = v
+	o.Uuid = &v
 }
 
 func (o SkyBlockProfileMemberPetsDataAutopetRule) MarshalJSON() ([]byte, error) {
@@ -238,9 +292,18 @@ func (o SkyBlockProfileMemberPetsDataAutopetRule) ToMap() (map[string]interface{
 	toSerialize["disabled"] = o.Disabled
 	toSerialize["exceptions"] = o.Exceptions
 	toSerialize["id"] = o.Id
-	toSerialize["name"] = o.Name
-	toSerialize["uniqueId"] = o.UniqueId
-	toSerialize["uuid"] = o.Uuid
+	if !IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !IsNil(o.Pet) {
+		toSerialize["pet"] = o.Pet
+	}
+	if !IsNil(o.UniqueId) {
+		toSerialize["uniqueId"] = o.UniqueId
+	}
+	if !IsNil(o.Uuid) {
+		toSerialize["uuid"] = o.Uuid
+	}
 	return toSerialize, nil
 }
 
@@ -253,9 +316,6 @@ func (o *SkyBlockProfileMemberPetsDataAutopetRule) UnmarshalJSON(data []byte) (e
 		"disabled",
 		"exceptions",
 		"id",
-		"name",
-		"uniqueId",
-		"uuid",
 	}
 
 	allProperties := make(map[string]interface{})

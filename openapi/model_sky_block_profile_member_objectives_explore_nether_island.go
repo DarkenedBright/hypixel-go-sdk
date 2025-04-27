@@ -21,10 +21,10 @@ var _ MappedNullable = &SkyBlockProfileMemberObjectivesExploreNetherIsland{}
 
 // SkyBlockProfileMemberObjectivesExploreNetherIsland struct for SkyBlockProfileMemberObjectivesExploreNetherIsland
 type SkyBlockProfileMemberObjectivesExploreNetherIsland struct {
-	CompletedAt int64                                                      `json:"completed_at"`
-	Faction     SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction `json:"faction"`
-	Progress    int64                                                      `json:"progress"`
-	Status      *SkyBlockProfileMemberObjectivesCatchLaseasFishStatus      `json:"status,omitempty"`
+	CompletedAt int64                                                              `json:"completed_at"`
+	Faction     SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction         `json:"faction"`
+	Progress    int64                                                              `json:"progress"`
+	Status      *SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus `json:"status,omitempty"`
 }
 
 type _SkyBlockProfileMemberObjectivesExploreNetherIsland SkyBlockProfileMemberObjectivesExploreNetherIsland
@@ -122,9 +122,9 @@ func (o *SkyBlockProfileMemberObjectivesExploreNetherIsland) SetProgress(v int64
 }
 
 // GetStatus returns the Status field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberObjectivesExploreNetherIsland) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus {
+func (o *SkyBlockProfileMemberObjectivesExploreNetherIsland) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus {
 	if o == nil || IsNil(o.Status) {
-		var ret SkyBlockProfileMemberObjectivesCatchLaseasFishStatus
+		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus
 		return ret
 	}
 	return *o.Status
@@ -132,7 +132,7 @@ func (o *SkyBlockProfileMemberObjectivesExploreNetherIsland) GetStatus() SkyBloc
 
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberObjectivesExploreNetherIsland) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool) {
+func (o *SkyBlockProfileMemberObjectivesExploreNetherIsland) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool) {
 	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
@@ -148,8 +148,8 @@ func (o *SkyBlockProfileMemberObjectivesExploreNetherIsland) HasStatus() bool {
 	return false
 }
 
-// SetStatus gets a reference to the given SkyBlockProfileMemberObjectivesCatchLaseasFishStatus and assigns it to the Status field.
-func (o *SkyBlockProfileMemberObjectivesExploreNetherIsland) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) {
+// SetStatus gets a reference to the given SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus and assigns it to the Status field.
+func (o *SkyBlockProfileMemberObjectivesExploreNetherIsland) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) {
 	o.Status = &v
 }
 

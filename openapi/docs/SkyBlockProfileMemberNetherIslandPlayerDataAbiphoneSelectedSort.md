@@ -3,6 +3,14 @@
 ## Enum
 
 
+* `ALPHABETICAL` (value: `"alphabetical"`)
+
+* `DND_ENABLED` (value: `"dnd_enabled"`)
+
+* `FIRST_ADDED` (value: `"first_added"`)
+
+* `LAST_CALLED` (value: `"last_called"`)
+
 * `MOST_CALLED` (value: `"most_called"`)
 
 

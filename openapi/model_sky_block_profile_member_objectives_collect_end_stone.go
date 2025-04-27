@@ -21,10 +21,10 @@ var _ MappedNullable = &SkyBlockProfileMemberObjectivesCollectEndStone{}
 
 // SkyBlockProfileMemberObjectivesCollectEndStone struct for SkyBlockProfileMemberObjectivesCollectEndStone
 type SkyBlockProfileMemberObjectivesCollectEndStone struct {
-	ENDER_STONE *bool                                                `json:"ENDER_STONE,omitempty"`
-	CompletedAt int64                                                `json:"completed_at"`
-	Progress    int64                                                `json:"progress"`
-	Status      SkyBlockProfileMemberObjectivesCatchLaseasFishStatus `json:"status"`
+	ENDER_STONE *bool                                                             `json:"ENDER_STONE,omitempty"`
+	CompletedAt int64                                                             `json:"completed_at"`
+	Progress    int64                                                             `json:"progress"`
+	Status      SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus `json:"status"`
 }
 
 type _SkyBlockProfileMemberObjectivesCollectEndStone SkyBlockProfileMemberObjectivesCollectEndStone
@@ -33,7 +33,7 @@ type _SkyBlockProfileMemberObjectivesCollectEndStone SkyBlockProfileMemberObject
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberObjectivesCollectEndStone(completedAt int64, progress int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) *SkyBlockProfileMemberObjectivesCollectEndStone {
+func NewSkyBlockProfileMemberObjectivesCollectEndStone(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) *SkyBlockProfileMemberObjectivesCollectEndStone {
 	this := SkyBlockProfileMemberObjectivesCollectEndStone{}
 	this.CompletedAt = completedAt
 	this.Progress = progress
@@ -130,9 +130,9 @@ func (o *SkyBlockProfileMemberObjectivesCollectEndStone) SetProgress(v int64) {
 }
 
 // GetStatus returns the Status field value
-func (o *SkyBlockProfileMemberObjectivesCollectEndStone) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus {
+func (o *SkyBlockProfileMemberObjectivesCollectEndStone) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus {
 	if o == nil {
-		var ret SkyBlockProfileMemberObjectivesCatchLaseasFishStatus
+		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus
 		return ret
 	}
 
@@ -141,7 +141,7 @@ func (o *SkyBlockProfileMemberObjectivesCollectEndStone) GetStatus() SkyBlockPro
 
 // GetStatusOk returns a tuple with the Status field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberObjectivesCollectEndStone) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool) {
+func (o *SkyBlockProfileMemberObjectivesCollectEndStone) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -149,7 +149,7 @@ func (o *SkyBlockProfileMemberObjectivesCollectEndStone) GetStatusOk() (*SkyBloc
 }
 
 // SetStatus sets field value
-func (o *SkyBlockProfileMemberObjectivesCollectEndStone) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) {
+func (o *SkyBlockProfileMemberObjectivesCollectEndStone) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) {
 	o.Status = v
 }
 

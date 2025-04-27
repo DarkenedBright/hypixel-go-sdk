@@ -5,21 +5,21 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Active** | **bool** |  | 
-**CandyUsed** | **int64** |  | 
+**CandyUsed** | Pointer to **int64** |  | [optional] 
 **Exp** | **float64** |  | 
-**Extra** | Pointer to **map[string]int64** |  | [optional] 
-**HeldItem** | [**NullableSkyBlockProfileMemberPetsDataPetHeldItem**](SkyBlockProfileMemberPetsDataPetHeldItem.md) |  | 
-**Skin** | **string** |  | 
+**Extra** | Pointer to **map[string]float64** |  | [optional] 
+**HeldItem** | Pointer to [**NullableSkyBlockProfileMemberPetsDataPetHeldItem**](SkyBlockProfileMemberPetsDataPetHeldItem.md) |  | [optional] 
+**Skin** | Pointer to **NullableString** |  | [optional] 
 **Tier** | [**SkyBlockProfileMemberPetsDataPetTier**](SkyBlockProfileMemberPetsDataPetTier.md) |  | 
 **Type** | [**SkyBlockProfileMemberPetsDataPetType**](SkyBlockProfileMemberPetsDataPetType.md) |  | 
-**UniqueId** | **string** |  | 
-**Uuid** | **string** |  | 
+**UniqueId** | Pointer to **string** |  | [optional] 
+**Uuid** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberPetsDataPet
 
-`func NewSkyBlockProfileMemberPetsDataPet(active bool, candyUsed int64, exp float64, heldItem NullableSkyBlockProfileMemberPetsDataPetHeldItem, skin string, tier SkyBlockProfileMemberPetsDataPetTier, type_ SkyBlockProfileMemberPetsDataPetType, uniqueId string, uuid string, ) *SkyBlockProfileMemberPetsDataPet`
+`func NewSkyBlockProfileMemberPetsDataPet(active bool, exp float64, tier SkyBlockProfileMemberPetsDataPetTier, type_ SkyBlockProfileMemberPetsDataPetType, ) *SkyBlockProfileMemberPetsDataPet`
 
 NewSkyBlockProfileMemberPetsDataPet instantiates a new SkyBlockProfileMemberPetsDataPet object
 This constructor will assign default values to properties that have it defined,
@@ -73,6 +73,11 @@ and a boolean to check if the value has been set.
 
 SetCandyUsed sets CandyUsed field to given value.
 
+### HasCandyUsed
+
+`func (o *SkyBlockProfileMemberPetsDataPet) HasCandyUsed() bool`
+
+HasCandyUsed returns a boolean if a field has been set.
 
 ### GetExp
 
@@ -96,20 +101,20 @@ SetExp sets Exp field to given value.
 
 ### GetExtra
 
-`func (o *SkyBlockProfileMemberPetsDataPet) GetExtra() map[string]int64`
+`func (o *SkyBlockProfileMemberPetsDataPet) GetExtra() map[string]float64`
 
 GetExtra returns the Extra field if non-nil, zero value otherwise.
 
 ### GetExtraOk
 
-`func (o *SkyBlockProfileMemberPetsDataPet) GetExtraOk() (*map[string]int64, bool)`
+`func (o *SkyBlockProfileMemberPetsDataPet) GetExtraOk() (*map[string]float64, bool)`
 
 GetExtraOk returns a tuple with the Extra field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtra
 
-`func (o *SkyBlockProfileMemberPetsDataPet) SetExtra(v map[string]int64)`
+`func (o *SkyBlockProfileMemberPetsDataPet) SetExtra(v map[string]float64)`
 
 SetExtra sets Extra field to given value.
 
@@ -138,6 +143,11 @@ and a boolean to check if the value has been set.
 
 SetHeldItem sets HeldItem field to given value.
 
+### HasHeldItem
+
+`func (o *SkyBlockProfileMemberPetsDataPet) HasHeldItem() bool`
+
+HasHeldItem returns a boolean if a field has been set.
 
 ### SetHeldItemNil
 
@@ -168,7 +178,22 @@ and a boolean to check if the value has been set.
 
 SetSkin sets Skin field to given value.
 
+### HasSkin
 
+`func (o *SkyBlockProfileMemberPetsDataPet) HasSkin() bool`
+
+HasSkin returns a boolean if a field has been set.
+
+### SetSkinNil
+
+`func (o *SkyBlockProfileMemberPetsDataPet) SetSkinNil(b bool)`
+
+ SetSkinNil sets the value for Skin to be an explicit nil
+
+### UnsetSkin
+`func (o *SkyBlockProfileMemberPetsDataPet) UnsetSkin()`
+
+UnsetSkin ensures that no value is present for Skin, not even an explicit nil
 ### GetTier
 
 `func (o *SkyBlockProfileMemberPetsDataPet) GetTier() SkyBlockProfileMemberPetsDataPetTier`
@@ -228,6 +253,11 @@ and a boolean to check if the value has been set.
 
 SetUniqueId sets UniqueId field to given value.
 
+### HasUniqueId
+
+`func (o *SkyBlockProfileMemberPetsDataPet) HasUniqueId() bool`
+
+HasUniqueId returns a boolean if a field has been set.
 
 ### GetUuid
 
@@ -248,6 +278,11 @@ and a boolean to check if the value has been set.
 
 SetUuid sets Uuid field to given value.
 
+### HasUuid
+
+`func (o *SkyBlockProfileMemberPetsDataPet) HasUuid() bool`
+
+HasUuid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

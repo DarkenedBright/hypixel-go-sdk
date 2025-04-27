@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberNetherIslandPlayerDataDojo type satisfies the MappedNullable interface at compile time
@@ -21,44 +19,28 @@ var _ MappedNullable = &SkyBlockProfileMemberNetherIslandPlayerDataDojo{}
 
 // SkyBlockProfileMemberNetherIslandPlayerDataDojo struct for SkyBlockProfileMemberNetherIslandPlayerDataDojo
 type SkyBlockProfileMemberNetherIslandPlayerDataDojo struct {
-	DojoPointsArcher    int64 `json:"dojo_points_archer"`
-	DojoPointsFireball  int64 `json:"dojo_points_fireball"`
-	DojoPointsLockHead  int64 `json:"dojo_points_lock_head"`
-	DojoPointsMobKb     int64 `json:"dojo_points_mob_kb"`
-	DojoPointsSnake     int64 `json:"dojo_points_snake"`
-	DojoPointsSwordSwap int64 `json:"dojo_points_sword_swap"`
-	DojoPointsWallJump  int64 `json:"dojo_points_wall_jump"`
-	DojoTimeArcher      int64 `json:"dojo_time_archer"`
-	DojoTimeFireball    int64 `json:"dojo_time_fireball"`
-	DojoTimeLockHead    int64 `json:"dojo_time_lock_head"`
-	DojoTimeMobKb       int64 `json:"dojo_time_mob_kb"`
-	DojoTimeSnake       int64 `json:"dojo_time_snake"`
-	DojoTimeSwordSwap   int64 `json:"dojo_time_sword_swap"`
-	DojoTimeWallJump    int64 `json:"dojo_time_wall_jump"`
+	DojoPointsArcher    *int64 `json:"dojo_points_archer,omitempty"`
+	DojoPointsFireball  *int64 `json:"dojo_points_fireball,omitempty"`
+	DojoPointsLockHead  *int64 `json:"dojo_points_lock_head,omitempty"`
+	DojoPointsMobKb     *int64 `json:"dojo_points_mob_kb,omitempty"`
+	DojoPointsSnake     *int64 `json:"dojo_points_snake,omitempty"`
+	DojoPointsSwordSwap *int64 `json:"dojo_points_sword_swap,omitempty"`
+	DojoPointsWallJump  *int64 `json:"dojo_points_wall_jump,omitempty"`
+	DojoTimeArcher      *int64 `json:"dojo_time_archer,omitempty"`
+	DojoTimeFireball    *int64 `json:"dojo_time_fireball,omitempty"`
+	DojoTimeLockHead    *int64 `json:"dojo_time_lock_head,omitempty"`
+	DojoTimeMobKb       *int64 `json:"dojo_time_mob_kb,omitempty"`
+	DojoTimeSnake       *int64 `json:"dojo_time_snake,omitempty"`
+	DojoTimeSwordSwap   *int64 `json:"dojo_time_sword_swap,omitempty"`
+	DojoTimeWallJump    *int64 `json:"dojo_time_wall_jump,omitempty"`
 }
-
-type _SkyBlockProfileMemberNetherIslandPlayerDataDojo SkyBlockProfileMemberNetherIslandPlayerDataDojo
 
 // NewSkyBlockProfileMemberNetherIslandPlayerDataDojo instantiates a new SkyBlockProfileMemberNetherIslandPlayerDataDojo object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberNetherIslandPlayerDataDojo(dojoPointsArcher int64, dojoPointsFireball int64, dojoPointsLockHead int64, dojoPointsMobKb int64, dojoPointsSnake int64, dojoPointsSwordSwap int64, dojoPointsWallJump int64, dojoTimeArcher int64, dojoTimeFireball int64, dojoTimeLockHead int64, dojoTimeMobKb int64, dojoTimeSnake int64, dojoTimeSwordSwap int64, dojoTimeWallJump int64) *SkyBlockProfileMemberNetherIslandPlayerDataDojo {
+func NewSkyBlockProfileMemberNetherIslandPlayerDataDojo() *SkyBlockProfileMemberNetherIslandPlayerDataDojo {
 	this := SkyBlockProfileMemberNetherIslandPlayerDataDojo{}
-	this.DojoPointsArcher = dojoPointsArcher
-	this.DojoPointsFireball = dojoPointsFireball
-	this.DojoPointsLockHead = dojoPointsLockHead
-	this.DojoPointsMobKb = dojoPointsMobKb
-	this.DojoPointsSnake = dojoPointsSnake
-	this.DojoPointsSwordSwap = dojoPointsSwordSwap
-	this.DojoPointsWallJump = dojoPointsWallJump
-	this.DojoTimeArcher = dojoTimeArcher
-	this.DojoTimeFireball = dojoTimeFireball
-	this.DojoTimeLockHead = dojoTimeLockHead
-	this.DojoTimeMobKb = dojoTimeMobKb
-	this.DojoTimeSnake = dojoTimeSnake
-	this.DojoTimeSwordSwap = dojoTimeSwordSwap
-	this.DojoTimeWallJump = dojoTimeWallJump
 	return &this
 }
 
@@ -70,340 +52,452 @@ func NewSkyBlockProfileMemberNetherIslandPlayerDataDojoWithDefaults() *SkyBlockP
 	return &this
 }
 
-// GetDojoPointsArcher returns the DojoPointsArcher field value
+// GetDojoPointsArcher returns the DojoPointsArcher field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsArcher() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsArcher) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoPointsArcher
+	return *o.DojoPointsArcher
 }
 
-// GetDojoPointsArcherOk returns a tuple with the DojoPointsArcher field value
+// GetDojoPointsArcherOk returns a tuple with the DojoPointsArcher field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsArcherOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsArcher) {
 		return nil, false
 	}
-	return &o.DojoPointsArcher, true
+	return o.DojoPointsArcher, true
 }
 
-// SetDojoPointsArcher sets field value
+// HasDojoPointsArcher returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsArcher() bool {
+	if o != nil && !IsNil(o.DojoPointsArcher) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoPointsArcher gets a reference to the given int64 and assigns it to the DojoPointsArcher field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoPointsArcher(v int64) {
-	o.DojoPointsArcher = v
+	o.DojoPointsArcher = &v
 }
 
-// GetDojoPointsFireball returns the DojoPointsFireball field value
+// GetDojoPointsFireball returns the DojoPointsFireball field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsFireball() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsFireball) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoPointsFireball
+	return *o.DojoPointsFireball
 }
 
-// GetDojoPointsFireballOk returns a tuple with the DojoPointsFireball field value
+// GetDojoPointsFireballOk returns a tuple with the DojoPointsFireball field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsFireballOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsFireball) {
 		return nil, false
 	}
-	return &o.DojoPointsFireball, true
+	return o.DojoPointsFireball, true
 }
 
-// SetDojoPointsFireball sets field value
+// HasDojoPointsFireball returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsFireball() bool {
+	if o != nil && !IsNil(o.DojoPointsFireball) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoPointsFireball gets a reference to the given int64 and assigns it to the DojoPointsFireball field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoPointsFireball(v int64) {
-	o.DojoPointsFireball = v
+	o.DojoPointsFireball = &v
 }
 
-// GetDojoPointsLockHead returns the DojoPointsLockHead field value
+// GetDojoPointsLockHead returns the DojoPointsLockHead field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsLockHead() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsLockHead) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoPointsLockHead
+	return *o.DojoPointsLockHead
 }
 
-// GetDojoPointsLockHeadOk returns a tuple with the DojoPointsLockHead field value
+// GetDojoPointsLockHeadOk returns a tuple with the DojoPointsLockHead field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsLockHeadOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsLockHead) {
 		return nil, false
 	}
-	return &o.DojoPointsLockHead, true
+	return o.DojoPointsLockHead, true
 }
 
-// SetDojoPointsLockHead sets field value
+// HasDojoPointsLockHead returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsLockHead() bool {
+	if o != nil && !IsNil(o.DojoPointsLockHead) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoPointsLockHead gets a reference to the given int64 and assigns it to the DojoPointsLockHead field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoPointsLockHead(v int64) {
-	o.DojoPointsLockHead = v
+	o.DojoPointsLockHead = &v
 }
 
-// GetDojoPointsMobKb returns the DojoPointsMobKb field value
+// GetDojoPointsMobKb returns the DojoPointsMobKb field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsMobKb() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsMobKb) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoPointsMobKb
+	return *o.DojoPointsMobKb
 }
 
-// GetDojoPointsMobKbOk returns a tuple with the DojoPointsMobKb field value
+// GetDojoPointsMobKbOk returns a tuple with the DojoPointsMobKb field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsMobKbOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsMobKb) {
 		return nil, false
 	}
-	return &o.DojoPointsMobKb, true
+	return o.DojoPointsMobKb, true
 }
 
-// SetDojoPointsMobKb sets field value
+// HasDojoPointsMobKb returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsMobKb() bool {
+	if o != nil && !IsNil(o.DojoPointsMobKb) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoPointsMobKb gets a reference to the given int64 and assigns it to the DojoPointsMobKb field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoPointsMobKb(v int64) {
-	o.DojoPointsMobKb = v
+	o.DojoPointsMobKb = &v
 }
 
-// GetDojoPointsSnake returns the DojoPointsSnake field value
+// GetDojoPointsSnake returns the DojoPointsSnake field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsSnake() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsSnake) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoPointsSnake
+	return *o.DojoPointsSnake
 }
 
-// GetDojoPointsSnakeOk returns a tuple with the DojoPointsSnake field value
+// GetDojoPointsSnakeOk returns a tuple with the DojoPointsSnake field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsSnakeOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsSnake) {
 		return nil, false
 	}
-	return &o.DojoPointsSnake, true
+	return o.DojoPointsSnake, true
 }
 
-// SetDojoPointsSnake sets field value
+// HasDojoPointsSnake returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsSnake() bool {
+	if o != nil && !IsNil(o.DojoPointsSnake) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoPointsSnake gets a reference to the given int64 and assigns it to the DojoPointsSnake field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoPointsSnake(v int64) {
-	o.DojoPointsSnake = v
+	o.DojoPointsSnake = &v
 }
 
-// GetDojoPointsSwordSwap returns the DojoPointsSwordSwap field value
+// GetDojoPointsSwordSwap returns the DojoPointsSwordSwap field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsSwordSwap() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsSwordSwap) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoPointsSwordSwap
+	return *o.DojoPointsSwordSwap
 }
 
-// GetDojoPointsSwordSwapOk returns a tuple with the DojoPointsSwordSwap field value
+// GetDojoPointsSwordSwapOk returns a tuple with the DojoPointsSwordSwap field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsSwordSwapOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsSwordSwap) {
 		return nil, false
 	}
-	return &o.DojoPointsSwordSwap, true
+	return o.DojoPointsSwordSwap, true
 }
 
-// SetDojoPointsSwordSwap sets field value
+// HasDojoPointsSwordSwap returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsSwordSwap() bool {
+	if o != nil && !IsNil(o.DojoPointsSwordSwap) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoPointsSwordSwap gets a reference to the given int64 and assigns it to the DojoPointsSwordSwap field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoPointsSwordSwap(v int64) {
-	o.DojoPointsSwordSwap = v
+	o.DojoPointsSwordSwap = &v
 }
 
-// GetDojoPointsWallJump returns the DojoPointsWallJump field value
+// GetDojoPointsWallJump returns the DojoPointsWallJump field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsWallJump() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsWallJump) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoPointsWallJump
+	return *o.DojoPointsWallJump
 }
 
-// GetDojoPointsWallJumpOk returns a tuple with the DojoPointsWallJump field value
+// GetDojoPointsWallJumpOk returns a tuple with the DojoPointsWallJump field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoPointsWallJumpOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoPointsWallJump) {
 		return nil, false
 	}
-	return &o.DojoPointsWallJump, true
+	return o.DojoPointsWallJump, true
 }
 
-// SetDojoPointsWallJump sets field value
+// HasDojoPointsWallJump returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoPointsWallJump() bool {
+	if o != nil && !IsNil(o.DojoPointsWallJump) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoPointsWallJump gets a reference to the given int64 and assigns it to the DojoPointsWallJump field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoPointsWallJump(v int64) {
-	o.DojoPointsWallJump = v
+	o.DojoPointsWallJump = &v
 }
 
-// GetDojoTimeArcher returns the DojoTimeArcher field value
+// GetDojoTimeArcher returns the DojoTimeArcher field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeArcher() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeArcher) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoTimeArcher
+	return *o.DojoTimeArcher
 }
 
-// GetDojoTimeArcherOk returns a tuple with the DojoTimeArcher field value
+// GetDojoTimeArcherOk returns a tuple with the DojoTimeArcher field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeArcherOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeArcher) {
 		return nil, false
 	}
-	return &o.DojoTimeArcher, true
+	return o.DojoTimeArcher, true
 }
 
-// SetDojoTimeArcher sets field value
+// HasDojoTimeArcher returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeArcher() bool {
+	if o != nil && !IsNil(o.DojoTimeArcher) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoTimeArcher gets a reference to the given int64 and assigns it to the DojoTimeArcher field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoTimeArcher(v int64) {
-	o.DojoTimeArcher = v
+	o.DojoTimeArcher = &v
 }
 
-// GetDojoTimeFireball returns the DojoTimeFireball field value
+// GetDojoTimeFireball returns the DojoTimeFireball field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeFireball() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeFireball) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoTimeFireball
+	return *o.DojoTimeFireball
 }
 
-// GetDojoTimeFireballOk returns a tuple with the DojoTimeFireball field value
+// GetDojoTimeFireballOk returns a tuple with the DojoTimeFireball field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeFireballOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeFireball) {
 		return nil, false
 	}
-	return &o.DojoTimeFireball, true
+	return o.DojoTimeFireball, true
 }
 
-// SetDojoTimeFireball sets field value
+// HasDojoTimeFireball returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeFireball() bool {
+	if o != nil && !IsNil(o.DojoTimeFireball) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoTimeFireball gets a reference to the given int64 and assigns it to the DojoTimeFireball field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoTimeFireball(v int64) {
-	o.DojoTimeFireball = v
+	o.DojoTimeFireball = &v
 }
 
-// GetDojoTimeLockHead returns the DojoTimeLockHead field value
+// GetDojoTimeLockHead returns the DojoTimeLockHead field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeLockHead() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeLockHead) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoTimeLockHead
+	return *o.DojoTimeLockHead
 }
 
-// GetDojoTimeLockHeadOk returns a tuple with the DojoTimeLockHead field value
+// GetDojoTimeLockHeadOk returns a tuple with the DojoTimeLockHead field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeLockHeadOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeLockHead) {
 		return nil, false
 	}
-	return &o.DojoTimeLockHead, true
+	return o.DojoTimeLockHead, true
 }
 
-// SetDojoTimeLockHead sets field value
+// HasDojoTimeLockHead returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeLockHead() bool {
+	if o != nil && !IsNil(o.DojoTimeLockHead) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoTimeLockHead gets a reference to the given int64 and assigns it to the DojoTimeLockHead field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoTimeLockHead(v int64) {
-	o.DojoTimeLockHead = v
+	o.DojoTimeLockHead = &v
 }
 
-// GetDojoTimeMobKb returns the DojoTimeMobKb field value
+// GetDojoTimeMobKb returns the DojoTimeMobKb field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeMobKb() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeMobKb) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoTimeMobKb
+	return *o.DojoTimeMobKb
 }
 
-// GetDojoTimeMobKbOk returns a tuple with the DojoTimeMobKb field value
+// GetDojoTimeMobKbOk returns a tuple with the DojoTimeMobKb field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeMobKbOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeMobKb) {
 		return nil, false
 	}
-	return &o.DojoTimeMobKb, true
+	return o.DojoTimeMobKb, true
 }
 
-// SetDojoTimeMobKb sets field value
+// HasDojoTimeMobKb returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeMobKb() bool {
+	if o != nil && !IsNil(o.DojoTimeMobKb) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoTimeMobKb gets a reference to the given int64 and assigns it to the DojoTimeMobKb field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoTimeMobKb(v int64) {
-	o.DojoTimeMobKb = v
+	o.DojoTimeMobKb = &v
 }
 
-// GetDojoTimeSnake returns the DojoTimeSnake field value
+// GetDojoTimeSnake returns the DojoTimeSnake field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeSnake() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeSnake) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoTimeSnake
+	return *o.DojoTimeSnake
 }
 
-// GetDojoTimeSnakeOk returns a tuple with the DojoTimeSnake field value
+// GetDojoTimeSnakeOk returns a tuple with the DojoTimeSnake field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeSnakeOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeSnake) {
 		return nil, false
 	}
-	return &o.DojoTimeSnake, true
+	return o.DojoTimeSnake, true
 }
 
-// SetDojoTimeSnake sets field value
+// HasDojoTimeSnake returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeSnake() bool {
+	if o != nil && !IsNil(o.DojoTimeSnake) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoTimeSnake gets a reference to the given int64 and assigns it to the DojoTimeSnake field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoTimeSnake(v int64) {
-	o.DojoTimeSnake = v
+	o.DojoTimeSnake = &v
 }
 
-// GetDojoTimeSwordSwap returns the DojoTimeSwordSwap field value
+// GetDojoTimeSwordSwap returns the DojoTimeSwordSwap field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeSwordSwap() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeSwordSwap) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoTimeSwordSwap
+	return *o.DojoTimeSwordSwap
 }
 
-// GetDojoTimeSwordSwapOk returns a tuple with the DojoTimeSwordSwap field value
+// GetDojoTimeSwordSwapOk returns a tuple with the DojoTimeSwordSwap field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeSwordSwapOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeSwordSwap) {
 		return nil, false
 	}
-	return &o.DojoTimeSwordSwap, true
+	return o.DojoTimeSwordSwap, true
 }
 
-// SetDojoTimeSwordSwap sets field value
+// HasDojoTimeSwordSwap returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeSwordSwap() bool {
+	if o != nil && !IsNil(o.DojoTimeSwordSwap) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoTimeSwordSwap gets a reference to the given int64 and assigns it to the DojoTimeSwordSwap field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoTimeSwordSwap(v int64) {
-	o.DojoTimeSwordSwap = v
+	o.DojoTimeSwordSwap = &v
 }
 
-// GetDojoTimeWallJump returns the DojoTimeWallJump field value
+// GetDojoTimeWallJump returns the DojoTimeWallJump field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeWallJump() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeWallJump) {
 		var ret int64
 		return ret
 	}
-
-	return o.DojoTimeWallJump
+	return *o.DojoTimeWallJump
 }
 
-// GetDojoTimeWallJumpOk returns a tuple with the DojoTimeWallJump field value
+// GetDojoTimeWallJumpOk returns a tuple with the DojoTimeWallJump field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) GetDojoTimeWallJumpOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.DojoTimeWallJump) {
 		return nil, false
 	}
-	return &o.DojoTimeWallJump, true
+	return o.DojoTimeWallJump, true
 }
 
-// SetDojoTimeWallJump sets field value
+// HasDojoTimeWallJump returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) HasDojoTimeWallJump() bool {
+	if o != nil && !IsNil(o.DojoTimeWallJump) {
+		return true
+	}
+
+	return false
+}
+
+// SetDojoTimeWallJump gets a reference to the given int64 and assigns it to the DojoTimeWallJump field.
 func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) SetDojoTimeWallJump(v int64) {
-	o.DojoTimeWallJump = v
+	o.DojoTimeWallJump = &v
 }
 
 func (o SkyBlockProfileMemberNetherIslandPlayerDataDojo) MarshalJSON() ([]byte, error) {
@@ -416,71 +510,49 @@ func (o SkyBlockProfileMemberNetherIslandPlayerDataDojo) MarshalJSON() ([]byte, 
 
 func (o SkyBlockProfileMemberNetherIslandPlayerDataDojo) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["dojo_points_archer"] = o.DojoPointsArcher
-	toSerialize["dojo_points_fireball"] = o.DojoPointsFireball
-	toSerialize["dojo_points_lock_head"] = o.DojoPointsLockHead
-	toSerialize["dojo_points_mob_kb"] = o.DojoPointsMobKb
-	toSerialize["dojo_points_snake"] = o.DojoPointsSnake
-	toSerialize["dojo_points_sword_swap"] = o.DojoPointsSwordSwap
-	toSerialize["dojo_points_wall_jump"] = o.DojoPointsWallJump
-	toSerialize["dojo_time_archer"] = o.DojoTimeArcher
-	toSerialize["dojo_time_fireball"] = o.DojoTimeFireball
-	toSerialize["dojo_time_lock_head"] = o.DojoTimeLockHead
-	toSerialize["dojo_time_mob_kb"] = o.DojoTimeMobKb
-	toSerialize["dojo_time_snake"] = o.DojoTimeSnake
-	toSerialize["dojo_time_sword_swap"] = o.DojoTimeSwordSwap
-	toSerialize["dojo_time_wall_jump"] = o.DojoTimeWallJump
+	if !IsNil(o.DojoPointsArcher) {
+		toSerialize["dojo_points_archer"] = o.DojoPointsArcher
+	}
+	if !IsNil(o.DojoPointsFireball) {
+		toSerialize["dojo_points_fireball"] = o.DojoPointsFireball
+	}
+	if !IsNil(o.DojoPointsLockHead) {
+		toSerialize["dojo_points_lock_head"] = o.DojoPointsLockHead
+	}
+	if !IsNil(o.DojoPointsMobKb) {
+		toSerialize["dojo_points_mob_kb"] = o.DojoPointsMobKb
+	}
+	if !IsNil(o.DojoPointsSnake) {
+		toSerialize["dojo_points_snake"] = o.DojoPointsSnake
+	}
+	if !IsNil(o.DojoPointsSwordSwap) {
+		toSerialize["dojo_points_sword_swap"] = o.DojoPointsSwordSwap
+	}
+	if !IsNil(o.DojoPointsWallJump) {
+		toSerialize["dojo_points_wall_jump"] = o.DojoPointsWallJump
+	}
+	if !IsNil(o.DojoTimeArcher) {
+		toSerialize["dojo_time_archer"] = o.DojoTimeArcher
+	}
+	if !IsNil(o.DojoTimeFireball) {
+		toSerialize["dojo_time_fireball"] = o.DojoTimeFireball
+	}
+	if !IsNil(o.DojoTimeLockHead) {
+		toSerialize["dojo_time_lock_head"] = o.DojoTimeLockHead
+	}
+	if !IsNil(o.DojoTimeMobKb) {
+		toSerialize["dojo_time_mob_kb"] = o.DojoTimeMobKb
+	}
+	if !IsNil(o.DojoTimeSnake) {
+		toSerialize["dojo_time_snake"] = o.DojoTimeSnake
+	}
+	if !IsNil(o.DojoTimeSwordSwap) {
+		toSerialize["dojo_time_sword_swap"] = o.DojoTimeSwordSwap
+	}
+	if !IsNil(o.DojoTimeWallJump) {
+		toSerialize["dojo_time_wall_jump"] = o.DojoTimeWallJump
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberNetherIslandPlayerDataDojo) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"dojo_points_archer",
-		"dojo_points_fireball",
-		"dojo_points_lock_head",
-		"dojo_points_mob_kb",
-		"dojo_points_snake",
-		"dojo_points_sword_swap",
-		"dojo_points_wall_jump",
-		"dojo_time_archer",
-		"dojo_time_fireball",
-		"dojo_time_lock_head",
-		"dojo_time_mob_kb",
-		"dojo_time_snake",
-		"dojo_time_sword_swap",
-		"dojo_time_wall_jump",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberNetherIslandPlayerDataDojo := _SkyBlockProfileMemberNetherIslandPlayerDataDojo{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberNetherIslandPlayerDataDojo)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberNetherIslandPlayerDataDojo(varSkyBlockProfileMemberNetherIslandPlayerDataDojo)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberNetherIslandPlayerDataDojo struct {

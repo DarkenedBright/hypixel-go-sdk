@@ -5,13 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CompletedQuest** | Pointer to **bool** |  | [optional] 
-**TalkedToNpc** | **bool** |  | 
+**SplashedGrandExpBottle** | Pointer to **bool** |  | [optional] 
+**TalkedToNpc** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest
 
-`func NewSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest(talkedToNpc bool, ) *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest`
+`func NewSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest() *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest`
 
 NewSkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest instantiates a new SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest object
 This constructor will assign default values to properties that have it defined,
@@ -51,6 +52,31 @@ SetCompletedQuest sets CompletedQuest field to given value.
 
 HasCompletedQuest returns a boolean if a field has been set.
 
+### GetSplashedGrandExpBottle
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) GetSplashedGrandExpBottle() bool`
+
+GetSplashedGrandExpBottle returns the SplashedGrandExpBottle field if non-nil, zero value otherwise.
+
+### GetSplashedGrandExpBottleOk
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) GetSplashedGrandExpBottleOk() (*bool, bool)`
+
+GetSplashedGrandExpBottleOk returns a tuple with the SplashedGrandExpBottle field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplashedGrandExpBottle
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) SetSplashedGrandExpBottle(v bool)`
+
+SetSplashedGrandExpBottle sets SplashedGrandExpBottle field to given value.
+
+### HasSplashedGrandExpBottle
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) HasSplashedGrandExpBottle() bool`
+
+HasSplashedGrandExpBottle returns a boolean if a field has been set.
+
 ### GetTalkedToNpc
 
 `func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) GetTalkedToNpc() bool`
@@ -70,6 +96,11 @@ and a boolean to check if the value has been set.
 
 SetTalkedToNpc sets TalkedToNpc field to given value.
 
+### HasTalkedToNpc
+
+`func (o *SkyBlockProfileMemberNetherIslandPlayerQuestsMollimQuest) HasTalkedToNpc() bool`
+
+HasTalkedToNpc returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

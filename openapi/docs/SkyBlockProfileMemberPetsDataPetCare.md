@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CoinsSpent** | **float64** |  | 
-**PetTypesSacrificed** | [**[]SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner**](SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner.md) |  | 
+**CoinsSpent** | Pointer to **float64** |  | [optional] 
+**PetTypesSacrificed** | Pointer to [**[]SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner**](SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner.md) |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberPetsDataPetCare
 
-`func NewSkyBlockProfileMemberPetsDataPetCare(coinsSpent float64, petTypesSacrificed []SkyBlockProfileMemberPetsDataPetCarePetTypesSacrificedInner, ) *SkyBlockProfileMemberPetsDataPetCare`
+`func NewSkyBlockProfileMemberPetsDataPetCare() *SkyBlockProfileMemberPetsDataPetCare`
 
 NewSkyBlockProfileMemberPetsDataPetCare instantiates a new SkyBlockProfileMemberPetsDataPetCare object
 This constructor will assign default values to properties that have it defined,
@@ -45,6 +45,11 @@ and a boolean to check if the value has been set.
 
 SetCoinsSpent sets CoinsSpent field to given value.
 
+### HasCoinsSpent
+
+`func (o *SkyBlockProfileMemberPetsDataPetCare) HasCoinsSpent() bool`
+
+HasCoinsSpent returns a boolean if a field has been set.
 
 ### GetPetTypesSacrificed
 
@@ -65,6 +70,11 @@ and a boolean to check if the value has been set.
 
 SetPetTypesSacrificed sets PetTypesSacrificed field to given value.
 
+### HasPetTypesSacrificed
+
+`func (o *SkyBlockProfileMemberPetsDataPetCare) HasPetTypesSacrificed() bool`
+
+HasPetTypesSacrificed returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

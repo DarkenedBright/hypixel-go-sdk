@@ -21,13 +21,13 @@ var _ MappedNullable = &SkyBlockProfileMemberObjectivesCollectFarmingResources{}
 
 // SkyBlockProfileMemberObjectivesCollectFarmingResources struct for SkyBlockProfileMemberObjectivesCollectFarmingResources
 type SkyBlockProfileMemberObjectivesCollectFarmingResources struct {
-	CARROT_ITEM *bool                                                `json:"CARROT_ITEM,omitempty"`
-	MELON       *bool                                                `json:"MELON,omitempty"`
-	POTATO_ITEM *bool                                                `json:"POTATO_ITEM,omitempty"`
-	PUMPKIN     *bool                                                `json:"PUMPKIN,omitempty"`
-	CompletedAt int64                                                `json:"completed_at"`
-	Progress    int64                                                `json:"progress"`
-	Status      SkyBlockProfileMemberObjectivesCatchLaseasFishStatus `json:"status"`
+	CARROT_ITEM *bool                                                             `json:"CARROT_ITEM,omitempty"`
+	MELON       *bool                                                             `json:"MELON,omitempty"`
+	POTATO_ITEM *bool                                                             `json:"POTATO_ITEM,omitempty"`
+	PUMPKIN     *bool                                                             `json:"PUMPKIN,omitempty"`
+	CompletedAt int64                                                             `json:"completed_at"`
+	Progress    int64                                                             `json:"progress"`
+	Status      SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus `json:"status"`
 }
 
 type _SkyBlockProfileMemberObjectivesCollectFarmingResources SkyBlockProfileMemberObjectivesCollectFarmingResources
@@ -36,7 +36,7 @@ type _SkyBlockProfileMemberObjectivesCollectFarmingResources SkyBlockProfileMemb
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberObjectivesCollectFarmingResources(completedAt int64, progress int64, status SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) *SkyBlockProfileMemberObjectivesCollectFarmingResources {
+func NewSkyBlockProfileMemberObjectivesCollectFarmingResources(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) *SkyBlockProfileMemberObjectivesCollectFarmingResources {
 	this := SkyBlockProfileMemberObjectivesCollectFarmingResources{}
 	this.CompletedAt = completedAt
 	this.Progress = progress
@@ -229,9 +229,9 @@ func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources) SetProgress(v i
 }
 
 // GetStatus returns the Status field value
-func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources) GetStatus() SkyBlockProfileMemberObjectivesCatchLaseasFishStatus {
+func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources) GetStatus() SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus {
 	if o == nil {
-		var ret SkyBlockProfileMemberObjectivesCatchLaseasFishStatus
+		var ret SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus
 		return ret
 	}
 
@@ -240,7 +240,7 @@ func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources) GetStatus() Sky
 
 // GetStatusOk returns a tuple with the Status field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources) GetStatusOk() (*SkyBlockProfileMemberObjectivesCatchLaseasFishStatus, bool) {
+func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources) GetStatusOk() (*SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -248,7 +248,7 @@ func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources) GetStatusOk() (
 }
 
 // SetStatus sets field value
-func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources) SetStatus(v SkyBlockProfileMemberObjectivesCatchLaseasFishStatus) {
+func (o *SkyBlockProfileMemberObjectivesCollectFarmingResources) SetStatus(v SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) {
 	o.Status = v
 }
 

@@ -5,8 +5,6 @@
 
 * `ANOMALOUS_DESIRE` (value: `"anomalous_desire"`)
 
-* `GEMSTONE_INFUSION` (value: `"gemstone_infusion"`)
-
 * `MANIAC_MINER` (value: `"maniac_miner"`)
 
 * `MINING_SPEED_BOOST` (value: `"mining_speed_boost"`)

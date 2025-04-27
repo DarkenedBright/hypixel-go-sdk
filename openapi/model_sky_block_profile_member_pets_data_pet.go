@@ -22,15 +22,15 @@ var _ MappedNullable = &SkyBlockProfileMemberPetsDataPet{}
 // SkyBlockProfileMemberPetsDataPet struct for SkyBlockProfileMemberPetsDataPet
 type SkyBlockProfileMemberPetsDataPet struct {
 	Active    bool                                             `json:"active"`
-	CandyUsed int64                                            `json:"candyUsed"`
+	CandyUsed *int64                                           `json:"candyUsed,omitempty"`
 	Exp       float64                                          `json:"exp"`
-	Extra     *map[string]int64                                `json:"extra,omitempty"`
-	HeldItem  NullableSkyBlockProfileMemberPetsDataPetHeldItem `json:"heldItem"`
-	Skin      string                                           `json:"skin"`
+	Extra     *map[string]float64                              `json:"extra,omitempty"`
+	HeldItem  NullableSkyBlockProfileMemberPetsDataPetHeldItem `json:"heldItem,omitempty"`
+	Skin      NullableString                                   `json:"skin,omitempty"`
 	Tier      SkyBlockProfileMemberPetsDataPetTier             `json:"tier"`
 	Type      SkyBlockProfileMemberPetsDataPetType             `json:"type"`
-	UniqueId  string                                           `json:"uniqueId"`
-	Uuid      string                                           `json:"uuid"`
+	UniqueId  *string                                          `json:"uniqueId,omitempty"`
+	Uuid      *string                                          `json:"uuid,omitempty"`
 }
 
 type _SkyBlockProfileMemberPetsDataPet SkyBlockProfileMemberPetsDataPet
@@ -39,17 +39,12 @@ type _SkyBlockProfileMemberPetsDataPet SkyBlockProfileMemberPetsDataPet
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberPetsDataPet(active bool, candyUsed int64, exp float64, heldItem NullableSkyBlockProfileMemberPetsDataPetHeldItem, skin string, tier SkyBlockProfileMemberPetsDataPetTier, type_ SkyBlockProfileMemberPetsDataPetType, uniqueId string, uuid string) *SkyBlockProfileMemberPetsDataPet {
+func NewSkyBlockProfileMemberPetsDataPet(active bool, exp float64, tier SkyBlockProfileMemberPetsDataPetTier, type_ SkyBlockProfileMemberPetsDataPetType) *SkyBlockProfileMemberPetsDataPet {
 	this := SkyBlockProfileMemberPetsDataPet{}
 	this.Active = active
-	this.CandyUsed = candyUsed
 	this.Exp = exp
-	this.HeldItem = heldItem
-	this.Skin = skin
 	this.Tier = tier
 	this.Type = type_
-	this.UniqueId = uniqueId
-	this.Uuid = uuid
 	return &this
 }
 
@@ -85,28 +80,36 @@ func (o *SkyBlockProfileMemberPetsDataPet) SetActive(v bool) {
 	o.Active = v
 }
 
-// GetCandyUsed returns the CandyUsed field value
+// GetCandyUsed returns the CandyUsed field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberPetsDataPet) GetCandyUsed() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.CandyUsed) {
 		var ret int64
 		return ret
 	}
-
-	return o.CandyUsed
+	return *o.CandyUsed
 }
 
-// GetCandyUsedOk returns a tuple with the CandyUsed field value
+// GetCandyUsedOk returns a tuple with the CandyUsed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberPetsDataPet) GetCandyUsedOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.CandyUsed) {
 		return nil, false
 	}
-	return &o.CandyUsed, true
+	return o.CandyUsed, true
 }
 
-// SetCandyUsed sets field value
+// HasCandyUsed returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataPet) HasCandyUsed() bool {
+	if o != nil && !IsNil(o.CandyUsed) {
+		return true
+	}
+
+	return false
+}
+
+// SetCandyUsed gets a reference to the given int64 and assigns it to the CandyUsed field.
 func (o *SkyBlockProfileMemberPetsDataPet) SetCandyUsed(v int64) {
-	o.CandyUsed = v
+	o.CandyUsed = &v
 }
 
 // GetExp returns the Exp field value
@@ -134,9 +137,9 @@ func (o *SkyBlockProfileMemberPetsDataPet) SetExp(v float64) {
 }
 
 // GetExtra returns the Extra field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberPetsDataPet) GetExtra() map[string]int64 {
+func (o *SkyBlockProfileMemberPetsDataPet) GetExtra() map[string]float64 {
 	if o == nil || IsNil(o.Extra) {
-		var ret map[string]int64
+		var ret map[string]float64
 		return ret
 	}
 	return *o.Extra
@@ -144,7 +147,7 @@ func (o *SkyBlockProfileMemberPetsDataPet) GetExtra() map[string]int64 {
 
 // GetExtraOk returns a tuple with the Extra field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberPetsDataPet) GetExtraOk() (*map[string]int64, bool) {
+func (o *SkyBlockProfileMemberPetsDataPet) GetExtraOk() (*map[string]float64, bool) {
 	if o == nil || IsNil(o.Extra) {
 		return nil, false
 	}
@@ -160,23 +163,21 @@ func (o *SkyBlockProfileMemberPetsDataPet) HasExtra() bool {
 	return false
 }
 
-// SetExtra gets a reference to the given map[string]int64 and assigns it to the Extra field.
-func (o *SkyBlockProfileMemberPetsDataPet) SetExtra(v map[string]int64) {
+// SetExtra gets a reference to the given map[string]float64 and assigns it to the Extra field.
+func (o *SkyBlockProfileMemberPetsDataPet) SetExtra(v map[string]float64) {
 	o.Extra = &v
 }
 
-// GetHeldItem returns the HeldItem field value
-// If the value is explicit nil, the zero value for SkyBlockProfileMemberPetsDataPetHeldItem will be returned
+// GetHeldItem returns the HeldItem field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SkyBlockProfileMemberPetsDataPet) GetHeldItem() SkyBlockProfileMemberPetsDataPetHeldItem {
-	if o == nil || o.HeldItem.Get() == nil {
+	if o == nil || IsNil(o.HeldItem.Get()) {
 		var ret SkyBlockProfileMemberPetsDataPetHeldItem
 		return ret
 	}
-
 	return *o.HeldItem.Get()
 }
 
-// GetHeldItemOk returns a tuple with the HeldItem field value
+// GetHeldItemOk returns a tuple with the HeldItem field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMemberPetsDataPet) GetHeldItemOk() (*SkyBlockProfileMemberPetsDataPetHeldItem, bool) {
@@ -186,33 +187,71 @@ func (o *SkyBlockProfileMemberPetsDataPet) GetHeldItemOk() (*SkyBlockProfileMemb
 	return o.HeldItem.Get(), o.HeldItem.IsSet()
 }
 
-// SetHeldItem sets field value
+// HasHeldItem returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataPet) HasHeldItem() bool {
+	if o != nil && o.HeldItem.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetHeldItem gets a reference to the given NullableSkyBlockProfileMemberPetsDataPetHeldItem and assigns it to the HeldItem field.
 func (o *SkyBlockProfileMemberPetsDataPet) SetHeldItem(v SkyBlockProfileMemberPetsDataPetHeldItem) {
 	o.HeldItem.Set(&v)
 }
 
-// GetSkin returns the Skin field value
+// SetHeldItemNil sets the value for HeldItem to be an explicit nil
+func (o *SkyBlockProfileMemberPetsDataPet) SetHeldItemNil() {
+	o.HeldItem.Set(nil)
+}
+
+// UnsetHeldItem ensures that no value is present for HeldItem, not even an explicit nil
+func (o *SkyBlockProfileMemberPetsDataPet) UnsetHeldItem() {
+	o.HeldItem.Unset()
+}
+
+// GetSkin returns the Skin field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SkyBlockProfileMemberPetsDataPet) GetSkin() string {
-	if o == nil {
+	if o == nil || IsNil(o.Skin.Get()) {
 		var ret string
 		return ret
 	}
-
-	return o.Skin
+	return *o.Skin.Get()
 }
 
-// GetSkinOk returns a tuple with the Skin field value
+// GetSkinOk returns a tuple with the Skin field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SkyBlockProfileMemberPetsDataPet) GetSkinOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return &o.Skin, true
+	return o.Skin.Get(), o.Skin.IsSet()
 }
 
-// SetSkin sets field value
+// HasSkin returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataPet) HasSkin() bool {
+	if o != nil && o.Skin.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetSkin gets a reference to the given NullableString and assigns it to the Skin field.
 func (o *SkyBlockProfileMemberPetsDataPet) SetSkin(v string) {
-	o.Skin = v
+	o.Skin.Set(&v)
+}
+
+// SetSkinNil sets the value for Skin to be an explicit nil
+func (o *SkyBlockProfileMemberPetsDataPet) SetSkinNil() {
+	o.Skin.Set(nil)
+}
+
+// UnsetSkin ensures that no value is present for Skin, not even an explicit nil
+func (o *SkyBlockProfileMemberPetsDataPet) UnsetSkin() {
+	o.Skin.Unset()
 }
 
 // GetTier returns the Tier field value
@@ -263,52 +302,68 @@ func (o *SkyBlockProfileMemberPetsDataPet) SetType(v SkyBlockProfileMemberPetsDa
 	o.Type = v
 }
 
-// GetUniqueId returns the UniqueId field value
+// GetUniqueId returns the UniqueId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberPetsDataPet) GetUniqueId() string {
-	if o == nil {
+	if o == nil || IsNil(o.UniqueId) {
 		var ret string
 		return ret
 	}
-
-	return o.UniqueId
+	return *o.UniqueId
 }
 
-// GetUniqueIdOk returns a tuple with the UniqueId field value
+// GetUniqueIdOk returns a tuple with the UniqueId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberPetsDataPet) GetUniqueIdOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.UniqueId) {
 		return nil, false
 	}
-	return &o.UniqueId, true
+	return o.UniqueId, true
 }
 
-// SetUniqueId sets field value
+// HasUniqueId returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataPet) HasUniqueId() bool {
+	if o != nil && !IsNil(o.UniqueId) {
+		return true
+	}
+
+	return false
+}
+
+// SetUniqueId gets a reference to the given string and assigns it to the UniqueId field.
 func (o *SkyBlockProfileMemberPetsDataPet) SetUniqueId(v string) {
-	o.UniqueId = v
+	o.UniqueId = &v
 }
 
-// GetUuid returns the Uuid field value
+// GetUuid returns the Uuid field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberPetsDataPet) GetUuid() string {
-	if o == nil {
+	if o == nil || IsNil(o.Uuid) {
 		var ret string
 		return ret
 	}
-
-	return o.Uuid
+	return *o.Uuid
 }
 
-// GetUuidOk returns a tuple with the Uuid field value
+// GetUuidOk returns a tuple with the Uuid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberPetsDataPet) GetUuidOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Uuid) {
 		return nil, false
 	}
-	return &o.Uuid, true
+	return o.Uuid, true
 }
 
-// SetUuid sets field value
+// HasUuid returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPetsDataPet) HasUuid() bool {
+	if o != nil && !IsNil(o.Uuid) {
+		return true
+	}
+
+	return false
+}
+
+// SetUuid gets a reference to the given string and assigns it to the Uuid field.
 func (o *SkyBlockProfileMemberPetsDataPet) SetUuid(v string) {
-	o.Uuid = v
+	o.Uuid = &v
 }
 
 func (o SkyBlockProfileMemberPetsDataPet) MarshalJSON() ([]byte, error) {
@@ -322,17 +377,27 @@ func (o SkyBlockProfileMemberPetsDataPet) MarshalJSON() ([]byte, error) {
 func (o SkyBlockProfileMemberPetsDataPet) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["active"] = o.Active
-	toSerialize["candyUsed"] = o.CandyUsed
+	if !IsNil(o.CandyUsed) {
+		toSerialize["candyUsed"] = o.CandyUsed
+	}
 	toSerialize["exp"] = o.Exp
 	if !IsNil(o.Extra) {
 		toSerialize["extra"] = o.Extra
 	}
-	toSerialize["heldItem"] = o.HeldItem.Get()
-	toSerialize["skin"] = o.Skin
+	if o.HeldItem.IsSet() {
+		toSerialize["heldItem"] = o.HeldItem.Get()
+	}
+	if o.Skin.IsSet() {
+		toSerialize["skin"] = o.Skin.Get()
+	}
 	toSerialize["tier"] = o.Tier
 	toSerialize["type"] = o.Type
-	toSerialize["uniqueId"] = o.UniqueId
-	toSerialize["uuid"] = o.Uuid
+	if !IsNil(o.UniqueId) {
+		toSerialize["uniqueId"] = o.UniqueId
+	}
+	if !IsNil(o.Uuid) {
+		toSerialize["uuid"] = o.Uuid
+	}
 	return toSerialize, nil
 }
 
@@ -342,14 +407,9 @@ func (o *SkyBlockProfileMemberPetsDataPet) UnmarshalJSON(data []byte) (err error
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"active",
-		"candyUsed",
 		"exp",
-		"heldItem",
-		"skin",
 		"tier",
 		"type",
-		"uniqueId",
-		"uuid",
 	}
 
 	allProperties := make(map[string]interface{})

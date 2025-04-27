@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimingWithPrecursorApparatus** | **bool** |  | 
+**ClaimingWithPrecursorApparatus** | Pointer to **bool** |  | [optional] 
 **PartsDelivered** | Pointer to [**[]SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner**](SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner.md) |  | [optional] 
-**TalkedToProfessor** | **bool** |  | 
+**TalkedToProfessor** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberMiningCoreBiomesPrecursor
 
-`func NewSkyBlockProfileMemberMiningCoreBiomesPrecursor(claimingWithPrecursorApparatus bool, talkedToProfessor bool, ) *SkyBlockProfileMemberMiningCoreBiomesPrecursor`
+`func NewSkyBlockProfileMemberMiningCoreBiomesPrecursor() *SkyBlockProfileMemberMiningCoreBiomesPrecursor`
 
 NewSkyBlockProfileMemberMiningCoreBiomesPrecursor instantiates a new SkyBlockProfileMemberMiningCoreBiomesPrecursor object
 This constructor will assign default values to properties that have it defined,
@@ -46,6 +46,11 @@ and a boolean to check if the value has been set.
 
 SetClaimingWithPrecursorApparatus sets ClaimingWithPrecursorApparatus field to given value.
 
+### HasClaimingWithPrecursorApparatus
+
+`func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) HasClaimingWithPrecursorApparatus() bool`
+
+HasClaimingWithPrecursorApparatus returns a boolean if a field has been set.
 
 ### GetPartsDelivered
 
@@ -91,6 +96,11 @@ and a boolean to check if the value has been set.
 
 SetTalkedToProfessor sets TalkedToProfessor field to given value.
 
+### HasTalkedToProfessor
+
+`func (o *SkyBlockProfileMemberMiningCoreBiomesPrecursor) HasTalkedToProfessor() bool`
+
+HasTalkedToProfessor returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
