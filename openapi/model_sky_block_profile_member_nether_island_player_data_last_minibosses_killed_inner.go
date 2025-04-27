@@ -20,11 +20,11 @@ type SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner string
 
 // List of SkyBlockProfileMemberNetherIslandPlayerData_last_minibosses_killed_inner
 const (
-	ASHFANG          SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner = "ASHFANG"
-	BARBARIAN_DUKE_X SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner = "BARBARIAN_DUKE_X"
-	BLADESOUL        SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner = "BLADESOUL"
-	MAGE_OUTLAW      SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner = "MAGE_OUTLAW"
-	MAGMA_BOSS       SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner = "MAGMA_BOSS"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATALASTMINIBOSSESKILLEDINNER_ASHFANG          SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner = "ASHFANG"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATALASTMINIBOSSESKILLEDINNER_BARBARIAN_DUKE_X SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner = "BARBARIAN_DUKE_X"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATALASTMINIBOSSESKILLEDINNER_BLADESOUL        SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner = "BLADESOUL"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATALASTMINIBOSSESKILLEDINNER_MAGE_OUTLAW      SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner = "MAGE_OUTLAW"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATALASTMINIBOSSESKILLEDINNER_MAGMA_BOSS       SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner = "MAGMA_BOSS"
 )
 
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerDataLastMinibossesKilledInner enum

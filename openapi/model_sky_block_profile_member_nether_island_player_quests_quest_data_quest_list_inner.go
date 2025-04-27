@@ -20,15 +20,15 @@ type SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner string
 
 // List of SkyBlockProfileMemberNetherIslandPlayerQuestsQuestData_quest_list_inner
 const (
-	CRIMSON_ISLE_DOJO_TEST_OF_LOCK_HEAD_DRATING_C SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_dojo_test_of_lock_head_drating_c"
-	CRIMSON_ISLE_DOJO_TEST_OF_MOB_KB_ARATING_S    SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_dojo_test_of_mob_kb_arating_s"
-	CRIMSON_ISLE_FETCH_DIGESTED_MUSHROOMS_B       SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_fetch_digested_mushrooms_b"
-	CRIMSON_ISLE_FETCH_SULPHUR_C                  SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_fetch_sulphur_c"
-	CRIMSON_ISLE_KILL_ASHFANG_C                   SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_kill_ashfang_c"
-	CRIMSON_ISLE_KILL_MAGE_OUTLAW_B               SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_kill_mage_outlaw_b"
-	CRIMSON_ISLE_RESCUE_A                         SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_rescue_a"
-	CRIMSON_ISLE_SKELETONFISH_B                   SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_skeletonfish_b"
-	CRIMSON_ISLE_STEAMING_HOT_FLOUNDER_C          SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_steaming_hot_flounder_c"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTLISTINNER_CRIMSON_ISLE_DOJO_TEST_OF_LOCK_HEAD_DRATING_C SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_dojo_test_of_lock_head_drating_c"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTLISTINNER_CRIMSON_ISLE_DOJO_TEST_OF_MOB_KB_ARATING_S    SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_dojo_test_of_mob_kb_arating_s"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTLISTINNER_CRIMSON_ISLE_FETCH_DIGESTED_MUSHROOMS_B       SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_fetch_digested_mushrooms_b"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTLISTINNER_CRIMSON_ISLE_FETCH_SULPHUR_C                  SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_fetch_sulphur_c"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTLISTINNER_CRIMSON_ISLE_KILL_ASHFANG_C                   SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_kill_ashfang_c"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTLISTINNER_CRIMSON_ISLE_KILL_MAGE_OUTLAW_B               SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_kill_mage_outlaw_b"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTLISTINNER_CRIMSON_ISLE_RESCUE_A                         SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_rescue_a"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTLISTINNER_CRIMSON_ISLE_SKELETONFISH_B                   SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_skeletonfish_b"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTLISTINNER_CRIMSON_ISLE_STEAMING_HOT_FLOUNDER_C          SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner = "crimson_isle_steaming_hot_flounder_c"
 )
 
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestListInner enum

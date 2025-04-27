@@ -20,8 +20,8 @@ type SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus string
 
 // List of SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuest_status
 const (
-	ACTIVE   SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus = "ACTIVE"
-	COMPLETE SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus = "COMPLETE"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTSTATUS_ACTIVE   SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus = "ACTIVE"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSQUESTDATAQUESTSTATUS_COMPLETE SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus = "COMPLETE"
 )
 
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus enum

@@ -20,12 +20,12 @@ type SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner string
 
 // List of SkyBlockProfileMemberMiningCoreBiomesPrecursor_parts_delivered_inner
 const (
-	CONTROL_SWITCH       SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "CONTROL_SWITCH"
-	ELECTRON_TRANSMITTER SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "ELECTRON_TRANSMITTER"
-	FTX_3070             SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "FTX_3070"
-	ROBOTRON_REFLECTOR   SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "ROBOTRON_REFLECTOR"
-	SUPERLITE_MOTOR      SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "SUPERLITE_MOTOR"
-	SYNTHETIC_HEART      SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "SYNTHETIC_HEART"
+	SKYBLOCKPROFILEMEMBERMININGCOREBIOMESPRECURSORPARTSDELIVEREDINNER_CONTROL_SWITCH       SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "CONTROL_SWITCH"
+	SKYBLOCKPROFILEMEMBERMININGCOREBIOMESPRECURSORPARTSDELIVEREDINNER_ELECTRON_TRANSMITTER SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "ELECTRON_TRANSMITTER"
+	SKYBLOCKPROFILEMEMBERMININGCOREBIOMESPRECURSORPARTSDELIVEREDINNER_FTX_3070             SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "FTX_3070"
+	SKYBLOCKPROFILEMEMBERMININGCOREBIOMESPRECURSORPARTSDELIVEREDINNER_ROBOTRON_REFLECTOR   SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "ROBOTRON_REFLECTOR"
+	SKYBLOCKPROFILEMEMBERMININGCOREBIOMESPRECURSORPARTSDELIVEREDINNER_SUPERLITE_MOTOR      SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "SUPERLITE_MOTOR"
+	SKYBLOCKPROFILEMEMBERMININGCOREBIOMESPRECURSORPARTSDELIVEREDINNER_SYNTHETIC_HEART      SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner = "SYNTHETIC_HEART"
 )
 
 // All allowed values of SkyBlockProfileMemberMiningCoreBiomesPrecursorPartsDeliveredInner enum

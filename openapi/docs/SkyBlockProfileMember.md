@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **Leveling** | Pointer to [**SkyBlockProfileMemberLeveling**](SkyBlockProfileMemberLeveling.md) |  | [optional] 
 **MiningCore** | Pointer to [**SkyBlockProfileMemberMiningCore**](SkyBlockProfileMemberMiningCore.md) |  | [optional] 
 **NetherIslandPlayerData** | Pointer to [**SkyBlockProfileMemberNetherIslandPlayerData**](SkyBlockProfileMemberNetherIslandPlayerData.md) |  | [optional] 
+**Objectives** | Pointer to [**SkyBlockProfileMemberObjectives**](SkyBlockProfileMemberObjectives.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -466,6 +467,31 @@ SetNetherIslandPlayerData sets NetherIslandPlayerData field to given value.
 `func (o *SkyBlockProfileMember) HasNetherIslandPlayerData() bool`
 
 HasNetherIslandPlayerData returns a boolean if a field has been set.
+
+### GetObjectives
+
+`func (o *SkyBlockProfileMember) GetObjectives() SkyBlockProfileMemberObjectives`
+
+GetObjectives returns the Objectives field if non-nil, zero value otherwise.
+
+### GetObjectivesOk
+
+`func (o *SkyBlockProfileMember) GetObjectivesOk() (*SkyBlockProfileMemberObjectives, bool)`
+
+GetObjectivesOk returns a tuple with the Objectives field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetObjectives
+
+`func (o *SkyBlockProfileMember) SetObjectives(v SkyBlockProfileMemberObjectives)`
+
+SetObjectives sets Objectives field to given value.
+
+### HasObjectives
+
+`func (o *SkyBlockProfileMember) HasObjectives() bool`
+
+HasObjectives returns a boolean if a field has been set.
 
 ### GetPlayerId
 

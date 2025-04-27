@@ -20,8 +20,8 @@ type SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction string
 
 // List of SkyBlockProfileMemberNetherIslandPlayerData_selected_faction
 const (
-	BARBARIANS SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction = "barbarians"
-	MAGES      SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction = "mages"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATASELECTEDFACTION_BARBARIANS SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction = "barbarians"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATASELECTEDFACTION_MAGES      SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction = "mages"
 )
 
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerDataSelectedFaction enum

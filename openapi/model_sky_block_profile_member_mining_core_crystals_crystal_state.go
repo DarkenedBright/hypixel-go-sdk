@@ -20,9 +20,9 @@ type SkyBlockProfileMemberMiningCoreCrystalsCrystalState string
 
 // List of SkyBlockProfileMemberMiningCoreCrystalsCrystal_state
 const (
-	FOUND     SkyBlockProfileMemberMiningCoreCrystalsCrystalState = "FOUND"
-	NOT_FOUND SkyBlockProfileMemberMiningCoreCrystalsCrystalState = "NOT_FOUND"
-	PLACED    SkyBlockProfileMemberMiningCoreCrystalsCrystalState = "PLACED"
+	SKYBLOCKPROFILEMEMBERMININGCORECRYSTALSCRYSTALSTATE_FOUND     SkyBlockProfileMemberMiningCoreCrystalsCrystalState = "FOUND"
+	SKYBLOCKPROFILEMEMBERMININGCORECRYSTALSCRYSTALSTATE_NOT_FOUND SkyBlockProfileMemberMiningCoreCrystalsCrystalState = "NOT_FOUND"
+	SKYBLOCKPROFILEMEMBERMININGCORECRYSTALSCRYSTALSTATE_PLACED    SkyBlockProfileMemberMiningCoreCrystalsCrystalState = "PLACED"
 )
 
 // All allowed values of SkyBlockProfileMemberMiningCoreCrystalsCrystalState enum

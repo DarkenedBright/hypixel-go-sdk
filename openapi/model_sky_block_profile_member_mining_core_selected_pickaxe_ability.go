@@ -20,12 +20,12 @@ type SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility string
 
 // List of SkyBlockProfileMemberMiningCore_selected_pickaxe_ability
 const (
-	ANOMALOUS_DESIRE   SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "anomalous_desire"
-	GEMSTONE_INFUSION  SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "gemstone_infusion"
-	MANIAC_MINER       SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "maniac_miner"
-	MINING_SPEED_BOOST SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "mining_speed_boost"
-	PICKAXE_TOSS       SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "pickaxe_toss"
-	SHEER_FORCE        SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "sheer_force"
+	SKYBLOCKPROFILEMEMBERMININGCORESELECTEDPICKAXEABILITY_ANOMALOUS_DESIRE   SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "anomalous_desire"
+	SKYBLOCKPROFILEMEMBERMININGCORESELECTEDPICKAXEABILITY_GEMSTONE_INFUSION  SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "gemstone_infusion"
+	SKYBLOCKPROFILEMEMBERMININGCORESELECTEDPICKAXEABILITY_MANIAC_MINER       SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "maniac_miner"
+	SKYBLOCKPROFILEMEMBERMININGCORESELECTEDPICKAXEABILITY_MINING_SPEED_BOOST SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "mining_speed_boost"
+	SKYBLOCKPROFILEMEMBERMININGCORESELECTEDPICKAXEABILITY_PICKAXE_TOSS       SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "pickaxe_toss"
+	SKYBLOCKPROFILEMEMBERMININGCORESELECTEDPICKAXEABILITY_SHEER_FORCE        SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility = "sheer_force"
 )
 
 // All allowed values of SkyBlockProfileMemberMiningCoreSelectedPickaxeAbility enum

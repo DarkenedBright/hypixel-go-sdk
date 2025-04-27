@@ -20,12 +20,12 @@ type SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner string
 
 // List of SkyBlockProfileMemberNetherIslandPlayerQuests_unlocked_cavity_npcs_inner
 const (
-	ARCH                 SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "arch"
-	DRAKUU               SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "drakuu"
-	FINAL                SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "final"
-	KUUDRA_ARCHAEOLOGIST SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "kuudra_archaeologist"
-	KUUDRA_LOREMASTER    SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "kuudra_loremaster"
-	KUUDRABELIEVER       SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "kuudrabeliever"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_ARCH                 SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "arch"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_DRAKUU               SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "drakuu"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_FINAL                SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "final"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_KUUDRA_ARCHAEOLOGIST SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "kuudra_archaeologist"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_KUUDRA_LOREMASTER    SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "kuudra_loremaster"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSUNLOCKEDCAVITYNPCSINNER_KUUDRABELIEVER       SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner = "kuudrabeliever"
 )
 
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerQuestsUnlockedCavityNpcsInner enum

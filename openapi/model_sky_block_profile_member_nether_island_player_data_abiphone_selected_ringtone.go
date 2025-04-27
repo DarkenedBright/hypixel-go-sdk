@@ -20,7 +20,7 @@ type SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone string
 
 // List of SkyBlockProfileMemberNetherIslandPlayerDataAbiphone_selected_ringtone
 const (
-	TARREGA SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone = "TARREGA"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONESELECTEDRINGTONE_TARREGA SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone = "TARREGA"
 )
 
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedRingtone enum

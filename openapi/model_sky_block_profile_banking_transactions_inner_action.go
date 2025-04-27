@@ -20,8 +20,8 @@ type SkyBlockProfileBankingTransactionsInnerAction string
 
 // List of SkyBlockProfile_banking_transactions_inner_action
 const (
-	DEPOSIT  SkyBlockProfileBankingTransactionsInnerAction = "DEPOSIT"
-	WITHDRAW SkyBlockProfileBankingTransactionsInnerAction = "WITHDRAW"
+	SKYBLOCKPROFILEBANKINGTRANSACTIONSINNERACTION_DEPOSIT  SkyBlockProfileBankingTransactionsInnerAction = "DEPOSIT"
+	SKYBLOCKPROFILEBANKINGTRANSACTIONSINNERACTION_WITHDRAW SkyBlockProfileBankingTransactionsInnerAction = "WITHDRAW"
 )
 
 // All allowed values of SkyBlockProfileBankingTransactionsInnerAction enum

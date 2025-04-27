@@ -21,7 +21,7 @@ generate:
 		--git-user-id DarkenedBright \
 		--generator-name go \
 		--type-mappings=integer=int64,number=float64 \
-		--additional-properties=useOneOfDiscriminatorLookup=true,withGoMod=false \
+		--additional-properties=enumClassPrefix=true,useOneOfDiscriminatorLookup=true,withGoMod=false \
 		--inline-schema-options RESOLVE_INLINE_ENUMS=true \
 		--output openapi \
 		|| { echo " FAILED"; exit 1; }

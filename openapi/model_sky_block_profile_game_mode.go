@@ -20,9 +20,9 @@ type SkyBlockProfileGameMode string
 
 // List of SkyBlockProfile_game_mode
 const (
-	BINGO   SkyBlockProfileGameMode = "bingo"
-	IRONMAN SkyBlockProfileGameMode = "ironman"
-	ISLAND  SkyBlockProfileGameMode = "island"
+	SKYBLOCKPROFILEGAMEMODE_BINGO   SkyBlockProfileGameMode = "bingo"
+	SKYBLOCKPROFILEGAMEMODE_IRONMAN SkyBlockProfileGameMode = "ironman"
+	SKYBLOCKPROFILEGAMEMODE_ISLAND  SkyBlockProfileGameMode = "island"
 )
 
 // All allowed values of SkyBlockProfileGameMode enum

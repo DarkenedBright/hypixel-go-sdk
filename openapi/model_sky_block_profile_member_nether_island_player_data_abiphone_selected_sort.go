@@ -20,7 +20,7 @@ type SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedSort string
 
 // List of SkyBlockProfileMemberNetherIslandPlayerDataAbiphone_selected_sort
 const (
-	MOST_CALLED SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedSort = "most_called"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONESELECTEDSORT_MOST_CALLED SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedSort = "most_called"
 )
 
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneSelectedSort enum

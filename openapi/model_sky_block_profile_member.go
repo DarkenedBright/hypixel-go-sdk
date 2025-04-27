@@ -36,6 +36,7 @@ type SkyBlockProfileMember struct {
 	Leveling               *SkyBlockProfileMemberLeveling               `json:"leveling,omitempty"`
 	MiningCore             *SkyBlockProfileMemberMiningCore             `json:"mining_core,omitempty"`
 	NetherIslandPlayerData *SkyBlockProfileMemberNetherIslandPlayerData `json:"nether_island_player_data,omitempty"`
+	Objectives             *SkyBlockProfileMemberObjectives             `json:"objectives,omitempty"`
 	PlayerId               *string                                      `json:"player_id,omitempty"`
 }
 
@@ -600,6 +601,38 @@ func (o *SkyBlockProfileMember) SetNetherIslandPlayerData(v SkyBlockProfileMembe
 	o.NetherIslandPlayerData = &v
 }
 
+// GetObjectives returns the Objectives field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetObjectives() SkyBlockProfileMemberObjectives {
+	if o == nil || IsNil(o.Objectives) {
+		var ret SkyBlockProfileMemberObjectives
+		return ret
+	}
+	return *o.Objectives
+}
+
+// GetObjectivesOk returns a tuple with the Objectives field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetObjectivesOk() (*SkyBlockProfileMemberObjectives, bool) {
+	if o == nil || IsNil(o.Objectives) {
+		return nil, false
+	}
+	return o.Objectives, true
+}
+
+// HasObjectives returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasObjectives() bool {
+	if o != nil && !IsNil(o.Objectives) {
+		return true
+	}
+
+	return false
+}
+
+// SetObjectives gets a reference to the given SkyBlockProfileMemberObjectives and assigns it to the Objectives field.
+func (o *SkyBlockProfileMember) SetObjectives(v SkyBlockProfileMemberObjectives) {
+	o.Objectives = &v
+}
+
 // GetPlayerId returns the PlayerId field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetPlayerId() string {
 	if o == nil || IsNil(o.PlayerId) {
@@ -692,6 +725,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.NetherIslandPlayerData) {
 		toSerialize["nether_island_player_data"] = o.NetherIslandPlayerData
+	}
+	if !IsNil(o.Objectives) {
+		toSerialize["objectives"] = o.Objectives
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId
