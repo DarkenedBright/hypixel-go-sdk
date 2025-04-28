@@ -207,6 +207,8 @@ components:
           type: string
         player_stats:
           $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStats'
+        profile:
+          $ref: '#/components/schemas/SkyBlockProfileMemberProfile'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       properties:
@@ -7452,6 +7454,49 @@ components:
           type: number
       required:
         - most_damage_dealt
+      type: object
+    SkyBlockProfileMemberProfile:
+      additionalProperties: false
+      properties:
+        bank_account:
+          type: number
+        cookie_buff_active:
+          type: boolean
+        coop_invitation:
+          $ref: '#/components/schemas/SkyBlockProfileMemberProfileCoopInvitation'
+        deletion_notice:
+          $ref: '#/components/schemas/SkyBlockProfileMemberProfileDeletionNotice'
+        first_join:
+          type: integer
+        personal_bank_upgrade:
+          type: integer
+      required:
+        - cookie_buff_active
+      type: object
+    SkyBlockProfileMemberProfileCoopInvitation:
+      additionalProperties: false
+      properties:
+        confirmed:
+          type: boolean
+        confirmed_timestamp:
+          type: integer
+        invited_by:
+          format: uuid
+          type: string
+        timestamp:
+          type: integer
+      required:
+        - confirmed
+        - invited_by
+        - timestamp
+      type: object
+    SkyBlockProfileMemberProfileDeletionNotice:
+      additionalProperties: false
+      properties:
+        timestamp:
+          type: integer
+      required:
+        - timestamp
       type: object
   securitySchemes:
     ApiKey:

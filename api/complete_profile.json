@@ -19854,17 +19854,6 @@
         "mining_fiesta_ores_mined": 2055771,
         "selected_symbol": "ARCHER_MASTER"
     },
-    "profile": {
-        "cookie_buff_active": true,
-        "coop_invitation": {
-            "confirmed": true,
-            "confirmed_timestamp": 1721970351157,
-            "invited_by": "7f6dec27-a79b-4bc8-9f95-7ebe672d9656",
-            "timestamp": 1721970345675
-        },
-        "first_join": 1662505006265,
-        "personal_bank_upgrade": 3
-    },
     "quests": {
         "harp_quest": {
             "claimed_talisman": true,

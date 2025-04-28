@@ -41,6 +41,7 @@ type SkyBlockProfileMember struct {
 	PlayerData             *SkyBlockProfileMemberPlayerData             `json:"player_data,omitempty"`
 	PlayerId               *string                                      `json:"player_id,omitempty"`
 	PlayerStats            *SkyBlockProfileMemberPlayerStats            `json:"player_stats,omitempty"`
+	Profile                *SkyBlockProfileMemberProfile                `json:"profile,omitempty"`
 }
 
 // NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
@@ -764,6 +765,38 @@ func (o *SkyBlockProfileMember) SetPlayerStats(v SkyBlockProfileMemberPlayerStat
 	o.PlayerStats = &v
 }
 
+// GetProfile returns the Profile field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetProfile() SkyBlockProfileMemberProfile {
+	if o == nil || IsNil(o.Profile) {
+		var ret SkyBlockProfileMemberProfile
+		return ret
+	}
+	return *o.Profile
+}
+
+// GetProfileOk returns a tuple with the Profile field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetProfileOk() (*SkyBlockProfileMemberProfile, bool) {
+	if o == nil || IsNil(o.Profile) {
+		return nil, false
+	}
+	return o.Profile, true
+}
+
+// HasProfile returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasProfile() bool {
+	if o != nil && !IsNil(o.Profile) {
+		return true
+	}
+
+	return false
+}
+
+// SetProfile gets a reference to the given SkyBlockProfileMemberProfile and assigns it to the Profile field.
+func (o *SkyBlockProfileMember) SetProfile(v SkyBlockProfileMemberProfile) {
+	o.Profile = &v
+}
+
 func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -839,6 +872,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.PlayerStats) {
 		toSerialize["player_stats"] = o.PlayerStats
+	}
+	if !IsNil(o.Profile) {
+		toSerialize["profile"] = o.Profile
 	}
 	return toSerialize, nil
 }

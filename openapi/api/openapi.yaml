@@ -694,6 +694,18 @@ components:
               - dungeons_blah_blah
               - dungeons_blah_blah
               secrets: 1
+            profile:
+              coop_invitation:
+                confirmed_timestamp: 7
+                invited_by: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                confirmed: true
+                timestamp: 4
+              deletion_notice:
+                timestamp: 2
+              cookie_buff_active: true
+              personal_bank_upgrade: 6
+              first_join: 0
+              bank_account: 0.0987341304736633
             accessory_bag_storage:
               tuning:
                 slot_4:
@@ -5027,6 +5039,18 @@ components:
           - dungeons_blah_blah
           - dungeons_blah_blah
           secrets: 1
+        profile:
+          coop_invitation:
+            confirmed_timestamp: 7
+            invited_by: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            confirmed: true
+            timestamp: 4
+          deletion_notice:
+            timestamp: 2
+          cookie_buff_active: true
+          personal_bank_upgrade: 6
+          first_join: 0
+          bank_account: 0.0987341304736633
         accessory_bag_storage:
           tuning:
             slot_4:
@@ -8846,6 +8870,8 @@ components:
           type: string
         player_stats:
           $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStats'
+        profile:
+          $ref: '#/components/schemas/SkyBlockProfileMemberProfile'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       example:
@@ -20839,6 +20865,68 @@ components:
       required:
       - most_damage_dealt
       type: object
+    SkyBlockProfileMemberProfile:
+      additionalProperties: false
+      example:
+        coop_invitation:
+          confirmed_timestamp: 7
+          invited_by: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          confirmed: true
+          timestamp: 4
+        deletion_notice:
+          timestamp: 2
+        cookie_buff_active: true
+        personal_bank_upgrade: 6
+        first_join: 0
+        bank_account: 0.0987341304736633
+      properties:
+        bank_account:
+          type: number
+        cookie_buff_active:
+          type: boolean
+        coop_invitation:
+          $ref: '#/components/schemas/SkyBlockProfileMemberProfileCoopInvitation'
+        deletion_notice:
+          $ref: '#/components/schemas/SkyBlockProfileMemberProfileDeletionNotice'
+        first_join:
+          type: integer
+        personal_bank_upgrade:
+          type: integer
+      required:
+      - cookie_buff_active
+      type: object
+    SkyBlockProfileMemberProfileCoopInvitation:
+      additionalProperties: false
+      example:
+        confirmed_timestamp: 7
+        invited_by: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        confirmed: true
+        timestamp: 4
+      properties:
+        confirmed:
+          type: boolean
+        confirmed_timestamp:
+          type: integer
+        invited_by:
+          format: uuid
+          type: string
+        timestamp:
+          type: integer
+      required:
+      - confirmed
+      - invited_by
+      - timestamp
+      type: object
+    SkyBlockProfileMemberProfileDeletionNotice:
+      additionalProperties: false
+      example:
+        timestamp: 2
+      properties:
+        timestamp:
+          type: integer
+      required:
+      - timestamp
+      type: object
     _v2_skyblock_profile_get_200_response:
       example:
         success: true
@@ -21368,6 +21456,18 @@ components:
                 - dungeons_blah_blah
                 - dungeons_blah_blah
                 secrets: 1
+              profile:
+                coop_invitation:
+                  confirmed_timestamp: 7
+                  invited_by: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  confirmed: true
+                  timestamp: 4
+                deletion_notice:
+                  timestamp: 2
+                cookie_buff_active: true
+                personal_bank_upgrade: 6
+                first_join: 0
+                bank_account: 0.0987341304736633
               accessory_bag_storage:
                 tuning:
                   slot_4:
@@ -25747,6 +25847,18 @@ components:
                 - dungeons_blah_blah
                 - dungeons_blah_blah
                 secrets: 1
+              profile:
+                coop_invitation:
+                  confirmed_timestamp: 7
+                  invited_by: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  confirmed: true
+                  timestamp: 4
+                deletion_notice:
+                  timestamp: 2
+                cookie_buff_active: true
+                personal_bank_upgrade: 6
+                first_join: 0
+                bank_account: 0.0987341304736633
               accessory_bag_storage:
                 tuning:
                   slot_4:
@@ -30058,6 +30170,18 @@ components:
                 - dungeons_blah_blah
                 - dungeons_blah_blah
                 secrets: 1
+              profile:
+                coop_invitation:
+                  confirmed_timestamp: 7
+                  invited_by: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+                  confirmed: true
+                  timestamp: 4
+                deletion_notice:
+                  timestamp: 2
+                cookie_buff_active: true
+                personal_bank_upgrade: 6
+                first_join: 0
+                bank_account: 0.0987341304736633
               accessory_bag_storage:
                 tuning:
                   slot_4:
