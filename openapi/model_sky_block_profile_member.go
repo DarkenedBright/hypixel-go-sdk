@@ -42,6 +42,7 @@ type SkyBlockProfileMember struct {
 	PlayerId               *string                                      `json:"player_id,omitempty"`
 	PlayerStats            *SkyBlockProfileMemberPlayerStats            `json:"player_stats,omitempty"`
 	Profile                *SkyBlockProfileMemberProfile                `json:"profile,omitempty"`
+	Quests                 *SkyBlockProfileMemberQuests                 `json:"quests,omitempty"`
 }
 
 // NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
@@ -797,6 +798,38 @@ func (o *SkyBlockProfileMember) SetProfile(v SkyBlockProfileMemberProfile) {
 	o.Profile = &v
 }
 
+// GetQuests returns the Quests field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetQuests() SkyBlockProfileMemberQuests {
+	if o == nil || IsNil(o.Quests) {
+		var ret SkyBlockProfileMemberQuests
+		return ret
+	}
+	return *o.Quests
+}
+
+// GetQuestsOk returns a tuple with the Quests field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetQuestsOk() (*SkyBlockProfileMemberQuests, bool) {
+	if o == nil || IsNil(o.Quests) {
+		return nil, false
+	}
+	return o.Quests, true
+}
+
+// HasQuests returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasQuests() bool {
+	if o != nil && !IsNil(o.Quests) {
+		return true
+	}
+
+	return false
+}
+
+// SetQuests gets a reference to the given SkyBlockProfileMemberQuests and assigns it to the Quests field.
+func (o *SkyBlockProfileMember) SetQuests(v SkyBlockProfileMemberQuests) {
+	o.Quests = &v
+}
+
 func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -875,6 +908,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Profile) {
 		toSerialize["profile"] = o.Profile
+	}
+	if !IsNil(o.Quests) {
+		toSerialize["quests"] = o.Quests
 	}
 	return toSerialize, nil
 }

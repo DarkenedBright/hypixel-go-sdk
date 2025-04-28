@@ -554,6 +554,53 @@ components:
               gifts:
                 total_given: 4.511077460894262
                 total_received: 6.537712918802372
+            quests:
+              harp_quest:
+                song_jeopardy_best_completion: 4.927226471600662
+                song_joy_world_completions: 2
+                song_joy_world_perfect_completions: 7
+                song_pure_imagination_completions: 3
+                song_fire_and_flames_perfect_completions: 7
+                song_happy_birthday_perfect_completions: 0
+                song_minuet_completions: 8
+                selected_song_epoch: 3
+                song_amazing_grace_completions: 6
+                song_fire_and_flames_completions: 5
+                song_greensleeves_perfect_completions: 7
+                song_greensleeves_completions: 9
+                song_vie_en_rose_perfect_completions: 0
+                song_jeopardy_perfect_completions: 0
+                song_amazing_grace_best_completion: 8.08826475055357
+                claimed_talisman: true
+                song_brahms_best_completion: 9.14387339211597
+                song_minuet_perfect_completions: 6
+                song_happy_birthday_best_completion: 2.746596752325704
+                song_jeopardy_completions: 7
+                song_amazing_grace_perfect_completions: 9
+                song_frere_jacques_perfect_completions: 1
+                song_pure_imagination_best_completion: 8.689470849767137
+                selected_song: amazing_grace
+                song_hymn_joy_completions: 0
+                song_frere_jacques_best_completion: 7.582034457365983
+                song_pachelbel_completions: 9
+                song_greensleeves_best_completion: 1.2431142610760326
+                song_vie_en_rose_best_completion: 4.814689874317148
+                song_brahms_completions: 5
+                song_frere_jacques_completions: 8
+                song_fire_and_flames_best_completion: 9.546842193763283
+                song_pachelbel_perfect_completions: 8
+                song_vie_en_rose_completions: 1
+                song_pure_imagination_perfect_completions: 9
+                song_minuet_best_completion: 8.552957191797422
+                song_pachelbel_best_completion: 4.9417989836953735
+                song_hymn_joy_perfect_completions: 6
+                song_happy_birthday_completions: 7
+                song_hymn_joy_best_completion: 6.229837613966271
+                song_brahms_perfect_completions: 4
+                song_joy_world_best_completion: 8.04663189761943
+              trapper_quest:
+                last_task_time: 4
+                pelt_count: 7
             dungeons:
               selected_dungeon_class: selected_dungeon_class
               dungeon_types:
@@ -4899,6 +4946,53 @@ components:
           gifts:
             total_given: 4.511077460894262
             total_received: 6.537712918802372
+        quests:
+          harp_quest:
+            song_jeopardy_best_completion: 4.927226471600662
+            song_joy_world_completions: 2
+            song_joy_world_perfect_completions: 7
+            song_pure_imagination_completions: 3
+            song_fire_and_flames_perfect_completions: 7
+            song_happy_birthday_perfect_completions: 0
+            song_minuet_completions: 8
+            selected_song_epoch: 3
+            song_amazing_grace_completions: 6
+            song_fire_and_flames_completions: 5
+            song_greensleeves_perfect_completions: 7
+            song_greensleeves_completions: 9
+            song_vie_en_rose_perfect_completions: 0
+            song_jeopardy_perfect_completions: 0
+            song_amazing_grace_best_completion: 8.08826475055357
+            claimed_talisman: true
+            song_brahms_best_completion: 9.14387339211597
+            song_minuet_perfect_completions: 6
+            song_happy_birthday_best_completion: 2.746596752325704
+            song_jeopardy_completions: 7
+            song_amazing_grace_perfect_completions: 9
+            song_frere_jacques_perfect_completions: 1
+            song_pure_imagination_best_completion: 8.689470849767137
+            selected_song: amazing_grace
+            song_hymn_joy_completions: 0
+            song_frere_jacques_best_completion: 7.582034457365983
+            song_pachelbel_completions: 9
+            song_greensleeves_best_completion: 1.2431142610760326
+            song_vie_en_rose_best_completion: 4.814689874317148
+            song_brahms_completions: 5
+            song_frere_jacques_completions: 8
+            song_fire_and_flames_best_completion: 9.546842193763283
+            song_pachelbel_perfect_completions: 8
+            song_vie_en_rose_completions: 1
+            song_pure_imagination_perfect_completions: 9
+            song_minuet_best_completion: 8.552957191797422
+            song_pachelbel_best_completion: 4.9417989836953735
+            song_hymn_joy_perfect_completions: 6
+            song_happy_birthday_completions: 7
+            song_hymn_joy_best_completion: 6.229837613966271
+            song_brahms_perfect_completions: 4
+            song_joy_world_best_completion: 8.04663189761943
+          trapper_quest:
+            last_task_time: 4
+            pelt_count: 7
         dungeons:
           selected_dungeon_class: selected_dungeon_class
           dungeon_types:
@@ -8872,6 +8966,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStats'
         profile:
           $ref: '#/components/schemas/SkyBlockProfileMemberProfile'
+        quests:
+          $ref: '#/components/schemas/SkyBlockProfileMemberQuests'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       example:
@@ -20927,6 +21023,203 @@ components:
       required:
       - timestamp
       type: object
+    SkyBlockProfileMemberQuests:
+      additionalProperties: false
+      example:
+        harp_quest:
+          song_jeopardy_best_completion: 4.927226471600662
+          song_joy_world_completions: 2
+          song_joy_world_perfect_completions: 7
+          song_pure_imagination_completions: 3
+          song_fire_and_flames_perfect_completions: 7
+          song_happy_birthday_perfect_completions: 0
+          song_minuet_completions: 8
+          selected_song_epoch: 3
+          song_amazing_grace_completions: 6
+          song_fire_and_flames_completions: 5
+          song_greensleeves_perfect_completions: 7
+          song_greensleeves_completions: 9
+          song_vie_en_rose_perfect_completions: 0
+          song_jeopardy_perfect_completions: 0
+          song_amazing_grace_best_completion: 8.08826475055357
+          claimed_talisman: true
+          song_brahms_best_completion: 9.14387339211597
+          song_minuet_perfect_completions: 6
+          song_happy_birthday_best_completion: 2.746596752325704
+          song_jeopardy_completions: 7
+          song_amazing_grace_perfect_completions: 9
+          song_frere_jacques_perfect_completions: 1
+          song_pure_imagination_best_completion: 8.689470849767137
+          selected_song: amazing_grace
+          song_hymn_joy_completions: 0
+          song_frere_jacques_best_completion: 7.582034457365983
+          song_pachelbel_completions: 9
+          song_greensleeves_best_completion: 1.2431142610760326
+          song_vie_en_rose_best_completion: 4.814689874317148
+          song_brahms_completions: 5
+          song_frere_jacques_completions: 8
+          song_fire_and_flames_best_completion: 9.546842193763283
+          song_pachelbel_perfect_completions: 8
+          song_vie_en_rose_completions: 1
+          song_pure_imagination_perfect_completions: 9
+          song_minuet_best_completion: 8.552957191797422
+          song_pachelbel_best_completion: 4.9417989836953735
+          song_hymn_joy_perfect_completions: 6
+          song_happy_birthday_completions: 7
+          song_hymn_joy_best_completion: 6.229837613966271
+          song_brahms_perfect_completions: 4
+          song_joy_world_best_completion: 8.04663189761943
+        trapper_quest:
+          last_task_time: 4
+          pelt_count: 7
+      properties:
+        harp_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberQuestsHarpQuest'
+        trapper_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberQuestsTrapperQuest'
+      type: object
+    SkyBlockProfileMemberQuestsHarpQuest:
+      additionalProperties: false
+      example:
+        song_jeopardy_best_completion: 4.927226471600662
+        song_joy_world_completions: 2
+        song_joy_world_perfect_completions: 7
+        song_pure_imagination_completions: 3
+        song_fire_and_flames_perfect_completions: 7
+        song_happy_birthday_perfect_completions: 0
+        song_minuet_completions: 8
+        selected_song_epoch: 3
+        song_amazing_grace_completions: 6
+        song_fire_and_flames_completions: 5
+        song_greensleeves_perfect_completions: 7
+        song_greensleeves_completions: 9
+        song_vie_en_rose_perfect_completions: 0
+        song_jeopardy_perfect_completions: 0
+        song_amazing_grace_best_completion: 8.08826475055357
+        claimed_talisman: true
+        song_brahms_best_completion: 9.14387339211597
+        song_minuet_perfect_completions: 6
+        song_happy_birthday_best_completion: 2.746596752325704
+        song_jeopardy_completions: 7
+        song_amazing_grace_perfect_completions: 9
+        song_frere_jacques_perfect_completions: 1
+        song_pure_imagination_best_completion: 8.689470849767137
+        selected_song: amazing_grace
+        song_hymn_joy_completions: 0
+        song_frere_jacques_best_completion: 7.582034457365983
+        song_pachelbel_completions: 9
+        song_greensleeves_best_completion: 1.2431142610760326
+        song_vie_en_rose_best_completion: 4.814689874317148
+        song_brahms_completions: 5
+        song_frere_jacques_completions: 8
+        song_fire_and_flames_best_completion: 9.546842193763283
+        song_pachelbel_perfect_completions: 8
+        song_vie_en_rose_completions: 1
+        song_pure_imagination_perfect_completions: 9
+        song_minuet_best_completion: 8.552957191797422
+        song_pachelbel_best_completion: 4.9417989836953735
+        song_hymn_joy_perfect_completions: 6
+        song_happy_birthday_completions: 7
+        song_hymn_joy_best_completion: 6.229837613966271
+        song_brahms_perfect_completions: 4
+        song_joy_world_best_completion: 8.04663189761943
+      properties:
+        claimed_talisman:
+          type: boolean
+        selected_song:
+          $ref: '#/components/schemas/SkyBlockProfileMemberQuestsHarpQuest_selected_song'
+        selected_song_epoch:
+          type: integer
+        song_amazing_grace_best_completion:
+          type: number
+        song_amazing_grace_completions:
+          type: integer
+        song_amazing_grace_perfect_completions:
+          type: integer
+        song_brahms_best_completion:
+          type: number
+        song_brahms_completions:
+          type: integer
+        song_brahms_perfect_completions:
+          type: integer
+        song_fire_and_flames_best_completion:
+          type: number
+        song_fire_and_flames_completions:
+          type: integer
+        song_fire_and_flames_perfect_completions:
+          type: integer
+        song_frere_jacques_best_completion:
+          type: number
+        song_frere_jacques_completions:
+          type: integer
+        song_frere_jacques_perfect_completions:
+          type: integer
+        song_greensleeves_best_completion:
+          type: number
+        song_greensleeves_completions:
+          type: integer
+        song_greensleeves_perfect_completions:
+          type: integer
+        song_happy_birthday_best_completion:
+          type: number
+        song_happy_birthday_completions:
+          type: integer
+        song_happy_birthday_perfect_completions:
+          type: integer
+        song_hymn_joy_best_completion:
+          type: number
+        song_hymn_joy_completions:
+          type: integer
+        song_hymn_joy_perfect_completions:
+          type: integer
+        song_jeopardy_best_completion:
+          type: number
+        song_jeopardy_completions:
+          type: integer
+        song_jeopardy_perfect_completions:
+          type: integer
+        song_joy_world_best_completion:
+          type: number
+        song_joy_world_completions:
+          type: integer
+        song_joy_world_perfect_completions:
+          type: integer
+        song_minuet_best_completion:
+          type: number
+        song_minuet_completions:
+          type: integer
+        song_minuet_perfect_completions:
+          type: integer
+        song_pachelbel_best_completion:
+          type: number
+        song_pachelbel_completions:
+          type: integer
+        song_pachelbel_perfect_completions:
+          type: integer
+        song_pure_imagination_best_completion:
+          type: number
+        song_pure_imagination_completions:
+          type: integer
+        song_pure_imagination_perfect_completions:
+          type: integer
+        song_vie_en_rose_best_completion:
+          type: number
+        song_vie_en_rose_completions:
+          type: integer
+        song_vie_en_rose_perfect_completions:
+          type: integer
+      type: object
+    SkyBlockProfileMemberQuestsTrapperQuest:
+      additionalProperties: false
+      example:
+        last_task_time: 4
+        pelt_count: 7
+      properties:
+        last_task_time:
+          type: integer
+        pelt_count:
+          type: integer
+      type: object
     _v2_skyblock_profile_get_200_response:
       example:
         success: true
@@ -21316,6 +21609,53 @@ components:
                 gifts:
                   total_given: 4.511077460894262
                   total_received: 6.537712918802372
+              quests:
+                harp_quest:
+                  song_jeopardy_best_completion: 4.927226471600662
+                  song_joy_world_completions: 2
+                  song_joy_world_perfect_completions: 7
+                  song_pure_imagination_completions: 3
+                  song_fire_and_flames_perfect_completions: 7
+                  song_happy_birthday_perfect_completions: 0
+                  song_minuet_completions: 8
+                  selected_song_epoch: 3
+                  song_amazing_grace_completions: 6
+                  song_fire_and_flames_completions: 5
+                  song_greensleeves_perfect_completions: 7
+                  song_greensleeves_completions: 9
+                  song_vie_en_rose_perfect_completions: 0
+                  song_jeopardy_perfect_completions: 0
+                  song_amazing_grace_best_completion: 8.08826475055357
+                  claimed_talisman: true
+                  song_brahms_best_completion: 9.14387339211597
+                  song_minuet_perfect_completions: 6
+                  song_happy_birthday_best_completion: 2.746596752325704
+                  song_jeopardy_completions: 7
+                  song_amazing_grace_perfect_completions: 9
+                  song_frere_jacques_perfect_completions: 1
+                  song_pure_imagination_best_completion: 8.689470849767137
+                  selected_song: amazing_grace
+                  song_hymn_joy_completions: 0
+                  song_frere_jacques_best_completion: 7.582034457365983
+                  song_pachelbel_completions: 9
+                  song_greensleeves_best_completion: 1.2431142610760326
+                  song_vie_en_rose_best_completion: 4.814689874317148
+                  song_brahms_completions: 5
+                  song_frere_jacques_completions: 8
+                  song_fire_and_flames_best_completion: 9.546842193763283
+                  song_pachelbel_perfect_completions: 8
+                  song_vie_en_rose_completions: 1
+                  song_pure_imagination_perfect_completions: 9
+                  song_minuet_best_completion: 8.552957191797422
+                  song_pachelbel_best_completion: 4.9417989836953735
+                  song_hymn_joy_perfect_completions: 6
+                  song_happy_birthday_completions: 7
+                  song_hymn_joy_best_completion: 6.229837613966271
+                  song_brahms_perfect_completions: 4
+                  song_joy_world_best_completion: 8.04663189761943
+                trapper_quest:
+                  last_task_time: 4
+                  pelt_count: 7
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
@@ -25707,6 +26047,53 @@ components:
                 gifts:
                   total_given: 4.511077460894262
                   total_received: 6.537712918802372
+              quests:
+                harp_quest:
+                  song_jeopardy_best_completion: 4.927226471600662
+                  song_joy_world_completions: 2
+                  song_joy_world_perfect_completions: 7
+                  song_pure_imagination_completions: 3
+                  song_fire_and_flames_perfect_completions: 7
+                  song_happy_birthday_perfect_completions: 0
+                  song_minuet_completions: 8
+                  selected_song_epoch: 3
+                  song_amazing_grace_completions: 6
+                  song_fire_and_flames_completions: 5
+                  song_greensleeves_perfect_completions: 7
+                  song_greensleeves_completions: 9
+                  song_vie_en_rose_perfect_completions: 0
+                  song_jeopardy_perfect_completions: 0
+                  song_amazing_grace_best_completion: 8.08826475055357
+                  claimed_talisman: true
+                  song_brahms_best_completion: 9.14387339211597
+                  song_minuet_perfect_completions: 6
+                  song_happy_birthday_best_completion: 2.746596752325704
+                  song_jeopardy_completions: 7
+                  song_amazing_grace_perfect_completions: 9
+                  song_frere_jacques_perfect_completions: 1
+                  song_pure_imagination_best_completion: 8.689470849767137
+                  selected_song: amazing_grace
+                  song_hymn_joy_completions: 0
+                  song_frere_jacques_best_completion: 7.582034457365983
+                  song_pachelbel_completions: 9
+                  song_greensleeves_best_completion: 1.2431142610760326
+                  song_vie_en_rose_best_completion: 4.814689874317148
+                  song_brahms_completions: 5
+                  song_frere_jacques_completions: 8
+                  song_fire_and_flames_best_completion: 9.546842193763283
+                  song_pachelbel_perfect_completions: 8
+                  song_vie_en_rose_completions: 1
+                  song_pure_imagination_perfect_completions: 9
+                  song_minuet_best_completion: 8.552957191797422
+                  song_pachelbel_best_completion: 4.9417989836953735
+                  song_hymn_joy_perfect_completions: 6
+                  song_happy_birthday_completions: 7
+                  song_hymn_joy_best_completion: 6.229837613966271
+                  song_brahms_perfect_completions: 4
+                  song_joy_world_best_completion: 8.04663189761943
+                trapper_quest:
+                  last_task_time: 4
+                  pelt_count: 7
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
@@ -30030,6 +30417,53 @@ components:
                 gifts:
                   total_given: 4.511077460894262
                   total_received: 6.537712918802372
+              quests:
+                harp_quest:
+                  song_jeopardy_best_completion: 4.927226471600662
+                  song_joy_world_completions: 2
+                  song_joy_world_perfect_completions: 7
+                  song_pure_imagination_completions: 3
+                  song_fire_and_flames_perfect_completions: 7
+                  song_happy_birthday_perfect_completions: 0
+                  song_minuet_completions: 8
+                  selected_song_epoch: 3
+                  song_amazing_grace_completions: 6
+                  song_fire_and_flames_completions: 5
+                  song_greensleeves_perfect_completions: 7
+                  song_greensleeves_completions: 9
+                  song_vie_en_rose_perfect_completions: 0
+                  song_jeopardy_perfect_completions: 0
+                  song_amazing_grace_best_completion: 8.08826475055357
+                  claimed_talisman: true
+                  song_brahms_best_completion: 9.14387339211597
+                  song_minuet_perfect_completions: 6
+                  song_happy_birthday_best_completion: 2.746596752325704
+                  song_jeopardy_completions: 7
+                  song_amazing_grace_perfect_completions: 9
+                  song_frere_jacques_perfect_completions: 1
+                  song_pure_imagination_best_completion: 8.689470849767137
+                  selected_song: amazing_grace
+                  song_hymn_joy_completions: 0
+                  song_frere_jacques_best_completion: 7.582034457365983
+                  song_pachelbel_completions: 9
+                  song_greensleeves_best_completion: 1.2431142610760326
+                  song_vie_en_rose_best_completion: 4.814689874317148
+                  song_brahms_completions: 5
+                  song_frere_jacques_completions: 8
+                  song_fire_and_flames_best_completion: 9.546842193763283
+                  song_pachelbel_perfect_completions: 8
+                  song_vie_en_rose_completions: 1
+                  song_pure_imagination_perfect_completions: 9
+                  song_minuet_best_completion: 8.552957191797422
+                  song_pachelbel_best_completion: 4.9417989836953735
+                  song_hymn_joy_perfect_completions: 6
+                  song_happy_birthday_completions: 7
+                  song_hymn_joy_best_completion: 6.229837613966271
+                  song_brahms_perfect_completions: 4
+                  song_joy_world_best_completion: 8.04663189761943
+                trapper_quest:
+                  last_task_time: 4
+                  pelt_count: 7
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
@@ -36114,6 +36548,22 @@ components:
       - true_defense
       - vitality
       - walk_speed
+      type: string
+    SkyBlockProfileMemberQuestsHarpQuest_selected_song:
+      enum:
+      - amazing_grace
+      - brahms
+      - fire_and_flames
+      - frere_jacques
+      - greensleeves
+      - happy_birthday
+      - hymn_joy
+      - jeopardy
+      - joy_world
+      - minuet
+      - pachelbel
+      - pure_imagination
+      - vie_en_rose
       type: string
     inline_object:
       properties:

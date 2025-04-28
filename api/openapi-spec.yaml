@@ -209,6 +209,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStats'
         profile:
           $ref: '#/components/schemas/SkyBlockProfileMemberProfile'
+        quests:
+          $ref: '#/components/schemas/SkyBlockProfileMemberQuests'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       properties:
@@ -7497,6 +7499,124 @@ components:
           type: integer
       required:
         - timestamp
+      type: object
+    SkyBlockProfileMemberQuests:
+      additionalProperties: false
+      properties:
+        harp_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberQuestsHarpQuest'
+        trapper_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberQuestsTrapperQuest'
+      type: object
+    SkyBlockProfileMemberQuestsHarpQuest:
+      additionalProperties: false
+      properties:
+        claimed_talisman:
+          type: boolean
+        selected_song:
+          enum:
+            - amazing_grace
+            - brahms
+            - fire_and_flames
+            - frere_jacques
+            - greensleeves
+            - happy_birthday
+            - hymn_joy
+            - jeopardy
+            - joy_world
+            - minuet
+            - pachelbel
+            - pure_imagination
+            - vie_en_rose
+          type: string
+        selected_song_epoch:
+          type: integer
+        song_amazing_grace_best_completion:
+          type: number
+        song_amazing_grace_completions:
+          type: integer
+        song_amazing_grace_perfect_completions:
+          type: integer
+        song_brahms_best_completion:
+          type: number
+        song_brahms_completions:
+          type: integer
+        song_brahms_perfect_completions:
+          type: integer
+        song_fire_and_flames_best_completion:
+          type: number
+        song_fire_and_flames_completions:
+          type: integer
+        song_fire_and_flames_perfect_completions:
+          type: integer
+        song_frere_jacques_best_completion:
+          type: number
+        song_frere_jacques_completions:
+          type: integer
+        song_frere_jacques_perfect_completions:
+          type: integer
+        song_greensleeves_best_completion:
+          type: number
+        song_greensleeves_completions:
+          type: integer
+        song_greensleeves_perfect_completions:
+          type: integer
+        song_happy_birthday_best_completion:
+          type: number
+        song_happy_birthday_completions:
+          type: integer
+        song_happy_birthday_perfect_completions:
+          type: integer
+        song_hymn_joy_best_completion:
+          type: number
+        song_hymn_joy_completions:
+          type: integer
+        song_hymn_joy_perfect_completions:
+          type: integer
+        song_jeopardy_best_completion:
+          type: number
+        song_jeopardy_completions:
+          type: integer
+        song_jeopardy_perfect_completions:
+          type: integer
+        song_joy_world_best_completion:
+          type: number
+        song_joy_world_completions:
+          type: integer
+        song_joy_world_perfect_completions:
+          type: integer
+        song_minuet_best_completion:
+          type: number
+        song_minuet_completions:
+          type: integer
+        song_minuet_perfect_completions:
+          type: integer
+        song_pachelbel_best_completion:
+          type: number
+        song_pachelbel_completions:
+          type: integer
+        song_pachelbel_perfect_completions:
+          type: integer
+        song_pure_imagination_best_completion:
+          type: number
+        song_pure_imagination_completions:
+          type: integer
+        song_pure_imagination_perfect_completions:
+          type: integer
+        song_vie_en_rose_best_completion:
+          type: number
+        song_vie_en_rose_completions:
+          type: integer
+        song_vie_en_rose_perfect_completions:
+          type: integer
+      type: object
+    SkyBlockProfileMemberQuestsTrapperQuest:
+      additionalProperties: false
+      properties:
+        last_task_time:
+          type: integer
+        pelt_count:
+          type: integer
       type: object
   securitySchemes:
     ApiKey:

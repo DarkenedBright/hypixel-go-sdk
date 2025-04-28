@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **PlayerId** | Pointer to **string** |  | [optional] 
 **PlayerStats** | Pointer to [**SkyBlockProfileMemberPlayerStats**](SkyBlockProfileMemberPlayerStats.md) |  | [optional] 
 **Profile** | Pointer to [**SkyBlockProfileMemberProfile**](SkyBlockProfileMemberProfile.md) |  | [optional] 
+**Quests** | Pointer to [**SkyBlockProfileMemberQuests**](SkyBlockProfileMemberQuests.md) |  | [optional] 
 
 ## Methods
 
@@ -621,6 +622,31 @@ SetProfile sets Profile field to given value.
 `func (o *SkyBlockProfileMember) HasProfile() bool`
 
 HasProfile returns a boolean if a field has been set.
+
+### GetQuests
+
+`func (o *SkyBlockProfileMember) GetQuests() SkyBlockProfileMemberQuests`
+
+GetQuests returns the Quests field if non-nil, zero value otherwise.
+
+### GetQuestsOk
+
+`func (o *SkyBlockProfileMember) GetQuestsOk() (*SkyBlockProfileMemberQuests, bool)`
+
+GetQuestsOk returns a tuple with the Quests field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetQuests
+
+`func (o *SkyBlockProfileMember) SetQuests(v SkyBlockProfileMemberQuests)`
+
+SetQuests sets Quests field to given value.
+
+### HasQuests
+
+`func (o *SkyBlockProfileMember) HasQuests() bool`
+
+HasQuests returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
