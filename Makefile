@@ -14,7 +14,7 @@ generate:
 	fi
 	
 	@echo -n "Running 'openapi-generator generate'..."
-	@openapi-generator generate \
+	@if openapi-generator generate \
 		--input-spec api/openapi-spec.yaml \
 		--git-host github.com \
 		--git-repo-id hypixel-go-sdk \
@@ -24,7 +24,12 @@ generate:
 		--additional-properties=enumClassPrefix=true,useOneOfDiscriminatorLookup=true,withGoMod=false \
 		--inline-schema-options RESOLVE_INLINE_ENUMS=true \
 		--output openapi \
-		|| { echo " FAILED"; exit 1; }
+		> /dev/null; then \
+			echo " SUCCESS"; \
+		else \
+			echo " FAILED"; \
+			exit 1; \
+		fi
 
 	@echo -n "Removing generated test files..."
 	@if rm -r openapi/test; then \
@@ -43,7 +48,7 @@ generate:
 	fi
 
 	@echo -n "Running 'go fmt'..."
-	@if go fmt ./...; then \
+	@if go fmt ./... > /dev/null; then \
 		echo " SUCCESS"; \
 	else \
 		echo " FAILED"; \
