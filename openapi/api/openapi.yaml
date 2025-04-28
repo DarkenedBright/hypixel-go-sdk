@@ -1260,6 +1260,175 @@ components:
               fairy_exchanges: 6
               total_collected: 0
               unspent_souls: 2
+            slayer:
+              slayer_bosses:
+                blaze:
+                  boss_kills_tier_1: 1
+                  boss_kills_tier_2: 2
+                  boss_attempts_tier_1: 9
+                  boss_kills_tier_3: 7
+                  boss_attempts_tier_0: 9
+                  boss_kills_tier_4: 2
+                  boss_attempts_tier_3: 0
+                  boss_attempts_tier_2: 8
+                  claimed_levels:
+                    level_3: true
+                    level_4: true
+                    level_5: true
+                    level_6: true
+                    level_7_special: true
+                    level_7: true
+                    level_8: true
+                    level_9: true
+                    level_9_special: true
+                    level_8_special: true
+                    level_1: true
+                    level_2: true
+                  boss_attempts_tier_4: 3
+                  xp: 0
+                  boss_kills_tier_0: 0
+                wolf:
+                  boss_kills_tier_1: 1
+                  boss_kills_tier_2: 2
+                  boss_attempts_tier_1: 9
+                  boss_kills_tier_3: 7
+                  boss_attempts_tier_0: 9
+                  boss_kills_tier_4: 2
+                  boss_attempts_tier_3: 0
+                  boss_attempts_tier_2: 8
+                  claimed_levels:
+                    level_3: true
+                    level_4: true
+                    level_5: true
+                    level_6: true
+                    level_7_special: true
+                    level_7: true
+                    level_8: true
+                    level_9: true
+                    level_9_special: true
+                    level_8_special: true
+                    level_1: true
+                    level_2: true
+                  boss_attempts_tier_4: 3
+                  xp: 0
+                  boss_kills_tier_0: 0
+                vampire:
+                  boss_kills_tier_1: 1
+                  boss_kills_tier_2: 2
+                  boss_attempts_tier_1: 9
+                  boss_kills_tier_3: 7
+                  boss_attempts_tier_0: 9
+                  boss_kills_tier_4: 2
+                  boss_attempts_tier_3: 0
+                  boss_attempts_tier_2: 8
+                  claimed_levels:
+                    level_3: true
+                    level_4: true
+                    level_5: true
+                    level_6: true
+                    level_7_special: true
+                    level_7: true
+                    level_8: true
+                    level_9: true
+                    level_9_special: true
+                    level_8_special: true
+                    level_1: true
+                    level_2: true
+                  boss_attempts_tier_4: 3
+                  xp: 0
+                  boss_kills_tier_0: 0
+                zombie:
+                  boss_kills_tier_1: 1
+                  boss_kills_tier_2: 2
+                  boss_attempts_tier_1: 9
+                  boss_kills_tier_3: 7
+                  boss_attempts_tier_0: 9
+                  boss_kills_tier_4: 2
+                  boss_attempts_tier_3: 0
+                  boss_attempts_tier_2: 8
+                  claimed_levels:
+                    level_3: true
+                    level_4: true
+                    level_5: true
+                    level_6: true
+                    level_7_special: true
+                    level_7: true
+                    level_8: true
+                    level_9: true
+                    level_9_special: true
+                    level_8_special: true
+                    level_1: true
+                    level_2: true
+                  boss_attempts_tier_4: 3
+                  xp: 0
+                  boss_kills_tier_0: 0
+                spider:
+                  boss_kills_tier_1: 1
+                  boss_kills_tier_2: 2
+                  boss_attempts_tier_1: 9
+                  boss_kills_tier_3: 7
+                  boss_attempts_tier_0: 9
+                  boss_kills_tier_4: 2
+                  boss_attempts_tier_3: 0
+                  boss_attempts_tier_2: 8
+                  claimed_levels:
+                    level_3: true
+                    level_4: true
+                    level_5: true
+                    level_6: true
+                    level_7_special: true
+                    level_7: true
+                    level_8: true
+                    level_9: true
+                    level_9_special: true
+                    level_8_special: true
+                    level_1: true
+                    level_2: true
+                  boss_attempts_tier_4: 3
+                  xp: 0
+                  boss_kills_tier_0: 0
+                enderman:
+                  boss_kills_tier_1: 1
+                  boss_kills_tier_2: 2
+                  boss_attempts_tier_1: 9
+                  boss_kills_tier_3: 7
+                  boss_attempts_tier_0: 9
+                  boss_kills_tier_4: 2
+                  boss_attempts_tier_3: 0
+                  boss_attempts_tier_2: 8
+                  claimed_levels:
+                    level_3: true
+                    level_4: true
+                    level_5: true
+                    level_6: true
+                    level_7_special: true
+                    level_7: true
+                    level_8: true
+                    level_9: true
+                    level_9_special: true
+                    level_8_special: true
+                    level_1: true
+                    level_2: true
+                  boss_attempts_tier_4: 3
+                  xp: 0
+                  boss_kills_tier_0: 0
+              slayer_quest:
+                used_armor: true
+                last_killed_mob_island: COMBAT_1
+                spawn_timestamp: 3
+                tier: 1
+                start_timestamp: 2
+                xp_on_last_follower_spawn: 9
+                completion_state: 1
+                solo: true
+                combat_xp: 9
+                type: blaze
+                kill_timestamp: 3
+                recent_mob_kills:
+                - xp: 2.9537391380137787
+                  timestamp: 9
+                - xp: 2.9537391380137787
+                  timestamp: 9
             player_data:
               unlocked_coll_tiers:
               - AGARICUS_CAP_-1
@@ -5840,6 +6009,175 @@ components:
           fairy_exchanges: 6
           total_collected: 0
           unspent_souls: 2
+        slayer:
+          slayer_bosses:
+            blaze:
+              boss_kills_tier_1: 1
+              boss_kills_tier_2: 2
+              boss_attempts_tier_1: 9
+              boss_kills_tier_3: 7
+              boss_attempts_tier_0: 9
+              boss_kills_tier_4: 2
+              boss_attempts_tier_3: 0
+              boss_attempts_tier_2: 8
+              claimed_levels:
+                level_3: true
+                level_4: true
+                level_5: true
+                level_6: true
+                level_7_special: true
+                level_7: true
+                level_8: true
+                level_9: true
+                level_9_special: true
+                level_8_special: true
+                level_1: true
+                level_2: true
+              boss_attempts_tier_4: 3
+              xp: 0
+              boss_kills_tier_0: 0
+            wolf:
+              boss_kills_tier_1: 1
+              boss_kills_tier_2: 2
+              boss_attempts_tier_1: 9
+              boss_kills_tier_3: 7
+              boss_attempts_tier_0: 9
+              boss_kills_tier_4: 2
+              boss_attempts_tier_3: 0
+              boss_attempts_tier_2: 8
+              claimed_levels:
+                level_3: true
+                level_4: true
+                level_5: true
+                level_6: true
+                level_7_special: true
+                level_7: true
+                level_8: true
+                level_9: true
+                level_9_special: true
+                level_8_special: true
+                level_1: true
+                level_2: true
+              boss_attempts_tier_4: 3
+              xp: 0
+              boss_kills_tier_0: 0
+            vampire:
+              boss_kills_tier_1: 1
+              boss_kills_tier_2: 2
+              boss_attempts_tier_1: 9
+              boss_kills_tier_3: 7
+              boss_attempts_tier_0: 9
+              boss_kills_tier_4: 2
+              boss_attempts_tier_3: 0
+              boss_attempts_tier_2: 8
+              claimed_levels:
+                level_3: true
+                level_4: true
+                level_5: true
+                level_6: true
+                level_7_special: true
+                level_7: true
+                level_8: true
+                level_9: true
+                level_9_special: true
+                level_8_special: true
+                level_1: true
+                level_2: true
+              boss_attempts_tier_4: 3
+              xp: 0
+              boss_kills_tier_0: 0
+            zombie:
+              boss_kills_tier_1: 1
+              boss_kills_tier_2: 2
+              boss_attempts_tier_1: 9
+              boss_kills_tier_3: 7
+              boss_attempts_tier_0: 9
+              boss_kills_tier_4: 2
+              boss_attempts_tier_3: 0
+              boss_attempts_tier_2: 8
+              claimed_levels:
+                level_3: true
+                level_4: true
+                level_5: true
+                level_6: true
+                level_7_special: true
+                level_7: true
+                level_8: true
+                level_9: true
+                level_9_special: true
+                level_8_special: true
+                level_1: true
+                level_2: true
+              boss_attempts_tier_4: 3
+              xp: 0
+              boss_kills_tier_0: 0
+            spider:
+              boss_kills_tier_1: 1
+              boss_kills_tier_2: 2
+              boss_attempts_tier_1: 9
+              boss_kills_tier_3: 7
+              boss_attempts_tier_0: 9
+              boss_kills_tier_4: 2
+              boss_attempts_tier_3: 0
+              boss_attempts_tier_2: 8
+              claimed_levels:
+                level_3: true
+                level_4: true
+                level_5: true
+                level_6: true
+                level_7_special: true
+                level_7: true
+                level_8: true
+                level_9: true
+                level_9_special: true
+                level_8_special: true
+                level_1: true
+                level_2: true
+              boss_attempts_tier_4: 3
+              xp: 0
+              boss_kills_tier_0: 0
+            enderman:
+              boss_kills_tier_1: 1
+              boss_kills_tier_2: 2
+              boss_attempts_tier_1: 9
+              boss_kills_tier_3: 7
+              boss_attempts_tier_0: 9
+              boss_kills_tier_4: 2
+              boss_attempts_tier_3: 0
+              boss_attempts_tier_2: 8
+              claimed_levels:
+                level_3: true
+                level_4: true
+                level_5: true
+                level_6: true
+                level_7_special: true
+                level_7: true
+                level_8: true
+                level_9: true
+                level_9_special: true
+                level_8_special: true
+                level_1: true
+                level_2: true
+              boss_attempts_tier_4: 3
+              xp: 0
+              boss_kills_tier_0: 0
+          slayer_quest:
+            used_armor: true
+            last_killed_mob_island: COMBAT_1
+            spawn_timestamp: 3
+            tier: 1
+            start_timestamp: 2
+            xp_on_last_follower_spawn: 9
+            completion_state: 1
+            solo: true
+            combat_xp: 9
+            type: blaze
+            kill_timestamp: 3
+            recent_mob_kills:
+            - xp: 2.9537391380137787
+              timestamp: 9
+            - xp: 2.9537391380137787
+              timestamp: 9
         player_data:
           unlocked_coll_tiers:
           - AGARICUS_CAP_-1
@@ -9348,6 +9686,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberRift'
         shared_inventory:
           $ref: '#/components/schemas/SkyBlockProfileMemberSharedInventory'
+        slayer:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayer'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       example:
@@ -22613,6 +22953,512 @@ components:
         carnival_mask_inventory_contents:
           $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
       type: object
+    SkyBlockProfileMemberSlayer:
+      additionalProperties: false
+      example:
+        slayer_bosses:
+          blaze:
+            boss_kills_tier_1: 1
+            boss_kills_tier_2: 2
+            boss_attempts_tier_1: 9
+            boss_kills_tier_3: 7
+            boss_attempts_tier_0: 9
+            boss_kills_tier_4: 2
+            boss_attempts_tier_3: 0
+            boss_attempts_tier_2: 8
+            claimed_levels:
+              level_3: true
+              level_4: true
+              level_5: true
+              level_6: true
+              level_7_special: true
+              level_7: true
+              level_8: true
+              level_9: true
+              level_9_special: true
+              level_8_special: true
+              level_1: true
+              level_2: true
+            boss_attempts_tier_4: 3
+            xp: 0
+            boss_kills_tier_0: 0
+          wolf:
+            boss_kills_tier_1: 1
+            boss_kills_tier_2: 2
+            boss_attempts_tier_1: 9
+            boss_kills_tier_3: 7
+            boss_attempts_tier_0: 9
+            boss_kills_tier_4: 2
+            boss_attempts_tier_3: 0
+            boss_attempts_tier_2: 8
+            claimed_levels:
+              level_3: true
+              level_4: true
+              level_5: true
+              level_6: true
+              level_7_special: true
+              level_7: true
+              level_8: true
+              level_9: true
+              level_9_special: true
+              level_8_special: true
+              level_1: true
+              level_2: true
+            boss_attempts_tier_4: 3
+            xp: 0
+            boss_kills_tier_0: 0
+          vampire:
+            boss_kills_tier_1: 1
+            boss_kills_tier_2: 2
+            boss_attempts_tier_1: 9
+            boss_kills_tier_3: 7
+            boss_attempts_tier_0: 9
+            boss_kills_tier_4: 2
+            boss_attempts_tier_3: 0
+            boss_attempts_tier_2: 8
+            claimed_levels:
+              level_3: true
+              level_4: true
+              level_5: true
+              level_6: true
+              level_7_special: true
+              level_7: true
+              level_8: true
+              level_9: true
+              level_9_special: true
+              level_8_special: true
+              level_1: true
+              level_2: true
+            boss_attempts_tier_4: 3
+            xp: 0
+            boss_kills_tier_0: 0
+          zombie:
+            boss_kills_tier_1: 1
+            boss_kills_tier_2: 2
+            boss_attempts_tier_1: 9
+            boss_kills_tier_3: 7
+            boss_attempts_tier_0: 9
+            boss_kills_tier_4: 2
+            boss_attempts_tier_3: 0
+            boss_attempts_tier_2: 8
+            claimed_levels:
+              level_3: true
+              level_4: true
+              level_5: true
+              level_6: true
+              level_7_special: true
+              level_7: true
+              level_8: true
+              level_9: true
+              level_9_special: true
+              level_8_special: true
+              level_1: true
+              level_2: true
+            boss_attempts_tier_4: 3
+            xp: 0
+            boss_kills_tier_0: 0
+          spider:
+            boss_kills_tier_1: 1
+            boss_kills_tier_2: 2
+            boss_attempts_tier_1: 9
+            boss_kills_tier_3: 7
+            boss_attempts_tier_0: 9
+            boss_kills_tier_4: 2
+            boss_attempts_tier_3: 0
+            boss_attempts_tier_2: 8
+            claimed_levels:
+              level_3: true
+              level_4: true
+              level_5: true
+              level_6: true
+              level_7_special: true
+              level_7: true
+              level_8: true
+              level_9: true
+              level_9_special: true
+              level_8_special: true
+              level_1: true
+              level_2: true
+            boss_attempts_tier_4: 3
+            xp: 0
+            boss_kills_tier_0: 0
+          enderman:
+            boss_kills_tier_1: 1
+            boss_kills_tier_2: 2
+            boss_attempts_tier_1: 9
+            boss_kills_tier_3: 7
+            boss_attempts_tier_0: 9
+            boss_kills_tier_4: 2
+            boss_attempts_tier_3: 0
+            boss_attempts_tier_2: 8
+            claimed_levels:
+              level_3: true
+              level_4: true
+              level_5: true
+              level_6: true
+              level_7_special: true
+              level_7: true
+              level_8: true
+              level_9: true
+              level_9_special: true
+              level_8_special: true
+              level_1: true
+              level_2: true
+            boss_attempts_tier_4: 3
+            xp: 0
+            boss_kills_tier_0: 0
+        slayer_quest:
+          used_armor: true
+          last_killed_mob_island: COMBAT_1
+          spawn_timestamp: 3
+          tier: 1
+          start_timestamp: 2
+          xp_on_last_follower_spawn: 9
+          completion_state: 1
+          solo: true
+          combat_xp: 9
+          type: blaze
+          kill_timestamp: 3
+          recent_mob_kills:
+          - xp: 2.9537391380137787
+            timestamp: 9
+          - xp: 2.9537391380137787
+            timestamp: 9
+      properties:
+        slayer_bosses:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBosses'
+        slayer_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerQuest'
+      required:
+      - slayer_bosses
+      type: object
+    SkyBlockProfileMemberSlayerSlayerBosses:
+      additionalProperties: false
+      example:
+        blaze:
+          boss_kills_tier_1: 1
+          boss_kills_tier_2: 2
+          boss_attempts_tier_1: 9
+          boss_kills_tier_3: 7
+          boss_attempts_tier_0: 9
+          boss_kills_tier_4: 2
+          boss_attempts_tier_3: 0
+          boss_attempts_tier_2: 8
+          claimed_levels:
+            level_3: true
+            level_4: true
+            level_5: true
+            level_6: true
+            level_7_special: true
+            level_7: true
+            level_8: true
+            level_9: true
+            level_9_special: true
+            level_8_special: true
+            level_1: true
+            level_2: true
+          boss_attempts_tier_4: 3
+          xp: 0
+          boss_kills_tier_0: 0
+        wolf:
+          boss_kills_tier_1: 1
+          boss_kills_tier_2: 2
+          boss_attempts_tier_1: 9
+          boss_kills_tier_3: 7
+          boss_attempts_tier_0: 9
+          boss_kills_tier_4: 2
+          boss_attempts_tier_3: 0
+          boss_attempts_tier_2: 8
+          claimed_levels:
+            level_3: true
+            level_4: true
+            level_5: true
+            level_6: true
+            level_7_special: true
+            level_7: true
+            level_8: true
+            level_9: true
+            level_9_special: true
+            level_8_special: true
+            level_1: true
+            level_2: true
+          boss_attempts_tier_4: 3
+          xp: 0
+          boss_kills_tier_0: 0
+        vampire:
+          boss_kills_tier_1: 1
+          boss_kills_tier_2: 2
+          boss_attempts_tier_1: 9
+          boss_kills_tier_3: 7
+          boss_attempts_tier_0: 9
+          boss_kills_tier_4: 2
+          boss_attempts_tier_3: 0
+          boss_attempts_tier_2: 8
+          claimed_levels:
+            level_3: true
+            level_4: true
+            level_5: true
+            level_6: true
+            level_7_special: true
+            level_7: true
+            level_8: true
+            level_9: true
+            level_9_special: true
+            level_8_special: true
+            level_1: true
+            level_2: true
+          boss_attempts_tier_4: 3
+          xp: 0
+          boss_kills_tier_0: 0
+        zombie:
+          boss_kills_tier_1: 1
+          boss_kills_tier_2: 2
+          boss_attempts_tier_1: 9
+          boss_kills_tier_3: 7
+          boss_attempts_tier_0: 9
+          boss_kills_tier_4: 2
+          boss_attempts_tier_3: 0
+          boss_attempts_tier_2: 8
+          claimed_levels:
+            level_3: true
+            level_4: true
+            level_5: true
+            level_6: true
+            level_7_special: true
+            level_7: true
+            level_8: true
+            level_9: true
+            level_9_special: true
+            level_8_special: true
+            level_1: true
+            level_2: true
+          boss_attempts_tier_4: 3
+          xp: 0
+          boss_kills_tier_0: 0
+        spider:
+          boss_kills_tier_1: 1
+          boss_kills_tier_2: 2
+          boss_attempts_tier_1: 9
+          boss_kills_tier_3: 7
+          boss_attempts_tier_0: 9
+          boss_kills_tier_4: 2
+          boss_attempts_tier_3: 0
+          boss_attempts_tier_2: 8
+          claimed_levels:
+            level_3: true
+            level_4: true
+            level_5: true
+            level_6: true
+            level_7_special: true
+            level_7: true
+            level_8: true
+            level_9: true
+            level_9_special: true
+            level_8_special: true
+            level_1: true
+            level_2: true
+          boss_attempts_tier_4: 3
+          xp: 0
+          boss_kills_tier_0: 0
+        enderman:
+          boss_kills_tier_1: 1
+          boss_kills_tier_2: 2
+          boss_attempts_tier_1: 9
+          boss_kills_tier_3: 7
+          boss_attempts_tier_0: 9
+          boss_kills_tier_4: 2
+          boss_attempts_tier_3: 0
+          boss_attempts_tier_2: 8
+          claimed_levels:
+            level_3: true
+            level_4: true
+            level_5: true
+            level_6: true
+            level_7_special: true
+            level_7: true
+            level_8: true
+            level_9: true
+            level_9_special: true
+            level_8_special: true
+            level_1: true
+            level_2: true
+          boss_attempts_tier_4: 3
+          xp: 0
+          boss_kills_tier_0: 0
+      properties:
+        blaze:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+        enderman:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+        spider:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+        vampire:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+        wolf:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+        zombie:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+      type: object
+    SkyBlockProfileMemberSlayerSlayerBossesBoss:
+      additionalProperties: false
+      example:
+        boss_kills_tier_1: 1
+        boss_kills_tier_2: 2
+        boss_attempts_tier_1: 9
+        boss_kills_tier_3: 7
+        boss_attempts_tier_0: 9
+        boss_kills_tier_4: 2
+        boss_attempts_tier_3: 0
+        boss_attempts_tier_2: 8
+        claimed_levels:
+          level_3: true
+          level_4: true
+          level_5: true
+          level_6: true
+          level_7_special: true
+          level_7: true
+          level_8: true
+          level_9: true
+          level_9_special: true
+          level_8_special: true
+          level_1: true
+          level_2: true
+        boss_attempts_tier_4: 3
+        xp: 0
+        boss_kills_tier_0: 0
+      properties:
+        boss_attempts_tier_0:
+          type: integer
+        boss_attempts_tier_1:
+          type: integer
+        boss_attempts_tier_2:
+          type: integer
+        boss_attempts_tier_3:
+          type: integer
+        boss_attempts_tier_4:
+          type: integer
+        boss_kills_tier_0:
+          type: integer
+        boss_kills_tier_1:
+          type: integer
+        boss_kills_tier_2:
+          type: integer
+        boss_kills_tier_3:
+          type: integer
+        boss_kills_tier_4:
+          type: integer
+        claimed_levels:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBossClaimedLevels'
+        xp:
+          type: integer
+      type: object
+    SkyBlockProfileMemberSlayerSlayerBossesBossClaimedLevels:
+      additionalProperties: false
+      example:
+        level_3: true
+        level_4: true
+        level_5: true
+        level_6: true
+        level_7_special: true
+        level_7: true
+        level_8: true
+        level_9: true
+        level_9_special: true
+        level_8_special: true
+        level_1: true
+        level_2: true
+      properties:
+        level_1:
+          type: boolean
+        level_2:
+          type: boolean
+        level_3:
+          type: boolean
+        level_4:
+          type: boolean
+        level_5:
+          type: boolean
+        level_6:
+          type: boolean
+        level_7:
+          type: boolean
+        level_7_special:
+          type: boolean
+        level_8:
+          type: boolean
+        level_8_special:
+          type: boolean
+        level_9:
+          type: boolean
+        level_9_special:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberSlayerSlayerQuest:
+      additionalProperties: false
+      example:
+        used_armor: true
+        last_killed_mob_island: COMBAT_1
+        spawn_timestamp: 3
+        tier: 1
+        start_timestamp: 2
+        xp_on_last_follower_spawn: 9
+        completion_state: 1
+        solo: true
+        combat_xp: 9
+        type: blaze
+        kill_timestamp: 3
+        recent_mob_kills:
+        - xp: 2.9537391380137787
+          timestamp: 9
+        - xp: 2.9537391380137787
+          timestamp: 9
+      properties:
+        combat_xp:
+          type: integer
+        completion_state:
+          type: integer
+        kill_timestamp:
+          type: integer
+        last_killed_mob_island:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerQuest_last_killed_mob_island'
+        recent_mob_kills:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerQuestRecentMobKill'
+          type: array
+        solo:
+          type: boolean
+        spawn_timestamp:
+          type: integer
+        start_timestamp:
+          type: integer
+        tier:
+          type: integer
+        type:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerQuest_type'
+        used_armor:
+          type: boolean
+        xp_on_last_follower_spawn:
+          type: integer
+      required:
+      - completion_state
+      - start_timestamp
+      - tier
+      - type
+      type: object
+    SkyBlockProfileMemberSlayerSlayerQuestRecentMobKill:
+      additionalProperties: false
+      example:
+        xp: 2.9537391380137787
+        timestamp: 9
+      properties:
+        timestamp:
+          type: integer
+        xp:
+          type: number
+      required:
+      - timestamp
+      - xp
+      type: object
     _v2_skyblock_profile_get_200_response:
       example:
         success: true
@@ -23708,6 +24554,175 @@ components:
                 fairy_exchanges: 6
                 total_collected: 0
                 unspent_souls: 2
+              slayer:
+                slayer_bosses:
+                  blaze:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  wolf:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  vampire:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  zombie:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  spider:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  enderman:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                slayer_quest:
+                  used_armor: true
+                  last_killed_mob_island: COMBAT_1
+                  spawn_timestamp: 3
+                  tier: 1
+                  start_timestamp: 2
+                  xp_on_last_follower_spawn: 9
+                  completion_state: 1
+                  solo: true
+                  combat_xp: 9
+                  type: blaze
+                  kill_timestamp: 3
+                  recent_mob_kills:
+                  - xp: 2.9537391380137787
+                    timestamp: 9
+                  - xp: 2.9537391380137787
+                    timestamp: 9
               player_data:
                 unlocked_coll_tiers:
                 - AGARICUS_CAP_-1
@@ -28334,6 +29349,175 @@ components:
                 fairy_exchanges: 6
                 total_collected: 0
                 unspent_souls: 2
+              slayer:
+                slayer_bosses:
+                  blaze:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  wolf:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  vampire:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  zombie:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  spider:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  enderman:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                slayer_quest:
+                  used_armor: true
+                  last_killed_mob_island: COMBAT_1
+                  spawn_timestamp: 3
+                  tier: 1
+                  start_timestamp: 2
+                  xp_on_last_follower_spawn: 9
+                  completion_state: 1
+                  solo: true
+                  combat_xp: 9
+                  type: blaze
+                  kill_timestamp: 3
+                  recent_mob_kills:
+                  - xp: 2.9537391380137787
+                    timestamp: 9
+                  - xp: 2.9537391380137787
+                    timestamp: 9
               player_data:
                 unlocked_coll_tiers:
                 - AGARICUS_CAP_-1
@@ -32892,6 +34076,175 @@ components:
                 fairy_exchanges: 6
                 total_collected: 0
                 unspent_souls: 2
+              slayer:
+                slayer_bosses:
+                  blaze:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  wolf:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  vampire:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  zombie:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  spider:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                  enderman:
+                    boss_kills_tier_1: 1
+                    boss_kills_tier_2: 2
+                    boss_attempts_tier_1: 9
+                    boss_kills_tier_3: 7
+                    boss_attempts_tier_0: 9
+                    boss_kills_tier_4: 2
+                    boss_attempts_tier_3: 0
+                    boss_attempts_tier_2: 8
+                    claimed_levels:
+                      level_3: true
+                      level_4: true
+                      level_5: true
+                      level_6: true
+                      level_7_special: true
+                      level_7: true
+                      level_8: true
+                      level_9: true
+                      level_9_special: true
+                      level_8_special: true
+                      level_1: true
+                      level_2: true
+                    boss_attempts_tier_4: 3
+                    xp: 0
+                    boss_kills_tier_0: 0
+                slayer_quest:
+                  used_armor: true
+                  last_killed_mob_island: COMBAT_1
+                  spawn_timestamp: 3
+                  tier: 1
+                  start_timestamp: 2
+                  xp_on_last_follower_spawn: 9
+                  completion_state: 1
+                  solo: true
+                  combat_xp: 9
+                  type: blaze
+                  kill_timestamp: 3
+                  recent_mob_kills:
+                  - xp: 2.9537391380137787
+                    timestamp: 9
+                  - xp: 2.9537391380137787
+                    timestamp: 9
               player_data:
                 unlocked_coll_tiers:
                 - AGARICUS_CAP_-1
@@ -38687,6 +40040,29 @@ components:
       - threebrother_0
       - threebrother_1
       - threebrother_2
+      type: string
+    SkyBlockProfileMemberSlayerSlayerQuest_last_killed_mob_island:
+      enum:
+      - COMBAT_1
+      - COMBAT_3
+      - CRIMSON_ISLE
+      - CRYSTAL_HOLLOWS
+      - DYNAMIC
+      - FISHING_1
+      - FORAGING_1
+      - HUB
+      - MINING_2
+      - RIFT
+      - WINTER
+      type: string
+    SkyBlockProfileMemberSlayerSlayerQuest_type:
+      enum:
+      - blaze
+      - enderman
+      - spider
+      - vampire
+      - wolf
+      - zombie
       type: string
     inline_object:
       properties:

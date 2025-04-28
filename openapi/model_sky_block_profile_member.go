@@ -45,6 +45,7 @@ type SkyBlockProfileMember struct {
 	Quests                 *SkyBlockProfileMemberQuests                 `json:"quests,omitempty"`
 	Rift                   *SkyBlockProfileMemberRift                   `json:"rift,omitempty"`
 	SharedInventory        *SkyBlockProfileMemberSharedInventory        `json:"shared_inventory,omitempty"`
+	Slayer                 *SkyBlockProfileMemberSlayer                 `json:"slayer,omitempty"`
 }
 
 // NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
@@ -896,6 +897,38 @@ func (o *SkyBlockProfileMember) SetSharedInventory(v SkyBlockProfileMemberShared
 	o.SharedInventory = &v
 }
 
+// GetSlayer returns the Slayer field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetSlayer() SkyBlockProfileMemberSlayer {
+	if o == nil || IsNil(o.Slayer) {
+		var ret SkyBlockProfileMemberSlayer
+		return ret
+	}
+	return *o.Slayer
+}
+
+// GetSlayerOk returns a tuple with the Slayer field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetSlayerOk() (*SkyBlockProfileMemberSlayer, bool) {
+	if o == nil || IsNil(o.Slayer) {
+		return nil, false
+	}
+	return o.Slayer, true
+}
+
+// HasSlayer returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasSlayer() bool {
+	if o != nil && !IsNil(o.Slayer) {
+		return true
+	}
+
+	return false
+}
+
+// SetSlayer gets a reference to the given SkyBlockProfileMemberSlayer and assigns it to the Slayer field.
+func (o *SkyBlockProfileMember) SetSlayer(v SkyBlockProfileMemberSlayer) {
+	o.Slayer = &v
+}
+
 func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -983,6 +1016,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.SharedInventory) {
 		toSerialize["shared_inventory"] = o.SharedInventory
+	}
+	if !IsNil(o.Slayer) {
+		toSerialize["slayer"] = o.Slayer
 	}
 	return toSerialize, nil
 }

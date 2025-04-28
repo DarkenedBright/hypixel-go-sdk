@@ -215,6 +215,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberRift'
         shared_inventory:
           $ref: '#/components/schemas/SkyBlockProfileMemberSharedInventory'
+        slayer:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayer'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       properties:
@@ -8290,6 +8292,153 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
         carnival_mask_inventory_contents:
           $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+      type: object
+    SkyBlockProfileMemberSlayer:
+      additionalProperties: false
+      properties:
+        slayer_bosses:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBosses'
+        slayer_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerQuest'
+      required:
+        - slayer_bosses
+      type: object
+    SkyBlockProfileMemberSlayerSlayerBosses:
+      additionalProperties: false
+      properties:
+        blaze:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+        enderman:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+        spider:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+        vampire:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+        wolf:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+        zombie:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBoss'
+      type: object
+    SkyBlockProfileMemberSlayerSlayerBossesBoss:
+      additionalProperties: false
+      properties:
+        boss_attempts_tier_0:
+          type: integer
+        boss_attempts_tier_1:
+          type: integer
+        boss_attempts_tier_2:
+          type: integer
+        boss_attempts_tier_3:
+          type: integer
+        boss_attempts_tier_4:
+          type: integer
+        boss_kills_tier_0:
+          type: integer
+        boss_kills_tier_1:
+          type: integer
+        boss_kills_tier_2:
+          type: integer
+        boss_kills_tier_3:
+          type: integer
+        boss_kills_tier_4:
+          type: integer
+        claimed_levels:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerBossesBossClaimedLevels'
+        xp:
+          type: integer
+      type: object
+    SkyBlockProfileMemberSlayerSlayerBossesBossClaimedLevels:
+      additionalProperties: false
+      properties:
+        level_1:
+          type: boolean
+        level_2:
+          type: boolean
+        level_3:
+          type: boolean
+        level_4:
+          type: boolean
+        level_5:
+          type: boolean
+        level_6:
+          type: boolean
+        level_7:
+          type: boolean
+        level_7_special:
+          type: boolean
+        level_8:
+          type: boolean
+        level_8_special:
+          type: boolean
+        level_9:
+          type: boolean
+        level_9_special:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberSlayerSlayerQuest:
+      additionalProperties: false
+      properties:
+        combat_xp:
+          type: integer
+        completion_state:
+          type: integer
+        kill_timestamp:
+          type: integer
+        last_killed_mob_island:
+          enum:
+            - COMBAT_1
+            - COMBAT_3
+            - CRIMSON_ISLE
+            - CRYSTAL_HOLLOWS
+            - DYNAMIC
+            - FISHING_1
+            - FORAGING_1
+            - HUB
+            - MINING_2
+            - RIFT
+            - WINTER
+          type: string
+        recent_mob_kills:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberSlayerSlayerQuestRecentMobKill'
+          type: array
+        solo:
+          type: boolean
+        spawn_timestamp:
+          type: integer
+        start_timestamp:
+          type: integer
+        tier:
+          type: integer
+        type:
+          enum:
+            - blaze
+            - enderman
+            - spider
+            - vampire
+            - wolf
+            - zombie
+          type: string
+        used_armor:
+          type: boolean
+        xp_on_last_follower_spawn:
+          type: integer
+      required:
+        - completion_state
+        - start_timestamp
+        - tier
+        - type
+      type: object
+    SkyBlockProfileMemberSlayerSlayerQuestRecentMobKill:
+      additionalProperties: false
+      properties:
+        timestamp:
+          type: integer
+        xp:
+          type: number
+      required:
+        - timestamp
+        - xp
       type: object
   securitySchemes:
     ApiKey:
