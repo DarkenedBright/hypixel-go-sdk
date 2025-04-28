@@ -43,6 +43,7 @@ type SkyBlockProfileMember struct {
 	PlayerStats            *SkyBlockProfileMemberPlayerStats            `json:"player_stats,omitempty"`
 	Profile                *SkyBlockProfileMemberProfile                `json:"profile,omitempty"`
 	Quests                 *SkyBlockProfileMemberQuests                 `json:"quests,omitempty"`
+	Rift                   *SkyBlockProfileMemberRift                   `json:"rift,omitempty"`
 }
 
 // NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
@@ -830,6 +831,38 @@ func (o *SkyBlockProfileMember) SetQuests(v SkyBlockProfileMemberQuests) {
 	o.Quests = &v
 }
 
+// GetRift returns the Rift field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetRift() SkyBlockProfileMemberRift {
+	if o == nil || IsNil(o.Rift) {
+		var ret SkyBlockProfileMemberRift
+		return ret
+	}
+	return *o.Rift
+}
+
+// GetRiftOk returns a tuple with the Rift field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetRiftOk() (*SkyBlockProfileMemberRift, bool) {
+	if o == nil || IsNil(o.Rift) {
+		return nil, false
+	}
+	return o.Rift, true
+}
+
+// HasRift returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasRift() bool {
+	if o != nil && !IsNil(o.Rift) {
+		return true
+	}
+
+	return false
+}
+
+// SetRift gets a reference to the given SkyBlockProfileMemberRift and assigns it to the Rift field.
+func (o *SkyBlockProfileMember) SetRift(v SkyBlockProfileMemberRift) {
+	o.Rift = &v
+}
+
 func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -911,6 +944,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Quests) {
 		toSerialize["quests"] = o.Quests
+	}
+	if !IsNil(o.Rift) {
+		toSerialize["rift"] = o.Rift
 	}
 	return toSerialize, nil
 }

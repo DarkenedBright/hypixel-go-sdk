@@ -211,6 +211,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberProfile'
         quests:
           $ref: '#/components/schemas/SkyBlockProfileMemberQuests'
+        rift:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRift'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       properties:
@@ -7617,6 +7619,667 @@ components:
           type: integer
         pelt_count:
           type: integer
+      type: object
+    SkyBlockProfileMemberRift:
+      additionalProperties: false
+      properties:
+        access:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftAccess'
+        black_lagoon:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftBlackLagoon'
+        castle:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftCastle'
+        dead_cats:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftDeadCats'
+        dreadfarm:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftDreadfarm'
+        enigma:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftEnigma'
+        gallery:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftGallery'
+        inventory:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftInventory'
+        lifetime_purchased_boundaries:
+          items:
+            enum:
+              - barrier_street
+              - black_lagoon
+              - colosseum
+              - living_cave
+              - mirrorverse
+              - mountaintop
+              - village_plaza
+              - west_village
+            type: string
+          type: array
+        slayer_quest:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftSlayerQuest'
+        village_plaza:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlaza'
+        west_village:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillage'
+        wither_cage:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWitherCage'
+        wizard_tower:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWizardTower'
+        wyld_woods:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWyldWoods'
+      required:
+        - enigma
+        - wizard_tower
+      type: object
+    SkyBlockProfileMemberRiftAccess:
+      additionalProperties: false
+      properties:
+        charge_track_timestamp:
+          type: integer
+        consumed_prism:
+          type: boolean
+        last_free:
+          type: integer
+        pass:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftAccessPass'
+      type: object
+    SkyBlockProfileMemberRiftAccessPass:
+      additionalProperties: false
+      properties:
+        from_refund:
+          type: boolean
+        issued_at:
+          type: integer
+        rift_server_joins:
+          type: integer
+        used_prism:
+          type: boolean
+      required:
+        - issued_at
+        - rift_server_joins
+      type: object
+    SkyBlockProfileMemberRiftBlackLagoon:
+      additionalProperties: false
+      properties:
+        completed_step:
+          type: integer
+        delivered_science_paper:
+          type: boolean
+        received_science_paper:
+          type: boolean
+        talked_to_edwin:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftCastle:
+      additionalProperties: false
+      properties:
+        fairy_step:
+          type: integer
+        grubber_stacks:
+          type: integer
+        unlocked_pathway_skip:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftDeadCats:
+      additionalProperties: false
+      properties:
+        found_cats:
+          items:
+            enum:
+              - eight
+              - fifth
+              - first
+              - fourth
+              - ninth
+              - second
+              - seventh
+              - sixth
+              - third
+            type: string
+          type: array
+        montezuma:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftDeadCatsMontezuma'
+        picked_up_detector:
+          type: boolean
+        talked_to_jacquelle:
+          type: boolean
+        unlocked_pet:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftDeadCatsMontezuma:
+      additionalProperties: false
+      properties:
+        active:
+          type: boolean
+        candyUsed:
+          type: integer
+        exp:
+          type: number
+        heldItem:
+          enum:
+            - DEAD_CAT_FOOD
+          nullable: true
+          type: string
+        skin:
+          nullable: true
+          type: string
+        tier:
+          enum:
+            - EPIC
+            - RARE
+          type: string
+        type:
+          enum:
+            - FRACTURED_MONTEZUMA_SOUL
+          type: string
+        uniqueId:
+          format: uuid
+          type: string
+        uuid:
+          format: uuid
+          nullable: true
+          type: string
+      required:
+        - active
+        - candyUsed
+        - exp
+        - heldItem
+        - skin
+        - tier
+        - type
+        - uuid
+      type: object
+    SkyBlockProfileMemberRiftDreadfarm:
+      additionalProperties: false
+      properties:
+        caducous_feeder_uses:
+          items:
+            type: integer
+          type: array
+        shania_stage:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftEnigma:
+      additionalProperties: false
+      properties:
+        bought_cloak:
+          type: boolean
+        claimed_bonus_index:
+          type: integer
+        found_souls:
+          items:
+            enum:
+              - BACK2BASICS
+              - BARK_TREE
+              - BEANSTALK
+              - BETWEEN_BRANCHES
+              - CASTLE_BALLOONS
+              - CASTLE_FLOWERS
+              - CASTLE_MIDAIR
+              - CASTLE_PHANTOM
+              - COLOSSEUM_PILLARS
+              - DOLPHIN_PARKOUR
+              - FAIRY_TOWER_SOUL
+              - FARM_BALLOONS
+              - FROG_JUMP_PAD
+              - HORSING_AROUND
+              - HOT_DOG_SOUL
+              - LAGOON_PARKOUR
+              - LAGOON_SHOP_SOUL
+              - LEAP_OF_FAITH
+              - LIVING_CAVE_WALL
+              - LONELY_SOUL
+              - LONG_SHROOM
+              - MOUNTAIN_BALLOONS
+              - MOUNTAIN_FLOWERS
+              - MOUNTAIN_IKRUS
+              - MOUNTAIN_PHANTOM
+              - MOUNTAIN_SUNGECKO_PERKS
+              - MOUNTAIN_UBIK_AVERAGES
+              - MOUNTAIN_UBIK_BOXES
+              - MOUNTAIN_UBIK_TATS
+              - PIECE_TREE
+              - PLAZA_BALLOONS
+              - PLAZA_MIDAIR
+              - PLAZA_PHANTOM
+              - RABBIT_HAT_SOUL
+              - RIFT_1
+              - RIFT_CAKE
+              - RIFT_CAKE_2
+              - ROCKS_GAME_SOUL
+              - SAY_HI
+              - SCAMMER_SOUL
+              - SOUL_IN_A_BOX
+              - STANDING_THERE
+              - TELKAR
+              - TREE_LAUNCH
+              - TWO_PLAYERS_SOUL
+              - WALK_OF_FAME_WALL
+              - WEST_VILLAGE_KAT
+              - WEST_VILLAGE_MIDAIR
+              - WOODS_FLOWER_POT
+              - WOODS_PHANTOM
+              - WOODS_WATER_SOUL
+              - buttons_soul
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberRiftGallery:
+      additionalProperties: false
+      properties:
+        elise_step:
+          type: integer
+        secured_trophies:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberRiftGalleryTrophy'
+          type: array
+        sent_trophy_dialogues:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberRiftGalleryTrophyType'
+          type: array
+      type: object
+    SkyBlockProfileMemberRiftGalleryTrophy:
+      additionalProperties: false
+      properties:
+        timestamp:
+          type: integer
+        type:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftGalleryTrophyType'
+        visits:
+          type: integer
+      required:
+        - timestamp
+        - type
+        - visits
+      type: object
+    SkyBlockProfileMemberRiftGalleryTrophyType:
+      enum:
+        - chicken_n_egg
+        - citizen
+        - lazy_living
+        - mirrored
+        - mountain
+        - slime
+        - vampiric
+        - wyldly_supreme
+      type: string
+    SkyBlockProfileMemberRiftInventory:
+      additionalProperties: false
+      properties:
+        ender_chest_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        ender_chest_page_icons:
+          items:
+            nullable: true
+            type: string
+          type: array
+        equipment_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        inv_armor:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        inv_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+      type: object
+    SkyBlockProfileMemberRiftSlayerQuest:
+      additionalProperties: false
+      properties:
+        combat_xp:
+          type: integer
+        completion_state:
+          type: integer
+        last_killed_mob_island:
+          enum:
+            - RIFT
+          type: string
+        recent_mob_kills:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileMemberRiftSlayerQuestRecentMobKill'
+          type: array
+        solo:
+          type: boolean
+        spawn_timestamp:
+          type: integer
+        start_timestamp:
+          type: integer
+        tier:
+          type: integer
+        type:
+          enum:
+            - vampire
+          type: string
+        used_armor:
+          type: boolean
+      required:
+        - completion_state
+        - solo
+        - start_timestamp
+        - tier
+        - type
+        - used_armor
+      type: object
+    SkyBlockProfileMemberRiftSlayerQuestRecentMobKill:
+      additionalProperties: false
+      properties:
+        timestamp:
+          type: integer
+        xp:
+          type: number
+      required:
+        - timestamp
+        - xp
+      type: object
+    SkyBlockProfileMemberRiftVillagePlaza:
+      additionalProperties: false
+      properties:
+        barry_center:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarryCenter'
+        barter_bank:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaBarterBank'
+        cowboy:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaCowboy'
+        got_scammed:
+          type: boolean
+        lonely:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaLonely'
+        murder:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaMurder'
+        seraphine:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaSeraphine'
+      required:
+        - barry_center
+        - barter_bank
+        - cowboy
+        - lonely
+        - murder
+        - seraphine
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaBarryCenter:
+      additionalProperties: false
+      properties:
+        convinced:
+          items:
+            enum:
+              - creed
+              - dust
+              - frankie
+              - harriette
+              - soma
+              - stain
+              - violetta
+            type: string
+          type: array
+        first_talk_to_barry:
+          type: boolean
+        received_reward:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaBarterBank:
+      additionalProperties: false
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaCowboy:
+      additionalProperties: false
+      properties:
+        exported_carrots:
+          type: integer
+        hay_eaten:
+          type: integer
+        rabbit_name:
+          type: string
+        stage:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaLonely:
+      additionalProperties: false
+      properties:
+        seconds_sitting:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaMurder:
+      additionalProperties: false
+      properties:
+        murder_snapshot:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaMurderMurderSnapshot'
+        room_clues:
+          items:
+            enum:
+              - blood
+              - flowers
+              - fridge
+              - letter
+              - painting_1
+              - painting_2
+              - ring
+              - window
+            type: string
+          type: array
+        step_index:
+          type: integer
+        step_index_pt2:
+          type: integer
+        step_index_pt3:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaMurderMurderSnapshot:
+      additionalProperties: false
+      properties:
+        armor:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaMurderMurderSnapshotArmor'
+        held:
+          type: string
+        pet:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftVillagePlazaMurderMurderSnapshotPet'
+      required:
+        - armor
+        - held
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaMurderMurderSnapshotArmor:
+      additionalProperties: false
+      properties:
+        CHEST:
+          type: string
+        FOOT:
+          type: string
+        HEAD:
+          type: string
+        LEGS:
+          type: string
+      required:
+        - CHEST
+        - FOOT
+        - HEAD
+        - LEGS
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaMurderMurderSnapshotPet:
+      additionalProperties: false
+      properties:
+        exp:
+          type: number
+        tier:
+          enum:
+            - EPIC
+            - RARE
+          type: string
+        type:
+          enum:
+            - FRACTURED_MONTEZUMA_SOUL
+          type: string
+      required:
+        - exp
+        - tier
+        - type
+      type: object
+    SkyBlockProfileMemberRiftVillagePlazaSeraphine:
+      additionalProperties: false
+      properties:
+        step_index:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftWestVillage:
+      additionalProperties: false
+      properties:
+        crazy_kloon:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageCrazyKloon'
+        glyphs:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageGlyphs'
+        kat_house:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageKatHouse'
+        mirrorverse:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageMirrorverse'
+      type: object
+    SkyBlockProfileMemberRiftWestVillageCrazyKloon:
+      additionalProperties: false
+      properties:
+        hacked_terminals:
+          items:
+            enum:
+              - eight
+              - five
+              - four
+              - one
+              - seven
+              - six
+              - three
+              - two
+            type: string
+          type: array
+        quest_complete:
+          type: boolean
+        selected_colors:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColors'
+        talked:
+          type: boolean
+      required:
+        - selected_colors
+      type: object
+    SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColors:
+      additionalProperties: false
+      properties:
+        eight:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColorsColor'
+        five:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColorsColor'
+        four:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColorsColor'
+        one:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColorsColor'
+        seven:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColorsColor'
+        six:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColorsColor'
+        three:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColorsColor'
+        two:
+          $ref: '#/components/schemas/SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColorsColor'
+      type: object
+    SkyBlockProfileMemberRiftWestVillageCrazyKloonSelectedColorsColor:
+      enum:
+        - AQUA
+        - BLUE
+        - GREEN
+        - ORANGE
+        - PINK
+        - PURPLE
+        - RED
+        - YELLOW
+      type: string
+    SkyBlockProfileMemberRiftWestVillageGlyphs:
+      additionalProperties: false
+      properties:
+        claimed_bracelet:
+          type: boolean
+        claimed_wand:
+          type: boolean
+        completed:
+          type: boolean
+        current_glyph:
+          type: integer
+        current_glyph_completed:
+          type: boolean
+        current_glyph_delivered:
+          type: boolean
+      type: object
+    SkyBlockProfileMemberRiftWestVillageKatHouse:
+      additionalProperties: false
+      properties:
+        bin_collected_mosquito:
+          type: integer
+        bin_collected_silverfish:
+          type: integer
+        bin_collected_spider:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftWestVillageMirrorverse:
+      additionalProperties: false
+      properties:
+        claimed_chest_items:
+          items:
+            enum:
+              - BIG_BRAIN_TALISMAN
+              - MINIATURIZED_TUBULATOR
+              - TEST_BUCKET_PLEASE_IGNORE
+              - TINY_DANCER
+            type: string
+          type: array
+        claimed_reward:
+          type: boolean
+        upside_down_hard:
+          type: boolean
+        visited_rooms:
+          items:
+            enum:
+              - crafting room
+              - dance room
+              - four levers
+              - lava maze
+              - red-green puzzle
+              - reward room
+              - tubulator
+              - upside-down parkour
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberRiftWitherCage:
+      additionalProperties: false
+      properties:
+        killed_eyes:
+          items:
+            enum:
+              - castle
+              - colosseum
+              - dreadfarm
+              - fisherman_hut
+              - mountaintop
+              - plaza
+              - wizard_tower
+            type: string
+          type: array
+      type: object
+    SkyBlockProfileMemberRiftWizardTower:
+      additionalProperties: false
+      properties:
+        crumbs_laid_out:
+          type: integer
+        wizard_quest_step:
+          type: integer
+      type: object
+    SkyBlockProfileMemberRiftWyldWoods:
+      additionalProperties: false
+      properties:
+        bughunter_step:
+          type: integer
+        sirius_claimed_doubloon:
+          type: boolean
+        sirius_completed_q_a:
+          type: boolean
+        sirius_q_a_chain_done:
+          type: boolean
+        sirius_started_q_a:
+          type: boolean
+        talked_threebrothers:
+          items:
+            enum:
+              - threebrother_0
+              - threebrother_1
+              - threebrother_2
+            type: string
+          type: array
       type: object
   securitySchemes:
     ApiKey:

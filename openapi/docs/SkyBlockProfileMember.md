@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **PlayerStats** | Pointer to [**SkyBlockProfileMemberPlayerStats**](SkyBlockProfileMemberPlayerStats.md) |  | [optional] 
 **Profile** | Pointer to [**SkyBlockProfileMemberProfile**](SkyBlockProfileMemberProfile.md) |  | [optional] 
 **Quests** | Pointer to [**SkyBlockProfileMemberQuests**](SkyBlockProfileMemberQuests.md) |  | [optional] 
+**Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 
 ## Methods
 
@@ -647,6 +648,31 @@ SetQuests sets Quests field to given value.
 `func (o *SkyBlockProfileMember) HasQuests() bool`
 
 HasQuests returns a boolean if a field has been set.
+
+### GetRift
+
+`func (o *SkyBlockProfileMember) GetRift() SkyBlockProfileMemberRift`
+
+GetRift returns the Rift field if non-nil, zero value otherwise.
+
+### GetRiftOk
+
+`func (o *SkyBlockProfileMember) GetRiftOk() (*SkyBlockProfileMemberRift, bool)`
+
+GetRiftOk returns a tuple with the Rift field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRift
+
+`func (o *SkyBlockProfileMember) SetRift(v SkyBlockProfileMemberRift)`
+
+SetRift sets Rift field to given value.
+
+### HasRift
+
+`func (o *SkyBlockProfileMember) HasRift() bool`
+
+HasRift returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
