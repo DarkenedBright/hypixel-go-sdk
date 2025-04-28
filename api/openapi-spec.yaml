@@ -205,6 +205,8 @@ components:
         player_id:
           format: uuid
           type: string
+        player_stats:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStats'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       properties:
@@ -6916,6 +6918,540 @@ components:
         - amount
         - expire_at
         - key
+      type: object
+    SkyBlockProfileMemberPlayerStats:
+      additionalProperties: false
+      properties:
+        auctions:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsAuctions'
+        candy_collected:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsCandyCollected'
+        crops_mined:
+          type: number
+        deaths:
+          additionalProperties:
+            type: number
+          type: object
+        end_island:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIsland'
+        gifts:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsGifts'
+        glowing_mushrooms_broken:
+          type: number
+        highest_critical_damage:
+          type: number
+        highest_damage:
+          type: number
+        items_fished:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsItemsFished'
+        kills:
+          additionalProperties:
+            type: number
+          type: object
+        mythos:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythos'
+        pets:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsPets'
+        races:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsRaces'
+        rift:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsRift'
+        sea_creature_kills:
+          type: number
+        shredder_rod:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsShredderRod'
+        spooky:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsSpooky'
+        winter:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsWinter'
+      type: object
+    SkyBlockProfileMemberPlayerStatsAuctions:
+      additionalProperties: false
+      properties:
+        bids:
+          type: number
+        completed:
+          type: number
+        created:
+          type: number
+        fees:
+          type: number
+        gold_earned:
+          type: number
+        gold_spent:
+          type: number
+        highest_bid:
+          type: number
+        no_bids:
+          type: number
+        total_bought:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsAuctionsTotalCounts'
+        total_sold:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsAuctionsTotalCounts'
+        won:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsAuctionsTotalCounts:
+      additionalProperties: false
+      properties:
+        COMMON:
+          type: number
+        EPIC:
+          type: number
+        LEGENDARY:
+          type: number
+        MYTHIC:
+          type: number
+        RARE:
+          type: number
+        SPECIAL:
+          type: number
+        ULTIMATE:
+          type: number
+        UNCOMMON:
+          type: number
+        total:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsCandyCollected:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsCandyCollectedFestival'
+      properties:
+        green_candy:
+          type: integer
+        purple_candy:
+          type: integer
+        total:
+          type: integer
+      type: object
+    SkyBlockProfileMemberPlayerStatsCandyCollectedFestival:
+      additionalProperties: false
+      properties:
+        green_candy:
+          type: integer
+        purple_candy:
+          type: integer
+        total:
+          type: integer
+      required:
+        - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIsland:
+      additionalProperties: false
+      properties:
+        dragon_fight:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFight'
+        special_zealot_loot_collected:
+          type: number
+        summoning_eyes_collected:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFight:
+      additionalProperties: false
+      properties:
+        amount_summoned:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFightAmountSummoned'
+        ender_crystals_destroyed:
+          type: number
+        fastest_kill:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFightFastestKill'
+        highest_rank:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFightHighestRank'
+        most_damage:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFightMostDamage'
+        summoning_eyes_contributed:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFightSummoningEyesContributed'
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFightAmountSummoned:
+      additionalProperties: false
+      properties:
+        old:
+          type: number
+        protector:
+          type: number
+        strong:
+          type: number
+        superior:
+          type: number
+        total:
+          type: number
+        unstable:
+          type: number
+        wise:
+          type: number
+        young:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFightFastestKill:
+      additionalProperties: false
+      properties:
+        best:
+          type: number
+        old:
+          type: number
+        protector:
+          type: number
+        strong:
+          type: number
+        superior:
+          type: number
+        unstable:
+          type: number
+        wise:
+          type: number
+        young:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFightHighestRank:
+      additionalProperties: false
+      properties:
+        best:
+          type: number
+        old:
+          type: number
+        protector:
+          type: number
+        strong:
+          type: number
+        superior:
+          type: number
+        unstable:
+          type: number
+        wise:
+          type: number
+        young:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFightMostDamage:
+      additionalProperties: false
+      properties:
+        best:
+          type: number
+        old:
+          type: number
+        protector:
+          type: number
+        strong:
+          type: number
+        superior:
+          type: number
+        unstable:
+          type: number
+        wise:
+          type: number
+        young:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFightSummoningEyesContributed:
+      additionalProperties: false
+      properties:
+        old:
+          type: number
+        protector:
+          type: number
+        strong:
+          type: number
+        superior:
+          type: number
+        total:
+          type: number
+        unstable:
+          type: number
+        wise:
+          type: number
+        young:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsGifts:
+      additionalProperties: false
+      properties:
+        total_given:
+          type: number
+        total_received:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsItemsFished:
+      additionalProperties: false
+      properties:
+        large_treasure:
+          type: number
+        normal:
+          type: number
+        outstanding:
+          type: number
+        total:
+          type: number
+        treasure:
+          type: number
+        trophy_fish:
+          type: number
+      required:
+        - normal
+        - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsMythos:
+      additionalProperties: false
+      properties:
+        burrows_chains_complete:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythosBurrowData'
+        burrows_dug_combat:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythosBurrowData'
+        burrows_dug_next:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythosBurrowData'
+        burrows_dug_treasure:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythosBurrowData'
+        kills:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsMythosBurrowData:
+      additionalProperties: false
+      properties:
+        COMMON:
+          type: number
+        EPIC:
+          type: number
+        LEGENDARY:
+          type: number
+        RARE:
+          type: number
+        UNCOMMON:
+          type: number
+        none:
+          type: number
+        'null':
+          type: number
+        total:
+          type: number
+      required:
+        - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsPets:
+      additionalProperties: false
+      properties:
+        milestone:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsPetsMilestone'
+        total_exp_gained:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsPetsMilestone:
+      additionalProperties: false
+      properties:
+        ores_mined:
+          type: number
+        sea_creatures_killed:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsRaces:
+      additionalProperties: false
+      properties:
+        chicken_race_best_time_2:
+          type: number
+        dungeon_hub:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsRacesDungeonHub'
+        end_race_best_time:
+          type: number
+        foraging_race_best_time:
+          type: number
+        rift_race_best_time:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsRacesDungeonHub:
+      additionalProperties: false
+      properties:
+        crystal_core_anything_no_return_best_time:
+          type: number
+        crystal_core_anything_with_return_best_time:
+          type: number
+        crystal_core_no_abilities_no_return_best_time:
+          type: number
+        crystal_core_no_abilities_with_return_best_time:
+          type: number
+        crystal_core_no_pearls_no_return_best_time:
+          type: number
+        crystal_core_no_pearls_with_return_best_time:
+          type: number
+        crystal_core_nothing_no_return_best_time:
+          type: number
+        crystal_core_nothing_with_return_best_time:
+          type: number
+        giant_mushroom_anything_no_return_best_time:
+          type: number
+        giant_mushroom_anything_with_return_best_time:
+          type: number
+        giant_mushroom_no_abilities_no_return_best_time:
+          type: number
+        giant_mushroom_no_abilities_with_return_best_time:
+          type: number
+        giant_mushroom_no_pearls_no_return_best_time:
+          type: number
+        giant_mushroom_no_pearls_with_return_best_time:
+          type: number
+        giant_mushroom_nothing_no_return_best_time:
+          type: number
+        giant_mushroom_nothing_with_return_best_time:
+          type: number
+        precursor_ruins_anything_no_return_best_time:
+          type: number
+        precursor_ruins_anything_with_return_best_time:
+          type: number
+        precursor_ruins_no_abilities_no_return_best_time:
+          type: number
+        precursor_ruins_no_abilities_with_return_best_time:
+          type: number
+        precursor_ruins_no_pearls_no_return_best_time:
+          type: number
+        precursor_ruins_no_pearls_with_return_best_time:
+          type: number
+        precursor_ruins_nothing_no_return_best_time:
+          type: number
+        precursor_ruins_nothing_with_return_best_time:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsRift:
+      additionalProperties: false
+      properties:
+        castle_effigy_broken:
+          type: number
+        castle_sent_to_prison:
+          type: number
+        colosseum_bacte_defeated:
+          type: number
+        colosseum_blaster_shots:
+          type: number
+        colosseum_globowls_at_tentacle:
+          type: number
+        dreadfarm_agaricus_harvested:
+          type: number
+        dreadfarm_bean_bulb_collected:
+          type: number
+        dreadfarm_caducous_harvested:
+          type: number
+        dreadfarm_chicken_killed:
+          type: number
+        dreadfarm_riftwarts_harvested:
+          type: number
+        dreadfarm_wilted_harvested:
+          type: number
+        lagoon_leech_supreme_killed:
+          type: number
+        lagoon_lil_pads_sold:
+          type: number
+        lagoon_mushroom_popped_out:
+          type: number
+        lagoon_rocks_game_complete:
+          type: number
+        lifetime_motes_earned:
+          type: number
+        living_cave_snake_collected:
+          type: number
+        living_metal_piece_maxed:
+          type: number
+        living_metal_spawnegg_used:
+          type: number
+        motes_orb_pickup:
+          type: number
+        odonata_repeatable_completed:
+          type: number
+        pass_consumed:
+          type: number
+        plaza_hay_deaths:
+          type: number
+        plaza_horsezooka_shot:
+          type: number
+        plaza_pillar_deaths:
+          type: number
+        plaza_red_light_deaths:
+          type: number
+        popped_balloons:
+          type: number
+        shen_item_bought:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsRiftShenItemBought'
+        visits:
+          type: number
+        west_cake_part_eaten:
+          type: number
+        west_hot_dogs_given:
+          type: number
+        west_vermin_vacuumed:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsRiftWestVerminVacuumed'
+        woods_larva_killed:
+          type: number
+        woods_odonata_bottled:
+          type: number
+      required:
+        - visits
+      type: object
+    SkyBlockProfileMemberPlayerStatsRiftShenItemBought:
+      additionalProperties: false
+      properties:
+        DEAD_CAT_FOOD:
+          type: number
+        FLEX_HELMET:
+          type: number
+        PLACEABLE_FAIRY_SOUL_RIFT:
+          type: number
+        PUNCHCARD_ARTIFACT:
+          type: number
+        RIFT_PRISM:
+          type: number
+        total:
+          type: number
+      required:
+        - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsRiftWestVerminVacuumed:
+      additionalProperties: false
+      properties:
+        mosquito:
+          type: number
+        silverfish:
+          type: number
+        spider:
+          type: number
+        total:
+          type: number
+      required:
+        - mosquito
+        - silverfish
+        - spider
+        - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsShredderRod:
+      additionalProperties: false
+      properties:
+        bait:
+          type: number
+        fished:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsSpooky:
+      additionalProperties: false
+      properties:
+        bats_spawned:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsSpookyBatsSpawned'
+      required:
+        - bats_spawned
+      type: object
+    SkyBlockProfileMemberPlayerStatsSpookyBatsSpawned:
+      additionalProperties:
+        type: integer
+      properties:
+        total:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsWinter:
+      additionalProperties: false
+      properties:
+        most_cannonballs_hit:
+          type: number
+        most_damage_dealt:
+          type: number
+        most_magma_damage_dealt:
+          type: number
+        most_snowballs_hit:
+          type: number
+      required:
+        - most_damage_dealt
       type: object
   securitySchemes:
     ApiKey:

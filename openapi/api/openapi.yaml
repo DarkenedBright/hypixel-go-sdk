@@ -321,6 +321,239 @@ components:
               visited_zones:
               - abandoned_quarry
               - abandoned_quarry
+            player_stats:
+              kills:
+                key: 9.896762638307408
+              pets:
+                milestone:
+                  ores_mined: 1.213271650177239
+                  sea_creatures_killed: 2.3631069671221097
+                total_exp_gained: 7.222885400820572
+              glowing_mushrooms_broken: 7.546622872687339
+              end_island:
+                special_zealot_loot_collected: 9.86120873235807
+                dragon_fight:
+                  highest_rank:
+                    unstable: 5.838549898923979
+                    strong: 3.320056014655155
+                    superior: 0.4051792227050788
+                    wise: 0.06784119183428028
+                    young: 6.035671461131996
+                    old: 7.518272496022458
+                    protector: 4.353263425621577
+                    best: 0.9627174579671982
+                  fastest_kill:
+                    unstable: 5.417557261188433
+                    strong: 4.7033509688401605
+                    superior: 7.398420453445813
+                    wise: 0.18231101049276166
+                    young: 7.544197694331755
+                    old: 0.9628372872377944
+                    protector: 3.144698945386808
+                    best: 5.089281714380826
+                  most_damage:
+                    unstable: 9.509152813767344
+                    strong: 2.574694337731398
+                    superior: 1.8977275858326403
+                    wise: 2.248644391588969
+                    young: 4.3947316294731875
+                    old: 6.729814908604409
+                    protector: 3.4590983316410284
+                    best: 4.293752567878694
+                  ender_crystals_destroyed: 4.676411609349872
+                  summoning_eyes_contributed:
+                    unstable: 2.4482595959997955
+                    strong: 7.202214781826961
+                    superior: 5.998413894995064
+                    total: 7.028390615751622
+                    wise: 7.26639603893227
+                    young: 3.6805440658947353
+                    old: 4.871784189820318
+                    protector: 3.8203140861079268
+                  amount_summoned:
+                    unstable: 1.3072249028841099
+                    strong: 6.150055333250726
+                    superior: 7.318847743658732
+                    total: 1.2155306360461038
+                    wise: 0.7060502249250589
+                    young: 7.6562431466612715
+                    old: 8.504534952644262
+                    protector: 9.03118599298806
+                summoning_eyes_collected: 0.5726569451250851
+              shredder_rod:
+                bait: 8.47342148337535
+                fished: 4.374692895964676
+              winter:
+                most_cannonballs_hit: 2.4086429347217155
+                most_magma_damage_dealt: 7.367137886120934
+                most_damage_dealt: 2.86303896191088
+                most_snowballs_hit: 6.213099901862703
+              highest_critical_damage: 4.213318283605179
+              items_fished:
+                normal: 2.7774516884683207
+                total: 3.653225073048929
+                outstanding: 6.450650644517728
+                trophy_fish: 3.972365736764316
+                large_treasure: 9.27560048618725
+                treasure: 2.9605093907508873
+              rift:
+                popped_balloons: 8.023601755208588
+                west_hot_dogs_given: 4.964997965650228
+                dreadfarm_agaricus_harvested: 4.491469366705411
+                lagoon_leech_supreme_killed: 8.9226305590135
+                lagoon_lil_pads_sold: 7.765331561625514
+                shen_item_bought:
+                  PUNCHCARD_ARTIFACT: 3.720358823730775
+                  total: 7.794956613763416
+                  RIFT_PRISM: 7.871715088929257
+                  DEAD_CAT_FOOD: 5.017514155292483
+                  PLACEABLE_FAIRY_SOUL_RIFT: 7.831773195677409
+                  FLEX_HELMET: 8.656046911534922
+                lagoon_rocks_game_complete: 8.87986788654488
+                living_cave_snake_collected: 2.333970583527283
+                colosseum_bacte_defeated: 9.632839541020122
+                dreadfarm_chicken_killed: 2.54225202191946
+                lifetime_motes_earned: 0.2251139985378936
+                plaza_red_light_deaths: 6.484479003119764
+                visits: 7.6692351399026615
+                plaza_pillar_deaths: 0.16687043991910788
+                woods_larva_killed: 9.076472791212817
+                dreadfarm_caducous_harvested: 6.386457342265177
+                odonata_repeatable_completed: 8.852118736990365
+                dreadfarm_bean_bulb_collected: 1.8023274910352782
+                lagoon_mushroom_popped_out: 9.514519502384317
+                motes_orb_pickup: 1.740089112612726
+                plaza_hay_deaths: 9.49963371728803
+                plaza_horsezooka_shot: 8.833395488051972
+                living_metal_piece_maxed: 6.751774869153997
+                west_vermin_vacuumed:
+                  total: 9.234038131550328
+                  silverfish: 0.5134809551456831
+                  spider: 6.281469292042608
+                  mosquito: 1.1698722986549792
+                living_metal_spawnegg_used: 7.850091051100325
+                woods_odonata_bottled: 6.270880607505447
+                colosseum_blaster_shots: 1.3266957103239585
+                colosseum_globowls_at_tentacle: 0.5361818527416851
+                castle_effigy_broken: 8.932428877068963
+                dreadfarm_wilted_harvested: 2.0443769993225045
+                castle_sent_to_prison: 4.333865955271125
+                pass_consumed: 0.28100571035981403
+                dreadfarm_riftwarts_harvested: 7.4907652507908296
+                west_cake_part_eaten: 1.2679033304913534
+              sea_creature_kills: 4.611879174267083
+              spooky:
+                bats_spawned:
+                  total: 2.791286327863345
+              highest_damage: 5.5979065183521515
+              races:
+                dungeon_hub:
+                  precursor_ruins_no_pearls_with_return_best_time: 6.42132679200332
+                  crystal_core_no_pearls_with_return_best_time: 7.48340630885329
+                  crystal_core_no_abilities_no_return_best_time: 8.161079205791609
+                  giant_mushroom_anything_no_return_best_time: 5.697937978554375
+                  precursor_ruins_nothing_no_return_best_time: 3.1825287809356806
+                  precursor_ruins_no_pearls_no_return_best_time: 7.124409592356507
+                  precursor_ruins_no_abilities_with_return_best_time: 9.193816582380814
+                  giant_mushroom_nothing_with_return_best_time: 3.9056129117945515
+                  giant_mushroom_no_pearls_no_return_best_time: 7.351823381238441
+                  precursor_ruins_anything_no_return_best_time: 4.848725868319991
+                  crystal_core_nothing_no_return_best_time: 6.376878057660531
+                  crystal_core_anything_with_return_best_time: 1.689503059403632
+                  precursor_ruins_anything_with_return_best_time: 3.0611254872537885
+                  precursor_ruins_no_abilities_no_return_best_time: 5.303454161840017
+                  crystal_core_anything_no_return_best_time: 2.7239989256176766
+                  crystal_core_nothing_with_return_best_time: 9.28860627653261
+                  crystal_core_no_pearls_no_return_best_time: 1.7910320945003844
+                  giant_mushroom_no_abilities_with_return_best_time: 1.2613062240772
+                  giant_mushroom_no_abilities_no_return_best_time: 1.3389174281452143
+                  precursor_ruins_nothing_with_return_best_time: 6.044388903904137
+                  giant_mushroom_anything_with_return_best_time: 7.056230564967713
+                  giant_mushroom_nothing_no_return_best_time: 0.6344639387260975
+                  giant_mushroom_no_pearls_with_return_best_time: 9.746540672619648
+                  crystal_core_no_abilities_with_return_best_time: 6.735116218976787
+                foraging_race_best_time: 0.890175895976929
+                chicken_race_best_time_2: 3.4824880742629363
+                end_race_best_time: 6.387893485862778
+                rift_race_best_time: 1.0979907423791868
+              crops_mined: 1.511719429977132
+              mythos:
+                kills: 1.2030108490558
+                burrows_dug_treasure:
+                  total: 4.566901520815597
+                  RARE: 7.847955824035001
+                  "null": 2.1230426852719706
+                  EPIC: 5.535500986371801
+                  UNCOMMON: 0.6438275157314799
+                  COMMON: 8.144671038106528
+                  none: 8.65783973983825
+                  LEGENDARY: 5.15647973354139
+                burrows_chains_complete:
+                  total: 4.566901520815597
+                  RARE: 7.847955824035001
+                  "null": 2.1230426852719706
+                  EPIC: 5.535500986371801
+                  UNCOMMON: 0.6438275157314799
+                  COMMON: 8.144671038106528
+                  none: 8.65783973983825
+                  LEGENDARY: 5.15647973354139
+                burrows_dug_combat:
+                  total: 4.566901520815597
+                  RARE: 7.847955824035001
+                  "null": 2.1230426852719706
+                  EPIC: 5.535500986371801
+                  UNCOMMON: 0.6438275157314799
+                  COMMON: 8.144671038106528
+                  none: 8.65783973983825
+                  LEGENDARY: 5.15647973354139
+                burrows_dug_next:
+                  total: 4.566901520815597
+                  RARE: 7.847955824035001
+                  "null": 2.1230426852719706
+                  EPIC: 5.535500986371801
+                  UNCOMMON: 0.6438275157314799
+                  COMMON: 8.144671038106528
+                  none: 8.65783973983825
+                  LEGENDARY: 5.15647973354139
+              candy_collected:
+                green_candy: 0
+                total: 7
+                purple_candy: 4
+              auctions:
+                gold_earned: 1.1424055936677446
+                fees: 4.585740805390009
+                gold_spent: 4.798043284589512
+                no_bids: 3.622987733194878
+                created: 8.372990167315406
+                won: 6.3376513736404565
+                bids: 1.165800116953516
+                completed: 7.99596378710894
+                total_sold:
+                  total: 9.368303559405051
+                  RARE: 8.456690786865144
+                  EPIC: 6.670927598965964
+                  MYTHIC: 7.868560699983488
+                  UNCOMMON: 1.2938597832309906
+                  COMMON: 2.3351791640726405
+                  ULTIMATE: 6.052391178479496
+                  SPECIAL: 7.280139268854917
+                  LEGENDARY: 5.357183477019641
+                total_bought:
+                  total: 9.368303559405051
+                  RARE: 8.456690786865144
+                  EPIC: 6.670927598965964
+                  MYTHIC: 7.868560699983488
+                  UNCOMMON: 1.2938597832309906
+                  COMMON: 2.3351791640726405
+                  ULTIMATE: 6.052391178479496
+                  SPECIAL: 7.280139268854917
+                  LEGENDARY: 5.357183477019641
+                highest_bid: 3.506510052013918
+              deaths:
+                key: 9.170385347067478
+              gifts:
+                total_given: 4.511077460894262
+                total_received: 6.537712918802372
             dungeons:
               selected_dungeon_class: selected_dungeon_class
               dungeon_types:
@@ -4421,6 +4654,239 @@ components:
           visited_zones:
           - abandoned_quarry
           - abandoned_quarry
+        player_stats:
+          kills:
+            key: 9.896762638307408
+          pets:
+            milestone:
+              ores_mined: 1.213271650177239
+              sea_creatures_killed: 2.3631069671221097
+            total_exp_gained: 7.222885400820572
+          glowing_mushrooms_broken: 7.546622872687339
+          end_island:
+            special_zealot_loot_collected: 9.86120873235807
+            dragon_fight:
+              highest_rank:
+                unstable: 5.838549898923979
+                strong: 3.320056014655155
+                superior: 0.4051792227050788
+                wise: 0.06784119183428028
+                young: 6.035671461131996
+                old: 7.518272496022458
+                protector: 4.353263425621577
+                best: 0.9627174579671982
+              fastest_kill:
+                unstable: 5.417557261188433
+                strong: 4.7033509688401605
+                superior: 7.398420453445813
+                wise: 0.18231101049276166
+                young: 7.544197694331755
+                old: 0.9628372872377944
+                protector: 3.144698945386808
+                best: 5.089281714380826
+              most_damage:
+                unstable: 9.509152813767344
+                strong: 2.574694337731398
+                superior: 1.8977275858326403
+                wise: 2.248644391588969
+                young: 4.3947316294731875
+                old: 6.729814908604409
+                protector: 3.4590983316410284
+                best: 4.293752567878694
+              ender_crystals_destroyed: 4.676411609349872
+              summoning_eyes_contributed:
+                unstable: 2.4482595959997955
+                strong: 7.202214781826961
+                superior: 5.998413894995064
+                total: 7.028390615751622
+                wise: 7.26639603893227
+                young: 3.6805440658947353
+                old: 4.871784189820318
+                protector: 3.8203140861079268
+              amount_summoned:
+                unstable: 1.3072249028841099
+                strong: 6.150055333250726
+                superior: 7.318847743658732
+                total: 1.2155306360461038
+                wise: 0.7060502249250589
+                young: 7.6562431466612715
+                old: 8.504534952644262
+                protector: 9.03118599298806
+            summoning_eyes_collected: 0.5726569451250851
+          shredder_rod:
+            bait: 8.47342148337535
+            fished: 4.374692895964676
+          winter:
+            most_cannonballs_hit: 2.4086429347217155
+            most_magma_damage_dealt: 7.367137886120934
+            most_damage_dealt: 2.86303896191088
+            most_snowballs_hit: 6.213099901862703
+          highest_critical_damage: 4.213318283605179
+          items_fished:
+            normal: 2.7774516884683207
+            total: 3.653225073048929
+            outstanding: 6.450650644517728
+            trophy_fish: 3.972365736764316
+            large_treasure: 9.27560048618725
+            treasure: 2.9605093907508873
+          rift:
+            popped_balloons: 8.023601755208588
+            west_hot_dogs_given: 4.964997965650228
+            dreadfarm_agaricus_harvested: 4.491469366705411
+            lagoon_leech_supreme_killed: 8.9226305590135
+            lagoon_lil_pads_sold: 7.765331561625514
+            shen_item_bought:
+              PUNCHCARD_ARTIFACT: 3.720358823730775
+              total: 7.794956613763416
+              RIFT_PRISM: 7.871715088929257
+              DEAD_CAT_FOOD: 5.017514155292483
+              PLACEABLE_FAIRY_SOUL_RIFT: 7.831773195677409
+              FLEX_HELMET: 8.656046911534922
+            lagoon_rocks_game_complete: 8.87986788654488
+            living_cave_snake_collected: 2.333970583527283
+            colosseum_bacte_defeated: 9.632839541020122
+            dreadfarm_chicken_killed: 2.54225202191946
+            lifetime_motes_earned: 0.2251139985378936
+            plaza_red_light_deaths: 6.484479003119764
+            visits: 7.6692351399026615
+            plaza_pillar_deaths: 0.16687043991910788
+            woods_larva_killed: 9.076472791212817
+            dreadfarm_caducous_harvested: 6.386457342265177
+            odonata_repeatable_completed: 8.852118736990365
+            dreadfarm_bean_bulb_collected: 1.8023274910352782
+            lagoon_mushroom_popped_out: 9.514519502384317
+            motes_orb_pickup: 1.740089112612726
+            plaza_hay_deaths: 9.49963371728803
+            plaza_horsezooka_shot: 8.833395488051972
+            living_metal_piece_maxed: 6.751774869153997
+            west_vermin_vacuumed:
+              total: 9.234038131550328
+              silverfish: 0.5134809551456831
+              spider: 6.281469292042608
+              mosquito: 1.1698722986549792
+            living_metal_spawnegg_used: 7.850091051100325
+            woods_odonata_bottled: 6.270880607505447
+            colosseum_blaster_shots: 1.3266957103239585
+            colosseum_globowls_at_tentacle: 0.5361818527416851
+            castle_effigy_broken: 8.932428877068963
+            dreadfarm_wilted_harvested: 2.0443769993225045
+            castle_sent_to_prison: 4.333865955271125
+            pass_consumed: 0.28100571035981403
+            dreadfarm_riftwarts_harvested: 7.4907652507908296
+            west_cake_part_eaten: 1.2679033304913534
+          sea_creature_kills: 4.611879174267083
+          spooky:
+            bats_spawned:
+              total: 2.791286327863345
+          highest_damage: 5.5979065183521515
+          races:
+            dungeon_hub:
+              precursor_ruins_no_pearls_with_return_best_time: 6.42132679200332
+              crystal_core_no_pearls_with_return_best_time: 7.48340630885329
+              crystal_core_no_abilities_no_return_best_time: 8.161079205791609
+              giant_mushroom_anything_no_return_best_time: 5.697937978554375
+              precursor_ruins_nothing_no_return_best_time: 3.1825287809356806
+              precursor_ruins_no_pearls_no_return_best_time: 7.124409592356507
+              precursor_ruins_no_abilities_with_return_best_time: 9.193816582380814
+              giant_mushroom_nothing_with_return_best_time: 3.9056129117945515
+              giant_mushroom_no_pearls_no_return_best_time: 7.351823381238441
+              precursor_ruins_anything_no_return_best_time: 4.848725868319991
+              crystal_core_nothing_no_return_best_time: 6.376878057660531
+              crystal_core_anything_with_return_best_time: 1.689503059403632
+              precursor_ruins_anything_with_return_best_time: 3.0611254872537885
+              precursor_ruins_no_abilities_no_return_best_time: 5.303454161840017
+              crystal_core_anything_no_return_best_time: 2.7239989256176766
+              crystal_core_nothing_with_return_best_time: 9.28860627653261
+              crystal_core_no_pearls_no_return_best_time: 1.7910320945003844
+              giant_mushroom_no_abilities_with_return_best_time: 1.2613062240772
+              giant_mushroom_no_abilities_no_return_best_time: 1.3389174281452143
+              precursor_ruins_nothing_with_return_best_time: 6.044388903904137
+              giant_mushroom_anything_with_return_best_time: 7.056230564967713
+              giant_mushroom_nothing_no_return_best_time: 0.6344639387260975
+              giant_mushroom_no_pearls_with_return_best_time: 9.746540672619648
+              crystal_core_no_abilities_with_return_best_time: 6.735116218976787
+            foraging_race_best_time: 0.890175895976929
+            chicken_race_best_time_2: 3.4824880742629363
+            end_race_best_time: 6.387893485862778
+            rift_race_best_time: 1.0979907423791868
+          crops_mined: 1.511719429977132
+          mythos:
+            kills: 1.2030108490558
+            burrows_dug_treasure:
+              total: 4.566901520815597
+              RARE: 7.847955824035001
+              "null": 2.1230426852719706
+              EPIC: 5.535500986371801
+              UNCOMMON: 0.6438275157314799
+              COMMON: 8.144671038106528
+              none: 8.65783973983825
+              LEGENDARY: 5.15647973354139
+            burrows_chains_complete:
+              total: 4.566901520815597
+              RARE: 7.847955824035001
+              "null": 2.1230426852719706
+              EPIC: 5.535500986371801
+              UNCOMMON: 0.6438275157314799
+              COMMON: 8.144671038106528
+              none: 8.65783973983825
+              LEGENDARY: 5.15647973354139
+            burrows_dug_combat:
+              total: 4.566901520815597
+              RARE: 7.847955824035001
+              "null": 2.1230426852719706
+              EPIC: 5.535500986371801
+              UNCOMMON: 0.6438275157314799
+              COMMON: 8.144671038106528
+              none: 8.65783973983825
+              LEGENDARY: 5.15647973354139
+            burrows_dug_next:
+              total: 4.566901520815597
+              RARE: 7.847955824035001
+              "null": 2.1230426852719706
+              EPIC: 5.535500986371801
+              UNCOMMON: 0.6438275157314799
+              COMMON: 8.144671038106528
+              none: 8.65783973983825
+              LEGENDARY: 5.15647973354139
+          candy_collected:
+            green_candy: 0
+            total: 7
+            purple_candy: 4
+          auctions:
+            gold_earned: 1.1424055936677446
+            fees: 4.585740805390009
+            gold_spent: 4.798043284589512
+            no_bids: 3.622987733194878
+            created: 8.372990167315406
+            won: 6.3376513736404565
+            bids: 1.165800116953516
+            completed: 7.99596378710894
+            total_sold:
+              total: 9.368303559405051
+              RARE: 8.456690786865144
+              EPIC: 6.670927598965964
+              MYTHIC: 7.868560699983488
+              UNCOMMON: 1.2938597832309906
+              COMMON: 2.3351791640726405
+              ULTIMATE: 6.052391178479496
+              SPECIAL: 7.280139268854917
+              LEGENDARY: 5.357183477019641
+            total_bought:
+              total: 9.368303559405051
+              RARE: 8.456690786865144
+              EPIC: 6.670927598965964
+              MYTHIC: 7.868560699983488
+              UNCOMMON: 1.2938597832309906
+              COMMON: 2.3351791640726405
+              ULTIMATE: 6.052391178479496
+              SPECIAL: 7.280139268854917
+              LEGENDARY: 5.357183477019641
+            highest_bid: 3.506510052013918
+          deaths:
+            key: 9.170385347067478
+          gifts:
+            total_given: 4.511077460894262
+            total_received: 6.537712918802372
         dungeons:
           selected_dungeon_class: selected_dungeon_class
           dungeon_types:
@@ -8378,6 +8844,8 @@ components:
         player_id:
           format: uuid
           type: string
+        player_stats:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStats'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       example:
@@ -19228,6 +19696,1149 @@ components:
       - expire_at
       - key
       type: object
+    SkyBlockProfileMemberPlayerStats:
+      additionalProperties: false
+      example:
+        kills:
+          key: 9.896762638307408
+        pets:
+          milestone:
+            ores_mined: 1.213271650177239
+            sea_creatures_killed: 2.3631069671221097
+          total_exp_gained: 7.222885400820572
+        glowing_mushrooms_broken: 7.546622872687339
+        end_island:
+          special_zealot_loot_collected: 9.86120873235807
+          dragon_fight:
+            highest_rank:
+              unstable: 5.838549898923979
+              strong: 3.320056014655155
+              superior: 0.4051792227050788
+              wise: 0.06784119183428028
+              young: 6.035671461131996
+              old: 7.518272496022458
+              protector: 4.353263425621577
+              best: 0.9627174579671982
+            fastest_kill:
+              unstable: 5.417557261188433
+              strong: 4.7033509688401605
+              superior: 7.398420453445813
+              wise: 0.18231101049276166
+              young: 7.544197694331755
+              old: 0.9628372872377944
+              protector: 3.144698945386808
+              best: 5.089281714380826
+            most_damage:
+              unstable: 9.509152813767344
+              strong: 2.574694337731398
+              superior: 1.8977275858326403
+              wise: 2.248644391588969
+              young: 4.3947316294731875
+              old: 6.729814908604409
+              protector: 3.4590983316410284
+              best: 4.293752567878694
+            ender_crystals_destroyed: 4.676411609349872
+            summoning_eyes_contributed:
+              unstable: 2.4482595959997955
+              strong: 7.202214781826961
+              superior: 5.998413894995064
+              total: 7.028390615751622
+              wise: 7.26639603893227
+              young: 3.6805440658947353
+              old: 4.871784189820318
+              protector: 3.8203140861079268
+            amount_summoned:
+              unstable: 1.3072249028841099
+              strong: 6.150055333250726
+              superior: 7.318847743658732
+              total: 1.2155306360461038
+              wise: 0.7060502249250589
+              young: 7.6562431466612715
+              old: 8.504534952644262
+              protector: 9.03118599298806
+          summoning_eyes_collected: 0.5726569451250851
+        shredder_rod:
+          bait: 8.47342148337535
+          fished: 4.374692895964676
+        winter:
+          most_cannonballs_hit: 2.4086429347217155
+          most_magma_damage_dealt: 7.367137886120934
+          most_damage_dealt: 2.86303896191088
+          most_snowballs_hit: 6.213099901862703
+        highest_critical_damage: 4.213318283605179
+        items_fished:
+          normal: 2.7774516884683207
+          total: 3.653225073048929
+          outstanding: 6.450650644517728
+          trophy_fish: 3.972365736764316
+          large_treasure: 9.27560048618725
+          treasure: 2.9605093907508873
+        rift:
+          popped_balloons: 8.023601755208588
+          west_hot_dogs_given: 4.964997965650228
+          dreadfarm_agaricus_harvested: 4.491469366705411
+          lagoon_leech_supreme_killed: 8.9226305590135
+          lagoon_lil_pads_sold: 7.765331561625514
+          shen_item_bought:
+            PUNCHCARD_ARTIFACT: 3.720358823730775
+            total: 7.794956613763416
+            RIFT_PRISM: 7.871715088929257
+            DEAD_CAT_FOOD: 5.017514155292483
+            PLACEABLE_FAIRY_SOUL_RIFT: 7.831773195677409
+            FLEX_HELMET: 8.656046911534922
+          lagoon_rocks_game_complete: 8.87986788654488
+          living_cave_snake_collected: 2.333970583527283
+          colosseum_bacte_defeated: 9.632839541020122
+          dreadfarm_chicken_killed: 2.54225202191946
+          lifetime_motes_earned: 0.2251139985378936
+          plaza_red_light_deaths: 6.484479003119764
+          visits: 7.6692351399026615
+          plaza_pillar_deaths: 0.16687043991910788
+          woods_larva_killed: 9.076472791212817
+          dreadfarm_caducous_harvested: 6.386457342265177
+          odonata_repeatable_completed: 8.852118736990365
+          dreadfarm_bean_bulb_collected: 1.8023274910352782
+          lagoon_mushroom_popped_out: 9.514519502384317
+          motes_orb_pickup: 1.740089112612726
+          plaza_hay_deaths: 9.49963371728803
+          plaza_horsezooka_shot: 8.833395488051972
+          living_metal_piece_maxed: 6.751774869153997
+          west_vermin_vacuumed:
+            total: 9.234038131550328
+            silverfish: 0.5134809551456831
+            spider: 6.281469292042608
+            mosquito: 1.1698722986549792
+          living_metal_spawnegg_used: 7.850091051100325
+          woods_odonata_bottled: 6.270880607505447
+          colosseum_blaster_shots: 1.3266957103239585
+          colosseum_globowls_at_tentacle: 0.5361818527416851
+          castle_effigy_broken: 8.932428877068963
+          dreadfarm_wilted_harvested: 2.0443769993225045
+          castle_sent_to_prison: 4.333865955271125
+          pass_consumed: 0.28100571035981403
+          dreadfarm_riftwarts_harvested: 7.4907652507908296
+          west_cake_part_eaten: 1.2679033304913534
+        sea_creature_kills: 4.611879174267083
+        spooky:
+          bats_spawned:
+            total: 2.791286327863345
+        highest_damage: 5.5979065183521515
+        races:
+          dungeon_hub:
+            precursor_ruins_no_pearls_with_return_best_time: 6.42132679200332
+            crystal_core_no_pearls_with_return_best_time: 7.48340630885329
+            crystal_core_no_abilities_no_return_best_time: 8.161079205791609
+            giant_mushroom_anything_no_return_best_time: 5.697937978554375
+            precursor_ruins_nothing_no_return_best_time: 3.1825287809356806
+            precursor_ruins_no_pearls_no_return_best_time: 7.124409592356507
+            precursor_ruins_no_abilities_with_return_best_time: 9.193816582380814
+            giant_mushroom_nothing_with_return_best_time: 3.9056129117945515
+            giant_mushroom_no_pearls_no_return_best_time: 7.351823381238441
+            precursor_ruins_anything_no_return_best_time: 4.848725868319991
+            crystal_core_nothing_no_return_best_time: 6.376878057660531
+            crystal_core_anything_with_return_best_time: 1.689503059403632
+            precursor_ruins_anything_with_return_best_time: 3.0611254872537885
+            precursor_ruins_no_abilities_no_return_best_time: 5.303454161840017
+            crystal_core_anything_no_return_best_time: 2.7239989256176766
+            crystal_core_nothing_with_return_best_time: 9.28860627653261
+            crystal_core_no_pearls_no_return_best_time: 1.7910320945003844
+            giant_mushroom_no_abilities_with_return_best_time: 1.2613062240772
+            giant_mushroom_no_abilities_no_return_best_time: 1.3389174281452143
+            precursor_ruins_nothing_with_return_best_time: 6.044388903904137
+            giant_mushroom_anything_with_return_best_time: 7.056230564967713
+            giant_mushroom_nothing_no_return_best_time: 0.6344639387260975
+            giant_mushroom_no_pearls_with_return_best_time: 9.746540672619648
+            crystal_core_no_abilities_with_return_best_time: 6.735116218976787
+          foraging_race_best_time: 0.890175895976929
+          chicken_race_best_time_2: 3.4824880742629363
+          end_race_best_time: 6.387893485862778
+          rift_race_best_time: 1.0979907423791868
+        crops_mined: 1.511719429977132
+        mythos:
+          kills: 1.2030108490558
+          burrows_dug_treasure:
+            total: 4.566901520815597
+            RARE: 7.847955824035001
+            "null": 2.1230426852719706
+            EPIC: 5.535500986371801
+            UNCOMMON: 0.6438275157314799
+            COMMON: 8.144671038106528
+            none: 8.65783973983825
+            LEGENDARY: 5.15647973354139
+          burrows_chains_complete:
+            total: 4.566901520815597
+            RARE: 7.847955824035001
+            "null": 2.1230426852719706
+            EPIC: 5.535500986371801
+            UNCOMMON: 0.6438275157314799
+            COMMON: 8.144671038106528
+            none: 8.65783973983825
+            LEGENDARY: 5.15647973354139
+          burrows_dug_combat:
+            total: 4.566901520815597
+            RARE: 7.847955824035001
+            "null": 2.1230426852719706
+            EPIC: 5.535500986371801
+            UNCOMMON: 0.6438275157314799
+            COMMON: 8.144671038106528
+            none: 8.65783973983825
+            LEGENDARY: 5.15647973354139
+          burrows_dug_next:
+            total: 4.566901520815597
+            RARE: 7.847955824035001
+            "null": 2.1230426852719706
+            EPIC: 5.535500986371801
+            UNCOMMON: 0.6438275157314799
+            COMMON: 8.144671038106528
+            none: 8.65783973983825
+            LEGENDARY: 5.15647973354139
+        candy_collected:
+          green_candy: 0
+          total: 7
+          purple_candy: 4
+        auctions:
+          gold_earned: 1.1424055936677446
+          fees: 4.585740805390009
+          gold_spent: 4.798043284589512
+          no_bids: 3.622987733194878
+          created: 8.372990167315406
+          won: 6.3376513736404565
+          bids: 1.165800116953516
+          completed: 7.99596378710894
+          total_sold:
+            total: 9.368303559405051
+            RARE: 8.456690786865144
+            EPIC: 6.670927598965964
+            MYTHIC: 7.868560699983488
+            UNCOMMON: 1.2938597832309906
+            COMMON: 2.3351791640726405
+            ULTIMATE: 6.052391178479496
+            SPECIAL: 7.280139268854917
+            LEGENDARY: 5.357183477019641
+          total_bought:
+            total: 9.368303559405051
+            RARE: 8.456690786865144
+            EPIC: 6.670927598965964
+            MYTHIC: 7.868560699983488
+            UNCOMMON: 1.2938597832309906
+            COMMON: 2.3351791640726405
+            ULTIMATE: 6.052391178479496
+            SPECIAL: 7.280139268854917
+            LEGENDARY: 5.357183477019641
+          highest_bid: 3.506510052013918
+        deaths:
+          key: 9.170385347067478
+        gifts:
+          total_given: 4.511077460894262
+          total_received: 6.537712918802372
+      properties:
+        auctions:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsAuctions'
+        candy_collected:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsCandyCollected'
+        crops_mined:
+          type: number
+        deaths:
+          additionalProperties:
+            type: number
+          type: object
+        end_island:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIsland'
+        gifts:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsGifts'
+        glowing_mushrooms_broken:
+          type: number
+        highest_critical_damage:
+          type: number
+        highest_damage:
+          type: number
+        items_fished:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsItemsFished'
+        kills:
+          additionalProperties:
+            type: number
+          type: object
+        mythos:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythos'
+        pets:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsPets'
+        races:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsRaces'
+        rift:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsRift'
+        sea_creature_kills:
+          type: number
+        shredder_rod:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsShredderRod'
+        spooky:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsSpooky'
+        winter:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsWinter'
+      type: object
+    SkyBlockProfileMemberPlayerStatsAuctions:
+      additionalProperties: false
+      example:
+        gold_earned: 1.1424055936677446
+        fees: 4.585740805390009
+        gold_spent: 4.798043284589512
+        no_bids: 3.622987733194878
+        created: 8.372990167315406
+        won: 6.3376513736404565
+        bids: 1.165800116953516
+        completed: 7.99596378710894
+        total_sold:
+          total: 9.368303559405051
+          RARE: 8.456690786865144
+          EPIC: 6.670927598965964
+          MYTHIC: 7.868560699983488
+          UNCOMMON: 1.2938597832309906
+          COMMON: 2.3351791640726405
+          ULTIMATE: 6.052391178479496
+          SPECIAL: 7.280139268854917
+          LEGENDARY: 5.357183477019641
+        total_bought:
+          total: 9.368303559405051
+          RARE: 8.456690786865144
+          EPIC: 6.670927598965964
+          MYTHIC: 7.868560699983488
+          UNCOMMON: 1.2938597832309906
+          COMMON: 2.3351791640726405
+          ULTIMATE: 6.052391178479496
+          SPECIAL: 7.280139268854917
+          LEGENDARY: 5.357183477019641
+        highest_bid: 3.506510052013918
+      properties:
+        bids:
+          type: number
+        completed:
+          type: number
+        created:
+          type: number
+        fees:
+          type: number
+        gold_earned:
+          type: number
+        gold_spent:
+          type: number
+        highest_bid:
+          type: number
+        no_bids:
+          type: number
+        total_bought:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsAuctionsTotalCounts'
+        total_sold:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsAuctionsTotalCounts'
+        won:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsAuctionsTotalCounts:
+      additionalProperties: false
+      example:
+        total: 9.368303559405051
+        RARE: 8.456690786865144
+        EPIC: 6.670927598965964
+        MYTHIC: 7.868560699983488
+        UNCOMMON: 1.2938597832309906
+        COMMON: 2.3351791640726405
+        ULTIMATE: 6.052391178479496
+        SPECIAL: 7.280139268854917
+        LEGENDARY: 5.357183477019641
+      properties:
+        COMMON:
+          type: number
+        EPIC:
+          type: number
+        LEGENDARY:
+          type: number
+        MYTHIC:
+          type: number
+        RARE:
+          type: number
+        SPECIAL:
+          type: number
+        ULTIMATE:
+          type: number
+        UNCOMMON:
+          type: number
+        total:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsCandyCollected:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsCandyCollectedFestival'
+      example:
+        green_candy: 0
+        total: 7
+        purple_candy: 4
+      properties:
+        green_candy:
+          type: integer
+        purple_candy:
+          type: integer
+        total:
+          type: integer
+      type: object
+    SkyBlockProfileMemberPlayerStatsCandyCollectedFestival:
+      additionalProperties: false
+      properties:
+        green_candy:
+          type: integer
+        purple_candy:
+          type: integer
+        total:
+          type: integer
+      required:
+      - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIsland:
+      additionalProperties: false
+      example:
+        special_zealot_loot_collected: 9.86120873235807
+        dragon_fight:
+          highest_rank:
+            unstable: 5.838549898923979
+            strong: 3.320056014655155
+            superior: 0.4051792227050788
+            wise: 0.06784119183428028
+            young: 6.035671461131996
+            old: 7.518272496022458
+            protector: 4.353263425621577
+            best: 0.9627174579671982
+          fastest_kill:
+            unstable: 5.417557261188433
+            strong: 4.7033509688401605
+            superior: 7.398420453445813
+            wise: 0.18231101049276166
+            young: 7.544197694331755
+            old: 0.9628372872377944
+            protector: 3.144698945386808
+            best: 5.089281714380826
+          most_damage:
+            unstable: 9.509152813767344
+            strong: 2.574694337731398
+            superior: 1.8977275858326403
+            wise: 2.248644391588969
+            young: 4.3947316294731875
+            old: 6.729814908604409
+            protector: 3.4590983316410284
+            best: 4.293752567878694
+          ender_crystals_destroyed: 4.676411609349872
+          summoning_eyes_contributed:
+            unstable: 2.4482595959997955
+            strong: 7.202214781826961
+            superior: 5.998413894995064
+            total: 7.028390615751622
+            wise: 7.26639603893227
+            young: 3.6805440658947353
+            old: 4.871784189820318
+            protector: 3.8203140861079268
+          amount_summoned:
+            unstable: 1.3072249028841099
+            strong: 6.150055333250726
+            superior: 7.318847743658732
+            total: 1.2155306360461038
+            wise: 0.7060502249250589
+            young: 7.6562431466612715
+            old: 8.504534952644262
+            protector: 9.03118599298806
+        summoning_eyes_collected: 0.5726569451250851
+      properties:
+        dragon_fight:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFight'
+        special_zealot_loot_collected:
+          type: number
+        summoning_eyes_collected:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFight:
+      additionalProperties: false
+      example:
+        highest_rank:
+          unstable: 5.838549898923979
+          strong: 3.320056014655155
+          superior: 0.4051792227050788
+          wise: 0.06784119183428028
+          young: 6.035671461131996
+          old: 7.518272496022458
+          protector: 4.353263425621577
+          best: 0.9627174579671982
+        fastest_kill:
+          unstable: 5.417557261188433
+          strong: 4.7033509688401605
+          superior: 7.398420453445813
+          wise: 0.18231101049276166
+          young: 7.544197694331755
+          old: 0.9628372872377944
+          protector: 3.144698945386808
+          best: 5.089281714380826
+        most_damage:
+          unstable: 9.509152813767344
+          strong: 2.574694337731398
+          superior: 1.8977275858326403
+          wise: 2.248644391588969
+          young: 4.3947316294731875
+          old: 6.729814908604409
+          protector: 3.4590983316410284
+          best: 4.293752567878694
+        ender_crystals_destroyed: 4.676411609349872
+        summoning_eyes_contributed:
+          unstable: 2.4482595959997955
+          strong: 7.202214781826961
+          superior: 5.998413894995064
+          total: 7.028390615751622
+          wise: 7.26639603893227
+          young: 3.6805440658947353
+          old: 4.871784189820318
+          protector: 3.8203140861079268
+        amount_summoned:
+          unstable: 1.3072249028841099
+          strong: 6.150055333250726
+          superior: 7.318847743658732
+          total: 1.2155306360461038
+          wise: 0.7060502249250589
+          young: 7.6562431466612715
+          old: 8.504534952644262
+          protector: 9.03118599298806
+      properties:
+        amount_summoned:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFightAmountSummoned'
+        ender_crystals_destroyed:
+          type: number
+        fastest_kill:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFightFastestKill'
+        highest_rank:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFightHighestRank'
+        most_damage:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFightMostDamage'
+        summoning_eyes_contributed:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIslandDragonFightSummoningEyesContributed'
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFightAmountSummoned:
+      additionalProperties: false
+      example:
+        unstable: 1.3072249028841099
+        strong: 6.150055333250726
+        superior: 7.318847743658732
+        total: 1.2155306360461038
+        wise: 0.7060502249250589
+        young: 7.6562431466612715
+        old: 8.504534952644262
+        protector: 9.03118599298806
+      properties:
+        old:
+          type: number
+        protector:
+          type: number
+        strong:
+          type: number
+        superior:
+          type: number
+        total:
+          type: number
+        unstable:
+          type: number
+        wise:
+          type: number
+        young:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFightFastestKill:
+      additionalProperties: false
+      example:
+        unstable: 5.417557261188433
+        strong: 4.7033509688401605
+        superior: 7.398420453445813
+        wise: 0.18231101049276166
+        young: 7.544197694331755
+        old: 0.9628372872377944
+        protector: 3.144698945386808
+        best: 5.089281714380826
+      properties:
+        best:
+          type: number
+        old:
+          type: number
+        protector:
+          type: number
+        strong:
+          type: number
+        superior:
+          type: number
+        unstable:
+          type: number
+        wise:
+          type: number
+        young:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFightHighestRank:
+      additionalProperties: false
+      example:
+        unstable: 5.838549898923979
+        strong: 3.320056014655155
+        superior: 0.4051792227050788
+        wise: 0.06784119183428028
+        young: 6.035671461131996
+        old: 7.518272496022458
+        protector: 4.353263425621577
+        best: 0.9627174579671982
+      properties:
+        best:
+          type: number
+        old:
+          type: number
+        protector:
+          type: number
+        strong:
+          type: number
+        superior:
+          type: number
+        unstable:
+          type: number
+        wise:
+          type: number
+        young:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFightMostDamage:
+      additionalProperties: false
+      example:
+        unstable: 9.509152813767344
+        strong: 2.574694337731398
+        superior: 1.8977275858326403
+        wise: 2.248644391588969
+        young: 4.3947316294731875
+        old: 6.729814908604409
+        protector: 3.4590983316410284
+        best: 4.293752567878694
+      properties:
+        best:
+          type: number
+        old:
+          type: number
+        protector:
+          type: number
+        strong:
+          type: number
+        superior:
+          type: number
+        unstable:
+          type: number
+        wise:
+          type: number
+        young:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsEndIslandDragonFightSummoningEyesContributed:
+      additionalProperties: false
+      example:
+        unstable: 2.4482595959997955
+        strong: 7.202214781826961
+        superior: 5.998413894995064
+        total: 7.028390615751622
+        wise: 7.26639603893227
+        young: 3.6805440658947353
+        old: 4.871784189820318
+        protector: 3.8203140861079268
+      properties:
+        old:
+          type: number
+        protector:
+          type: number
+        strong:
+          type: number
+        superior:
+          type: number
+        total:
+          type: number
+        unstable:
+          type: number
+        wise:
+          type: number
+        young:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsGifts:
+      additionalProperties: false
+      example:
+        total_given: 4.511077460894262
+        total_received: 6.537712918802372
+      properties:
+        total_given:
+          type: number
+        total_received:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsItemsFished:
+      additionalProperties: false
+      example:
+        normal: 2.7774516884683207
+        total: 3.653225073048929
+        outstanding: 6.450650644517728
+        trophy_fish: 3.972365736764316
+        large_treasure: 9.27560048618725
+        treasure: 2.9605093907508873
+      properties:
+        large_treasure:
+          type: number
+        normal:
+          type: number
+        outstanding:
+          type: number
+        total:
+          type: number
+        treasure:
+          type: number
+        trophy_fish:
+          type: number
+      required:
+      - normal
+      - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsMythos:
+      additionalProperties: false
+      example:
+        kills: 1.2030108490558
+        burrows_dug_treasure:
+          total: 4.566901520815597
+          RARE: 7.847955824035001
+          "null": 2.1230426852719706
+          EPIC: 5.535500986371801
+          UNCOMMON: 0.6438275157314799
+          COMMON: 8.144671038106528
+          none: 8.65783973983825
+          LEGENDARY: 5.15647973354139
+        burrows_chains_complete:
+          total: 4.566901520815597
+          RARE: 7.847955824035001
+          "null": 2.1230426852719706
+          EPIC: 5.535500986371801
+          UNCOMMON: 0.6438275157314799
+          COMMON: 8.144671038106528
+          none: 8.65783973983825
+          LEGENDARY: 5.15647973354139
+        burrows_dug_combat:
+          total: 4.566901520815597
+          RARE: 7.847955824035001
+          "null": 2.1230426852719706
+          EPIC: 5.535500986371801
+          UNCOMMON: 0.6438275157314799
+          COMMON: 8.144671038106528
+          none: 8.65783973983825
+          LEGENDARY: 5.15647973354139
+        burrows_dug_next:
+          total: 4.566901520815597
+          RARE: 7.847955824035001
+          "null": 2.1230426852719706
+          EPIC: 5.535500986371801
+          UNCOMMON: 0.6438275157314799
+          COMMON: 8.144671038106528
+          none: 8.65783973983825
+          LEGENDARY: 5.15647973354139
+      properties:
+        burrows_chains_complete:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythosBurrowData'
+        burrows_dug_combat:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythosBurrowData'
+        burrows_dug_next:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythosBurrowData'
+        burrows_dug_treasure:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythosBurrowData'
+        kills:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsMythosBurrowData:
+      additionalProperties: false
+      example:
+        total: 4.566901520815597
+        RARE: 7.847955824035001
+        "null": 2.1230426852719706
+        EPIC: 5.535500986371801
+        UNCOMMON: 0.6438275157314799
+        COMMON: 8.144671038106528
+        none: 8.65783973983825
+        LEGENDARY: 5.15647973354139
+      properties:
+        COMMON:
+          type: number
+        EPIC:
+          type: number
+        LEGENDARY:
+          type: number
+        RARE:
+          type: number
+        UNCOMMON:
+          type: number
+        none:
+          type: number
+        "null":
+          type: number
+        total:
+          type: number
+      required:
+      - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsPets:
+      additionalProperties: false
+      example:
+        milestone:
+          ores_mined: 1.213271650177239
+          sea_creatures_killed: 2.3631069671221097
+        total_exp_gained: 7.222885400820572
+      properties:
+        milestone:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsPetsMilestone'
+        total_exp_gained:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsPetsMilestone:
+      additionalProperties: false
+      example:
+        ores_mined: 1.213271650177239
+        sea_creatures_killed: 2.3631069671221097
+      properties:
+        ores_mined:
+          type: number
+        sea_creatures_killed:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsRaces:
+      additionalProperties: false
+      example:
+        dungeon_hub:
+          precursor_ruins_no_pearls_with_return_best_time: 6.42132679200332
+          crystal_core_no_pearls_with_return_best_time: 7.48340630885329
+          crystal_core_no_abilities_no_return_best_time: 8.161079205791609
+          giant_mushroom_anything_no_return_best_time: 5.697937978554375
+          precursor_ruins_nothing_no_return_best_time: 3.1825287809356806
+          precursor_ruins_no_pearls_no_return_best_time: 7.124409592356507
+          precursor_ruins_no_abilities_with_return_best_time: 9.193816582380814
+          giant_mushroom_nothing_with_return_best_time: 3.9056129117945515
+          giant_mushroom_no_pearls_no_return_best_time: 7.351823381238441
+          precursor_ruins_anything_no_return_best_time: 4.848725868319991
+          crystal_core_nothing_no_return_best_time: 6.376878057660531
+          crystal_core_anything_with_return_best_time: 1.689503059403632
+          precursor_ruins_anything_with_return_best_time: 3.0611254872537885
+          precursor_ruins_no_abilities_no_return_best_time: 5.303454161840017
+          crystal_core_anything_no_return_best_time: 2.7239989256176766
+          crystal_core_nothing_with_return_best_time: 9.28860627653261
+          crystal_core_no_pearls_no_return_best_time: 1.7910320945003844
+          giant_mushroom_no_abilities_with_return_best_time: 1.2613062240772
+          giant_mushroom_no_abilities_no_return_best_time: 1.3389174281452143
+          precursor_ruins_nothing_with_return_best_time: 6.044388903904137
+          giant_mushroom_anything_with_return_best_time: 7.056230564967713
+          giant_mushroom_nothing_no_return_best_time: 0.6344639387260975
+          giant_mushroom_no_pearls_with_return_best_time: 9.746540672619648
+          crystal_core_no_abilities_with_return_best_time: 6.735116218976787
+        foraging_race_best_time: 0.890175895976929
+        chicken_race_best_time_2: 3.4824880742629363
+        end_race_best_time: 6.387893485862778
+        rift_race_best_time: 1.0979907423791868
+      properties:
+        chicken_race_best_time_2:
+          type: number
+        dungeon_hub:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsRacesDungeonHub'
+        end_race_best_time:
+          type: number
+        foraging_race_best_time:
+          type: number
+        rift_race_best_time:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsRacesDungeonHub:
+      additionalProperties: false
+      example:
+        precursor_ruins_no_pearls_with_return_best_time: 6.42132679200332
+        crystal_core_no_pearls_with_return_best_time: 7.48340630885329
+        crystal_core_no_abilities_no_return_best_time: 8.161079205791609
+        giant_mushroom_anything_no_return_best_time: 5.697937978554375
+        precursor_ruins_nothing_no_return_best_time: 3.1825287809356806
+        precursor_ruins_no_pearls_no_return_best_time: 7.124409592356507
+        precursor_ruins_no_abilities_with_return_best_time: 9.193816582380814
+        giant_mushroom_nothing_with_return_best_time: 3.9056129117945515
+        giant_mushroom_no_pearls_no_return_best_time: 7.351823381238441
+        precursor_ruins_anything_no_return_best_time: 4.848725868319991
+        crystal_core_nothing_no_return_best_time: 6.376878057660531
+        crystal_core_anything_with_return_best_time: 1.689503059403632
+        precursor_ruins_anything_with_return_best_time: 3.0611254872537885
+        precursor_ruins_no_abilities_no_return_best_time: 5.303454161840017
+        crystal_core_anything_no_return_best_time: 2.7239989256176766
+        crystal_core_nothing_with_return_best_time: 9.28860627653261
+        crystal_core_no_pearls_no_return_best_time: 1.7910320945003844
+        giant_mushroom_no_abilities_with_return_best_time: 1.2613062240772
+        giant_mushroom_no_abilities_no_return_best_time: 1.3389174281452143
+        precursor_ruins_nothing_with_return_best_time: 6.044388903904137
+        giant_mushroom_anything_with_return_best_time: 7.056230564967713
+        giant_mushroom_nothing_no_return_best_time: 0.6344639387260975
+        giant_mushroom_no_pearls_with_return_best_time: 9.746540672619648
+        crystal_core_no_abilities_with_return_best_time: 6.735116218976787
+      properties:
+        crystal_core_anything_no_return_best_time:
+          type: number
+        crystal_core_anything_with_return_best_time:
+          type: number
+        crystal_core_no_abilities_no_return_best_time:
+          type: number
+        crystal_core_no_abilities_with_return_best_time:
+          type: number
+        crystal_core_no_pearls_no_return_best_time:
+          type: number
+        crystal_core_no_pearls_with_return_best_time:
+          type: number
+        crystal_core_nothing_no_return_best_time:
+          type: number
+        crystal_core_nothing_with_return_best_time:
+          type: number
+        giant_mushroom_anything_no_return_best_time:
+          type: number
+        giant_mushroom_anything_with_return_best_time:
+          type: number
+        giant_mushroom_no_abilities_no_return_best_time:
+          type: number
+        giant_mushroom_no_abilities_with_return_best_time:
+          type: number
+        giant_mushroom_no_pearls_no_return_best_time:
+          type: number
+        giant_mushroom_no_pearls_with_return_best_time:
+          type: number
+        giant_mushroom_nothing_no_return_best_time:
+          type: number
+        giant_mushroom_nothing_with_return_best_time:
+          type: number
+        precursor_ruins_anything_no_return_best_time:
+          type: number
+        precursor_ruins_anything_with_return_best_time:
+          type: number
+        precursor_ruins_no_abilities_no_return_best_time:
+          type: number
+        precursor_ruins_no_abilities_with_return_best_time:
+          type: number
+        precursor_ruins_no_pearls_no_return_best_time:
+          type: number
+        precursor_ruins_no_pearls_with_return_best_time:
+          type: number
+        precursor_ruins_nothing_no_return_best_time:
+          type: number
+        precursor_ruins_nothing_with_return_best_time:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsRift:
+      additionalProperties: false
+      example:
+        popped_balloons: 8.023601755208588
+        west_hot_dogs_given: 4.964997965650228
+        dreadfarm_agaricus_harvested: 4.491469366705411
+        lagoon_leech_supreme_killed: 8.9226305590135
+        lagoon_lil_pads_sold: 7.765331561625514
+        shen_item_bought:
+          PUNCHCARD_ARTIFACT: 3.720358823730775
+          total: 7.794956613763416
+          RIFT_PRISM: 7.871715088929257
+          DEAD_CAT_FOOD: 5.017514155292483
+          PLACEABLE_FAIRY_SOUL_RIFT: 7.831773195677409
+          FLEX_HELMET: 8.656046911534922
+        lagoon_rocks_game_complete: 8.87986788654488
+        living_cave_snake_collected: 2.333970583527283
+        colosseum_bacte_defeated: 9.632839541020122
+        dreadfarm_chicken_killed: 2.54225202191946
+        lifetime_motes_earned: 0.2251139985378936
+        plaza_red_light_deaths: 6.484479003119764
+        visits: 7.6692351399026615
+        plaza_pillar_deaths: 0.16687043991910788
+        woods_larva_killed: 9.076472791212817
+        dreadfarm_caducous_harvested: 6.386457342265177
+        odonata_repeatable_completed: 8.852118736990365
+        dreadfarm_bean_bulb_collected: 1.8023274910352782
+        lagoon_mushroom_popped_out: 9.514519502384317
+        motes_orb_pickup: 1.740089112612726
+        plaza_hay_deaths: 9.49963371728803
+        plaza_horsezooka_shot: 8.833395488051972
+        living_metal_piece_maxed: 6.751774869153997
+        west_vermin_vacuumed:
+          total: 9.234038131550328
+          silverfish: 0.5134809551456831
+          spider: 6.281469292042608
+          mosquito: 1.1698722986549792
+        living_metal_spawnegg_used: 7.850091051100325
+        woods_odonata_bottled: 6.270880607505447
+        colosseum_blaster_shots: 1.3266957103239585
+        colosseum_globowls_at_tentacle: 0.5361818527416851
+        castle_effigy_broken: 8.932428877068963
+        dreadfarm_wilted_harvested: 2.0443769993225045
+        castle_sent_to_prison: 4.333865955271125
+        pass_consumed: 0.28100571035981403
+        dreadfarm_riftwarts_harvested: 7.4907652507908296
+        west_cake_part_eaten: 1.2679033304913534
+      properties:
+        castle_effigy_broken:
+          type: number
+        castle_sent_to_prison:
+          type: number
+        colosseum_bacte_defeated:
+          type: number
+        colosseum_blaster_shots:
+          type: number
+        colosseum_globowls_at_tentacle:
+          type: number
+        dreadfarm_agaricus_harvested:
+          type: number
+        dreadfarm_bean_bulb_collected:
+          type: number
+        dreadfarm_caducous_harvested:
+          type: number
+        dreadfarm_chicken_killed:
+          type: number
+        dreadfarm_riftwarts_harvested:
+          type: number
+        dreadfarm_wilted_harvested:
+          type: number
+        lagoon_leech_supreme_killed:
+          type: number
+        lagoon_lil_pads_sold:
+          type: number
+        lagoon_mushroom_popped_out:
+          type: number
+        lagoon_rocks_game_complete:
+          type: number
+        lifetime_motes_earned:
+          type: number
+        living_cave_snake_collected:
+          type: number
+        living_metal_piece_maxed:
+          type: number
+        living_metal_spawnegg_used:
+          type: number
+        motes_orb_pickup:
+          type: number
+        odonata_repeatable_completed:
+          type: number
+        pass_consumed:
+          type: number
+        plaza_hay_deaths:
+          type: number
+        plaza_horsezooka_shot:
+          type: number
+        plaza_pillar_deaths:
+          type: number
+        plaza_red_light_deaths:
+          type: number
+        popped_balloons:
+          type: number
+        shen_item_bought:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsRiftShenItemBought'
+        visits:
+          type: number
+        west_cake_part_eaten:
+          type: number
+        west_hot_dogs_given:
+          type: number
+        west_vermin_vacuumed:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsRiftWestVerminVacuumed'
+        woods_larva_killed:
+          type: number
+        woods_odonata_bottled:
+          type: number
+      required:
+      - visits
+      type: object
+    SkyBlockProfileMemberPlayerStatsRiftShenItemBought:
+      additionalProperties: false
+      example:
+        PUNCHCARD_ARTIFACT: 3.720358823730775
+        total: 7.794956613763416
+        RIFT_PRISM: 7.871715088929257
+        DEAD_CAT_FOOD: 5.017514155292483
+        PLACEABLE_FAIRY_SOUL_RIFT: 7.831773195677409
+        FLEX_HELMET: 8.656046911534922
+      properties:
+        DEAD_CAT_FOOD:
+          type: number
+        FLEX_HELMET:
+          type: number
+        PLACEABLE_FAIRY_SOUL_RIFT:
+          type: number
+        PUNCHCARD_ARTIFACT:
+          type: number
+        RIFT_PRISM:
+          type: number
+        total:
+          type: number
+      required:
+      - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsRiftWestVerminVacuumed:
+      additionalProperties: false
+      example:
+        total: 9.234038131550328
+        silverfish: 0.5134809551456831
+        spider: 6.281469292042608
+        mosquito: 1.1698722986549792
+      properties:
+        mosquito:
+          type: number
+        silverfish:
+          type: number
+        spider:
+          type: number
+        total:
+          type: number
+      required:
+      - mosquito
+      - silverfish
+      - spider
+      - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsShredderRod:
+      additionalProperties: false
+      example:
+        bait: 8.47342148337535
+        fished: 4.374692895964676
+      properties:
+        bait:
+          type: number
+        fished:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsSpooky:
+      additionalProperties: false
+      example:
+        bats_spawned:
+          total: 2.791286327863345
+      properties:
+        bats_spawned:
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsSpookyBatsSpawned'
+      required:
+      - bats_spawned
+      type: object
+    SkyBlockProfileMemberPlayerStatsSpookyBatsSpawned:
+      additionalProperties:
+        type: integer
+      example:
+        total: 2.791286327863345
+      properties:
+        total:
+          type: number
+      type: object
+    SkyBlockProfileMemberPlayerStatsWinter:
+      additionalProperties: false
+      example:
+        most_cannonballs_hit: 2.4086429347217155
+        most_magma_damage_dealt: 7.367137886120934
+        most_damage_dealt: 2.86303896191088
+        most_snowballs_hit: 6.213099901862703
+      properties:
+        most_cannonballs_hit:
+          type: number
+        most_damage_dealt:
+          type: number
+        most_magma_damage_dealt:
+          type: number
+        most_snowballs_hit:
+          type: number
+      required:
+      - most_damage_dealt
+      type: object
     _v2_skyblock_profile_get_200_response:
       example:
         success: true
@@ -19384,6 +20995,239 @@ components:
                 visited_zones:
                 - abandoned_quarry
                 - abandoned_quarry
+              player_stats:
+                kills:
+                  key: 9.896762638307408
+                pets:
+                  milestone:
+                    ores_mined: 1.213271650177239
+                    sea_creatures_killed: 2.3631069671221097
+                  total_exp_gained: 7.222885400820572
+                glowing_mushrooms_broken: 7.546622872687339
+                end_island:
+                  special_zealot_loot_collected: 9.86120873235807
+                  dragon_fight:
+                    highest_rank:
+                      unstable: 5.838549898923979
+                      strong: 3.320056014655155
+                      superior: 0.4051792227050788
+                      wise: 0.06784119183428028
+                      young: 6.035671461131996
+                      old: 7.518272496022458
+                      protector: 4.353263425621577
+                      best: 0.9627174579671982
+                    fastest_kill:
+                      unstable: 5.417557261188433
+                      strong: 4.7033509688401605
+                      superior: 7.398420453445813
+                      wise: 0.18231101049276166
+                      young: 7.544197694331755
+                      old: 0.9628372872377944
+                      protector: 3.144698945386808
+                      best: 5.089281714380826
+                    most_damage:
+                      unstable: 9.509152813767344
+                      strong: 2.574694337731398
+                      superior: 1.8977275858326403
+                      wise: 2.248644391588969
+                      young: 4.3947316294731875
+                      old: 6.729814908604409
+                      protector: 3.4590983316410284
+                      best: 4.293752567878694
+                    ender_crystals_destroyed: 4.676411609349872
+                    summoning_eyes_contributed:
+                      unstable: 2.4482595959997955
+                      strong: 7.202214781826961
+                      superior: 5.998413894995064
+                      total: 7.028390615751622
+                      wise: 7.26639603893227
+                      young: 3.6805440658947353
+                      old: 4.871784189820318
+                      protector: 3.8203140861079268
+                    amount_summoned:
+                      unstable: 1.3072249028841099
+                      strong: 6.150055333250726
+                      superior: 7.318847743658732
+                      total: 1.2155306360461038
+                      wise: 0.7060502249250589
+                      young: 7.6562431466612715
+                      old: 8.504534952644262
+                      protector: 9.03118599298806
+                  summoning_eyes_collected: 0.5726569451250851
+                shredder_rod:
+                  bait: 8.47342148337535
+                  fished: 4.374692895964676
+                winter:
+                  most_cannonballs_hit: 2.4086429347217155
+                  most_magma_damage_dealt: 7.367137886120934
+                  most_damage_dealt: 2.86303896191088
+                  most_snowballs_hit: 6.213099901862703
+                highest_critical_damage: 4.213318283605179
+                items_fished:
+                  normal: 2.7774516884683207
+                  total: 3.653225073048929
+                  outstanding: 6.450650644517728
+                  trophy_fish: 3.972365736764316
+                  large_treasure: 9.27560048618725
+                  treasure: 2.9605093907508873
+                rift:
+                  popped_balloons: 8.023601755208588
+                  west_hot_dogs_given: 4.964997965650228
+                  dreadfarm_agaricus_harvested: 4.491469366705411
+                  lagoon_leech_supreme_killed: 8.9226305590135
+                  lagoon_lil_pads_sold: 7.765331561625514
+                  shen_item_bought:
+                    PUNCHCARD_ARTIFACT: 3.720358823730775
+                    total: 7.794956613763416
+                    RIFT_PRISM: 7.871715088929257
+                    DEAD_CAT_FOOD: 5.017514155292483
+                    PLACEABLE_FAIRY_SOUL_RIFT: 7.831773195677409
+                    FLEX_HELMET: 8.656046911534922
+                  lagoon_rocks_game_complete: 8.87986788654488
+                  living_cave_snake_collected: 2.333970583527283
+                  colosseum_bacte_defeated: 9.632839541020122
+                  dreadfarm_chicken_killed: 2.54225202191946
+                  lifetime_motes_earned: 0.2251139985378936
+                  plaza_red_light_deaths: 6.484479003119764
+                  visits: 7.6692351399026615
+                  plaza_pillar_deaths: 0.16687043991910788
+                  woods_larva_killed: 9.076472791212817
+                  dreadfarm_caducous_harvested: 6.386457342265177
+                  odonata_repeatable_completed: 8.852118736990365
+                  dreadfarm_bean_bulb_collected: 1.8023274910352782
+                  lagoon_mushroom_popped_out: 9.514519502384317
+                  motes_orb_pickup: 1.740089112612726
+                  plaza_hay_deaths: 9.49963371728803
+                  plaza_horsezooka_shot: 8.833395488051972
+                  living_metal_piece_maxed: 6.751774869153997
+                  west_vermin_vacuumed:
+                    total: 9.234038131550328
+                    silverfish: 0.5134809551456831
+                    spider: 6.281469292042608
+                    mosquito: 1.1698722986549792
+                  living_metal_spawnegg_used: 7.850091051100325
+                  woods_odonata_bottled: 6.270880607505447
+                  colosseum_blaster_shots: 1.3266957103239585
+                  colosseum_globowls_at_tentacle: 0.5361818527416851
+                  castle_effigy_broken: 8.932428877068963
+                  dreadfarm_wilted_harvested: 2.0443769993225045
+                  castle_sent_to_prison: 4.333865955271125
+                  pass_consumed: 0.28100571035981403
+                  dreadfarm_riftwarts_harvested: 7.4907652507908296
+                  west_cake_part_eaten: 1.2679033304913534
+                sea_creature_kills: 4.611879174267083
+                spooky:
+                  bats_spawned:
+                    total: 2.791286327863345
+                highest_damage: 5.5979065183521515
+                races:
+                  dungeon_hub:
+                    precursor_ruins_no_pearls_with_return_best_time: 6.42132679200332
+                    crystal_core_no_pearls_with_return_best_time: 7.48340630885329
+                    crystal_core_no_abilities_no_return_best_time: 8.161079205791609
+                    giant_mushroom_anything_no_return_best_time: 5.697937978554375
+                    precursor_ruins_nothing_no_return_best_time: 3.1825287809356806
+                    precursor_ruins_no_pearls_no_return_best_time: 7.124409592356507
+                    precursor_ruins_no_abilities_with_return_best_time: 9.193816582380814
+                    giant_mushroom_nothing_with_return_best_time: 3.9056129117945515
+                    giant_mushroom_no_pearls_no_return_best_time: 7.351823381238441
+                    precursor_ruins_anything_no_return_best_time: 4.848725868319991
+                    crystal_core_nothing_no_return_best_time: 6.376878057660531
+                    crystal_core_anything_with_return_best_time: 1.689503059403632
+                    precursor_ruins_anything_with_return_best_time: 3.0611254872537885
+                    precursor_ruins_no_abilities_no_return_best_time: 5.303454161840017
+                    crystal_core_anything_no_return_best_time: 2.7239989256176766
+                    crystal_core_nothing_with_return_best_time: 9.28860627653261
+                    crystal_core_no_pearls_no_return_best_time: 1.7910320945003844
+                    giant_mushroom_no_abilities_with_return_best_time: 1.2613062240772
+                    giant_mushroom_no_abilities_no_return_best_time: 1.3389174281452143
+                    precursor_ruins_nothing_with_return_best_time: 6.044388903904137
+                    giant_mushroom_anything_with_return_best_time: 7.056230564967713
+                    giant_mushroom_nothing_no_return_best_time: 0.6344639387260975
+                    giant_mushroom_no_pearls_with_return_best_time: 9.746540672619648
+                    crystal_core_no_abilities_with_return_best_time: 6.735116218976787
+                  foraging_race_best_time: 0.890175895976929
+                  chicken_race_best_time_2: 3.4824880742629363
+                  end_race_best_time: 6.387893485862778
+                  rift_race_best_time: 1.0979907423791868
+                crops_mined: 1.511719429977132
+                mythos:
+                  kills: 1.2030108490558
+                  burrows_dug_treasure:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                  burrows_chains_complete:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                  burrows_dug_combat:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                  burrows_dug_next:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                candy_collected:
+                  green_candy: 0
+                  total: 7
+                  purple_candy: 4
+                auctions:
+                  gold_earned: 1.1424055936677446
+                  fees: 4.585740805390009
+                  gold_spent: 4.798043284589512
+                  no_bids: 3.622987733194878
+                  created: 8.372990167315406
+                  won: 6.3376513736404565
+                  bids: 1.165800116953516
+                  completed: 7.99596378710894
+                  total_sold:
+                    total: 9.368303559405051
+                    RARE: 8.456690786865144
+                    EPIC: 6.670927598965964
+                    MYTHIC: 7.868560699983488
+                    UNCOMMON: 1.2938597832309906
+                    COMMON: 2.3351791640726405
+                    ULTIMATE: 6.052391178479496
+                    SPECIAL: 7.280139268854917
+                    LEGENDARY: 5.357183477019641
+                  total_bought:
+                    total: 9.368303559405051
+                    RARE: 8.456690786865144
+                    EPIC: 6.670927598965964
+                    MYTHIC: 7.868560699983488
+                    UNCOMMON: 1.2938597832309906
+                    COMMON: 2.3351791640726405
+                    ULTIMATE: 6.052391178479496
+                    SPECIAL: 7.280139268854917
+                    LEGENDARY: 5.357183477019641
+                  highest_bid: 3.506510052013918
+                deaths:
+                  key: 9.170385347067478
+                gifts:
+                  total_given: 4.511077460894262
+                  total_received: 6.537712918802372
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
@@ -23530,6 +25374,239 @@ components:
                 visited_zones:
                 - abandoned_quarry
                 - abandoned_quarry
+              player_stats:
+                kills:
+                  key: 9.896762638307408
+                pets:
+                  milestone:
+                    ores_mined: 1.213271650177239
+                    sea_creatures_killed: 2.3631069671221097
+                  total_exp_gained: 7.222885400820572
+                glowing_mushrooms_broken: 7.546622872687339
+                end_island:
+                  special_zealot_loot_collected: 9.86120873235807
+                  dragon_fight:
+                    highest_rank:
+                      unstable: 5.838549898923979
+                      strong: 3.320056014655155
+                      superior: 0.4051792227050788
+                      wise: 0.06784119183428028
+                      young: 6.035671461131996
+                      old: 7.518272496022458
+                      protector: 4.353263425621577
+                      best: 0.9627174579671982
+                    fastest_kill:
+                      unstable: 5.417557261188433
+                      strong: 4.7033509688401605
+                      superior: 7.398420453445813
+                      wise: 0.18231101049276166
+                      young: 7.544197694331755
+                      old: 0.9628372872377944
+                      protector: 3.144698945386808
+                      best: 5.089281714380826
+                    most_damage:
+                      unstable: 9.509152813767344
+                      strong: 2.574694337731398
+                      superior: 1.8977275858326403
+                      wise: 2.248644391588969
+                      young: 4.3947316294731875
+                      old: 6.729814908604409
+                      protector: 3.4590983316410284
+                      best: 4.293752567878694
+                    ender_crystals_destroyed: 4.676411609349872
+                    summoning_eyes_contributed:
+                      unstable: 2.4482595959997955
+                      strong: 7.202214781826961
+                      superior: 5.998413894995064
+                      total: 7.028390615751622
+                      wise: 7.26639603893227
+                      young: 3.6805440658947353
+                      old: 4.871784189820318
+                      protector: 3.8203140861079268
+                    amount_summoned:
+                      unstable: 1.3072249028841099
+                      strong: 6.150055333250726
+                      superior: 7.318847743658732
+                      total: 1.2155306360461038
+                      wise: 0.7060502249250589
+                      young: 7.6562431466612715
+                      old: 8.504534952644262
+                      protector: 9.03118599298806
+                  summoning_eyes_collected: 0.5726569451250851
+                shredder_rod:
+                  bait: 8.47342148337535
+                  fished: 4.374692895964676
+                winter:
+                  most_cannonballs_hit: 2.4086429347217155
+                  most_magma_damage_dealt: 7.367137886120934
+                  most_damage_dealt: 2.86303896191088
+                  most_snowballs_hit: 6.213099901862703
+                highest_critical_damage: 4.213318283605179
+                items_fished:
+                  normal: 2.7774516884683207
+                  total: 3.653225073048929
+                  outstanding: 6.450650644517728
+                  trophy_fish: 3.972365736764316
+                  large_treasure: 9.27560048618725
+                  treasure: 2.9605093907508873
+                rift:
+                  popped_balloons: 8.023601755208588
+                  west_hot_dogs_given: 4.964997965650228
+                  dreadfarm_agaricus_harvested: 4.491469366705411
+                  lagoon_leech_supreme_killed: 8.9226305590135
+                  lagoon_lil_pads_sold: 7.765331561625514
+                  shen_item_bought:
+                    PUNCHCARD_ARTIFACT: 3.720358823730775
+                    total: 7.794956613763416
+                    RIFT_PRISM: 7.871715088929257
+                    DEAD_CAT_FOOD: 5.017514155292483
+                    PLACEABLE_FAIRY_SOUL_RIFT: 7.831773195677409
+                    FLEX_HELMET: 8.656046911534922
+                  lagoon_rocks_game_complete: 8.87986788654488
+                  living_cave_snake_collected: 2.333970583527283
+                  colosseum_bacte_defeated: 9.632839541020122
+                  dreadfarm_chicken_killed: 2.54225202191946
+                  lifetime_motes_earned: 0.2251139985378936
+                  plaza_red_light_deaths: 6.484479003119764
+                  visits: 7.6692351399026615
+                  plaza_pillar_deaths: 0.16687043991910788
+                  woods_larva_killed: 9.076472791212817
+                  dreadfarm_caducous_harvested: 6.386457342265177
+                  odonata_repeatable_completed: 8.852118736990365
+                  dreadfarm_bean_bulb_collected: 1.8023274910352782
+                  lagoon_mushroom_popped_out: 9.514519502384317
+                  motes_orb_pickup: 1.740089112612726
+                  plaza_hay_deaths: 9.49963371728803
+                  plaza_horsezooka_shot: 8.833395488051972
+                  living_metal_piece_maxed: 6.751774869153997
+                  west_vermin_vacuumed:
+                    total: 9.234038131550328
+                    silverfish: 0.5134809551456831
+                    spider: 6.281469292042608
+                    mosquito: 1.1698722986549792
+                  living_metal_spawnegg_used: 7.850091051100325
+                  woods_odonata_bottled: 6.270880607505447
+                  colosseum_blaster_shots: 1.3266957103239585
+                  colosseum_globowls_at_tentacle: 0.5361818527416851
+                  castle_effigy_broken: 8.932428877068963
+                  dreadfarm_wilted_harvested: 2.0443769993225045
+                  castle_sent_to_prison: 4.333865955271125
+                  pass_consumed: 0.28100571035981403
+                  dreadfarm_riftwarts_harvested: 7.4907652507908296
+                  west_cake_part_eaten: 1.2679033304913534
+                sea_creature_kills: 4.611879174267083
+                spooky:
+                  bats_spawned:
+                    total: 2.791286327863345
+                highest_damage: 5.5979065183521515
+                races:
+                  dungeon_hub:
+                    precursor_ruins_no_pearls_with_return_best_time: 6.42132679200332
+                    crystal_core_no_pearls_with_return_best_time: 7.48340630885329
+                    crystal_core_no_abilities_no_return_best_time: 8.161079205791609
+                    giant_mushroom_anything_no_return_best_time: 5.697937978554375
+                    precursor_ruins_nothing_no_return_best_time: 3.1825287809356806
+                    precursor_ruins_no_pearls_no_return_best_time: 7.124409592356507
+                    precursor_ruins_no_abilities_with_return_best_time: 9.193816582380814
+                    giant_mushroom_nothing_with_return_best_time: 3.9056129117945515
+                    giant_mushroom_no_pearls_no_return_best_time: 7.351823381238441
+                    precursor_ruins_anything_no_return_best_time: 4.848725868319991
+                    crystal_core_nothing_no_return_best_time: 6.376878057660531
+                    crystal_core_anything_with_return_best_time: 1.689503059403632
+                    precursor_ruins_anything_with_return_best_time: 3.0611254872537885
+                    precursor_ruins_no_abilities_no_return_best_time: 5.303454161840017
+                    crystal_core_anything_no_return_best_time: 2.7239989256176766
+                    crystal_core_nothing_with_return_best_time: 9.28860627653261
+                    crystal_core_no_pearls_no_return_best_time: 1.7910320945003844
+                    giant_mushroom_no_abilities_with_return_best_time: 1.2613062240772
+                    giant_mushroom_no_abilities_no_return_best_time: 1.3389174281452143
+                    precursor_ruins_nothing_with_return_best_time: 6.044388903904137
+                    giant_mushroom_anything_with_return_best_time: 7.056230564967713
+                    giant_mushroom_nothing_no_return_best_time: 0.6344639387260975
+                    giant_mushroom_no_pearls_with_return_best_time: 9.746540672619648
+                    crystal_core_no_abilities_with_return_best_time: 6.735116218976787
+                  foraging_race_best_time: 0.890175895976929
+                  chicken_race_best_time_2: 3.4824880742629363
+                  end_race_best_time: 6.387893485862778
+                  rift_race_best_time: 1.0979907423791868
+                crops_mined: 1.511719429977132
+                mythos:
+                  kills: 1.2030108490558
+                  burrows_dug_treasure:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                  burrows_chains_complete:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                  burrows_dug_combat:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                  burrows_dug_next:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                candy_collected:
+                  green_candy: 0
+                  total: 7
+                  purple_candy: 4
+                auctions:
+                  gold_earned: 1.1424055936677446
+                  fees: 4.585740805390009
+                  gold_spent: 4.798043284589512
+                  no_bids: 3.622987733194878
+                  created: 8.372990167315406
+                  won: 6.3376513736404565
+                  bids: 1.165800116953516
+                  completed: 7.99596378710894
+                  total_sold:
+                    total: 9.368303559405051
+                    RARE: 8.456690786865144
+                    EPIC: 6.670927598965964
+                    MYTHIC: 7.868560699983488
+                    UNCOMMON: 1.2938597832309906
+                    COMMON: 2.3351791640726405
+                    ULTIMATE: 6.052391178479496
+                    SPECIAL: 7.280139268854917
+                    LEGENDARY: 5.357183477019641
+                  total_bought:
+                    total: 9.368303559405051
+                    RARE: 8.456690786865144
+                    EPIC: 6.670927598965964
+                    MYTHIC: 7.868560699983488
+                    UNCOMMON: 1.2938597832309906
+                    COMMON: 2.3351791640726405
+                    ULTIMATE: 6.052391178479496
+                    SPECIAL: 7.280139268854917
+                    LEGENDARY: 5.357183477019641
+                  highest_bid: 3.506510052013918
+                deaths:
+                  key: 9.170385347067478
+                gifts:
+                  total_given: 4.511077460894262
+                  total_received: 6.537712918802372
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:
@@ -27608,6 +29685,239 @@ components:
                 visited_zones:
                 - abandoned_quarry
                 - abandoned_quarry
+              player_stats:
+                kills:
+                  key: 9.896762638307408
+                pets:
+                  milestone:
+                    ores_mined: 1.213271650177239
+                    sea_creatures_killed: 2.3631069671221097
+                  total_exp_gained: 7.222885400820572
+                glowing_mushrooms_broken: 7.546622872687339
+                end_island:
+                  special_zealot_loot_collected: 9.86120873235807
+                  dragon_fight:
+                    highest_rank:
+                      unstable: 5.838549898923979
+                      strong: 3.320056014655155
+                      superior: 0.4051792227050788
+                      wise: 0.06784119183428028
+                      young: 6.035671461131996
+                      old: 7.518272496022458
+                      protector: 4.353263425621577
+                      best: 0.9627174579671982
+                    fastest_kill:
+                      unstable: 5.417557261188433
+                      strong: 4.7033509688401605
+                      superior: 7.398420453445813
+                      wise: 0.18231101049276166
+                      young: 7.544197694331755
+                      old: 0.9628372872377944
+                      protector: 3.144698945386808
+                      best: 5.089281714380826
+                    most_damage:
+                      unstable: 9.509152813767344
+                      strong: 2.574694337731398
+                      superior: 1.8977275858326403
+                      wise: 2.248644391588969
+                      young: 4.3947316294731875
+                      old: 6.729814908604409
+                      protector: 3.4590983316410284
+                      best: 4.293752567878694
+                    ender_crystals_destroyed: 4.676411609349872
+                    summoning_eyes_contributed:
+                      unstable: 2.4482595959997955
+                      strong: 7.202214781826961
+                      superior: 5.998413894995064
+                      total: 7.028390615751622
+                      wise: 7.26639603893227
+                      young: 3.6805440658947353
+                      old: 4.871784189820318
+                      protector: 3.8203140861079268
+                    amount_summoned:
+                      unstable: 1.3072249028841099
+                      strong: 6.150055333250726
+                      superior: 7.318847743658732
+                      total: 1.2155306360461038
+                      wise: 0.7060502249250589
+                      young: 7.6562431466612715
+                      old: 8.504534952644262
+                      protector: 9.03118599298806
+                  summoning_eyes_collected: 0.5726569451250851
+                shredder_rod:
+                  bait: 8.47342148337535
+                  fished: 4.374692895964676
+                winter:
+                  most_cannonballs_hit: 2.4086429347217155
+                  most_magma_damage_dealt: 7.367137886120934
+                  most_damage_dealt: 2.86303896191088
+                  most_snowballs_hit: 6.213099901862703
+                highest_critical_damage: 4.213318283605179
+                items_fished:
+                  normal: 2.7774516884683207
+                  total: 3.653225073048929
+                  outstanding: 6.450650644517728
+                  trophy_fish: 3.972365736764316
+                  large_treasure: 9.27560048618725
+                  treasure: 2.9605093907508873
+                rift:
+                  popped_balloons: 8.023601755208588
+                  west_hot_dogs_given: 4.964997965650228
+                  dreadfarm_agaricus_harvested: 4.491469366705411
+                  lagoon_leech_supreme_killed: 8.9226305590135
+                  lagoon_lil_pads_sold: 7.765331561625514
+                  shen_item_bought:
+                    PUNCHCARD_ARTIFACT: 3.720358823730775
+                    total: 7.794956613763416
+                    RIFT_PRISM: 7.871715088929257
+                    DEAD_CAT_FOOD: 5.017514155292483
+                    PLACEABLE_FAIRY_SOUL_RIFT: 7.831773195677409
+                    FLEX_HELMET: 8.656046911534922
+                  lagoon_rocks_game_complete: 8.87986788654488
+                  living_cave_snake_collected: 2.333970583527283
+                  colosseum_bacte_defeated: 9.632839541020122
+                  dreadfarm_chicken_killed: 2.54225202191946
+                  lifetime_motes_earned: 0.2251139985378936
+                  plaza_red_light_deaths: 6.484479003119764
+                  visits: 7.6692351399026615
+                  plaza_pillar_deaths: 0.16687043991910788
+                  woods_larva_killed: 9.076472791212817
+                  dreadfarm_caducous_harvested: 6.386457342265177
+                  odonata_repeatable_completed: 8.852118736990365
+                  dreadfarm_bean_bulb_collected: 1.8023274910352782
+                  lagoon_mushroom_popped_out: 9.514519502384317
+                  motes_orb_pickup: 1.740089112612726
+                  plaza_hay_deaths: 9.49963371728803
+                  plaza_horsezooka_shot: 8.833395488051972
+                  living_metal_piece_maxed: 6.751774869153997
+                  west_vermin_vacuumed:
+                    total: 9.234038131550328
+                    silverfish: 0.5134809551456831
+                    spider: 6.281469292042608
+                    mosquito: 1.1698722986549792
+                  living_metal_spawnegg_used: 7.850091051100325
+                  woods_odonata_bottled: 6.270880607505447
+                  colosseum_blaster_shots: 1.3266957103239585
+                  colosseum_globowls_at_tentacle: 0.5361818527416851
+                  castle_effigy_broken: 8.932428877068963
+                  dreadfarm_wilted_harvested: 2.0443769993225045
+                  castle_sent_to_prison: 4.333865955271125
+                  pass_consumed: 0.28100571035981403
+                  dreadfarm_riftwarts_harvested: 7.4907652507908296
+                  west_cake_part_eaten: 1.2679033304913534
+                sea_creature_kills: 4.611879174267083
+                spooky:
+                  bats_spawned:
+                    total: 2.791286327863345
+                highest_damage: 5.5979065183521515
+                races:
+                  dungeon_hub:
+                    precursor_ruins_no_pearls_with_return_best_time: 6.42132679200332
+                    crystal_core_no_pearls_with_return_best_time: 7.48340630885329
+                    crystal_core_no_abilities_no_return_best_time: 8.161079205791609
+                    giant_mushroom_anything_no_return_best_time: 5.697937978554375
+                    precursor_ruins_nothing_no_return_best_time: 3.1825287809356806
+                    precursor_ruins_no_pearls_no_return_best_time: 7.124409592356507
+                    precursor_ruins_no_abilities_with_return_best_time: 9.193816582380814
+                    giant_mushroom_nothing_with_return_best_time: 3.9056129117945515
+                    giant_mushroom_no_pearls_no_return_best_time: 7.351823381238441
+                    precursor_ruins_anything_no_return_best_time: 4.848725868319991
+                    crystal_core_nothing_no_return_best_time: 6.376878057660531
+                    crystal_core_anything_with_return_best_time: 1.689503059403632
+                    precursor_ruins_anything_with_return_best_time: 3.0611254872537885
+                    precursor_ruins_no_abilities_no_return_best_time: 5.303454161840017
+                    crystal_core_anything_no_return_best_time: 2.7239989256176766
+                    crystal_core_nothing_with_return_best_time: 9.28860627653261
+                    crystal_core_no_pearls_no_return_best_time: 1.7910320945003844
+                    giant_mushroom_no_abilities_with_return_best_time: 1.2613062240772
+                    giant_mushroom_no_abilities_no_return_best_time: 1.3389174281452143
+                    precursor_ruins_nothing_with_return_best_time: 6.044388903904137
+                    giant_mushroom_anything_with_return_best_time: 7.056230564967713
+                    giant_mushroom_nothing_no_return_best_time: 0.6344639387260975
+                    giant_mushroom_no_pearls_with_return_best_time: 9.746540672619648
+                    crystal_core_no_abilities_with_return_best_time: 6.735116218976787
+                  foraging_race_best_time: 0.890175895976929
+                  chicken_race_best_time_2: 3.4824880742629363
+                  end_race_best_time: 6.387893485862778
+                  rift_race_best_time: 1.0979907423791868
+                crops_mined: 1.511719429977132
+                mythos:
+                  kills: 1.2030108490558
+                  burrows_dug_treasure:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                  burrows_chains_complete:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                  burrows_dug_combat:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                  burrows_dug_next:
+                    total: 4.566901520815597
+                    RARE: 7.847955824035001
+                    "null": 2.1230426852719706
+                    EPIC: 5.535500986371801
+                    UNCOMMON: 0.6438275157314799
+                    COMMON: 8.144671038106528
+                    none: 8.65783973983825
+                    LEGENDARY: 5.15647973354139
+                candy_collected:
+                  green_candy: 0
+                  total: 7
+                  purple_candy: 4
+                auctions:
+                  gold_earned: 1.1424055936677446
+                  fees: 4.585740805390009
+                  gold_spent: 4.798043284589512
+                  no_bids: 3.622987733194878
+                  created: 8.372990167315406
+                  won: 6.3376513736404565
+                  bids: 1.165800116953516
+                  completed: 7.99596378710894
+                  total_sold:
+                    total: 9.368303559405051
+                    RARE: 8.456690786865144
+                    EPIC: 6.670927598965964
+                    MYTHIC: 7.868560699983488
+                    UNCOMMON: 1.2938597832309906
+                    COMMON: 2.3351791640726405
+                    ULTIMATE: 6.052391178479496
+                    SPECIAL: 7.280139268854917
+                    LEGENDARY: 5.357183477019641
+                  total_bought:
+                    total: 9.368303559405051
+                    RARE: 8.456690786865144
+                    EPIC: 6.670927598965964
+                    MYTHIC: 7.868560699983488
+                    UNCOMMON: 1.2938597832309906
+                    COMMON: 2.3351791640726405
+                    ULTIMATE: 6.052391178479496
+                    SPECIAL: 7.280139268854917
+                    LEGENDARY: 5.357183477019641
+                  highest_bid: 3.506510052013918
+                deaths:
+                  key: 9.170385347067478
+                gifts:
+                  total_given: 4.511077460894262
+                  total_received: 6.537712918802372
               dungeons:
                 selected_dungeon_class: selected_dungeon_class
                 dungeon_types:

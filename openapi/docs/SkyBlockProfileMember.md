@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **PetsData** | Pointer to [**SkyBlockProfileMemberPetsData**](SkyBlockProfileMemberPetsData.md) |  | [optional] 
 **PlayerData** | Pointer to [**SkyBlockProfileMemberPlayerData**](SkyBlockProfileMemberPlayerData.md) |  | [optional] 
 **PlayerId** | Pointer to **string** |  | [optional] 
+**PlayerStats** | Pointer to [**SkyBlockProfileMemberPlayerStats**](SkyBlockProfileMemberPlayerStats.md) |  | [optional] 
 
 ## Methods
 
@@ -569,6 +570,31 @@ SetPlayerId sets PlayerId field to given value.
 `func (o *SkyBlockProfileMember) HasPlayerId() bool`
 
 HasPlayerId returns a boolean if a field has been set.
+
+### GetPlayerStats
+
+`func (o *SkyBlockProfileMember) GetPlayerStats() SkyBlockProfileMemberPlayerStats`
+
+GetPlayerStats returns the PlayerStats field if non-nil, zero value otherwise.
+
+### GetPlayerStatsOk
+
+`func (o *SkyBlockProfileMember) GetPlayerStatsOk() (*SkyBlockProfileMemberPlayerStats, bool)`
+
+GetPlayerStatsOk returns a tuple with the PlayerStats field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPlayerStats
+
+`func (o *SkyBlockProfileMember) SetPlayerStats(v SkyBlockProfileMemberPlayerStats)`
+
+SetPlayerStats sets PlayerStats field to given value.
+
+### HasPlayerStats
+
+`func (o *SkyBlockProfileMember) HasPlayerStats() bool`
+
+HasPlayerStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

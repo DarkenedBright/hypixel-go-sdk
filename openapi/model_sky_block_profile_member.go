@@ -40,6 +40,7 @@ type SkyBlockProfileMember struct {
 	PetsData               *SkyBlockProfileMemberPetsData               `json:"pets_data,omitempty"`
 	PlayerData             *SkyBlockProfileMemberPlayerData             `json:"player_data,omitempty"`
 	PlayerId               *string                                      `json:"player_id,omitempty"`
+	PlayerStats            *SkyBlockProfileMemberPlayerStats            `json:"player_stats,omitempty"`
 }
 
 // NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
@@ -731,6 +732,38 @@ func (o *SkyBlockProfileMember) SetPlayerId(v string) {
 	o.PlayerId = &v
 }
 
+// GetPlayerStats returns the PlayerStats field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetPlayerStats() SkyBlockProfileMemberPlayerStats {
+	if o == nil || IsNil(o.PlayerStats) {
+		var ret SkyBlockProfileMemberPlayerStats
+		return ret
+	}
+	return *o.PlayerStats
+}
+
+// GetPlayerStatsOk returns a tuple with the PlayerStats field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetPlayerStatsOk() (*SkyBlockProfileMemberPlayerStats, bool) {
+	if o == nil || IsNil(o.PlayerStats) {
+		return nil, false
+	}
+	return o.PlayerStats, true
+}
+
+// HasPlayerStats returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasPlayerStats() bool {
+	if o != nil && !IsNil(o.PlayerStats) {
+		return true
+	}
+
+	return false
+}
+
+// SetPlayerStats gets a reference to the given SkyBlockProfileMemberPlayerStats and assigns it to the PlayerStats field.
+func (o *SkyBlockProfileMember) SetPlayerStats(v SkyBlockProfileMemberPlayerStats) {
+	o.PlayerStats = &v
+}
+
 func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -803,6 +836,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.PlayerId) {
 		toSerialize["player_id"] = o.PlayerId
+	}
+	if !IsNil(o.PlayerStats) {
+		toSerialize["player_stats"] = o.PlayerStats
 	}
 	return toSerialize, nil
 }
