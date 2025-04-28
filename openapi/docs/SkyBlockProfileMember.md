@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 **SharedInventory** | Pointer to [**SkyBlockProfileMemberSharedInventory**](SkyBlockProfileMemberSharedInventory.md) |  | [optional] 
 **Slayer** | Pointer to [**SkyBlockProfileMemberSlayer**](SkyBlockProfileMemberSlayer.md) |  | [optional] 
+**TrophyFish** | Pointer to [**SkyBlockProfileMemberTrophyFish**](SkyBlockProfileMemberTrophyFish.md) |  | [optional] 
 
 ## Methods
 
@@ -725,6 +726,31 @@ SetSlayer sets Slayer field to given value.
 `func (o *SkyBlockProfileMember) HasSlayer() bool`
 
 HasSlayer returns a boolean if a field has been set.
+
+### GetTrophyFish
+
+`func (o *SkyBlockProfileMember) GetTrophyFish() SkyBlockProfileMemberTrophyFish`
+
+GetTrophyFish returns the TrophyFish field if non-nil, zero value otherwise.
+
+### GetTrophyFishOk
+
+`func (o *SkyBlockProfileMember) GetTrophyFishOk() (*SkyBlockProfileMemberTrophyFish, bool)`
+
+GetTrophyFishOk returns a tuple with the TrophyFish field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTrophyFish
+
+`func (o *SkyBlockProfileMember) SetTrophyFish(v SkyBlockProfileMemberTrophyFish)`
+
+SetTrophyFish sets TrophyFish field to given value.
+
+### HasTrophyFish
+
+`func (o *SkyBlockProfileMember) HasTrophyFish() bool`
+
+HasTrophyFish returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

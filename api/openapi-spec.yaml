@@ -217,6 +217,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberSharedInventory'
         slayer:
           $ref: '#/components/schemas/SkyBlockProfileMemberSlayer'
+        trophy_fish:
+          $ref: '#/components/schemas/SkyBlockProfileMemberTrophyFish'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       properties:
@@ -8439,6 +8441,198 @@ components:
       required:
         - timestamp
         - xp
+      type: object
+    SkyBlockProfileMemberTrophyFish:
+      additionalProperties: false
+      properties:
+        blobfish:
+          type: integer
+        blobfish_bronze:
+          type: integer
+        blobfish_diamond:
+          type: integer
+        blobfish_gold:
+          type: integer
+        blobfish_silver:
+          type: integer
+        flyfish:
+          type: integer
+        flyfish_bronze:
+          type: integer
+        flyfish_diamond:
+          type: integer
+        flyfish_gold:
+          type: integer
+        flyfish_silver:
+          type: integer
+        golden_fish:
+          type: integer
+        golden_fish_bronze:
+          type: integer
+        golden_fish_diamond:
+          type: integer
+        golden_fish_gold:
+          type: integer
+        golden_fish_silver:
+          type: integer
+        gusher:
+          type: integer
+        gusher_bronze:
+          type: integer
+        gusher_diamond:
+          type: integer
+        gusher_gold:
+          type: integer
+        gusher_silver:
+          type: integer
+        karate_fish:
+          type: integer
+        karate_fish_bronze:
+          type: integer
+        karate_fish_diamond:
+          type: integer
+        karate_fish_gold:
+          type: integer
+        karate_fish_silver:
+          type: integer
+        last_caught:
+          type: string
+        lava_horse:
+          type: integer
+        lava_horse_bronze:
+          type: integer
+        lava_horse_diamond:
+          type: integer
+        lava_horse_gold:
+          type: integer
+        lava_horse_silver:
+          type: integer
+        mana_ray:
+          type: integer
+        mana_ray_bronze:
+          type: integer
+        mana_ray_diamond:
+          type: integer
+        mana_ray_gold:
+          type: integer
+        mana_ray_silver:
+          type: integer
+        moldfin:
+          type: integer
+        moldfin_bronze:
+          type: integer
+        moldfin_diamond:
+          type: integer
+        moldfin_gold:
+          type: integer
+        moldfin_silver:
+          type: integer
+        obfuscated_fish_1:
+          type: integer
+        obfuscated_fish_1_bronze:
+          type: integer
+        obfuscated_fish_1_diamond:
+          type: integer
+        obfuscated_fish_1_gold:
+          type: integer
+        obfuscated_fish_1_silver:
+          type: integer
+        obfuscated_fish_2:
+          type: integer
+        obfuscated_fish_2_bronze:
+          type: integer
+        obfuscated_fish_2_diamond:
+          type: integer
+        obfuscated_fish_2_gold:
+          type: integer
+        obfuscated_fish_2_silver:
+          type: integer
+        obfuscated_fish_3:
+          type: integer
+        obfuscated_fish_3_bronze:
+          type: integer
+        obfuscated_fish_3_diamond:
+          type: integer
+        obfuscated_fish_3_gold:
+          type: integer
+        obfuscated_fish_3_silver:
+          type: integer
+        rewards:
+          items:
+            type: integer
+          type: array
+        skeleton_fish:
+          type: integer
+        skeleton_fish_bronze:
+          type: integer
+        skeleton_fish_diamond:
+          type: integer
+        skeleton_fish_gold:
+          type: integer
+        skeleton_fish_silver:
+          type: integer
+        slugfish:
+          type: integer
+        slugfish_bronze:
+          type: integer
+        slugfish_diamond:
+          type: integer
+        slugfish_gold:
+          type: integer
+        slugfish_silver:
+          type: integer
+        soul_fish:
+          type: integer
+        soul_fish_bronze:
+          type: integer
+        soul_fish_diamond:
+          type: integer
+        soul_fish_gold:
+          type: integer
+        soul_fish_silver:
+          type: integer
+        steaming_hot_flounder:
+          type: integer
+        steaming_hot_flounder_bronze:
+          type: integer
+        steaming_hot_flounder_diamond:
+          type: integer
+        steaming_hot_flounder_gold:
+          type: integer
+        steaming_hot_flounder_silver:
+          type: integer
+        sulphur_skitter:
+          type: integer
+        sulphur_skitter_bronze:
+          type: integer
+        sulphur_skitter_diamond:
+          type: integer
+        sulphur_skitter_gold:
+          type: integer
+        sulphur_skitter_silver:
+          type: integer
+        total_caught:
+          type: integer
+        vanille:
+          type: integer
+        vanille_bronze:
+          type: integer
+        vanille_diamond:
+          type: integer
+        vanille_gold:
+          type: integer
+        vanille_silver:
+          type: integer
+        volcanic_stonefish:
+          type: integer
+        volcanic_stonefish_bronze:
+          type: integer
+        volcanic_stonefish_diamond:
+          type: integer
+        volcanic_stonefish_gold:
+          type: integer
+        volcanic_stonefish_silver:
+          type: integer
       type: object
   securitySchemes:
     ApiKey:

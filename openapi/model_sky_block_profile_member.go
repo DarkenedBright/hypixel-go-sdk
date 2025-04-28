@@ -46,6 +46,7 @@ type SkyBlockProfileMember struct {
 	Rift                   *SkyBlockProfileMemberRift                   `json:"rift,omitempty"`
 	SharedInventory        *SkyBlockProfileMemberSharedInventory        `json:"shared_inventory,omitempty"`
 	Slayer                 *SkyBlockProfileMemberSlayer                 `json:"slayer,omitempty"`
+	TrophyFish             *SkyBlockProfileMemberTrophyFish             `json:"trophy_fish,omitempty"`
 }
 
 // NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
@@ -929,6 +930,38 @@ func (o *SkyBlockProfileMember) SetSlayer(v SkyBlockProfileMemberSlayer) {
 	o.Slayer = &v
 }
 
+// GetTrophyFish returns the TrophyFish field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetTrophyFish() SkyBlockProfileMemberTrophyFish {
+	if o == nil || IsNil(o.TrophyFish) {
+		var ret SkyBlockProfileMemberTrophyFish
+		return ret
+	}
+	return *o.TrophyFish
+}
+
+// GetTrophyFishOk returns a tuple with the TrophyFish field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetTrophyFishOk() (*SkyBlockProfileMemberTrophyFish, bool) {
+	if o == nil || IsNil(o.TrophyFish) {
+		return nil, false
+	}
+	return o.TrophyFish, true
+}
+
+// HasTrophyFish returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasTrophyFish() bool {
+	if o != nil && !IsNil(o.TrophyFish) {
+		return true
+	}
+
+	return false
+}
+
+// SetTrophyFish gets a reference to the given SkyBlockProfileMemberTrophyFish and assigns it to the TrophyFish field.
+func (o *SkyBlockProfileMember) SetTrophyFish(v SkyBlockProfileMemberTrophyFish) {
+	o.TrophyFish = &v
+}
+
 func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -1019,6 +1052,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Slayer) {
 		toSerialize["slayer"] = o.Slayer
+	}
+	if !IsNil(o.TrophyFish) {
+		toSerialize["trophy_fish"] = o.TrophyFish
 	}
 	return toSerialize, nil
 }

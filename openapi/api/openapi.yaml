@@ -2327,6 +2327,102 @@ components:
               stash_if_full_notification: true
               daily_ores_mined: 3
               powder_gemstone: 9
+            trophy_fish:
+              volcanic_stonefish_gold: 4
+              vanille_bronze: 3
+              steaming_hot_flounder_bronze: 6
+              obfuscated_fish_2_diamond: 4
+              karate_fish: 2
+              mana_ray_diamond: 9
+              mana_ray_silver: 0
+              sulphur_skitter_gold: 4
+              gusher_silver: 6
+              vanille_diamond: 5
+              vanille_silver: 0
+              obfuscated_fish_2_gold: 4
+              moldfin_silver: 5
+              gusher_gold: 8
+              vanille: 8
+              total_caught: 6
+              volcanic_stonefish_silver: 4
+              volcanic_stonefish_bronze: 8
+              soul_fish_diamond: 2
+              moldfin: 0
+              obfuscated_fish_1_gold: 3
+              sulphur_skitter_silver: 0
+              blobfish: 4
+              obfuscated_fish_3_silver: 6
+              moldfin_bronze: 8
+              flyfish: 9
+              obfuscated_fish_1_silver: 7
+              sulphur_skitter: 6
+              vanille_gold: 5
+              golden_fish_gold: 1
+              steaming_hot_flounder_silver: 9
+              lava_horse_diamond: 9
+              mana_ray_gold: 7
+              sulphur_skitter_bronze: 4
+              steaming_hot_flounder_diamond: 9
+              flyfish_bronze: 8
+              obfuscated_fish_3_bronze: 1
+              gusher_diamond: 0
+              blobfish_gold: 1
+              flyfish_silver: 2
+              obfuscated_fish_1_bronze: 0
+              flyfish_gold: 3
+              rewards:
+              - 4
+              - 4
+              soul_fish_bronze: 4
+              sulphur_skitter_diamond: 5
+              golden_fish_bronze: 4
+              lava_horse: 1
+              lava_horse_bronze: 2
+              last_caught: last_caught
+              skeleton_fish: 8
+              slugfish: 2
+              volcanic_stonefish: 7
+              obfuscated_fish_3_diamond: 0
+              slugfish_bronze: 3
+              obfuscated_fish_2: 2
+              soul_fish_silver: 3
+              lava_horse_silver: 8
+              obfuscated_fish_3: 8
+              slugfish_silver: 2
+              obfuscated_fish_1: 2
+              slugfish_gold: 7
+              obfuscated_fish_1_diamond: 3
+              volcanic_stonefish_diamond: 2
+              soul_fish_gold: 0
+              moldfin_diamond: 1
+              blobfish_bronze: 5
+              gusher: 0
+              blobfish_diamond: 9
+              slugfish_diamond: 6
+              karate_fish_diamond: 5
+              flyfish_diamond: 0
+              karate_fish_silver: 0
+              mana_ray_bronze: 3
+              moldfin_gold: 5
+              steaming_hot_flounder_gold: 1
+              golden_fish_diamond: 7
+              lava_horse_gold: 0
+              mana_ray: 5
+              blobfish_silver: 8
+              golden_fish: 6
+              soul_fish: 7
+              gusher_bronze: 3
+              obfuscated_fish_2_silver: 2
+              golden_fish_silver: 4
+              karate_fish_bronze: 0
+              karate_fish_gold: 7
+              steaming_hot_flounder: 3
+              skeleton_fish_gold: 0
+              skeleton_fish_bronze: 9
+              obfuscated_fish_2_bronze: 4
+              obfuscated_fish_3_gold: 9
+              skeleton_fish_silver: 2
+              skeleton_fish_diamond: 2
             forge:
               forge_processes:
                 key: null
@@ -7076,6 +7172,102 @@ components:
           stash_if_full_notification: true
           daily_ores_mined: 3
           powder_gemstone: 9
+        trophy_fish:
+          volcanic_stonefish_gold: 4
+          vanille_bronze: 3
+          steaming_hot_flounder_bronze: 6
+          obfuscated_fish_2_diamond: 4
+          karate_fish: 2
+          mana_ray_diamond: 9
+          mana_ray_silver: 0
+          sulphur_skitter_gold: 4
+          gusher_silver: 6
+          vanille_diamond: 5
+          vanille_silver: 0
+          obfuscated_fish_2_gold: 4
+          moldfin_silver: 5
+          gusher_gold: 8
+          vanille: 8
+          total_caught: 6
+          volcanic_stonefish_silver: 4
+          volcanic_stonefish_bronze: 8
+          soul_fish_diamond: 2
+          moldfin: 0
+          obfuscated_fish_1_gold: 3
+          sulphur_skitter_silver: 0
+          blobfish: 4
+          obfuscated_fish_3_silver: 6
+          moldfin_bronze: 8
+          flyfish: 9
+          obfuscated_fish_1_silver: 7
+          sulphur_skitter: 6
+          vanille_gold: 5
+          golden_fish_gold: 1
+          steaming_hot_flounder_silver: 9
+          lava_horse_diamond: 9
+          mana_ray_gold: 7
+          sulphur_skitter_bronze: 4
+          steaming_hot_flounder_diamond: 9
+          flyfish_bronze: 8
+          obfuscated_fish_3_bronze: 1
+          gusher_diamond: 0
+          blobfish_gold: 1
+          flyfish_silver: 2
+          obfuscated_fish_1_bronze: 0
+          flyfish_gold: 3
+          rewards:
+          - 4
+          - 4
+          soul_fish_bronze: 4
+          sulphur_skitter_diamond: 5
+          golden_fish_bronze: 4
+          lava_horse: 1
+          lava_horse_bronze: 2
+          last_caught: last_caught
+          skeleton_fish: 8
+          slugfish: 2
+          volcanic_stonefish: 7
+          obfuscated_fish_3_diamond: 0
+          slugfish_bronze: 3
+          obfuscated_fish_2: 2
+          soul_fish_silver: 3
+          lava_horse_silver: 8
+          obfuscated_fish_3: 8
+          slugfish_silver: 2
+          obfuscated_fish_1: 2
+          slugfish_gold: 7
+          obfuscated_fish_1_diamond: 3
+          volcanic_stonefish_diamond: 2
+          soul_fish_gold: 0
+          moldfin_diamond: 1
+          blobfish_bronze: 5
+          gusher: 0
+          blobfish_diamond: 9
+          slugfish_diamond: 6
+          karate_fish_diamond: 5
+          flyfish_diamond: 0
+          karate_fish_silver: 0
+          mana_ray_bronze: 3
+          moldfin_gold: 5
+          steaming_hot_flounder_gold: 1
+          golden_fish_diamond: 7
+          lava_horse_gold: 0
+          mana_ray: 5
+          blobfish_silver: 8
+          golden_fish: 6
+          soul_fish: 7
+          gusher_bronze: 3
+          obfuscated_fish_2_silver: 2
+          golden_fish_silver: 4
+          karate_fish_bronze: 0
+          karate_fish_gold: 7
+          steaming_hot_flounder: 3
+          skeleton_fish_gold: 0
+          skeleton_fish_bronze: 9
+          obfuscated_fish_2_bronze: 4
+          obfuscated_fish_3_gold: 9
+          skeleton_fish_silver: 2
+          skeleton_fish_diamond: 2
         forge:
           forge_processes:
             key: null
@@ -9688,6 +9880,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberSharedInventory'
         slayer:
           $ref: '#/components/schemas/SkyBlockProfileMemberSlayer'
+        trophy_fish:
+          $ref: '#/components/schemas/SkyBlockProfileMemberTrophyFish'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       example:
@@ -23459,6 +23653,294 @@ components:
       - timestamp
       - xp
       type: object
+    SkyBlockProfileMemberTrophyFish:
+      additionalProperties: false
+      example:
+        volcanic_stonefish_gold: 4
+        vanille_bronze: 3
+        steaming_hot_flounder_bronze: 6
+        obfuscated_fish_2_diamond: 4
+        karate_fish: 2
+        mana_ray_diamond: 9
+        mana_ray_silver: 0
+        sulphur_skitter_gold: 4
+        gusher_silver: 6
+        vanille_diamond: 5
+        vanille_silver: 0
+        obfuscated_fish_2_gold: 4
+        moldfin_silver: 5
+        gusher_gold: 8
+        vanille: 8
+        total_caught: 6
+        volcanic_stonefish_silver: 4
+        volcanic_stonefish_bronze: 8
+        soul_fish_diamond: 2
+        moldfin: 0
+        obfuscated_fish_1_gold: 3
+        sulphur_skitter_silver: 0
+        blobfish: 4
+        obfuscated_fish_3_silver: 6
+        moldfin_bronze: 8
+        flyfish: 9
+        obfuscated_fish_1_silver: 7
+        sulphur_skitter: 6
+        vanille_gold: 5
+        golden_fish_gold: 1
+        steaming_hot_flounder_silver: 9
+        lava_horse_diamond: 9
+        mana_ray_gold: 7
+        sulphur_skitter_bronze: 4
+        steaming_hot_flounder_diamond: 9
+        flyfish_bronze: 8
+        obfuscated_fish_3_bronze: 1
+        gusher_diamond: 0
+        blobfish_gold: 1
+        flyfish_silver: 2
+        obfuscated_fish_1_bronze: 0
+        flyfish_gold: 3
+        rewards:
+        - 4
+        - 4
+        soul_fish_bronze: 4
+        sulphur_skitter_diamond: 5
+        golden_fish_bronze: 4
+        lava_horse: 1
+        lava_horse_bronze: 2
+        last_caught: last_caught
+        skeleton_fish: 8
+        slugfish: 2
+        volcanic_stonefish: 7
+        obfuscated_fish_3_diamond: 0
+        slugfish_bronze: 3
+        obfuscated_fish_2: 2
+        soul_fish_silver: 3
+        lava_horse_silver: 8
+        obfuscated_fish_3: 8
+        slugfish_silver: 2
+        obfuscated_fish_1: 2
+        slugfish_gold: 7
+        obfuscated_fish_1_diamond: 3
+        volcanic_stonefish_diamond: 2
+        soul_fish_gold: 0
+        moldfin_diamond: 1
+        blobfish_bronze: 5
+        gusher: 0
+        blobfish_diamond: 9
+        slugfish_diamond: 6
+        karate_fish_diamond: 5
+        flyfish_diamond: 0
+        karate_fish_silver: 0
+        mana_ray_bronze: 3
+        moldfin_gold: 5
+        steaming_hot_flounder_gold: 1
+        golden_fish_diamond: 7
+        lava_horse_gold: 0
+        mana_ray: 5
+        blobfish_silver: 8
+        golden_fish: 6
+        soul_fish: 7
+        gusher_bronze: 3
+        obfuscated_fish_2_silver: 2
+        golden_fish_silver: 4
+        karate_fish_bronze: 0
+        karate_fish_gold: 7
+        steaming_hot_flounder: 3
+        skeleton_fish_gold: 0
+        skeleton_fish_bronze: 9
+        obfuscated_fish_2_bronze: 4
+        obfuscated_fish_3_gold: 9
+        skeleton_fish_silver: 2
+        skeleton_fish_diamond: 2
+      properties:
+        blobfish:
+          type: integer
+        blobfish_bronze:
+          type: integer
+        blobfish_diamond:
+          type: integer
+        blobfish_gold:
+          type: integer
+        blobfish_silver:
+          type: integer
+        flyfish:
+          type: integer
+        flyfish_bronze:
+          type: integer
+        flyfish_diamond:
+          type: integer
+        flyfish_gold:
+          type: integer
+        flyfish_silver:
+          type: integer
+        golden_fish:
+          type: integer
+        golden_fish_bronze:
+          type: integer
+        golden_fish_diamond:
+          type: integer
+        golden_fish_gold:
+          type: integer
+        golden_fish_silver:
+          type: integer
+        gusher:
+          type: integer
+        gusher_bronze:
+          type: integer
+        gusher_diamond:
+          type: integer
+        gusher_gold:
+          type: integer
+        gusher_silver:
+          type: integer
+        karate_fish:
+          type: integer
+        karate_fish_bronze:
+          type: integer
+        karate_fish_diamond:
+          type: integer
+        karate_fish_gold:
+          type: integer
+        karate_fish_silver:
+          type: integer
+        last_caught:
+          type: string
+        lava_horse:
+          type: integer
+        lava_horse_bronze:
+          type: integer
+        lava_horse_diamond:
+          type: integer
+        lava_horse_gold:
+          type: integer
+        lava_horse_silver:
+          type: integer
+        mana_ray:
+          type: integer
+        mana_ray_bronze:
+          type: integer
+        mana_ray_diamond:
+          type: integer
+        mana_ray_gold:
+          type: integer
+        mana_ray_silver:
+          type: integer
+        moldfin:
+          type: integer
+        moldfin_bronze:
+          type: integer
+        moldfin_diamond:
+          type: integer
+        moldfin_gold:
+          type: integer
+        moldfin_silver:
+          type: integer
+        obfuscated_fish_1:
+          type: integer
+        obfuscated_fish_1_bronze:
+          type: integer
+        obfuscated_fish_1_diamond:
+          type: integer
+        obfuscated_fish_1_gold:
+          type: integer
+        obfuscated_fish_1_silver:
+          type: integer
+        obfuscated_fish_2:
+          type: integer
+        obfuscated_fish_2_bronze:
+          type: integer
+        obfuscated_fish_2_diamond:
+          type: integer
+        obfuscated_fish_2_gold:
+          type: integer
+        obfuscated_fish_2_silver:
+          type: integer
+        obfuscated_fish_3:
+          type: integer
+        obfuscated_fish_3_bronze:
+          type: integer
+        obfuscated_fish_3_diamond:
+          type: integer
+        obfuscated_fish_3_gold:
+          type: integer
+        obfuscated_fish_3_silver:
+          type: integer
+        rewards:
+          items:
+            type: integer
+          type: array
+        skeleton_fish:
+          type: integer
+        skeleton_fish_bronze:
+          type: integer
+        skeleton_fish_diamond:
+          type: integer
+        skeleton_fish_gold:
+          type: integer
+        skeleton_fish_silver:
+          type: integer
+        slugfish:
+          type: integer
+        slugfish_bronze:
+          type: integer
+        slugfish_diamond:
+          type: integer
+        slugfish_gold:
+          type: integer
+        slugfish_silver:
+          type: integer
+        soul_fish:
+          type: integer
+        soul_fish_bronze:
+          type: integer
+        soul_fish_diamond:
+          type: integer
+        soul_fish_gold:
+          type: integer
+        soul_fish_silver:
+          type: integer
+        steaming_hot_flounder:
+          type: integer
+        steaming_hot_flounder_bronze:
+          type: integer
+        steaming_hot_flounder_diamond:
+          type: integer
+        steaming_hot_flounder_gold:
+          type: integer
+        steaming_hot_flounder_silver:
+          type: integer
+        sulphur_skitter:
+          type: integer
+        sulphur_skitter_bronze:
+          type: integer
+        sulphur_skitter_diamond:
+          type: integer
+        sulphur_skitter_gold:
+          type: integer
+        sulphur_skitter_silver:
+          type: integer
+        total_caught:
+          type: integer
+        vanille:
+          type: integer
+        vanille_bronze:
+          type: integer
+        vanille_diamond:
+          type: integer
+        vanille_gold:
+          type: integer
+        vanille_silver:
+          type: integer
+        volcanic_stonefish:
+          type: integer
+        volcanic_stonefish_bronze:
+          type: integer
+        volcanic_stonefish_diamond:
+          type: integer
+        volcanic_stonefish_gold:
+          type: integer
+        volcanic_stonefish_silver:
+          type: integer
+      type: object
     _v2_skyblock_profile_get_200_response:
       example:
         success: true
@@ -25621,6 +26103,102 @@ components:
                 stash_if_full_notification: true
                 daily_ores_mined: 3
                 powder_gemstone: 9
+              trophy_fish:
+                volcanic_stonefish_gold: 4
+                vanille_bronze: 3
+                steaming_hot_flounder_bronze: 6
+                obfuscated_fish_2_diamond: 4
+                karate_fish: 2
+                mana_ray_diamond: 9
+                mana_ray_silver: 0
+                sulphur_skitter_gold: 4
+                gusher_silver: 6
+                vanille_diamond: 5
+                vanille_silver: 0
+                obfuscated_fish_2_gold: 4
+                moldfin_silver: 5
+                gusher_gold: 8
+                vanille: 8
+                total_caught: 6
+                volcanic_stonefish_silver: 4
+                volcanic_stonefish_bronze: 8
+                soul_fish_diamond: 2
+                moldfin: 0
+                obfuscated_fish_1_gold: 3
+                sulphur_skitter_silver: 0
+                blobfish: 4
+                obfuscated_fish_3_silver: 6
+                moldfin_bronze: 8
+                flyfish: 9
+                obfuscated_fish_1_silver: 7
+                sulphur_skitter: 6
+                vanille_gold: 5
+                golden_fish_gold: 1
+                steaming_hot_flounder_silver: 9
+                lava_horse_diamond: 9
+                mana_ray_gold: 7
+                sulphur_skitter_bronze: 4
+                steaming_hot_flounder_diamond: 9
+                flyfish_bronze: 8
+                obfuscated_fish_3_bronze: 1
+                gusher_diamond: 0
+                blobfish_gold: 1
+                flyfish_silver: 2
+                obfuscated_fish_1_bronze: 0
+                flyfish_gold: 3
+                rewards:
+                - 4
+                - 4
+                soul_fish_bronze: 4
+                sulphur_skitter_diamond: 5
+                golden_fish_bronze: 4
+                lava_horse: 1
+                lava_horse_bronze: 2
+                last_caught: last_caught
+                skeleton_fish: 8
+                slugfish: 2
+                volcanic_stonefish: 7
+                obfuscated_fish_3_diamond: 0
+                slugfish_bronze: 3
+                obfuscated_fish_2: 2
+                soul_fish_silver: 3
+                lava_horse_silver: 8
+                obfuscated_fish_3: 8
+                slugfish_silver: 2
+                obfuscated_fish_1: 2
+                slugfish_gold: 7
+                obfuscated_fish_1_diamond: 3
+                volcanic_stonefish_diamond: 2
+                soul_fish_gold: 0
+                moldfin_diamond: 1
+                blobfish_bronze: 5
+                gusher: 0
+                blobfish_diamond: 9
+                slugfish_diamond: 6
+                karate_fish_diamond: 5
+                flyfish_diamond: 0
+                karate_fish_silver: 0
+                mana_ray_bronze: 3
+                moldfin_gold: 5
+                steaming_hot_flounder_gold: 1
+                golden_fish_diamond: 7
+                lava_horse_gold: 0
+                mana_ray: 5
+                blobfish_silver: 8
+                golden_fish: 6
+                soul_fish: 7
+                gusher_bronze: 3
+                obfuscated_fish_2_silver: 2
+                golden_fish_silver: 4
+                karate_fish_bronze: 0
+                karate_fish_gold: 7
+                steaming_hot_flounder: 3
+                skeleton_fish_gold: 0
+                skeleton_fish_bronze: 9
+                obfuscated_fish_2_bronze: 4
+                obfuscated_fish_3_gold: 9
+                skeleton_fish_silver: 2
+                skeleton_fish_diamond: 2
               forge:
                 forge_processes:
                   key: null
@@ -30416,6 +30994,102 @@ components:
                 stash_if_full_notification: true
                 daily_ores_mined: 3
                 powder_gemstone: 9
+              trophy_fish:
+                volcanic_stonefish_gold: 4
+                vanille_bronze: 3
+                steaming_hot_flounder_bronze: 6
+                obfuscated_fish_2_diamond: 4
+                karate_fish: 2
+                mana_ray_diamond: 9
+                mana_ray_silver: 0
+                sulphur_skitter_gold: 4
+                gusher_silver: 6
+                vanille_diamond: 5
+                vanille_silver: 0
+                obfuscated_fish_2_gold: 4
+                moldfin_silver: 5
+                gusher_gold: 8
+                vanille: 8
+                total_caught: 6
+                volcanic_stonefish_silver: 4
+                volcanic_stonefish_bronze: 8
+                soul_fish_diamond: 2
+                moldfin: 0
+                obfuscated_fish_1_gold: 3
+                sulphur_skitter_silver: 0
+                blobfish: 4
+                obfuscated_fish_3_silver: 6
+                moldfin_bronze: 8
+                flyfish: 9
+                obfuscated_fish_1_silver: 7
+                sulphur_skitter: 6
+                vanille_gold: 5
+                golden_fish_gold: 1
+                steaming_hot_flounder_silver: 9
+                lava_horse_diamond: 9
+                mana_ray_gold: 7
+                sulphur_skitter_bronze: 4
+                steaming_hot_flounder_diamond: 9
+                flyfish_bronze: 8
+                obfuscated_fish_3_bronze: 1
+                gusher_diamond: 0
+                blobfish_gold: 1
+                flyfish_silver: 2
+                obfuscated_fish_1_bronze: 0
+                flyfish_gold: 3
+                rewards:
+                - 4
+                - 4
+                soul_fish_bronze: 4
+                sulphur_skitter_diamond: 5
+                golden_fish_bronze: 4
+                lava_horse: 1
+                lava_horse_bronze: 2
+                last_caught: last_caught
+                skeleton_fish: 8
+                slugfish: 2
+                volcanic_stonefish: 7
+                obfuscated_fish_3_diamond: 0
+                slugfish_bronze: 3
+                obfuscated_fish_2: 2
+                soul_fish_silver: 3
+                lava_horse_silver: 8
+                obfuscated_fish_3: 8
+                slugfish_silver: 2
+                obfuscated_fish_1: 2
+                slugfish_gold: 7
+                obfuscated_fish_1_diamond: 3
+                volcanic_stonefish_diamond: 2
+                soul_fish_gold: 0
+                moldfin_diamond: 1
+                blobfish_bronze: 5
+                gusher: 0
+                blobfish_diamond: 9
+                slugfish_diamond: 6
+                karate_fish_diamond: 5
+                flyfish_diamond: 0
+                karate_fish_silver: 0
+                mana_ray_bronze: 3
+                moldfin_gold: 5
+                steaming_hot_flounder_gold: 1
+                golden_fish_diamond: 7
+                lava_horse_gold: 0
+                mana_ray: 5
+                blobfish_silver: 8
+                golden_fish: 6
+                soul_fish: 7
+                gusher_bronze: 3
+                obfuscated_fish_2_silver: 2
+                golden_fish_silver: 4
+                karate_fish_bronze: 0
+                karate_fish_gold: 7
+                steaming_hot_flounder: 3
+                skeleton_fish_gold: 0
+                skeleton_fish_bronze: 9
+                obfuscated_fish_2_bronze: 4
+                obfuscated_fish_3_gold: 9
+                skeleton_fish_silver: 2
+                skeleton_fish_diamond: 2
               forge:
                 forge_processes:
                   key: null
@@ -35143,6 +35817,102 @@ components:
                 stash_if_full_notification: true
                 daily_ores_mined: 3
                 powder_gemstone: 9
+              trophy_fish:
+                volcanic_stonefish_gold: 4
+                vanille_bronze: 3
+                steaming_hot_flounder_bronze: 6
+                obfuscated_fish_2_diamond: 4
+                karate_fish: 2
+                mana_ray_diamond: 9
+                mana_ray_silver: 0
+                sulphur_skitter_gold: 4
+                gusher_silver: 6
+                vanille_diamond: 5
+                vanille_silver: 0
+                obfuscated_fish_2_gold: 4
+                moldfin_silver: 5
+                gusher_gold: 8
+                vanille: 8
+                total_caught: 6
+                volcanic_stonefish_silver: 4
+                volcanic_stonefish_bronze: 8
+                soul_fish_diamond: 2
+                moldfin: 0
+                obfuscated_fish_1_gold: 3
+                sulphur_skitter_silver: 0
+                blobfish: 4
+                obfuscated_fish_3_silver: 6
+                moldfin_bronze: 8
+                flyfish: 9
+                obfuscated_fish_1_silver: 7
+                sulphur_skitter: 6
+                vanille_gold: 5
+                golden_fish_gold: 1
+                steaming_hot_flounder_silver: 9
+                lava_horse_diamond: 9
+                mana_ray_gold: 7
+                sulphur_skitter_bronze: 4
+                steaming_hot_flounder_diamond: 9
+                flyfish_bronze: 8
+                obfuscated_fish_3_bronze: 1
+                gusher_diamond: 0
+                blobfish_gold: 1
+                flyfish_silver: 2
+                obfuscated_fish_1_bronze: 0
+                flyfish_gold: 3
+                rewards:
+                - 4
+                - 4
+                soul_fish_bronze: 4
+                sulphur_skitter_diamond: 5
+                golden_fish_bronze: 4
+                lava_horse: 1
+                lava_horse_bronze: 2
+                last_caught: last_caught
+                skeleton_fish: 8
+                slugfish: 2
+                volcanic_stonefish: 7
+                obfuscated_fish_3_diamond: 0
+                slugfish_bronze: 3
+                obfuscated_fish_2: 2
+                soul_fish_silver: 3
+                lava_horse_silver: 8
+                obfuscated_fish_3: 8
+                slugfish_silver: 2
+                obfuscated_fish_1: 2
+                slugfish_gold: 7
+                obfuscated_fish_1_diamond: 3
+                volcanic_stonefish_diamond: 2
+                soul_fish_gold: 0
+                moldfin_diamond: 1
+                blobfish_bronze: 5
+                gusher: 0
+                blobfish_diamond: 9
+                slugfish_diamond: 6
+                karate_fish_diamond: 5
+                flyfish_diamond: 0
+                karate_fish_silver: 0
+                mana_ray_bronze: 3
+                moldfin_gold: 5
+                steaming_hot_flounder_gold: 1
+                golden_fish_diamond: 7
+                lava_horse_gold: 0
+                mana_ray: 5
+                blobfish_silver: 8
+                golden_fish: 6
+                soul_fish: 7
+                gusher_bronze: 3
+                obfuscated_fish_2_silver: 2
+                golden_fish_silver: 4
+                karate_fish_bronze: 0
+                karate_fish_gold: 7
+                steaming_hot_flounder: 3
+                skeleton_fish_gold: 0
+                skeleton_fish_bronze: 9
+                obfuscated_fish_2_bronze: 4
+                obfuscated_fish_3_gold: 9
+                skeleton_fish_silver: 2
+                skeleton_fish_diamond: 2
               forge:
                 forge_processes:
                   key: null
