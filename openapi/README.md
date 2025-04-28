@@ -325,6 +325,7 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberRiftWizardTower](docs/SkyBlockProfileMemberRiftWizardTower.md)
  - [SkyBlockProfileMemberRiftWyldWoods](docs/SkyBlockProfileMemberRiftWyldWoods.md)
  - [SkyBlockProfileMemberRiftWyldWoodsTalkedThreebrothersInner](docs/SkyBlockProfileMemberRiftWyldWoodsTalkedThreebrothersInner.md)
+ - [SkyBlockProfileMemberSharedInventory](docs/SkyBlockProfileMemberSharedInventory.md)
  - [V2SkyblockProfileGet200Response](docs/V2SkyblockProfileGet200Response.md)
  - [V2SkyblockProfileGet400Response](docs/V2SkyblockProfileGet400Response.md)
  - [V2SkyblockProfileGet403Response](docs/V2SkyblockProfileGet403Response.md)

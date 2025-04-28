@@ -247,6 +247,7 @@ docs/SkyBlockProfileMemberRiftWitherCageKilledEyesInner.md
 docs/SkyBlockProfileMemberRiftWizardTower.md
 docs/SkyBlockProfileMemberRiftWyldWoods.md
 docs/SkyBlockProfileMemberRiftWyldWoodsTalkedThreebrothersInner.md
+docs/SkyBlockProfileMemberSharedInventory.md
 docs/V2SkyblockProfileGet200Response.md
 docs/V2SkyblockProfileGet400Response.md
 docs/V2SkyblockProfileGet403Response.md
@@ -500,6 +501,7 @@ model_sky_block_profile_member_rift_wither_cage_killed_eyes_inner.go
 model_sky_block_profile_member_rift_wizard_tower.go
 model_sky_block_profile_member_rift_wyld_woods.go
 model_sky_block_profile_member_rift_wyld_woods_talked_threebrothers_inner.go
+model_sky_block_profile_member_shared_inventory.go
 response.go
 test/api_sky_block_test.go
 utils.go

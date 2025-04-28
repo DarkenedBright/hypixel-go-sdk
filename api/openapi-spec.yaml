@@ -213,6 +213,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberQuests'
         rift:
           $ref: '#/components/schemas/SkyBlockProfileMemberRift'
+        shared_inventory:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSharedInventory'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       properties:
@@ -8280,6 +8282,14 @@ components:
               - threebrother_2
             type: string
           type: array
+      type: object
+    SkyBlockProfileMemberSharedInventory:
+      additionalProperties: false
+      properties:
+        candy_inventory_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        carnival_mask_inventory_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
       type: object
   securitySchemes:
     ApiKey:

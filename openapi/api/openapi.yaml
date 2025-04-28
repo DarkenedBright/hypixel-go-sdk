@@ -312,6 +312,13 @@ components:
               - dungeons_blah_blah
               - dungeons_blah_blah
               secrets: 1
+            shared_inventory:
+              carnival_mask_inventory_contents:
+                data: data
+                type: 9
+              candy_inventory_contents:
+                data: data
+                type: 9
             inventory:
               ender_chest_contents:
                 data: data
@@ -4885,6 +4892,13 @@ components:
           - dungeons_blah_blah
           - dungeons_blah_blah
           secrets: 1
+        shared_inventory:
+          carnival_mask_inventory_contents:
+            data: data
+            type: 9
+          candy_inventory_contents:
+            data: data
+            type: 9
         inventory:
           ender_chest_contents:
             data: data
@@ -9332,6 +9346,8 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberQuests'
         rift:
           $ref: '#/components/schemas/SkyBlockProfileMemberRift'
+        shared_inventory:
+          $ref: '#/components/schemas/SkyBlockProfileMemberSharedInventory'
       type: object
     SkyBlockProfileMemberAccessoryBagStorage:
       example:
@@ -22582,6 +22598,21 @@ components:
             $ref: '#/components/schemas/SkyBlockProfileMemberRiftWyldWoods_talked_threebrothers_inner'
           type: array
       type: object
+    SkyBlockProfileMemberSharedInventory:
+      additionalProperties: false
+      example:
+        carnival_mask_inventory_contents:
+          data: data
+          type: 9
+        candy_inventory_contents:
+          data: data
+          type: 9
+      properties:
+        candy_inventory_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+        carnival_mask_inventory_contents:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+      type: object
     _v2_skyblock_profile_get_200_response:
       example:
         success: true
@@ -22729,6 +22760,13 @@ components:
                 - dungeons_blah_blah
                 - dungeons_blah_blah
                 secrets: 1
+              shared_inventory:
+                carnival_mask_inventory_contents:
+                  data: data
+                  type: 9
+                candy_inventory_contents:
+                  data: data
+                  type: 9
               inventory:
                 ender_chest_contents:
                   data: data
@@ -27348,6 +27386,13 @@ components:
                 - dungeons_blah_blah
                 - dungeons_blah_blah
                 secrets: 1
+              shared_inventory:
+                carnival_mask_inventory_contents:
+                  data: data
+                  type: 9
+                candy_inventory_contents:
+                  data: data
+                  type: 9
               inventory:
                 ender_chest_contents:
                   data: data
@@ -31899,6 +31944,13 @@ components:
                 - dungeons_blah_blah
                 - dungeons_blah_blah
                 secrets: 1
+              shared_inventory:
+                carnival_mask_inventory_contents:
+                  data: data
+                  type: 9
+                candy_inventory_contents:
+                  data: data
+                  type: 9
               inventory:
                 ender_chest_contents:
                   data: data

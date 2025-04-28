@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **Profile** | Pointer to [**SkyBlockProfileMemberProfile**](SkyBlockProfileMemberProfile.md) |  | [optional] 
 **Quests** | Pointer to [**SkyBlockProfileMemberQuests**](SkyBlockProfileMemberQuests.md) |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
+**SharedInventory** | Pointer to [**SkyBlockProfileMemberSharedInventory**](SkyBlockProfileMemberSharedInventory.md) |  | [optional] 
 
 ## Methods
 
@@ -673,6 +674,31 @@ SetRift sets Rift field to given value.
 `func (o *SkyBlockProfileMember) HasRift() bool`
 
 HasRift returns a boolean if a field has been set.
+
+### GetSharedInventory
+
+`func (o *SkyBlockProfileMember) GetSharedInventory() SkyBlockProfileMemberSharedInventory`
+
+GetSharedInventory returns the SharedInventory field if non-nil, zero value otherwise.
+
+### GetSharedInventoryOk
+
+`func (o *SkyBlockProfileMember) GetSharedInventoryOk() (*SkyBlockProfileMemberSharedInventory, bool)`
+
+GetSharedInventoryOk returns a tuple with the SharedInventory field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSharedInventory
+
+`func (o *SkyBlockProfileMember) SetSharedInventory(v SkyBlockProfileMemberSharedInventory)`
+
+SetSharedInventory sets SharedInventory field to given value.
+
+### HasSharedInventory
+
+`func (o *SkyBlockProfileMember) HasSharedInventory() bool`
+
+HasSharedInventory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

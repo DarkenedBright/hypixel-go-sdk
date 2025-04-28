@@ -44,6 +44,7 @@ type SkyBlockProfileMember struct {
 	Profile                *SkyBlockProfileMemberProfile                `json:"profile,omitempty"`
 	Quests                 *SkyBlockProfileMemberQuests                 `json:"quests,omitempty"`
 	Rift                   *SkyBlockProfileMemberRift                   `json:"rift,omitempty"`
+	SharedInventory        *SkyBlockProfileMemberSharedInventory        `json:"shared_inventory,omitempty"`
 }
 
 // NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
@@ -863,6 +864,38 @@ func (o *SkyBlockProfileMember) SetRift(v SkyBlockProfileMemberRift) {
 	o.Rift = &v
 }
 
+// GetSharedInventory returns the SharedInventory field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetSharedInventory() SkyBlockProfileMemberSharedInventory {
+	if o == nil || IsNil(o.SharedInventory) {
+		var ret SkyBlockProfileMemberSharedInventory
+		return ret
+	}
+	return *o.SharedInventory
+}
+
+// GetSharedInventoryOk returns a tuple with the SharedInventory field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetSharedInventoryOk() (*SkyBlockProfileMemberSharedInventory, bool) {
+	if o == nil || IsNil(o.SharedInventory) {
+		return nil, false
+	}
+	return o.SharedInventory, true
+}
+
+// HasSharedInventory returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasSharedInventory() bool {
+	if o != nil && !IsNil(o.SharedInventory) {
+		return true
+	}
+
+	return false
+}
+
+// SetSharedInventory gets a reference to the given SkyBlockProfileMemberSharedInventory and assigns it to the SharedInventory field.
+func (o *SkyBlockProfileMember) SetSharedInventory(v SkyBlockProfileMemberSharedInventory) {
+	o.SharedInventory = &v
+}
+
 func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -947,6 +980,9 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Rift) {
 		toSerialize["rift"] = o.Rift
+	}
+	if !IsNil(o.SharedInventory) {
+		toSerialize["shared_inventory"] = o.SharedInventory
 	}
 	return toSerialize, nil
 }
