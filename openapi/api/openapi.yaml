@@ -111,6 +111,49 @@ paths:
       - ApiKey: []
       tags:
       - SkyBlock
+  /v2/status:
+    get:
+      parameters:
+      - explode: true
+        in: query
+        name: uuid
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusGet'
+          description: Get player status
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_400_response'
+          description: "Some data is missing, this is usually a field."
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_403_response'
+          description: "Access is forbidden, usually due to an invalid API key being\
+            \ used."
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_profile_get_429_response'
+          description: "A request limit has been reached, usually this is due to the\
+            \ limit on the key being reached but can also be triggered by a global\
+            \ throttle."
+      security:
+      - ApiKey: []
+      summary: The current online status of a specific player
+      tags:
+      - Player Data
 components:
   responses:
     DataMissing:
@@ -174,6 +217,12 @@ components:
           schema:
             $ref: '#/components/schemas/SkyBlockProfilesGet'
       description: A successful response
+    StatusGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/StatusGet'
+      description: Get player status
   schemas:
     SkyBlockProfile:
       additionalProperties: false
@@ -43425,6 +43474,48 @@ components:
       required:
       - profiles
       - success
+      type: object
+    StatusGet:
+      additionalProperties: false
+      example:
+        session:
+          mode: mode
+          gameType: gameType
+          online: true
+          map: map
+        success: true
+        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        session:
+          $ref: '#/components/schemas/StatusGetSession'
+        success:
+          type: boolean
+        uuid:
+          format: uuid
+          type: string
+      required:
+      - session
+      - success
+      - uuid
+      type: object
+    StatusGetSession:
+      additionalProperties: false
+      example:
+        mode: mode
+        gameType: gameType
+        online: true
+        map: map
+      properties:
+        gameType:
+          type: string
+        map:
+          type: string
+        mode:
+          type: string
+        online:
+          type: boolean
+      required:
+      - online
       type: object
     _v2_skyblock_profile_get_400_response:
       example:

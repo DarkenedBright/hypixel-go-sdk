@@ -79,6 +79,7 @@ All URIs are relative to *https://api.hypixel.net*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*PlayerDataAPI* | [**V2StatusGet**](docs/PlayerDataAPI.md#v2statusget) | **Get** /v2/status | The current online status of a specific player
 *SkyBlockAPI* | [**V2SkyblockProfileGet**](docs/SkyBlockAPI.md#v2skyblockprofileget) | **Get** /v2/skyblock/profile | 
 *SkyBlockAPI* | [**V2SkyblockProfilesGet**](docs/SkyBlockAPI.md#v2skyblockprofilesget) | **Get** /v2/skyblock/profiles | 
 
@@ -381,6 +382,8 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberTrophyFish](docs/SkyBlockProfileMemberTrophyFish.md)
  - [SkyBlockProfileMemberWinterPlayerData](docs/SkyBlockProfileMemberWinterPlayerData.md)
  - [SkyBlockProfilesGet](docs/SkyBlockProfilesGet.md)
+ - [StatusGet](docs/StatusGet.md)
+ - [StatusGetSession](docs/StatusGetSession.md)
  - [V2SkyblockProfileGet400Response](docs/V2SkyblockProfileGet400Response.md)
  - [V2SkyblockProfileGet403Response](docs/V2SkyblockProfileGet403Response.md)
  - [V2SkyblockProfileGet422Response](docs/V2SkyblockProfileGet422Response.md)

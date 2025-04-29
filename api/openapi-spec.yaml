@@ -124,6 +124,12 @@ components:
           schema:
             $ref: '#/components/schemas/SkyBlockProfilesGet'
       description: A successful response
+    StatusGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/StatusGet'
+      description: Get player status
   schemas:
     SkyBlockProfile:
       additionalProperties: false
@@ -9591,6 +9597,35 @@ components:
         - profiles
         - success
       type: object
+    StatusGet:
+      additionalProperties: false
+      properties:
+        session:
+          $ref: '#/components/schemas/StatusGetSession'
+        success:
+          type: boolean
+        uuid:
+          format: uuid
+          type: string
+      required:
+        - session
+        - success
+        - uuid
+      type: object
+    StatusGetSession:
+      additionalProperties: false
+      properties:
+        gameType:
+          type: string
+        map:
+          type: string
+        mode:
+          type: string
+        online:
+          type: boolean
+      required:
+        - online
+      type: object
   securitySchemes:
     ApiKey:
       description: Obtained via the [Hypixel Developer Dashboard](https://developer.hypixel.net) when creating an application. You can also request higher limits for production applications in this dashboard.
@@ -9656,5 +9691,27 @@ paths:
         - ApiKey: []
       tags:
         - SkyBlock
+  /v2/status:
+    get:
+      parameters:
+        - in: query
+          name: uuid
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/StatusGet'
+        '400':
+          $ref: '#/components/responses/DataMissing'
+        '403':
+          $ref: '#/components/responses/InvalidKey'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+      security:
+        - ApiKey: []
+      summary: The current online status of a specific player
+      tags:
+        - Player Data
 servers:
   - url: https://api.hypixel.net

@@ -48,6 +48,8 @@ type APIClient struct {
 
 	// API Services
 
+	PlayerDataAPI *PlayerDataAPIService
+
 	SkyBlockAPI *SkyBlockAPIService
 }
 
@@ -67,6 +69,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
+	c.PlayerDataAPI = (*PlayerDataAPIService)(&c.common)
 	c.SkyBlockAPI = (*SkyBlockAPIService)(&c.common)
 
 	return c
