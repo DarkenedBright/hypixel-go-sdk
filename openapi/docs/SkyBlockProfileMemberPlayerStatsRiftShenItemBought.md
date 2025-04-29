@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ANCIENT_ELEVATOR** | Pointer to **float64** |  | [optional] 
 **DEAD_CAT_FOOD** | Pointer to **float64** |  | [optional] 
 **FLEX_HELMET** | Pointer to **float64** |  | [optional] 
 **PLACEABLE_FAIRY_SOUL_RIFT** | Pointer to **float64** |  | [optional] 
@@ -29,6 +30,31 @@ will change when the set of required properties is changed
 NewSkyBlockProfileMemberPlayerStatsRiftShenItemBoughtWithDefaults instantiates a new SkyBlockProfileMemberPlayerStatsRiftShenItemBought object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetANCIENT_ELEVATOR
+
+`func (o *SkyBlockProfileMemberPlayerStatsRiftShenItemBought) GetANCIENT_ELEVATOR() float64`
+
+GetANCIENT_ELEVATOR returns the ANCIENT_ELEVATOR field if non-nil, zero value otherwise.
+
+### GetANCIENT_ELEVATOROk
+
+`func (o *SkyBlockProfileMemberPlayerStatsRiftShenItemBought) GetANCIENT_ELEVATOROk() (*float64, bool)`
+
+GetANCIENT_ELEVATOROk returns a tuple with the ANCIENT_ELEVATOR field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetANCIENT_ELEVATOR
+
+`func (o *SkyBlockProfileMemberPlayerStatsRiftShenItemBought) SetANCIENT_ELEVATOR(v float64)`
+
+SetANCIENT_ELEVATOR sets ANCIENT_ELEVATOR field to given value.
+
+### HasANCIENT_ELEVATOR
+
+`func (o *SkyBlockProfileMemberPlayerStatsRiftShenItemBought) HasANCIENT_ELEVATOR() bool`
+
+HasANCIENT_ELEVATOR returns a boolean if a field has been set.
 
 ### GetDEAD_CAT_FOOD
 

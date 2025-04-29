@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassMilestone** | Pointer to **int64** |  | [optional] 
-**DisplayName** | Pointer to **string** |  | [optional] 
-**PlayerUuid** | Pointer to **string** |  | [optional] 
+**ClassMilestone** | **int64** |  | 
+**DisplayName** | **string** |  | 
+**PlayerUuid** | **string** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberDungeonsTreasuresRunParticipant
 
-`func NewSkyBlockProfileMemberDungeonsTreasuresRunParticipant() *SkyBlockProfileMemberDungeonsTreasuresRunParticipant`
+`func NewSkyBlockProfileMemberDungeonsTreasuresRunParticipant(classMilestone int64, displayName string, playerUuid string, ) *SkyBlockProfileMemberDungeonsTreasuresRunParticipant`
 
 NewSkyBlockProfileMemberDungeonsTreasuresRunParticipant instantiates a new SkyBlockProfileMemberDungeonsTreasuresRunParticipant object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetClassMilestone sets ClassMilestone field to given value.
 
-### HasClassMilestone
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) HasClassMilestone() bool`
-
-HasClassMilestone returns a boolean if a field has been set.
 
 ### GetDisplayName
 
@@ -71,11 +66,6 @@ and a boolean to check if the value has been set.
 
 SetDisplayName sets DisplayName field to given value.
 
-### HasDisplayName
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) HasDisplayName() bool`
-
-HasDisplayName returns a boolean if a field has been set.
 
 ### GetPlayerUuid
 
@@ -96,11 +86,6 @@ and a boolean to check if the value has been set.
 
 SetPlayerUuid sets PlayerUuid field to given value.
 
-### HasPlayerUuid
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) HasPlayerUuid() bool`
-
-HasPlayerUuid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

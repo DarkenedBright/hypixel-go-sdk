@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberDungeonsTreasuresChestRewards type satisfies the MappedNullable interface at compile time
@@ -19,16 +21,21 @@ var _ MappedNullable = &SkyBlockProfileMemberDungeonsTreasuresChestRewards{}
 
 // SkyBlockProfileMemberDungeonsTreasuresChestRewards struct for SkyBlockProfileMemberDungeonsTreasuresChestRewards
 type SkyBlockProfileMemberDungeonsTreasuresChestRewards struct {
-	Rewards                []string `json:"rewards,omitempty"`
-	RolledRngMeterRandomly *bool    `json:"rolled_rng_meter_randomly,omitempty"`
+	Rewards                []string `json:"rewards"`
+	RngMeterReward         *string  `json:"rng_meter_reward,omitempty"`
+	RolledRngMeterRandomly bool     `json:"rolled_rng_meter_randomly"`
 }
+
+type _SkyBlockProfileMemberDungeonsTreasuresChestRewards SkyBlockProfileMemberDungeonsTreasuresChestRewards
 
 // NewSkyBlockProfileMemberDungeonsTreasuresChestRewards instantiates a new SkyBlockProfileMemberDungeonsTreasuresChestRewards object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberDungeonsTreasuresChestRewards() *SkyBlockProfileMemberDungeonsTreasuresChestRewards {
+func NewSkyBlockProfileMemberDungeonsTreasuresChestRewards(rewards []string, rolledRngMeterRandomly bool) *SkyBlockProfileMemberDungeonsTreasuresChestRewards {
 	this := SkyBlockProfileMemberDungeonsTreasuresChestRewards{}
+	this.Rewards = rewards
+	this.RolledRngMeterRandomly = rolledRngMeterRandomly
 	return &this
 }
 
@@ -40,68 +47,84 @@ func NewSkyBlockProfileMemberDungeonsTreasuresChestRewardsWithDefaults() *SkyBlo
 	return &this
 }
 
-// GetRewards returns the Rewards field value if set, zero value otherwise.
+// GetRewards returns the Rewards field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) GetRewards() []string {
-	if o == nil || IsNil(o.Rewards) {
+	if o == nil {
 		var ret []string
 		return ret
 	}
+
 	return o.Rewards
 }
 
-// GetRewardsOk returns a tuple with the Rewards field value if set, nil otherwise
+// GetRewardsOk returns a tuple with the Rewards field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) GetRewardsOk() ([]string, bool) {
-	if o == nil || IsNil(o.Rewards) {
+	if o == nil {
 		return nil, false
 	}
 	return o.Rewards, true
 }
 
-// HasRewards returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) HasRewards() bool {
-	if o != nil && !IsNil(o.Rewards) {
-		return true
-	}
-
-	return false
-}
-
-// SetRewards gets a reference to the given []string and assigns it to the Rewards field.
+// SetRewards sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) SetRewards(v []string) {
 	o.Rewards = v
 }
 
-// GetRolledRngMeterRandomly returns the RolledRngMeterRandomly field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) GetRolledRngMeterRandomly() bool {
-	if o == nil || IsNil(o.RolledRngMeterRandomly) {
-		var ret bool
+// GetRngMeterReward returns the RngMeterReward field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) GetRngMeterReward() string {
+	if o == nil || IsNil(o.RngMeterReward) {
+		var ret string
 		return ret
 	}
-	return *o.RolledRngMeterRandomly
+	return *o.RngMeterReward
 }
 
-// GetRolledRngMeterRandomlyOk returns a tuple with the RolledRngMeterRandomly field value if set, nil otherwise
+// GetRngMeterRewardOk returns a tuple with the RngMeterReward field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) GetRolledRngMeterRandomlyOk() (*bool, bool) {
-	if o == nil || IsNil(o.RolledRngMeterRandomly) {
+func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) GetRngMeterRewardOk() (*string, bool) {
+	if o == nil || IsNil(o.RngMeterReward) {
 		return nil, false
 	}
-	return o.RolledRngMeterRandomly, true
+	return o.RngMeterReward, true
 }
 
-// HasRolledRngMeterRandomly returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) HasRolledRngMeterRandomly() bool {
-	if o != nil && !IsNil(o.RolledRngMeterRandomly) {
+// HasRngMeterReward returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) HasRngMeterReward() bool {
+	if o != nil && !IsNil(o.RngMeterReward) {
 		return true
 	}
 
 	return false
 }
 
-// SetRolledRngMeterRandomly gets a reference to the given bool and assigns it to the RolledRngMeterRandomly field.
+// SetRngMeterReward gets a reference to the given string and assigns it to the RngMeterReward field.
+func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) SetRngMeterReward(v string) {
+	o.RngMeterReward = &v
+}
+
+// GetRolledRngMeterRandomly returns the RolledRngMeterRandomly field value
+func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) GetRolledRngMeterRandomly() bool {
+	if o == nil {
+		var ret bool
+		return ret
+	}
+
+	return o.RolledRngMeterRandomly
+}
+
+// GetRolledRngMeterRandomlyOk returns a tuple with the RolledRngMeterRandomly field value
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) GetRolledRngMeterRandomlyOk() (*bool, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.RolledRngMeterRandomly, true
+}
+
+// SetRolledRngMeterRandomly sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) SetRolledRngMeterRandomly(v bool) {
-	o.RolledRngMeterRandomly = &v
+	o.RolledRngMeterRandomly = v
 }
 
 func (o SkyBlockProfileMemberDungeonsTreasuresChestRewards) MarshalJSON() ([]byte, error) {
@@ -114,13 +137,50 @@ func (o SkyBlockProfileMemberDungeonsTreasuresChestRewards) MarshalJSON() ([]byt
 
 func (o SkyBlockProfileMemberDungeonsTreasuresChestRewards) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Rewards) {
-		toSerialize["rewards"] = o.Rewards
+	toSerialize["rewards"] = o.Rewards
+	if !IsNil(o.RngMeterReward) {
+		toSerialize["rng_meter_reward"] = o.RngMeterReward
 	}
-	if !IsNil(o.RolledRngMeterRandomly) {
-		toSerialize["rolled_rng_meter_randomly"] = o.RolledRngMeterRandomly
-	}
+	toSerialize["rolled_rng_meter_randomly"] = o.RolledRngMeterRandomly
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"rewards",
+		"rolled_rng_meter_randomly",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberDungeonsTreasuresChestRewards := _SkyBlockProfileMemberDungeonsTreasuresChestRewards{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberDungeonsTreasuresChestRewards)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberDungeonsTreasuresChestRewards(varSkyBlockProfileMemberDungeonsTreasuresChestRewards)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberDungeonsTreasuresChestRewards struct {

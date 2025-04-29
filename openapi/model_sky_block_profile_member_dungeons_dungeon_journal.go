@@ -19,7 +19,10 @@ var _ MappedNullable = &SkyBlockProfileMemberDungeonsDungeonJournal{}
 
 // SkyBlockProfileMemberDungeonsDungeonJournal struct for SkyBlockProfileMemberDungeonsDungeonJournal
 type SkyBlockProfileMemberDungeonsDungeonJournal struct {
-	UnlockedJournals []string `json:"unlocked_journals,omitempty"`
+	HasReadTheEye     *bool                                                              `json:"has_read_the_eye,omitempty"`
+	HasReadTheWatcher *bool                                                              `json:"has_read_the_watcher,omitempty"`
+	JournalEntries    *SkyBlockProfileMemberDungeonsDungeonJournalJournalEntries         `json:"journal_entries,omitempty"`
+	UnlockedJournals  []SkyBlockProfileMemberDungeonsDungeonJournalUnlockedJournalsInner `json:"unlocked_journals,omitempty"`
 }
 
 // NewSkyBlockProfileMemberDungeonsDungeonJournal instantiates a new SkyBlockProfileMemberDungeonsDungeonJournal object
@@ -39,10 +42,106 @@ func NewSkyBlockProfileMemberDungeonsDungeonJournalWithDefaults() *SkyBlockProfi
 	return &this
 }
 
+// GetHasReadTheEye returns the HasReadTheEye field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetHasReadTheEye() bool {
+	if o == nil || IsNil(o.HasReadTheEye) {
+		var ret bool
+		return ret
+	}
+	return *o.HasReadTheEye
+}
+
+// GetHasReadTheEyeOk returns a tuple with the HasReadTheEye field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetHasReadTheEyeOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasReadTheEye) {
+		return nil, false
+	}
+	return o.HasReadTheEye, true
+}
+
+// HasHasReadTheEye returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) HasHasReadTheEye() bool {
+	if o != nil && !IsNil(o.HasReadTheEye) {
+		return true
+	}
+
+	return false
+}
+
+// SetHasReadTheEye gets a reference to the given bool and assigns it to the HasReadTheEye field.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) SetHasReadTheEye(v bool) {
+	o.HasReadTheEye = &v
+}
+
+// GetHasReadTheWatcher returns the HasReadTheWatcher field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetHasReadTheWatcher() bool {
+	if o == nil || IsNil(o.HasReadTheWatcher) {
+		var ret bool
+		return ret
+	}
+	return *o.HasReadTheWatcher
+}
+
+// GetHasReadTheWatcherOk returns a tuple with the HasReadTheWatcher field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetHasReadTheWatcherOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasReadTheWatcher) {
+		return nil, false
+	}
+	return o.HasReadTheWatcher, true
+}
+
+// HasHasReadTheWatcher returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) HasHasReadTheWatcher() bool {
+	if o != nil && !IsNil(o.HasReadTheWatcher) {
+		return true
+	}
+
+	return false
+}
+
+// SetHasReadTheWatcher gets a reference to the given bool and assigns it to the HasReadTheWatcher field.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) SetHasReadTheWatcher(v bool) {
+	o.HasReadTheWatcher = &v
+}
+
+// GetJournalEntries returns the JournalEntries field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetJournalEntries() SkyBlockProfileMemberDungeonsDungeonJournalJournalEntries {
+	if o == nil || IsNil(o.JournalEntries) {
+		var ret SkyBlockProfileMemberDungeonsDungeonJournalJournalEntries
+		return ret
+	}
+	return *o.JournalEntries
+}
+
+// GetJournalEntriesOk returns a tuple with the JournalEntries field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetJournalEntriesOk() (*SkyBlockProfileMemberDungeonsDungeonJournalJournalEntries, bool) {
+	if o == nil || IsNil(o.JournalEntries) {
+		return nil, false
+	}
+	return o.JournalEntries, true
+}
+
+// HasJournalEntries returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) HasJournalEntries() bool {
+	if o != nil && !IsNil(o.JournalEntries) {
+		return true
+	}
+
+	return false
+}
+
+// SetJournalEntries gets a reference to the given SkyBlockProfileMemberDungeonsDungeonJournalJournalEntries and assigns it to the JournalEntries field.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) SetJournalEntries(v SkyBlockProfileMemberDungeonsDungeonJournalJournalEntries) {
+	o.JournalEntries = &v
+}
+
 // GetUnlockedJournals returns the UnlockedJournals field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetUnlockedJournals() []string {
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetUnlockedJournals() []SkyBlockProfileMemberDungeonsDungeonJournalUnlockedJournalsInner {
 	if o == nil || IsNil(o.UnlockedJournals) {
-		var ret []string
+		var ret []SkyBlockProfileMemberDungeonsDungeonJournalUnlockedJournalsInner
 		return ret
 	}
 	return o.UnlockedJournals
@@ -50,7 +149,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetUnlockedJournals() []st
 
 // GetUnlockedJournalsOk returns a tuple with the UnlockedJournals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetUnlockedJournalsOk() ([]string, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) GetUnlockedJournalsOk() ([]SkyBlockProfileMemberDungeonsDungeonJournalUnlockedJournalsInner, bool) {
 	if o == nil || IsNil(o.UnlockedJournals) {
 		return nil, false
 	}
@@ -66,8 +165,8 @@ func (o *SkyBlockProfileMemberDungeonsDungeonJournal) HasUnlockedJournals() bool
 	return false
 }
 
-// SetUnlockedJournals gets a reference to the given []string and assigns it to the UnlockedJournals field.
-func (o *SkyBlockProfileMemberDungeonsDungeonJournal) SetUnlockedJournals(v []string) {
+// SetUnlockedJournals gets a reference to the given []SkyBlockProfileMemberDungeonsDungeonJournalUnlockedJournalsInner and assigns it to the UnlockedJournals field.
+func (o *SkyBlockProfileMemberDungeonsDungeonJournal) SetUnlockedJournals(v []SkyBlockProfileMemberDungeonsDungeonJournalUnlockedJournalsInner) {
 	o.UnlockedJournals = v
 }
 
@@ -81,6 +180,15 @@ func (o SkyBlockProfileMemberDungeonsDungeonJournal) MarshalJSON() ([]byte, erro
 
 func (o SkyBlockProfileMemberDungeonsDungeonJournal) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.HasReadTheEye) {
+		toSerialize["has_read_the_eye"] = o.HasReadTheEye
+	}
+	if !IsNil(o.HasReadTheWatcher) {
+		toSerialize["has_read_the_watcher"] = o.HasReadTheWatcher
+	}
+	if !IsNil(o.JournalEntries) {
+		toSerialize["journal_entries"] = o.JournalEntries
+	}
 	if !IsNil(o.UnlockedJournals) {
 		toSerialize["unlocked_journals"] = o.UnlockedJournals
 	}

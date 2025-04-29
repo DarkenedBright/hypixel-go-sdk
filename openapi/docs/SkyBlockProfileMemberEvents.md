@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Easter** | Pointer to [**SkyBlockProfileMemberEventsEaster**](SkyBlockProfileMemberEventsEaster.md) |  | [optional] 
+**Easter** | [**SkyBlockProfileMemberEventsEaster**](SkyBlockProfileMemberEventsEaster.md) |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberEvents
 
-`func NewSkyBlockProfileMemberEvents() *SkyBlockProfileMemberEvents`
+`func NewSkyBlockProfileMemberEvents(easter SkyBlockProfileMemberEventsEaster, ) *SkyBlockProfileMemberEvents`
 
 NewSkyBlockProfileMemberEvents instantiates a new SkyBlockProfileMemberEvents object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetEaster sets Easter field to given value.
 
-### HasEaster
-
-`func (o *SkyBlockProfileMemberEvents) HasEaster() bool`
-
-HasEaster returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

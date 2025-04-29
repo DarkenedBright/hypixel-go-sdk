@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberDungeonsDailyRuns type satisfies the MappedNullable interface at compile time
@@ -19,16 +21,20 @@ var _ MappedNullable = &SkyBlockProfileMemberDungeonsDailyRuns{}
 
 // SkyBlockProfileMemberDungeonsDailyRuns struct for SkyBlockProfileMemberDungeonsDailyRuns
 type SkyBlockProfileMemberDungeonsDailyRuns struct {
-	CompletedRunsCount *int64 `json:"completed_runs_count,omitempty"`
-	CurrentDayStamp    *int64 `json:"current_day_stamp,omitempty"`
+	CompletedRunsCount int64 `json:"completed_runs_count"`
+	CurrentDayStamp    int64 `json:"current_day_stamp"`
 }
+
+type _SkyBlockProfileMemberDungeonsDailyRuns SkyBlockProfileMemberDungeonsDailyRuns
 
 // NewSkyBlockProfileMemberDungeonsDailyRuns instantiates a new SkyBlockProfileMemberDungeonsDailyRuns object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberDungeonsDailyRuns() *SkyBlockProfileMemberDungeonsDailyRuns {
+func NewSkyBlockProfileMemberDungeonsDailyRuns(completedRunsCount int64, currentDayStamp int64) *SkyBlockProfileMemberDungeonsDailyRuns {
 	this := SkyBlockProfileMemberDungeonsDailyRuns{}
+	this.CompletedRunsCount = completedRunsCount
+	this.CurrentDayStamp = currentDayStamp
 	return &this
 }
 
@@ -40,68 +46,52 @@ func NewSkyBlockProfileMemberDungeonsDailyRunsWithDefaults() *SkyBlockProfileMem
 	return &this
 }
 
-// GetCompletedRunsCount returns the CompletedRunsCount field value if set, zero value otherwise.
+// GetCompletedRunsCount returns the CompletedRunsCount field value
 func (o *SkyBlockProfileMemberDungeonsDailyRuns) GetCompletedRunsCount() int64 {
-	if o == nil || IsNil(o.CompletedRunsCount) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.CompletedRunsCount
+
+	return o.CompletedRunsCount
 }
 
-// GetCompletedRunsCountOk returns a tuple with the CompletedRunsCount field value if set, nil otherwise
+// GetCompletedRunsCountOk returns a tuple with the CompletedRunsCount field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsDailyRuns) GetCompletedRunsCountOk() (*int64, bool) {
-	if o == nil || IsNil(o.CompletedRunsCount) {
+	if o == nil {
 		return nil, false
 	}
-	return o.CompletedRunsCount, true
+	return &o.CompletedRunsCount, true
 }
 
-// HasCompletedRunsCount returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsDailyRuns) HasCompletedRunsCount() bool {
-	if o != nil && !IsNil(o.CompletedRunsCount) {
-		return true
-	}
-
-	return false
-}
-
-// SetCompletedRunsCount gets a reference to the given int64 and assigns it to the CompletedRunsCount field.
+// SetCompletedRunsCount sets field value
 func (o *SkyBlockProfileMemberDungeonsDailyRuns) SetCompletedRunsCount(v int64) {
-	o.CompletedRunsCount = &v
+	o.CompletedRunsCount = v
 }
 
-// GetCurrentDayStamp returns the CurrentDayStamp field value if set, zero value otherwise.
+// GetCurrentDayStamp returns the CurrentDayStamp field value
 func (o *SkyBlockProfileMemberDungeonsDailyRuns) GetCurrentDayStamp() int64 {
-	if o == nil || IsNil(o.CurrentDayStamp) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.CurrentDayStamp
+
+	return o.CurrentDayStamp
 }
 
-// GetCurrentDayStampOk returns a tuple with the CurrentDayStamp field value if set, nil otherwise
+// GetCurrentDayStampOk returns a tuple with the CurrentDayStamp field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsDailyRuns) GetCurrentDayStampOk() (*int64, bool) {
-	if o == nil || IsNil(o.CurrentDayStamp) {
+	if o == nil {
 		return nil, false
 	}
-	return o.CurrentDayStamp, true
+	return &o.CurrentDayStamp, true
 }
 
-// HasCurrentDayStamp returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsDailyRuns) HasCurrentDayStamp() bool {
-	if o != nil && !IsNil(o.CurrentDayStamp) {
-		return true
-	}
-
-	return false
-}
-
-// SetCurrentDayStamp gets a reference to the given int64 and assigns it to the CurrentDayStamp field.
+// SetCurrentDayStamp sets field value
 func (o *SkyBlockProfileMemberDungeonsDailyRuns) SetCurrentDayStamp(v int64) {
-	o.CurrentDayStamp = &v
+	o.CurrentDayStamp = v
 }
 
 func (o SkyBlockProfileMemberDungeonsDailyRuns) MarshalJSON() ([]byte, error) {
@@ -114,13 +104,47 @@ func (o SkyBlockProfileMemberDungeonsDailyRuns) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileMemberDungeonsDailyRuns) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.CompletedRunsCount) {
-		toSerialize["completed_runs_count"] = o.CompletedRunsCount
-	}
-	if !IsNil(o.CurrentDayStamp) {
-		toSerialize["current_day_stamp"] = o.CurrentDayStamp
-	}
+	toSerialize["completed_runs_count"] = o.CompletedRunsCount
+	toSerialize["current_day_stamp"] = o.CurrentDayStamp
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberDungeonsDailyRuns) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"completed_runs_count",
+		"current_day_stamp",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberDungeonsDailyRuns := _SkyBlockProfileMemberDungeonsDailyRuns{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberDungeonsDailyRuns)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberDungeonsDailyRuns(varSkyBlockProfileMemberDungeonsDailyRuns)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberDungeonsDailyRuns struct {

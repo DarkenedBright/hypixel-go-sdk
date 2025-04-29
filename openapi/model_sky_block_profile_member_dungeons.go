@@ -19,16 +19,16 @@ var _ MappedNullable = &SkyBlockProfileMemberDungeons{}
 
 // SkyBlockProfileMemberDungeons struct for SkyBlockProfileMemberDungeons
 type SkyBlockProfileMemberDungeons struct {
-	DailyRuns              *SkyBlockProfileMemberDungeonsDailyRuns                     `json:"daily_runs,omitempty"`
-	DungeonHubRaceSettings *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings        `json:"dungeon_hub_race_settings,omitempty"`
-	DungeonJournal         *SkyBlockProfileMemberDungeonsDungeonJournal                `json:"dungeon_journal,omitempty"`
-	DungeonTypes           *map[string]SkyBlockProfileMemberDungeonsDungeonTypesType   `json:"dungeon_types,omitempty"`
-	DungeonsBlahBlah       []string                                                    `json:"dungeons_blah_blah,omitempty"`
-	LastDungeonRun         *string                                                     `json:"last_dungeon_run,omitempty"`
-	PlayerClasses          *map[string]SkyBlockProfileMemberDungeonsPlayerClassesValue `json:"player_classes,omitempty"`
-	Secrets                *int64                                                      `json:"secrets,omitempty"`
-	SelectedDungeonClass   *string                                                     `json:"selected_dungeon_class,omitempty"`
-	Treasures              *SkyBlockProfileMemberDungeonsTreasures                     `json:"treasures,omitempty"`
+	DailyRuns              *SkyBlockProfileMemberDungeonsDailyRuns              `json:"daily_runs,omitempty"`
+	DungeonHubRaceSettings *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings `json:"dungeon_hub_race_settings,omitempty"`
+	DungeonJournal         *SkyBlockProfileMemberDungeonsDungeonJournal         `json:"dungeon_journal,omitempty"`
+	DungeonTypes           *SkyBlockProfileMemberDungeonsDungeonTypes           `json:"dungeon_types,omitempty"`
+	DungeonsBlahBlah       []SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner `json:"dungeons_blah_blah,omitempty"`
+	LastDungeonRun         *SkyBlockProfileMemberDungeonsLastDungeonRun         `json:"last_dungeon_run,omitempty"`
+	PlayerClasses          *SkyBlockProfileMemberDungeonsPlayerClasses          `json:"player_classes,omitempty"`
+	Secrets                *int64                                               `json:"secrets,omitempty"`
+	SelectedDungeonClass   *SkyBlockProfileMemberDungeonsSelectedDungeonClass   `json:"selected_dungeon_class,omitempty"`
+	Treasures              *SkyBlockProfileMemberDungeonsTreasures              `json:"treasures,omitempty"`
 }
 
 // NewSkyBlockProfileMemberDungeons instantiates a new SkyBlockProfileMemberDungeons object
@@ -145,9 +145,9 @@ func (o *SkyBlockProfileMemberDungeons) SetDungeonJournal(v SkyBlockProfileMembe
 }
 
 // GetDungeonTypes returns the DungeonTypes field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeons) GetDungeonTypes() map[string]SkyBlockProfileMemberDungeonsDungeonTypesType {
+func (o *SkyBlockProfileMemberDungeons) GetDungeonTypes() SkyBlockProfileMemberDungeonsDungeonTypes {
 	if o == nil || IsNil(o.DungeonTypes) {
-		var ret map[string]SkyBlockProfileMemberDungeonsDungeonTypesType
+		var ret SkyBlockProfileMemberDungeonsDungeonTypes
 		return ret
 	}
 	return *o.DungeonTypes
@@ -155,7 +155,7 @@ func (o *SkyBlockProfileMemberDungeons) GetDungeonTypes() map[string]SkyBlockPro
 
 // GetDungeonTypesOk returns a tuple with the DungeonTypes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeons) GetDungeonTypesOk() (*map[string]SkyBlockProfileMemberDungeonsDungeonTypesType, bool) {
+func (o *SkyBlockProfileMemberDungeons) GetDungeonTypesOk() (*SkyBlockProfileMemberDungeonsDungeonTypes, bool) {
 	if o == nil || IsNil(o.DungeonTypes) {
 		return nil, false
 	}
@@ -171,15 +171,15 @@ func (o *SkyBlockProfileMemberDungeons) HasDungeonTypes() bool {
 	return false
 }
 
-// SetDungeonTypes gets a reference to the given map[string]SkyBlockProfileMemberDungeonsDungeonTypesType and assigns it to the DungeonTypes field.
-func (o *SkyBlockProfileMemberDungeons) SetDungeonTypes(v map[string]SkyBlockProfileMemberDungeonsDungeonTypesType) {
+// SetDungeonTypes gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypes and assigns it to the DungeonTypes field.
+func (o *SkyBlockProfileMemberDungeons) SetDungeonTypes(v SkyBlockProfileMemberDungeonsDungeonTypes) {
 	o.DungeonTypes = &v
 }
 
 // GetDungeonsBlahBlah returns the DungeonsBlahBlah field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeons) GetDungeonsBlahBlah() []string {
+func (o *SkyBlockProfileMemberDungeons) GetDungeonsBlahBlah() []SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner {
 	if o == nil || IsNil(o.DungeonsBlahBlah) {
-		var ret []string
+		var ret []SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner
 		return ret
 	}
 	return o.DungeonsBlahBlah
@@ -187,7 +187,7 @@ func (o *SkyBlockProfileMemberDungeons) GetDungeonsBlahBlah() []string {
 
 // GetDungeonsBlahBlahOk returns a tuple with the DungeonsBlahBlah field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeons) GetDungeonsBlahBlahOk() ([]string, bool) {
+func (o *SkyBlockProfileMemberDungeons) GetDungeonsBlahBlahOk() ([]SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner, bool) {
 	if o == nil || IsNil(o.DungeonsBlahBlah) {
 		return nil, false
 	}
@@ -203,15 +203,15 @@ func (o *SkyBlockProfileMemberDungeons) HasDungeonsBlahBlah() bool {
 	return false
 }
 
-// SetDungeonsBlahBlah gets a reference to the given []string and assigns it to the DungeonsBlahBlah field.
-func (o *SkyBlockProfileMemberDungeons) SetDungeonsBlahBlah(v []string) {
+// SetDungeonsBlahBlah gets a reference to the given []SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner and assigns it to the DungeonsBlahBlah field.
+func (o *SkyBlockProfileMemberDungeons) SetDungeonsBlahBlah(v []SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner) {
 	o.DungeonsBlahBlah = v
 }
 
 // GetLastDungeonRun returns the LastDungeonRun field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeons) GetLastDungeonRun() string {
+func (o *SkyBlockProfileMemberDungeons) GetLastDungeonRun() SkyBlockProfileMemberDungeonsLastDungeonRun {
 	if o == nil || IsNil(o.LastDungeonRun) {
-		var ret string
+		var ret SkyBlockProfileMemberDungeonsLastDungeonRun
 		return ret
 	}
 	return *o.LastDungeonRun
@@ -219,7 +219,7 @@ func (o *SkyBlockProfileMemberDungeons) GetLastDungeonRun() string {
 
 // GetLastDungeonRunOk returns a tuple with the LastDungeonRun field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeons) GetLastDungeonRunOk() (*string, bool) {
+func (o *SkyBlockProfileMemberDungeons) GetLastDungeonRunOk() (*SkyBlockProfileMemberDungeonsLastDungeonRun, bool) {
 	if o == nil || IsNil(o.LastDungeonRun) {
 		return nil, false
 	}
@@ -235,15 +235,15 @@ func (o *SkyBlockProfileMemberDungeons) HasLastDungeonRun() bool {
 	return false
 }
 
-// SetLastDungeonRun gets a reference to the given string and assigns it to the LastDungeonRun field.
-func (o *SkyBlockProfileMemberDungeons) SetLastDungeonRun(v string) {
+// SetLastDungeonRun gets a reference to the given SkyBlockProfileMemberDungeonsLastDungeonRun and assigns it to the LastDungeonRun field.
+func (o *SkyBlockProfileMemberDungeons) SetLastDungeonRun(v SkyBlockProfileMemberDungeonsLastDungeonRun) {
 	o.LastDungeonRun = &v
 }
 
 // GetPlayerClasses returns the PlayerClasses field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeons) GetPlayerClasses() map[string]SkyBlockProfileMemberDungeonsPlayerClassesValue {
+func (o *SkyBlockProfileMemberDungeons) GetPlayerClasses() SkyBlockProfileMemberDungeonsPlayerClasses {
 	if o == nil || IsNil(o.PlayerClasses) {
-		var ret map[string]SkyBlockProfileMemberDungeonsPlayerClassesValue
+		var ret SkyBlockProfileMemberDungeonsPlayerClasses
 		return ret
 	}
 	return *o.PlayerClasses
@@ -251,7 +251,7 @@ func (o *SkyBlockProfileMemberDungeons) GetPlayerClasses() map[string]SkyBlockPr
 
 // GetPlayerClassesOk returns a tuple with the PlayerClasses field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeons) GetPlayerClassesOk() (*map[string]SkyBlockProfileMemberDungeonsPlayerClassesValue, bool) {
+func (o *SkyBlockProfileMemberDungeons) GetPlayerClassesOk() (*SkyBlockProfileMemberDungeonsPlayerClasses, bool) {
 	if o == nil || IsNil(o.PlayerClasses) {
 		return nil, false
 	}
@@ -267,8 +267,8 @@ func (o *SkyBlockProfileMemberDungeons) HasPlayerClasses() bool {
 	return false
 }
 
-// SetPlayerClasses gets a reference to the given map[string]SkyBlockProfileMemberDungeonsPlayerClassesValue and assigns it to the PlayerClasses field.
-func (o *SkyBlockProfileMemberDungeons) SetPlayerClasses(v map[string]SkyBlockProfileMemberDungeonsPlayerClassesValue) {
+// SetPlayerClasses gets a reference to the given SkyBlockProfileMemberDungeonsPlayerClasses and assigns it to the PlayerClasses field.
+func (o *SkyBlockProfileMemberDungeons) SetPlayerClasses(v SkyBlockProfileMemberDungeonsPlayerClasses) {
 	o.PlayerClasses = &v
 }
 
@@ -305,9 +305,9 @@ func (o *SkyBlockProfileMemberDungeons) SetSecrets(v int64) {
 }
 
 // GetSelectedDungeonClass returns the SelectedDungeonClass field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeons) GetSelectedDungeonClass() string {
+func (o *SkyBlockProfileMemberDungeons) GetSelectedDungeonClass() SkyBlockProfileMemberDungeonsSelectedDungeonClass {
 	if o == nil || IsNil(o.SelectedDungeonClass) {
-		var ret string
+		var ret SkyBlockProfileMemberDungeonsSelectedDungeonClass
 		return ret
 	}
 	return *o.SelectedDungeonClass
@@ -315,7 +315,7 @@ func (o *SkyBlockProfileMemberDungeons) GetSelectedDungeonClass() string {
 
 // GetSelectedDungeonClassOk returns a tuple with the SelectedDungeonClass field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeons) GetSelectedDungeonClassOk() (*string, bool) {
+func (o *SkyBlockProfileMemberDungeons) GetSelectedDungeonClassOk() (*SkyBlockProfileMemberDungeonsSelectedDungeonClass, bool) {
 	if o == nil || IsNil(o.SelectedDungeonClass) {
 		return nil, false
 	}
@@ -331,8 +331,8 @@ func (o *SkyBlockProfileMemberDungeons) HasSelectedDungeonClass() bool {
 	return false
 }
 
-// SetSelectedDungeonClass gets a reference to the given string and assigns it to the SelectedDungeonClass field.
-func (o *SkyBlockProfileMemberDungeons) SetSelectedDungeonClass(v string) {
+// SetSelectedDungeonClass gets a reference to the given SkyBlockProfileMemberDungeonsSelectedDungeonClass and assigns it to the SelectedDungeonClass field.
+func (o *SkyBlockProfileMemberDungeons) SetSelectedDungeonClass(v SkyBlockProfileMemberDungeonsSelectedDungeonClass) {
 	o.SelectedDungeonClass = &v
 }
 

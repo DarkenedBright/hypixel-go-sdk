@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberDungeonsTreasuresRunParticipant type satisfies the MappedNullable interface at compile time
@@ -19,17 +21,22 @@ var _ MappedNullable = &SkyBlockProfileMemberDungeonsTreasuresRunParticipant{}
 
 // SkyBlockProfileMemberDungeonsTreasuresRunParticipant struct for SkyBlockProfileMemberDungeonsTreasuresRunParticipant
 type SkyBlockProfileMemberDungeonsTreasuresRunParticipant struct {
-	ClassMilestone *int64  `json:"class_milestone,omitempty"`
-	DisplayName    *string `json:"display_name,omitempty"`
-	PlayerUuid     *string `json:"player_uuid,omitempty"`
+	ClassMilestone int64  `json:"class_milestone"`
+	DisplayName    string `json:"display_name"`
+	PlayerUuid     string `json:"player_uuid"`
 }
+
+type _SkyBlockProfileMemberDungeonsTreasuresRunParticipant SkyBlockProfileMemberDungeonsTreasuresRunParticipant
 
 // NewSkyBlockProfileMemberDungeonsTreasuresRunParticipant instantiates a new SkyBlockProfileMemberDungeonsTreasuresRunParticipant object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberDungeonsTreasuresRunParticipant() *SkyBlockProfileMemberDungeonsTreasuresRunParticipant {
+func NewSkyBlockProfileMemberDungeonsTreasuresRunParticipant(classMilestone int64, displayName string, playerUuid string) *SkyBlockProfileMemberDungeonsTreasuresRunParticipant {
 	this := SkyBlockProfileMemberDungeonsTreasuresRunParticipant{}
+	this.ClassMilestone = classMilestone
+	this.DisplayName = displayName
+	this.PlayerUuid = playerUuid
 	return &this
 }
 
@@ -41,100 +48,76 @@ func NewSkyBlockProfileMemberDungeonsTreasuresRunParticipantWithDefaults() *SkyB
 	return &this
 }
 
-// GetClassMilestone returns the ClassMilestone field value if set, zero value otherwise.
+// GetClassMilestone returns the ClassMilestone field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) GetClassMilestone() int64 {
-	if o == nil || IsNil(o.ClassMilestone) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.ClassMilestone
+
+	return o.ClassMilestone
 }
 
-// GetClassMilestoneOk returns a tuple with the ClassMilestone field value if set, nil otherwise
+// GetClassMilestoneOk returns a tuple with the ClassMilestone field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) GetClassMilestoneOk() (*int64, bool) {
-	if o == nil || IsNil(o.ClassMilestone) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ClassMilestone, true
+	return &o.ClassMilestone, true
 }
 
-// HasClassMilestone returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) HasClassMilestone() bool {
-	if o != nil && !IsNil(o.ClassMilestone) {
-		return true
-	}
-
-	return false
-}
-
-// SetClassMilestone gets a reference to the given int64 and assigns it to the ClassMilestone field.
+// SetClassMilestone sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) SetClassMilestone(v int64) {
-	o.ClassMilestone = &v
+	o.ClassMilestone = v
 }
 
-// GetDisplayName returns the DisplayName field value if set, zero value otherwise.
+// GetDisplayName returns the DisplayName field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) GetDisplayName() string {
-	if o == nil || IsNil(o.DisplayName) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.DisplayName
+
+	return o.DisplayName
 }
 
-// GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
+// GetDisplayNameOk returns a tuple with the DisplayName field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) GetDisplayNameOk() (*string, bool) {
-	if o == nil || IsNil(o.DisplayName) {
+	if o == nil {
 		return nil, false
 	}
-	return o.DisplayName, true
+	return &o.DisplayName, true
 }
 
-// HasDisplayName returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) HasDisplayName() bool {
-	if o != nil && !IsNil(o.DisplayName) {
-		return true
-	}
-
-	return false
-}
-
-// SetDisplayName gets a reference to the given string and assigns it to the DisplayName field.
+// SetDisplayName sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) SetDisplayName(v string) {
-	o.DisplayName = &v
+	o.DisplayName = v
 }
 
-// GetPlayerUuid returns the PlayerUuid field value if set, zero value otherwise.
+// GetPlayerUuid returns the PlayerUuid field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) GetPlayerUuid() string {
-	if o == nil || IsNil(o.PlayerUuid) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.PlayerUuid
+
+	return o.PlayerUuid
 }
 
-// GetPlayerUuidOk returns a tuple with the PlayerUuid field value if set, nil otherwise
+// GetPlayerUuidOk returns a tuple with the PlayerUuid field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) GetPlayerUuidOk() (*string, bool) {
-	if o == nil || IsNil(o.PlayerUuid) {
+	if o == nil {
 		return nil, false
 	}
-	return o.PlayerUuid, true
+	return &o.PlayerUuid, true
 }
 
-// HasPlayerUuid returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) HasPlayerUuid() bool {
-	if o != nil && !IsNil(o.PlayerUuid) {
-		return true
-	}
-
-	return false
-}
-
-// SetPlayerUuid gets a reference to the given string and assigns it to the PlayerUuid field.
+// SetPlayerUuid sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) SetPlayerUuid(v string) {
-	o.PlayerUuid = &v
+	o.PlayerUuid = v
 }
 
 func (o SkyBlockProfileMemberDungeonsTreasuresRunParticipant) MarshalJSON() ([]byte, error) {
@@ -147,16 +130,49 @@ func (o SkyBlockProfileMemberDungeonsTreasuresRunParticipant) MarshalJSON() ([]b
 
 func (o SkyBlockProfileMemberDungeonsTreasuresRunParticipant) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ClassMilestone) {
-		toSerialize["class_milestone"] = o.ClassMilestone
-	}
-	if !IsNil(o.DisplayName) {
-		toSerialize["display_name"] = o.DisplayName
-	}
-	if !IsNil(o.PlayerUuid) {
-		toSerialize["player_uuid"] = o.PlayerUuid
-	}
+	toSerialize["class_milestone"] = o.ClassMilestone
+	toSerialize["display_name"] = o.DisplayName
+	toSerialize["player_uuid"] = o.PlayerUuid
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberDungeonsTreasuresRunParticipant) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"class_milestone",
+		"display_name",
+		"player_uuid",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberDungeonsTreasuresRunParticipant := _SkyBlockProfileMemberDungeonsTreasuresRunParticipant{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberDungeonsTreasuresRunParticipant)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberDungeonsTreasuresRunParticipant(varSkyBlockProfileMemberDungeonsTreasuresRunParticipant)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberDungeonsTreasuresRunParticipant struct {

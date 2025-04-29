@@ -1,4 +1,4 @@
-# SkyBlockProfileMemberCurrenciesEssenceValue
+# SkyBlockProfileMemberCurrenciesEssenceData
 
 ## Properties
 
@@ -8,45 +8,45 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewSkyBlockProfileMemberCurrenciesEssenceValue
+### NewSkyBlockProfileMemberCurrenciesEssenceData
 
-`func NewSkyBlockProfileMemberCurrenciesEssenceValue() *SkyBlockProfileMemberCurrenciesEssenceValue`
+`func NewSkyBlockProfileMemberCurrenciesEssenceData() *SkyBlockProfileMemberCurrenciesEssenceData`
 
-NewSkyBlockProfileMemberCurrenciesEssenceValue instantiates a new SkyBlockProfileMemberCurrenciesEssenceValue object
+NewSkyBlockProfileMemberCurrenciesEssenceData instantiates a new SkyBlockProfileMemberCurrenciesEssenceData object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewSkyBlockProfileMemberCurrenciesEssenceValueWithDefaults
+### NewSkyBlockProfileMemberCurrenciesEssenceDataWithDefaults
 
-`func NewSkyBlockProfileMemberCurrenciesEssenceValueWithDefaults() *SkyBlockProfileMemberCurrenciesEssenceValue`
+`func NewSkyBlockProfileMemberCurrenciesEssenceDataWithDefaults() *SkyBlockProfileMemberCurrenciesEssenceData`
 
-NewSkyBlockProfileMemberCurrenciesEssenceValueWithDefaults instantiates a new SkyBlockProfileMemberCurrenciesEssenceValue object
+NewSkyBlockProfileMemberCurrenciesEssenceDataWithDefaults instantiates a new SkyBlockProfileMemberCurrenciesEssenceData object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetCurrent
 
-`func (o *SkyBlockProfileMemberCurrenciesEssenceValue) GetCurrent() int64`
+`func (o *SkyBlockProfileMemberCurrenciesEssenceData) GetCurrent() int64`
 
 GetCurrent returns the Current field if non-nil, zero value otherwise.
 
 ### GetCurrentOk
 
-`func (o *SkyBlockProfileMemberCurrenciesEssenceValue) GetCurrentOk() (*int64, bool)`
+`func (o *SkyBlockProfileMemberCurrenciesEssenceData) GetCurrentOk() (*int64, bool)`
 
 GetCurrentOk returns a tuple with the Current field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCurrent
 
-`func (o *SkyBlockProfileMemberCurrenciesEssenceValue) SetCurrent(v int64)`
+`func (o *SkyBlockProfileMemberCurrenciesEssenceData) SetCurrent(v int64)`
 
 SetCurrent sets Current field to given value.
 
 ### HasCurrent
 
-`func (o *SkyBlockProfileMemberCurrenciesEssenceValue) HasCurrent() bool`
+`func (o *SkyBlockProfileMemberCurrenciesEssenceData) HasCurrent() bool`
 
 HasCurrent returns a boolean if a field has been set.
 

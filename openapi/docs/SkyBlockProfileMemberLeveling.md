@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BopBonus** | Pointer to **string** |  | [optional] 
+**BopBonus** | Pointer to [**SkyBlockProfileMemberLevelingBopBonus**](SkyBlockProfileMemberLevelingBopBonus.md) |  | [optional] 
 **CategoryExpanded** | Pointer to **bool** |  | [optional] 
 **ClaimedTalisman** | Pointer to **bool** |  | [optional] 
+**Completed** | Pointer to [**[]SkyBlockProfileMemberLevelingXPTask**](SkyBlockProfileMemberLevelingXPTask.md) |  | [optional] 
 **CompletedTasks** | Pointer to [**[]SkyBlockProfileMemberLevelingXPTask**](SkyBlockProfileMemberLevelingXPTask.md) |  | [optional] 
 **Completions** | Pointer to [**SkyBlockProfileMemberLevelingCompletions**](SkyBlockProfileMemberLevelingCompletions.md) |  | [optional] 
 **EmblemUnlocks** | Pointer to [**[]SkyBlockProfileMemberLevelingEmblem**](SkyBlockProfileMemberLevelingEmblem.md) |  | [optional] 
 **Experience** | Pointer to **int64** |  | [optional] 
 **FishingFestivalSharksKilled** | Pointer to **int64** |  | [optional] 
+**GuideSort** | Pointer to [**SkyBlockProfileMemberLevelingGuideSort**](SkyBlockProfileMemberLevelingGuideSort.md) |  | [optional] 
 **HighestPetScore** | Pointer to **int64** |  | [optional] 
 **LastViewedTasks** | Pointer to **[]string** |  | [optional] 
 **Migrated** | Pointer to **bool** |  | [optional] 
@@ -19,6 +21,7 @@ Name | Type | Description | Notes
 **MigratedCompletions2** | Pointer to **bool** |  | [optional] 
 **MiningFiestaOresMined** | Pointer to **int64** |  | [optional] 
 **SelectedSymbol** | Pointer to [**SkyBlockProfileMemberLevelingEmblem**](SkyBlockProfileMemberLevelingEmblem.md) |  | [optional] 
+**TaskSort** | Pointer to [**SkyBlockProfileMemberLevelingTaskSort**](SkyBlockProfileMemberLevelingTaskSort.md) |  | [optional] 
 
 ## Methods
 
@@ -41,20 +44,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetBopBonus
 
-`func (o *SkyBlockProfileMemberLeveling) GetBopBonus() string`
+`func (o *SkyBlockProfileMemberLeveling) GetBopBonus() SkyBlockProfileMemberLevelingBopBonus`
 
 GetBopBonus returns the BopBonus field if non-nil, zero value otherwise.
 
 ### GetBopBonusOk
 
-`func (o *SkyBlockProfileMemberLeveling) GetBopBonusOk() (*string, bool)`
+`func (o *SkyBlockProfileMemberLeveling) GetBopBonusOk() (*SkyBlockProfileMemberLevelingBopBonus, bool)`
 
 GetBopBonusOk returns a tuple with the BopBonus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBopBonus
 
-`func (o *SkyBlockProfileMemberLeveling) SetBopBonus(v string)`
+`func (o *SkyBlockProfileMemberLeveling) SetBopBonus(v SkyBlockProfileMemberLevelingBopBonus)`
 
 SetBopBonus sets BopBonus field to given value.
 
@@ -113,6 +116,31 @@ SetClaimedTalisman sets ClaimedTalisman field to given value.
 `func (o *SkyBlockProfileMemberLeveling) HasClaimedTalisman() bool`
 
 HasClaimedTalisman returns a boolean if a field has been set.
+
+### GetCompleted
+
+`func (o *SkyBlockProfileMemberLeveling) GetCompleted() []SkyBlockProfileMemberLevelingXPTask`
+
+GetCompleted returns the Completed field if non-nil, zero value otherwise.
+
+### GetCompletedOk
+
+`func (o *SkyBlockProfileMemberLeveling) GetCompletedOk() (*[]SkyBlockProfileMemberLevelingXPTask, bool)`
+
+GetCompletedOk returns a tuple with the Completed field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCompleted
+
+`func (o *SkyBlockProfileMemberLeveling) SetCompleted(v []SkyBlockProfileMemberLevelingXPTask)`
+
+SetCompleted sets Completed field to given value.
+
+### HasCompleted
+
+`func (o *SkyBlockProfileMemberLeveling) HasCompleted() bool`
+
+HasCompleted returns a boolean if a field has been set.
 
 ### GetCompletedTasks
 
@@ -238,6 +266,31 @@ SetFishingFestivalSharksKilled sets FishingFestivalSharksKilled field to given v
 `func (o *SkyBlockProfileMemberLeveling) HasFishingFestivalSharksKilled() bool`
 
 HasFishingFestivalSharksKilled returns a boolean if a field has been set.
+
+### GetGuideSort
+
+`func (o *SkyBlockProfileMemberLeveling) GetGuideSort() SkyBlockProfileMemberLevelingGuideSort`
+
+GetGuideSort returns the GuideSort field if non-nil, zero value otherwise.
+
+### GetGuideSortOk
+
+`func (o *SkyBlockProfileMemberLeveling) GetGuideSortOk() (*SkyBlockProfileMemberLevelingGuideSort, bool)`
+
+GetGuideSortOk returns a tuple with the GuideSort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGuideSort
+
+`func (o *SkyBlockProfileMemberLeveling) SetGuideSort(v SkyBlockProfileMemberLevelingGuideSort)`
+
+SetGuideSort sets GuideSort field to given value.
+
+### HasGuideSort
+
+`func (o *SkyBlockProfileMemberLeveling) HasGuideSort() bool`
+
+HasGuideSort returns a boolean if a field has been set.
 
 ### GetHighestPetScore
 
@@ -413,6 +466,31 @@ SetSelectedSymbol sets SelectedSymbol field to given value.
 `func (o *SkyBlockProfileMemberLeveling) HasSelectedSymbol() bool`
 
 HasSelectedSymbol returns a boolean if a field has been set.
+
+### GetTaskSort
+
+`func (o *SkyBlockProfileMemberLeveling) GetTaskSort() SkyBlockProfileMemberLevelingTaskSort`
+
+GetTaskSort returns the TaskSort field if non-nil, zero value otherwise.
+
+### GetTaskSortOk
+
+`func (o *SkyBlockProfileMemberLeveling) GetTaskSortOk() (*SkyBlockProfileMemberLevelingTaskSort, bool)`
+
+GetTaskSortOk returns a tuple with the TaskSort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTaskSort
+
+`func (o *SkyBlockProfileMemberLeveling) SetTaskSort(v SkyBlockProfileMemberLevelingTaskSort)`
+
+SetTaskSort sets TaskSort field to given value.
+
+### HasTaskSort
+
+`func (o *SkyBlockProfileMemberLeveling) HasTaskSort() bool`
+
+HasTaskSort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

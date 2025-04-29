@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberForge type satisfies the MappedNullable interface at compile time
@@ -19,15 +21,18 @@ var _ MappedNullable = &SkyBlockProfileMemberForge{}
 
 // SkyBlockProfileMemberForge struct for SkyBlockProfileMemberForge
 type SkyBlockProfileMemberForge struct {
-	ForgeProcesses *map[string]map[string]SkyBlockProfileMemberForgeProcessesProcessSlot `json:"forge_processes,omitempty"`
+	ForgeProcesses map[string]map[string]SkyBlockProfileMemberForgeProcessesProcessSlot `json:"forge_processes"`
 }
+
+type _SkyBlockProfileMemberForge SkyBlockProfileMemberForge
 
 // NewSkyBlockProfileMemberForge instantiates a new SkyBlockProfileMemberForge object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberForge() *SkyBlockProfileMemberForge {
+func NewSkyBlockProfileMemberForge(forgeProcesses map[string]map[string]SkyBlockProfileMemberForgeProcessesProcessSlot) *SkyBlockProfileMemberForge {
 	this := SkyBlockProfileMemberForge{}
+	this.ForgeProcesses = forgeProcesses
 	return &this
 }
 
@@ -39,36 +44,28 @@ func NewSkyBlockProfileMemberForgeWithDefaults() *SkyBlockProfileMemberForge {
 	return &this
 }
 
-// GetForgeProcesses returns the ForgeProcesses field value if set, zero value otherwise.
+// GetForgeProcesses returns the ForgeProcesses field value
 func (o *SkyBlockProfileMemberForge) GetForgeProcesses() map[string]map[string]SkyBlockProfileMemberForgeProcessesProcessSlot {
-	if o == nil || IsNil(o.ForgeProcesses) {
+	if o == nil {
 		var ret map[string]map[string]SkyBlockProfileMemberForgeProcessesProcessSlot
 		return ret
 	}
-	return *o.ForgeProcesses
+
+	return o.ForgeProcesses
 }
 
-// GetForgeProcessesOk returns a tuple with the ForgeProcesses field value if set, nil otherwise
+// GetForgeProcessesOk returns a tuple with the ForgeProcesses field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberForge) GetForgeProcessesOk() (*map[string]map[string]SkyBlockProfileMemberForgeProcessesProcessSlot, bool) {
-	if o == nil || IsNil(o.ForgeProcesses) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ForgeProcesses, true
+	return &o.ForgeProcesses, true
 }
 
-// HasForgeProcesses returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberForge) HasForgeProcesses() bool {
-	if o != nil && !IsNil(o.ForgeProcesses) {
-		return true
-	}
-
-	return false
-}
-
-// SetForgeProcesses gets a reference to the given map[string]map[string]SkyBlockProfileMemberForgeProcessesProcessSlot and assigns it to the ForgeProcesses field.
+// SetForgeProcesses sets field value
 func (o *SkyBlockProfileMemberForge) SetForgeProcesses(v map[string]map[string]SkyBlockProfileMemberForgeProcessesProcessSlot) {
-	o.ForgeProcesses = &v
+	o.ForgeProcesses = v
 }
 
 func (o SkyBlockProfileMemberForge) MarshalJSON() ([]byte, error) {
@@ -81,10 +78,45 @@ func (o SkyBlockProfileMemberForge) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileMemberForge) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ForgeProcesses) {
-		toSerialize["forge_processes"] = o.ForgeProcesses
-	}
+	toSerialize["forge_processes"] = o.ForgeProcesses
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberForge) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"forge_processes",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberForge := _SkyBlockProfileMemberForge{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberForge)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberForge(varSkyBlockProfileMemberForge)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberForge struct {

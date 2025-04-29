@@ -15,7 +15,7 @@ import (
 	"fmt"
 )
 
-// SkyBlockProfileGameMode The SkyBlock game mode of the profile, not present if normal mode
+// SkyBlockProfileGameMode the model 'SkyBlockProfileGameMode'
 type SkyBlockProfileGameMode string
 
 // List of SkyBlockProfile_game_mode

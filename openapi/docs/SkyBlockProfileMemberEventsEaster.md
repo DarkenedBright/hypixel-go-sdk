@@ -4,34 +4,34 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Chocolate** | Pointer to **int64** |  | [optional] 
+**Chocolate** | **int64** |  | 
 **ChocolateLevel** | Pointer to **int64** |  | [optional] 
 **ChocolateMultiplierUpgrades** | Pointer to **int64** |  | [optional] 
-**ChocolateSincePrestige** | Pointer to **int64** |  | [optional] 
+**ChocolateSincePrestige** | **int64** |  | 
 **ClickUpgrades** | Pointer to **int64** |  | [optional] 
 **ElDoradoProgress** | Pointer to **int64** |  | [optional] 
-**Employees** | Pointer to **map[string]int64** |  | [optional] 
+**Employees** | Pointer to [**SkyBlockProfileMemberEventsEasterEmployees**](SkyBlockProfileMemberEventsEasterEmployees.md) |  | [optional] 
 **GoldenClickAmount** | Pointer to **int64** |  | [optional] 
 **GoldenClickYear** | Pointer to **int64** |  | [optional] 
 **LastViewedChocolateFactory** | Pointer to **int64** |  | [optional] 
 **RabbitBarnCapacityLevel** | Pointer to **int64** |  | [optional] 
 **RabbitFilter** | Pointer to **string** |  | [optional] 
 **RabbitHitmen** | Pointer to [**SkyBlockProfileMemberEventsEasterRabbitHitmen**](SkyBlockProfileMemberEventsEasterRabbitHitmen.md) |  | [optional] 
-**RabbitHotspotFiler** | Pointer to **string** |  | [optional] 
+**RabbitHotspotFiler** | Pointer to [**SkyBlockProfileMemberEventsEasterRabbitHotspotFiler**](SkyBlockProfileMemberEventsEasterRabbitHotspotFiler.md) |  | [optional] 
 **RabbitRarityUpgrades** | Pointer to **int64** |  | [optional] 
-**RabbitSort** | Pointer to **string** |  | [optional] 
+**RabbitSort** | Pointer to [**SkyBlockProfileMemberEventsEasterRabbitSort**](SkyBlockProfileMemberEventsEasterRabbitSort.md) |  | [optional] 
 **Rabbits** | Pointer to [**SkyBlockProfileMemberEventsEasterRabbits**](SkyBlockProfileMemberEventsEasterRabbits.md) |  | [optional] 
 **RefinedDarkCacaoTruffles** | Pointer to **int64** |  | [optional] 
 **Shop** | Pointer to [**SkyBlockProfileMemberEventsEasterShop**](SkyBlockProfileMemberEventsEasterShop.md) |  | [optional] 
 **SupremeChocolateBars** | Pointer to **int64** |  | [optional] 
 **TimeTower** | Pointer to [**SkyBlockProfileMemberEventsEasterTimeTower**](SkyBlockProfileMemberEventsEasterTimeTower.md) |  | [optional] 
-**TotalChocolate** | Pointer to **int64** |  | [optional] 
+**TotalChocolate** | **int64** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberEventsEaster
 
-`func NewSkyBlockProfileMemberEventsEaster() *SkyBlockProfileMemberEventsEaster`
+`func NewSkyBlockProfileMemberEventsEaster(chocolate int64, chocolateSincePrestige int64, totalChocolate int64, ) *SkyBlockProfileMemberEventsEaster`
 
 NewSkyBlockProfileMemberEventsEaster instantiates a new SkyBlockProfileMemberEventsEaster object
 This constructor will assign default values to properties that have it defined,
@@ -65,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetChocolate sets Chocolate field to given value.
 
-### HasChocolate
-
-`func (o *SkyBlockProfileMemberEventsEaster) HasChocolate() bool`
-
-HasChocolate returns a boolean if a field has been set.
 
 ### GetChocolateLevel
 
@@ -140,11 +135,6 @@ and a boolean to check if the value has been set.
 
 SetChocolateSincePrestige sets ChocolateSincePrestige field to given value.
 
-### HasChocolateSincePrestige
-
-`func (o *SkyBlockProfileMemberEventsEaster) HasChocolateSincePrestige() bool`
-
-HasChocolateSincePrestige returns a boolean if a field has been set.
 
 ### GetClickUpgrades
 
@@ -198,20 +188,20 @@ HasElDoradoProgress returns a boolean if a field has been set.
 
 ### GetEmployees
 
-`func (o *SkyBlockProfileMemberEventsEaster) GetEmployees() map[string]int64`
+`func (o *SkyBlockProfileMemberEventsEaster) GetEmployees() SkyBlockProfileMemberEventsEasterEmployees`
 
 GetEmployees returns the Employees field if non-nil, zero value otherwise.
 
 ### GetEmployeesOk
 
-`func (o *SkyBlockProfileMemberEventsEaster) GetEmployeesOk() (*map[string]int64, bool)`
+`func (o *SkyBlockProfileMemberEventsEaster) GetEmployeesOk() (*SkyBlockProfileMemberEventsEasterEmployees, bool)`
 
 GetEmployeesOk returns a tuple with the Employees field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEmployees
 
-`func (o *SkyBlockProfileMemberEventsEaster) SetEmployees(v map[string]int64)`
+`func (o *SkyBlockProfileMemberEventsEaster) SetEmployees(v SkyBlockProfileMemberEventsEasterEmployees)`
 
 SetEmployees sets Employees field to given value.
 
@@ -373,20 +363,20 @@ HasRabbitHitmen returns a boolean if a field has been set.
 
 ### GetRabbitHotspotFiler
 
-`func (o *SkyBlockProfileMemberEventsEaster) GetRabbitHotspotFiler() string`
+`func (o *SkyBlockProfileMemberEventsEaster) GetRabbitHotspotFiler() SkyBlockProfileMemberEventsEasterRabbitHotspotFiler`
 
 GetRabbitHotspotFiler returns the RabbitHotspotFiler field if non-nil, zero value otherwise.
 
 ### GetRabbitHotspotFilerOk
 
-`func (o *SkyBlockProfileMemberEventsEaster) GetRabbitHotspotFilerOk() (*string, bool)`
+`func (o *SkyBlockProfileMemberEventsEaster) GetRabbitHotspotFilerOk() (*SkyBlockProfileMemberEventsEasterRabbitHotspotFiler, bool)`
 
 GetRabbitHotspotFilerOk returns a tuple with the RabbitHotspotFiler field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRabbitHotspotFiler
 
-`func (o *SkyBlockProfileMemberEventsEaster) SetRabbitHotspotFiler(v string)`
+`func (o *SkyBlockProfileMemberEventsEaster) SetRabbitHotspotFiler(v SkyBlockProfileMemberEventsEasterRabbitHotspotFiler)`
 
 SetRabbitHotspotFiler sets RabbitHotspotFiler field to given value.
 
@@ -423,20 +413,20 @@ HasRabbitRarityUpgrades returns a boolean if a field has been set.
 
 ### GetRabbitSort
 
-`func (o *SkyBlockProfileMemberEventsEaster) GetRabbitSort() string`
+`func (o *SkyBlockProfileMemberEventsEaster) GetRabbitSort() SkyBlockProfileMemberEventsEasterRabbitSort`
 
 GetRabbitSort returns the RabbitSort field if non-nil, zero value otherwise.
 
 ### GetRabbitSortOk
 
-`func (o *SkyBlockProfileMemberEventsEaster) GetRabbitSortOk() (*string, bool)`
+`func (o *SkyBlockProfileMemberEventsEaster) GetRabbitSortOk() (*SkyBlockProfileMemberEventsEasterRabbitSort, bool)`
 
 GetRabbitSortOk returns a tuple with the RabbitSort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRabbitSort
 
-`func (o *SkyBlockProfileMemberEventsEaster) SetRabbitSort(v string)`
+`func (o *SkyBlockProfileMemberEventsEaster) SetRabbitSort(v SkyBlockProfileMemberEventsEasterRabbitSort)`
 
 SetRabbitSort sets RabbitSort field to given value.
 
@@ -590,11 +580,6 @@ and a boolean to check if the value has been set.
 
 SetTotalChocolate sets TotalChocolate field to given value.
 
-### HasTotalChocolate
-
-`func (o *SkyBlockProfileMemberEventsEaster) HasTotalChocolate() bool`
-
-HasTotalChocolate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

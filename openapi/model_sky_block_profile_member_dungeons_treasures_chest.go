@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberDungeonsTreasuresChest type satisfies the MappedNullable interface at compile time
@@ -19,22 +21,32 @@ var _ MappedNullable = &SkyBlockProfileMemberDungeonsTreasuresChest{}
 
 // SkyBlockProfileMemberDungeonsTreasuresChest struct for SkyBlockProfileMemberDungeonsTreasuresChest
 type SkyBlockProfileMemberDungeonsTreasuresChest struct {
-	ChestId       *string                                             `json:"chest_id,omitempty"`
-	Paid          *bool                                               `json:"paid,omitempty"`
-	Quality       *int64                                              `json:"quality,omitempty"`
-	Rerolls       *int64                                              `json:"rerolls,omitempty"`
-	Rewards       *SkyBlockProfileMemberDungeonsTreasuresChestRewards `json:"rewards,omitempty"`
-	RunId         *string                                             `json:"run_id,omitempty"`
-	ShinyEligible *bool                                               `json:"shiny_eligible,omitempty"`
-	TreasureType  *string                                             `json:"treasure_type,omitempty"`
+	ChestId       string                                             `json:"chest_id"`
+	Paid          bool                                               `json:"paid"`
+	Quality       int64                                              `json:"quality"`
+	Rerolls       int64                                              `json:"rerolls"`
+	Rewards       SkyBlockProfileMemberDungeonsTreasuresChestRewards `json:"rewards"`
+	RunId         string                                             `json:"run_id"`
+	ShinyEligible bool                                               `json:"shiny_eligible"`
+	TreasureType  string                                             `json:"treasure_type"`
 }
+
+type _SkyBlockProfileMemberDungeonsTreasuresChest SkyBlockProfileMemberDungeonsTreasuresChest
 
 // NewSkyBlockProfileMemberDungeonsTreasuresChest instantiates a new SkyBlockProfileMemberDungeonsTreasuresChest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberDungeonsTreasuresChest() *SkyBlockProfileMemberDungeonsTreasuresChest {
+func NewSkyBlockProfileMemberDungeonsTreasuresChest(chestId string, paid bool, quality int64, rerolls int64, rewards SkyBlockProfileMemberDungeonsTreasuresChestRewards, runId string, shinyEligible bool, treasureType string) *SkyBlockProfileMemberDungeonsTreasuresChest {
 	this := SkyBlockProfileMemberDungeonsTreasuresChest{}
+	this.ChestId = chestId
+	this.Paid = paid
+	this.Quality = quality
+	this.Rerolls = rerolls
+	this.Rewards = rewards
+	this.RunId = runId
+	this.ShinyEligible = shinyEligible
+	this.TreasureType = treasureType
 	return &this
 }
 
@@ -46,260 +58,196 @@ func NewSkyBlockProfileMemberDungeonsTreasuresChestWithDefaults() *SkyBlockProfi
 	return &this
 }
 
-// GetChestId returns the ChestId field value if set, zero value otherwise.
+// GetChestId returns the ChestId field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetChestId() string {
-	if o == nil || IsNil(o.ChestId) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.ChestId
+
+	return o.ChestId
 }
 
-// GetChestIdOk returns a tuple with the ChestId field value if set, nil otherwise
+// GetChestIdOk returns a tuple with the ChestId field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetChestIdOk() (*string, bool) {
-	if o == nil || IsNil(o.ChestId) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ChestId, true
+	return &o.ChestId, true
 }
 
-// HasChestId returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasChestId() bool {
-	if o != nil && !IsNil(o.ChestId) {
-		return true
-	}
-
-	return false
-}
-
-// SetChestId gets a reference to the given string and assigns it to the ChestId field.
+// SetChestId sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) SetChestId(v string) {
-	o.ChestId = &v
+	o.ChestId = v
 }
 
-// GetPaid returns the Paid field value if set, zero value otherwise.
+// GetPaid returns the Paid field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetPaid() bool {
-	if o == nil || IsNil(o.Paid) {
+	if o == nil {
 		var ret bool
 		return ret
 	}
-	return *o.Paid
+
+	return o.Paid
 }
 
-// GetPaidOk returns a tuple with the Paid field value if set, nil otherwise
+// GetPaidOk returns a tuple with the Paid field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetPaidOk() (*bool, bool) {
-	if o == nil || IsNil(o.Paid) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Paid, true
+	return &o.Paid, true
 }
 
-// HasPaid returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasPaid() bool {
-	if o != nil && !IsNil(o.Paid) {
-		return true
-	}
-
-	return false
-}
-
-// SetPaid gets a reference to the given bool and assigns it to the Paid field.
+// SetPaid sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) SetPaid(v bool) {
-	o.Paid = &v
+	o.Paid = v
 }
 
-// GetQuality returns the Quality field value if set, zero value otherwise.
+// GetQuality returns the Quality field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetQuality() int64 {
-	if o == nil || IsNil(o.Quality) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.Quality
+
+	return o.Quality
 }
 
-// GetQualityOk returns a tuple with the Quality field value if set, nil otherwise
+// GetQualityOk returns a tuple with the Quality field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetQualityOk() (*int64, bool) {
-	if o == nil || IsNil(o.Quality) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Quality, true
+	return &o.Quality, true
 }
 
-// HasQuality returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasQuality() bool {
-	if o != nil && !IsNil(o.Quality) {
-		return true
-	}
-
-	return false
-}
-
-// SetQuality gets a reference to the given int64 and assigns it to the Quality field.
+// SetQuality sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) SetQuality(v int64) {
-	o.Quality = &v
+	o.Quality = v
 }
 
-// GetRerolls returns the Rerolls field value if set, zero value otherwise.
+// GetRerolls returns the Rerolls field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetRerolls() int64 {
-	if o == nil || IsNil(o.Rerolls) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.Rerolls
+
+	return o.Rerolls
 }
 
-// GetRerollsOk returns a tuple with the Rerolls field value if set, nil otherwise
+// GetRerollsOk returns a tuple with the Rerolls field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetRerollsOk() (*int64, bool) {
-	if o == nil || IsNil(o.Rerolls) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Rerolls, true
+	return &o.Rerolls, true
 }
 
-// HasRerolls returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasRerolls() bool {
-	if o != nil && !IsNil(o.Rerolls) {
-		return true
-	}
-
-	return false
-}
-
-// SetRerolls gets a reference to the given int64 and assigns it to the Rerolls field.
+// SetRerolls sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) SetRerolls(v int64) {
-	o.Rerolls = &v
+	o.Rerolls = v
 }
 
-// GetRewards returns the Rewards field value if set, zero value otherwise.
+// GetRewards returns the Rewards field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetRewards() SkyBlockProfileMemberDungeonsTreasuresChestRewards {
-	if o == nil || IsNil(o.Rewards) {
+	if o == nil {
 		var ret SkyBlockProfileMemberDungeonsTreasuresChestRewards
 		return ret
 	}
-	return *o.Rewards
+
+	return o.Rewards
 }
 
-// GetRewardsOk returns a tuple with the Rewards field value if set, nil otherwise
+// GetRewardsOk returns a tuple with the Rewards field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetRewardsOk() (*SkyBlockProfileMemberDungeonsTreasuresChestRewards, bool) {
-	if o == nil || IsNil(o.Rewards) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Rewards, true
+	return &o.Rewards, true
 }
 
-// HasRewards returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasRewards() bool {
-	if o != nil && !IsNil(o.Rewards) {
-		return true
-	}
-
-	return false
-}
-
-// SetRewards gets a reference to the given SkyBlockProfileMemberDungeonsTreasuresChestRewards and assigns it to the Rewards field.
+// SetRewards sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) SetRewards(v SkyBlockProfileMemberDungeonsTreasuresChestRewards) {
-	o.Rewards = &v
+	o.Rewards = v
 }
 
-// GetRunId returns the RunId field value if set, zero value otherwise.
+// GetRunId returns the RunId field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetRunId() string {
-	if o == nil || IsNil(o.RunId) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.RunId
+
+	return o.RunId
 }
 
-// GetRunIdOk returns a tuple with the RunId field value if set, nil otherwise
+// GetRunIdOk returns a tuple with the RunId field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetRunIdOk() (*string, bool) {
-	if o == nil || IsNil(o.RunId) {
+	if o == nil {
 		return nil, false
 	}
-	return o.RunId, true
+	return &o.RunId, true
 }
 
-// HasRunId returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasRunId() bool {
-	if o != nil && !IsNil(o.RunId) {
-		return true
-	}
-
-	return false
-}
-
-// SetRunId gets a reference to the given string and assigns it to the RunId field.
+// SetRunId sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) SetRunId(v string) {
-	o.RunId = &v
+	o.RunId = v
 }
 
-// GetShinyEligible returns the ShinyEligible field value if set, zero value otherwise.
+// GetShinyEligible returns the ShinyEligible field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetShinyEligible() bool {
-	if o == nil || IsNil(o.ShinyEligible) {
+	if o == nil {
 		var ret bool
 		return ret
 	}
-	return *o.ShinyEligible
+
+	return o.ShinyEligible
 }
 
-// GetShinyEligibleOk returns a tuple with the ShinyEligible field value if set, nil otherwise
+// GetShinyEligibleOk returns a tuple with the ShinyEligible field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetShinyEligibleOk() (*bool, bool) {
-	if o == nil || IsNil(o.ShinyEligible) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ShinyEligible, true
+	return &o.ShinyEligible, true
 }
 
-// HasShinyEligible returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasShinyEligible() bool {
-	if o != nil && !IsNil(o.ShinyEligible) {
-		return true
-	}
-
-	return false
-}
-
-// SetShinyEligible gets a reference to the given bool and assigns it to the ShinyEligible field.
+// SetShinyEligible sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) SetShinyEligible(v bool) {
-	o.ShinyEligible = &v
+	o.ShinyEligible = v
 }
 
-// GetTreasureType returns the TreasureType field value if set, zero value otherwise.
+// GetTreasureType returns the TreasureType field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetTreasureType() string {
-	if o == nil || IsNil(o.TreasureType) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.TreasureType
+
+	return o.TreasureType
 }
 
-// GetTreasureTypeOk returns a tuple with the TreasureType field value if set, nil otherwise
+// GetTreasureTypeOk returns a tuple with the TreasureType field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) GetTreasureTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.TreasureType) {
+	if o == nil {
 		return nil, false
 	}
-	return o.TreasureType, true
+	return &o.TreasureType, true
 }
 
-// HasTreasureType returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasTreasureType() bool {
-	if o != nil && !IsNil(o.TreasureType) {
-		return true
-	}
-
-	return false
-}
-
-// SetTreasureType gets a reference to the given string and assigns it to the TreasureType field.
+// SetTreasureType sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresChest) SetTreasureType(v string) {
-	o.TreasureType = &v
+	o.TreasureType = v
 }
 
 func (o SkyBlockProfileMemberDungeonsTreasuresChest) MarshalJSON() ([]byte, error) {
@@ -312,31 +260,59 @@ func (o SkyBlockProfileMemberDungeonsTreasuresChest) MarshalJSON() ([]byte, erro
 
 func (o SkyBlockProfileMemberDungeonsTreasuresChest) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ChestId) {
-		toSerialize["chest_id"] = o.ChestId
-	}
-	if !IsNil(o.Paid) {
-		toSerialize["paid"] = o.Paid
-	}
-	if !IsNil(o.Quality) {
-		toSerialize["quality"] = o.Quality
-	}
-	if !IsNil(o.Rerolls) {
-		toSerialize["rerolls"] = o.Rerolls
-	}
-	if !IsNil(o.Rewards) {
-		toSerialize["rewards"] = o.Rewards
-	}
-	if !IsNil(o.RunId) {
-		toSerialize["run_id"] = o.RunId
-	}
-	if !IsNil(o.ShinyEligible) {
-		toSerialize["shiny_eligible"] = o.ShinyEligible
-	}
-	if !IsNil(o.TreasureType) {
-		toSerialize["treasure_type"] = o.TreasureType
-	}
+	toSerialize["chest_id"] = o.ChestId
+	toSerialize["paid"] = o.Paid
+	toSerialize["quality"] = o.Quality
+	toSerialize["rerolls"] = o.Rerolls
+	toSerialize["rewards"] = o.Rewards
+	toSerialize["run_id"] = o.RunId
+	toSerialize["shiny_eligible"] = o.ShinyEligible
+	toSerialize["treasure_type"] = o.TreasureType
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberDungeonsTreasuresChest) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"chest_id",
+		"paid",
+		"quality",
+		"rerolls",
+		"rewards",
+		"run_id",
+		"shiny_eligible",
+		"treasure_type",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberDungeonsTreasuresChest := _SkyBlockProfileMemberDungeonsTreasuresChest{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberDungeonsTreasuresChest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberDungeonsTreasuresChest(varSkyBlockProfileMemberDungeonsTreasuresChest)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberDungeonsTreasuresChest struct {

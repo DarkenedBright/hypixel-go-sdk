@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Runback** | Pointer to **bool** |  | [optional] 
-**SelectedRace** | Pointer to **string** |  | [optional] 
-**SelectedSetting** | Pointer to **string** |  | [optional] 
+**Runback** | **bool** |  | 
+**SelectedRace** | [**SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace**](SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace.md) |  | 
+**SelectedSetting** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting**](SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting.md) |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberDungeonsDungeonHubRaceSettings
 
-`func NewSkyBlockProfileMemberDungeonsDungeonHubRaceSettings() *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings`
+`func NewSkyBlockProfileMemberDungeonsDungeonHubRaceSettings(runback bool, selectedRace SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace, ) *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings`
 
 NewSkyBlockProfileMemberDungeonsDungeonHubRaceSettings instantiates a new SkyBlockProfileMemberDungeonsDungeonHubRaceSettings object
 This constructor will assign default values to properties that have it defined,
@@ -46,53 +46,43 @@ and a boolean to check if the value has been set.
 
 SetRunback sets Runback field to given value.
 
-### HasRunback
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) HasRunback() bool`
-
-HasRunback returns a boolean if a field has been set.
 
 ### GetSelectedRace
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedRace() string`
+`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedRace() SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace`
 
 GetSelectedRace returns the SelectedRace field if non-nil, zero value otherwise.
 
 ### GetSelectedRaceOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedRaceOk() (*string, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedRaceOk() (*SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace, bool)`
 
 GetSelectedRaceOk returns a tuple with the SelectedRace field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSelectedRace
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) SetSelectedRace(v string)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) SetSelectedRace(v SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace)`
 
 SetSelectedRace sets SelectedRace field to given value.
 
-### HasSelectedRace
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) HasSelectedRace() bool`
-
-HasSelectedRace returns a boolean if a field has been set.
 
 ### GetSelectedSetting
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedSetting() string`
+`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedSetting() SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting`
 
 GetSelectedSetting returns the SelectedSetting field if non-nil, zero value otherwise.
 
 ### GetSelectedSettingOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedSettingOk() (*string, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedSettingOk() (*SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting, bool)`
 
 GetSelectedSettingOk returns a tuple with the SelectedSetting field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSelectedSetting
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) SetSelectedSetting(v string)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) SetSelectedSetting(v SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting)`
 
 SetSelectedSetting sets SelectedSetting field to given value.
 

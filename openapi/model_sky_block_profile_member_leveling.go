@@ -19,14 +19,16 @@ var _ MappedNullable = &SkyBlockProfileMemberLeveling{}
 
 // SkyBlockProfileMemberLeveling struct for SkyBlockProfileMemberLeveling
 type SkyBlockProfileMemberLeveling struct {
-	BopBonus                    *string                                   `json:"bop_bonus,omitempty"`
+	BopBonus                    *SkyBlockProfileMemberLevelingBopBonus    `json:"bop_bonus,omitempty"`
 	CategoryExpanded            *bool                                     `json:"category_expanded,omitempty"`
 	ClaimedTalisman             *bool                                     `json:"claimed_talisman,omitempty"`
+	Completed                   []SkyBlockProfileMemberLevelingXPTask     `json:"completed,omitempty"`
 	CompletedTasks              []SkyBlockProfileMemberLevelingXPTask     `json:"completed_tasks,omitempty"`
 	Completions                 *SkyBlockProfileMemberLevelingCompletions `json:"completions,omitempty"`
 	EmblemUnlocks               []SkyBlockProfileMemberLevelingEmblem     `json:"emblem_unlocks,omitempty"`
 	Experience                  *int64                                    `json:"experience,omitempty"`
 	FishingFestivalSharksKilled *int64                                    `json:"fishing_festival_sharks_killed,omitempty"`
+	GuideSort                   *SkyBlockProfileMemberLevelingGuideSort   `json:"guide_sort,omitempty"`
 	HighestPetScore             *int64                                    `json:"highest_pet_score,omitempty"`
 	LastViewedTasks             []string                                  `json:"last_viewed_tasks,omitempty"`
 	Migrated                    *bool                                     `json:"migrated,omitempty"`
@@ -34,6 +36,7 @@ type SkyBlockProfileMemberLeveling struct {
 	MigratedCompletions2        *bool                                     `json:"migrated_completions_2,omitempty"`
 	MiningFiestaOresMined       *int64                                    `json:"mining_fiesta_ores_mined,omitempty"`
 	SelectedSymbol              *SkyBlockProfileMemberLevelingEmblem      `json:"selected_symbol,omitempty"`
+	TaskSort                    *SkyBlockProfileMemberLevelingTaskSort    `json:"task_sort,omitempty"`
 }
 
 // NewSkyBlockProfileMemberLeveling instantiates a new SkyBlockProfileMemberLeveling object
@@ -54,9 +57,9 @@ func NewSkyBlockProfileMemberLevelingWithDefaults() *SkyBlockProfileMemberLeveli
 }
 
 // GetBopBonus returns the BopBonus field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberLeveling) GetBopBonus() string {
+func (o *SkyBlockProfileMemberLeveling) GetBopBonus() SkyBlockProfileMemberLevelingBopBonus {
 	if o == nil || IsNil(o.BopBonus) {
-		var ret string
+		var ret SkyBlockProfileMemberLevelingBopBonus
 		return ret
 	}
 	return *o.BopBonus
@@ -64,7 +67,7 @@ func (o *SkyBlockProfileMemberLeveling) GetBopBonus() string {
 
 // GetBopBonusOk returns a tuple with the BopBonus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberLeveling) GetBopBonusOk() (*string, bool) {
+func (o *SkyBlockProfileMemberLeveling) GetBopBonusOk() (*SkyBlockProfileMemberLevelingBopBonus, bool) {
 	if o == nil || IsNil(o.BopBonus) {
 		return nil, false
 	}
@@ -80,8 +83,8 @@ func (o *SkyBlockProfileMemberLeveling) HasBopBonus() bool {
 	return false
 }
 
-// SetBopBonus gets a reference to the given string and assigns it to the BopBonus field.
-func (o *SkyBlockProfileMemberLeveling) SetBopBonus(v string) {
+// SetBopBonus gets a reference to the given SkyBlockProfileMemberLevelingBopBonus and assigns it to the BopBonus field.
+func (o *SkyBlockProfileMemberLeveling) SetBopBonus(v SkyBlockProfileMemberLevelingBopBonus) {
 	o.BopBonus = &v
 }
 
@@ -147,6 +150,38 @@ func (o *SkyBlockProfileMemberLeveling) HasClaimedTalisman() bool {
 // SetClaimedTalisman gets a reference to the given bool and assigns it to the ClaimedTalisman field.
 func (o *SkyBlockProfileMemberLeveling) SetClaimedTalisman(v bool) {
 	o.ClaimedTalisman = &v
+}
+
+// GetCompleted returns the Completed field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberLeveling) GetCompleted() []SkyBlockProfileMemberLevelingXPTask {
+	if o == nil || IsNil(o.Completed) {
+		var ret []SkyBlockProfileMemberLevelingXPTask
+		return ret
+	}
+	return o.Completed
+}
+
+// GetCompletedOk returns a tuple with the Completed field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberLeveling) GetCompletedOk() ([]SkyBlockProfileMemberLevelingXPTask, bool) {
+	if o == nil || IsNil(o.Completed) {
+		return nil, false
+	}
+	return o.Completed, true
+}
+
+// HasCompleted returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberLeveling) HasCompleted() bool {
+	if o != nil && !IsNil(o.Completed) {
+		return true
+	}
+
+	return false
+}
+
+// SetCompleted gets a reference to the given []SkyBlockProfileMemberLevelingXPTask and assigns it to the Completed field.
+func (o *SkyBlockProfileMemberLeveling) SetCompleted(v []SkyBlockProfileMemberLevelingXPTask) {
+	o.Completed = v
 }
 
 // GetCompletedTasks returns the CompletedTasks field value if set, zero value otherwise.
@@ -307,6 +342,38 @@ func (o *SkyBlockProfileMemberLeveling) HasFishingFestivalSharksKilled() bool {
 // SetFishingFestivalSharksKilled gets a reference to the given int64 and assigns it to the FishingFestivalSharksKilled field.
 func (o *SkyBlockProfileMemberLeveling) SetFishingFestivalSharksKilled(v int64) {
 	o.FishingFestivalSharksKilled = &v
+}
+
+// GetGuideSort returns the GuideSort field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberLeveling) GetGuideSort() SkyBlockProfileMemberLevelingGuideSort {
+	if o == nil || IsNil(o.GuideSort) {
+		var ret SkyBlockProfileMemberLevelingGuideSort
+		return ret
+	}
+	return *o.GuideSort
+}
+
+// GetGuideSortOk returns a tuple with the GuideSort field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberLeveling) GetGuideSortOk() (*SkyBlockProfileMemberLevelingGuideSort, bool) {
+	if o == nil || IsNil(o.GuideSort) {
+		return nil, false
+	}
+	return o.GuideSort, true
+}
+
+// HasGuideSort returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberLeveling) HasGuideSort() bool {
+	if o != nil && !IsNil(o.GuideSort) {
+		return true
+	}
+
+	return false
+}
+
+// SetGuideSort gets a reference to the given SkyBlockProfileMemberLevelingGuideSort and assigns it to the GuideSort field.
+func (o *SkyBlockProfileMemberLeveling) SetGuideSort(v SkyBlockProfileMemberLevelingGuideSort) {
+	o.GuideSort = &v
 }
 
 // GetHighestPetScore returns the HighestPetScore field value if set, zero value otherwise.
@@ -533,6 +600,38 @@ func (o *SkyBlockProfileMemberLeveling) SetSelectedSymbol(v SkyBlockProfileMembe
 	o.SelectedSymbol = &v
 }
 
+// GetTaskSort returns the TaskSort field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberLeveling) GetTaskSort() SkyBlockProfileMemberLevelingTaskSort {
+	if o == nil || IsNil(o.TaskSort) {
+		var ret SkyBlockProfileMemberLevelingTaskSort
+		return ret
+	}
+	return *o.TaskSort
+}
+
+// GetTaskSortOk returns a tuple with the TaskSort field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberLeveling) GetTaskSortOk() (*SkyBlockProfileMemberLevelingTaskSort, bool) {
+	if o == nil || IsNil(o.TaskSort) {
+		return nil, false
+	}
+	return o.TaskSort, true
+}
+
+// HasTaskSort returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberLeveling) HasTaskSort() bool {
+	if o != nil && !IsNil(o.TaskSort) {
+		return true
+	}
+
+	return false
+}
+
+// SetTaskSort gets a reference to the given SkyBlockProfileMemberLevelingTaskSort and assigns it to the TaskSort field.
+func (o *SkyBlockProfileMemberLeveling) SetTaskSort(v SkyBlockProfileMemberLevelingTaskSort) {
+	o.TaskSort = &v
+}
+
 func (o SkyBlockProfileMemberLeveling) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -552,6 +651,9 @@ func (o SkyBlockProfileMemberLeveling) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ClaimedTalisman) {
 		toSerialize["claimed_talisman"] = o.ClaimedTalisman
 	}
+	if !IsNil(o.Completed) {
+		toSerialize["completed"] = o.Completed
+	}
 	if !IsNil(o.CompletedTasks) {
 		toSerialize["completed_tasks"] = o.CompletedTasks
 	}
@@ -566,6 +668,9 @@ func (o SkyBlockProfileMemberLeveling) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.FishingFestivalSharksKilled) {
 		toSerialize["fishing_festival_sharks_killed"] = o.FishingFestivalSharksKilled
+	}
+	if !IsNil(o.GuideSort) {
+		toSerialize["guide_sort"] = o.GuideSort
 	}
 	if !IsNil(o.HighestPetScore) {
 		toSerialize["highest_pet_score"] = o.HighestPetScore
@@ -587,6 +692,9 @@ func (o SkyBlockProfileMemberLeveling) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.SelectedSymbol) {
 		toSerialize["selected_symbol"] = o.SelectedSymbol
+	}
+	if !IsNil(o.TaskSort) {
+		toSerialize["task_sort"] = o.TaskSort
 	}
 	return toSerialize, nil
 }

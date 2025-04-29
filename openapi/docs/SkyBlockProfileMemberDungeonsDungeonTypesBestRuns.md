@@ -5,25 +5,25 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AllyHealing** | Pointer to **float64** |  | [optional] 
-**DamageDealt** | Pointer to **float64** |  | [optional] 
+**DamageDealt** | **float64** |  | 
 **DamageMitigated** | Pointer to **float64** |  | [optional] 
-**Deaths** | Pointer to **int64** |  | [optional] 
-**DungeonClass** | Pointer to **string** |  | [optional] 
-**ElapsedTime** | Pointer to **int64** |  | [optional] 
-**MobsKilled** | Pointer to **int64** |  | [optional] 
-**ScoreBonus** | Pointer to **int64** |  | [optional] 
-**ScoreExploration** | Pointer to **int64** |  | [optional] 
-**ScoreSkill** | Pointer to **int64** |  | [optional] 
-**ScoreSpeed** | Pointer to **int64** |  | [optional] 
-**SecretsFound** | Pointer to **int64** |  | [optional] 
-**Teammates** | Pointer to **[]string** |  | [optional] 
-**Timestamp** | Pointer to **int64** |  | [optional] 
+**Deaths** | **int64** |  | 
+**DungeonClass** | [**SkyBlockProfileMemberDungeonsSelectedDungeonClass**](SkyBlockProfileMemberDungeonsSelectedDungeonClass.md) |  | 
+**ElapsedTime** | **int64** |  | 
+**MobsKilled** | **int64** |  | 
+**ScoreBonus** | **int64** |  | 
+**ScoreExploration** | **int64** |  | 
+**ScoreSkill** | **int64** |  | 
+**ScoreSpeed** | **int64** |  | 
+**SecretsFound** | **int64** |  | 
+**Teammates** | **[]string** |  | 
+**Timestamp** | **int64** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberDungeonsDungeonTypesBestRuns
 
-`func NewSkyBlockProfileMemberDungeonsDungeonTypesBestRuns() *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns`
+`func NewSkyBlockProfileMemberDungeonsDungeonTypesBestRuns(damageDealt float64, deaths int64, dungeonClass SkyBlockProfileMemberDungeonsSelectedDungeonClass, elapsedTime int64, mobsKilled int64, scoreBonus int64, scoreExploration int64, scoreSkill int64, scoreSpeed int64, secretsFound int64, teammates []string, timestamp int64, ) *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns`
 
 NewSkyBlockProfileMemberDungeonsDungeonTypesBestRuns instantiates a new SkyBlockProfileMemberDungeonsDungeonTypesBestRuns object
 This constructor will assign default values to properties that have it defined,
@@ -82,11 +82,6 @@ and a boolean to check if the value has been set.
 
 SetDamageDealt sets DamageDealt field to given value.
 
-### HasDamageDealt
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasDamageDealt() bool`
-
-HasDamageDealt returns a boolean if a field has been set.
 
 ### GetDamageMitigated
 
@@ -132,36 +127,26 @@ and a boolean to check if the value has been set.
 
 SetDeaths sets Deaths field to given value.
 
-### HasDeaths
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasDeaths() bool`
-
-HasDeaths returns a boolean if a field has been set.
 
 ### GetDungeonClass
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDungeonClass() string`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDungeonClass() SkyBlockProfileMemberDungeonsSelectedDungeonClass`
 
 GetDungeonClass returns the DungeonClass field if non-nil, zero value otherwise.
 
 ### GetDungeonClassOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDungeonClassOk() (*string, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDungeonClassOk() (*SkyBlockProfileMemberDungeonsSelectedDungeonClass, bool)`
 
 GetDungeonClassOk returns a tuple with the DungeonClass field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDungeonClass
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetDungeonClass(v string)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetDungeonClass(v SkyBlockProfileMemberDungeonsSelectedDungeonClass)`
 
 SetDungeonClass sets DungeonClass field to given value.
 
-### HasDungeonClass
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasDungeonClass() bool`
-
-HasDungeonClass returns a boolean if a field has been set.
 
 ### GetElapsedTime
 
@@ -182,11 +167,6 @@ and a boolean to check if the value has been set.
 
 SetElapsedTime sets ElapsedTime field to given value.
 
-### HasElapsedTime
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasElapsedTime() bool`
-
-HasElapsedTime returns a boolean if a field has been set.
 
 ### GetMobsKilled
 
@@ -207,11 +187,6 @@ and a boolean to check if the value has been set.
 
 SetMobsKilled sets MobsKilled field to given value.
 
-### HasMobsKilled
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasMobsKilled() bool`
-
-HasMobsKilled returns a boolean if a field has been set.
 
 ### GetScoreBonus
 
@@ -232,11 +207,6 @@ and a boolean to check if the value has been set.
 
 SetScoreBonus sets ScoreBonus field to given value.
 
-### HasScoreBonus
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasScoreBonus() bool`
-
-HasScoreBonus returns a boolean if a field has been set.
 
 ### GetScoreExploration
 
@@ -257,11 +227,6 @@ and a boolean to check if the value has been set.
 
 SetScoreExploration sets ScoreExploration field to given value.
 
-### HasScoreExploration
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasScoreExploration() bool`
-
-HasScoreExploration returns a boolean if a field has been set.
 
 ### GetScoreSkill
 
@@ -282,11 +247,6 @@ and a boolean to check if the value has been set.
 
 SetScoreSkill sets ScoreSkill field to given value.
 
-### HasScoreSkill
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasScoreSkill() bool`
-
-HasScoreSkill returns a boolean if a field has been set.
 
 ### GetScoreSpeed
 
@@ -307,11 +267,6 @@ and a boolean to check if the value has been set.
 
 SetScoreSpeed sets ScoreSpeed field to given value.
 
-### HasScoreSpeed
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasScoreSpeed() bool`
-
-HasScoreSpeed returns a boolean if a field has been set.
 
 ### GetSecretsFound
 
@@ -332,11 +287,6 @@ and a boolean to check if the value has been set.
 
 SetSecretsFound sets SecretsFound field to given value.
 
-### HasSecretsFound
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasSecretsFound() bool`
-
-HasSecretsFound returns a boolean if a field has been set.
 
 ### GetTeammates
 
@@ -357,11 +307,6 @@ and a boolean to check if the value has been set.
 
 SetTeammates sets Teammates field to given value.
 
-### HasTeammates
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasTeammates() bool`
-
-HasTeammates returns a boolean if a field has been set.
 
 ### GetTimestamp
 
@@ -382,11 +327,6 @@ and a boolean to check if the value has been set.
 
 SetTimestamp sets Timestamp field to given value.
 
-### HasTimestamp
-
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasTimestamp() bool`
-
-HasTimestamp returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

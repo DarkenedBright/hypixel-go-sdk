@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **LargeTreasure** | Pointer to **float64** |  | [optional] 
-**Normal** | **float64** |  | 
+**Normal** | Pointer to **float64** |  | [optional] 
 **Outstanding** | Pointer to **float64** |  | [optional] 
 **Total** | **float64** |  | 
 **Treasure** | Pointer to **float64** |  | [optional] 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberPlayerStatsItemsFished
 
-`func NewSkyBlockProfileMemberPlayerStatsItemsFished(normal float64, total float64, ) *SkyBlockProfileMemberPlayerStatsItemsFished`
+`func NewSkyBlockProfileMemberPlayerStatsItemsFished(total float64, ) *SkyBlockProfileMemberPlayerStatsItemsFished`
 
 NewSkyBlockProfileMemberPlayerStatsItemsFished instantiates a new SkyBlockProfileMemberPlayerStatsItemsFished object
 This constructor will assign default values to properties that have it defined,
@@ -74,6 +74,11 @@ and a boolean to check if the value has been set.
 
 SetNormal sets Normal field to given value.
 
+### HasNormal
+
+`func (o *SkyBlockProfileMemberPlayerStatsItemsFished) HasNormal() bool`
+
+HasNormal returns a boolean if a field has been set.
 
 ### GetOutstanding
 

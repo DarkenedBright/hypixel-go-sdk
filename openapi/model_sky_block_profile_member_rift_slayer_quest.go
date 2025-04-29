@@ -23,6 +23,7 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftSlayerQuest{}
 type SkyBlockProfileMemberRiftSlayerQuest struct {
 	CombatXp            *int64                                                   `json:"combat_xp,omitempty"`
 	CompletionState     int64                                                    `json:"completion_state"`
+	KillTimestamp       *int64                                                   `json:"kill_timestamp,omitempty"`
 	LastKilledMobIsland *SkyBlockProfileMemberRiftSlayerQuestLastKilledMobIsland `json:"last_killed_mob_island,omitempty"`
 	RecentMobKills      []SkyBlockProfileMemberRiftSlayerQuestRecentMobKill      `json:"recent_mob_kills,omitempty"`
 	Solo                bool                                                     `json:"solo"`
@@ -112,6 +113,38 @@ func (o *SkyBlockProfileMemberRiftSlayerQuest) GetCompletionStateOk() (*int64, b
 // SetCompletionState sets field value
 func (o *SkyBlockProfileMemberRiftSlayerQuest) SetCompletionState(v int64) {
 	o.CompletionState = v
+}
+
+// GetKillTimestamp returns the KillTimestamp field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberRiftSlayerQuest) GetKillTimestamp() int64 {
+	if o == nil || IsNil(o.KillTimestamp) {
+		var ret int64
+		return ret
+	}
+	return *o.KillTimestamp
+}
+
+// GetKillTimestampOk returns a tuple with the KillTimestamp field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberRiftSlayerQuest) GetKillTimestampOk() (*int64, bool) {
+	if o == nil || IsNil(o.KillTimestamp) {
+		return nil, false
+	}
+	return o.KillTimestamp, true
+}
+
+// HasKillTimestamp returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberRiftSlayerQuest) HasKillTimestamp() bool {
+	if o != nil && !IsNil(o.KillTimestamp) {
+		return true
+	}
+
+	return false
+}
+
+// SetKillTimestamp gets a reference to the given int64 and assigns it to the KillTimestamp field.
+func (o *SkyBlockProfileMemberRiftSlayerQuest) SetKillTimestamp(v int64) {
+	o.KillTimestamp = &v
 }
 
 // GetLastKilledMobIsland returns the LastKilledMobIsland field value if set, zero value otherwise.
@@ -344,6 +377,9 @@ func (o SkyBlockProfileMemberRiftSlayerQuest) ToMap() (map[string]interface{}, e
 		toSerialize["combat_xp"] = o.CombatXp
 	}
 	toSerialize["completion_state"] = o.CompletionState
+	if !IsNil(o.KillTimestamp) {
+		toSerialize["kill_timestamp"] = o.KillTimestamp
+	}
 	if !IsNil(o.LastKilledMobIsland) {
 		toSerialize["last_killed_mob_island"] = o.LastKilledMobIsland
 	}

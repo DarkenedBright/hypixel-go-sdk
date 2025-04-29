@@ -19,10 +19,10 @@ var _ MappedNullable = &SkyBlockProfileMemberGlacitePlayerData{}
 
 // SkyBlockProfileMemberGlacitePlayerData struct for SkyBlockProfileMemberGlacitePlayerData
 type SkyBlockProfileMemberGlacitePlayerData struct {
-	CorpsesLooted     *SkyBlockProfileMemberGlacitePlayerDataCorpsesLooted `json:"corpses_looted,omitempty"`
-	FossilDust        *float64                                             `json:"fossil_dust,omitempty"`
-	FossilsDonated    []string                                             `json:"fossils_donated,omitempty"`
-	MineshaftsEntered *int64                                               `json:"mineshafts_entered,omitempty"`
+	CorpsesLooted     *SkyBlockProfileMemberGlacitePlayerDataCorpsesLooted        `json:"corpses_looted,omitempty"`
+	FossilDust        *float64                                                    `json:"fossil_dust,omitempty"`
+	FossilsDonated    []SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner `json:"fossils_donated,omitempty"`
+	MineshaftsEntered *int64                                                      `json:"mineshafts_entered,omitempty"`
 }
 
 // NewSkyBlockProfileMemberGlacitePlayerData instantiates a new SkyBlockProfileMemberGlacitePlayerData object
@@ -107,9 +107,9 @@ func (o *SkyBlockProfileMemberGlacitePlayerData) SetFossilDust(v float64) {
 }
 
 // GetFossilsDonated returns the FossilsDonated field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberGlacitePlayerData) GetFossilsDonated() []string {
+func (o *SkyBlockProfileMemberGlacitePlayerData) GetFossilsDonated() []SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner {
 	if o == nil || IsNil(o.FossilsDonated) {
-		var ret []string
+		var ret []SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner
 		return ret
 	}
 	return o.FossilsDonated
@@ -117,7 +117,7 @@ func (o *SkyBlockProfileMemberGlacitePlayerData) GetFossilsDonated() []string {
 
 // GetFossilsDonatedOk returns a tuple with the FossilsDonated field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberGlacitePlayerData) GetFossilsDonatedOk() ([]string, bool) {
+func (o *SkyBlockProfileMemberGlacitePlayerData) GetFossilsDonatedOk() ([]SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner, bool) {
 	if o == nil || IsNil(o.FossilsDonated) {
 		return nil, false
 	}
@@ -133,8 +133,8 @@ func (o *SkyBlockProfileMemberGlacitePlayerData) HasFossilsDonated() bool {
 	return false
 }
 
-// SetFossilsDonated gets a reference to the given []string and assigns it to the FossilsDonated field.
-func (o *SkyBlockProfileMemberGlacitePlayerData) SetFossilsDonated(v []string) {
+// SetFossilsDonated gets a reference to the given []SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner and assigns it to the FossilsDonated field.
+func (o *SkyBlockProfileMemberGlacitePlayerData) SetFossilsDonated(v []SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner) {
 	o.FossilsDonated = v
 }
 

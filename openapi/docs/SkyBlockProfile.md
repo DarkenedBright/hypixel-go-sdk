@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Banking** | Pointer to [**SkyBlockProfileBanking**](SkyBlockProfileBanking.md) |  | [optional] 
 **CommunityUpgrades** | Pointer to **map[string]interface{}** |  | [optional] 
-**CuteName** | Pointer to **string** | The cute name of the profile, only provided on the profiles endpoint | [optional] 
+**CuteName** | Pointer to **string** |  | [optional] 
 **GameMode** | Pointer to [**SkyBlockProfileGameMode**](SkyBlockProfileGameMode.md) |  | [optional] 
-**Members** | Pointer to [**map[string]SkyBlockProfileMember**](SkyBlockProfileMember.md) | A map of profile member UUIDs to profile member objects | [optional] 
+**Members** | Pointer to [**map[string]SkyBlockProfileMember**](SkyBlockProfileMember.md) |  | [optional] 
 **ProfileId** | Pointer to **string** |  | [optional] 
-**Selected** | Pointer to **bool** | Whether or not this is the currently selected profile, only provided on the profiles endpoint | [optional] 
+**Selected** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 

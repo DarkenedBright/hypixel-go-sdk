@@ -22,11 +22,11 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftVillagePlaza{}
 // SkyBlockProfileMemberRiftVillagePlaza struct for SkyBlockProfileMemberRiftVillagePlaza
 type SkyBlockProfileMemberRiftVillagePlaza struct {
 	BarryCenter SkyBlockProfileMemberRiftVillagePlazaBarryCenter `json:"barry_center"`
-	BarterBank  map[string]interface{}                           `json:"barter_bank"`
+	BarterBank  map[string]interface{}                           `json:"barter_bank,omitempty"`
 	Cowboy      SkyBlockProfileMemberRiftVillagePlazaCowboy      `json:"cowboy"`
 	GotScammed  *bool                                            `json:"got_scammed,omitempty"`
 	Lonely      SkyBlockProfileMemberRiftVillagePlazaLonely      `json:"lonely"`
-	Murder      SkyBlockProfileMemberRiftVillagePlazaMurder      `json:"murder"`
+	Murder      *SkyBlockProfileMemberRiftVillagePlazaMurder     `json:"murder,omitempty"`
 	Seraphine   SkyBlockProfileMemberRiftVillagePlazaSeraphine   `json:"seraphine"`
 }
 
@@ -36,13 +36,11 @@ type _SkyBlockProfileMemberRiftVillagePlaza SkyBlockProfileMemberRiftVillagePlaz
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberRiftVillagePlaza(barryCenter SkyBlockProfileMemberRiftVillagePlazaBarryCenter, barterBank map[string]interface{}, cowboy SkyBlockProfileMemberRiftVillagePlazaCowboy, lonely SkyBlockProfileMemberRiftVillagePlazaLonely, murder SkyBlockProfileMemberRiftVillagePlazaMurder, seraphine SkyBlockProfileMemberRiftVillagePlazaSeraphine) *SkyBlockProfileMemberRiftVillagePlaza {
+func NewSkyBlockProfileMemberRiftVillagePlaza(barryCenter SkyBlockProfileMemberRiftVillagePlazaBarryCenter, cowboy SkyBlockProfileMemberRiftVillagePlazaCowboy, lonely SkyBlockProfileMemberRiftVillagePlazaLonely, seraphine SkyBlockProfileMemberRiftVillagePlazaSeraphine) *SkyBlockProfileMemberRiftVillagePlaza {
 	this := SkyBlockProfileMemberRiftVillagePlaza{}
 	this.BarryCenter = barryCenter
-	this.BarterBank = barterBank
 	this.Cowboy = cowboy
 	this.Lonely = lonely
-	this.Murder = murder
 	this.Seraphine = seraphine
 	return &this
 }
@@ -79,26 +77,34 @@ func (o *SkyBlockProfileMemberRiftVillagePlaza) SetBarryCenter(v SkyBlockProfile
 	o.BarryCenter = v
 }
 
-// GetBarterBank returns the BarterBank field value
+// GetBarterBank returns the BarterBank field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberRiftVillagePlaza) GetBarterBank() map[string]interface{} {
-	if o == nil {
+	if o == nil || IsNil(o.BarterBank) {
 		var ret map[string]interface{}
 		return ret
 	}
-
 	return o.BarterBank
 }
 
-// GetBarterBankOk returns a tuple with the BarterBank field value
+// GetBarterBankOk returns a tuple with the BarterBank field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberRiftVillagePlaza) GetBarterBankOk() (map[string]interface{}, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.BarterBank) {
 		return map[string]interface{}{}, false
 	}
 	return o.BarterBank, true
 }
 
-// SetBarterBank sets field value
+// HasBarterBank returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberRiftVillagePlaza) HasBarterBank() bool {
+	if o != nil && !IsNil(o.BarterBank) {
+		return true
+	}
+
+	return false
+}
+
+// SetBarterBank gets a reference to the given map[string]interface{} and assigns it to the BarterBank field.
 func (o *SkyBlockProfileMemberRiftVillagePlaza) SetBarterBank(v map[string]interface{}) {
 	o.BarterBank = v
 }
@@ -183,28 +189,36 @@ func (o *SkyBlockProfileMemberRiftVillagePlaza) SetLonely(v SkyBlockProfileMembe
 	o.Lonely = v
 }
 
-// GetMurder returns the Murder field value
+// GetMurder returns the Murder field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberRiftVillagePlaza) GetMurder() SkyBlockProfileMemberRiftVillagePlazaMurder {
-	if o == nil {
+	if o == nil || IsNil(o.Murder) {
 		var ret SkyBlockProfileMemberRiftVillagePlazaMurder
 		return ret
 	}
-
-	return o.Murder
+	return *o.Murder
 }
 
-// GetMurderOk returns a tuple with the Murder field value
+// GetMurderOk returns a tuple with the Murder field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberRiftVillagePlaza) GetMurderOk() (*SkyBlockProfileMemberRiftVillagePlazaMurder, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Murder) {
 		return nil, false
 	}
-	return &o.Murder, true
+	return o.Murder, true
 }
 
-// SetMurder sets field value
+// HasMurder returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberRiftVillagePlaza) HasMurder() bool {
+	if o != nil && !IsNil(o.Murder) {
+		return true
+	}
+
+	return false
+}
+
+// SetMurder gets a reference to the given SkyBlockProfileMemberRiftVillagePlazaMurder and assigns it to the Murder field.
 func (o *SkyBlockProfileMemberRiftVillagePlaza) SetMurder(v SkyBlockProfileMemberRiftVillagePlazaMurder) {
-	o.Murder = v
+	o.Murder = &v
 }
 
 // GetSeraphine returns the Seraphine field value
@@ -242,13 +256,17 @@ func (o SkyBlockProfileMemberRiftVillagePlaza) MarshalJSON() ([]byte, error) {
 func (o SkyBlockProfileMemberRiftVillagePlaza) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["barry_center"] = o.BarryCenter
-	toSerialize["barter_bank"] = o.BarterBank
+	if !IsNil(o.BarterBank) {
+		toSerialize["barter_bank"] = o.BarterBank
+	}
 	toSerialize["cowboy"] = o.Cowboy
 	if !IsNil(o.GotScammed) {
 		toSerialize["got_scammed"] = o.GotScammed
 	}
 	toSerialize["lonely"] = o.Lonely
-	toSerialize["murder"] = o.Murder
+	if !IsNil(o.Murder) {
+		toSerialize["murder"] = o.Murder
+	}
 	toSerialize["seraphine"] = o.Seraphine
 	return toSerialize, nil
 }
@@ -259,10 +277,8 @@ func (o *SkyBlockProfileMemberRiftVillagePlaza) UnmarshalJSON(data []byte) (err 
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"barry_center",
-		"barter_bank",
 		"cowboy",
 		"lonely",
-		"murder",
 		"seraphine",
 	}
 

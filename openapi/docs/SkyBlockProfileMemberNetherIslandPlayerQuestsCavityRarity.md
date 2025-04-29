@@ -3,6 +3,8 @@
 ## Enum
 
 
+* `COMMON` (value: `"COMMON"`)
+
 * `SPECIAL` (value: `"SPECIAL"`)
 
 

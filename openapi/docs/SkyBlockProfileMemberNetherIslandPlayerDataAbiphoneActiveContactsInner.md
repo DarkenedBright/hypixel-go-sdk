@@ -13,6 +13,8 @@
 
 * `ARROW_FORGER` (value: `"arrow_forger"`)
 
+* `BINGO` (value: `"bingo"`)
+
 * `BLACKSMITH` (value: `"blacksmith"`)
 
 * `BRYNMOR` (value: `"brynmor"`)

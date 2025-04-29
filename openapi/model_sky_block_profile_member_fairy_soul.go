@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberFairySoul type satisfies the MappedNullable interface at compile time
@@ -20,16 +22,19 @@ var _ MappedNullable = &SkyBlockProfileMemberFairySoul{}
 // SkyBlockProfileMemberFairySoul struct for SkyBlockProfileMemberFairySoul
 type SkyBlockProfileMemberFairySoul struct {
 	FairyExchanges *int64 `json:"fairy_exchanges,omitempty"`
-	TotalCollected *int64 `json:"total_collected,omitempty"`
+	TotalCollected int64  `json:"total_collected"`
 	UnspentSouls   *int64 `json:"unspent_souls,omitempty"`
 }
+
+type _SkyBlockProfileMemberFairySoul SkyBlockProfileMemberFairySoul
 
 // NewSkyBlockProfileMemberFairySoul instantiates a new SkyBlockProfileMemberFairySoul object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberFairySoul() *SkyBlockProfileMemberFairySoul {
+func NewSkyBlockProfileMemberFairySoul(totalCollected int64) *SkyBlockProfileMemberFairySoul {
 	this := SkyBlockProfileMemberFairySoul{}
+	this.TotalCollected = totalCollected
 	return &this
 }
 
@@ -73,36 +78,28 @@ func (o *SkyBlockProfileMemberFairySoul) SetFairyExchanges(v int64) {
 	o.FairyExchanges = &v
 }
 
-// GetTotalCollected returns the TotalCollected field value if set, zero value otherwise.
+// GetTotalCollected returns the TotalCollected field value
 func (o *SkyBlockProfileMemberFairySoul) GetTotalCollected() int64 {
-	if o == nil || IsNil(o.TotalCollected) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.TotalCollected
+
+	return o.TotalCollected
 }
 
-// GetTotalCollectedOk returns a tuple with the TotalCollected field value if set, nil otherwise
+// GetTotalCollectedOk returns a tuple with the TotalCollected field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberFairySoul) GetTotalCollectedOk() (*int64, bool) {
-	if o == nil || IsNil(o.TotalCollected) {
+	if o == nil {
 		return nil, false
 	}
-	return o.TotalCollected, true
+	return &o.TotalCollected, true
 }
 
-// HasTotalCollected returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberFairySoul) HasTotalCollected() bool {
-	if o != nil && !IsNil(o.TotalCollected) {
-		return true
-	}
-
-	return false
-}
-
-// SetTotalCollected gets a reference to the given int64 and assigns it to the TotalCollected field.
+// SetTotalCollected sets field value
 func (o *SkyBlockProfileMemberFairySoul) SetTotalCollected(v int64) {
-	o.TotalCollected = &v
+	o.TotalCollected = v
 }
 
 // GetUnspentSouls returns the UnspentSouls field value if set, zero value otherwise.
@@ -150,13 +147,48 @@ func (o SkyBlockProfileMemberFairySoul) ToMap() (map[string]interface{}, error) 
 	if !IsNil(o.FairyExchanges) {
 		toSerialize["fairy_exchanges"] = o.FairyExchanges
 	}
-	if !IsNil(o.TotalCollected) {
-		toSerialize["total_collected"] = o.TotalCollected
-	}
+	toSerialize["total_collected"] = o.TotalCollected
 	if !IsNil(o.UnspentSouls) {
 		toSerialize["unspent_souls"] = o.UnspentSouls
 	}
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberFairySoul) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"total_collected",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberFairySoul := _SkyBlockProfileMemberFairySoul{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberFairySoul)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberFairySoul(varSkyBlockProfileMemberFairySoul)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberFairySoul struct {

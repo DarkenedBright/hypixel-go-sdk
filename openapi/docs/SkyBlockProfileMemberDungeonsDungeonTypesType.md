@@ -5,24 +5,24 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BestRuns** | Pointer to [**map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns**](array.md) |  | [optional] 
-**BestScore** | Pointer to **map[string]float64** |  | [optional] 
+**BestScore** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
 **Experience** | Pointer to **float64** |  | [optional] 
-**FastestTime** | Pointer to **map[string]float64** |  | [optional] 
-**FastestTimeS** | Pointer to **map[string]float64** |  | [optional] 
-**FastestTimeSPlus** | Pointer to **map[string]float64** |  | [optional] 
+**FastestTime** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**FastestTimeS** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**FastestTimeSPlus** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
 **HighestTierCompleted** | Pointer to **int64** |  | [optional] 
-**MilestoneCompletions** | Pointer to **map[string]float64** |  | [optional] 
-**MobsKilled** | Pointer to **map[string]float64** |  | [optional] 
-**MostDamageArcher** | Pointer to **map[string]float64** |  | [optional] 
-**MostDamageBerserk** | Pointer to **map[string]float64** |  | [optional] 
-**MostDamageHealer** | Pointer to **map[string]float64** |  | [optional] 
-**MostDamageMage** | Pointer to **map[string]float64** |  | [optional] 
-**MostDamageTank** | Pointer to **map[string]float64** |  | [optional] 
-**MostHealing** | Pointer to **map[string]float64** |  | [optional] 
-**MostMobsKilled** | Pointer to **map[string]float64** |  | [optional] 
-**TierCompletions** | Pointer to **map[string]float64** |  | [optional] 
-**TimesPlayed** | Pointer to **map[string]float64** |  | [optional] 
-**WatcherKills** | Pointer to **map[string]float64** |  | [optional] 
+**MilestoneCompletions** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**MobsKilled** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**MostDamageArcher** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**MostDamageBerserk** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**MostDamageHealer** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**MostDamageMage** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**MostDamageTank** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**MostHealing** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**MostMobsKilled** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**TierCompletions** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**TimesPlayed** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
+**WatcherKills** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
 
 ## Methods
 
@@ -70,20 +70,20 @@ HasBestRuns returns a boolean if a field has been set.
 
 ### GetBestScore
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestScore() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestScore() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetBestScore returns the BestScore field if non-nil, zero value otherwise.
 
 ### GetBestScoreOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestScoreOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestScoreOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetBestScoreOk returns a tuple with the BestScore field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBestScore
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetBestScore(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetBestScore(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetBestScore sets BestScore field to given value.
 
@@ -120,20 +120,20 @@ HasExperience returns a boolean if a field has been set.
 
 ### GetFastestTime
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTime() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTime() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetFastestTime returns the FastestTime field if non-nil, zero value otherwise.
 
 ### GetFastestTimeOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetFastestTimeOk returns a tuple with the FastestTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFastestTime
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTime(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTime(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetFastestTime sets FastestTime field to given value.
 
@@ -145,20 +145,20 @@ HasFastestTime returns a boolean if a field has been set.
 
 ### GetFastestTimeS
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeS() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeS() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetFastestTimeS returns the FastestTimeS field if non-nil, zero value otherwise.
 
 ### GetFastestTimeSOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetFastestTimeSOk returns a tuple with the FastestTimeS field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFastestTimeS
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTimeS(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTimeS(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetFastestTimeS sets FastestTimeS field to given value.
 
@@ -170,20 +170,20 @@ HasFastestTimeS returns a boolean if a field has been set.
 
 ### GetFastestTimeSPlus
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSPlus() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSPlus() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetFastestTimeSPlus returns the FastestTimeSPlus field if non-nil, zero value otherwise.
 
 ### GetFastestTimeSPlusOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSPlusOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSPlusOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetFastestTimeSPlusOk returns a tuple with the FastestTimeSPlus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFastestTimeSPlus
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTimeSPlus(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTimeSPlus(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetFastestTimeSPlus sets FastestTimeSPlus field to given value.
 
@@ -220,20 +220,20 @@ HasHighestTierCompleted returns a boolean if a field has been set.
 
 ### GetMilestoneCompletions
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMilestoneCompletions() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMilestoneCompletions() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetMilestoneCompletions returns the MilestoneCompletions field if non-nil, zero value otherwise.
 
 ### GetMilestoneCompletionsOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMilestoneCompletionsOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMilestoneCompletionsOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetMilestoneCompletionsOk returns a tuple with the MilestoneCompletions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMilestoneCompletions
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMilestoneCompletions(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMilestoneCompletions(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetMilestoneCompletions sets MilestoneCompletions field to given value.
 
@@ -245,20 +245,20 @@ HasMilestoneCompletions returns a boolean if a field has been set.
 
 ### GetMobsKilled
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMobsKilled() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMobsKilled() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetMobsKilled returns the MobsKilled field if non-nil, zero value otherwise.
 
 ### GetMobsKilledOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMobsKilledOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMobsKilledOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetMobsKilledOk returns a tuple with the MobsKilled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMobsKilled
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMobsKilled(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMobsKilled(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetMobsKilled sets MobsKilled field to given value.
 
@@ -270,20 +270,20 @@ HasMobsKilled returns a boolean if a field has been set.
 
 ### GetMostDamageArcher
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageArcher() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageArcher() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetMostDamageArcher returns the MostDamageArcher field if non-nil, zero value otherwise.
 
 ### GetMostDamageArcherOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageArcherOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageArcherOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetMostDamageArcherOk returns a tuple with the MostDamageArcher field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMostDamageArcher
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageArcher(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageArcher(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetMostDamageArcher sets MostDamageArcher field to given value.
 
@@ -295,20 +295,20 @@ HasMostDamageArcher returns a boolean if a field has been set.
 
 ### GetMostDamageBerserk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageBerserk() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageBerserk() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetMostDamageBerserk returns the MostDamageBerserk field if non-nil, zero value otherwise.
 
 ### GetMostDamageBerserkOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageBerserkOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageBerserkOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetMostDamageBerserkOk returns a tuple with the MostDamageBerserk field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMostDamageBerserk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageBerserk(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageBerserk(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetMostDamageBerserk sets MostDamageBerserk field to given value.
 
@@ -320,20 +320,20 @@ HasMostDamageBerserk returns a boolean if a field has been set.
 
 ### GetMostDamageHealer
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageHealer() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageHealer() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetMostDamageHealer returns the MostDamageHealer field if non-nil, zero value otherwise.
 
 ### GetMostDamageHealerOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageHealerOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageHealerOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetMostDamageHealerOk returns a tuple with the MostDamageHealer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMostDamageHealer
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageHealer(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageHealer(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetMostDamageHealer sets MostDamageHealer field to given value.
 
@@ -345,20 +345,20 @@ HasMostDamageHealer returns a boolean if a field has been set.
 
 ### GetMostDamageMage
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageMage() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageMage() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetMostDamageMage returns the MostDamageMage field if non-nil, zero value otherwise.
 
 ### GetMostDamageMageOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageMageOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageMageOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetMostDamageMageOk returns a tuple with the MostDamageMage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMostDamageMage
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageMage(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageMage(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetMostDamageMage sets MostDamageMage field to given value.
 
@@ -370,20 +370,20 @@ HasMostDamageMage returns a boolean if a field has been set.
 
 ### GetMostDamageTank
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageTank() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageTank() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetMostDamageTank returns the MostDamageTank field if non-nil, zero value otherwise.
 
 ### GetMostDamageTankOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageTankOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageTankOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetMostDamageTankOk returns a tuple with the MostDamageTank field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMostDamageTank
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageTank(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageTank(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetMostDamageTank sets MostDamageTank field to given value.
 
@@ -395,20 +395,20 @@ HasMostDamageTank returns a boolean if a field has been set.
 
 ### GetMostHealing
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostHealing() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostHealing() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetMostHealing returns the MostHealing field if non-nil, zero value otherwise.
 
 ### GetMostHealingOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostHealingOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostHealingOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetMostHealingOk returns a tuple with the MostHealing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMostHealing
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostHealing(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostHealing(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetMostHealing sets MostHealing field to given value.
 
@@ -420,20 +420,20 @@ HasMostHealing returns a boolean if a field has been set.
 
 ### GetMostMobsKilled
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostMobsKilled() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostMobsKilled() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetMostMobsKilled returns the MostMobsKilled field if non-nil, zero value otherwise.
 
 ### GetMostMobsKilledOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostMobsKilledOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostMobsKilledOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetMostMobsKilledOk returns a tuple with the MostMobsKilled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMostMobsKilled
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostMobsKilled(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostMobsKilled(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetMostMobsKilled sets MostMobsKilled field to given value.
 
@@ -445,20 +445,20 @@ HasMostMobsKilled returns a boolean if a field has been set.
 
 ### GetTierCompletions
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTierCompletions() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTierCompletions() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetTierCompletions returns the TierCompletions field if non-nil, zero value otherwise.
 
 ### GetTierCompletionsOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTierCompletionsOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTierCompletionsOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetTierCompletionsOk returns a tuple with the TierCompletions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTierCompletions
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetTierCompletions(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetTierCompletions(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetTierCompletions sets TierCompletions field to given value.
 
@@ -470,20 +470,20 @@ HasTierCompletions returns a boolean if a field has been set.
 
 ### GetTimesPlayed
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTimesPlayed() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTimesPlayed() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetTimesPlayed returns the TimesPlayed field if non-nil, zero value otherwise.
 
 ### GetTimesPlayedOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTimesPlayedOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTimesPlayedOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetTimesPlayedOk returns a tuple with the TimesPlayed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimesPlayed
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetTimesPlayed(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetTimesPlayed(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetTimesPlayed sets TimesPlayed field to given value.
 
@@ -495,20 +495,20 @@ HasTimesPlayed returns a boolean if a field has been set.
 
 ### GetWatcherKills
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetWatcherKills() map[string]float64`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetWatcherKills() SkyBlockProfileMemberDungeonsDungeonTypesTypeData`
 
 GetWatcherKills returns the WatcherKills field if non-nil, zero value otherwise.
 
 ### GetWatcherKillsOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetWatcherKillsOk() (*map[string]float64, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetWatcherKillsOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool)`
 
 GetWatcherKillsOk returns a tuple with the WatcherKills field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWatcherKills
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetWatcherKills(v map[string]float64)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetWatcherKills(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData)`
 
 SetWatcherKills sets WatcherKills field to given value.
 

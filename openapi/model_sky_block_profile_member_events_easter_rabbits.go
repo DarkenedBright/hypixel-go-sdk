@@ -12,6 +12,7 @@ package openapi
 
 import (
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberEventsEasterRabbits type satisfies the MappedNullable interface at compile time
@@ -19,8 +20,8 @@ var _ MappedNullable = &SkyBlockProfileMemberEventsEasterRabbits{}
 
 // SkyBlockProfileMemberEventsEasterRabbits struct for SkyBlockProfileMemberEventsEasterRabbits
 type SkyBlockProfileMemberEventsEasterRabbits struct {
-	CollectedEggs        *map[string]int64    `json:"collected_eggs,omitempty"`
-	CollectedLocations   *map[string][]string `json:"collected_locations,omitempty"`
+	CollectedEggs        SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs       `json:"collected_eggs"`
+	CollectedLocations   *SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations `json:"collected_locations,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -30,8 +31,9 @@ type _SkyBlockProfileMemberEventsEasterRabbits SkyBlockProfileMemberEventsEaster
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberEventsEasterRabbits() *SkyBlockProfileMemberEventsEasterRabbits {
+func NewSkyBlockProfileMemberEventsEasterRabbits(collectedEggs SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs) *SkyBlockProfileMemberEventsEasterRabbits {
 	this := SkyBlockProfileMemberEventsEasterRabbits{}
+	this.CollectedEggs = collectedEggs
 	return &this
 }
 
@@ -43,42 +45,34 @@ func NewSkyBlockProfileMemberEventsEasterRabbitsWithDefaults() *SkyBlockProfileM
 	return &this
 }
 
-// GetCollectedEggs returns the CollectedEggs field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedEggs() map[string]int64 {
-	if o == nil || IsNil(o.CollectedEggs) {
-		var ret map[string]int64
+// GetCollectedEggs returns the CollectedEggs field value
+func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedEggs() SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs {
+	if o == nil {
+		var ret SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs
 		return ret
 	}
-	return *o.CollectedEggs
+
+	return o.CollectedEggs
 }
 
-// GetCollectedEggsOk returns a tuple with the CollectedEggs field value if set, nil otherwise
+// GetCollectedEggsOk returns a tuple with the CollectedEggs field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedEggsOk() (*map[string]int64, bool) {
-	if o == nil || IsNil(o.CollectedEggs) {
+func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedEggsOk() (*SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs, bool) {
+	if o == nil {
 		return nil, false
 	}
-	return o.CollectedEggs, true
+	return &o.CollectedEggs, true
 }
 
-// HasCollectedEggs returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberEventsEasterRabbits) HasCollectedEggs() bool {
-	if o != nil && !IsNil(o.CollectedEggs) {
-		return true
-	}
-
-	return false
-}
-
-// SetCollectedEggs gets a reference to the given map[string]int64 and assigns it to the CollectedEggs field.
-func (o *SkyBlockProfileMemberEventsEasterRabbits) SetCollectedEggs(v map[string]int64) {
-	o.CollectedEggs = &v
+// SetCollectedEggs sets field value
+func (o *SkyBlockProfileMemberEventsEasterRabbits) SetCollectedEggs(v SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs) {
+	o.CollectedEggs = v
 }
 
 // GetCollectedLocations returns the CollectedLocations field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedLocations() map[string][]string {
+func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedLocations() SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations {
 	if o == nil || IsNil(o.CollectedLocations) {
-		var ret map[string][]string
+		var ret SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations
 		return ret
 	}
 	return *o.CollectedLocations
@@ -86,7 +80,7 @@ func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedLocations() map[s
 
 // GetCollectedLocationsOk returns a tuple with the CollectedLocations field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedLocationsOk() (*map[string][]string, bool) {
+func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedLocationsOk() (*SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations, bool) {
 	if o == nil || IsNil(o.CollectedLocations) {
 		return nil, false
 	}
@@ -102,8 +96,8 @@ func (o *SkyBlockProfileMemberEventsEasterRabbits) HasCollectedLocations() bool 
 	return false
 }
 
-// SetCollectedLocations gets a reference to the given map[string][]string and assigns it to the CollectedLocations field.
-func (o *SkyBlockProfileMemberEventsEasterRabbits) SetCollectedLocations(v map[string][]string) {
+// SetCollectedLocations gets a reference to the given SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations and assigns it to the CollectedLocations field.
+func (o *SkyBlockProfileMemberEventsEasterRabbits) SetCollectedLocations(v SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations) {
 	o.CollectedLocations = &v
 }
 
@@ -117,9 +111,7 @@ func (o SkyBlockProfileMemberEventsEasterRabbits) MarshalJSON() ([]byte, error) 
 
 func (o SkyBlockProfileMemberEventsEasterRabbits) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.CollectedEggs) {
-		toSerialize["collected_eggs"] = o.CollectedEggs
-	}
+	toSerialize["collected_eggs"] = o.CollectedEggs
 	if !IsNil(o.CollectedLocations) {
 		toSerialize["collected_locations"] = o.CollectedLocations
 	}
@@ -132,6 +124,27 @@ func (o SkyBlockProfileMemberEventsEasterRabbits) ToMap() (map[string]interface{
 }
 
 func (o *SkyBlockProfileMemberEventsEasterRabbits) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"collected_eggs",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
 	varSkyBlockProfileMemberEventsEasterRabbits := _SkyBlockProfileMemberEventsEasterRabbits{}
 
 	err = json.Unmarshal(data, &varSkyBlockProfileMemberEventsEasterRabbits)

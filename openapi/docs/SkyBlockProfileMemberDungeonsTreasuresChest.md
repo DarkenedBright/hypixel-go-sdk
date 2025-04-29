@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChestId** | Pointer to **string** |  | [optional] 
-**Paid** | Pointer to **bool** |  | [optional] 
-**Quality** | Pointer to **int64** |  | [optional] 
-**Rerolls** | Pointer to **int64** |  | [optional] 
-**Rewards** | Pointer to [**SkyBlockProfileMemberDungeonsTreasuresChestRewards**](SkyBlockProfileMemberDungeonsTreasuresChestRewards.md) |  | [optional] 
-**RunId** | Pointer to **string** |  | [optional] 
-**ShinyEligible** | Pointer to **bool** |  | [optional] 
-**TreasureType** | Pointer to **string** |  | [optional] 
+**ChestId** | **string** |  | 
+**Paid** | **bool** |  | 
+**Quality** | **int64** |  | 
+**Rerolls** | **int64** |  | 
+**Rewards** | [**SkyBlockProfileMemberDungeonsTreasuresChestRewards**](SkyBlockProfileMemberDungeonsTreasuresChestRewards.md) |  | 
+**RunId** | **string** |  | 
+**ShinyEligible** | **bool** |  | 
+**TreasureType** | **string** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberDungeonsTreasuresChest
 
-`func NewSkyBlockProfileMemberDungeonsTreasuresChest() *SkyBlockProfileMemberDungeonsTreasuresChest`
+`func NewSkyBlockProfileMemberDungeonsTreasuresChest(chestId string, paid bool, quality int64, rerolls int64, rewards SkyBlockProfileMemberDungeonsTreasuresChestRewards, runId string, shinyEligible bool, treasureType string, ) *SkyBlockProfileMemberDungeonsTreasuresChest`
 
 NewSkyBlockProfileMemberDungeonsTreasuresChest instantiates a new SkyBlockProfileMemberDungeonsTreasuresChest object
 This constructor will assign default values to properties that have it defined,
@@ -51,11 +51,6 @@ and a boolean to check if the value has been set.
 
 SetChestId sets ChestId field to given value.
 
-### HasChestId
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasChestId() bool`
-
-HasChestId returns a boolean if a field has been set.
 
 ### GetPaid
 
@@ -76,11 +71,6 @@ and a boolean to check if the value has been set.
 
 SetPaid sets Paid field to given value.
 
-### HasPaid
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasPaid() bool`
-
-HasPaid returns a boolean if a field has been set.
 
 ### GetQuality
 
@@ -101,11 +91,6 @@ and a boolean to check if the value has been set.
 
 SetQuality sets Quality field to given value.
 
-### HasQuality
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasQuality() bool`
-
-HasQuality returns a boolean if a field has been set.
 
 ### GetRerolls
 
@@ -126,11 +111,6 @@ and a boolean to check if the value has been set.
 
 SetRerolls sets Rerolls field to given value.
 
-### HasRerolls
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasRerolls() bool`
-
-HasRerolls returns a boolean if a field has been set.
 
 ### GetRewards
 
@@ -151,11 +131,6 @@ and a boolean to check if the value has been set.
 
 SetRewards sets Rewards field to given value.
 
-### HasRewards
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasRewards() bool`
-
-HasRewards returns a boolean if a field has been set.
 
 ### GetRunId
 
@@ -176,11 +151,6 @@ and a boolean to check if the value has been set.
 
 SetRunId sets RunId field to given value.
 
-### HasRunId
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasRunId() bool`
-
-HasRunId returns a boolean if a field has been set.
 
 ### GetShinyEligible
 
@@ -201,11 +171,6 @@ and a boolean to check if the value has been set.
 
 SetShinyEligible sets ShinyEligible field to given value.
 
-### HasShinyEligible
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasShinyEligible() bool`
-
-HasShinyEligible returns a boolean if a field has been set.
 
 ### GetTreasureType
 
@@ -226,11 +191,6 @@ and a boolean to check if the value has been set.
 
 SetTreasureType sets TreasureType field to given value.
 
-### HasTreasureType
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresChest) HasTreasureType() bool`
-
-HasTreasureType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

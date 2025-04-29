@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CompletedAt** | **int64** |  | 
-**FlyfishFished** | **int64** |  | 
+**FlyfishFished** | Pointer to **int64** |  | [optional] 
 **Progress** | **int64** |  | 
 **SkeletonFishFished** | Pointer to **int64** |  | [optional] 
 **Status** | [**SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus**](SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus.md) |  | 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberObjectivesCatchLaseasFish
 
-`func NewSkyBlockProfileMemberObjectivesCatchLaseasFish(completedAt int64, flyfishFished int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, ) *SkyBlockProfileMemberObjectivesCatchLaseasFish`
+`func NewSkyBlockProfileMemberObjectivesCatchLaseasFish(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus, ) *SkyBlockProfileMemberObjectivesCatchLaseasFish`
 
 NewSkyBlockProfileMemberObjectivesCatchLaseasFish instantiates a new SkyBlockProfileMemberObjectivesCatchLaseasFish object
 This constructor will assign default values to properties that have it defined,
@@ -68,6 +68,11 @@ and a boolean to check if the value has been set.
 
 SetFlyfishFished sets FlyfishFished field to given value.
 
+### HasFlyfishFished
+
+`func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) HasFlyfishFished() bool`
+
+HasFlyfishFished returns a boolean if a field has been set.
 
 ### GetProgress
 

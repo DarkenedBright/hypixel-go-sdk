@@ -19,88 +19,118 @@ var _ MappedNullable = &SkyBlockProfileMemberMiningCoreNodes{}
 
 // SkyBlockProfileMemberMiningCoreNodes struct for SkyBlockProfileMemberMiningCoreNodes
 type SkyBlockProfileMemberMiningCoreNodes struct {
-	AnomalousDesire          *int64 `json:"anomalous_desire,omitempty"`
-	Blockhead                *int64 `json:"blockhead,omitempty"`
-	Crystalline              *int64 `json:"crystalline,omitempty"`
-	DailyEffect              *int64 `json:"daily_effect,omitempty"`
-	DailyGrind               *int64 `json:"daily_grind,omitempty"`
-	DailyPowder              *int64 `json:"daily_powder,omitempty"`
-	DustCollector            *int64 `json:"dust_collector,omitempty"`
-	EagerAdventurer          *int64 `json:"eager_adventurer,omitempty"`
-	EfficientMiner           *int64 `json:"efficient_miner,omitempty"`
-	Excavator                *int64 `json:"excavator,omitempty"`
-	ExperienceOrbs           *int64 `json:"experience_orbs,omitempty"`
-	FallenStarBonus          *int64 `json:"fallen_star_bonus,omitempty"`
-	ForgeTime                *int64 `json:"forge_time,omitempty"`
-	Fortunate                *int64 `json:"fortunate,omitempty"`
-	FrontLoaded              *int64 `json:"front_loaded,omitempty"`
-	FrozenSolid              *int64 `json:"frozen_solid,omitempty"`
-	GemstoneInfusion         *int64 `json:"gemstone_infusion,omitempty"`
-	GiftsFromTheDeparted     *int64 `json:"gifts_from_the_departed,omitempty"`
-	GoblinKiller             *int64 `json:"goblin_killer,omitempty"`
-	GreatExplorer            *int64 `json:"great_explorer,omitempty"`
-	HungryForMore            *int64 `json:"hungry_for_more,omitempty"`
-	KeenEye                  *int64 `json:"keen_eye,omitempty"`
-	KeepItCool               *int64 `json:"keep_it_cool,omitempty"`
-	LonesomeMiner            *int64 `json:"lonesome_miner,omitempty"`
-	ManiacMiner              *int64 `json:"maniac_miner,omitempty"`
-	MetalHead                *int64 `json:"metal_head,omitempty"`
-	MinersBlessing           *int64 `json:"miners_blessing,omitempty"`
-	MineshaftMayhem          *int64 `json:"mineshaft_mayhem,omitempty"`
-	MiningExperience         *int64 `json:"mining_experience,omitempty"`
-	MiningFortune            *int64 `json:"mining_fortune,omitempty"`
-	MiningFortune2           *int64 `json:"mining_fortune_2,omitempty"`
-	MiningMadness            *int64 `json:"mining_madness,omitempty"`
-	MiningMaster             *int64 `json:"mining_master,omitempty"`
-	MiningSpeed              *int64 `json:"mining_speed,omitempty"`
-	MiningSpeed2             *int64 `json:"mining_speed_2,omitempty"`
-	MiningSpeedBoost         *int64 `json:"mining_speed_boost,omitempty"`
-	Mole                     *int64 `json:"mole,omitempty"`
-	NoStoneUnturned          *int64 `json:"no_stone_unturned,omitempty"`
-	OldSchool                *int64 `json:"old_school,omitempty"`
-	PickaxeToss              *int64 `json:"pickaxe_toss,omitempty"`
-	PowderBuff               *int64 `json:"powder_buff,omitempty"`
-	PrecisionMining          *int64 `json:"precision_mining,omitempty"`
-	Professional             *int64 `json:"professional,omitempty"`
-	RagsToRiches             *int64 `json:"rags_to_riches,omitempty"`
-	RandomEvent              *int64 `json:"random_event,omitempty"`
-	SheerForce               *int64 `json:"sheer_force,omitempty"`
-	Special0                 *int64 `json:"special_0,omitempty"`
-	SteadyHand               *int64 `json:"steady_hand,omitempty"`
-	StrongArm                *int64 `json:"strong_arm,omitempty"`
-	SubterraneanFisher       *int64 `json:"subterranean_fisher,omitempty"`
-	SubzeroMining            *int64 `json:"subzero_mining,omitempty"`
-	Surveyor                 *int64 `json:"surveyor,omitempty"`
-	TitaniumInsanium         *int64 `json:"titanium_insanium,omitempty"`
-	ToggleBlockhead          *bool  `json:"toggle_blockhead,omitempty"`
-	ToggleDailyEffect        *bool  `json:"toggle_daily_effect,omitempty"`
-	ToggleDailyPowder        *bool  `json:"toggle_daily_powder,omitempty"`
-	ToggleEfficientMiner     *bool  `json:"toggle_efficient_miner,omitempty"`
-	ToggleExcavator          *bool  `json:"toggle_excavator,omitempty"`
-	ToggleForgeTime          *bool  `json:"toggle_forge_time,omitempty"`
-	ToggleFortunate          *bool  `json:"toggle_fortunate,omitempty"`
-	ToggleFrontLoaded        *bool  `json:"toggle_front_loaded,omitempty"`
-	ToggleFrozenSolid        *bool  `json:"toggle_frozen_solid,omitempty"`
-	ToggleGreatExplorer      *bool  `json:"toggle_great_explorer,omitempty"`
-	ToggleHungryForMore      *bool  `json:"toggle_hungry_for_more,omitempty"`
-	ToggleKeepItCool         *bool  `json:"toggle_keep_it_cool,omitempty"`
-	ToggleLonesomeMiner      *bool  `json:"toggle_lonesome_miner,omitempty"`
-	ToggleMetalHead          *bool  `json:"toggle_metal_head,omitempty"`
-	ToggleMiningFortune      *bool  `json:"toggle_mining_fortune,omitempty"`
-	ToggleMiningSpeed        *bool  `json:"toggle_mining_speed,omitempty"`
-	ToggleMole               *bool  `json:"toggle_mole,omitempty"`
-	TogglePowderBuff         *bool  `json:"toggle_powder_buff,omitempty"`
-	TogglePrecisionMining    *bool  `json:"toggle_precision_mining,omitempty"`
-	ToggleProfessional       *bool  `json:"toggle_professional,omitempty"`
-	ToggleRandomEvent        *bool  `json:"toggle_random_event,omitempty"`
-	ToggleSubterraneanFisher *bool  `json:"toggle_subterranean_fisher,omitempty"`
-	ToggleSubzeroMining      *bool  `json:"toggle_subzero_mining,omitempty"`
-	ToggleSurveyor           *bool  `json:"toggle_surveyor,omitempty"`
-	ToggleTitaniumInsanium   *bool  `json:"toggle_titanium_insanium,omitempty"`
-	ToggleVanguardSeeker     *bool  `json:"toggle_vanguard_seeker,omitempty"`
-	VanguardSeeker           *int64 `json:"vanguard_seeker,omitempty"`
-	VeinSeeker               *int64 `json:"vein_seeker,omitempty"`
-	WarmHearted              *int64 `json:"warm_hearted,omitempty"`
+	AnomalousDesire            *int64 `json:"anomalous_desire,omitempty"`
+	Blockhead                  *int64 `json:"blockhead,omitempty"`
+	Crystalline                *int64 `json:"crystalline,omitempty"`
+	DailyEffect                *int64 `json:"daily_effect,omitempty"`
+	DailyGrind                 *int64 `json:"daily_grind,omitempty"`
+	DailyPowder                *int64 `json:"daily_powder,omitempty"`
+	DustCollector              *int64 `json:"dust_collector,omitempty"`
+	EagerAdventurer            *int64 `json:"eager_adventurer,omitempty"`
+	EfficientMiner             *int64 `json:"efficient_miner,omitempty"`
+	Excavator                  *int64 `json:"excavator,omitempty"`
+	ExperienceOrbs             *int64 `json:"experience_orbs,omitempty"`
+	FallenStarBonus            *int64 `json:"fallen_star_bonus,omitempty"`
+	ForgeTime                  *int64 `json:"forge_time,omitempty"`
+	Fortunate                  *int64 `json:"fortunate,omitempty"`
+	FrontLoaded                *int64 `json:"front_loaded,omitempty"`
+	FrozenSolid                *int64 `json:"frozen_solid,omitempty"`
+	GemstoneInfusion           *int64 `json:"gemstone_infusion,omitempty"`
+	GiftsFromTheDeparted       *int64 `json:"gifts_from_the_departed,omitempty"`
+	GoblinKiller               *int64 `json:"goblin_killer,omitempty"`
+	GreatExplorer              *int64 `json:"great_explorer,omitempty"`
+	HungryForMore              *int64 `json:"hungry_for_more,omitempty"`
+	KeenEye                    *int64 `json:"keen_eye,omitempty"`
+	KeepItCool                 *int64 `json:"keep_it_cool,omitempty"`
+	LonesomeMiner              *int64 `json:"lonesome_miner,omitempty"`
+	ManiacMiner                *int64 `json:"maniac_miner,omitempty"`
+	MetalHead                  *int64 `json:"metal_head,omitempty"`
+	MinersBlessing             *int64 `json:"miners_blessing,omitempty"`
+	MineshaftMayhem            *int64 `json:"mineshaft_mayhem,omitempty"`
+	MiningExperience           *int64 `json:"mining_experience,omitempty"`
+	MiningFortune              *int64 `json:"mining_fortune,omitempty"`
+	MiningFortune2             *int64 `json:"mining_fortune_2,omitempty"`
+	MiningMadness              *int64 `json:"mining_madness,omitempty"`
+	MiningMaster               *int64 `json:"mining_master,omitempty"`
+	MiningSpeed                *int64 `json:"mining_speed,omitempty"`
+	MiningSpeed2               *int64 `json:"mining_speed_2,omitempty"`
+	MiningSpeedBoost           *int64 `json:"mining_speed_boost,omitempty"`
+	Mole                       *int64 `json:"mole,omitempty"`
+	NoStoneUnturned            *int64 `json:"no_stone_unturned,omitempty"`
+	OldSchool                  *int64 `json:"old_school,omitempty"`
+	PickaxeToss                *int64 `json:"pickaxe_toss,omitempty"`
+	PowderBuff                 *int64 `json:"powder_buff,omitempty"`
+	PrecisionMining            *int64 `json:"precision_mining,omitempty"`
+	Professional               *int64 `json:"professional,omitempty"`
+	RagsToRiches               *int64 `json:"rags_to_riches,omitempty"`
+	RandomEvent                *int64 `json:"random_event,omitempty"`
+	SheerForce                 *int64 `json:"sheer_force,omitempty"`
+	Special0                   *int64 `json:"special_0,omitempty"`
+	StarPowder                 *int64 `json:"star_powder,omitempty"`
+	SteadyHand                 *int64 `json:"steady_hand,omitempty"`
+	StrongArm                  *int64 `json:"strong_arm,omitempty"`
+	SubterraneanFisher         *int64 `json:"subterranean_fisher,omitempty"`
+	SubzeroMining              *int64 `json:"subzero_mining,omitempty"`
+	Surveyor                   *int64 `json:"surveyor,omitempty"`
+	TitaniumInsanium           *int64 `json:"titanium_insanium,omitempty"`
+	ToggleAnomalousDesire      *bool  `json:"toggle_anomalous_desire,omitempty"`
+	ToggleBlockhead            *bool  `json:"toggle_blockhead,omitempty"`
+	ToggleCrystalline          *bool  `json:"toggle_crystalline,omitempty"`
+	ToggleDailyEffect          *bool  `json:"toggle_daily_effect,omitempty"`
+	ToggleDailyGrind           *bool  `json:"toggle_daily_grind,omitempty"`
+	ToggleDailyPowder          *bool  `json:"toggle_daily_powder,omitempty"`
+	ToggleDustCollector        *bool  `json:"toggle_dust_collector,omitempty"`
+	ToggleEagerAdventurer      *bool  `json:"toggle_eager_adventurer,omitempty"`
+	ToggleEfficientMiner       *bool  `json:"toggle_efficient_miner,omitempty"`
+	ToggleExcavator            *bool  `json:"toggle_excavator,omitempty"`
+	ToggleExperienceOrbs       *bool  `json:"toggle_experience_orbs,omitempty"`
+	ToggleForgeTime            *bool  `json:"toggle_forge_time,omitempty"`
+	ToggleFortunate            *bool  `json:"toggle_fortunate,omitempty"`
+	ToggleFrontLoaded          *bool  `json:"toggle_front_loaded,omitempty"`
+	ToggleFrozenSolid          *bool  `json:"toggle_frozen_solid,omitempty"`
+	ToggleGemstoneInfusion     *bool  `json:"toggle_gemstone_infusion,omitempty"`
+	ToggleGiftsFromTheDeparted *bool  `json:"toggle_gifts_from_the_departed,omitempty"`
+	ToggleGoblinKiller         *bool  `json:"toggle_goblin_killer,omitempty"`
+	ToggleGreatExplorer        *bool  `json:"toggle_great_explorer,omitempty"`
+	ToggleHungryForMore        *bool  `json:"toggle_hungry_for_more,omitempty"`
+	ToggleKeenEye              *bool  `json:"toggle_keen_eye,omitempty"`
+	ToggleKeepItCool           *bool  `json:"toggle_keep_it_cool,omitempty"`
+	ToggleLonesomeMiner        *bool  `json:"toggle_lonesome_miner,omitempty"`
+	ToggleManiacMiner          *bool  `json:"toggle_maniac_miner,omitempty"`
+	ToggleMetalHead            *bool  `json:"toggle_metal_head,omitempty"`
+	ToggleMinersBlessing       *bool  `json:"toggle_miners_blessing,omitempty"`
+	ToggleMineshaftMayhem      *bool  `json:"toggle_mineshaft_mayhem,omitempty"`
+	ToggleMiningExpirience     *bool  `json:"toggle_mining_expirience,omitempty"`
+	ToggleMiningFortune        *bool  `json:"toggle_mining_fortune,omitempty"`
+	ToggleMiningFortune2       *bool  `json:"toggle_mining_fortune_2,omitempty"`
+	ToggleMiningMadness        *bool  `json:"toggle_mining_madness,omitempty"`
+	ToggleMiningMaster         *bool  `json:"toggle_mining_master,omitempty"`
+	ToggleMiningSpeed          *bool  `json:"toggle_mining_speed,omitempty"`
+	ToggleMiningSpeed2         *bool  `json:"toggle_mining_speed_2,omitempty"`
+	ToggleMiningSpeedBoost     *bool  `json:"toggle_mining_speed_boost,omitempty"`
+	ToggleMole                 *bool  `json:"toggle_mole,omitempty"`
+	ToggleNoStoneUnturned      *bool  `json:"toggle_no_stone_unturned,omitempty"`
+	ToggleOldSchool            *bool  `json:"toggle_old_school,omitempty"`
+	TogglePickaxeToss          *bool  `json:"toggle_pickaxe_toss,omitempty"`
+	TogglePowderBuff           *bool  `json:"toggle_powder_buff,omitempty"`
+	TogglePrecisionMining      *bool  `json:"toggle_precision_mining,omitempty"`
+	ToggleProfessional         *bool  `json:"toggle_professional,omitempty"`
+	ToggleRagsToRiches         *bool  `json:"toggle_rags_to_riches,omitempty"`
+	ToggleRandomEvent          *bool  `json:"toggle_random_event,omitempty"`
+	ToggleSheerForce           *bool  `json:"toggle_sheer_force,omitempty"`
+	ToggleStarPowder           *bool  `json:"toggle_star_powder,omitempty"`
+	ToggleSteadyHand           *bool  `json:"toggle_steady_hand,omitempty"`
+	ToggleStrongArm            *bool  `json:"toggle_strong_arm,omitempty"`
+	ToggleSubterraneanFisher   *bool  `json:"toggle_subterranean_fisher,omitempty"`
+	ToggleSubzeroMining        *bool  `json:"toggle_subzero_mining,omitempty"`
+	ToggleSurveyor             *bool  `json:"toggle_surveyor,omitempty"`
+	ToggleTitaniumInsanium     *bool  `json:"toggle_titanium_insanium,omitempty"`
+	ToggleVanguardSeeker       *bool  `json:"toggle_vanguard_seeker,omitempty"`
+	ToggleVeinSeeker           *bool  `json:"toggle_vein_seeker,omitempty"`
+	ToggleWarmHearted          *bool  `json:"toggle_warm_hearted,omitempty"`
+	VanguardSeeker             *int64 `json:"vanguard_seeker,omitempty"`
+	VeinSeeker                 *int64 `json:"vein_seeker,omitempty"`
+	WarmHearted                *int64 `json:"warm_hearted,omitempty"`
 }
 
 // NewSkyBlockProfileMemberMiningCoreNodes instantiates a new SkyBlockProfileMemberMiningCoreNodes object
@@ -1624,6 +1654,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetSpecial0(v int64) {
 	o.Special0 = &v
 }
 
+// GetStarPowder returns the StarPowder field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetStarPowder() int64 {
+	if o == nil || IsNil(o.StarPowder) {
+		var ret int64
+		return ret
+	}
+	return *o.StarPowder
+}
+
+// GetStarPowderOk returns a tuple with the StarPowder field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetStarPowderOk() (*int64, bool) {
+	if o == nil || IsNil(o.StarPowder) {
+		return nil, false
+	}
+	return o.StarPowder, true
+}
+
+// HasStarPowder returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasStarPowder() bool {
+	if o != nil && !IsNil(o.StarPowder) {
+		return true
+	}
+
+	return false
+}
+
+// SetStarPowder gets a reference to the given int64 and assigns it to the StarPowder field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetStarPowder(v int64) {
+	o.StarPowder = &v
+}
+
 // GetSteadyHand returns the SteadyHand field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetSteadyHand() int64 {
 	if o == nil || IsNil(o.SteadyHand) {
@@ -1816,6 +1878,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetTitaniumInsanium(v int64) {
 	o.TitaniumInsanium = &v
 }
 
+// GetToggleAnomalousDesire returns the ToggleAnomalousDesire field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleAnomalousDesire() bool {
+	if o == nil || IsNil(o.ToggleAnomalousDesire) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleAnomalousDesire
+}
+
+// GetToggleAnomalousDesireOk returns a tuple with the ToggleAnomalousDesire field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleAnomalousDesireOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleAnomalousDesire) {
+		return nil, false
+	}
+	return o.ToggleAnomalousDesire, true
+}
+
+// HasToggleAnomalousDesire returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleAnomalousDesire() bool {
+	if o != nil && !IsNil(o.ToggleAnomalousDesire) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleAnomalousDesire gets a reference to the given bool and assigns it to the ToggleAnomalousDesire field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleAnomalousDesire(v bool) {
+	o.ToggleAnomalousDesire = &v
+}
+
 // GetToggleBlockhead returns the ToggleBlockhead field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleBlockhead() bool {
 	if o == nil || IsNil(o.ToggleBlockhead) {
@@ -1846,6 +1940,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleBlockhead() bool {
 // SetToggleBlockhead gets a reference to the given bool and assigns it to the ToggleBlockhead field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleBlockhead(v bool) {
 	o.ToggleBlockhead = &v
+}
+
+// GetToggleCrystalline returns the ToggleCrystalline field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleCrystalline() bool {
+	if o == nil || IsNil(o.ToggleCrystalline) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleCrystalline
+}
+
+// GetToggleCrystallineOk returns a tuple with the ToggleCrystalline field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleCrystallineOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleCrystalline) {
+		return nil, false
+	}
+	return o.ToggleCrystalline, true
+}
+
+// HasToggleCrystalline returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleCrystalline() bool {
+	if o != nil && !IsNil(o.ToggleCrystalline) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleCrystalline gets a reference to the given bool and assigns it to the ToggleCrystalline field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleCrystalline(v bool) {
+	o.ToggleCrystalline = &v
 }
 
 // GetToggleDailyEffect returns the ToggleDailyEffect field value if set, zero value otherwise.
@@ -1880,6 +2006,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleDailyEffect(v bool) {
 	o.ToggleDailyEffect = &v
 }
 
+// GetToggleDailyGrind returns the ToggleDailyGrind field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleDailyGrind() bool {
+	if o == nil || IsNil(o.ToggleDailyGrind) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleDailyGrind
+}
+
+// GetToggleDailyGrindOk returns a tuple with the ToggleDailyGrind field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleDailyGrindOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleDailyGrind) {
+		return nil, false
+	}
+	return o.ToggleDailyGrind, true
+}
+
+// HasToggleDailyGrind returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleDailyGrind() bool {
+	if o != nil && !IsNil(o.ToggleDailyGrind) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleDailyGrind gets a reference to the given bool and assigns it to the ToggleDailyGrind field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleDailyGrind(v bool) {
+	o.ToggleDailyGrind = &v
+}
+
 // GetToggleDailyPowder returns the ToggleDailyPowder field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleDailyPowder() bool {
 	if o == nil || IsNil(o.ToggleDailyPowder) {
@@ -1910,6 +2068,70 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleDailyPowder() bool {
 // SetToggleDailyPowder gets a reference to the given bool and assigns it to the ToggleDailyPowder field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleDailyPowder(v bool) {
 	o.ToggleDailyPowder = &v
+}
+
+// GetToggleDustCollector returns the ToggleDustCollector field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleDustCollector() bool {
+	if o == nil || IsNil(o.ToggleDustCollector) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleDustCollector
+}
+
+// GetToggleDustCollectorOk returns a tuple with the ToggleDustCollector field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleDustCollectorOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleDustCollector) {
+		return nil, false
+	}
+	return o.ToggleDustCollector, true
+}
+
+// HasToggleDustCollector returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleDustCollector() bool {
+	if o != nil && !IsNil(o.ToggleDustCollector) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleDustCollector gets a reference to the given bool and assigns it to the ToggleDustCollector field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleDustCollector(v bool) {
+	o.ToggleDustCollector = &v
+}
+
+// GetToggleEagerAdventurer returns the ToggleEagerAdventurer field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleEagerAdventurer() bool {
+	if o == nil || IsNil(o.ToggleEagerAdventurer) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleEagerAdventurer
+}
+
+// GetToggleEagerAdventurerOk returns a tuple with the ToggleEagerAdventurer field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleEagerAdventurerOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleEagerAdventurer) {
+		return nil, false
+	}
+	return o.ToggleEagerAdventurer, true
+}
+
+// HasToggleEagerAdventurer returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleEagerAdventurer() bool {
+	if o != nil && !IsNil(o.ToggleEagerAdventurer) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleEagerAdventurer gets a reference to the given bool and assigns it to the ToggleEagerAdventurer field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleEagerAdventurer(v bool) {
+	o.ToggleEagerAdventurer = &v
 }
 
 // GetToggleEfficientMiner returns the ToggleEfficientMiner field value if set, zero value otherwise.
@@ -1974,6 +2196,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleExcavator() bool {
 // SetToggleExcavator gets a reference to the given bool and assigns it to the ToggleExcavator field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleExcavator(v bool) {
 	o.ToggleExcavator = &v
+}
+
+// GetToggleExperienceOrbs returns the ToggleExperienceOrbs field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleExperienceOrbs() bool {
+	if o == nil || IsNil(o.ToggleExperienceOrbs) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleExperienceOrbs
+}
+
+// GetToggleExperienceOrbsOk returns a tuple with the ToggleExperienceOrbs field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleExperienceOrbsOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleExperienceOrbs) {
+		return nil, false
+	}
+	return o.ToggleExperienceOrbs, true
+}
+
+// HasToggleExperienceOrbs returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleExperienceOrbs() bool {
+	if o != nil && !IsNil(o.ToggleExperienceOrbs) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleExperienceOrbs gets a reference to the given bool and assigns it to the ToggleExperienceOrbs field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleExperienceOrbs(v bool) {
+	o.ToggleExperienceOrbs = &v
 }
 
 // GetToggleForgeTime returns the ToggleForgeTime field value if set, zero value otherwise.
@@ -2104,6 +2358,102 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleFrozenSolid(v bool) {
 	o.ToggleFrozenSolid = &v
 }
 
+// GetToggleGemstoneInfusion returns the ToggleGemstoneInfusion field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGemstoneInfusion() bool {
+	if o == nil || IsNil(o.ToggleGemstoneInfusion) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleGemstoneInfusion
+}
+
+// GetToggleGemstoneInfusionOk returns a tuple with the ToggleGemstoneInfusion field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGemstoneInfusionOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleGemstoneInfusion) {
+		return nil, false
+	}
+	return o.ToggleGemstoneInfusion, true
+}
+
+// HasToggleGemstoneInfusion returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleGemstoneInfusion() bool {
+	if o != nil && !IsNil(o.ToggleGemstoneInfusion) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleGemstoneInfusion gets a reference to the given bool and assigns it to the ToggleGemstoneInfusion field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleGemstoneInfusion(v bool) {
+	o.ToggleGemstoneInfusion = &v
+}
+
+// GetToggleGiftsFromTheDeparted returns the ToggleGiftsFromTheDeparted field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGiftsFromTheDeparted() bool {
+	if o == nil || IsNil(o.ToggleGiftsFromTheDeparted) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleGiftsFromTheDeparted
+}
+
+// GetToggleGiftsFromTheDepartedOk returns a tuple with the ToggleGiftsFromTheDeparted field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGiftsFromTheDepartedOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleGiftsFromTheDeparted) {
+		return nil, false
+	}
+	return o.ToggleGiftsFromTheDeparted, true
+}
+
+// HasToggleGiftsFromTheDeparted returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleGiftsFromTheDeparted() bool {
+	if o != nil && !IsNil(o.ToggleGiftsFromTheDeparted) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleGiftsFromTheDeparted gets a reference to the given bool and assigns it to the ToggleGiftsFromTheDeparted field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleGiftsFromTheDeparted(v bool) {
+	o.ToggleGiftsFromTheDeparted = &v
+}
+
+// GetToggleGoblinKiller returns the ToggleGoblinKiller field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGoblinKiller() bool {
+	if o == nil || IsNil(o.ToggleGoblinKiller) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleGoblinKiller
+}
+
+// GetToggleGoblinKillerOk returns a tuple with the ToggleGoblinKiller field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGoblinKillerOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleGoblinKiller) {
+		return nil, false
+	}
+	return o.ToggleGoblinKiller, true
+}
+
+// HasToggleGoblinKiller returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleGoblinKiller() bool {
+	if o != nil && !IsNil(o.ToggleGoblinKiller) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleGoblinKiller gets a reference to the given bool and assigns it to the ToggleGoblinKiller field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleGoblinKiller(v bool) {
+	o.ToggleGoblinKiller = &v
+}
+
 // GetToggleGreatExplorer returns the ToggleGreatExplorer field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGreatExplorer() bool {
 	if o == nil || IsNil(o.ToggleGreatExplorer) {
@@ -2166,6 +2516,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleHungryForMore() bool {
 // SetToggleHungryForMore gets a reference to the given bool and assigns it to the ToggleHungryForMore field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleHungryForMore(v bool) {
 	o.ToggleHungryForMore = &v
+}
+
+// GetToggleKeenEye returns the ToggleKeenEye field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleKeenEye() bool {
+	if o == nil || IsNil(o.ToggleKeenEye) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleKeenEye
+}
+
+// GetToggleKeenEyeOk returns a tuple with the ToggleKeenEye field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleKeenEyeOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleKeenEye) {
+		return nil, false
+	}
+	return o.ToggleKeenEye, true
+}
+
+// HasToggleKeenEye returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleKeenEye() bool {
+	if o != nil && !IsNil(o.ToggleKeenEye) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleKeenEye gets a reference to the given bool and assigns it to the ToggleKeenEye field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleKeenEye(v bool) {
+	o.ToggleKeenEye = &v
 }
 
 // GetToggleKeepItCool returns the ToggleKeepItCool field value if set, zero value otherwise.
@@ -2232,6 +2614,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleLonesomeMiner(v bool) {
 	o.ToggleLonesomeMiner = &v
 }
 
+// GetToggleManiacMiner returns the ToggleManiacMiner field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleManiacMiner() bool {
+	if o == nil || IsNil(o.ToggleManiacMiner) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleManiacMiner
+}
+
+// GetToggleManiacMinerOk returns a tuple with the ToggleManiacMiner field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleManiacMinerOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleManiacMiner) {
+		return nil, false
+	}
+	return o.ToggleManiacMiner, true
+}
+
+// HasToggleManiacMiner returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleManiacMiner() bool {
+	if o != nil && !IsNil(o.ToggleManiacMiner) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleManiacMiner gets a reference to the given bool and assigns it to the ToggleManiacMiner field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleManiacMiner(v bool) {
+	o.ToggleManiacMiner = &v
+}
+
 // GetToggleMetalHead returns the ToggleMetalHead field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMetalHead() bool {
 	if o == nil || IsNil(o.ToggleMetalHead) {
@@ -2262,6 +2676,102 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMetalHead() bool {
 // SetToggleMetalHead gets a reference to the given bool and assigns it to the ToggleMetalHead field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMetalHead(v bool) {
 	o.ToggleMetalHead = &v
+}
+
+// GetToggleMinersBlessing returns the ToggleMinersBlessing field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMinersBlessing() bool {
+	if o == nil || IsNil(o.ToggleMinersBlessing) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleMinersBlessing
+}
+
+// GetToggleMinersBlessingOk returns a tuple with the ToggleMinersBlessing field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMinersBlessingOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleMinersBlessing) {
+		return nil, false
+	}
+	return o.ToggleMinersBlessing, true
+}
+
+// HasToggleMinersBlessing returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMinersBlessing() bool {
+	if o != nil && !IsNil(o.ToggleMinersBlessing) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleMinersBlessing gets a reference to the given bool and assigns it to the ToggleMinersBlessing field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMinersBlessing(v bool) {
+	o.ToggleMinersBlessing = &v
+}
+
+// GetToggleMineshaftMayhem returns the ToggleMineshaftMayhem field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMineshaftMayhem() bool {
+	if o == nil || IsNil(o.ToggleMineshaftMayhem) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleMineshaftMayhem
+}
+
+// GetToggleMineshaftMayhemOk returns a tuple with the ToggleMineshaftMayhem field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMineshaftMayhemOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleMineshaftMayhem) {
+		return nil, false
+	}
+	return o.ToggleMineshaftMayhem, true
+}
+
+// HasToggleMineshaftMayhem returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMineshaftMayhem() bool {
+	if o != nil && !IsNil(o.ToggleMineshaftMayhem) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleMineshaftMayhem gets a reference to the given bool and assigns it to the ToggleMineshaftMayhem field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMineshaftMayhem(v bool) {
+	o.ToggleMineshaftMayhem = &v
+}
+
+// GetToggleMiningExpirience returns the ToggleMiningExpirience field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningExpirience() bool {
+	if o == nil || IsNil(o.ToggleMiningExpirience) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleMiningExpirience
+}
+
+// GetToggleMiningExpirienceOk returns a tuple with the ToggleMiningExpirience field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningExpirienceOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleMiningExpirience) {
+		return nil, false
+	}
+	return o.ToggleMiningExpirience, true
+}
+
+// HasToggleMiningExpirience returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningExpirience() bool {
+	if o != nil && !IsNil(o.ToggleMiningExpirience) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleMiningExpirience gets a reference to the given bool and assigns it to the ToggleMiningExpirience field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningExpirience(v bool) {
+	o.ToggleMiningExpirience = &v
 }
 
 // GetToggleMiningFortune returns the ToggleMiningFortune field value if set, zero value otherwise.
@@ -2296,6 +2806,102 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningFortune(v bool) {
 	o.ToggleMiningFortune = &v
 }
 
+// GetToggleMiningFortune2 returns the ToggleMiningFortune2 field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningFortune2() bool {
+	if o == nil || IsNil(o.ToggleMiningFortune2) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleMiningFortune2
+}
+
+// GetToggleMiningFortune2Ok returns a tuple with the ToggleMiningFortune2 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningFortune2Ok() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleMiningFortune2) {
+		return nil, false
+	}
+	return o.ToggleMiningFortune2, true
+}
+
+// HasToggleMiningFortune2 returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningFortune2() bool {
+	if o != nil && !IsNil(o.ToggleMiningFortune2) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleMiningFortune2 gets a reference to the given bool and assigns it to the ToggleMiningFortune2 field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningFortune2(v bool) {
+	o.ToggleMiningFortune2 = &v
+}
+
+// GetToggleMiningMadness returns the ToggleMiningMadness field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningMadness() bool {
+	if o == nil || IsNil(o.ToggleMiningMadness) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleMiningMadness
+}
+
+// GetToggleMiningMadnessOk returns a tuple with the ToggleMiningMadness field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningMadnessOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleMiningMadness) {
+		return nil, false
+	}
+	return o.ToggleMiningMadness, true
+}
+
+// HasToggleMiningMadness returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningMadness() bool {
+	if o != nil && !IsNil(o.ToggleMiningMadness) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleMiningMadness gets a reference to the given bool and assigns it to the ToggleMiningMadness field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningMadness(v bool) {
+	o.ToggleMiningMadness = &v
+}
+
+// GetToggleMiningMaster returns the ToggleMiningMaster field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningMaster() bool {
+	if o == nil || IsNil(o.ToggleMiningMaster) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleMiningMaster
+}
+
+// GetToggleMiningMasterOk returns a tuple with the ToggleMiningMaster field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningMasterOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleMiningMaster) {
+		return nil, false
+	}
+	return o.ToggleMiningMaster, true
+}
+
+// HasToggleMiningMaster returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningMaster() bool {
+	if o != nil && !IsNil(o.ToggleMiningMaster) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleMiningMaster gets a reference to the given bool and assigns it to the ToggleMiningMaster field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningMaster(v bool) {
+	o.ToggleMiningMaster = &v
+}
+
 // GetToggleMiningSpeed returns the ToggleMiningSpeed field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningSpeed() bool {
 	if o == nil || IsNil(o.ToggleMiningSpeed) {
@@ -2328,6 +2934,70 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningSpeed(v bool) {
 	o.ToggleMiningSpeed = &v
 }
 
+// GetToggleMiningSpeed2 returns the ToggleMiningSpeed2 field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningSpeed2() bool {
+	if o == nil || IsNil(o.ToggleMiningSpeed2) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleMiningSpeed2
+}
+
+// GetToggleMiningSpeed2Ok returns a tuple with the ToggleMiningSpeed2 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningSpeed2Ok() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleMiningSpeed2) {
+		return nil, false
+	}
+	return o.ToggleMiningSpeed2, true
+}
+
+// HasToggleMiningSpeed2 returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningSpeed2() bool {
+	if o != nil && !IsNil(o.ToggleMiningSpeed2) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleMiningSpeed2 gets a reference to the given bool and assigns it to the ToggleMiningSpeed2 field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningSpeed2(v bool) {
+	o.ToggleMiningSpeed2 = &v
+}
+
+// GetToggleMiningSpeedBoost returns the ToggleMiningSpeedBoost field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningSpeedBoost() bool {
+	if o == nil || IsNil(o.ToggleMiningSpeedBoost) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleMiningSpeedBoost
+}
+
+// GetToggleMiningSpeedBoostOk returns a tuple with the ToggleMiningSpeedBoost field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningSpeedBoostOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleMiningSpeedBoost) {
+		return nil, false
+	}
+	return o.ToggleMiningSpeedBoost, true
+}
+
+// HasToggleMiningSpeedBoost returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningSpeedBoost() bool {
+	if o != nil && !IsNil(o.ToggleMiningSpeedBoost) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleMiningSpeedBoost gets a reference to the given bool and assigns it to the ToggleMiningSpeedBoost field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningSpeedBoost(v bool) {
+	o.ToggleMiningSpeedBoost = &v
+}
+
 // GetToggleMole returns the ToggleMole field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMole() bool {
 	if o == nil || IsNil(o.ToggleMole) {
@@ -2358,6 +3028,102 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMole() bool {
 // SetToggleMole gets a reference to the given bool and assigns it to the ToggleMole field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMole(v bool) {
 	o.ToggleMole = &v
+}
+
+// GetToggleNoStoneUnturned returns the ToggleNoStoneUnturned field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleNoStoneUnturned() bool {
+	if o == nil || IsNil(o.ToggleNoStoneUnturned) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleNoStoneUnturned
+}
+
+// GetToggleNoStoneUnturnedOk returns a tuple with the ToggleNoStoneUnturned field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleNoStoneUnturnedOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleNoStoneUnturned) {
+		return nil, false
+	}
+	return o.ToggleNoStoneUnturned, true
+}
+
+// HasToggleNoStoneUnturned returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleNoStoneUnturned() bool {
+	if o != nil && !IsNil(o.ToggleNoStoneUnturned) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleNoStoneUnturned gets a reference to the given bool and assigns it to the ToggleNoStoneUnturned field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleNoStoneUnturned(v bool) {
+	o.ToggleNoStoneUnturned = &v
+}
+
+// GetToggleOldSchool returns the ToggleOldSchool field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleOldSchool() bool {
+	if o == nil || IsNil(o.ToggleOldSchool) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleOldSchool
+}
+
+// GetToggleOldSchoolOk returns a tuple with the ToggleOldSchool field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleOldSchoolOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleOldSchool) {
+		return nil, false
+	}
+	return o.ToggleOldSchool, true
+}
+
+// HasToggleOldSchool returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleOldSchool() bool {
+	if o != nil && !IsNil(o.ToggleOldSchool) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleOldSchool gets a reference to the given bool and assigns it to the ToggleOldSchool field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleOldSchool(v bool) {
+	o.ToggleOldSchool = &v
+}
+
+// GetTogglePickaxeToss returns the TogglePickaxeToss field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetTogglePickaxeToss() bool {
+	if o == nil || IsNil(o.TogglePickaxeToss) {
+		var ret bool
+		return ret
+	}
+	return *o.TogglePickaxeToss
+}
+
+// GetTogglePickaxeTossOk returns a tuple with the TogglePickaxeToss field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetTogglePickaxeTossOk() (*bool, bool) {
+	if o == nil || IsNil(o.TogglePickaxeToss) {
+		return nil, false
+	}
+	return o.TogglePickaxeToss, true
+}
+
+// HasTogglePickaxeToss returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasTogglePickaxeToss() bool {
+	if o != nil && !IsNil(o.TogglePickaxeToss) {
+		return true
+	}
+
+	return false
+}
+
+// SetTogglePickaxeToss gets a reference to the given bool and assigns it to the TogglePickaxeToss field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetTogglePickaxeToss(v bool) {
+	o.TogglePickaxeToss = &v
 }
 
 // GetTogglePowderBuff returns the TogglePowderBuff field value if set, zero value otherwise.
@@ -2456,6 +3222,38 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleProfessional(v bool) {
 	o.ToggleProfessional = &v
 }
 
+// GetToggleRagsToRiches returns the ToggleRagsToRiches field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleRagsToRiches() bool {
+	if o == nil || IsNil(o.ToggleRagsToRiches) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleRagsToRiches
+}
+
+// GetToggleRagsToRichesOk returns a tuple with the ToggleRagsToRiches field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleRagsToRichesOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleRagsToRiches) {
+		return nil, false
+	}
+	return o.ToggleRagsToRiches, true
+}
+
+// HasToggleRagsToRiches returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleRagsToRiches() bool {
+	if o != nil && !IsNil(o.ToggleRagsToRiches) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleRagsToRiches gets a reference to the given bool and assigns it to the ToggleRagsToRiches field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleRagsToRiches(v bool) {
+	o.ToggleRagsToRiches = &v
+}
+
 // GetToggleRandomEvent returns the ToggleRandomEvent field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleRandomEvent() bool {
 	if o == nil || IsNil(o.ToggleRandomEvent) {
@@ -2486,6 +3284,134 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleRandomEvent() bool {
 // SetToggleRandomEvent gets a reference to the given bool and assigns it to the ToggleRandomEvent field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleRandomEvent(v bool) {
 	o.ToggleRandomEvent = &v
+}
+
+// GetToggleSheerForce returns the ToggleSheerForce field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleSheerForce() bool {
+	if o == nil || IsNil(o.ToggleSheerForce) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleSheerForce
+}
+
+// GetToggleSheerForceOk returns a tuple with the ToggleSheerForce field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleSheerForceOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleSheerForce) {
+		return nil, false
+	}
+	return o.ToggleSheerForce, true
+}
+
+// HasToggleSheerForce returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleSheerForce() bool {
+	if o != nil && !IsNil(o.ToggleSheerForce) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleSheerForce gets a reference to the given bool and assigns it to the ToggleSheerForce field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleSheerForce(v bool) {
+	o.ToggleSheerForce = &v
+}
+
+// GetToggleStarPowder returns the ToggleStarPowder field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleStarPowder() bool {
+	if o == nil || IsNil(o.ToggleStarPowder) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleStarPowder
+}
+
+// GetToggleStarPowderOk returns a tuple with the ToggleStarPowder field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleStarPowderOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleStarPowder) {
+		return nil, false
+	}
+	return o.ToggleStarPowder, true
+}
+
+// HasToggleStarPowder returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleStarPowder() bool {
+	if o != nil && !IsNil(o.ToggleStarPowder) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleStarPowder gets a reference to the given bool and assigns it to the ToggleStarPowder field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleStarPowder(v bool) {
+	o.ToggleStarPowder = &v
+}
+
+// GetToggleSteadyHand returns the ToggleSteadyHand field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleSteadyHand() bool {
+	if o == nil || IsNil(o.ToggleSteadyHand) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleSteadyHand
+}
+
+// GetToggleSteadyHandOk returns a tuple with the ToggleSteadyHand field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleSteadyHandOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleSteadyHand) {
+		return nil, false
+	}
+	return o.ToggleSteadyHand, true
+}
+
+// HasToggleSteadyHand returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleSteadyHand() bool {
+	if o != nil && !IsNil(o.ToggleSteadyHand) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleSteadyHand gets a reference to the given bool and assigns it to the ToggleSteadyHand field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleSteadyHand(v bool) {
+	o.ToggleSteadyHand = &v
+}
+
+// GetToggleStrongArm returns the ToggleStrongArm field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleStrongArm() bool {
+	if o == nil || IsNil(o.ToggleStrongArm) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleStrongArm
+}
+
+// GetToggleStrongArmOk returns a tuple with the ToggleStrongArm field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleStrongArmOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleStrongArm) {
+		return nil, false
+	}
+	return o.ToggleStrongArm, true
+}
+
+// HasToggleStrongArm returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleStrongArm() bool {
+	if o != nil && !IsNil(o.ToggleStrongArm) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleStrongArm gets a reference to the given bool and assigns it to the ToggleStrongArm field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleStrongArm(v bool) {
+	o.ToggleStrongArm = &v
 }
 
 // GetToggleSubterraneanFisher returns the ToggleSubterraneanFisher field value if set, zero value otherwise.
@@ -2646,6 +3572,70 @@ func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleVanguardSeeker() bool {
 // SetToggleVanguardSeeker gets a reference to the given bool and assigns it to the ToggleVanguardSeeker field.
 func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleVanguardSeeker(v bool) {
 	o.ToggleVanguardSeeker = &v
+}
+
+// GetToggleVeinSeeker returns the ToggleVeinSeeker field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleVeinSeeker() bool {
+	if o == nil || IsNil(o.ToggleVeinSeeker) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleVeinSeeker
+}
+
+// GetToggleVeinSeekerOk returns a tuple with the ToggleVeinSeeker field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleVeinSeekerOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleVeinSeeker) {
+		return nil, false
+	}
+	return o.ToggleVeinSeeker, true
+}
+
+// HasToggleVeinSeeker returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleVeinSeeker() bool {
+	if o != nil && !IsNil(o.ToggleVeinSeeker) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleVeinSeeker gets a reference to the given bool and assigns it to the ToggleVeinSeeker field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleVeinSeeker(v bool) {
+	o.ToggleVeinSeeker = &v
+}
+
+// GetToggleWarmHearted returns the ToggleWarmHearted field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleWarmHearted() bool {
+	if o == nil || IsNil(o.ToggleWarmHearted) {
+		var ret bool
+		return ret
+	}
+	return *o.ToggleWarmHearted
+}
+
+// GetToggleWarmHeartedOk returns a tuple with the ToggleWarmHearted field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleWarmHeartedOk() (*bool, bool) {
+	if o == nil || IsNil(o.ToggleWarmHearted) {
+		return nil, false
+	}
+	return o.ToggleWarmHearted, true
+}
+
+// HasToggleWarmHearted returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleWarmHearted() bool {
+	if o != nil && !IsNil(o.ToggleWarmHearted) {
+		return true
+	}
+
+	return false
+}
+
+// SetToggleWarmHearted gets a reference to the given bool and assigns it to the ToggleWarmHearted field.
+func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleWarmHearted(v bool) {
+	o.ToggleWarmHearted = &v
 }
 
 // GetVanguardSeeker returns the VanguardSeeker field value if set, zero value otherwise.
@@ -2895,6 +3885,9 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.Special0) {
 		toSerialize["special_0"] = o.Special0
 	}
+	if !IsNil(o.StarPowder) {
+		toSerialize["star_powder"] = o.StarPowder
+	}
 	if !IsNil(o.SteadyHand) {
 		toSerialize["steady_hand"] = o.SteadyHand
 	}
@@ -2913,20 +3906,38 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.TitaniumInsanium) {
 		toSerialize["titanium_insanium"] = o.TitaniumInsanium
 	}
+	if !IsNil(o.ToggleAnomalousDesire) {
+		toSerialize["toggle_anomalous_desire"] = o.ToggleAnomalousDesire
+	}
 	if !IsNil(o.ToggleBlockhead) {
 		toSerialize["toggle_blockhead"] = o.ToggleBlockhead
+	}
+	if !IsNil(o.ToggleCrystalline) {
+		toSerialize["toggle_crystalline"] = o.ToggleCrystalline
 	}
 	if !IsNil(o.ToggleDailyEffect) {
 		toSerialize["toggle_daily_effect"] = o.ToggleDailyEffect
 	}
+	if !IsNil(o.ToggleDailyGrind) {
+		toSerialize["toggle_daily_grind"] = o.ToggleDailyGrind
+	}
 	if !IsNil(o.ToggleDailyPowder) {
 		toSerialize["toggle_daily_powder"] = o.ToggleDailyPowder
+	}
+	if !IsNil(o.ToggleDustCollector) {
+		toSerialize["toggle_dust_collector"] = o.ToggleDustCollector
+	}
+	if !IsNil(o.ToggleEagerAdventurer) {
+		toSerialize["toggle_eager_adventurer"] = o.ToggleEagerAdventurer
 	}
 	if !IsNil(o.ToggleEfficientMiner) {
 		toSerialize["toggle_efficient_miner"] = o.ToggleEfficientMiner
 	}
 	if !IsNil(o.ToggleExcavator) {
 		toSerialize["toggle_excavator"] = o.ToggleExcavator
+	}
+	if !IsNil(o.ToggleExperienceOrbs) {
+		toSerialize["toggle_experience_orbs"] = o.ToggleExperienceOrbs
 	}
 	if !IsNil(o.ToggleForgeTime) {
 		toSerialize["toggle_forge_time"] = o.ToggleForgeTime
@@ -2940,11 +3951,23 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.ToggleFrozenSolid) {
 		toSerialize["toggle_frozen_solid"] = o.ToggleFrozenSolid
 	}
+	if !IsNil(o.ToggleGemstoneInfusion) {
+		toSerialize["toggle_gemstone_infusion"] = o.ToggleGemstoneInfusion
+	}
+	if !IsNil(o.ToggleGiftsFromTheDeparted) {
+		toSerialize["toggle_gifts_from_the_departed"] = o.ToggleGiftsFromTheDeparted
+	}
+	if !IsNil(o.ToggleGoblinKiller) {
+		toSerialize["toggle_goblin_killer"] = o.ToggleGoblinKiller
+	}
 	if !IsNil(o.ToggleGreatExplorer) {
 		toSerialize["toggle_great_explorer"] = o.ToggleGreatExplorer
 	}
 	if !IsNil(o.ToggleHungryForMore) {
 		toSerialize["toggle_hungry_for_more"] = o.ToggleHungryForMore
+	}
+	if !IsNil(o.ToggleKeenEye) {
+		toSerialize["toggle_keen_eye"] = o.ToggleKeenEye
 	}
 	if !IsNil(o.ToggleKeepItCool) {
 		toSerialize["toggle_keep_it_cool"] = o.ToggleKeepItCool
@@ -2952,17 +3975,53 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.ToggleLonesomeMiner) {
 		toSerialize["toggle_lonesome_miner"] = o.ToggleLonesomeMiner
 	}
+	if !IsNil(o.ToggleManiacMiner) {
+		toSerialize["toggle_maniac_miner"] = o.ToggleManiacMiner
+	}
 	if !IsNil(o.ToggleMetalHead) {
 		toSerialize["toggle_metal_head"] = o.ToggleMetalHead
+	}
+	if !IsNil(o.ToggleMinersBlessing) {
+		toSerialize["toggle_miners_blessing"] = o.ToggleMinersBlessing
+	}
+	if !IsNil(o.ToggleMineshaftMayhem) {
+		toSerialize["toggle_mineshaft_mayhem"] = o.ToggleMineshaftMayhem
+	}
+	if !IsNil(o.ToggleMiningExpirience) {
+		toSerialize["toggle_mining_expirience"] = o.ToggleMiningExpirience
 	}
 	if !IsNil(o.ToggleMiningFortune) {
 		toSerialize["toggle_mining_fortune"] = o.ToggleMiningFortune
 	}
+	if !IsNil(o.ToggleMiningFortune2) {
+		toSerialize["toggle_mining_fortune_2"] = o.ToggleMiningFortune2
+	}
+	if !IsNil(o.ToggleMiningMadness) {
+		toSerialize["toggle_mining_madness"] = o.ToggleMiningMadness
+	}
+	if !IsNil(o.ToggleMiningMaster) {
+		toSerialize["toggle_mining_master"] = o.ToggleMiningMaster
+	}
 	if !IsNil(o.ToggleMiningSpeed) {
 		toSerialize["toggle_mining_speed"] = o.ToggleMiningSpeed
 	}
+	if !IsNil(o.ToggleMiningSpeed2) {
+		toSerialize["toggle_mining_speed_2"] = o.ToggleMiningSpeed2
+	}
+	if !IsNil(o.ToggleMiningSpeedBoost) {
+		toSerialize["toggle_mining_speed_boost"] = o.ToggleMiningSpeedBoost
+	}
 	if !IsNil(o.ToggleMole) {
 		toSerialize["toggle_mole"] = o.ToggleMole
+	}
+	if !IsNil(o.ToggleNoStoneUnturned) {
+		toSerialize["toggle_no_stone_unturned"] = o.ToggleNoStoneUnturned
+	}
+	if !IsNil(o.ToggleOldSchool) {
+		toSerialize["toggle_old_school"] = o.ToggleOldSchool
+	}
+	if !IsNil(o.TogglePickaxeToss) {
+		toSerialize["toggle_pickaxe_toss"] = o.TogglePickaxeToss
 	}
 	if !IsNil(o.TogglePowderBuff) {
 		toSerialize["toggle_powder_buff"] = o.TogglePowderBuff
@@ -2973,8 +4032,23 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	if !IsNil(o.ToggleProfessional) {
 		toSerialize["toggle_professional"] = o.ToggleProfessional
 	}
+	if !IsNil(o.ToggleRagsToRiches) {
+		toSerialize["toggle_rags_to_riches"] = o.ToggleRagsToRiches
+	}
 	if !IsNil(o.ToggleRandomEvent) {
 		toSerialize["toggle_random_event"] = o.ToggleRandomEvent
+	}
+	if !IsNil(o.ToggleSheerForce) {
+		toSerialize["toggle_sheer_force"] = o.ToggleSheerForce
+	}
+	if !IsNil(o.ToggleStarPowder) {
+		toSerialize["toggle_star_powder"] = o.ToggleStarPowder
+	}
+	if !IsNil(o.ToggleSteadyHand) {
+		toSerialize["toggle_steady_hand"] = o.ToggleSteadyHand
+	}
+	if !IsNil(o.ToggleStrongArm) {
+		toSerialize["toggle_strong_arm"] = o.ToggleStrongArm
 	}
 	if !IsNil(o.ToggleSubterraneanFisher) {
 		toSerialize["toggle_subterranean_fisher"] = o.ToggleSubterraneanFisher
@@ -2990,6 +4064,12 @@ func (o SkyBlockProfileMemberMiningCoreNodes) ToMap() (map[string]interface{}, e
 	}
 	if !IsNil(o.ToggleVanguardSeeker) {
 		toSerialize["toggle_vanguard_seeker"] = o.ToggleVanguardSeeker
+	}
+	if !IsNil(o.ToggleVeinSeeker) {
+		toSerialize["toggle_vein_seeker"] = o.ToggleVeinSeeker
+	}
+	if !IsNil(o.ToggleWarmHearted) {
+		toSerialize["toggle_warm_hearted"] = o.ToggleWarmHearted
 	}
 	if !IsNil(o.VanguardSeeker) {
 		toSerialize["vanguard_seeker"] = o.VanguardSeeker

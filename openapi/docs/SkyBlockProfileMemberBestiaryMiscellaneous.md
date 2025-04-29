@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **MaxKillsVisible** | Pointer to **bool** |  | [optional] 
+**MilestonesNotifications** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
@@ -49,6 +50,31 @@ SetMaxKillsVisible sets MaxKillsVisible field to given value.
 `func (o *SkyBlockProfileMemberBestiaryMiscellaneous) HasMaxKillsVisible() bool`
 
 HasMaxKillsVisible returns a boolean if a field has been set.
+
+### GetMilestonesNotifications
+
+`func (o *SkyBlockProfileMemberBestiaryMiscellaneous) GetMilestonesNotifications() bool`
+
+GetMilestonesNotifications returns the MilestonesNotifications field if non-nil, zero value otherwise.
+
+### GetMilestonesNotificationsOk
+
+`func (o *SkyBlockProfileMemberBestiaryMiscellaneous) GetMilestonesNotificationsOk() (*bool, bool)`
+
+GetMilestonesNotificationsOk returns a tuple with the MilestonesNotifications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMilestonesNotifications
+
+`func (o *SkyBlockProfileMemberBestiaryMiscellaneous) SetMilestonesNotifications(v bool)`
+
+SetMilestonesNotifications sets MilestonesNotifications field to given value.
+
+### HasMilestonesNotifications
+
+`func (o *SkyBlockProfileMemberBestiaryMiscellaneous) HasMilestonesNotifications() bool`
+
+HasMilestonesNotifications returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

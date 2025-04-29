@@ -19,7 +19,8 @@ var _ MappedNullable = &SkyBlockProfileMemberBestiaryMiscellaneous{}
 
 // SkyBlockProfileMemberBestiaryMiscellaneous struct for SkyBlockProfileMemberBestiaryMiscellaneous
 type SkyBlockProfileMemberBestiaryMiscellaneous struct {
-	MaxKillsVisible *bool `json:"max_kills_visible,omitempty"`
+	MaxKillsVisible         *bool `json:"max_kills_visible,omitempty"`
+	MilestonesNotifications *bool `json:"milestones_notifications,omitempty"`
 }
 
 // NewSkyBlockProfileMemberBestiaryMiscellaneous instantiates a new SkyBlockProfileMemberBestiaryMiscellaneous object
@@ -71,6 +72,38 @@ func (o *SkyBlockProfileMemberBestiaryMiscellaneous) SetMaxKillsVisible(v bool) 
 	o.MaxKillsVisible = &v
 }
 
+// GetMilestonesNotifications returns the MilestonesNotifications field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberBestiaryMiscellaneous) GetMilestonesNotifications() bool {
+	if o == nil || IsNil(o.MilestonesNotifications) {
+		var ret bool
+		return ret
+	}
+	return *o.MilestonesNotifications
+}
+
+// GetMilestonesNotificationsOk returns a tuple with the MilestonesNotifications field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberBestiaryMiscellaneous) GetMilestonesNotificationsOk() (*bool, bool) {
+	if o == nil || IsNil(o.MilestonesNotifications) {
+		return nil, false
+	}
+	return o.MilestonesNotifications, true
+}
+
+// HasMilestonesNotifications returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberBestiaryMiscellaneous) HasMilestonesNotifications() bool {
+	if o != nil && !IsNil(o.MilestonesNotifications) {
+		return true
+	}
+
+	return false
+}
+
+// SetMilestonesNotifications gets a reference to the given bool and assigns it to the MilestonesNotifications field.
+func (o *SkyBlockProfileMemberBestiaryMiscellaneous) SetMilestonesNotifications(v bool) {
+	o.MilestonesNotifications = &v
+}
+
 func (o SkyBlockProfileMemberBestiaryMiscellaneous) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -83,6 +116,9 @@ func (o SkyBlockProfileMemberBestiaryMiscellaneous) ToMap() (map[string]interfac
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.MaxKillsVisible) {
 		toSerialize["max_kills_visible"] = o.MaxKillsVisible
+	}
+	if !IsNil(o.MilestonesNotifications) {
+		toSerialize["milestones_notifications"] = o.MilestonesNotifications
 	}
 	return toSerialize, nil
 }

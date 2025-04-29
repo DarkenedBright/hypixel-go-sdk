@@ -6,15 +6,15 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BagUpgradesPurchased** | Pointer to **int64** |  | [optional] 
 **HighestMagicalPower** | Pointer to **int64** |  | [optional] 
-**SelectedPower** | Pointer to **string** |  | [optional] 
-**Tuning** | Pointer to [**SkyBlockProfileMemberAccessoryBagStorageTuning**](SkyBlockProfileMemberAccessoryBagStorageTuning.md) |  | [optional] 
-**UnlockedPowers** | Pointer to **[]string** |  | [optional] 
+**SelectedPower** | Pointer to [**SkyBlockProfileMemberAccessoryBagStoragePower**](SkyBlockProfileMemberAccessoryBagStoragePower.md) |  | [optional] 
+**Tuning** | [**SkyBlockProfileMemberAccessoryBagStorageTuning**](SkyBlockProfileMemberAccessoryBagStorageTuning.md) |  | 
+**UnlockedPowers** | Pointer to [**[]SkyBlockProfileMemberAccessoryBagStoragePower**](SkyBlockProfileMemberAccessoryBagStoragePower.md) |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberAccessoryBagStorage
 
-`func NewSkyBlockProfileMemberAccessoryBagStorage() *SkyBlockProfileMemberAccessoryBagStorage`
+`func NewSkyBlockProfileMemberAccessoryBagStorage(tuning SkyBlockProfileMemberAccessoryBagStorageTuning, ) *SkyBlockProfileMemberAccessoryBagStorage`
 
 NewSkyBlockProfileMemberAccessoryBagStorage instantiates a new SkyBlockProfileMemberAccessoryBagStorage object
 This constructor will assign default values to properties that have it defined,
@@ -81,20 +81,20 @@ HasHighestMagicalPower returns a boolean if a field has been set.
 
 ### GetSelectedPower
 
-`func (o *SkyBlockProfileMemberAccessoryBagStorage) GetSelectedPower() string`
+`func (o *SkyBlockProfileMemberAccessoryBagStorage) GetSelectedPower() SkyBlockProfileMemberAccessoryBagStoragePower`
 
 GetSelectedPower returns the SelectedPower field if non-nil, zero value otherwise.
 
 ### GetSelectedPowerOk
 
-`func (o *SkyBlockProfileMemberAccessoryBagStorage) GetSelectedPowerOk() (*string, bool)`
+`func (o *SkyBlockProfileMemberAccessoryBagStorage) GetSelectedPowerOk() (*SkyBlockProfileMemberAccessoryBagStoragePower, bool)`
 
 GetSelectedPowerOk returns a tuple with the SelectedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSelectedPower
 
-`func (o *SkyBlockProfileMemberAccessoryBagStorage) SetSelectedPower(v string)`
+`func (o *SkyBlockProfileMemberAccessoryBagStorage) SetSelectedPower(v SkyBlockProfileMemberAccessoryBagStoragePower)`
 
 SetSelectedPower sets SelectedPower field to given value.
 
@@ -123,28 +123,23 @@ and a boolean to check if the value has been set.
 
 SetTuning sets Tuning field to given value.
 
-### HasTuning
-
-`func (o *SkyBlockProfileMemberAccessoryBagStorage) HasTuning() bool`
-
-HasTuning returns a boolean if a field has been set.
 
 ### GetUnlockedPowers
 
-`func (o *SkyBlockProfileMemberAccessoryBagStorage) GetUnlockedPowers() []string`
+`func (o *SkyBlockProfileMemberAccessoryBagStorage) GetUnlockedPowers() []SkyBlockProfileMemberAccessoryBagStoragePower`
 
 GetUnlockedPowers returns the UnlockedPowers field if non-nil, zero value otherwise.
 
 ### GetUnlockedPowersOk
 
-`func (o *SkyBlockProfileMemberAccessoryBagStorage) GetUnlockedPowersOk() (*[]string, bool)`
+`func (o *SkyBlockProfileMemberAccessoryBagStorage) GetUnlockedPowersOk() (*[]SkyBlockProfileMemberAccessoryBagStoragePower, bool)`
 
 GetUnlockedPowersOk returns a tuple with the UnlockedPowers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUnlockedPowers
 
-`func (o *SkyBlockProfileMemberAccessoryBagStorage) SetUnlockedPowers(v []string)`
+`func (o *SkyBlockProfileMemberAccessoryBagStorage) SetUnlockedPowers(v []SkyBlockProfileMemberAccessoryBagStoragePower)`
 
 SetUnlockedPowers sets UnlockedPowers field to given value.
 

@@ -51,38 +51,68 @@ Name | Type | Description | Notes
 **RandomEvent** | Pointer to **int64** |  | [optional] 
 **SheerForce** | Pointer to **int64** |  | [optional] 
 **Special0** | Pointer to **int64** |  | [optional] 
+**StarPowder** | Pointer to **int64** |  | [optional] 
 **SteadyHand** | Pointer to **int64** |  | [optional] 
 **StrongArm** | Pointer to **int64** |  | [optional] 
 **SubterraneanFisher** | Pointer to **int64** |  | [optional] 
 **SubzeroMining** | Pointer to **int64** |  | [optional] 
 **Surveyor** | Pointer to **int64** |  | [optional] 
 **TitaniumInsanium** | Pointer to **int64** |  | [optional] 
+**ToggleAnomalousDesire** | Pointer to **bool** |  | [optional] 
 **ToggleBlockhead** | Pointer to **bool** |  | [optional] 
+**ToggleCrystalline** | Pointer to **bool** |  | [optional] 
 **ToggleDailyEffect** | Pointer to **bool** |  | [optional] 
+**ToggleDailyGrind** | Pointer to **bool** |  | [optional] 
 **ToggleDailyPowder** | Pointer to **bool** |  | [optional] 
+**ToggleDustCollector** | Pointer to **bool** |  | [optional] 
+**ToggleEagerAdventurer** | Pointer to **bool** |  | [optional] 
 **ToggleEfficientMiner** | Pointer to **bool** |  | [optional] 
 **ToggleExcavator** | Pointer to **bool** |  | [optional] 
+**ToggleExperienceOrbs** | Pointer to **bool** |  | [optional] 
 **ToggleForgeTime** | Pointer to **bool** |  | [optional] 
 **ToggleFortunate** | Pointer to **bool** |  | [optional] 
 **ToggleFrontLoaded** | Pointer to **bool** |  | [optional] 
 **ToggleFrozenSolid** | Pointer to **bool** |  | [optional] 
+**ToggleGemstoneInfusion** | Pointer to **bool** |  | [optional] 
+**ToggleGiftsFromTheDeparted** | Pointer to **bool** |  | [optional] 
+**ToggleGoblinKiller** | Pointer to **bool** |  | [optional] 
 **ToggleGreatExplorer** | Pointer to **bool** |  | [optional] 
 **ToggleHungryForMore** | Pointer to **bool** |  | [optional] 
+**ToggleKeenEye** | Pointer to **bool** |  | [optional] 
 **ToggleKeepItCool** | Pointer to **bool** |  | [optional] 
 **ToggleLonesomeMiner** | Pointer to **bool** |  | [optional] 
+**ToggleManiacMiner** | Pointer to **bool** |  | [optional] 
 **ToggleMetalHead** | Pointer to **bool** |  | [optional] 
+**ToggleMinersBlessing** | Pointer to **bool** |  | [optional] 
+**ToggleMineshaftMayhem** | Pointer to **bool** |  | [optional] 
+**ToggleMiningExpirience** | Pointer to **bool** |  | [optional] 
 **ToggleMiningFortune** | Pointer to **bool** |  | [optional] 
+**ToggleMiningFortune2** | Pointer to **bool** |  | [optional] 
+**ToggleMiningMadness** | Pointer to **bool** |  | [optional] 
+**ToggleMiningMaster** | Pointer to **bool** |  | [optional] 
 **ToggleMiningSpeed** | Pointer to **bool** |  | [optional] 
+**ToggleMiningSpeed2** | Pointer to **bool** |  | [optional] 
+**ToggleMiningSpeedBoost** | Pointer to **bool** |  | [optional] 
 **ToggleMole** | Pointer to **bool** |  | [optional] 
+**ToggleNoStoneUnturned** | Pointer to **bool** |  | [optional] 
+**ToggleOldSchool** | Pointer to **bool** |  | [optional] 
+**TogglePickaxeToss** | Pointer to **bool** |  | [optional] 
 **TogglePowderBuff** | Pointer to **bool** |  | [optional] 
 **TogglePrecisionMining** | Pointer to **bool** |  | [optional] 
 **ToggleProfessional** | Pointer to **bool** |  | [optional] 
+**ToggleRagsToRiches** | Pointer to **bool** |  | [optional] 
 **ToggleRandomEvent** | Pointer to **bool** |  | [optional] 
+**ToggleSheerForce** | Pointer to **bool** |  | [optional] 
+**ToggleStarPowder** | Pointer to **bool** |  | [optional] 
+**ToggleSteadyHand** | Pointer to **bool** |  | [optional] 
+**ToggleStrongArm** | Pointer to **bool** |  | [optional] 
 **ToggleSubterraneanFisher** | Pointer to **bool** |  | [optional] 
 **ToggleSubzeroMining** | Pointer to **bool** |  | [optional] 
 **ToggleSurveyor** | Pointer to **bool** |  | [optional] 
 **ToggleTitaniumInsanium** | Pointer to **bool** |  | [optional] 
 **ToggleVanguardSeeker** | Pointer to **bool** |  | [optional] 
+**ToggleVeinSeeker** | Pointer to **bool** |  | [optional] 
+**ToggleWarmHearted** | Pointer to **bool** |  | [optional] 
 **VanguardSeeker** | Pointer to **int64** |  | [optional] 
 **VeinSeeker** | Pointer to **int64** |  | [optional] 
 **WarmHearted** | Pointer to **int64** |  | [optional] 
@@ -1281,6 +1311,31 @@ SetSpecial0 sets Special0 field to given value.
 
 HasSpecial0 returns a boolean if a field has been set.
 
+### GetStarPowder
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetStarPowder() int64`
+
+GetStarPowder returns the StarPowder field if non-nil, zero value otherwise.
+
+### GetStarPowderOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetStarPowderOk() (*int64, bool)`
+
+GetStarPowderOk returns a tuple with the StarPowder field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStarPowder
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetStarPowder(v int64)`
+
+SetStarPowder sets StarPowder field to given value.
+
+### HasStarPowder
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasStarPowder() bool`
+
+HasStarPowder returns a boolean if a field has been set.
+
 ### GetSteadyHand
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetSteadyHand() int64`
@@ -1431,6 +1486,31 @@ SetTitaniumInsanium sets TitaniumInsanium field to given value.
 
 HasTitaniumInsanium returns a boolean if a field has been set.
 
+### GetToggleAnomalousDesire
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleAnomalousDesire() bool`
+
+GetToggleAnomalousDesire returns the ToggleAnomalousDesire field if non-nil, zero value otherwise.
+
+### GetToggleAnomalousDesireOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleAnomalousDesireOk() (*bool, bool)`
+
+GetToggleAnomalousDesireOk returns a tuple with the ToggleAnomalousDesire field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleAnomalousDesire
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleAnomalousDesire(v bool)`
+
+SetToggleAnomalousDesire sets ToggleAnomalousDesire field to given value.
+
+### HasToggleAnomalousDesire
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleAnomalousDesire() bool`
+
+HasToggleAnomalousDesire returns a boolean if a field has been set.
+
 ### GetToggleBlockhead
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleBlockhead() bool`
@@ -1455,6 +1535,31 @@ SetToggleBlockhead sets ToggleBlockhead field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleBlockhead() bool`
 
 HasToggleBlockhead returns a boolean if a field has been set.
+
+### GetToggleCrystalline
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleCrystalline() bool`
+
+GetToggleCrystalline returns the ToggleCrystalline field if non-nil, zero value otherwise.
+
+### GetToggleCrystallineOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleCrystallineOk() (*bool, bool)`
+
+GetToggleCrystallineOk returns a tuple with the ToggleCrystalline field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleCrystalline
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleCrystalline(v bool)`
+
+SetToggleCrystalline sets ToggleCrystalline field to given value.
+
+### HasToggleCrystalline
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleCrystalline() bool`
+
+HasToggleCrystalline returns a boolean if a field has been set.
 
 ### GetToggleDailyEffect
 
@@ -1481,6 +1586,31 @@ SetToggleDailyEffect sets ToggleDailyEffect field to given value.
 
 HasToggleDailyEffect returns a boolean if a field has been set.
 
+### GetToggleDailyGrind
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleDailyGrind() bool`
+
+GetToggleDailyGrind returns the ToggleDailyGrind field if non-nil, zero value otherwise.
+
+### GetToggleDailyGrindOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleDailyGrindOk() (*bool, bool)`
+
+GetToggleDailyGrindOk returns a tuple with the ToggleDailyGrind field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleDailyGrind
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleDailyGrind(v bool)`
+
+SetToggleDailyGrind sets ToggleDailyGrind field to given value.
+
+### HasToggleDailyGrind
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleDailyGrind() bool`
+
+HasToggleDailyGrind returns a boolean if a field has been set.
+
 ### GetToggleDailyPowder
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleDailyPowder() bool`
@@ -1505,6 +1635,56 @@ SetToggleDailyPowder sets ToggleDailyPowder field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleDailyPowder() bool`
 
 HasToggleDailyPowder returns a boolean if a field has been set.
+
+### GetToggleDustCollector
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleDustCollector() bool`
+
+GetToggleDustCollector returns the ToggleDustCollector field if non-nil, zero value otherwise.
+
+### GetToggleDustCollectorOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleDustCollectorOk() (*bool, bool)`
+
+GetToggleDustCollectorOk returns a tuple with the ToggleDustCollector field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleDustCollector
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleDustCollector(v bool)`
+
+SetToggleDustCollector sets ToggleDustCollector field to given value.
+
+### HasToggleDustCollector
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleDustCollector() bool`
+
+HasToggleDustCollector returns a boolean if a field has been set.
+
+### GetToggleEagerAdventurer
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleEagerAdventurer() bool`
+
+GetToggleEagerAdventurer returns the ToggleEagerAdventurer field if non-nil, zero value otherwise.
+
+### GetToggleEagerAdventurerOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleEagerAdventurerOk() (*bool, bool)`
+
+GetToggleEagerAdventurerOk returns a tuple with the ToggleEagerAdventurer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleEagerAdventurer
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleEagerAdventurer(v bool)`
+
+SetToggleEagerAdventurer sets ToggleEagerAdventurer field to given value.
+
+### HasToggleEagerAdventurer
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleEagerAdventurer() bool`
+
+HasToggleEagerAdventurer returns a boolean if a field has been set.
 
 ### GetToggleEfficientMiner
 
@@ -1555,6 +1735,31 @@ SetToggleExcavator sets ToggleExcavator field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleExcavator() bool`
 
 HasToggleExcavator returns a boolean if a field has been set.
+
+### GetToggleExperienceOrbs
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleExperienceOrbs() bool`
+
+GetToggleExperienceOrbs returns the ToggleExperienceOrbs field if non-nil, zero value otherwise.
+
+### GetToggleExperienceOrbsOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleExperienceOrbsOk() (*bool, bool)`
+
+GetToggleExperienceOrbsOk returns a tuple with the ToggleExperienceOrbs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleExperienceOrbs
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleExperienceOrbs(v bool)`
+
+SetToggleExperienceOrbs sets ToggleExperienceOrbs field to given value.
+
+### HasToggleExperienceOrbs
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleExperienceOrbs() bool`
+
+HasToggleExperienceOrbs returns a boolean if a field has been set.
 
 ### GetToggleForgeTime
 
@@ -1656,6 +1861,81 @@ SetToggleFrozenSolid sets ToggleFrozenSolid field to given value.
 
 HasToggleFrozenSolid returns a boolean if a field has been set.
 
+### GetToggleGemstoneInfusion
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGemstoneInfusion() bool`
+
+GetToggleGemstoneInfusion returns the ToggleGemstoneInfusion field if non-nil, zero value otherwise.
+
+### GetToggleGemstoneInfusionOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGemstoneInfusionOk() (*bool, bool)`
+
+GetToggleGemstoneInfusionOk returns a tuple with the ToggleGemstoneInfusion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleGemstoneInfusion
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleGemstoneInfusion(v bool)`
+
+SetToggleGemstoneInfusion sets ToggleGemstoneInfusion field to given value.
+
+### HasToggleGemstoneInfusion
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleGemstoneInfusion() bool`
+
+HasToggleGemstoneInfusion returns a boolean if a field has been set.
+
+### GetToggleGiftsFromTheDeparted
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGiftsFromTheDeparted() bool`
+
+GetToggleGiftsFromTheDeparted returns the ToggleGiftsFromTheDeparted field if non-nil, zero value otherwise.
+
+### GetToggleGiftsFromTheDepartedOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGiftsFromTheDepartedOk() (*bool, bool)`
+
+GetToggleGiftsFromTheDepartedOk returns a tuple with the ToggleGiftsFromTheDeparted field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleGiftsFromTheDeparted
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleGiftsFromTheDeparted(v bool)`
+
+SetToggleGiftsFromTheDeparted sets ToggleGiftsFromTheDeparted field to given value.
+
+### HasToggleGiftsFromTheDeparted
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleGiftsFromTheDeparted() bool`
+
+HasToggleGiftsFromTheDeparted returns a boolean if a field has been set.
+
+### GetToggleGoblinKiller
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGoblinKiller() bool`
+
+GetToggleGoblinKiller returns the ToggleGoblinKiller field if non-nil, zero value otherwise.
+
+### GetToggleGoblinKillerOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGoblinKillerOk() (*bool, bool)`
+
+GetToggleGoblinKillerOk returns a tuple with the ToggleGoblinKiller field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleGoblinKiller
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleGoblinKiller(v bool)`
+
+SetToggleGoblinKiller sets ToggleGoblinKiller field to given value.
+
+### HasToggleGoblinKiller
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleGoblinKiller() bool`
+
+HasToggleGoblinKiller returns a boolean if a field has been set.
+
 ### GetToggleGreatExplorer
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleGreatExplorer() bool`
@@ -1705,6 +1985,31 @@ SetToggleHungryForMore sets ToggleHungryForMore field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleHungryForMore() bool`
 
 HasToggleHungryForMore returns a boolean if a field has been set.
+
+### GetToggleKeenEye
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleKeenEye() bool`
+
+GetToggleKeenEye returns the ToggleKeenEye field if non-nil, zero value otherwise.
+
+### GetToggleKeenEyeOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleKeenEyeOk() (*bool, bool)`
+
+GetToggleKeenEyeOk returns a tuple with the ToggleKeenEye field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleKeenEye
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleKeenEye(v bool)`
+
+SetToggleKeenEye sets ToggleKeenEye field to given value.
+
+### HasToggleKeenEye
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleKeenEye() bool`
+
+HasToggleKeenEye returns a boolean if a field has been set.
 
 ### GetToggleKeepItCool
 
@@ -1756,6 +2061,31 @@ SetToggleLonesomeMiner sets ToggleLonesomeMiner field to given value.
 
 HasToggleLonesomeMiner returns a boolean if a field has been set.
 
+### GetToggleManiacMiner
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleManiacMiner() bool`
+
+GetToggleManiacMiner returns the ToggleManiacMiner field if non-nil, zero value otherwise.
+
+### GetToggleManiacMinerOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleManiacMinerOk() (*bool, bool)`
+
+GetToggleManiacMinerOk returns a tuple with the ToggleManiacMiner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleManiacMiner
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleManiacMiner(v bool)`
+
+SetToggleManiacMiner sets ToggleManiacMiner field to given value.
+
+### HasToggleManiacMiner
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleManiacMiner() bool`
+
+HasToggleManiacMiner returns a boolean if a field has been set.
+
 ### GetToggleMetalHead
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMetalHead() bool`
@@ -1780,6 +2110,81 @@ SetToggleMetalHead sets ToggleMetalHead field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMetalHead() bool`
 
 HasToggleMetalHead returns a boolean if a field has been set.
+
+### GetToggleMinersBlessing
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMinersBlessing() bool`
+
+GetToggleMinersBlessing returns the ToggleMinersBlessing field if non-nil, zero value otherwise.
+
+### GetToggleMinersBlessingOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMinersBlessingOk() (*bool, bool)`
+
+GetToggleMinersBlessingOk returns a tuple with the ToggleMinersBlessing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleMinersBlessing
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMinersBlessing(v bool)`
+
+SetToggleMinersBlessing sets ToggleMinersBlessing field to given value.
+
+### HasToggleMinersBlessing
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMinersBlessing() bool`
+
+HasToggleMinersBlessing returns a boolean if a field has been set.
+
+### GetToggleMineshaftMayhem
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMineshaftMayhem() bool`
+
+GetToggleMineshaftMayhem returns the ToggleMineshaftMayhem field if non-nil, zero value otherwise.
+
+### GetToggleMineshaftMayhemOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMineshaftMayhemOk() (*bool, bool)`
+
+GetToggleMineshaftMayhemOk returns a tuple with the ToggleMineshaftMayhem field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleMineshaftMayhem
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMineshaftMayhem(v bool)`
+
+SetToggleMineshaftMayhem sets ToggleMineshaftMayhem field to given value.
+
+### HasToggleMineshaftMayhem
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMineshaftMayhem() bool`
+
+HasToggleMineshaftMayhem returns a boolean if a field has been set.
+
+### GetToggleMiningExpirience
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningExpirience() bool`
+
+GetToggleMiningExpirience returns the ToggleMiningExpirience field if non-nil, zero value otherwise.
+
+### GetToggleMiningExpirienceOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningExpirienceOk() (*bool, bool)`
+
+GetToggleMiningExpirienceOk returns a tuple with the ToggleMiningExpirience field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleMiningExpirience
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningExpirience(v bool)`
+
+SetToggleMiningExpirience sets ToggleMiningExpirience field to given value.
+
+### HasToggleMiningExpirience
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningExpirience() bool`
+
+HasToggleMiningExpirience returns a boolean if a field has been set.
 
 ### GetToggleMiningFortune
 
@@ -1806,6 +2211,81 @@ SetToggleMiningFortune sets ToggleMiningFortune field to given value.
 
 HasToggleMiningFortune returns a boolean if a field has been set.
 
+### GetToggleMiningFortune2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningFortune2() bool`
+
+GetToggleMiningFortune2 returns the ToggleMiningFortune2 field if non-nil, zero value otherwise.
+
+### GetToggleMiningFortune2Ok
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningFortune2Ok() (*bool, bool)`
+
+GetToggleMiningFortune2Ok returns a tuple with the ToggleMiningFortune2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleMiningFortune2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningFortune2(v bool)`
+
+SetToggleMiningFortune2 sets ToggleMiningFortune2 field to given value.
+
+### HasToggleMiningFortune2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningFortune2() bool`
+
+HasToggleMiningFortune2 returns a boolean if a field has been set.
+
+### GetToggleMiningMadness
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningMadness() bool`
+
+GetToggleMiningMadness returns the ToggleMiningMadness field if non-nil, zero value otherwise.
+
+### GetToggleMiningMadnessOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningMadnessOk() (*bool, bool)`
+
+GetToggleMiningMadnessOk returns a tuple with the ToggleMiningMadness field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleMiningMadness
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningMadness(v bool)`
+
+SetToggleMiningMadness sets ToggleMiningMadness field to given value.
+
+### HasToggleMiningMadness
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningMadness() bool`
+
+HasToggleMiningMadness returns a boolean if a field has been set.
+
+### GetToggleMiningMaster
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningMaster() bool`
+
+GetToggleMiningMaster returns the ToggleMiningMaster field if non-nil, zero value otherwise.
+
+### GetToggleMiningMasterOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningMasterOk() (*bool, bool)`
+
+GetToggleMiningMasterOk returns a tuple with the ToggleMiningMaster field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleMiningMaster
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningMaster(v bool)`
+
+SetToggleMiningMaster sets ToggleMiningMaster field to given value.
+
+### HasToggleMiningMaster
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningMaster() bool`
+
+HasToggleMiningMaster returns a boolean if a field has been set.
+
 ### GetToggleMiningSpeed
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningSpeed() bool`
@@ -1831,6 +2311,56 @@ SetToggleMiningSpeed sets ToggleMiningSpeed field to given value.
 
 HasToggleMiningSpeed returns a boolean if a field has been set.
 
+### GetToggleMiningSpeed2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningSpeed2() bool`
+
+GetToggleMiningSpeed2 returns the ToggleMiningSpeed2 field if non-nil, zero value otherwise.
+
+### GetToggleMiningSpeed2Ok
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningSpeed2Ok() (*bool, bool)`
+
+GetToggleMiningSpeed2Ok returns a tuple with the ToggleMiningSpeed2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleMiningSpeed2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningSpeed2(v bool)`
+
+SetToggleMiningSpeed2 sets ToggleMiningSpeed2 field to given value.
+
+### HasToggleMiningSpeed2
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningSpeed2() bool`
+
+HasToggleMiningSpeed2 returns a boolean if a field has been set.
+
+### GetToggleMiningSpeedBoost
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningSpeedBoost() bool`
+
+GetToggleMiningSpeedBoost returns the ToggleMiningSpeedBoost field if non-nil, zero value otherwise.
+
+### GetToggleMiningSpeedBoostOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMiningSpeedBoostOk() (*bool, bool)`
+
+GetToggleMiningSpeedBoostOk returns a tuple with the ToggleMiningSpeedBoost field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleMiningSpeedBoost
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleMiningSpeedBoost(v bool)`
+
+SetToggleMiningSpeedBoost sets ToggleMiningSpeedBoost field to given value.
+
+### HasToggleMiningSpeedBoost
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMiningSpeedBoost() bool`
+
+HasToggleMiningSpeedBoost returns a boolean if a field has been set.
+
 ### GetToggleMole
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleMole() bool`
@@ -1855,6 +2385,81 @@ SetToggleMole sets ToggleMole field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleMole() bool`
 
 HasToggleMole returns a boolean if a field has been set.
+
+### GetToggleNoStoneUnturned
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleNoStoneUnturned() bool`
+
+GetToggleNoStoneUnturned returns the ToggleNoStoneUnturned field if non-nil, zero value otherwise.
+
+### GetToggleNoStoneUnturnedOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleNoStoneUnturnedOk() (*bool, bool)`
+
+GetToggleNoStoneUnturnedOk returns a tuple with the ToggleNoStoneUnturned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleNoStoneUnturned
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleNoStoneUnturned(v bool)`
+
+SetToggleNoStoneUnturned sets ToggleNoStoneUnturned field to given value.
+
+### HasToggleNoStoneUnturned
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleNoStoneUnturned() bool`
+
+HasToggleNoStoneUnturned returns a boolean if a field has been set.
+
+### GetToggleOldSchool
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleOldSchool() bool`
+
+GetToggleOldSchool returns the ToggleOldSchool field if non-nil, zero value otherwise.
+
+### GetToggleOldSchoolOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleOldSchoolOk() (*bool, bool)`
+
+GetToggleOldSchoolOk returns a tuple with the ToggleOldSchool field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleOldSchool
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleOldSchool(v bool)`
+
+SetToggleOldSchool sets ToggleOldSchool field to given value.
+
+### HasToggleOldSchool
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleOldSchool() bool`
+
+HasToggleOldSchool returns a boolean if a field has been set.
+
+### GetTogglePickaxeToss
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetTogglePickaxeToss() bool`
+
+GetTogglePickaxeToss returns the TogglePickaxeToss field if non-nil, zero value otherwise.
+
+### GetTogglePickaxeTossOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetTogglePickaxeTossOk() (*bool, bool)`
+
+GetTogglePickaxeTossOk returns a tuple with the TogglePickaxeToss field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTogglePickaxeToss
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetTogglePickaxeToss(v bool)`
+
+SetTogglePickaxeToss sets TogglePickaxeToss field to given value.
+
+### HasTogglePickaxeToss
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasTogglePickaxeToss() bool`
+
+HasTogglePickaxeToss returns a boolean if a field has been set.
 
 ### GetTogglePowderBuff
 
@@ -1931,6 +2536,31 @@ SetToggleProfessional sets ToggleProfessional field to given value.
 
 HasToggleProfessional returns a boolean if a field has been set.
 
+### GetToggleRagsToRiches
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleRagsToRiches() bool`
+
+GetToggleRagsToRiches returns the ToggleRagsToRiches field if non-nil, zero value otherwise.
+
+### GetToggleRagsToRichesOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleRagsToRichesOk() (*bool, bool)`
+
+GetToggleRagsToRichesOk returns a tuple with the ToggleRagsToRiches field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleRagsToRiches
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleRagsToRiches(v bool)`
+
+SetToggleRagsToRiches sets ToggleRagsToRiches field to given value.
+
+### HasToggleRagsToRiches
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleRagsToRiches() bool`
+
+HasToggleRagsToRiches returns a boolean if a field has been set.
+
 ### GetToggleRandomEvent
 
 `func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleRandomEvent() bool`
@@ -1955,6 +2585,106 @@ SetToggleRandomEvent sets ToggleRandomEvent field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleRandomEvent() bool`
 
 HasToggleRandomEvent returns a boolean if a field has been set.
+
+### GetToggleSheerForce
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleSheerForce() bool`
+
+GetToggleSheerForce returns the ToggleSheerForce field if non-nil, zero value otherwise.
+
+### GetToggleSheerForceOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleSheerForceOk() (*bool, bool)`
+
+GetToggleSheerForceOk returns a tuple with the ToggleSheerForce field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleSheerForce
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleSheerForce(v bool)`
+
+SetToggleSheerForce sets ToggleSheerForce field to given value.
+
+### HasToggleSheerForce
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleSheerForce() bool`
+
+HasToggleSheerForce returns a boolean if a field has been set.
+
+### GetToggleStarPowder
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleStarPowder() bool`
+
+GetToggleStarPowder returns the ToggleStarPowder field if non-nil, zero value otherwise.
+
+### GetToggleStarPowderOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleStarPowderOk() (*bool, bool)`
+
+GetToggleStarPowderOk returns a tuple with the ToggleStarPowder field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleStarPowder
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleStarPowder(v bool)`
+
+SetToggleStarPowder sets ToggleStarPowder field to given value.
+
+### HasToggleStarPowder
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleStarPowder() bool`
+
+HasToggleStarPowder returns a boolean if a field has been set.
+
+### GetToggleSteadyHand
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleSteadyHand() bool`
+
+GetToggleSteadyHand returns the ToggleSteadyHand field if non-nil, zero value otherwise.
+
+### GetToggleSteadyHandOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleSteadyHandOk() (*bool, bool)`
+
+GetToggleSteadyHandOk returns a tuple with the ToggleSteadyHand field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleSteadyHand
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleSteadyHand(v bool)`
+
+SetToggleSteadyHand sets ToggleSteadyHand field to given value.
+
+### HasToggleSteadyHand
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleSteadyHand() bool`
+
+HasToggleSteadyHand returns a boolean if a field has been set.
+
+### GetToggleStrongArm
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleStrongArm() bool`
+
+GetToggleStrongArm returns the ToggleStrongArm field if non-nil, zero value otherwise.
+
+### GetToggleStrongArmOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleStrongArmOk() (*bool, bool)`
+
+GetToggleStrongArmOk returns a tuple with the ToggleStrongArm field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleStrongArm
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleStrongArm(v bool)`
+
+SetToggleStrongArm sets ToggleStrongArm field to given value.
+
+### HasToggleStrongArm
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleStrongArm() bool`
+
+HasToggleStrongArm returns a boolean if a field has been set.
 
 ### GetToggleSubterraneanFisher
 
@@ -2080,6 +2810,56 @@ SetToggleVanguardSeeker sets ToggleVanguardSeeker field to given value.
 `func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleVanguardSeeker() bool`
 
 HasToggleVanguardSeeker returns a boolean if a field has been set.
+
+### GetToggleVeinSeeker
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleVeinSeeker() bool`
+
+GetToggleVeinSeeker returns the ToggleVeinSeeker field if non-nil, zero value otherwise.
+
+### GetToggleVeinSeekerOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleVeinSeekerOk() (*bool, bool)`
+
+GetToggleVeinSeekerOk returns a tuple with the ToggleVeinSeeker field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleVeinSeeker
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleVeinSeeker(v bool)`
+
+SetToggleVeinSeeker sets ToggleVeinSeeker field to given value.
+
+### HasToggleVeinSeeker
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleVeinSeeker() bool`
+
+HasToggleVeinSeeker returns a boolean if a field has been set.
+
+### GetToggleWarmHearted
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleWarmHearted() bool`
+
+GetToggleWarmHearted returns the ToggleWarmHearted field if non-nil, zero value otherwise.
+
+### GetToggleWarmHeartedOk
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) GetToggleWarmHeartedOk() (*bool, bool)`
+
+GetToggleWarmHeartedOk returns a tuple with the ToggleWarmHearted field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToggleWarmHearted
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) SetToggleWarmHearted(v bool)`
+
+SetToggleWarmHearted sets ToggleWarmHearted field to given value.
+
+### HasToggleWarmHearted
+
+`func (o *SkyBlockProfileMemberMiningCoreNodes) HasToggleWarmHearted() bool`
+
+HasToggleWarmHearted returns a boolean if a field has been set.
 
 ### GetVanguardSeeker
 

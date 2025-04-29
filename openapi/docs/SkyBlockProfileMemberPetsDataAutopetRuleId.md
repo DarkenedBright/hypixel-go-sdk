@@ -23,6 +23,8 @@
 
 * `GET_COLD` (value: `"GET_COLD"`)
 
+* `GOING_AFK` (value: `"GOING_AFK"`)
+
 * `KILL_ENTITY` (value: `"KILL_ENTITY"`)
 
 * `LOGIN` (value: `"LOGIN"`)

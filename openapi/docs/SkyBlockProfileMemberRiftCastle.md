@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**BoughtPathwaySkip** | Pointer to **bool** |  | [optional] 
 **FairyStep** | Pointer to **int64** |  | [optional] 
 **GrubberStacks** | Pointer to **int64** |  | [optional] 
 **UnlockedPathwaySkip** | Pointer to **bool** |  | [optional] 
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewSkyBlockProfileMemberRiftCastleWithDefaults instantiates a new SkyBlockProfileMemberRiftCastle object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetBoughtPathwaySkip
+
+`func (o *SkyBlockProfileMemberRiftCastle) GetBoughtPathwaySkip() bool`
+
+GetBoughtPathwaySkip returns the BoughtPathwaySkip field if non-nil, zero value otherwise.
+
+### GetBoughtPathwaySkipOk
+
+`func (o *SkyBlockProfileMemberRiftCastle) GetBoughtPathwaySkipOk() (*bool, bool)`
+
+GetBoughtPathwaySkipOk returns a tuple with the BoughtPathwaySkip field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBoughtPathwaySkip
+
+`func (o *SkyBlockProfileMemberRiftCastle) SetBoughtPathwaySkip(v bool)`
+
+SetBoughtPathwaySkip sets BoughtPathwaySkip field to given value.
+
+### HasBoughtPathwaySkip
+
+`func (o *SkyBlockProfileMemberRiftCastle) HasBoughtPathwaySkip() bool`
+
+HasBoughtPathwaySkip returns a boolean if a field has been set.
 
 ### GetFairyStep
 

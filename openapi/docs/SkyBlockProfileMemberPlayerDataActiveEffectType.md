@@ -41,6 +41,8 @@
 
 * `FARMING_XP_BOOST` (value: `"farming_xp_boost"`)
 
+* `FILET_O_FORTUNE` (value: `"filet_o_fortune"`)
+
 * `FIRE_RESISTANCE` (value: `"fire_resistance"`)
 
 * `FISHING_XP_BOOST` (value: `"fishing_xp_boost"`)
@@ -79,6 +81,10 @@
 
 * `PET_LUCK` (value: `"pet_luck"`)
 
+* `POISON` (value: `"poison"`)
+
+* `POWDER_PUMPKIN` (value: `"powder_pumpkin"`)
+
 * `RABBIT` (value: `"rabbit"`)
 
 * `REGENERATION` (value: `"regeneration"`)
@@ -102,6 +108,8 @@
 * `TRUE_DEFENSE` (value: `"true_defense"`)
 
 * `WATER_BREATHING` (value: `"water_breathing"`)
+
+* `WEAKNESS` (value: `"weakness"`)
 
 * `WISP_ICE` (value: `"wisp_ice"`)
 

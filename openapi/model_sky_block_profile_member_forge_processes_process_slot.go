@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberForgeProcessesProcessSlot type satisfies the MappedNullable interface at compile time
@@ -19,21 +21,28 @@ var _ MappedNullable = &SkyBlockProfileMemberForgeProcessesProcessSlot{}
 
 // SkyBlockProfileMemberForgeProcessesProcessSlot struct for SkyBlockProfileMemberForgeProcessesProcessSlot
 type SkyBlockProfileMemberForgeProcessesProcessSlot struct {
-	Id                  *string        `json:"id,omitempty"`
-	Notified            *bool          `json:"notified,omitempty"`
-	OldItem             NullableString `json:"oldItem,omitempty"`
-	ProcessTimeModifier *int64         `json:"processTimeModifier,omitempty"`
-	Slot                *int64         `json:"slot,omitempty"`
-	StartTime           *int64         `json:"startTime,omitempty"`
-	Type                *string        `json:"type,omitempty"`
+	Id                  string                                        `json:"id"`
+	Notified            bool                                          `json:"notified"`
+	OldItem             *SkyBlockProfileMemberInventoryBase64GzipData `json:"oldItem,omitempty"`
+	ProcessTimeModifier *int64                                        `json:"processTimeModifier,omitempty"`
+	Slot                int64                                         `json:"slot"`
+	StartTime           int64                                         `json:"startTime"`
+	Type                string                                        `json:"type"`
 }
+
+type _SkyBlockProfileMemberForgeProcessesProcessSlot SkyBlockProfileMemberForgeProcessesProcessSlot
 
 // NewSkyBlockProfileMemberForgeProcessesProcessSlot instantiates a new SkyBlockProfileMemberForgeProcessesProcessSlot object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberForgeProcessesProcessSlot() *SkyBlockProfileMemberForgeProcessesProcessSlot {
+func NewSkyBlockProfileMemberForgeProcessesProcessSlot(id string, notified bool, slot int64, startTime int64, type_ string) *SkyBlockProfileMemberForgeProcessesProcessSlot {
 	this := SkyBlockProfileMemberForgeProcessesProcessSlot{}
+	this.Id = id
+	this.Notified = notified
+	this.Slot = slot
+	this.StartTime = startTime
+	this.Type = type_
 	return &this
 }
 
@@ -45,111 +54,84 @@ func NewSkyBlockProfileMemberForgeProcessesProcessSlotWithDefaults() *SkyBlockPr
 	return &this
 }
 
-// GetId returns the Id field value if set, zero value otherwise.
+// GetId returns the Id field value
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetId() string {
-	if o == nil || IsNil(o.Id) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.Id
+
+	return o.Id
 }
 
-// GetIdOk returns a tuple with the Id field value if set, nil otherwise
+// GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetIdOk() (*string, bool) {
-	if o == nil || IsNil(o.Id) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Id, true
+	return &o.Id, true
 }
 
-// HasId returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasId() bool {
-	if o != nil && !IsNil(o.Id) {
-		return true
-	}
-
-	return false
-}
-
-// SetId gets a reference to the given string and assigns it to the Id field.
+// SetId sets field value
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetId(v string) {
-	o.Id = &v
+	o.Id = v
 }
 
-// GetNotified returns the Notified field value if set, zero value otherwise.
+// GetNotified returns the Notified field value
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetNotified() bool {
-	if o == nil || IsNil(o.Notified) {
+	if o == nil {
 		var ret bool
 		return ret
 	}
-	return *o.Notified
+
+	return o.Notified
 }
 
-// GetNotifiedOk returns a tuple with the Notified field value if set, nil otherwise
+// GetNotifiedOk returns a tuple with the Notified field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetNotifiedOk() (*bool, bool) {
-	if o == nil || IsNil(o.Notified) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Notified, true
+	return &o.Notified, true
 }
 
-// HasNotified returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasNotified() bool {
-	if o != nil && !IsNil(o.Notified) {
-		return true
-	}
-
-	return false
-}
-
-// SetNotified gets a reference to the given bool and assigns it to the Notified field.
+// SetNotified sets field value
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetNotified(v bool) {
-	o.Notified = &v
+	o.Notified = v
 }
 
-// GetOldItem returns the OldItem field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetOldItem() string {
-	if o == nil || IsNil(o.OldItem.Get()) {
-		var ret string
+// GetOldItem returns the OldItem field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetOldItem() SkyBlockProfileMemberInventoryBase64GzipData {
+	if o == nil || IsNil(o.OldItem) {
+		var ret SkyBlockProfileMemberInventoryBase64GzipData
 		return ret
 	}
-	return *o.OldItem.Get()
+	return *o.OldItem
 }
 
 // GetOldItemOk returns a tuple with the OldItem field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetOldItemOk() (*string, bool) {
-	if o == nil {
+func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetOldItemOk() (*SkyBlockProfileMemberInventoryBase64GzipData, bool) {
+	if o == nil || IsNil(o.OldItem) {
 		return nil, false
 	}
-	return o.OldItem.Get(), o.OldItem.IsSet()
+	return o.OldItem, true
 }
 
 // HasOldItem returns a boolean if a field has been set.
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasOldItem() bool {
-	if o != nil && o.OldItem.IsSet() {
+	if o != nil && !IsNil(o.OldItem) {
 		return true
 	}
 
 	return false
 }
 
-// SetOldItem gets a reference to the given NullableString and assigns it to the OldItem field.
-func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetOldItem(v string) {
-	o.OldItem.Set(&v)
-}
-
-// SetOldItemNil sets the value for OldItem to be an explicit nil
-func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetOldItemNil() {
-	o.OldItem.Set(nil)
-}
-
-// UnsetOldItem ensures that no value is present for OldItem, not even an explicit nil
-func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) UnsetOldItem() {
-	o.OldItem.Unset()
+// SetOldItem gets a reference to the given SkyBlockProfileMemberInventoryBase64GzipData and assigns it to the OldItem field.
+func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetOldItem(v SkyBlockProfileMemberInventoryBase64GzipData) {
+	o.OldItem = &v
 }
 
 // GetProcessTimeModifier returns the ProcessTimeModifier field value if set, zero value otherwise.
@@ -184,100 +166,76 @@ func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetProcessTimeModifier(
 	o.ProcessTimeModifier = &v
 }
 
-// GetSlot returns the Slot field value if set, zero value otherwise.
+// GetSlot returns the Slot field value
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetSlot() int64 {
-	if o == nil || IsNil(o.Slot) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.Slot
+
+	return o.Slot
 }
 
-// GetSlotOk returns a tuple with the Slot field value if set, nil otherwise
+// GetSlotOk returns a tuple with the Slot field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetSlotOk() (*int64, bool) {
-	if o == nil || IsNil(o.Slot) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Slot, true
+	return &o.Slot, true
 }
 
-// HasSlot returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasSlot() bool {
-	if o != nil && !IsNil(o.Slot) {
-		return true
-	}
-
-	return false
-}
-
-// SetSlot gets a reference to the given int64 and assigns it to the Slot field.
+// SetSlot sets field value
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetSlot(v int64) {
-	o.Slot = &v
+	o.Slot = v
 }
 
-// GetStartTime returns the StartTime field value if set, zero value otherwise.
+// GetStartTime returns the StartTime field value
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetStartTime() int64 {
-	if o == nil || IsNil(o.StartTime) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.StartTime
+
+	return o.StartTime
 }
 
-// GetStartTimeOk returns a tuple with the StartTime field value if set, nil otherwise
+// GetStartTimeOk returns a tuple with the StartTime field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetStartTimeOk() (*int64, bool) {
-	if o == nil || IsNil(o.StartTime) {
+	if o == nil {
 		return nil, false
 	}
-	return o.StartTime, true
+	return &o.StartTime, true
 }
 
-// HasStartTime returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasStartTime() bool {
-	if o != nil && !IsNil(o.StartTime) {
-		return true
-	}
-
-	return false
-}
-
-// SetStartTime gets a reference to the given int64 and assigns it to the StartTime field.
+// SetStartTime sets field value
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetStartTime(v int64) {
-	o.StartTime = &v
+	o.StartTime = v
 }
 
-// GetType returns the Type field value if set, zero value otherwise.
+// GetType returns the Type field value
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetType() string {
-	if o == nil || IsNil(o.Type) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.Type
+
+	return o.Type
 }
 
-// GetTypeOk returns a tuple with the Type field value if set, nil otherwise
+// GetTypeOk returns a tuple with the Type field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.Type) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Type, true
+	return &o.Type, true
 }
 
-// HasType returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasType() bool {
-	if o != nil && !IsNil(o.Type) {
-		return true
-	}
-
-	return false
-}
-
-// SetType gets a reference to the given string and assigns it to the Type field.
+// SetType sets field value
 func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetType(v string) {
-	o.Type = &v
+	o.Type = v
 }
 
 func (o SkyBlockProfileMemberForgeProcessesProcessSlot) MarshalJSON() ([]byte, error) {
@@ -290,28 +248,59 @@ func (o SkyBlockProfileMemberForgeProcessesProcessSlot) MarshalJSON() ([]byte, e
 
 func (o SkyBlockProfileMemberForgeProcessesProcessSlot) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Id) {
-		toSerialize["id"] = o.Id
-	}
-	if !IsNil(o.Notified) {
-		toSerialize["notified"] = o.Notified
-	}
-	if o.OldItem.IsSet() {
-		toSerialize["oldItem"] = o.OldItem.Get()
+	toSerialize["id"] = o.Id
+	toSerialize["notified"] = o.Notified
+	if !IsNil(o.OldItem) {
+		toSerialize["oldItem"] = o.OldItem
 	}
 	if !IsNil(o.ProcessTimeModifier) {
 		toSerialize["processTimeModifier"] = o.ProcessTimeModifier
 	}
-	if !IsNil(o.Slot) {
-		toSerialize["slot"] = o.Slot
-	}
-	if !IsNil(o.StartTime) {
-		toSerialize["startTime"] = o.StartTime
-	}
-	if !IsNil(o.Type) {
-		toSerialize["type"] = o.Type
-	}
+	toSerialize["slot"] = o.Slot
+	toSerialize["startTime"] = o.StartTime
+	toSerialize["type"] = o.Type
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"id",
+		"notified",
+		"slot",
+		"startTime",
+		"type",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberForgeProcessesProcessSlot := _SkyBlockProfileMemberForgeProcessesProcessSlot{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberForgeProcessesProcessSlot)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberForgeProcessesProcessSlot(varSkyBlockProfileMemberForgeProcessesProcessSlot)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberForgeProcessesProcessSlot struct {

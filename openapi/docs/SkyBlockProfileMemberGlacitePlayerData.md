@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CorpsesLooted** | Pointer to [**SkyBlockProfileMemberGlacitePlayerDataCorpsesLooted**](SkyBlockProfileMemberGlacitePlayerDataCorpsesLooted.md) |  | [optional] 
 **FossilDust** | Pointer to **float64** |  | [optional] 
-**FossilsDonated** | Pointer to **[]string** |  | [optional] 
+**FossilsDonated** | Pointer to [**[]SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner**](SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner.md) |  | [optional] 
 **MineshaftsEntered** | Pointer to **int64** |  | [optional] 
 
 ## Methods
@@ -80,20 +80,20 @@ HasFossilDust returns a boolean if a field has been set.
 
 ### GetFossilsDonated
 
-`func (o *SkyBlockProfileMemberGlacitePlayerData) GetFossilsDonated() []string`
+`func (o *SkyBlockProfileMemberGlacitePlayerData) GetFossilsDonated() []SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner`
 
 GetFossilsDonated returns the FossilsDonated field if non-nil, zero value otherwise.
 
 ### GetFossilsDonatedOk
 
-`func (o *SkyBlockProfileMemberGlacitePlayerData) GetFossilsDonatedOk() (*[]string, bool)`
+`func (o *SkyBlockProfileMemberGlacitePlayerData) GetFossilsDonatedOk() (*[]SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner, bool)`
 
 GetFossilsDonatedOk returns a tuple with the FossilsDonated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFossilsDonated
 
-`func (o *SkyBlockProfileMemberGlacitePlayerData) SetFossilsDonated(v []string)`
+`func (o *SkyBlockProfileMemberGlacitePlayerData) SetFossilsDonated(v []SkyBlockProfileMemberGlacitePlayerDataFossilsDonatedInner)`
 
 SetFossilsDonated sets FossilsDonated field to given value.
 

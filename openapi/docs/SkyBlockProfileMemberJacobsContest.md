@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 **MedalsInv** | Pointer to [**SkyBlockProfileMemberJacobsContestMedalsInv**](SkyBlockProfileMemberJacobsContestMedalsInv.md) |  | [optional] 
 **Migration** | Pointer to **bool** |  | [optional] 
 **Perks** | Pointer to [**SkyBlockProfileMemberJacobsContestPerks**](SkyBlockProfileMemberJacobsContestPerks.md) |  | [optional] 
-**PersonalBests** | Pointer to **map[string]int64** |  | [optional] 
+**PersonalBests** | Pointer to [**SkyBlockProfileMemberJacobsContestPersonalBests**](SkyBlockProfileMemberJacobsContestPersonalBests.md) |  | [optional] 
 **Talked** | Pointer to **bool** |  | [optional] 
-**UniqueBrackets** | Pointer to **map[string][]string** |  | [optional] 
+**UniqueBrackets** | Pointer to [**SkyBlockProfileMemberJacobsContestUniqueBrackets**](SkyBlockProfileMemberJacobsContestUniqueBrackets.md) |  | [optional] 
 
 ## Methods
 
@@ -133,20 +133,20 @@ HasPerks returns a boolean if a field has been set.
 
 ### GetPersonalBests
 
-`func (o *SkyBlockProfileMemberJacobsContest) GetPersonalBests() map[string]int64`
+`func (o *SkyBlockProfileMemberJacobsContest) GetPersonalBests() SkyBlockProfileMemberJacobsContestPersonalBests`
 
 GetPersonalBests returns the PersonalBests field if non-nil, zero value otherwise.
 
 ### GetPersonalBestsOk
 
-`func (o *SkyBlockProfileMemberJacobsContest) GetPersonalBestsOk() (*map[string]int64, bool)`
+`func (o *SkyBlockProfileMemberJacobsContest) GetPersonalBestsOk() (*SkyBlockProfileMemberJacobsContestPersonalBests, bool)`
 
 GetPersonalBestsOk returns a tuple with the PersonalBests field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPersonalBests
 
-`func (o *SkyBlockProfileMemberJacobsContest) SetPersonalBests(v map[string]int64)`
+`func (o *SkyBlockProfileMemberJacobsContest) SetPersonalBests(v SkyBlockProfileMemberJacobsContestPersonalBests)`
 
 SetPersonalBests sets PersonalBests field to given value.
 
@@ -183,20 +183,20 @@ HasTalked returns a boolean if a field has been set.
 
 ### GetUniqueBrackets
 
-`func (o *SkyBlockProfileMemberJacobsContest) GetUniqueBrackets() map[string][]string`
+`func (o *SkyBlockProfileMemberJacobsContest) GetUniqueBrackets() SkyBlockProfileMemberJacobsContestUniqueBrackets`
 
 GetUniqueBrackets returns the UniqueBrackets field if non-nil, zero value otherwise.
 
 ### GetUniqueBracketsOk
 
-`func (o *SkyBlockProfileMemberJacobsContest) GetUniqueBracketsOk() (*map[string][]string, bool)`
+`func (o *SkyBlockProfileMemberJacobsContest) GetUniqueBracketsOk() (*SkyBlockProfileMemberJacobsContestUniqueBrackets, bool)`
 
 GetUniqueBracketsOk returns a tuple with the UniqueBrackets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUniqueBrackets
 
-`func (o *SkyBlockProfileMemberJacobsContest) SetUniqueBrackets(v map[string][]string)`
+`func (o *SkyBlockProfileMemberJacobsContest) SetUniqueBrackets(v SkyBlockProfileMemberJacobsContestUniqueBrackets)`
 
 SetUniqueBrackets sets UniqueBrackets field to given value.
 

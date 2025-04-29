@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **GreaterMinesLastAccess** | Pointer to **int64** |  | [optional] 
 **HotmMigratorTreeResetSendMessage** | Pointer to **bool** |  | [optional] 
 **LastReset** | Pointer to **int64** |  | [optional] 
-**Nodes** | [**SkyBlockProfileMemberMiningCoreNodes**](SkyBlockProfileMemberMiningCoreNodes.md) |  | 
+**Nodes** | Pointer to [**SkyBlockProfileMemberMiningCoreNodes**](SkyBlockProfileMemberMiningCoreNodes.md) |  | [optional] 
 **PowderGemstone** | Pointer to **int64** |  | [optional] 
 **PowderGemstoneTotal** | Pointer to **int64** |  | [optional] 
 **PowderGlacite** | Pointer to **int64** |  | [optional] 
@@ -41,7 +41,7 @@ Name | Type | Description | Notes
 
 ### NewSkyBlockProfileMemberMiningCore
 
-`func NewSkyBlockProfileMemberMiningCore(nodes SkyBlockProfileMemberMiningCoreNodes, ) *SkyBlockProfileMemberMiningCore`
+`func NewSkyBlockProfileMemberMiningCore() *SkyBlockProfileMemberMiningCore`
 
 NewSkyBlockProfileMemberMiningCore instantiates a new SkyBlockProfileMemberMiningCore object
 This constructor will assign default values to properties that have it defined,
@@ -475,6 +475,11 @@ and a boolean to check if the value has been set.
 
 SetNodes sets Nodes field to given value.
 
+### HasNodes
+
+`func (o *SkyBlockProfileMemberMiningCore) HasNodes() bool`
+
+HasNodes returns a boolean if a field has been set.
 
 ### GetPowderGemstone
 

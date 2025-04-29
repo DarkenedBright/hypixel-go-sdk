@@ -153,6 +153,7 @@ const (
 	SKYBLOCKPROFILEMEMBERPLAYERDATAVISITEDZONESINNER_IGRUPAN_CHICKEN_COOP              SkyBlockProfileMemberPlayerDataVisitedZonesInner = "igrupan_chicken_coop"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAVISITEDZONESINNER_IGRUPAN_HOUSE                     SkyBlockProfileMemberPlayerDataVisitedZonesInner = "igrupan_house"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAVISITEDZONESINNER_INFESTED_HOUSE                    SkyBlockProfileMemberPlayerDataVisitedZonesInner = "infested_house"
+	SKYBLOCKPROFILEMEMBERPLAYERDATAVISITEDZONESINNER_INSIDE_THE_WALL                   SkyBlockProfileMemberPlayerDataVisitedZonesInner = "inside_the_wall"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAVISITEDZONESINNER_INSTANCED                         SkyBlockProfileMemberPlayerDataVisitedZonesInner = "instanced"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAVISITEDZONESINNER_JAKE_HOUSE                        SkyBlockProfileMemberPlayerDataVisitedZonesInner = "jake_house"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAVISITEDZONESINNER_LAGOON_HUT                        SkyBlockProfileMemberPlayerDataVisitedZonesInner = "lagoon_hut"
@@ -401,6 +402,7 @@ var AllowedSkyBlockProfileMemberPlayerDataVisitedZonesInnerEnumValues = []SkyBlo
 	"igrupan_chicken_coop",
 	"igrupan_house",
 	"infested_house",
+	"inside_the_wall",
 	"instanced",
 	"jake_house",
 	"lagoon_hut",

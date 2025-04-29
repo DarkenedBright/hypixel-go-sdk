@@ -5,18 +5,18 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BarryCenter** | [**SkyBlockProfileMemberRiftVillagePlazaBarryCenter**](SkyBlockProfileMemberRiftVillagePlazaBarryCenter.md) |  | 
-**BarterBank** | **map[string]interface{}** |  | 
+**BarterBank** | Pointer to **map[string]interface{}** |  | [optional] 
 **Cowboy** | [**SkyBlockProfileMemberRiftVillagePlazaCowboy**](SkyBlockProfileMemberRiftVillagePlazaCowboy.md) |  | 
 **GotScammed** | Pointer to **bool** |  | [optional] 
 **Lonely** | [**SkyBlockProfileMemberRiftVillagePlazaLonely**](SkyBlockProfileMemberRiftVillagePlazaLonely.md) |  | 
-**Murder** | [**SkyBlockProfileMemberRiftVillagePlazaMurder**](SkyBlockProfileMemberRiftVillagePlazaMurder.md) |  | 
+**Murder** | Pointer to [**SkyBlockProfileMemberRiftVillagePlazaMurder**](SkyBlockProfileMemberRiftVillagePlazaMurder.md) |  | [optional] 
 **Seraphine** | [**SkyBlockProfileMemberRiftVillagePlazaSeraphine**](SkyBlockProfileMemberRiftVillagePlazaSeraphine.md) |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberRiftVillagePlaza
 
-`func NewSkyBlockProfileMemberRiftVillagePlaza(barryCenter SkyBlockProfileMemberRiftVillagePlazaBarryCenter, barterBank map[string]interface{}, cowboy SkyBlockProfileMemberRiftVillagePlazaCowboy, lonely SkyBlockProfileMemberRiftVillagePlazaLonely, murder SkyBlockProfileMemberRiftVillagePlazaMurder, seraphine SkyBlockProfileMemberRiftVillagePlazaSeraphine, ) *SkyBlockProfileMemberRiftVillagePlaza`
+`func NewSkyBlockProfileMemberRiftVillagePlaza(barryCenter SkyBlockProfileMemberRiftVillagePlazaBarryCenter, cowboy SkyBlockProfileMemberRiftVillagePlazaCowboy, lonely SkyBlockProfileMemberRiftVillagePlazaLonely, seraphine SkyBlockProfileMemberRiftVillagePlazaSeraphine, ) *SkyBlockProfileMemberRiftVillagePlaza`
 
 NewSkyBlockProfileMemberRiftVillagePlaza instantiates a new SkyBlockProfileMemberRiftVillagePlaza object
 This constructor will assign default values to properties that have it defined,
@@ -70,6 +70,11 @@ and a boolean to check if the value has been set.
 
 SetBarterBank sets BarterBank field to given value.
 
+### HasBarterBank
+
+`func (o *SkyBlockProfileMemberRiftVillagePlaza) HasBarterBank() bool`
+
+HasBarterBank returns a boolean if a field has been set.
 
 ### GetCowboy
 
@@ -155,6 +160,11 @@ and a boolean to check if the value has been set.
 
 SetMurder sets Murder field to given value.
 
+### HasMurder
+
+`func (o *SkyBlockProfileMemberRiftVillagePlaza) HasMurder() bool`
+
+HasMurder returns a boolean if a field has been set.
 
 ### GetSeraphine
 

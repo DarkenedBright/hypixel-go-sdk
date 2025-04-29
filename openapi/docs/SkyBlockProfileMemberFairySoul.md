@@ -5,14 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **FairyExchanges** | Pointer to **int64** |  | [optional] 
-**TotalCollected** | Pointer to **int64** |  | [optional] 
+**TotalCollected** | **int64** |  | 
 **UnspentSouls** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberFairySoul
 
-`func NewSkyBlockProfileMemberFairySoul() *SkyBlockProfileMemberFairySoul`
+`func NewSkyBlockProfileMemberFairySoul(totalCollected int64, ) *SkyBlockProfileMemberFairySoul`
 
 NewSkyBlockProfileMemberFairySoul instantiates a new SkyBlockProfileMemberFairySoul object
 This constructor will assign default values to properties that have it defined,
@@ -71,11 +71,6 @@ and a boolean to check if the value has been set.
 
 SetTotalCollected sets TotalCollected field to given value.
 
-### HasTotalCollected
-
-`func (o *SkyBlockProfileMemberFairySoul) HasTotalCollected() bool`
-
-HasTotalCollected returns a boolean if a field has been set.
 
 ### GetUnspentSouls
 

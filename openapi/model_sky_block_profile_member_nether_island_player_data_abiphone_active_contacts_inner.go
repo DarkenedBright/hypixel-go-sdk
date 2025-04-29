@@ -25,6 +25,7 @@ const (
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_ANITA               SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "anita"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_ARANYA              SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "aranya"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_ARROW_FORGER        SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "arrow_forger"
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_BINGO               SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "bingo"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_BLACKSMITH          SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "blacksmith"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_BRYNMOR             SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "brynmor"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERDATAABIPHONEACTIVECONTACTSINNER_BUILDER             SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInner = "builder"
@@ -83,6 +84,7 @@ var AllowedSkyBlockProfileMemberNetherIslandPlayerDataAbiphoneActiveContactsInne
 	"anita",
 	"aranya",
 	"arrow_forger",
+	"bingo",
 	"blacksmith",
 	"brynmor",
 	"builder",

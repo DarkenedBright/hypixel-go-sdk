@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberDungeonsDungeonHubRaceSettings type satisfies the MappedNullable interface at compile time
@@ -19,17 +21,21 @@ var _ MappedNullable = &SkyBlockProfileMemberDungeonsDungeonHubRaceSettings{}
 
 // SkyBlockProfileMemberDungeonsDungeonHubRaceSettings struct for SkyBlockProfileMemberDungeonsDungeonHubRaceSettings
 type SkyBlockProfileMemberDungeonsDungeonHubRaceSettings struct {
-	Runback         *bool   `json:"runback,omitempty"`
-	SelectedRace    *string `json:"selected_race,omitempty"`
-	SelectedSetting *string `json:"selected_setting,omitempty"`
+	Runback         bool                                                                `json:"runback"`
+	SelectedRace    SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace     `json:"selected_race"`
+	SelectedSetting *SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting `json:"selected_setting,omitempty"`
 }
+
+type _SkyBlockProfileMemberDungeonsDungeonHubRaceSettings SkyBlockProfileMemberDungeonsDungeonHubRaceSettings
 
 // NewSkyBlockProfileMemberDungeonsDungeonHubRaceSettings instantiates a new SkyBlockProfileMemberDungeonsDungeonHubRaceSettings object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberDungeonsDungeonHubRaceSettings() *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings {
+func NewSkyBlockProfileMemberDungeonsDungeonHubRaceSettings(runback bool, selectedRace SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace) *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings {
 	this := SkyBlockProfileMemberDungeonsDungeonHubRaceSettings{}
+	this.Runback = runback
+	this.SelectedRace = selectedRace
 	return &this
 }
 
@@ -41,74 +47,58 @@ func NewSkyBlockProfileMemberDungeonsDungeonHubRaceSettingsWithDefaults() *SkyBl
 	return &this
 }
 
-// GetRunback returns the Runback field value if set, zero value otherwise.
+// GetRunback returns the Runback field value
 func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetRunback() bool {
-	if o == nil || IsNil(o.Runback) {
+	if o == nil {
 		var ret bool
 		return ret
 	}
-	return *o.Runback
+
+	return o.Runback
 }
 
-// GetRunbackOk returns a tuple with the Runback field value if set, nil otherwise
+// GetRunbackOk returns a tuple with the Runback field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetRunbackOk() (*bool, bool) {
-	if o == nil || IsNil(o.Runback) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Runback, true
+	return &o.Runback, true
 }
 
-// HasRunback returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) HasRunback() bool {
-	if o != nil && !IsNil(o.Runback) {
-		return true
-	}
-
-	return false
-}
-
-// SetRunback gets a reference to the given bool and assigns it to the Runback field.
+// SetRunback sets field value
 func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) SetRunback(v bool) {
-	o.Runback = &v
+	o.Runback = v
 }
 
-// GetSelectedRace returns the SelectedRace field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedRace() string {
-	if o == nil || IsNil(o.SelectedRace) {
-		var ret string
+// GetSelectedRace returns the SelectedRace field value
+func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedRace() SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace {
+	if o == nil {
+		var ret SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace
 		return ret
 	}
-	return *o.SelectedRace
+
+	return o.SelectedRace
 }
 
-// GetSelectedRaceOk returns a tuple with the SelectedRace field value if set, nil otherwise
+// GetSelectedRaceOk returns a tuple with the SelectedRace field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedRaceOk() (*string, bool) {
-	if o == nil || IsNil(o.SelectedRace) {
+func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedRaceOk() (*SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace, bool) {
+	if o == nil {
 		return nil, false
 	}
-	return o.SelectedRace, true
+	return &o.SelectedRace, true
 }
 
-// HasSelectedRace returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) HasSelectedRace() bool {
-	if o != nil && !IsNil(o.SelectedRace) {
-		return true
-	}
-
-	return false
-}
-
-// SetSelectedRace gets a reference to the given string and assigns it to the SelectedRace field.
-func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) SetSelectedRace(v string) {
-	o.SelectedRace = &v
+// SetSelectedRace sets field value
+func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) SetSelectedRace(v SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedRace) {
+	o.SelectedRace = v
 }
 
 // GetSelectedSetting returns the SelectedSetting field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedSetting() string {
+func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedSetting() SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting {
 	if o == nil || IsNil(o.SelectedSetting) {
-		var ret string
+		var ret SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting
 		return ret
 	}
 	return *o.SelectedSetting
@@ -116,7 +106,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedSetting
 
 // GetSelectedSettingOk returns a tuple with the SelectedSetting field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedSettingOk() (*string, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) GetSelectedSettingOk() (*SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting, bool) {
 	if o == nil || IsNil(o.SelectedSetting) {
 		return nil, false
 	}
@@ -132,8 +122,8 @@ func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) HasSelectedSetting
 	return false
 }
 
-// SetSelectedSetting gets a reference to the given string and assigns it to the SelectedSetting field.
-func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) SetSelectedSetting(v string) {
+// SetSelectedSetting gets a reference to the given SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting and assigns it to the SelectedSetting field.
+func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) SetSelectedSetting(v SkyBlockProfileMemberDungeonsDungeonHubRaceSettingsSelectedSetting) {
 	o.SelectedSetting = &v
 }
 
@@ -147,16 +137,50 @@ func (o SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) MarshalJSON() ([]by
 
 func (o SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Runback) {
-		toSerialize["runback"] = o.Runback
-	}
-	if !IsNil(o.SelectedRace) {
-		toSerialize["selected_race"] = o.SelectedRace
-	}
+	toSerialize["runback"] = o.Runback
+	toSerialize["selected_race"] = o.SelectedRace
 	if !IsNil(o.SelectedSetting) {
 		toSerialize["selected_setting"] = o.SelectedSetting
 	}
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberDungeonsDungeonHubRaceSettings) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"runback",
+		"selected_race",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberDungeonsDungeonHubRaceSettings := _SkyBlockProfileMemberDungeonsDungeonHubRaceSettings{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberDungeonsDungeonHubRaceSettings)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberDungeonsDungeonHubRaceSettings(varSkyBlockProfileMemberDungeonsDungeonHubRaceSettings)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberDungeonsDungeonHubRaceSettings struct {

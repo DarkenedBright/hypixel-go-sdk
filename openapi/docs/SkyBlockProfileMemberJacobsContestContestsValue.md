@@ -4,16 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClaimedMedal** | Pointer to [**SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal**](SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal.md) |  | [optional] 
 **ClaimedParticipants** | Pointer to **int64** |  | [optional] 
 **ClaimedPosition** | Pointer to **int64** |  | [optional] 
 **ClaimedRewards** | Pointer to **bool** |  | [optional] 
-**Collected** | Pointer to **int64** |  | [optional] 
+**Collected** | **int64** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberJacobsContestContestsValue
 
-`func NewSkyBlockProfileMemberJacobsContestContestsValue() *SkyBlockProfileMemberJacobsContestContestsValue`
+`func NewSkyBlockProfileMemberJacobsContestContestsValue(collected int64, ) *SkyBlockProfileMemberJacobsContestContestsValue`
 
 NewSkyBlockProfileMemberJacobsContestContestsValue instantiates a new SkyBlockProfileMemberJacobsContestContestsValue object
 This constructor will assign default values to properties that have it defined,
@@ -27,6 +28,31 @@ will change when the set of required properties is changed
 NewSkyBlockProfileMemberJacobsContestContestsValueWithDefaults instantiates a new SkyBlockProfileMemberJacobsContestContestsValue object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetClaimedMedal
+
+`func (o *SkyBlockProfileMemberJacobsContestContestsValue) GetClaimedMedal() SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal`
+
+GetClaimedMedal returns the ClaimedMedal field if non-nil, zero value otherwise.
+
+### GetClaimedMedalOk
+
+`func (o *SkyBlockProfileMemberJacobsContestContestsValue) GetClaimedMedalOk() (*SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal, bool)`
+
+GetClaimedMedalOk returns a tuple with the ClaimedMedal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClaimedMedal
+
+`func (o *SkyBlockProfileMemberJacobsContestContestsValue) SetClaimedMedal(v SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal)`
+
+SetClaimedMedal sets ClaimedMedal field to given value.
+
+### HasClaimedMedal
+
+`func (o *SkyBlockProfileMemberJacobsContestContestsValue) HasClaimedMedal() bool`
+
+HasClaimedMedal returns a boolean if a field has been set.
 
 ### GetClaimedParticipants
 
@@ -122,11 +148,6 @@ and a boolean to check if the value has been set.
 
 SetCollected sets Collected field to given value.
 
-### HasCollected
-
-`func (o *SkyBlockProfileMemberJacobsContestContestsValue) HasCollected() bool`
-
-HasCollected returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

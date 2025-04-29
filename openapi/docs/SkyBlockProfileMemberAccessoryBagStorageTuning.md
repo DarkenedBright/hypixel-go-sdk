@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **HighestUnlockedSlot** | Pointer to **int64** |  | [optional] 
+**Refund1** | Pointer to **bool** |  | [optional] 
 **Slot0** | Pointer to [**SkyBlockProfileMemberAccessoryBagStorageTuningSlot**](SkyBlockProfileMemberAccessoryBagStorageTuningSlot.md) |  | [optional] 
 **Slot1** | Pointer to [**SkyBlockProfileMemberAccessoryBagStorageTuningSlot**](SkyBlockProfileMemberAccessoryBagStorageTuningSlot.md) |  | [optional] 
 **Slot2** | Pointer to [**SkyBlockProfileMemberAccessoryBagStorageTuningSlot**](SkyBlockProfileMemberAccessoryBagStorageTuningSlot.md) |  | [optional] 
@@ -54,6 +55,31 @@ SetHighestUnlockedSlot sets HighestUnlockedSlot field to given value.
 `func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) HasHighestUnlockedSlot() bool`
 
 HasHighestUnlockedSlot returns a boolean if a field has been set.
+
+### GetRefund1
+
+`func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetRefund1() bool`
+
+GetRefund1 returns the Refund1 field if non-nil, zero value otherwise.
+
+### GetRefund1Ok
+
+`func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetRefund1Ok() (*bool, bool)`
+
+GetRefund1Ok returns a tuple with the Refund1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRefund1
+
+`func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetRefund1(v bool)`
+
+SetRefund1 sets Refund1 field to given value.
+
+### HasRefund1
+
+`func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) HasRefund1() bool`
+
+HasRefund1 returns a boolean if a field has been set.
 
 ### GetSlot0
 

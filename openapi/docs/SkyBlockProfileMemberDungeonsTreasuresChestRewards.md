@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rewards** | Pointer to **[]string** |  | [optional] 
-**RolledRngMeterRandomly** | Pointer to **bool** |  | [optional] 
+**Rewards** | **[]string** |  | 
+**RngMeterReward** | Pointer to **string** |  | [optional] 
+**RolledRngMeterRandomly** | **bool** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberDungeonsTreasuresChestRewards
 
-`func NewSkyBlockProfileMemberDungeonsTreasuresChestRewards() *SkyBlockProfileMemberDungeonsTreasuresChestRewards`
+`func NewSkyBlockProfileMemberDungeonsTreasuresChestRewards(rewards []string, rolledRngMeterRandomly bool, ) *SkyBlockProfileMemberDungeonsTreasuresChestRewards`
 
 NewSkyBlockProfileMemberDungeonsTreasuresChestRewards instantiates a new SkyBlockProfileMemberDungeonsTreasuresChestRewards object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +46,31 @@ and a boolean to check if the value has been set.
 
 SetRewards sets Rewards field to given value.
 
-### HasRewards
 
-`func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) HasRewards() bool`
+### GetRngMeterReward
 
-HasRewards returns a boolean if a field has been set.
+`func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) GetRngMeterReward() string`
+
+GetRngMeterReward returns the RngMeterReward field if non-nil, zero value otherwise.
+
+### GetRngMeterRewardOk
+
+`func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) GetRngMeterRewardOk() (*string, bool)`
+
+GetRngMeterRewardOk returns a tuple with the RngMeterReward field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRngMeterReward
+
+`func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) SetRngMeterReward(v string)`
+
+SetRngMeterReward sets RngMeterReward field to given value.
+
+### HasRngMeterReward
+
+`func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) HasRngMeterReward() bool`
+
+HasRngMeterReward returns a boolean if a field has been set.
 
 ### GetRolledRngMeterRandomly
 
@@ -70,11 +91,6 @@ and a boolean to check if the value has been set.
 
 SetRolledRngMeterRandomly sets RolledRngMeterRandomly field to given value.
 
-### HasRolledRngMeterRandomly
-
-`func (o *SkyBlockProfileMemberDungeonsTreasuresChestRewards) HasRolledRngMeterRandomly() bool`
-
-HasRolledRngMeterRandomly returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

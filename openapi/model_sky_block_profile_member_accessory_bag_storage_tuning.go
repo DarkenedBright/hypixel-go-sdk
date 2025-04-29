@@ -20,6 +20,7 @@ var _ MappedNullable = &SkyBlockProfileMemberAccessoryBagStorageTuning{}
 // SkyBlockProfileMemberAccessoryBagStorageTuning struct for SkyBlockProfileMemberAccessoryBagStorageTuning
 type SkyBlockProfileMemberAccessoryBagStorageTuning struct {
 	HighestUnlockedSlot *int64                                              `json:"highest_unlocked_slot,omitempty"`
+	Refund1             *bool                                               `json:"refund_1,omitempty"`
 	Slot0               *SkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_0,omitempty"`
 	Slot1               *SkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_1,omitempty"`
 	Slot2               *SkyBlockProfileMemberAccessoryBagStorageTuningSlot `json:"slot_2,omitempty"`
@@ -74,6 +75,38 @@ func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) HasHighestUnlockedSlot(
 // SetHighestUnlockedSlot gets a reference to the given int64 and assigns it to the HighestUnlockedSlot field.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetHighestUnlockedSlot(v int64) {
 	o.HighestUnlockedSlot = &v
+}
+
+// GetRefund1 returns the Refund1 field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetRefund1() bool {
+	if o == nil || IsNil(o.Refund1) {
+		var ret bool
+		return ret
+	}
+	return *o.Refund1
+}
+
+// GetRefund1Ok returns a tuple with the Refund1 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) GetRefund1Ok() (*bool, bool) {
+	if o == nil || IsNil(o.Refund1) {
+		return nil, false
+	}
+	return o.Refund1, true
+}
+
+// HasRefund1 returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) HasRefund1() bool {
+	if o != nil && !IsNil(o.Refund1) {
+		return true
+	}
+
+	return false
+}
+
+// SetRefund1 gets a reference to the given bool and assigns it to the Refund1 field.
+func (o *SkyBlockProfileMemberAccessoryBagStorageTuning) SetRefund1(v bool) {
+	o.Refund1 = &v
 }
 
 // GetSlot0 returns the Slot0 field value if set, zero value otherwise.
@@ -248,6 +281,9 @@ func (o SkyBlockProfileMemberAccessoryBagStorageTuning) ToMap() (map[string]inte
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.HighestUnlockedSlot) {
 		toSerialize["highest_unlocked_slot"] = o.HighestUnlockedSlot
+	}
+	if !IsNil(o.Refund1) {
+		toSerialize["refund_1"] = o.Refund1
 	}
 	if !IsNil(o.Slot0) {
 		toSerialize["slot_0"] = o.Slot0

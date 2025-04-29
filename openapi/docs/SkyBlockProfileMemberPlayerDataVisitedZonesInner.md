@@ -269,6 +269,8 @@
 
 * `INFESTED_HOUSE` (value: `"infested_house"`)
 
+* `INSIDE_THE_WALL` (value: `"inside_the_wall"`)
+
 * `INSTANCED` (value: `"instanced"`)
 
 * `JAKE_HOUSE` (value: `"jake_house"`)

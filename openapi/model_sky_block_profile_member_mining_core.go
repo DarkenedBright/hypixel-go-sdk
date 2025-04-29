@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberMiningCore type satisfies the MappedNullable interface at compile time
@@ -37,7 +35,7 @@ type SkyBlockProfileMemberMiningCore struct {
 	GreaterMinesLastAccess           *int64                                                 `json:"greater_mines_last_access,omitempty"`
 	HotmMigratorTreeResetSendMessage *bool                                                  `json:"hotm_migrator_tree_reset_send_message,omitempty"`
 	LastReset                        *int64                                                 `json:"last_reset,omitempty"`
-	Nodes                            SkyBlockProfileMemberMiningCoreNodes                   `json:"nodes"`
+	Nodes                            *SkyBlockProfileMemberMiningCoreNodes                  `json:"nodes,omitempty"`
 	PowderGemstone                   *int64                                                 `json:"powder_gemstone,omitempty"`
 	PowderGemstoneTotal              *int64                                                 `json:"powder_gemstone_total,omitempty"`
 	PowderGlacite                    *int64                                                 `json:"powder_glacite,omitempty"`
@@ -55,15 +53,12 @@ type SkyBlockProfileMemberMiningCore struct {
 	TokensSpent                      *int64                                                 `json:"tokens_spent,omitempty"`
 }
 
-type _SkyBlockProfileMemberMiningCore SkyBlockProfileMemberMiningCore
-
 // NewSkyBlockProfileMemberMiningCore instantiates a new SkyBlockProfileMemberMiningCore object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberMiningCore(nodes SkyBlockProfileMemberMiningCoreNodes) *SkyBlockProfileMemberMiningCore {
+func NewSkyBlockProfileMemberMiningCore() *SkyBlockProfileMemberMiningCore {
 	this := SkyBlockProfileMemberMiningCore{}
-	this.Nodes = nodes
 	return &this
 }
 
@@ -587,28 +582,36 @@ func (o *SkyBlockProfileMemberMiningCore) SetLastReset(v int64) {
 	o.LastReset = &v
 }
 
-// GetNodes returns the Nodes field value
+// GetNodes returns the Nodes field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberMiningCore) GetNodes() SkyBlockProfileMemberMiningCoreNodes {
-	if o == nil {
+	if o == nil || IsNil(o.Nodes) {
 		var ret SkyBlockProfileMemberMiningCoreNodes
 		return ret
 	}
-
-	return o.Nodes
+	return *o.Nodes
 }
 
-// GetNodesOk returns a tuple with the Nodes field value
+// GetNodesOk returns a tuple with the Nodes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberMiningCore) GetNodesOk() (*SkyBlockProfileMemberMiningCoreNodes, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Nodes) {
 		return nil, false
 	}
-	return &o.Nodes, true
+	return o.Nodes, true
 }
 
-// SetNodes sets field value
+// HasNodes returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberMiningCore) HasNodes() bool {
+	if o != nil && !IsNil(o.Nodes) {
+		return true
+	}
+
+	return false
+}
+
+// SetNodes gets a reference to the given SkyBlockProfileMemberMiningCoreNodes and assigns it to the Nodes field.
 func (o *SkyBlockProfileMemberMiningCore) SetNodes(v SkyBlockProfileMemberMiningCoreNodes) {
-	o.Nodes = v
+	o.Nodes = &v
 }
 
 // GetPowderGemstone returns the PowderGemstone field value if set, zero value otherwise.
@@ -1149,7 +1152,9 @@ func (o SkyBlockProfileMemberMiningCore) ToMap() (map[string]interface{}, error)
 	if !IsNil(o.LastReset) {
 		toSerialize["last_reset"] = o.LastReset
 	}
-	toSerialize["nodes"] = o.Nodes
+	if !IsNil(o.Nodes) {
+		toSerialize["nodes"] = o.Nodes
+	}
 	if !IsNil(o.PowderGemstone) {
 		toSerialize["powder_gemstone"] = o.PowderGemstone
 	}
@@ -1196,43 +1201,6 @@ func (o SkyBlockProfileMemberMiningCore) ToMap() (map[string]interface{}, error)
 		toSerialize["tokens_spent"] = o.TokensSpent
 	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileMemberMiningCore) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"nodes",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileMemberMiningCore := _SkyBlockProfileMemberMiningCore{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberMiningCore)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileMemberMiningCore(varSkyBlockProfileMemberMiningCore)
-
-	return err
 }
 
 type NullableSkyBlockProfileMemberMiningCore struct {

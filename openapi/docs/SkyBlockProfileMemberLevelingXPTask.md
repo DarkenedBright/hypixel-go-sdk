@@ -11,6 +11,8 @@
 
 * `ABIPHONE_ARROW_FORGER` (value: `"ABIPHONE_arrow_forger"`)
 
+* `ABIPHONE_BINGO` (value: `"ABIPHONE_bingo"`)
+
 * `ABIPHONE_BLACKSMITH` (value: `"ABIPHONE_blacksmith"`)
 
 * `ABIPHONE_BRYNMOR` (value: `"ABIPHONE_brynmor"`)

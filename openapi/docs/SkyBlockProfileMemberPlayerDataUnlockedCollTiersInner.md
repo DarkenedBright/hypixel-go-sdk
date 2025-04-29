@@ -1199,6 +1199,8 @@
 
 * `REDSTONE_16` (value: `"REDSTONE_16"`)
 
+* `REDSTONE_17` (value: `"REDSTONE_17"`)
+
 * `REDSTONE_2` (value: `"REDSTONE_2"`)
 
 * `REDSTONE_3` (value: `"REDSTONE_3"`)

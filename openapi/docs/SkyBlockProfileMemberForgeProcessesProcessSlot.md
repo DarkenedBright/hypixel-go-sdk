@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**Notified** | Pointer to **bool** |  | [optional] 
-**OldItem** | Pointer to **NullableString** |  | [optional] 
+**Id** | **string** |  | 
+**Notified** | **bool** |  | 
+**OldItem** | Pointer to [**SkyBlockProfileMemberInventoryBase64GzipData**](SkyBlockProfileMemberInventoryBase64GzipData.md) |  | [optional] 
 **ProcessTimeModifier** | Pointer to **int64** |  | [optional] 
-**Slot** | Pointer to **int64** |  | [optional] 
-**StartTime** | Pointer to **int64** |  | [optional] 
-**Type** | Pointer to **string** |  | [optional] 
+**Slot** | **int64** |  | 
+**StartTime** | **int64** |  | 
+**Type** | **string** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberForgeProcessesProcessSlot
 
-`func NewSkyBlockProfileMemberForgeProcessesProcessSlot() *SkyBlockProfileMemberForgeProcessesProcessSlot`
+`func NewSkyBlockProfileMemberForgeProcessesProcessSlot(id string, notified bool, slot int64, startTime int64, type_ string, ) *SkyBlockProfileMemberForgeProcessesProcessSlot`
 
 NewSkyBlockProfileMemberForgeProcessesProcessSlot instantiates a new SkyBlockProfileMemberForgeProcessesProcessSlot object
 This constructor will assign default values to properties that have it defined,
@@ -50,11 +50,6 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
-
-`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetNotified
 
@@ -75,28 +70,23 @@ and a boolean to check if the value has been set.
 
 SetNotified sets Notified field to given value.
 
-### HasNotified
-
-`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasNotified() bool`
-
-HasNotified returns a boolean if a field has been set.
 
 ### GetOldItem
 
-`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetOldItem() string`
+`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetOldItem() SkyBlockProfileMemberInventoryBase64GzipData`
 
 GetOldItem returns the OldItem field if non-nil, zero value otherwise.
 
 ### GetOldItemOk
 
-`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetOldItemOk() (*string, bool)`
+`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetOldItemOk() (*SkyBlockProfileMemberInventoryBase64GzipData, bool)`
 
 GetOldItemOk returns a tuple with the OldItem field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOldItem
 
-`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetOldItem(v string)`
+`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetOldItem(v SkyBlockProfileMemberInventoryBase64GzipData)`
 
 SetOldItem sets OldItem field to given value.
 
@@ -106,16 +96,6 @@ SetOldItem sets OldItem field to given value.
 
 HasOldItem returns a boolean if a field has been set.
 
-### SetOldItemNil
-
-`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) SetOldItemNil(b bool)`
-
- SetOldItemNil sets the value for OldItem to be an explicit nil
-
-### UnsetOldItem
-`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) UnsetOldItem()`
-
-UnsetOldItem ensures that no value is present for OldItem, not even an explicit nil
 ### GetProcessTimeModifier
 
 `func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) GetProcessTimeModifier() int64`
@@ -160,11 +140,6 @@ and a boolean to check if the value has been set.
 
 SetSlot sets Slot field to given value.
 
-### HasSlot
-
-`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasSlot() bool`
-
-HasSlot returns a boolean if a field has been set.
 
 ### GetStartTime
 
@@ -185,11 +160,6 @@ and a boolean to check if the value has been set.
 
 SetStartTime sets StartTime field to given value.
 
-### HasStartTime
-
-`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasStartTime() bool`
-
-HasStartTime returns a boolean if a field has been set.
 
 ### GetType
 
@@ -210,11 +180,6 @@ and a boolean to check if the value has been set.
 
 SetType sets Type field to given value.
 
-### HasType
-
-`func (o *SkyBlockProfileMemberForgeProcessesProcessSlot) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

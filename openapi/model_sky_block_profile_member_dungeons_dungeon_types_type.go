@@ -20,24 +20,24 @@ var _ MappedNullable = &SkyBlockProfileMemberDungeonsDungeonTypesType{}
 // SkyBlockProfileMemberDungeonsDungeonTypesType struct for SkyBlockProfileMemberDungeonsDungeonTypesType
 type SkyBlockProfileMemberDungeonsDungeonTypesType struct {
 	BestRuns             *map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns `json:"best_runs,omitempty"`
-	BestScore            *map[string]float64                                             `json:"best_score,omitempty"`
+	BestScore            *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"best_score,omitempty"`
 	Experience           *float64                                                        `json:"experience,omitempty"`
-	FastestTime          *map[string]float64                                             `json:"fastest_time,omitempty"`
-	FastestTimeS         *map[string]float64                                             `json:"fastest_time_s,omitempty"`
-	FastestTimeSPlus     *map[string]float64                                             `json:"fastest_time_s_plus,omitempty"`
+	FastestTime          *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"fastest_time,omitempty"`
+	FastestTimeS         *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"fastest_time_s,omitempty"`
+	FastestTimeSPlus     *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"fastest_time_s_plus,omitempty"`
 	HighestTierCompleted *int64                                                          `json:"highest_tier_completed,omitempty"`
-	MilestoneCompletions *map[string]float64                                             `json:"milestone_completions,omitempty"`
-	MobsKilled           *map[string]float64                                             `json:"mobs_killed,omitempty"`
-	MostDamageArcher     *map[string]float64                                             `json:"most_damage_archer,omitempty"`
-	MostDamageBerserk    *map[string]float64                                             `json:"most_damage_berserk,omitempty"`
-	MostDamageHealer     *map[string]float64                                             `json:"most_damage_healer,omitempty"`
-	MostDamageMage       *map[string]float64                                             `json:"most_damage_mage,omitempty"`
-	MostDamageTank       *map[string]float64                                             `json:"most_damage_tank,omitempty"`
-	MostHealing          *map[string]float64                                             `json:"most_healing,omitempty"`
-	MostMobsKilled       *map[string]float64                                             `json:"most_mobs_killed,omitempty"`
-	TierCompletions      *map[string]float64                                             `json:"tier_completions,omitempty"`
-	TimesPlayed          *map[string]float64                                             `json:"times_played,omitempty"`
-	WatcherKills         *map[string]float64                                             `json:"watcher_kills,omitempty"`
+	MilestoneCompletions *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"milestone_completions,omitempty"`
+	MobsKilled           *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"mobs_killed,omitempty"`
+	MostDamageArcher     *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_damage_archer,omitempty"`
+	MostDamageBerserk    *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_damage_berserk,omitempty"`
+	MostDamageHealer     *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_damage_healer,omitempty"`
+	MostDamageMage       *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_damage_mage,omitempty"`
+	MostDamageTank       *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_damage_tank,omitempty"`
+	MostHealing          *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_healing,omitempty"`
+	MostMobsKilled       *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_mobs_killed,omitempty"`
+	TierCompletions      *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"tier_completions,omitempty"`
+	TimesPlayed          *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"times_played,omitempty"`
+	WatcherKills         *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"watcher_kills,omitempty"`
 }
 
 // NewSkyBlockProfileMemberDungeonsDungeonTypesType instantiates a new SkyBlockProfileMemberDungeonsDungeonTypesType object
@@ -90,9 +90,9 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetBestRuns(v map[string
 }
 
 // GetBestScore returns the BestScore field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestScore() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestScore() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.BestScore) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.BestScore
@@ -100,7 +100,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestScore() map[strin
 
 // GetBestScoreOk returns a tuple with the BestScore field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestScoreOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestScoreOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.BestScore) {
 		return nil, false
 	}
@@ -116,8 +116,8 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasBestScore() bool {
 	return false
 }
 
-// SetBestScore gets a reference to the given map[string]float64 and assigns it to the BestScore field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetBestScore(v map[string]float64) {
+// SetBestScore gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the BestScore field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetBestScore(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.BestScore = &v
 }
 
@@ -154,9 +154,9 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetExperience(v float64)
 }
 
 // GetFastestTime returns the FastestTime field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTime() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTime() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.FastestTime) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.FastestTime
@@ -164,7 +164,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTime() map[str
 
 // GetFastestTimeOk returns a tuple with the FastestTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.FastestTime) {
 		return nil, false
 	}
@@ -180,15 +180,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasFastestTime() bool {
 	return false
 }
 
-// SetFastestTime gets a reference to the given map[string]float64 and assigns it to the FastestTime field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTime(v map[string]float64) {
+// SetFastestTime gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the FastestTime field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTime(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.FastestTime = &v
 }
 
 // GetFastestTimeS returns the FastestTimeS field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeS() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeS() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.FastestTimeS) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.FastestTimeS
@@ -196,7 +196,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeS() map[st
 
 // GetFastestTimeSOk returns a tuple with the FastestTimeS field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.FastestTimeS) {
 		return nil, false
 	}
@@ -212,15 +212,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasFastestTimeS() bool {
 	return false
 }
 
-// SetFastestTimeS gets a reference to the given map[string]float64 and assigns it to the FastestTimeS field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTimeS(v map[string]float64) {
+// SetFastestTimeS gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the FastestTimeS field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTimeS(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.FastestTimeS = &v
 }
 
 // GetFastestTimeSPlus returns the FastestTimeSPlus field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSPlus() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSPlus() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.FastestTimeSPlus) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.FastestTimeSPlus
@@ -228,7 +228,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSPlus() ma
 
 // GetFastestTimeSPlusOk returns a tuple with the FastestTimeSPlus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSPlusOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetFastestTimeSPlusOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.FastestTimeSPlus) {
 		return nil, false
 	}
@@ -244,8 +244,8 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasFastestTimeSPlus() bo
 	return false
 }
 
-// SetFastestTimeSPlus gets a reference to the given map[string]float64 and assigns it to the FastestTimeSPlus field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTimeSPlus(v map[string]float64) {
+// SetFastestTimeSPlus gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the FastestTimeSPlus field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetFastestTimeSPlus(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.FastestTimeSPlus = &v
 }
 
@@ -282,9 +282,9 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetHighestTierCompleted(
 }
 
 // GetMilestoneCompletions returns the MilestoneCompletions field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMilestoneCompletions() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMilestoneCompletions() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.MilestoneCompletions) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.MilestoneCompletions
@@ -292,7 +292,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMilestoneCompletions(
 
 // GetMilestoneCompletionsOk returns a tuple with the MilestoneCompletions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMilestoneCompletionsOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMilestoneCompletionsOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.MilestoneCompletions) {
 		return nil, false
 	}
@@ -308,15 +308,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasMilestoneCompletions(
 	return false
 }
 
-// SetMilestoneCompletions gets a reference to the given map[string]float64 and assigns it to the MilestoneCompletions field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMilestoneCompletions(v map[string]float64) {
+// SetMilestoneCompletions gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the MilestoneCompletions field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMilestoneCompletions(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.MilestoneCompletions = &v
 }
 
 // GetMobsKilled returns the MobsKilled field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMobsKilled() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMobsKilled() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.MobsKilled) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.MobsKilled
@@ -324,7 +324,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMobsKilled() map[stri
 
 // GetMobsKilledOk returns a tuple with the MobsKilled field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMobsKilledOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMobsKilledOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.MobsKilled) {
 		return nil, false
 	}
@@ -340,15 +340,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasMobsKilled() bool {
 	return false
 }
 
-// SetMobsKilled gets a reference to the given map[string]float64 and assigns it to the MobsKilled field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMobsKilled(v map[string]float64) {
+// SetMobsKilled gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the MobsKilled field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMobsKilled(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.MobsKilled = &v
 }
 
 // GetMostDamageArcher returns the MostDamageArcher field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageArcher() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageArcher() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.MostDamageArcher) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.MostDamageArcher
@@ -356,7 +356,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageArcher() ma
 
 // GetMostDamageArcherOk returns a tuple with the MostDamageArcher field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageArcherOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageArcherOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.MostDamageArcher) {
 		return nil, false
 	}
@@ -372,15 +372,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasMostDamageArcher() bo
 	return false
 }
 
-// SetMostDamageArcher gets a reference to the given map[string]float64 and assigns it to the MostDamageArcher field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageArcher(v map[string]float64) {
+// SetMostDamageArcher gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the MostDamageArcher field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageArcher(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.MostDamageArcher = &v
 }
 
 // GetMostDamageBerserk returns the MostDamageBerserk field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageBerserk() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageBerserk() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.MostDamageBerserk) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.MostDamageBerserk
@@ -388,7 +388,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageBerserk() m
 
 // GetMostDamageBerserkOk returns a tuple with the MostDamageBerserk field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageBerserkOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageBerserkOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.MostDamageBerserk) {
 		return nil, false
 	}
@@ -404,15 +404,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasMostDamageBerserk() b
 	return false
 }
 
-// SetMostDamageBerserk gets a reference to the given map[string]float64 and assigns it to the MostDamageBerserk field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageBerserk(v map[string]float64) {
+// SetMostDamageBerserk gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the MostDamageBerserk field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageBerserk(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.MostDamageBerserk = &v
 }
 
 // GetMostDamageHealer returns the MostDamageHealer field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageHealer() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageHealer() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.MostDamageHealer) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.MostDamageHealer
@@ -420,7 +420,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageHealer() ma
 
 // GetMostDamageHealerOk returns a tuple with the MostDamageHealer field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageHealerOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageHealerOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.MostDamageHealer) {
 		return nil, false
 	}
@@ -436,15 +436,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasMostDamageHealer() bo
 	return false
 }
 
-// SetMostDamageHealer gets a reference to the given map[string]float64 and assigns it to the MostDamageHealer field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageHealer(v map[string]float64) {
+// SetMostDamageHealer gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the MostDamageHealer field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageHealer(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.MostDamageHealer = &v
 }
 
 // GetMostDamageMage returns the MostDamageMage field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageMage() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageMage() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.MostDamageMage) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.MostDamageMage
@@ -452,7 +452,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageMage() map[
 
 // GetMostDamageMageOk returns a tuple with the MostDamageMage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageMageOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageMageOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.MostDamageMage) {
 		return nil, false
 	}
@@ -468,15 +468,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasMostDamageMage() bool
 	return false
 }
 
-// SetMostDamageMage gets a reference to the given map[string]float64 and assigns it to the MostDamageMage field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageMage(v map[string]float64) {
+// SetMostDamageMage gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the MostDamageMage field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageMage(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.MostDamageMage = &v
 }
 
 // GetMostDamageTank returns the MostDamageTank field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageTank() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageTank() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.MostDamageTank) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.MostDamageTank
@@ -484,7 +484,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageTank() map[
 
 // GetMostDamageTankOk returns a tuple with the MostDamageTank field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageTankOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostDamageTankOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.MostDamageTank) {
 		return nil, false
 	}
@@ -500,15 +500,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasMostDamageTank() bool
 	return false
 }
 
-// SetMostDamageTank gets a reference to the given map[string]float64 and assigns it to the MostDamageTank field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageTank(v map[string]float64) {
+// SetMostDamageTank gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the MostDamageTank field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostDamageTank(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.MostDamageTank = &v
 }
 
 // GetMostHealing returns the MostHealing field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostHealing() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostHealing() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.MostHealing) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.MostHealing
@@ -516,7 +516,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostHealing() map[str
 
 // GetMostHealingOk returns a tuple with the MostHealing field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostHealingOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostHealingOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.MostHealing) {
 		return nil, false
 	}
@@ -532,15 +532,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasMostHealing() bool {
 	return false
 }
 
-// SetMostHealing gets a reference to the given map[string]float64 and assigns it to the MostHealing field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostHealing(v map[string]float64) {
+// SetMostHealing gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the MostHealing field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostHealing(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.MostHealing = &v
 }
 
 // GetMostMobsKilled returns the MostMobsKilled field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostMobsKilled() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostMobsKilled() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.MostMobsKilled) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.MostMobsKilled
@@ -548,7 +548,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostMobsKilled() map[
 
 // GetMostMobsKilledOk returns a tuple with the MostMobsKilled field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostMobsKilledOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetMostMobsKilledOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.MostMobsKilled) {
 		return nil, false
 	}
@@ -564,15 +564,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasMostMobsKilled() bool
 	return false
 }
 
-// SetMostMobsKilled gets a reference to the given map[string]float64 and assigns it to the MostMobsKilled field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostMobsKilled(v map[string]float64) {
+// SetMostMobsKilled gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the MostMobsKilled field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetMostMobsKilled(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.MostMobsKilled = &v
 }
 
 // GetTierCompletions returns the TierCompletions field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTierCompletions() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTierCompletions() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.TierCompletions) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.TierCompletions
@@ -580,7 +580,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTierCompletions() map
 
 // GetTierCompletionsOk returns a tuple with the TierCompletions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTierCompletionsOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTierCompletionsOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.TierCompletions) {
 		return nil, false
 	}
@@ -596,15 +596,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasTierCompletions() boo
 	return false
 }
 
-// SetTierCompletions gets a reference to the given map[string]float64 and assigns it to the TierCompletions field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetTierCompletions(v map[string]float64) {
+// SetTierCompletions gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the TierCompletions field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetTierCompletions(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.TierCompletions = &v
 }
 
 // GetTimesPlayed returns the TimesPlayed field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTimesPlayed() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTimesPlayed() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.TimesPlayed) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.TimesPlayed
@@ -612,7 +612,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTimesPlayed() map[str
 
 // GetTimesPlayedOk returns a tuple with the TimesPlayed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTimesPlayedOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetTimesPlayedOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.TimesPlayed) {
 		return nil, false
 	}
@@ -628,15 +628,15 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasTimesPlayed() bool {
 	return false
 }
 
-// SetTimesPlayed gets a reference to the given map[string]float64 and assigns it to the TimesPlayed field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetTimesPlayed(v map[string]float64) {
+// SetTimesPlayed gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the TimesPlayed field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetTimesPlayed(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.TimesPlayed = &v
 }
 
 // GetWatcherKills returns the WatcherKills field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetWatcherKills() map[string]float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetWatcherKills() SkyBlockProfileMemberDungeonsDungeonTypesTypeData {
 	if o == nil || IsNil(o.WatcherKills) {
-		var ret map[string]float64
+		var ret SkyBlockProfileMemberDungeonsDungeonTypesTypeData
 		return ret
 	}
 	return *o.WatcherKills
@@ -644,7 +644,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetWatcherKills() map[st
 
 // GetWatcherKillsOk returns a tuple with the WatcherKills field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetWatcherKillsOk() (*map[string]float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetWatcherKillsOk() (*SkyBlockProfileMemberDungeonsDungeonTypesTypeData, bool) {
 	if o == nil || IsNil(o.WatcherKills) {
 		return nil, false
 	}
@@ -660,8 +660,8 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasWatcherKills() bool {
 	return false
 }
 
-// SetWatcherKills gets a reference to the given map[string]float64 and assigns it to the WatcherKills field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetWatcherKills(v map[string]float64) {
+// SetWatcherKills gets a reference to the given SkyBlockProfileMemberDungeonsDungeonTypesTypeData and assigns it to the WatcherKills field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetWatcherKills(v SkyBlockProfileMemberDungeonsDungeonTypesTypeData) {
 	o.WatcherKills = &v
 }
 

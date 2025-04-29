@@ -20,11 +20,13 @@ type SkyBlockProfileMemberNetherIslandPlayerQuestsCavityRarity string
 
 // List of SkyBlockProfileMemberNetherIslandPlayerQuests_cavity_rarity
 const (
+	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSCAVITYRARITY_COMMON  SkyBlockProfileMemberNetherIslandPlayerQuestsCavityRarity = "COMMON"
 	SKYBLOCKPROFILEMEMBERNETHERISLANDPLAYERQUESTSCAVITYRARITY_SPECIAL SkyBlockProfileMemberNetherIslandPlayerQuestsCavityRarity = "SPECIAL"
 )
 
 // All allowed values of SkyBlockProfileMemberNetherIslandPlayerQuestsCavityRarity enum
 var AllowedSkyBlockProfileMemberNetherIslandPlayerQuestsCavityRarityEnumValues = []SkyBlockProfileMemberNetherIslandPlayerQuestsCavityRarity{
+	"COMMON",
 	"SPECIAL",
 }
 

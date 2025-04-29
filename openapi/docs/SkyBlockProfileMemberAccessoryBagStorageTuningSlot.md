@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Defense** | Pointer to **int64** |  | [optional] 
 **Health** | Pointer to **int64** |  | [optional] 
 **Intelligence** | Pointer to **int64** |  | [optional] 
+**PurchaseTs** | Pointer to **int64** |  | [optional] 
 **Strength** | Pointer to **int64** |  | [optional] 
 **WalkSpeed** | Pointer to **int64** |  | [optional] 
 
@@ -181,6 +182,31 @@ SetIntelligence sets Intelligence field to given value.
 `func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) HasIntelligence() bool`
 
 HasIntelligence returns a boolean if a field has been set.
+
+### GetPurchaseTs
+
+`func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) GetPurchaseTs() int64`
+
+GetPurchaseTs returns the PurchaseTs field if non-nil, zero value otherwise.
+
+### GetPurchaseTsOk
+
+`func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) GetPurchaseTsOk() (*int64, bool)`
+
+GetPurchaseTsOk returns a tuple with the PurchaseTs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPurchaseTs
+
+`func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) SetPurchaseTs(v int64)`
+
+SetPurchaseTs sets PurchaseTs field to given value.
+
+### HasPurchaseTs
+
+`func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) HasPurchaseTs() bool`
+
+HasPurchaseTs returns a boolean if a field has been set.
 
 ### GetStrength
 

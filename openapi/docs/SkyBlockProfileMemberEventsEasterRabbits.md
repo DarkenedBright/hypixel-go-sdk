@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CollectedEggs** | Pointer to **map[string]int64** |  | [optional] 
-**CollectedLocations** | Pointer to **map[string][]string** |  | [optional] 
+**CollectedEggs** | [**SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs**](SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs.md) |  | 
+**CollectedLocations** | Pointer to [**SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations**](SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations.md) |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberEventsEasterRabbits
 
-`func NewSkyBlockProfileMemberEventsEasterRabbits() *SkyBlockProfileMemberEventsEasterRabbits`
+`func NewSkyBlockProfileMemberEventsEasterRabbits(collectedEggs SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs, ) *SkyBlockProfileMemberEventsEasterRabbits`
 
 NewSkyBlockProfileMemberEventsEasterRabbits instantiates a new SkyBlockProfileMemberEventsEasterRabbits object
 This constructor will assign default values to properties that have it defined,
@@ -28,45 +28,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCollectedEggs
 
-`func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedEggs() map[string]int64`
+`func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedEggs() SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs`
 
 GetCollectedEggs returns the CollectedEggs field if non-nil, zero value otherwise.
 
 ### GetCollectedEggsOk
 
-`func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedEggsOk() (*map[string]int64, bool)`
+`func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedEggsOk() (*SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs, bool)`
 
 GetCollectedEggsOk returns a tuple with the CollectedEggs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCollectedEggs
 
-`func (o *SkyBlockProfileMemberEventsEasterRabbits) SetCollectedEggs(v map[string]int64)`
+`func (o *SkyBlockProfileMemberEventsEasterRabbits) SetCollectedEggs(v SkyBlockProfileMemberEventsEasterRabbitsCollectedEggs)`
 
 SetCollectedEggs sets CollectedEggs field to given value.
 
-### HasCollectedEggs
-
-`func (o *SkyBlockProfileMemberEventsEasterRabbits) HasCollectedEggs() bool`
-
-HasCollectedEggs returns a boolean if a field has been set.
 
 ### GetCollectedLocations
 
-`func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedLocations() map[string][]string`
+`func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedLocations() SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations`
 
 GetCollectedLocations returns the CollectedLocations field if non-nil, zero value otherwise.
 
 ### GetCollectedLocationsOk
 
-`func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedLocationsOk() (*map[string][]string, bool)`
+`func (o *SkyBlockProfileMemberEventsEasterRabbits) GetCollectedLocationsOk() (*SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations, bool)`
 
 GetCollectedLocationsOk returns a tuple with the CollectedLocations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCollectedLocations
 
-`func (o *SkyBlockProfileMemberEventsEasterRabbits) SetCollectedLocations(v map[string][]string)`
+`func (o *SkyBlockProfileMemberEventsEasterRabbits) SetCollectedLocations(v SkyBlockProfileMemberEventsEasterRabbitsCollectedLocations)`
 
 SetCollectedLocations sets CollectedLocations field to given value.
 

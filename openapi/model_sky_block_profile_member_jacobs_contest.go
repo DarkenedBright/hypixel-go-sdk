@@ -23,9 +23,9 @@ type SkyBlockProfileMemberJacobsContest struct {
 	MedalsInv      *SkyBlockProfileMemberJacobsContestMedalsInv                `json:"medals_inv,omitempty"`
 	Migration      *bool                                                       `json:"migration,omitempty"`
 	Perks          *SkyBlockProfileMemberJacobsContestPerks                    `json:"perks,omitempty"`
-	PersonalBests  *map[string]int64                                           `json:"personal_bests,omitempty"`
+	PersonalBests  *SkyBlockProfileMemberJacobsContestPersonalBests            `json:"personal_bests,omitempty"`
 	Talked         *bool                                                       `json:"talked,omitempty"`
-	UniqueBrackets *map[string][]string                                        `json:"unique_brackets,omitempty"`
+	UniqueBrackets *SkyBlockProfileMemberJacobsContestUniqueBrackets           `json:"unique_brackets,omitempty"`
 }
 
 // NewSkyBlockProfileMemberJacobsContest instantiates a new SkyBlockProfileMemberJacobsContest object
@@ -174,9 +174,9 @@ func (o *SkyBlockProfileMemberJacobsContest) SetPerks(v SkyBlockProfileMemberJac
 }
 
 // GetPersonalBests returns the PersonalBests field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberJacobsContest) GetPersonalBests() map[string]int64 {
+func (o *SkyBlockProfileMemberJacobsContest) GetPersonalBests() SkyBlockProfileMemberJacobsContestPersonalBests {
 	if o == nil || IsNil(o.PersonalBests) {
-		var ret map[string]int64
+		var ret SkyBlockProfileMemberJacobsContestPersonalBests
 		return ret
 	}
 	return *o.PersonalBests
@@ -184,7 +184,7 @@ func (o *SkyBlockProfileMemberJacobsContest) GetPersonalBests() map[string]int64
 
 // GetPersonalBestsOk returns a tuple with the PersonalBests field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberJacobsContest) GetPersonalBestsOk() (*map[string]int64, bool) {
+func (o *SkyBlockProfileMemberJacobsContest) GetPersonalBestsOk() (*SkyBlockProfileMemberJacobsContestPersonalBests, bool) {
 	if o == nil || IsNil(o.PersonalBests) {
 		return nil, false
 	}
@@ -200,8 +200,8 @@ func (o *SkyBlockProfileMemberJacobsContest) HasPersonalBests() bool {
 	return false
 }
 
-// SetPersonalBests gets a reference to the given map[string]int64 and assigns it to the PersonalBests field.
-func (o *SkyBlockProfileMemberJacobsContest) SetPersonalBests(v map[string]int64) {
+// SetPersonalBests gets a reference to the given SkyBlockProfileMemberJacobsContestPersonalBests and assigns it to the PersonalBests field.
+func (o *SkyBlockProfileMemberJacobsContest) SetPersonalBests(v SkyBlockProfileMemberJacobsContestPersonalBests) {
 	o.PersonalBests = &v
 }
 
@@ -238,9 +238,9 @@ func (o *SkyBlockProfileMemberJacobsContest) SetTalked(v bool) {
 }
 
 // GetUniqueBrackets returns the UniqueBrackets field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberJacobsContest) GetUniqueBrackets() map[string][]string {
+func (o *SkyBlockProfileMemberJacobsContest) GetUniqueBrackets() SkyBlockProfileMemberJacobsContestUniqueBrackets {
 	if o == nil || IsNil(o.UniqueBrackets) {
-		var ret map[string][]string
+		var ret SkyBlockProfileMemberJacobsContestUniqueBrackets
 		return ret
 	}
 	return *o.UniqueBrackets
@@ -248,7 +248,7 @@ func (o *SkyBlockProfileMemberJacobsContest) GetUniqueBrackets() map[string][]st
 
 // GetUniqueBracketsOk returns a tuple with the UniqueBrackets field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberJacobsContest) GetUniqueBracketsOk() (*map[string][]string, bool) {
+func (o *SkyBlockProfileMemberJacobsContest) GetUniqueBracketsOk() (*SkyBlockProfileMemberJacobsContestUniqueBrackets, bool) {
 	if o == nil || IsNil(o.UniqueBrackets) {
 		return nil, false
 	}
@@ -264,8 +264,8 @@ func (o *SkyBlockProfileMemberJacobsContest) HasUniqueBrackets() bool {
 	return false
 }
 
-// SetUniqueBrackets gets a reference to the given map[string][]string and assigns it to the UniqueBrackets field.
-func (o *SkyBlockProfileMemberJacobsContest) SetUniqueBrackets(v map[string][]string) {
+// SetUniqueBrackets gets a reference to the given SkyBlockProfileMemberJacobsContestUniqueBrackets and assigns it to the UniqueBrackets field.
+func (o *SkyBlockProfileMemberJacobsContest) SetUniqueBrackets(v SkyBlockProfileMemberJacobsContestUniqueBrackets) {
 	o.UniqueBrackets = &v
 }
 

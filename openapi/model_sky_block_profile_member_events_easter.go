@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberEventsEaster type satisfies the MappedNullable interface at compile time
@@ -19,36 +21,41 @@ var _ MappedNullable = &SkyBlockProfileMemberEventsEaster{}
 
 // SkyBlockProfileMemberEventsEaster struct for SkyBlockProfileMemberEventsEaster
 type SkyBlockProfileMemberEventsEaster struct {
-	Chocolate                   *int64                                         `json:"chocolate,omitempty"`
-	ChocolateLevel              *int64                                         `json:"chocolate_level,omitempty"`
-	ChocolateMultiplierUpgrades *int64                                         `json:"chocolate_multiplier_upgrades,omitempty"`
-	ChocolateSincePrestige      *int64                                         `json:"chocolate_since_prestige,omitempty"`
-	ClickUpgrades               *int64                                         `json:"click_upgrades,omitempty"`
-	ElDoradoProgress            *int64                                         `json:"el_dorado_progress,omitempty"`
-	Employees                   *map[string]int64                              `json:"employees,omitempty"`
-	GoldenClickAmount           *int64                                         `json:"golden_click_amount,omitempty"`
-	GoldenClickYear             *int64                                         `json:"golden_click_year,omitempty"`
-	LastViewedChocolateFactory  *int64                                         `json:"last_viewed_chocolate_factory,omitempty"`
-	RabbitBarnCapacityLevel     *int64                                         `json:"rabbit_barn_capacity_level,omitempty"`
-	RabbitFilter                *string                                        `json:"rabbit_filter,omitempty"`
-	RabbitHitmen                *SkyBlockProfileMemberEventsEasterRabbitHitmen `json:"rabbit_hitmen,omitempty"`
-	RabbitHotspotFiler          *string                                        `json:"rabbit_hotspot_filer,omitempty"`
-	RabbitRarityUpgrades        *int64                                         `json:"rabbit_rarity_upgrades,omitempty"`
-	RabbitSort                  *string                                        `json:"rabbit_sort,omitempty"`
-	Rabbits                     *SkyBlockProfileMemberEventsEasterRabbits      `json:"rabbits,omitempty"`
-	RefinedDarkCacaoTruffles    *int64                                         `json:"refined_dark_cacao_truffles,omitempty"`
-	Shop                        *SkyBlockProfileMemberEventsEasterShop         `json:"shop,omitempty"`
-	SupremeChocolateBars        *int64                                         `json:"supreme_chocolate_bars,omitempty"`
-	TimeTower                   *SkyBlockProfileMemberEventsEasterTimeTower    `json:"time_tower,omitempty"`
-	TotalChocolate              *int64                                         `json:"total_chocolate,omitempty"`
+	Chocolate                   int64                                                `json:"chocolate"`
+	ChocolateLevel              *int64                                               `json:"chocolate_level,omitempty"`
+	ChocolateMultiplierUpgrades *int64                                               `json:"chocolate_multiplier_upgrades,omitempty"`
+	ChocolateSincePrestige      int64                                                `json:"chocolate_since_prestige"`
+	ClickUpgrades               *int64                                               `json:"click_upgrades,omitempty"`
+	ElDoradoProgress            *int64                                               `json:"el_dorado_progress,omitempty"`
+	Employees                   *SkyBlockProfileMemberEventsEasterEmployees          `json:"employees,omitempty"`
+	GoldenClickAmount           *int64                                               `json:"golden_click_amount,omitempty"`
+	GoldenClickYear             *int64                                               `json:"golden_click_year,omitempty"`
+	LastViewedChocolateFactory  *int64                                               `json:"last_viewed_chocolate_factory,omitempty"`
+	RabbitBarnCapacityLevel     *int64                                               `json:"rabbit_barn_capacity_level,omitempty"`
+	RabbitFilter                *string                                              `json:"rabbit_filter,omitempty"`
+	RabbitHitmen                *SkyBlockProfileMemberEventsEasterRabbitHitmen       `json:"rabbit_hitmen,omitempty"`
+	RabbitHotspotFiler          *SkyBlockProfileMemberEventsEasterRabbitHotspotFiler `json:"rabbit_hotspot_filer,omitempty"`
+	RabbitRarityUpgrades        *int64                                               `json:"rabbit_rarity_upgrades,omitempty"`
+	RabbitSort                  *SkyBlockProfileMemberEventsEasterRabbitSort         `json:"rabbit_sort,omitempty"`
+	Rabbits                     *SkyBlockProfileMemberEventsEasterRabbits            `json:"rabbits,omitempty"`
+	RefinedDarkCacaoTruffles    *int64                                               `json:"refined_dark_cacao_truffles,omitempty"`
+	Shop                        *SkyBlockProfileMemberEventsEasterShop               `json:"shop,omitempty"`
+	SupremeChocolateBars        *int64                                               `json:"supreme_chocolate_bars,omitempty"`
+	TimeTower                   *SkyBlockProfileMemberEventsEasterTimeTower          `json:"time_tower,omitempty"`
+	TotalChocolate              int64                                                `json:"total_chocolate"`
 }
+
+type _SkyBlockProfileMemberEventsEaster SkyBlockProfileMemberEventsEaster
 
 // NewSkyBlockProfileMemberEventsEaster instantiates a new SkyBlockProfileMemberEventsEaster object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberEventsEaster() *SkyBlockProfileMemberEventsEaster {
+func NewSkyBlockProfileMemberEventsEaster(chocolate int64, chocolateSincePrestige int64, totalChocolate int64) *SkyBlockProfileMemberEventsEaster {
 	this := SkyBlockProfileMemberEventsEaster{}
+	this.Chocolate = chocolate
+	this.ChocolateSincePrestige = chocolateSincePrestige
+	this.TotalChocolate = totalChocolate
 	return &this
 }
 
@@ -60,36 +67,28 @@ func NewSkyBlockProfileMemberEventsEasterWithDefaults() *SkyBlockProfileMemberEv
 	return &this
 }
 
-// GetChocolate returns the Chocolate field value if set, zero value otherwise.
+// GetChocolate returns the Chocolate field value
 func (o *SkyBlockProfileMemberEventsEaster) GetChocolate() int64 {
-	if o == nil || IsNil(o.Chocolate) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.Chocolate
+
+	return o.Chocolate
 }
 
-// GetChocolateOk returns a tuple with the Chocolate field value if set, nil otherwise
+// GetChocolateOk returns a tuple with the Chocolate field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberEventsEaster) GetChocolateOk() (*int64, bool) {
-	if o == nil || IsNil(o.Chocolate) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Chocolate, true
+	return &o.Chocolate, true
 }
 
-// HasChocolate returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberEventsEaster) HasChocolate() bool {
-	if o != nil && !IsNil(o.Chocolate) {
-		return true
-	}
-
-	return false
-}
-
-// SetChocolate gets a reference to the given int64 and assigns it to the Chocolate field.
+// SetChocolate sets field value
 func (o *SkyBlockProfileMemberEventsEaster) SetChocolate(v int64) {
-	o.Chocolate = &v
+	o.Chocolate = v
 }
 
 // GetChocolateLevel returns the ChocolateLevel field value if set, zero value otherwise.
@@ -156,36 +155,28 @@ func (o *SkyBlockProfileMemberEventsEaster) SetChocolateMultiplierUpgrades(v int
 	o.ChocolateMultiplierUpgrades = &v
 }
 
-// GetChocolateSincePrestige returns the ChocolateSincePrestige field value if set, zero value otherwise.
+// GetChocolateSincePrestige returns the ChocolateSincePrestige field value
 func (o *SkyBlockProfileMemberEventsEaster) GetChocolateSincePrestige() int64 {
-	if o == nil || IsNil(o.ChocolateSincePrestige) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.ChocolateSincePrestige
+
+	return o.ChocolateSincePrestige
 }
 
-// GetChocolateSincePrestigeOk returns a tuple with the ChocolateSincePrestige field value if set, nil otherwise
+// GetChocolateSincePrestigeOk returns a tuple with the ChocolateSincePrestige field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberEventsEaster) GetChocolateSincePrestigeOk() (*int64, bool) {
-	if o == nil || IsNil(o.ChocolateSincePrestige) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ChocolateSincePrestige, true
+	return &o.ChocolateSincePrestige, true
 }
 
-// HasChocolateSincePrestige returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberEventsEaster) HasChocolateSincePrestige() bool {
-	if o != nil && !IsNil(o.ChocolateSincePrestige) {
-		return true
-	}
-
-	return false
-}
-
-// SetChocolateSincePrestige gets a reference to the given int64 and assigns it to the ChocolateSincePrestige field.
+// SetChocolateSincePrestige sets field value
 func (o *SkyBlockProfileMemberEventsEaster) SetChocolateSincePrestige(v int64) {
-	o.ChocolateSincePrestige = &v
+	o.ChocolateSincePrestige = v
 }
 
 // GetClickUpgrades returns the ClickUpgrades field value if set, zero value otherwise.
@@ -253,9 +244,9 @@ func (o *SkyBlockProfileMemberEventsEaster) SetElDoradoProgress(v int64) {
 }
 
 // GetEmployees returns the Employees field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberEventsEaster) GetEmployees() map[string]int64 {
+func (o *SkyBlockProfileMemberEventsEaster) GetEmployees() SkyBlockProfileMemberEventsEasterEmployees {
 	if o == nil || IsNil(o.Employees) {
-		var ret map[string]int64
+		var ret SkyBlockProfileMemberEventsEasterEmployees
 		return ret
 	}
 	return *o.Employees
@@ -263,7 +254,7 @@ func (o *SkyBlockProfileMemberEventsEaster) GetEmployees() map[string]int64 {
 
 // GetEmployeesOk returns a tuple with the Employees field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberEventsEaster) GetEmployeesOk() (*map[string]int64, bool) {
+func (o *SkyBlockProfileMemberEventsEaster) GetEmployeesOk() (*SkyBlockProfileMemberEventsEasterEmployees, bool) {
 	if o == nil || IsNil(o.Employees) {
 		return nil, false
 	}
@@ -279,8 +270,8 @@ func (o *SkyBlockProfileMemberEventsEaster) HasEmployees() bool {
 	return false
 }
 
-// SetEmployees gets a reference to the given map[string]int64 and assigns it to the Employees field.
-func (o *SkyBlockProfileMemberEventsEaster) SetEmployees(v map[string]int64) {
+// SetEmployees gets a reference to the given SkyBlockProfileMemberEventsEasterEmployees and assigns it to the Employees field.
+func (o *SkyBlockProfileMemberEventsEaster) SetEmployees(v SkyBlockProfileMemberEventsEasterEmployees) {
 	o.Employees = &v
 }
 
@@ -477,9 +468,9 @@ func (o *SkyBlockProfileMemberEventsEaster) SetRabbitHitmen(v SkyBlockProfileMem
 }
 
 // GetRabbitHotspotFiler returns the RabbitHotspotFiler field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberEventsEaster) GetRabbitHotspotFiler() string {
+func (o *SkyBlockProfileMemberEventsEaster) GetRabbitHotspotFiler() SkyBlockProfileMemberEventsEasterRabbitHotspotFiler {
 	if o == nil || IsNil(o.RabbitHotspotFiler) {
-		var ret string
+		var ret SkyBlockProfileMemberEventsEasterRabbitHotspotFiler
 		return ret
 	}
 	return *o.RabbitHotspotFiler
@@ -487,7 +478,7 @@ func (o *SkyBlockProfileMemberEventsEaster) GetRabbitHotspotFiler() string {
 
 // GetRabbitHotspotFilerOk returns a tuple with the RabbitHotspotFiler field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberEventsEaster) GetRabbitHotspotFilerOk() (*string, bool) {
+func (o *SkyBlockProfileMemberEventsEaster) GetRabbitHotspotFilerOk() (*SkyBlockProfileMemberEventsEasterRabbitHotspotFiler, bool) {
 	if o == nil || IsNil(o.RabbitHotspotFiler) {
 		return nil, false
 	}
@@ -503,8 +494,8 @@ func (o *SkyBlockProfileMemberEventsEaster) HasRabbitHotspotFiler() bool {
 	return false
 }
 
-// SetRabbitHotspotFiler gets a reference to the given string and assigns it to the RabbitHotspotFiler field.
-func (o *SkyBlockProfileMemberEventsEaster) SetRabbitHotspotFiler(v string) {
+// SetRabbitHotspotFiler gets a reference to the given SkyBlockProfileMemberEventsEasterRabbitHotspotFiler and assigns it to the RabbitHotspotFiler field.
+func (o *SkyBlockProfileMemberEventsEaster) SetRabbitHotspotFiler(v SkyBlockProfileMemberEventsEasterRabbitHotspotFiler) {
 	o.RabbitHotspotFiler = &v
 }
 
@@ -541,9 +532,9 @@ func (o *SkyBlockProfileMemberEventsEaster) SetRabbitRarityUpgrades(v int64) {
 }
 
 // GetRabbitSort returns the RabbitSort field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberEventsEaster) GetRabbitSort() string {
+func (o *SkyBlockProfileMemberEventsEaster) GetRabbitSort() SkyBlockProfileMemberEventsEasterRabbitSort {
 	if o == nil || IsNil(o.RabbitSort) {
-		var ret string
+		var ret SkyBlockProfileMemberEventsEasterRabbitSort
 		return ret
 	}
 	return *o.RabbitSort
@@ -551,7 +542,7 @@ func (o *SkyBlockProfileMemberEventsEaster) GetRabbitSort() string {
 
 // GetRabbitSortOk returns a tuple with the RabbitSort field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberEventsEaster) GetRabbitSortOk() (*string, bool) {
+func (o *SkyBlockProfileMemberEventsEaster) GetRabbitSortOk() (*SkyBlockProfileMemberEventsEasterRabbitSort, bool) {
 	if o == nil || IsNil(o.RabbitSort) {
 		return nil, false
 	}
@@ -567,8 +558,8 @@ func (o *SkyBlockProfileMemberEventsEaster) HasRabbitSort() bool {
 	return false
 }
 
-// SetRabbitSort gets a reference to the given string and assigns it to the RabbitSort field.
-func (o *SkyBlockProfileMemberEventsEaster) SetRabbitSort(v string) {
+// SetRabbitSort gets a reference to the given SkyBlockProfileMemberEventsEasterRabbitSort and assigns it to the RabbitSort field.
+func (o *SkyBlockProfileMemberEventsEaster) SetRabbitSort(v SkyBlockProfileMemberEventsEasterRabbitSort) {
 	o.RabbitSort = &v
 }
 
@@ -732,36 +723,28 @@ func (o *SkyBlockProfileMemberEventsEaster) SetTimeTower(v SkyBlockProfileMember
 	o.TimeTower = &v
 }
 
-// GetTotalChocolate returns the TotalChocolate field value if set, zero value otherwise.
+// GetTotalChocolate returns the TotalChocolate field value
 func (o *SkyBlockProfileMemberEventsEaster) GetTotalChocolate() int64 {
-	if o == nil || IsNil(o.TotalChocolate) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.TotalChocolate
+
+	return o.TotalChocolate
 }
 
-// GetTotalChocolateOk returns a tuple with the TotalChocolate field value if set, nil otherwise
+// GetTotalChocolateOk returns a tuple with the TotalChocolate field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberEventsEaster) GetTotalChocolateOk() (*int64, bool) {
-	if o == nil || IsNil(o.TotalChocolate) {
+	if o == nil {
 		return nil, false
 	}
-	return o.TotalChocolate, true
+	return &o.TotalChocolate, true
 }
 
-// HasTotalChocolate returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberEventsEaster) HasTotalChocolate() bool {
-	if o != nil && !IsNil(o.TotalChocolate) {
-		return true
-	}
-
-	return false
-}
-
-// SetTotalChocolate gets a reference to the given int64 and assigns it to the TotalChocolate field.
+// SetTotalChocolate sets field value
 func (o *SkyBlockProfileMemberEventsEaster) SetTotalChocolate(v int64) {
-	o.TotalChocolate = &v
+	o.TotalChocolate = v
 }
 
 func (o SkyBlockProfileMemberEventsEaster) MarshalJSON() ([]byte, error) {
@@ -774,18 +757,14 @@ func (o SkyBlockProfileMemberEventsEaster) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileMemberEventsEaster) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Chocolate) {
-		toSerialize["chocolate"] = o.Chocolate
-	}
+	toSerialize["chocolate"] = o.Chocolate
 	if !IsNil(o.ChocolateLevel) {
 		toSerialize["chocolate_level"] = o.ChocolateLevel
 	}
 	if !IsNil(o.ChocolateMultiplierUpgrades) {
 		toSerialize["chocolate_multiplier_upgrades"] = o.ChocolateMultiplierUpgrades
 	}
-	if !IsNil(o.ChocolateSincePrestige) {
-		toSerialize["chocolate_since_prestige"] = o.ChocolateSincePrestige
-	}
+	toSerialize["chocolate_since_prestige"] = o.ChocolateSincePrestige
 	if !IsNil(o.ClickUpgrades) {
 		toSerialize["click_upgrades"] = o.ClickUpgrades
 	}
@@ -837,10 +816,47 @@ func (o SkyBlockProfileMemberEventsEaster) ToMap() (map[string]interface{}, erro
 	if !IsNil(o.TimeTower) {
 		toSerialize["time_tower"] = o.TimeTower
 	}
-	if !IsNil(o.TotalChocolate) {
-		toSerialize["total_chocolate"] = o.TotalChocolate
-	}
+	toSerialize["total_chocolate"] = o.TotalChocolate
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberEventsEaster) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"chocolate",
+		"chocolate_since_prestige",
+		"total_chocolate",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberEventsEaster := _SkyBlockProfileMemberEventsEaster{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberEventsEaster)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberEventsEaster(varSkyBlockProfileMemberEventsEaster)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberEventsEaster struct {

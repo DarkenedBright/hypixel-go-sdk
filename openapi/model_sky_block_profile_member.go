@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMember type satisfies the MappedNullable interface at compile time
@@ -39,22 +41,28 @@ type SkyBlockProfileMember struct {
 	Objectives             *SkyBlockProfileMemberObjectives             `json:"objectives,omitempty"`
 	PetsData               *SkyBlockProfileMemberPetsData               `json:"pets_data,omitempty"`
 	PlayerData             *SkyBlockProfileMemberPlayerData             `json:"player_data,omitempty"`
-	PlayerId               *string                                      `json:"player_id,omitempty"`
+	PlayerId               string                                       `json:"player_id"`
 	PlayerStats            *SkyBlockProfileMemberPlayerStats            `json:"player_stats,omitempty"`
-	Profile                *SkyBlockProfileMemberProfile                `json:"profile,omitempty"`
+	Profile                SkyBlockProfileMemberProfile                 `json:"profile"`
 	Quests                 *SkyBlockProfileMemberQuests                 `json:"quests,omitempty"`
 	Rift                   *SkyBlockProfileMemberRift                   `json:"rift,omitempty"`
 	SharedInventory        *SkyBlockProfileMemberSharedInventory        `json:"shared_inventory,omitempty"`
 	Slayer                 *SkyBlockProfileMemberSlayer                 `json:"slayer,omitempty"`
+	Stats                  map[string]interface{}                       `json:"stats,omitempty"`
 	TrophyFish             *SkyBlockProfileMemberTrophyFish             `json:"trophy_fish,omitempty"`
+	WinterPlayerData       *SkyBlockProfileMemberWinterPlayerData       `json:"winter_player_data,omitempty"`
 }
+
+type _SkyBlockProfileMember SkyBlockProfileMember
 
 // NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMember() *SkyBlockProfileMember {
+func NewSkyBlockProfileMember(playerId string, profile SkyBlockProfileMemberProfile) *SkyBlockProfileMember {
 	this := SkyBlockProfileMember{}
+	this.PlayerId = playerId
+	this.Profile = profile
 	return &this
 }
 
@@ -706,36 +714,28 @@ func (o *SkyBlockProfileMember) SetPlayerData(v SkyBlockProfileMemberPlayerData)
 	o.PlayerData = &v
 }
 
-// GetPlayerId returns the PlayerId field value if set, zero value otherwise.
+// GetPlayerId returns the PlayerId field value
 func (o *SkyBlockProfileMember) GetPlayerId() string {
-	if o == nil || IsNil(o.PlayerId) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.PlayerId
+
+	return o.PlayerId
 }
 
-// GetPlayerIdOk returns a tuple with the PlayerId field value if set, nil otherwise
+// GetPlayerIdOk returns a tuple with the PlayerId field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMember) GetPlayerIdOk() (*string, bool) {
-	if o == nil || IsNil(o.PlayerId) {
+	if o == nil {
 		return nil, false
 	}
-	return o.PlayerId, true
+	return &o.PlayerId, true
 }
 
-// HasPlayerId returns a boolean if a field has been set.
-func (o *SkyBlockProfileMember) HasPlayerId() bool {
-	if o != nil && !IsNil(o.PlayerId) {
-		return true
-	}
-
-	return false
-}
-
-// SetPlayerId gets a reference to the given string and assigns it to the PlayerId field.
+// SetPlayerId sets field value
 func (o *SkyBlockProfileMember) SetPlayerId(v string) {
-	o.PlayerId = &v
+	o.PlayerId = v
 }
 
 // GetPlayerStats returns the PlayerStats field value if set, zero value otherwise.
@@ -770,36 +770,28 @@ func (o *SkyBlockProfileMember) SetPlayerStats(v SkyBlockProfileMemberPlayerStat
 	o.PlayerStats = &v
 }
 
-// GetProfile returns the Profile field value if set, zero value otherwise.
+// GetProfile returns the Profile field value
 func (o *SkyBlockProfileMember) GetProfile() SkyBlockProfileMemberProfile {
-	if o == nil || IsNil(o.Profile) {
+	if o == nil {
 		var ret SkyBlockProfileMemberProfile
 		return ret
 	}
-	return *o.Profile
+
+	return o.Profile
 }
 
-// GetProfileOk returns a tuple with the Profile field value if set, nil otherwise
+// GetProfileOk returns a tuple with the Profile field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMember) GetProfileOk() (*SkyBlockProfileMemberProfile, bool) {
-	if o == nil || IsNil(o.Profile) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Profile, true
+	return &o.Profile, true
 }
 
-// HasProfile returns a boolean if a field has been set.
-func (o *SkyBlockProfileMember) HasProfile() bool {
-	if o != nil && !IsNil(o.Profile) {
-		return true
-	}
-
-	return false
-}
-
-// SetProfile gets a reference to the given SkyBlockProfileMemberProfile and assigns it to the Profile field.
+// SetProfile sets field value
 func (o *SkyBlockProfileMember) SetProfile(v SkyBlockProfileMemberProfile) {
-	o.Profile = &v
+	o.Profile = v
 }
 
 // GetQuests returns the Quests field value if set, zero value otherwise.
@@ -930,6 +922,38 @@ func (o *SkyBlockProfileMember) SetSlayer(v SkyBlockProfileMemberSlayer) {
 	o.Slayer = &v
 }
 
+// GetStats returns the Stats field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetStats() map[string]interface{} {
+	if o == nil || IsNil(o.Stats) {
+		var ret map[string]interface{}
+		return ret
+	}
+	return o.Stats
+}
+
+// GetStatsOk returns a tuple with the Stats field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetStatsOk() (map[string]interface{}, bool) {
+	if o == nil || IsNil(o.Stats) {
+		return map[string]interface{}{}, false
+	}
+	return o.Stats, true
+}
+
+// HasStats returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasStats() bool {
+	if o != nil && !IsNil(o.Stats) {
+		return true
+	}
+
+	return false
+}
+
+// SetStats gets a reference to the given map[string]interface{} and assigns it to the Stats field.
+func (o *SkyBlockProfileMember) SetStats(v map[string]interface{}) {
+	o.Stats = v
+}
+
 // GetTrophyFish returns the TrophyFish field value if set, zero value otherwise.
 func (o *SkyBlockProfileMember) GetTrophyFish() SkyBlockProfileMemberTrophyFish {
 	if o == nil || IsNil(o.TrophyFish) {
@@ -960,6 +984,38 @@ func (o *SkyBlockProfileMember) HasTrophyFish() bool {
 // SetTrophyFish gets a reference to the given SkyBlockProfileMemberTrophyFish and assigns it to the TrophyFish field.
 func (o *SkyBlockProfileMember) SetTrophyFish(v SkyBlockProfileMemberTrophyFish) {
 	o.TrophyFish = &v
+}
+
+// GetWinterPlayerData returns the WinterPlayerData field value if set, zero value otherwise.
+func (o *SkyBlockProfileMember) GetWinterPlayerData() SkyBlockProfileMemberWinterPlayerData {
+	if o == nil || IsNil(o.WinterPlayerData) {
+		var ret SkyBlockProfileMemberWinterPlayerData
+		return ret
+	}
+	return *o.WinterPlayerData
+}
+
+// GetWinterPlayerDataOk returns a tuple with the WinterPlayerData field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMember) GetWinterPlayerDataOk() (*SkyBlockProfileMemberWinterPlayerData, bool) {
+	if o == nil || IsNil(o.WinterPlayerData) {
+		return nil, false
+	}
+	return o.WinterPlayerData, true
+}
+
+// HasWinterPlayerData returns a boolean if a field has been set.
+func (o *SkyBlockProfileMember) HasWinterPlayerData() bool {
+	if o != nil && !IsNil(o.WinterPlayerData) {
+		return true
+	}
+
+	return false
+}
+
+// SetWinterPlayerData gets a reference to the given SkyBlockProfileMemberWinterPlayerData and assigns it to the WinterPlayerData field.
+func (o *SkyBlockProfileMember) SetWinterPlayerData(v SkyBlockProfileMemberWinterPlayerData) {
+	o.WinterPlayerData = &v
 }
 
 func (o SkyBlockProfileMember) MarshalJSON() ([]byte, error) {
@@ -1032,15 +1088,11 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.PlayerData) {
 		toSerialize["player_data"] = o.PlayerData
 	}
-	if !IsNil(o.PlayerId) {
-		toSerialize["player_id"] = o.PlayerId
-	}
+	toSerialize["player_id"] = o.PlayerId
 	if !IsNil(o.PlayerStats) {
 		toSerialize["player_stats"] = o.PlayerStats
 	}
-	if !IsNil(o.Profile) {
-		toSerialize["profile"] = o.Profile
-	}
+	toSerialize["profile"] = o.Profile
 	if !IsNil(o.Quests) {
 		toSerialize["quests"] = o.Quests
 	}
@@ -1053,10 +1105,54 @@ func (o SkyBlockProfileMember) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Slayer) {
 		toSerialize["slayer"] = o.Slayer
 	}
+	if !IsNil(o.Stats) {
+		toSerialize["stats"] = o.Stats
+	}
 	if !IsNil(o.TrophyFish) {
 		toSerialize["trophy_fish"] = o.TrophyFish
 	}
+	if !IsNil(o.WinterPlayerData) {
+		toSerialize["winter_player_data"] = o.WinterPlayerData
+	}
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMember) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"player_id",
+		"profile",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMember := _SkyBlockProfileMember{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMember)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMember(varSkyBlockProfileMember)
+
+	return err
 }
 
 type NullableSkyBlockProfileMember struct {

@@ -19,6 +19,7 @@ var _ MappedNullable = &SkyBlockProfileMemberRiftCastle{}
 
 // SkyBlockProfileMemberRiftCastle struct for SkyBlockProfileMemberRiftCastle
 type SkyBlockProfileMemberRiftCastle struct {
+	BoughtPathwaySkip   *bool  `json:"bought_pathway_skip,omitempty"`
 	FairyStep           *int64 `json:"fairy_step,omitempty"`
 	GrubberStacks       *int64 `json:"grubber_stacks,omitempty"`
 	UnlockedPathwaySkip *bool  `json:"unlocked_pathway_skip,omitempty"`
@@ -39,6 +40,38 @@ func NewSkyBlockProfileMemberRiftCastle() *SkyBlockProfileMemberRiftCastle {
 func NewSkyBlockProfileMemberRiftCastleWithDefaults() *SkyBlockProfileMemberRiftCastle {
 	this := SkyBlockProfileMemberRiftCastle{}
 	return &this
+}
+
+// GetBoughtPathwaySkip returns the BoughtPathwaySkip field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberRiftCastle) GetBoughtPathwaySkip() bool {
+	if o == nil || IsNil(o.BoughtPathwaySkip) {
+		var ret bool
+		return ret
+	}
+	return *o.BoughtPathwaySkip
+}
+
+// GetBoughtPathwaySkipOk returns a tuple with the BoughtPathwaySkip field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberRiftCastle) GetBoughtPathwaySkipOk() (*bool, bool) {
+	if o == nil || IsNil(o.BoughtPathwaySkip) {
+		return nil, false
+	}
+	return o.BoughtPathwaySkip, true
+}
+
+// HasBoughtPathwaySkip returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberRiftCastle) HasBoughtPathwaySkip() bool {
+	if o != nil && !IsNil(o.BoughtPathwaySkip) {
+		return true
+	}
+
+	return false
+}
+
+// SetBoughtPathwaySkip gets a reference to the given bool and assigns it to the BoughtPathwaySkip field.
+func (o *SkyBlockProfileMemberRiftCastle) SetBoughtPathwaySkip(v bool) {
+	o.BoughtPathwaySkip = &v
 }
 
 // GetFairyStep returns the FairyStep field value if set, zero value otherwise.
@@ -147,6 +180,9 @@ func (o SkyBlockProfileMemberRiftCastle) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileMemberRiftCastle) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.BoughtPathwaySkip) {
+		toSerialize["bought_pathway_skip"] = o.BoughtPathwaySkip
+	}
 	if !IsNil(o.FairyStep) {
 		toSerialize["fairy_step"] = o.FairyStep
 	}

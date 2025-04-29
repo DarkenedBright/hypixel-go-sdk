@@ -21,6 +21,7 @@ var _ MappedNullable = &SkyBlockProfileMemberPlayerStatsRiftShenItemBought{}
 
 // SkyBlockProfileMemberPlayerStatsRiftShenItemBought struct for SkyBlockProfileMemberPlayerStatsRiftShenItemBought
 type SkyBlockProfileMemberPlayerStatsRiftShenItemBought struct {
+	ANCIENT_ELEVATOR          *float64 `json:"ANCIENT_ELEVATOR,omitempty"`
 	DEAD_CAT_FOOD             *float64 `json:"DEAD_CAT_FOOD,omitempty"`
 	FLEX_HELMET               *float64 `json:"FLEX_HELMET,omitempty"`
 	PLACEABLE_FAIRY_SOUL_RIFT *float64 `json:"PLACEABLE_FAIRY_SOUL_RIFT,omitempty"`
@@ -47,6 +48,38 @@ func NewSkyBlockProfileMemberPlayerStatsRiftShenItemBought(total float64) *SkyBl
 func NewSkyBlockProfileMemberPlayerStatsRiftShenItemBoughtWithDefaults() *SkyBlockProfileMemberPlayerStatsRiftShenItemBought {
 	this := SkyBlockProfileMemberPlayerStatsRiftShenItemBought{}
 	return &this
+}
+
+// GetANCIENT_ELEVATOR returns the ANCIENT_ELEVATOR field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberPlayerStatsRiftShenItemBought) GetANCIENT_ELEVATOR() float64 {
+	if o == nil || IsNil(o.ANCIENT_ELEVATOR) {
+		var ret float64
+		return ret
+	}
+	return *o.ANCIENT_ELEVATOR
+}
+
+// GetANCIENT_ELEVATOROk returns a tuple with the ANCIENT_ELEVATOR field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberPlayerStatsRiftShenItemBought) GetANCIENT_ELEVATOROk() (*float64, bool) {
+	if o == nil || IsNil(o.ANCIENT_ELEVATOR) {
+		return nil, false
+	}
+	return o.ANCIENT_ELEVATOR, true
+}
+
+// HasANCIENT_ELEVATOR returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPlayerStatsRiftShenItemBought) HasANCIENT_ELEVATOR() bool {
+	if o != nil && !IsNil(o.ANCIENT_ELEVATOR) {
+		return true
+	}
+
+	return false
+}
+
+// SetANCIENT_ELEVATOR gets a reference to the given float64 and assigns it to the ANCIENT_ELEVATOR field.
+func (o *SkyBlockProfileMemberPlayerStatsRiftShenItemBought) SetANCIENT_ELEVATOR(v float64) {
+	o.ANCIENT_ELEVATOR = &v
 }
 
 // GetDEAD_CAT_FOOD returns the DEAD_CAT_FOOD field value if set, zero value otherwise.
@@ -243,6 +276,9 @@ func (o SkyBlockProfileMemberPlayerStatsRiftShenItemBought) MarshalJSON() ([]byt
 
 func (o SkyBlockProfileMemberPlayerStatsRiftShenItemBought) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ANCIENT_ELEVATOR) {
+		toSerialize["ANCIENT_ELEVATOR"] = o.ANCIENT_ELEVATOR
+	}
 	if !IsNil(o.DEAD_CAT_FOOD) {
 		toSerialize["DEAD_CAT_FOOD"] = o.DEAD_CAT_FOOD
 	}

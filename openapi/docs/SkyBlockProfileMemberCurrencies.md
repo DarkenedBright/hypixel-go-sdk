@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CoinPurse** | Pointer to **float64** |  | [optional] 
-**Essence** | Pointer to [**map[string]SkyBlockProfileMemberCurrenciesEssenceValue**](SkyBlockProfileMemberCurrenciesEssenceValue.md) |  | [optional] 
+**CoinPurse** | **float64** |  | 
+**Essence** | Pointer to [**SkyBlockProfileMemberCurrenciesEssence**](SkyBlockProfileMemberCurrenciesEssence.md) |  | [optional] 
 **MotesPurse** | Pointer to **float64** |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberCurrencies
 
-`func NewSkyBlockProfileMemberCurrencies() *SkyBlockProfileMemberCurrencies`
+`func NewSkyBlockProfileMemberCurrencies(coinPurse float64, ) *SkyBlockProfileMemberCurrencies`
 
 NewSkyBlockProfileMemberCurrencies instantiates a new SkyBlockProfileMemberCurrencies object
 This constructor will assign default values to properties that have it defined,
@@ -46,28 +46,23 @@ and a boolean to check if the value has been set.
 
 SetCoinPurse sets CoinPurse field to given value.
 
-### HasCoinPurse
-
-`func (o *SkyBlockProfileMemberCurrencies) HasCoinPurse() bool`
-
-HasCoinPurse returns a boolean if a field has been set.
 
 ### GetEssence
 
-`func (o *SkyBlockProfileMemberCurrencies) GetEssence() map[string]SkyBlockProfileMemberCurrenciesEssenceValue`
+`func (o *SkyBlockProfileMemberCurrencies) GetEssence() SkyBlockProfileMemberCurrenciesEssence`
 
 GetEssence returns the Essence field if non-nil, zero value otherwise.
 
 ### GetEssenceOk
 
-`func (o *SkyBlockProfileMemberCurrencies) GetEssenceOk() (*map[string]SkyBlockProfileMemberCurrenciesEssenceValue, bool)`
+`func (o *SkyBlockProfileMemberCurrencies) GetEssenceOk() (*SkyBlockProfileMemberCurrenciesEssence, bool)`
 
 GetEssenceOk returns a tuple with the Essence field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEssence
 
-`func (o *SkyBlockProfileMemberCurrencies) SetEssence(v map[string]SkyBlockProfileMemberCurrenciesEssenceValue)`
+`func (o *SkyBlockProfileMemberCurrencies) SetEssence(v SkyBlockProfileMemberCurrenciesEssence)`
 
 SetEssence sets Essence field to given value.
 

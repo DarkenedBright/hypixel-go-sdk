@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberJacobsContestContestsValue type satisfies the MappedNullable interface at compile time
@@ -19,18 +21,22 @@ var _ MappedNullable = &SkyBlockProfileMemberJacobsContestContestsValue{}
 
 // SkyBlockProfileMemberJacobsContestContestsValue struct for SkyBlockProfileMemberJacobsContestContestsValue
 type SkyBlockProfileMemberJacobsContestContestsValue struct {
-	ClaimedParticipants *int64 `json:"claimed_participants,omitempty"`
-	ClaimedPosition     *int64 `json:"claimed_position,omitempty"`
-	ClaimedRewards      *bool  `json:"claimed_rewards,omitempty"`
-	Collected           *int64 `json:"collected,omitempty"`
+	ClaimedMedal        *SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal `json:"claimed_medal,omitempty"`
+	ClaimedParticipants *int64                                                       `json:"claimed_participants,omitempty"`
+	ClaimedPosition     *int64                                                       `json:"claimed_position,omitempty"`
+	ClaimedRewards      *bool                                                        `json:"claimed_rewards,omitempty"`
+	Collected           int64                                                        `json:"collected"`
 }
+
+type _SkyBlockProfileMemberJacobsContestContestsValue SkyBlockProfileMemberJacobsContestContestsValue
 
 // NewSkyBlockProfileMemberJacobsContestContestsValue instantiates a new SkyBlockProfileMemberJacobsContestContestsValue object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberJacobsContestContestsValue() *SkyBlockProfileMemberJacobsContestContestsValue {
+func NewSkyBlockProfileMemberJacobsContestContestsValue(collected int64) *SkyBlockProfileMemberJacobsContestContestsValue {
 	this := SkyBlockProfileMemberJacobsContestContestsValue{}
+	this.Collected = collected
 	return &this
 }
 
@@ -40,6 +46,38 @@ func NewSkyBlockProfileMemberJacobsContestContestsValue() *SkyBlockProfileMember
 func NewSkyBlockProfileMemberJacobsContestContestsValueWithDefaults() *SkyBlockProfileMemberJacobsContestContestsValue {
 	this := SkyBlockProfileMemberJacobsContestContestsValue{}
 	return &this
+}
+
+// GetClaimedMedal returns the ClaimedMedal field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberJacobsContestContestsValue) GetClaimedMedal() SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal {
+	if o == nil || IsNil(o.ClaimedMedal) {
+		var ret SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal
+		return ret
+	}
+	return *o.ClaimedMedal
+}
+
+// GetClaimedMedalOk returns a tuple with the ClaimedMedal field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberJacobsContestContestsValue) GetClaimedMedalOk() (*SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal, bool) {
+	if o == nil || IsNil(o.ClaimedMedal) {
+		return nil, false
+	}
+	return o.ClaimedMedal, true
+}
+
+// HasClaimedMedal returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberJacobsContestContestsValue) HasClaimedMedal() bool {
+	if o != nil && !IsNil(o.ClaimedMedal) {
+		return true
+	}
+
+	return false
+}
+
+// SetClaimedMedal gets a reference to the given SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal and assigns it to the ClaimedMedal field.
+func (o *SkyBlockProfileMemberJacobsContestContestsValue) SetClaimedMedal(v SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal) {
+	o.ClaimedMedal = &v
 }
 
 // GetClaimedParticipants returns the ClaimedParticipants field value if set, zero value otherwise.
@@ -138,36 +176,28 @@ func (o *SkyBlockProfileMemberJacobsContestContestsValue) SetClaimedRewards(v bo
 	o.ClaimedRewards = &v
 }
 
-// GetCollected returns the Collected field value if set, zero value otherwise.
+// GetCollected returns the Collected field value
 func (o *SkyBlockProfileMemberJacobsContestContestsValue) GetCollected() int64 {
-	if o == nil || IsNil(o.Collected) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.Collected
+
+	return o.Collected
 }
 
-// GetCollectedOk returns a tuple with the Collected field value if set, nil otherwise
+// GetCollectedOk returns a tuple with the Collected field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberJacobsContestContestsValue) GetCollectedOk() (*int64, bool) {
-	if o == nil || IsNil(o.Collected) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Collected, true
+	return &o.Collected, true
 }
 
-// HasCollected returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberJacobsContestContestsValue) HasCollected() bool {
-	if o != nil && !IsNil(o.Collected) {
-		return true
-	}
-
-	return false
-}
-
-// SetCollected gets a reference to the given int64 and assigns it to the Collected field.
+// SetCollected sets field value
 func (o *SkyBlockProfileMemberJacobsContestContestsValue) SetCollected(v int64) {
-	o.Collected = &v
+	o.Collected = v
 }
 
 func (o SkyBlockProfileMemberJacobsContestContestsValue) MarshalJSON() ([]byte, error) {
@@ -180,6 +210,9 @@ func (o SkyBlockProfileMemberJacobsContestContestsValue) MarshalJSON() ([]byte, 
 
 func (o SkyBlockProfileMemberJacobsContestContestsValue) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ClaimedMedal) {
+		toSerialize["claimed_medal"] = o.ClaimedMedal
+	}
 	if !IsNil(o.ClaimedParticipants) {
 		toSerialize["claimed_participants"] = o.ClaimedParticipants
 	}
@@ -189,10 +222,45 @@ func (o SkyBlockProfileMemberJacobsContestContestsValue) ToMap() (map[string]int
 	if !IsNil(o.ClaimedRewards) {
 		toSerialize["claimed_rewards"] = o.ClaimedRewards
 	}
-	if !IsNil(o.Collected) {
-		toSerialize["collected"] = o.Collected
-	}
+	toSerialize["collected"] = o.Collected
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberJacobsContestContestsValue) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"collected",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberJacobsContestContestsValue := _SkyBlockProfileMemberJacobsContestContestsValue{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberJacobsContestContestsValue)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberJacobsContestContestsValue(varSkyBlockProfileMemberJacobsContestContestsValue)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberJacobsContestContestsValue struct {

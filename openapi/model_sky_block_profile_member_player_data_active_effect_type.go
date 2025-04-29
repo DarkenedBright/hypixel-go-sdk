@@ -39,6 +39,7 @@ const (
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_ENCHANTING_XP_BOOST     SkyBlockProfileMemberPlayerDataActiveEffectType = "enchanting_xp_boost"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_EXPERIENCE              SkyBlockProfileMemberPlayerDataActiveEffectType = "experience"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_FARMING_XP_BOOST        SkyBlockProfileMemberPlayerDataActiveEffectType = "farming_xp_boost"
+	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_FILET_O_FORTUNE         SkyBlockProfileMemberPlayerDataActiveEffectType = "filet_o_fortune"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_FIRE_RESISTANCE         SkyBlockProfileMemberPlayerDataActiveEffectType = "fire_resistance"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_FISHING_XP_BOOST        SkyBlockProfileMemberPlayerDataActiveEffectType = "fishing_xp_boost"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_FORAGING_XP_BOOST       SkyBlockProfileMemberPlayerDataActiveEffectType = "foraging_xp_boost"
@@ -58,6 +59,8 @@ const (
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_OBSIDIAN_SKIN           SkyBlockProfileMemberPlayerDataActiveEffectType = "obsidian_skin"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_PEST_SPRAY              SkyBlockProfileMemberPlayerDataActiveEffectType = "pest_spray"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_PET_LUCK                SkyBlockProfileMemberPlayerDataActiveEffectType = "pet_luck"
+	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_POISON                  SkyBlockProfileMemberPlayerDataActiveEffectType = "poison"
+	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_POWDER_PUMPKIN          SkyBlockProfileMemberPlayerDataActiveEffectType = "powder_pumpkin"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_RABBIT                  SkyBlockProfileMemberPlayerDataActiveEffectType = "rabbit"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_REGENERATION            SkyBlockProfileMemberPlayerDataActiveEffectType = "regeneration"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_RESISTANCE              SkyBlockProfileMemberPlayerDataActiveEffectType = "resistance"
@@ -70,6 +73,7 @@ const (
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_STUN                    SkyBlockProfileMemberPlayerDataActiveEffectType = "stun"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_TRUE_DEFENSE            SkyBlockProfileMemberPlayerDataActiveEffectType = "true_defense"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_WATER_BREATHING         SkyBlockProfileMemberPlayerDataActiveEffectType = "water_breathing"
+	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_WEAKNESS                SkyBlockProfileMemberPlayerDataActiveEffectType = "weakness"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_WISP_ICE                SkyBlockProfileMemberPlayerDataActiveEffectType = "wisp_ice"
 	SKYBLOCKPROFILEMEMBERPLAYERDATAACTIVEEFFECTTYPE_WITHER                  SkyBlockProfileMemberPlayerDataActiveEffectType = "wither"
 )
@@ -95,6 +99,7 @@ var AllowedSkyBlockProfileMemberPlayerDataActiveEffectTypeEnumValues = []SkyBloc
 	"enchanting_xp_boost",
 	"experience",
 	"farming_xp_boost",
+	"filet_o_fortune",
 	"fire_resistance",
 	"fishing_xp_boost",
 	"foraging_xp_boost",
@@ -114,6 +119,8 @@ var AllowedSkyBlockProfileMemberPlayerDataActiveEffectTypeEnumValues = []SkyBloc
 	"obsidian_skin",
 	"pest_spray",
 	"pet_luck",
+	"poison",
+	"powder_pumpkin",
 	"rabbit",
 	"regeneration",
 	"resistance",
@@ -126,6 +133,7 @@ var AllowedSkyBlockProfileMemberPlayerDataActiveEffectTypeEnumValues = []SkyBloc
 	"stun",
 	"true_defense",
 	"water_breathing",
+	"weakness",
 	"wisp_ice",
 	"wither",
 }

@@ -24,20 +24,22 @@ Name | Type | Description | Notes
 **Objectives** | Pointer to [**SkyBlockProfileMemberObjectives**](SkyBlockProfileMemberObjectives.md) |  | [optional] 
 **PetsData** | Pointer to [**SkyBlockProfileMemberPetsData**](SkyBlockProfileMemberPetsData.md) |  | [optional] 
 **PlayerData** | Pointer to [**SkyBlockProfileMemberPlayerData**](SkyBlockProfileMemberPlayerData.md) |  | [optional] 
-**PlayerId** | Pointer to **string** |  | [optional] 
+**PlayerId** | **string** |  | 
 **PlayerStats** | Pointer to [**SkyBlockProfileMemberPlayerStats**](SkyBlockProfileMemberPlayerStats.md) |  | [optional] 
-**Profile** | Pointer to [**SkyBlockProfileMemberProfile**](SkyBlockProfileMemberProfile.md) |  | [optional] 
+**Profile** | [**SkyBlockProfileMemberProfile**](SkyBlockProfileMemberProfile.md) |  | 
 **Quests** | Pointer to [**SkyBlockProfileMemberQuests**](SkyBlockProfileMemberQuests.md) |  | [optional] 
 **Rift** | Pointer to [**SkyBlockProfileMemberRift**](SkyBlockProfileMemberRift.md) |  | [optional] 
 **SharedInventory** | Pointer to [**SkyBlockProfileMemberSharedInventory**](SkyBlockProfileMemberSharedInventory.md) |  | [optional] 
 **Slayer** | Pointer to [**SkyBlockProfileMemberSlayer**](SkyBlockProfileMemberSlayer.md) |  | [optional] 
+**Stats** | Pointer to **map[string]interface{}** |  | [optional] 
 **TrophyFish** | Pointer to [**SkyBlockProfileMemberTrophyFish**](SkyBlockProfileMemberTrophyFish.md) |  | [optional] 
+**WinterPlayerData** | Pointer to [**SkyBlockProfileMemberWinterPlayerData**](SkyBlockProfileMemberWinterPlayerData.md) |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileMember
 
-`func NewSkyBlockProfileMember() *SkyBlockProfileMember`
+`func NewSkyBlockProfileMember(playerId string, profile SkyBlockProfileMemberProfile, ) *SkyBlockProfileMember`
 
 NewSkyBlockProfileMember instantiates a new SkyBlockProfileMember object
 This constructor will assign default values to properties that have it defined,
@@ -571,11 +573,6 @@ and a boolean to check if the value has been set.
 
 SetPlayerId sets PlayerId field to given value.
 
-### HasPlayerId
-
-`func (o *SkyBlockProfileMember) HasPlayerId() bool`
-
-HasPlayerId returns a boolean if a field has been set.
 
 ### GetPlayerStats
 
@@ -621,11 +618,6 @@ and a boolean to check if the value has been set.
 
 SetProfile sets Profile field to given value.
 
-### HasProfile
-
-`func (o *SkyBlockProfileMember) HasProfile() bool`
-
-HasProfile returns a boolean if a field has been set.
 
 ### GetQuests
 
@@ -727,6 +719,31 @@ SetSlayer sets Slayer field to given value.
 
 HasSlayer returns a boolean if a field has been set.
 
+### GetStats
+
+`func (o *SkyBlockProfileMember) GetStats() map[string]interface{}`
+
+GetStats returns the Stats field if non-nil, zero value otherwise.
+
+### GetStatsOk
+
+`func (o *SkyBlockProfileMember) GetStatsOk() (*map[string]interface{}, bool)`
+
+GetStatsOk returns a tuple with the Stats field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStats
+
+`func (o *SkyBlockProfileMember) SetStats(v map[string]interface{})`
+
+SetStats sets Stats field to given value.
+
+### HasStats
+
+`func (o *SkyBlockProfileMember) HasStats() bool`
+
+HasStats returns a boolean if a field has been set.
+
 ### GetTrophyFish
 
 `func (o *SkyBlockProfileMember) GetTrophyFish() SkyBlockProfileMemberTrophyFish`
@@ -751,6 +768,31 @@ SetTrophyFish sets TrophyFish field to given value.
 `func (o *SkyBlockProfileMember) HasTrophyFish() bool`
 
 HasTrophyFish returns a boolean if a field has been set.
+
+### GetWinterPlayerData
+
+`func (o *SkyBlockProfileMember) GetWinterPlayerData() SkyBlockProfileMemberWinterPlayerData`
+
+GetWinterPlayerData returns the WinterPlayerData field if non-nil, zero value otherwise.
+
+### GetWinterPlayerDataOk
+
+`func (o *SkyBlockProfileMember) GetWinterPlayerDataOk() (*SkyBlockProfileMemberWinterPlayerData, bool)`
+
+GetWinterPlayerDataOk returns a tuple with the WinterPlayerData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWinterPlayerData
+
+`func (o *SkyBlockProfileMember) SetWinterPlayerData(v SkyBlockProfileMemberWinterPlayerData)`
+
+SetWinterPlayerData sets WinterPlayerData field to given value.
+
+### HasWinterPlayerData
+
+`func (o *SkyBlockProfileMember) HasWinterPlayerData() bool`
+
+HasWinterPlayerData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

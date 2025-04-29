@@ -24,6 +24,7 @@ const (
 	SKYBLOCKPROFILEMEMBERLEVELINGXPTASK_ABIPHONE_ANITA                              SkyBlockProfileMemberLevelingXPTask = "ABIPHONE_anita"
 	SKYBLOCKPROFILEMEMBERLEVELINGXPTASK_ABIPHONE_ARANYA                             SkyBlockProfileMemberLevelingXPTask = "ABIPHONE_aranya"
 	SKYBLOCKPROFILEMEMBERLEVELINGXPTASK_ABIPHONE_ARROW_FORGER                       SkyBlockProfileMemberLevelingXPTask = "ABIPHONE_arrow_forger"
+	SKYBLOCKPROFILEMEMBERLEVELINGXPTASK_ABIPHONE_BINGO                              SkyBlockProfileMemberLevelingXPTask = "ABIPHONE_bingo"
 	SKYBLOCKPROFILEMEMBERLEVELINGXPTASK_ABIPHONE_BLACKSMITH                         SkyBlockProfileMemberLevelingXPTask = "ABIPHONE_blacksmith"
 	SKYBLOCKPROFILEMEMBERLEVELINGXPTASK_ABIPHONE_BRYNMOR                            SkyBlockProfileMemberLevelingXPTask = "ABIPHONE_brynmor"
 	SKYBLOCKPROFILEMEMBERLEVELINGXPTASK_ABIPHONE_BUILDER                            SkyBlockProfileMemberLevelingXPTask = "ABIPHONE_builder"
@@ -715,6 +716,7 @@ var AllowedSkyBlockProfileMemberLevelingXPTaskEnumValues = []SkyBlockProfileMemb
 	"ABIPHONE_anita",
 	"ABIPHONE_aranya",
 	"ABIPHONE_arrow_forger",
+	"ABIPHONE_bingo",
 	"ABIPHONE_blacksmith",
 	"ABIPHONE_brynmor",
 	"ABIPHONE_builder",

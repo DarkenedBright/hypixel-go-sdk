@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberInventoryBase64GzipData type satisfies the MappedNullable interface at compile time
@@ -19,16 +21,20 @@ var _ MappedNullable = &SkyBlockProfileMemberInventoryBase64GzipData{}
 
 // SkyBlockProfileMemberInventoryBase64GzipData struct for SkyBlockProfileMemberInventoryBase64GzipData
 type SkyBlockProfileMemberInventoryBase64GzipData struct {
-	Data *string `json:"data,omitempty"`
-	Type *int64  `json:"type,omitempty"`
+	Data string `json:"data"`
+	Type int64  `json:"type"`
 }
+
+type _SkyBlockProfileMemberInventoryBase64GzipData SkyBlockProfileMemberInventoryBase64GzipData
 
 // NewSkyBlockProfileMemberInventoryBase64GzipData instantiates a new SkyBlockProfileMemberInventoryBase64GzipData object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberInventoryBase64GzipData() *SkyBlockProfileMemberInventoryBase64GzipData {
+func NewSkyBlockProfileMemberInventoryBase64GzipData(data string, type_ int64) *SkyBlockProfileMemberInventoryBase64GzipData {
 	this := SkyBlockProfileMemberInventoryBase64GzipData{}
+	this.Data = data
+	this.Type = type_
 	return &this
 }
 
@@ -40,68 +46,52 @@ func NewSkyBlockProfileMemberInventoryBase64GzipDataWithDefaults() *SkyBlockProf
 	return &this
 }
 
-// GetData returns the Data field value if set, zero value otherwise.
+// GetData returns the Data field value
 func (o *SkyBlockProfileMemberInventoryBase64GzipData) GetData() string {
-	if o == nil || IsNil(o.Data) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.Data
+
+	return o.Data
 }
 
-// GetDataOk returns a tuple with the Data field value if set, nil otherwise
+// GetDataOk returns a tuple with the Data field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberInventoryBase64GzipData) GetDataOk() (*string, bool) {
-	if o == nil || IsNil(o.Data) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Data, true
+	return &o.Data, true
 }
 
-// HasData returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberInventoryBase64GzipData) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
-
-// SetData gets a reference to the given string and assigns it to the Data field.
+// SetData sets field value
 func (o *SkyBlockProfileMemberInventoryBase64GzipData) SetData(v string) {
-	o.Data = &v
+	o.Data = v
 }
 
-// GetType returns the Type field value if set, zero value otherwise.
+// GetType returns the Type field value
 func (o *SkyBlockProfileMemberInventoryBase64GzipData) GetType() int64 {
-	if o == nil || IsNil(o.Type) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.Type
+
+	return o.Type
 }
 
-// GetTypeOk returns a tuple with the Type field value if set, nil otherwise
+// GetTypeOk returns a tuple with the Type field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberInventoryBase64GzipData) GetTypeOk() (*int64, bool) {
-	if o == nil || IsNil(o.Type) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Type, true
+	return &o.Type, true
 }
 
-// HasType returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberInventoryBase64GzipData) HasType() bool {
-	if o != nil && !IsNil(o.Type) {
-		return true
-	}
-
-	return false
-}
-
-// SetType gets a reference to the given int64 and assigns it to the Type field.
+// SetType sets field value
 func (o *SkyBlockProfileMemberInventoryBase64GzipData) SetType(v int64) {
-	o.Type = &v
+	o.Type = v
 }
 
 func (o SkyBlockProfileMemberInventoryBase64GzipData) MarshalJSON() ([]byte, error) {
@@ -114,13 +104,47 @@ func (o SkyBlockProfileMemberInventoryBase64GzipData) MarshalJSON() ([]byte, err
 
 func (o SkyBlockProfileMemberInventoryBase64GzipData) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
-	}
-	if !IsNil(o.Type) {
-		toSerialize["type"] = o.Type
-	}
+	toSerialize["data"] = o.Data
+	toSerialize["type"] = o.Type
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberInventoryBase64GzipData) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"data",
+		"type",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberInventoryBase64GzipData := _SkyBlockProfileMemberInventoryBase64GzipData{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberInventoryBase64GzipData)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberInventoryBase64GzipData(varSkyBlockProfileMemberInventoryBase64GzipData)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberInventoryBase64GzipData struct {

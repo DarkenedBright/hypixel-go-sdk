@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CombatXp** | Pointer to **int64** |  | [optional] 
 **CompletionState** | **int64** |  | 
+**KillTimestamp** | Pointer to **int64** |  | [optional] 
 **LastKilledMobIsland** | Pointer to [**SkyBlockProfileMemberRiftSlayerQuestLastKilledMobIsland**](SkyBlockProfileMemberRiftSlayerQuestLastKilledMobIsland.md) |  | [optional] 
 **RecentMobKills** | Pointer to [**[]SkyBlockProfileMemberRiftSlayerQuestRecentMobKill**](SkyBlockProfileMemberRiftSlayerQuestRecentMobKill.md) |  | [optional] 
 **Solo** | **bool** |  | 
@@ -78,6 +79,31 @@ and a boolean to check if the value has been set.
 
 SetCompletionState sets CompletionState field to given value.
 
+
+### GetKillTimestamp
+
+`func (o *SkyBlockProfileMemberRiftSlayerQuest) GetKillTimestamp() int64`
+
+GetKillTimestamp returns the KillTimestamp field if non-nil, zero value otherwise.
+
+### GetKillTimestampOk
+
+`func (o *SkyBlockProfileMemberRiftSlayerQuest) GetKillTimestampOk() (*int64, bool)`
+
+GetKillTimestampOk returns a tuple with the KillTimestamp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKillTimestamp
+
+`func (o *SkyBlockProfileMemberRiftSlayerQuest) SetKillTimestamp(v int64)`
+
+SetKillTimestamp sets KillTimestamp field to given value.
+
+### HasKillTimestamp
+
+`func (o *SkyBlockProfileMemberRiftSlayerQuest) HasKillTimestamp() bool`
+
+HasKillTimestamp returns a boolean if a field has been set.
 
 ### GetLastKilledMobIsland
 

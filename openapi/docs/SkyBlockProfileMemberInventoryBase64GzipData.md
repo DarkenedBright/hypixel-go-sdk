@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | Pointer to **string** |  | [optional] 
-**Type** | Pointer to **int64** |  | [optional] 
+**Data** | **string** |  | 
+**Type** | **int64** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberInventoryBase64GzipData
 
-`func NewSkyBlockProfileMemberInventoryBase64GzipData() *SkyBlockProfileMemberInventoryBase64GzipData`
+`func NewSkyBlockProfileMemberInventoryBase64GzipData(data string, type_ int64, ) *SkyBlockProfileMemberInventoryBase64GzipData`
 
 NewSkyBlockProfileMemberInventoryBase64GzipData instantiates a new SkyBlockProfileMemberInventoryBase64GzipData object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetData sets Data field to given value.
 
-### HasData
-
-`func (o *SkyBlockProfileMemberInventoryBase64GzipData) HasData() bool`
-
-HasData returns a boolean if a field has been set.
 
 ### GetType
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetType sets Type field to given value.
 
-### HasType
-
-`func (o *SkyBlockProfileMemberInventoryBase64GzipData) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

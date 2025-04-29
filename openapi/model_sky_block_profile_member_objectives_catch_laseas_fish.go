@@ -22,7 +22,7 @@ var _ MappedNullable = &SkyBlockProfileMemberObjectivesCatchLaseasFish{}
 // SkyBlockProfileMemberObjectivesCatchLaseasFish struct for SkyBlockProfileMemberObjectivesCatchLaseasFish
 type SkyBlockProfileMemberObjectivesCatchLaseasFish struct {
 	CompletedAt        int64                                                             `json:"completed_at"`
-	FlyfishFished      int64                                                             `json:"flyfish_fished"`
+	FlyfishFished      *int64                                                            `json:"flyfish_fished,omitempty"`
 	Progress           int64                                                             `json:"progress"`
 	SkeletonFishFished *int64                                                            `json:"skeleton_fish_fished,omitempty"`
 	Status             SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus `json:"status"`
@@ -34,10 +34,9 @@ type _SkyBlockProfileMemberObjectivesCatchLaseasFish SkyBlockProfileMemberObject
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberObjectivesCatchLaseasFish(completedAt int64, flyfishFished int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) *SkyBlockProfileMemberObjectivesCatchLaseasFish {
+func NewSkyBlockProfileMemberObjectivesCatchLaseasFish(completedAt int64, progress int64, status SkyBlockProfileMemberNetherIslandPlayerQuestsQuestDataQuestStatus) *SkyBlockProfileMemberObjectivesCatchLaseasFish {
 	this := SkyBlockProfileMemberObjectivesCatchLaseasFish{}
 	this.CompletedAt = completedAt
-	this.FlyfishFished = flyfishFished
 	this.Progress = progress
 	this.Status = status
 	return &this
@@ -75,28 +74,36 @@ func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) SetCompletedAt(v int64)
 	o.CompletedAt = v
 }
 
-// GetFlyfishFished returns the FlyfishFished field value
+// GetFlyfishFished returns the FlyfishFished field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetFlyfishFished() int64 {
-	if o == nil {
+	if o == nil || IsNil(o.FlyfishFished) {
 		var ret int64
 		return ret
 	}
-
-	return o.FlyfishFished
+	return *o.FlyfishFished
 }
 
-// GetFlyfishFishedOk returns a tuple with the FlyfishFished field value
+// GetFlyfishFishedOk returns a tuple with the FlyfishFished field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) GetFlyfishFishedOk() (*int64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.FlyfishFished) {
 		return nil, false
 	}
-	return &o.FlyfishFished, true
+	return o.FlyfishFished, true
 }
 
-// SetFlyfishFished sets field value
+// HasFlyfishFished returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) HasFlyfishFished() bool {
+	if o != nil && !IsNil(o.FlyfishFished) {
+		return true
+	}
+
+	return false
+}
+
+// SetFlyfishFished gets a reference to the given int64 and assigns it to the FlyfishFished field.
 func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) SetFlyfishFished(v int64) {
-	o.FlyfishFished = v
+	o.FlyfishFished = &v
 }
 
 // GetProgress returns the Progress field value
@@ -190,7 +197,9 @@ func (o SkyBlockProfileMemberObjectivesCatchLaseasFish) MarshalJSON() ([]byte, e
 func (o SkyBlockProfileMemberObjectivesCatchLaseasFish) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["completed_at"] = o.CompletedAt
-	toSerialize["flyfish_fished"] = o.FlyfishFished
+	if !IsNil(o.FlyfishFished) {
+		toSerialize["flyfish_fished"] = o.FlyfishFished
+	}
 	toSerialize["progress"] = o.Progress
 	if !IsNil(o.SkeletonFishFished) {
 		toSerialize["skeleton_fish_fished"] = o.SkeletonFishFished
@@ -205,7 +214,6 @@ func (o *SkyBlockProfileMemberObjectivesCatchLaseasFish) UnmarshalJSON(data []by
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"completed_at",
-		"flyfish_fished",
 		"progress",
 		"status",
 	}

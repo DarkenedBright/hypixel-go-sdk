@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberAccessoryBagStorage type satisfies the MappedNullable interface at compile time
@@ -21,17 +23,20 @@ var _ MappedNullable = &SkyBlockProfileMemberAccessoryBagStorage{}
 type SkyBlockProfileMemberAccessoryBagStorage struct {
 	BagUpgradesPurchased *int64                                          `json:"bag_upgrades_purchased,omitempty"`
 	HighestMagicalPower  *int64                                          `json:"highest_magical_power,omitempty"`
-	SelectedPower        *string                                         `json:"selected_power,omitempty"`
-	Tuning               *SkyBlockProfileMemberAccessoryBagStorageTuning `json:"tuning,omitempty"`
-	UnlockedPowers       []string                                        `json:"unlocked_powers,omitempty"`
+	SelectedPower        *SkyBlockProfileMemberAccessoryBagStoragePower  `json:"selected_power,omitempty"`
+	Tuning               SkyBlockProfileMemberAccessoryBagStorageTuning  `json:"tuning"`
+	UnlockedPowers       []SkyBlockProfileMemberAccessoryBagStoragePower `json:"unlocked_powers,omitempty"`
 }
+
+type _SkyBlockProfileMemberAccessoryBagStorage SkyBlockProfileMemberAccessoryBagStorage
 
 // NewSkyBlockProfileMemberAccessoryBagStorage instantiates a new SkyBlockProfileMemberAccessoryBagStorage object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberAccessoryBagStorage() *SkyBlockProfileMemberAccessoryBagStorage {
+func NewSkyBlockProfileMemberAccessoryBagStorage(tuning SkyBlockProfileMemberAccessoryBagStorageTuning) *SkyBlockProfileMemberAccessoryBagStorage {
 	this := SkyBlockProfileMemberAccessoryBagStorage{}
+	this.Tuning = tuning
 	return &this
 }
 
@@ -108,9 +113,9 @@ func (o *SkyBlockProfileMemberAccessoryBagStorage) SetHighestMagicalPower(v int6
 }
 
 // GetSelectedPower returns the SelectedPower field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberAccessoryBagStorage) GetSelectedPower() string {
+func (o *SkyBlockProfileMemberAccessoryBagStorage) GetSelectedPower() SkyBlockProfileMemberAccessoryBagStoragePower {
 	if o == nil || IsNil(o.SelectedPower) {
-		var ret string
+		var ret SkyBlockProfileMemberAccessoryBagStoragePower
 		return ret
 	}
 	return *o.SelectedPower
@@ -118,7 +123,7 @@ func (o *SkyBlockProfileMemberAccessoryBagStorage) GetSelectedPower() string {
 
 // GetSelectedPowerOk returns a tuple with the SelectedPower field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberAccessoryBagStorage) GetSelectedPowerOk() (*string, bool) {
+func (o *SkyBlockProfileMemberAccessoryBagStorage) GetSelectedPowerOk() (*SkyBlockProfileMemberAccessoryBagStoragePower, bool) {
 	if o == nil || IsNil(o.SelectedPower) {
 		return nil, false
 	}
@@ -134,47 +139,39 @@ func (o *SkyBlockProfileMemberAccessoryBagStorage) HasSelectedPower() bool {
 	return false
 }
 
-// SetSelectedPower gets a reference to the given string and assigns it to the SelectedPower field.
-func (o *SkyBlockProfileMemberAccessoryBagStorage) SetSelectedPower(v string) {
+// SetSelectedPower gets a reference to the given SkyBlockProfileMemberAccessoryBagStoragePower and assigns it to the SelectedPower field.
+func (o *SkyBlockProfileMemberAccessoryBagStorage) SetSelectedPower(v SkyBlockProfileMemberAccessoryBagStoragePower) {
 	o.SelectedPower = &v
 }
 
-// GetTuning returns the Tuning field value if set, zero value otherwise.
+// GetTuning returns the Tuning field value
 func (o *SkyBlockProfileMemberAccessoryBagStorage) GetTuning() SkyBlockProfileMemberAccessoryBagStorageTuning {
-	if o == nil || IsNil(o.Tuning) {
+	if o == nil {
 		var ret SkyBlockProfileMemberAccessoryBagStorageTuning
 		return ret
 	}
-	return *o.Tuning
+
+	return o.Tuning
 }
 
-// GetTuningOk returns a tuple with the Tuning field value if set, nil otherwise
+// GetTuningOk returns a tuple with the Tuning field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberAccessoryBagStorage) GetTuningOk() (*SkyBlockProfileMemberAccessoryBagStorageTuning, bool) {
-	if o == nil || IsNil(o.Tuning) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Tuning, true
+	return &o.Tuning, true
 }
 
-// HasTuning returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberAccessoryBagStorage) HasTuning() bool {
-	if o != nil && !IsNil(o.Tuning) {
-		return true
-	}
-
-	return false
-}
-
-// SetTuning gets a reference to the given SkyBlockProfileMemberAccessoryBagStorageTuning and assigns it to the Tuning field.
+// SetTuning sets field value
 func (o *SkyBlockProfileMemberAccessoryBagStorage) SetTuning(v SkyBlockProfileMemberAccessoryBagStorageTuning) {
-	o.Tuning = &v
+	o.Tuning = v
 }
 
 // GetUnlockedPowers returns the UnlockedPowers field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberAccessoryBagStorage) GetUnlockedPowers() []string {
+func (o *SkyBlockProfileMemberAccessoryBagStorage) GetUnlockedPowers() []SkyBlockProfileMemberAccessoryBagStoragePower {
 	if o == nil || IsNil(o.UnlockedPowers) {
-		var ret []string
+		var ret []SkyBlockProfileMemberAccessoryBagStoragePower
 		return ret
 	}
 	return o.UnlockedPowers
@@ -182,7 +179,7 @@ func (o *SkyBlockProfileMemberAccessoryBagStorage) GetUnlockedPowers() []string 
 
 // GetUnlockedPowersOk returns a tuple with the UnlockedPowers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberAccessoryBagStorage) GetUnlockedPowersOk() ([]string, bool) {
+func (o *SkyBlockProfileMemberAccessoryBagStorage) GetUnlockedPowersOk() ([]SkyBlockProfileMemberAccessoryBagStoragePower, bool) {
 	if o == nil || IsNil(o.UnlockedPowers) {
 		return nil, false
 	}
@@ -198,8 +195,8 @@ func (o *SkyBlockProfileMemberAccessoryBagStorage) HasUnlockedPowers() bool {
 	return false
 }
 
-// SetUnlockedPowers gets a reference to the given []string and assigns it to the UnlockedPowers field.
-func (o *SkyBlockProfileMemberAccessoryBagStorage) SetUnlockedPowers(v []string) {
+// SetUnlockedPowers gets a reference to the given []SkyBlockProfileMemberAccessoryBagStoragePower and assigns it to the UnlockedPowers field.
+func (o *SkyBlockProfileMemberAccessoryBagStorage) SetUnlockedPowers(v []SkyBlockProfileMemberAccessoryBagStoragePower) {
 	o.UnlockedPowers = v
 }
 
@@ -222,13 +219,48 @@ func (o SkyBlockProfileMemberAccessoryBagStorage) ToMap() (map[string]interface{
 	if !IsNil(o.SelectedPower) {
 		toSerialize["selected_power"] = o.SelectedPower
 	}
-	if !IsNil(o.Tuning) {
-		toSerialize["tuning"] = o.Tuning
-	}
+	toSerialize["tuning"] = o.Tuning
 	if !IsNil(o.UnlockedPowers) {
 		toSerialize["unlocked_powers"] = o.UnlockedPowers
 	}
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberAccessoryBagStorage) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"tuning",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberAccessoryBagStorage := _SkyBlockProfileMemberAccessoryBagStorage{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberAccessoryBagStorage)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberAccessoryBagStorage(varSkyBlockProfileMemberAccessoryBagStorage)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberAccessoryBagStorage struct {

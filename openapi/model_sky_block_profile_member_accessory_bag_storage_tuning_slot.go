@@ -25,6 +25,7 @@ type SkyBlockProfileMemberAccessoryBagStorageTuningSlot struct {
 	Defense        *int64 `json:"defense,omitempty"`
 	Health         *int64 `json:"health,omitempty"`
 	Intelligence   *int64 `json:"intelligence,omitempty"`
+	PurchaseTs     *int64 `json:"purchase_ts,omitempty"`
 	Strength       *int64 `json:"strength,omitempty"`
 	WalkSpeed      *int64 `json:"walk_speed,omitempty"`
 }
@@ -238,6 +239,38 @@ func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) SetIntelligence(v i
 	o.Intelligence = &v
 }
 
+// GetPurchaseTs returns the PurchaseTs field value if set, zero value otherwise.
+func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) GetPurchaseTs() int64 {
+	if o == nil || IsNil(o.PurchaseTs) {
+		var ret int64
+		return ret
+	}
+	return *o.PurchaseTs
+}
+
+// GetPurchaseTsOk returns a tuple with the PurchaseTs field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) GetPurchaseTsOk() (*int64, bool) {
+	if o == nil || IsNil(o.PurchaseTs) {
+		return nil, false
+	}
+	return o.PurchaseTs, true
+}
+
+// HasPurchaseTs returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) HasPurchaseTs() bool {
+	if o != nil && !IsNil(o.PurchaseTs) {
+		return true
+	}
+
+	return false
+}
+
+// SetPurchaseTs gets a reference to the given int64 and assigns it to the PurchaseTs field.
+func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) SetPurchaseTs(v int64) {
+	o.PurchaseTs = &v
+}
+
 // GetStrength returns the Strength field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberAccessoryBagStorageTuningSlot) GetStrength() int64 {
 	if o == nil || IsNil(o.Strength) {
@@ -329,6 +362,9 @@ func (o SkyBlockProfileMemberAccessoryBagStorageTuningSlot) ToMap() (map[string]
 	}
 	if !IsNil(o.Intelligence) {
 		toSerialize["intelligence"] = o.Intelligence
+	}
+	if !IsNil(o.PurchaseTs) {
+		toSerialize["purchase_ts"] = o.PurchaseTs
 	}
 	if !IsNil(o.Strength) {
 		toSerialize["strength"] = o.Strength

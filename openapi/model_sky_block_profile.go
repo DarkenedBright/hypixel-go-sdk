@@ -19,16 +19,13 @@ var _ MappedNullable = &SkyBlockProfile{}
 
 // SkyBlockProfile struct for SkyBlockProfile
 type SkyBlockProfile struct {
-	Banking           *SkyBlockProfileBanking `json:"banking,omitempty"`
-	CommunityUpgrades map[string]interface{}  `json:"community_upgrades,omitempty"`
-	// The cute name of the profile, only provided on the profiles endpoint
-	CuteName *string                  `json:"cute_name,omitempty"`
-	GameMode *SkyBlockProfileGameMode `json:"game_mode,omitempty"`
-	// A map of profile member UUIDs to profile member objects
-	Members   *map[string]SkyBlockProfileMember `json:"members,omitempty"`
-	ProfileId *string                           `json:"profile_id,omitempty"`
-	// Whether or not this is the currently selected profile, only provided on the profiles endpoint
-	Selected *bool `json:"selected,omitempty"`
+	Banking           *SkyBlockProfileBanking           `json:"banking,omitempty"`
+	CommunityUpgrades map[string]interface{}            `json:"community_upgrades,omitempty"`
+	CuteName          *string                           `json:"cute_name,omitempty"`
+	GameMode          *SkyBlockProfileGameMode          `json:"game_mode,omitempty"`
+	Members           *map[string]SkyBlockProfileMember `json:"members,omitempty"`
+	ProfileId         *string                           `json:"profile_id,omitempty"`
+	Selected          *bool                             `json:"selected,omitempty"`
 }
 
 // NewSkyBlockProfile instantiates a new SkyBlockProfile object

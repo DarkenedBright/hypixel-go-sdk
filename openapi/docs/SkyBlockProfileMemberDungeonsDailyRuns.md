@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CompletedRunsCount** | Pointer to **int64** |  | [optional] 
-**CurrentDayStamp** | Pointer to **int64** |  | [optional] 
+**CompletedRunsCount** | **int64** |  | 
+**CurrentDayStamp** | **int64** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileMemberDungeonsDailyRuns
 
-`func NewSkyBlockProfileMemberDungeonsDailyRuns() *SkyBlockProfileMemberDungeonsDailyRuns`
+`func NewSkyBlockProfileMemberDungeonsDailyRuns(completedRunsCount int64, currentDayStamp int64, ) *SkyBlockProfileMemberDungeonsDailyRuns`
 
 NewSkyBlockProfileMemberDungeonsDailyRuns instantiates a new SkyBlockProfileMemberDungeonsDailyRuns object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetCompletedRunsCount sets CompletedRunsCount field to given value.
 
-### HasCompletedRunsCount
-
-`func (o *SkyBlockProfileMemberDungeonsDailyRuns) HasCompletedRunsCount() bool`
-
-HasCompletedRunsCount returns a boolean if a field has been set.
 
 ### GetCurrentDayStamp
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetCurrentDayStamp sets CurrentDayStamp field to given value.
 
-### HasCurrentDayStamp
-
-`func (o *SkyBlockProfileMemberDungeonsDailyRuns) HasCurrentDayStamp() bool`
-
-HasCurrentDayStamp returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

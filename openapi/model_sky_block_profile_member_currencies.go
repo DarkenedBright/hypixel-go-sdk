@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberCurrencies type satisfies the MappedNullable interface at compile time
@@ -19,17 +21,20 @@ var _ MappedNullable = &SkyBlockProfileMemberCurrencies{}
 
 // SkyBlockProfileMemberCurrencies struct for SkyBlockProfileMemberCurrencies
 type SkyBlockProfileMemberCurrencies struct {
-	CoinPurse  *float64                                                `json:"coin_purse,omitempty"`
-	Essence    *map[string]SkyBlockProfileMemberCurrenciesEssenceValue `json:"essence,omitempty"`
-	MotesPurse *float64                                                `json:"motes_purse,omitempty"`
+	CoinPurse  float64                                 `json:"coin_purse"`
+	Essence    *SkyBlockProfileMemberCurrenciesEssence `json:"essence,omitempty"`
+	MotesPurse *float64                                `json:"motes_purse,omitempty"`
 }
+
+type _SkyBlockProfileMemberCurrencies SkyBlockProfileMemberCurrencies
 
 // NewSkyBlockProfileMemberCurrencies instantiates a new SkyBlockProfileMemberCurrencies object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberCurrencies() *SkyBlockProfileMemberCurrencies {
+func NewSkyBlockProfileMemberCurrencies(coinPurse float64) *SkyBlockProfileMemberCurrencies {
 	this := SkyBlockProfileMemberCurrencies{}
+	this.CoinPurse = coinPurse
 	return &this
 }
 
@@ -41,42 +46,34 @@ func NewSkyBlockProfileMemberCurrenciesWithDefaults() *SkyBlockProfileMemberCurr
 	return &this
 }
 
-// GetCoinPurse returns the CoinPurse field value if set, zero value otherwise.
+// GetCoinPurse returns the CoinPurse field value
 func (o *SkyBlockProfileMemberCurrencies) GetCoinPurse() float64 {
-	if o == nil || IsNil(o.CoinPurse) {
+	if o == nil {
 		var ret float64
 		return ret
 	}
-	return *o.CoinPurse
+
+	return o.CoinPurse
 }
 
-// GetCoinPurseOk returns a tuple with the CoinPurse field value if set, nil otherwise
+// GetCoinPurseOk returns a tuple with the CoinPurse field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberCurrencies) GetCoinPurseOk() (*float64, bool) {
-	if o == nil || IsNil(o.CoinPurse) {
+	if o == nil {
 		return nil, false
 	}
-	return o.CoinPurse, true
+	return &o.CoinPurse, true
 }
 
-// HasCoinPurse returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberCurrencies) HasCoinPurse() bool {
-	if o != nil && !IsNil(o.CoinPurse) {
-		return true
-	}
-
-	return false
-}
-
-// SetCoinPurse gets a reference to the given float64 and assigns it to the CoinPurse field.
+// SetCoinPurse sets field value
 func (o *SkyBlockProfileMemberCurrencies) SetCoinPurse(v float64) {
-	o.CoinPurse = &v
+	o.CoinPurse = v
 }
 
 // GetEssence returns the Essence field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberCurrencies) GetEssence() map[string]SkyBlockProfileMemberCurrenciesEssenceValue {
+func (o *SkyBlockProfileMemberCurrencies) GetEssence() SkyBlockProfileMemberCurrenciesEssence {
 	if o == nil || IsNil(o.Essence) {
-		var ret map[string]SkyBlockProfileMemberCurrenciesEssenceValue
+		var ret SkyBlockProfileMemberCurrenciesEssence
 		return ret
 	}
 	return *o.Essence
@@ -84,7 +81,7 @@ func (o *SkyBlockProfileMemberCurrencies) GetEssence() map[string]SkyBlockProfil
 
 // GetEssenceOk returns a tuple with the Essence field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberCurrencies) GetEssenceOk() (*map[string]SkyBlockProfileMemberCurrenciesEssenceValue, bool) {
+func (o *SkyBlockProfileMemberCurrencies) GetEssenceOk() (*SkyBlockProfileMemberCurrenciesEssence, bool) {
 	if o == nil || IsNil(o.Essence) {
 		return nil, false
 	}
@@ -100,8 +97,8 @@ func (o *SkyBlockProfileMemberCurrencies) HasEssence() bool {
 	return false
 }
 
-// SetEssence gets a reference to the given map[string]SkyBlockProfileMemberCurrenciesEssenceValue and assigns it to the Essence field.
-func (o *SkyBlockProfileMemberCurrencies) SetEssence(v map[string]SkyBlockProfileMemberCurrenciesEssenceValue) {
+// SetEssence gets a reference to the given SkyBlockProfileMemberCurrenciesEssence and assigns it to the Essence field.
+func (o *SkyBlockProfileMemberCurrencies) SetEssence(v SkyBlockProfileMemberCurrenciesEssence) {
 	o.Essence = &v
 }
 
@@ -147,9 +144,7 @@ func (o SkyBlockProfileMemberCurrencies) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileMemberCurrencies) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.CoinPurse) {
-		toSerialize["coin_purse"] = o.CoinPurse
-	}
+	toSerialize["coin_purse"] = o.CoinPurse
 	if !IsNil(o.Essence) {
 		toSerialize["essence"] = o.Essence
 	}
@@ -157,6 +152,43 @@ func (o SkyBlockProfileMemberCurrencies) ToMap() (map[string]interface{}, error)
 		toSerialize["motes_purse"] = o.MotesPurse
 	}
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberCurrencies) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"coin_purse",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberCurrencies := _SkyBlockProfileMemberCurrencies{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberCurrencies)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberCurrencies(varSkyBlockProfileMemberCurrencies)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberCurrencies struct {

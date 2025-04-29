@@ -22,7 +22,7 @@ var _ MappedNullable = &SkyBlockProfileMemberPlayerStatsItemsFished{}
 // SkyBlockProfileMemberPlayerStatsItemsFished struct for SkyBlockProfileMemberPlayerStatsItemsFished
 type SkyBlockProfileMemberPlayerStatsItemsFished struct {
 	LargeTreasure *float64 `json:"large_treasure,omitempty"`
-	Normal        float64  `json:"normal"`
+	Normal        *float64 `json:"normal,omitempty"`
 	Outstanding   *float64 `json:"outstanding,omitempty"`
 	Total         float64  `json:"total"`
 	Treasure      *float64 `json:"treasure,omitempty"`
@@ -35,9 +35,8 @@ type _SkyBlockProfileMemberPlayerStatsItemsFished SkyBlockProfileMemberPlayerSta
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberPlayerStatsItemsFished(normal float64, total float64) *SkyBlockProfileMemberPlayerStatsItemsFished {
+func NewSkyBlockProfileMemberPlayerStatsItemsFished(total float64) *SkyBlockProfileMemberPlayerStatsItemsFished {
 	this := SkyBlockProfileMemberPlayerStatsItemsFished{}
-	this.Normal = normal
 	this.Total = total
 	return &this
 }
@@ -82,28 +81,36 @@ func (o *SkyBlockProfileMemberPlayerStatsItemsFished) SetLargeTreasure(v float64
 	o.LargeTreasure = &v
 }
 
-// GetNormal returns the Normal field value
+// GetNormal returns the Normal field value if set, zero value otherwise.
 func (o *SkyBlockProfileMemberPlayerStatsItemsFished) GetNormal() float64 {
-	if o == nil {
+	if o == nil || IsNil(o.Normal) {
 		var ret float64
 		return ret
 	}
-
-	return o.Normal
+	return *o.Normal
 }
 
-// GetNormalOk returns a tuple with the Normal field value
+// GetNormalOk returns a tuple with the Normal field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberPlayerStatsItemsFished) GetNormalOk() (*float64, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Normal) {
 		return nil, false
 	}
-	return &o.Normal, true
+	return o.Normal, true
 }
 
-// SetNormal sets field value
+// HasNormal returns a boolean if a field has been set.
+func (o *SkyBlockProfileMemberPlayerStatsItemsFished) HasNormal() bool {
+	if o != nil && !IsNil(o.Normal) {
+		return true
+	}
+
+	return false
+}
+
+// SetNormal gets a reference to the given float64 and assigns it to the Normal field.
 func (o *SkyBlockProfileMemberPlayerStatsItemsFished) SetNormal(v float64) {
-	o.Normal = v
+	o.Normal = &v
 }
 
 // GetOutstanding returns the Outstanding field value if set, zero value otherwise.
@@ -239,7 +246,9 @@ func (o SkyBlockProfileMemberPlayerStatsItemsFished) ToMap() (map[string]interfa
 	if !IsNil(o.LargeTreasure) {
 		toSerialize["large_treasure"] = o.LargeTreasure
 	}
-	toSerialize["normal"] = o.Normal
+	if !IsNil(o.Normal) {
+		toSerialize["normal"] = o.Normal
+	}
 	if !IsNil(o.Outstanding) {
 		toSerialize["outstanding"] = o.Outstanding
 	}
@@ -258,7 +267,6 @@ func (o *SkyBlockProfileMemberPlayerStatsItemsFished) UnmarshalJSON(data []byte)
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
-		"normal",
 		"total",
 	}
 

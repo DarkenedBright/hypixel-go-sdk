@@ -7,12 +7,12 @@ Name | Type | Description | Notes
 **DailyRuns** | Pointer to [**SkyBlockProfileMemberDungeonsDailyRuns**](SkyBlockProfileMemberDungeonsDailyRuns.md) |  | [optional] 
 **DungeonHubRaceSettings** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonHubRaceSettings**](SkyBlockProfileMemberDungeonsDungeonHubRaceSettings.md) |  | [optional] 
 **DungeonJournal** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonJournal**](SkyBlockProfileMemberDungeonsDungeonJournal.md) |  | [optional] 
-**DungeonTypes** | Pointer to [**map[string]SkyBlockProfileMemberDungeonsDungeonTypesType**](SkyBlockProfileMemberDungeonsDungeonTypesType.md) |  | [optional] 
-**DungeonsBlahBlah** | Pointer to **[]string** |  | [optional] 
-**LastDungeonRun** | Pointer to **string** |  | [optional] 
-**PlayerClasses** | Pointer to [**map[string]SkyBlockProfileMemberDungeonsPlayerClassesValue**](SkyBlockProfileMemberDungeonsPlayerClassesValue.md) |  | [optional] 
+**DungeonTypes** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypes**](SkyBlockProfileMemberDungeonsDungeonTypes.md) |  | [optional] 
+**DungeonsBlahBlah** | Pointer to [**[]SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner**](SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner.md) |  | [optional] 
+**LastDungeonRun** | Pointer to [**SkyBlockProfileMemberDungeonsLastDungeonRun**](SkyBlockProfileMemberDungeonsLastDungeonRun.md) |  | [optional] 
+**PlayerClasses** | Pointer to [**SkyBlockProfileMemberDungeonsPlayerClasses**](SkyBlockProfileMemberDungeonsPlayerClasses.md) |  | [optional] 
 **Secrets** | Pointer to **int64** |  | [optional] 
-**SelectedDungeonClass** | Pointer to **string** |  | [optional] 
+**SelectedDungeonClass** | Pointer to [**SkyBlockProfileMemberDungeonsSelectedDungeonClass**](SkyBlockProfileMemberDungeonsSelectedDungeonClass.md) |  | [optional] 
 **Treasures** | Pointer to [**SkyBlockProfileMemberDungeonsTreasures**](SkyBlockProfileMemberDungeonsTreasures.md) |  | [optional] 
 
 ## Methods
@@ -111,20 +111,20 @@ HasDungeonJournal returns a boolean if a field has been set.
 
 ### GetDungeonTypes
 
-`func (o *SkyBlockProfileMemberDungeons) GetDungeonTypes() map[string]SkyBlockProfileMemberDungeonsDungeonTypesType`
+`func (o *SkyBlockProfileMemberDungeons) GetDungeonTypes() SkyBlockProfileMemberDungeonsDungeonTypes`
 
 GetDungeonTypes returns the DungeonTypes field if non-nil, zero value otherwise.
 
 ### GetDungeonTypesOk
 
-`func (o *SkyBlockProfileMemberDungeons) GetDungeonTypesOk() (*map[string]SkyBlockProfileMemberDungeonsDungeonTypesType, bool)`
+`func (o *SkyBlockProfileMemberDungeons) GetDungeonTypesOk() (*SkyBlockProfileMemberDungeonsDungeonTypes, bool)`
 
 GetDungeonTypesOk returns a tuple with the DungeonTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDungeonTypes
 
-`func (o *SkyBlockProfileMemberDungeons) SetDungeonTypes(v map[string]SkyBlockProfileMemberDungeonsDungeonTypesType)`
+`func (o *SkyBlockProfileMemberDungeons) SetDungeonTypes(v SkyBlockProfileMemberDungeonsDungeonTypes)`
 
 SetDungeonTypes sets DungeonTypes field to given value.
 
@@ -136,20 +136,20 @@ HasDungeonTypes returns a boolean if a field has been set.
 
 ### GetDungeonsBlahBlah
 
-`func (o *SkyBlockProfileMemberDungeons) GetDungeonsBlahBlah() []string`
+`func (o *SkyBlockProfileMemberDungeons) GetDungeonsBlahBlah() []SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner`
 
 GetDungeonsBlahBlah returns the DungeonsBlahBlah field if non-nil, zero value otherwise.
 
 ### GetDungeonsBlahBlahOk
 
-`func (o *SkyBlockProfileMemberDungeons) GetDungeonsBlahBlahOk() (*[]string, bool)`
+`func (o *SkyBlockProfileMemberDungeons) GetDungeonsBlahBlahOk() (*[]SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner, bool)`
 
 GetDungeonsBlahBlahOk returns a tuple with the DungeonsBlahBlah field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDungeonsBlahBlah
 
-`func (o *SkyBlockProfileMemberDungeons) SetDungeonsBlahBlah(v []string)`
+`func (o *SkyBlockProfileMemberDungeons) SetDungeonsBlahBlah(v []SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner)`
 
 SetDungeonsBlahBlah sets DungeonsBlahBlah field to given value.
 
@@ -161,20 +161,20 @@ HasDungeonsBlahBlah returns a boolean if a field has been set.
 
 ### GetLastDungeonRun
 
-`func (o *SkyBlockProfileMemberDungeons) GetLastDungeonRun() string`
+`func (o *SkyBlockProfileMemberDungeons) GetLastDungeonRun() SkyBlockProfileMemberDungeonsLastDungeonRun`
 
 GetLastDungeonRun returns the LastDungeonRun field if non-nil, zero value otherwise.
 
 ### GetLastDungeonRunOk
 
-`func (o *SkyBlockProfileMemberDungeons) GetLastDungeonRunOk() (*string, bool)`
+`func (o *SkyBlockProfileMemberDungeons) GetLastDungeonRunOk() (*SkyBlockProfileMemberDungeonsLastDungeonRun, bool)`
 
 GetLastDungeonRunOk returns a tuple with the LastDungeonRun field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastDungeonRun
 
-`func (o *SkyBlockProfileMemberDungeons) SetLastDungeonRun(v string)`
+`func (o *SkyBlockProfileMemberDungeons) SetLastDungeonRun(v SkyBlockProfileMemberDungeonsLastDungeonRun)`
 
 SetLastDungeonRun sets LastDungeonRun field to given value.
 
@@ -186,20 +186,20 @@ HasLastDungeonRun returns a boolean if a field has been set.
 
 ### GetPlayerClasses
 
-`func (o *SkyBlockProfileMemberDungeons) GetPlayerClasses() map[string]SkyBlockProfileMemberDungeonsPlayerClassesValue`
+`func (o *SkyBlockProfileMemberDungeons) GetPlayerClasses() SkyBlockProfileMemberDungeonsPlayerClasses`
 
 GetPlayerClasses returns the PlayerClasses field if non-nil, zero value otherwise.
 
 ### GetPlayerClassesOk
 
-`func (o *SkyBlockProfileMemberDungeons) GetPlayerClassesOk() (*map[string]SkyBlockProfileMemberDungeonsPlayerClassesValue, bool)`
+`func (o *SkyBlockProfileMemberDungeons) GetPlayerClassesOk() (*SkyBlockProfileMemberDungeonsPlayerClasses, bool)`
 
 GetPlayerClassesOk returns a tuple with the PlayerClasses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlayerClasses
 
-`func (o *SkyBlockProfileMemberDungeons) SetPlayerClasses(v map[string]SkyBlockProfileMemberDungeonsPlayerClassesValue)`
+`func (o *SkyBlockProfileMemberDungeons) SetPlayerClasses(v SkyBlockProfileMemberDungeonsPlayerClasses)`
 
 SetPlayerClasses sets PlayerClasses field to given value.
 
@@ -236,20 +236,20 @@ HasSecrets returns a boolean if a field has been set.
 
 ### GetSelectedDungeonClass
 
-`func (o *SkyBlockProfileMemberDungeons) GetSelectedDungeonClass() string`
+`func (o *SkyBlockProfileMemberDungeons) GetSelectedDungeonClass() SkyBlockProfileMemberDungeonsSelectedDungeonClass`
 
 GetSelectedDungeonClass returns the SelectedDungeonClass field if non-nil, zero value otherwise.
 
 ### GetSelectedDungeonClassOk
 
-`func (o *SkyBlockProfileMemberDungeons) GetSelectedDungeonClassOk() (*string, bool)`
+`func (o *SkyBlockProfileMemberDungeons) GetSelectedDungeonClassOk() (*SkyBlockProfileMemberDungeonsSelectedDungeonClass, bool)`
 
 GetSelectedDungeonClassOk returns a tuple with the SelectedDungeonClass field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSelectedDungeonClass
 
-`func (o *SkyBlockProfileMemberDungeons) SetSelectedDungeonClass(v string)`
+`func (o *SkyBlockProfileMemberDungeons) SetSelectedDungeonClass(v SkyBlockProfileMemberDungeonsSelectedDungeonClass)`
 
 SetSelectedDungeonClass sets SelectedDungeonClass field to given value.
 

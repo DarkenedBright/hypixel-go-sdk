@@ -11,7 +11,9 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileMemberDungeonsTreasuresRun type satisfies the MappedNullable interface at compile time
@@ -19,19 +21,26 @@ var _ MappedNullable = &SkyBlockProfileMemberDungeonsTreasuresRun{}
 
 // SkyBlockProfileMemberDungeonsTreasuresRun struct for SkyBlockProfileMemberDungeonsTreasuresRun
 type SkyBlockProfileMemberDungeonsTreasuresRun struct {
-	CompletionTs *int64                                                 `json:"completion_ts,omitempty"`
-	DungeonTier  *int64                                                 `json:"dungeon_tier,omitempty"`
-	DungeonType  *string                                                `json:"dungeon_type,omitempty"`
-	Participants []SkyBlockProfileMemberDungeonsTreasuresRunParticipant `json:"participants,omitempty"`
-	RunId        *string                                                `json:"run_id,omitempty"`
+	CompletionTs int64                                                  `json:"completion_ts"`
+	DungeonTier  int64                                                  `json:"dungeon_tier"`
+	DungeonType  SkyBlockProfileMemberDungeonsTreasuresRunDungeonType   `json:"dungeon_type"`
+	Participants []SkyBlockProfileMemberDungeonsTreasuresRunParticipant `json:"participants"`
+	RunId        string                                                 `json:"run_id"`
 }
+
+type _SkyBlockProfileMemberDungeonsTreasuresRun SkyBlockProfileMemberDungeonsTreasuresRun
 
 // NewSkyBlockProfileMemberDungeonsTreasuresRun instantiates a new SkyBlockProfileMemberDungeonsTreasuresRun object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberDungeonsTreasuresRun() *SkyBlockProfileMemberDungeonsTreasuresRun {
+func NewSkyBlockProfileMemberDungeonsTreasuresRun(completionTs int64, dungeonTier int64, dungeonType SkyBlockProfileMemberDungeonsTreasuresRunDungeonType, participants []SkyBlockProfileMemberDungeonsTreasuresRunParticipant, runId string) *SkyBlockProfileMemberDungeonsTreasuresRun {
 	this := SkyBlockProfileMemberDungeonsTreasuresRun{}
+	this.CompletionTs = completionTs
+	this.DungeonTier = dungeonTier
+	this.DungeonType = dungeonType
+	this.Participants = participants
+	this.RunId = runId
 	return &this
 }
 
@@ -43,164 +52,124 @@ func NewSkyBlockProfileMemberDungeonsTreasuresRunWithDefaults() *SkyBlockProfile
 	return &this
 }
 
-// GetCompletionTs returns the CompletionTs field value if set, zero value otherwise.
+// GetCompletionTs returns the CompletionTs field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetCompletionTs() int64 {
-	if o == nil || IsNil(o.CompletionTs) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.CompletionTs
+
+	return o.CompletionTs
 }
 
-// GetCompletionTsOk returns a tuple with the CompletionTs field value if set, nil otherwise
+// GetCompletionTsOk returns a tuple with the CompletionTs field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetCompletionTsOk() (*int64, bool) {
-	if o == nil || IsNil(o.CompletionTs) {
+	if o == nil {
 		return nil, false
 	}
-	return o.CompletionTs, true
+	return &o.CompletionTs, true
 }
 
-// HasCompletionTs returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRun) HasCompletionTs() bool {
-	if o != nil && !IsNil(o.CompletionTs) {
-		return true
-	}
-
-	return false
-}
-
-// SetCompletionTs gets a reference to the given int64 and assigns it to the CompletionTs field.
+// SetCompletionTs sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) SetCompletionTs(v int64) {
-	o.CompletionTs = &v
+	o.CompletionTs = v
 }
 
-// GetDungeonTier returns the DungeonTier field value if set, zero value otherwise.
+// GetDungeonTier returns the DungeonTier field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetDungeonTier() int64 {
-	if o == nil || IsNil(o.DungeonTier) {
+	if o == nil {
 		var ret int64
 		return ret
 	}
-	return *o.DungeonTier
+
+	return o.DungeonTier
 }
 
-// GetDungeonTierOk returns a tuple with the DungeonTier field value if set, nil otherwise
+// GetDungeonTierOk returns a tuple with the DungeonTier field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetDungeonTierOk() (*int64, bool) {
-	if o == nil || IsNil(o.DungeonTier) {
+	if o == nil {
 		return nil, false
 	}
-	return o.DungeonTier, true
+	return &o.DungeonTier, true
 }
 
-// HasDungeonTier returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRun) HasDungeonTier() bool {
-	if o != nil && !IsNil(o.DungeonTier) {
-		return true
-	}
-
-	return false
-}
-
-// SetDungeonTier gets a reference to the given int64 and assigns it to the DungeonTier field.
+// SetDungeonTier sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) SetDungeonTier(v int64) {
-	o.DungeonTier = &v
+	o.DungeonTier = v
 }
 
-// GetDungeonType returns the DungeonType field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetDungeonType() string {
-	if o == nil || IsNil(o.DungeonType) {
-		var ret string
+// GetDungeonType returns the DungeonType field value
+func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetDungeonType() SkyBlockProfileMemberDungeonsTreasuresRunDungeonType {
+	if o == nil {
+		var ret SkyBlockProfileMemberDungeonsTreasuresRunDungeonType
 		return ret
 	}
-	return *o.DungeonType
+
+	return o.DungeonType
 }
 
-// GetDungeonTypeOk returns a tuple with the DungeonType field value if set, nil otherwise
+// GetDungeonTypeOk returns a tuple with the DungeonType field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetDungeonTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.DungeonType) {
+func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetDungeonTypeOk() (*SkyBlockProfileMemberDungeonsTreasuresRunDungeonType, bool) {
+	if o == nil {
 		return nil, false
 	}
-	return o.DungeonType, true
+	return &o.DungeonType, true
 }
 
-// HasDungeonType returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRun) HasDungeonType() bool {
-	if o != nil && !IsNil(o.DungeonType) {
-		return true
-	}
-
-	return false
+// SetDungeonType sets field value
+func (o *SkyBlockProfileMemberDungeonsTreasuresRun) SetDungeonType(v SkyBlockProfileMemberDungeonsTreasuresRunDungeonType) {
+	o.DungeonType = v
 }
 
-// SetDungeonType gets a reference to the given string and assigns it to the DungeonType field.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRun) SetDungeonType(v string) {
-	o.DungeonType = &v
-}
-
-// GetParticipants returns the Participants field value if set, zero value otherwise.
+// GetParticipants returns the Participants field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetParticipants() []SkyBlockProfileMemberDungeonsTreasuresRunParticipant {
-	if o == nil || IsNil(o.Participants) {
+	if o == nil {
 		var ret []SkyBlockProfileMemberDungeonsTreasuresRunParticipant
 		return ret
 	}
+
 	return o.Participants
 }
 
-// GetParticipantsOk returns a tuple with the Participants field value if set, nil otherwise
+// GetParticipantsOk returns a tuple with the Participants field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetParticipantsOk() ([]SkyBlockProfileMemberDungeonsTreasuresRunParticipant, bool) {
-	if o == nil || IsNil(o.Participants) {
+	if o == nil {
 		return nil, false
 	}
 	return o.Participants, true
 }
 
-// HasParticipants returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRun) HasParticipants() bool {
-	if o != nil && !IsNil(o.Participants) {
-		return true
-	}
-
-	return false
-}
-
-// SetParticipants gets a reference to the given []SkyBlockProfileMemberDungeonsTreasuresRunParticipant and assigns it to the Participants field.
+// SetParticipants sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) SetParticipants(v []SkyBlockProfileMemberDungeonsTreasuresRunParticipant) {
 	o.Participants = v
 }
 
-// GetRunId returns the RunId field value if set, zero value otherwise.
+// GetRunId returns the RunId field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetRunId() string {
-	if o == nil || IsNil(o.RunId) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.RunId
+
+	return o.RunId
 }
 
-// GetRunIdOk returns a tuple with the RunId field value if set, nil otherwise
+// GetRunIdOk returns a tuple with the RunId field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) GetRunIdOk() (*string, bool) {
-	if o == nil || IsNil(o.RunId) {
+	if o == nil {
 		return nil, false
 	}
-	return o.RunId, true
+	return &o.RunId, true
 }
 
-// HasRunId returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsTreasuresRun) HasRunId() bool {
-	if o != nil && !IsNil(o.RunId) {
-		return true
-	}
-
-	return false
-}
-
-// SetRunId gets a reference to the given string and assigns it to the RunId field.
+// SetRunId sets field value
 func (o *SkyBlockProfileMemberDungeonsTreasuresRun) SetRunId(v string) {
-	o.RunId = &v
+	o.RunId = v
 }
 
 func (o SkyBlockProfileMemberDungeonsTreasuresRun) MarshalJSON() ([]byte, error) {
@@ -213,22 +182,53 @@ func (o SkyBlockProfileMemberDungeonsTreasuresRun) MarshalJSON() ([]byte, error)
 
 func (o SkyBlockProfileMemberDungeonsTreasuresRun) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.CompletionTs) {
-		toSerialize["completion_ts"] = o.CompletionTs
-	}
-	if !IsNil(o.DungeonTier) {
-		toSerialize["dungeon_tier"] = o.DungeonTier
-	}
-	if !IsNil(o.DungeonType) {
-		toSerialize["dungeon_type"] = o.DungeonType
-	}
-	if !IsNil(o.Participants) {
-		toSerialize["participants"] = o.Participants
-	}
-	if !IsNil(o.RunId) {
-		toSerialize["run_id"] = o.RunId
-	}
+	toSerialize["completion_ts"] = o.CompletionTs
+	toSerialize["dungeon_tier"] = o.DungeonTier
+	toSerialize["dungeon_type"] = o.DungeonType
+	toSerialize["participants"] = o.Participants
+	toSerialize["run_id"] = o.RunId
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileMemberDungeonsTreasuresRun) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"completion_ts",
+		"dungeon_tier",
+		"dungeon_type",
+		"participants",
+		"run_id",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileMemberDungeonsTreasuresRun := _SkyBlockProfileMemberDungeonsTreasuresRun{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileMemberDungeonsTreasuresRun)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileMemberDungeonsTreasuresRun(varSkyBlockProfileMemberDungeonsTreasuresRun)
+
+	return err
 }
 
 type NullableSkyBlockProfileMemberDungeonsTreasuresRun struct {
