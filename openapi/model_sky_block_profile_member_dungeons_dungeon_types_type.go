@@ -19,25 +19,25 @@ var _ MappedNullable = &SkyBlockProfileMemberDungeonsDungeonTypesType{}
 
 // SkyBlockProfileMemberDungeonsDungeonTypesType struct for SkyBlockProfileMemberDungeonsDungeonTypesType
 type SkyBlockProfileMemberDungeonsDungeonTypesType struct {
-	BestRuns             *map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns `json:"best_runs,omitempty"`
-	BestScore            *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"best_score,omitempty"`
-	Experience           *float64                                                        `json:"experience,omitempty"`
-	FastestTime          *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"fastest_time,omitempty"`
-	FastestTimeS         *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"fastest_time_s,omitempty"`
-	FastestTimeSPlus     *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"fastest_time_s_plus,omitempty"`
-	HighestTierCompleted *int64                                                          `json:"highest_tier_completed,omitempty"`
-	MilestoneCompletions *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"milestone_completions,omitempty"`
-	MobsKilled           *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"mobs_killed,omitempty"`
-	MostDamageArcher     *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_damage_archer,omitempty"`
-	MostDamageBerserk    *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_damage_berserk,omitempty"`
-	MostDamageHealer     *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_damage_healer,omitempty"`
-	MostDamageMage       *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_damage_mage,omitempty"`
-	MostDamageTank       *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_damage_tank,omitempty"`
-	MostHealing          *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_healing,omitempty"`
-	MostMobsKilled       *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"most_mobs_killed,omitempty"`
-	TierCompletions      *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"tier_completions,omitempty"`
-	TimesPlayed          *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"times_played,omitempty"`
-	WatcherKills         *SkyBlockProfileMemberDungeonsDungeonTypesTypeData              `json:"watcher_kills,omitempty"`
+	BestRuns             *map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRun `json:"best_runs,omitempty"`
+	BestScore            *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"best_score,omitempty"`
+	Experience           *float64                                                       `json:"experience,omitempty"`
+	FastestTime          *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"fastest_time,omitempty"`
+	FastestTimeS         *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"fastest_time_s,omitempty"`
+	FastestTimeSPlus     *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"fastest_time_s_plus,omitempty"`
+	HighestTierCompleted *int64                                                         `json:"highest_tier_completed,omitempty"`
+	MilestoneCompletions *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"milestone_completions,omitempty"`
+	MobsKilled           *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"mobs_killed,omitempty"`
+	MostDamageArcher     *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"most_damage_archer,omitempty"`
+	MostDamageBerserk    *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"most_damage_berserk,omitempty"`
+	MostDamageHealer     *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"most_damage_healer,omitempty"`
+	MostDamageMage       *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"most_damage_mage,omitempty"`
+	MostDamageTank       *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"most_damage_tank,omitempty"`
+	MostHealing          *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"most_healing,omitempty"`
+	MostMobsKilled       *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"most_mobs_killed,omitempty"`
+	TierCompletions      *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"tier_completions,omitempty"`
+	TimesPlayed          *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"times_played,omitempty"`
+	WatcherKills         *SkyBlockProfileMemberDungeonsDungeonTypesTypeData             `json:"watcher_kills,omitempty"`
 }
 
 // NewSkyBlockProfileMemberDungeonsDungeonTypesType instantiates a new SkyBlockProfileMemberDungeonsDungeonTypesType object
@@ -58,9 +58,9 @@ func NewSkyBlockProfileMemberDungeonsDungeonTypesTypeWithDefaults() *SkyBlockPro
 }
 
 // GetBestRuns returns the BestRuns field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestRuns() map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestRuns() map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRun {
 	if o == nil || IsNil(o.BestRuns) {
-		var ret map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns
+		var ret map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRun
 		return ret
 	}
 	return *o.BestRuns
@@ -68,7 +68,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestRuns() map[string
 
 // GetBestRunsOk returns a tuple with the BestRuns field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestRunsOk() (*map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestRunsOk() (*map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRun, bool) {
 	if o == nil || IsNil(o.BestRuns) {
 		return nil, false
 	}
@@ -84,8 +84,8 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) HasBestRuns() bool {
 	return false
 }
 
-// SetBestRuns gets a reference to the given map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns and assigns it to the BestRuns field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetBestRuns(v map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) {
+// SetBestRuns gets a reference to the given map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRun and assigns it to the BestRuns field.
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetBestRuns(v map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRun) {
 	o.BestRuns = &v
 }
 

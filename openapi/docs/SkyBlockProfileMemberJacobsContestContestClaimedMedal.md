@@ -1,4 +1,4 @@
-# SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal
+# SkyBlockProfileMemberJacobsContestContestClaimedMedal
 
 ## Enum
 

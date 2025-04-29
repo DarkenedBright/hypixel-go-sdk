@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BestRuns** | Pointer to [**map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns**](array.md) |  | [optional] 
+**BestRuns** | Pointer to [**map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRun**](array.md) |  | [optional] 
 **BestScore** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
 **Experience** | Pointer to **float64** |  | [optional] 
 **FastestTime** | Pointer to [**SkyBlockProfileMemberDungeonsDungeonTypesTypeData**](SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md) |  | [optional] 
@@ -45,20 +45,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetBestRuns
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestRuns() map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestRuns() map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRun`
 
 GetBestRuns returns the BestRuns field if non-nil, zero value otherwise.
 
 ### GetBestRunsOk
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestRunsOk() (*map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns, bool)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) GetBestRunsOk() (*map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRun, bool)`
 
 GetBestRunsOk returns a tuple with the BestRuns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBestRuns
 
-`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetBestRuns(v map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRuns)`
+`func (o *SkyBlockProfileMemberDungeonsDungeonTypesType) SetBestRuns(v map[string][]SkyBlockProfileMemberDungeonsDungeonTypesBestRun)`
 
 SetBestRuns sets BestRuns field to given value.
 

@@ -19,13 +19,13 @@ var _ MappedNullable = &SkyBlockProfileMemberJacobsContest{}
 
 // SkyBlockProfileMemberJacobsContest struct for SkyBlockProfileMemberJacobsContest
 type SkyBlockProfileMemberJacobsContest struct {
-	Contests       *map[string]SkyBlockProfileMemberJacobsContestContestsValue `json:"contests,omitempty"`
-	MedalsInv      *SkyBlockProfileMemberJacobsContestMedalsInv                `json:"medals_inv,omitempty"`
-	Migration      *bool                                                       `json:"migration,omitempty"`
-	Perks          *SkyBlockProfileMemberJacobsContestPerks                    `json:"perks,omitempty"`
-	PersonalBests  *SkyBlockProfileMemberJacobsContestPersonalBests            `json:"personal_bests,omitempty"`
-	Talked         *bool                                                       `json:"talked,omitempty"`
-	UniqueBrackets *SkyBlockProfileMemberJacobsContestUniqueBrackets           `json:"unique_brackets,omitempty"`
+	Contests       *map[string]SkyBlockProfileMemberJacobsContestContest `json:"contests,omitempty"`
+	MedalsInv      *SkyBlockProfileMemberJacobsContestMedalsInv          `json:"medals_inv,omitempty"`
+	Migration      *bool                                                 `json:"migration,omitempty"`
+	Perks          *SkyBlockProfileMemberJacobsContestPerks              `json:"perks,omitempty"`
+	PersonalBests  *SkyBlockProfileMemberJacobsContestPersonalBests      `json:"personal_bests,omitempty"`
+	Talked         *bool                                                 `json:"talked,omitempty"`
+	UniqueBrackets *SkyBlockProfileMemberJacobsContestUniqueBrackets     `json:"unique_brackets,omitempty"`
 }
 
 // NewSkyBlockProfileMemberJacobsContest instantiates a new SkyBlockProfileMemberJacobsContest object
@@ -46,9 +46,9 @@ func NewSkyBlockProfileMemberJacobsContestWithDefaults() *SkyBlockProfileMemberJ
 }
 
 // GetContests returns the Contests field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberJacobsContest) GetContests() map[string]SkyBlockProfileMemberJacobsContestContestsValue {
+func (o *SkyBlockProfileMemberJacobsContest) GetContests() map[string]SkyBlockProfileMemberJacobsContestContest {
 	if o == nil || IsNil(o.Contests) {
-		var ret map[string]SkyBlockProfileMemberJacobsContestContestsValue
+		var ret map[string]SkyBlockProfileMemberJacobsContestContest
 		return ret
 	}
 	return *o.Contests
@@ -56,7 +56,7 @@ func (o *SkyBlockProfileMemberJacobsContest) GetContests() map[string]SkyBlockPr
 
 // GetContestsOk returns a tuple with the Contests field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberJacobsContest) GetContestsOk() (*map[string]SkyBlockProfileMemberJacobsContestContestsValue, bool) {
+func (o *SkyBlockProfileMemberJacobsContest) GetContestsOk() (*map[string]SkyBlockProfileMemberJacobsContestContest, bool) {
 	if o == nil || IsNil(o.Contests) {
 		return nil, false
 	}
@@ -72,8 +72,8 @@ func (o *SkyBlockProfileMemberJacobsContest) HasContests() bool {
 	return false
 }
 
-// SetContests gets a reference to the given map[string]SkyBlockProfileMemberJacobsContestContestsValue and assigns it to the Contests field.
-func (o *SkyBlockProfileMemberJacobsContest) SetContests(v map[string]SkyBlockProfileMemberJacobsContestContestsValue) {
+// SetContests gets a reference to the given map[string]SkyBlockProfileMemberJacobsContestContest and assigns it to the Contests field.
+func (o *SkyBlockProfileMemberJacobsContest) SetContests(v map[string]SkyBlockProfileMemberJacobsContestContest) {
 	o.Contests = &v
 }
 

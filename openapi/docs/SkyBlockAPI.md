@@ -4,16 +4,14 @@ All URIs are relative to *https://api.hypixel.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**V2SkyblockProfileGet**](SkyBlockAPI.md#V2SkyblockProfileGet) | **Get** /v2/skyblock/profile | Profile by UUID
-[**V2SkyblockProfilesGet**](SkyBlockAPI.md#V2SkyblockProfilesGet) | **Get** /v2/skyblock/profiles | Profiles by player
+[**V2SkyblockProfileGet**](SkyBlockAPI.md#V2SkyblockProfileGet) | **Get** /v2/skyblock/profile | 
+[**V2SkyblockProfilesGet**](SkyBlockAPI.md#V2SkyblockProfilesGet) | **Get** /v2/skyblock/profiles | 
 
 
 
 ## V2SkyblockProfileGet
 
-> V2SkyblockProfileGet200Response V2SkyblockProfileGet(ctx).Profile(profile).Execute()
-
-Profile by UUID
+> SkyBlockProfileGet V2SkyblockProfileGet(ctx).Profile(profile).Execute()
 
 
 
@@ -39,7 +37,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `SkyBlockAPI.V2SkyblockProfileGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2SkyblockProfileGet`: V2SkyblockProfileGet200Response
+	// response from `V2SkyblockProfileGet`: SkyBlockProfileGet
 	fmt.Fprintf(os.Stdout, "Response from `SkyBlockAPI.V2SkyblockProfileGet`: %v\n", resp)
 }
 ```
@@ -59,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2SkyblockProfileGet200Response**](V2SkyblockProfileGet200Response.md)
+[**SkyBlockProfileGet**](SkyBlockProfileGet.md)
 
 ### Authorization
 
@@ -77,9 +75,9 @@ Name | Type | Description  | Notes
 
 ## V2SkyblockProfilesGet
 
-> V2SkyblockProfilesGet200Response V2SkyblockProfilesGet(ctx).Uuid(uuid).Execute()
+> SkyBlockProfilesGet V2SkyblockProfilesGet(ctx).Uuid(uuid).Execute()
 
-Profiles by player
+
 
 ### Example
 
@@ -103,7 +101,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `SkyBlockAPI.V2SkyblockProfilesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2SkyblockProfilesGet`: V2SkyblockProfilesGet200Response
+	// response from `V2SkyblockProfilesGet`: SkyBlockProfilesGet
 	fmt.Fprintf(os.Stdout, "Response from `SkyBlockAPI.V2SkyblockProfilesGet`: %v\n", resp)
 }
 ```
@@ -123,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2SkyblockProfilesGet200Response**](V2SkyblockProfilesGet200Response.md)
+[**SkyBlockProfilesGet**](SkyBlockProfilesGet.md)
 
 ### Authorization
 

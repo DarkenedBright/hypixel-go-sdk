@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Contests** | Pointer to [**map[string]SkyBlockProfileMemberJacobsContestContestsValue**](SkyBlockProfileMemberJacobsContestContestsValue.md) |  | [optional] 
+**Contests** | Pointer to [**map[string]SkyBlockProfileMemberJacobsContestContest**](SkyBlockProfileMemberJacobsContestContest.md) |  | [optional] 
 **MedalsInv** | Pointer to [**SkyBlockProfileMemberJacobsContestMedalsInv**](SkyBlockProfileMemberJacobsContestMedalsInv.md) |  | [optional] 
 **Migration** | Pointer to **bool** |  | [optional] 
 **Perks** | Pointer to [**SkyBlockProfileMemberJacobsContestPerks**](SkyBlockProfileMemberJacobsContestPerks.md) |  | [optional] 
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetContests
 
-`func (o *SkyBlockProfileMemberJacobsContest) GetContests() map[string]SkyBlockProfileMemberJacobsContestContestsValue`
+`func (o *SkyBlockProfileMemberJacobsContest) GetContests() map[string]SkyBlockProfileMemberJacobsContestContest`
 
 GetContests returns the Contests field if non-nil, zero value otherwise.
 
 ### GetContestsOk
 
-`func (o *SkyBlockProfileMemberJacobsContest) GetContestsOk() (*map[string]SkyBlockProfileMemberJacobsContestContestsValue, bool)`
+`func (o *SkyBlockProfileMemberJacobsContest) GetContestsOk() (*map[string]SkyBlockProfileMemberJacobsContestContest, bool)`
 
 GetContestsOk returns a tuple with the Contests field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetContests
 
-`func (o *SkyBlockProfileMemberJacobsContest) SetContests(v map[string]SkyBlockProfileMemberJacobsContestContestsValue)`
+`func (o *SkyBlockProfileMemberJacobsContest) SetContests(v map[string]SkyBlockProfileMemberJacobsContestContest)`
 
 SetContests sets Contests field to given value.
 

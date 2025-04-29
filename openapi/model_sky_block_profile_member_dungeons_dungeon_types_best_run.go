@@ -16,11 +16,11 @@ import (
 	"fmt"
 )
 
-// checks if the SkyBlockProfileMemberDungeonsDungeonTypesBestRuns type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &SkyBlockProfileMemberDungeonsDungeonTypesBestRuns{}
+// checks if the SkyBlockProfileMemberDungeonsDungeonTypesBestRun type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &SkyBlockProfileMemberDungeonsDungeonTypesBestRun{}
 
-// SkyBlockProfileMemberDungeonsDungeonTypesBestRuns struct for SkyBlockProfileMemberDungeonsDungeonTypesBestRuns
-type SkyBlockProfileMemberDungeonsDungeonTypesBestRuns struct {
+// SkyBlockProfileMemberDungeonsDungeonTypesBestRun struct for SkyBlockProfileMemberDungeonsDungeonTypesBestRun
+type SkyBlockProfileMemberDungeonsDungeonTypesBestRun struct {
 	AllyHealing      *float64                                          `json:"ally_healing,omitempty"`
 	DamageDealt      float64                                           `json:"damage_dealt"`
 	DamageMitigated  *float64                                          `json:"damage_mitigated,omitempty"`
@@ -37,14 +37,14 @@ type SkyBlockProfileMemberDungeonsDungeonTypesBestRuns struct {
 	Timestamp        int64                                             `json:"timestamp"`
 }
 
-type _SkyBlockProfileMemberDungeonsDungeonTypesBestRuns SkyBlockProfileMemberDungeonsDungeonTypesBestRuns
+type _SkyBlockProfileMemberDungeonsDungeonTypesBestRun SkyBlockProfileMemberDungeonsDungeonTypesBestRun
 
-// NewSkyBlockProfileMemberDungeonsDungeonTypesBestRuns instantiates a new SkyBlockProfileMemberDungeonsDungeonTypesBestRuns object
+// NewSkyBlockProfileMemberDungeonsDungeonTypesBestRun instantiates a new SkyBlockProfileMemberDungeonsDungeonTypesBestRun object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileMemberDungeonsDungeonTypesBestRuns(damageDealt float64, deaths int64, dungeonClass SkyBlockProfileMemberDungeonsSelectedDungeonClass, elapsedTime int64, mobsKilled int64, scoreBonus int64, scoreExploration int64, scoreSkill int64, scoreSpeed int64, secretsFound int64, teammates []string, timestamp int64) *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns {
-	this := SkyBlockProfileMemberDungeonsDungeonTypesBestRuns{}
+func NewSkyBlockProfileMemberDungeonsDungeonTypesBestRun(damageDealt float64, deaths int64, dungeonClass SkyBlockProfileMemberDungeonsSelectedDungeonClass, elapsedTime int64, mobsKilled int64, scoreBonus int64, scoreExploration int64, scoreSkill int64, scoreSpeed int64, secretsFound int64, teammates []string, timestamp int64) *SkyBlockProfileMemberDungeonsDungeonTypesBestRun {
+	this := SkyBlockProfileMemberDungeonsDungeonTypesBestRun{}
 	this.DamageDealt = damageDealt
 	this.Deaths = deaths
 	this.DungeonClass = dungeonClass
@@ -60,16 +60,16 @@ func NewSkyBlockProfileMemberDungeonsDungeonTypesBestRuns(damageDealt float64, d
 	return &this
 }
 
-// NewSkyBlockProfileMemberDungeonsDungeonTypesBestRunsWithDefaults instantiates a new SkyBlockProfileMemberDungeonsDungeonTypesBestRuns object
+// NewSkyBlockProfileMemberDungeonsDungeonTypesBestRunWithDefaults instantiates a new SkyBlockProfileMemberDungeonsDungeonTypesBestRun object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewSkyBlockProfileMemberDungeonsDungeonTypesBestRunsWithDefaults() *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns {
-	this := SkyBlockProfileMemberDungeonsDungeonTypesBestRuns{}
+func NewSkyBlockProfileMemberDungeonsDungeonTypesBestRunWithDefaults() *SkyBlockProfileMemberDungeonsDungeonTypesBestRun {
+	this := SkyBlockProfileMemberDungeonsDungeonTypesBestRun{}
 	return &this
 }
 
 // GetAllyHealing returns the AllyHealing field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetAllyHealing() float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetAllyHealing() float64 {
 	if o == nil || IsNil(o.AllyHealing) {
 		var ret float64
 		return ret
@@ -79,7 +79,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetAllyHealing() flo
 
 // GetAllyHealingOk returns a tuple with the AllyHealing field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetAllyHealingOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetAllyHealingOk() (*float64, bool) {
 	if o == nil || IsNil(o.AllyHealing) {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetAllyHealingOk() (
 }
 
 // HasAllyHealing returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasAllyHealing() bool {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) HasAllyHealing() bool {
 	if o != nil && !IsNil(o.AllyHealing) {
 		return true
 	}
@@ -96,12 +96,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasAllyHealing() boo
 }
 
 // SetAllyHealing gets a reference to the given float64 and assigns it to the AllyHealing field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetAllyHealing(v float64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetAllyHealing(v float64) {
 	o.AllyHealing = &v
 }
 
 // GetDamageDealt returns the DamageDealt field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDamageDealt() float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetDamageDealt() float64 {
 	if o == nil {
 		var ret float64
 		return ret
@@ -112,7 +112,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDamageDealt() flo
 
 // GetDamageDealtOk returns a tuple with the DamageDealt field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDamageDealtOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetDamageDealtOk() (*float64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -120,12 +120,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDamageDealtOk() (
 }
 
 // SetDamageDealt sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetDamageDealt(v float64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetDamageDealt(v float64) {
 	o.DamageDealt = v
 }
 
 // GetDamageMitigated returns the DamageMitigated field value if set, zero value otherwise.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDamageMitigated() float64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetDamageMitigated() float64 {
 	if o == nil || IsNil(o.DamageMitigated) {
 		var ret float64
 		return ret
@@ -135,7 +135,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDamageMitigated()
 
 // GetDamageMitigatedOk returns a tuple with the DamageMitigated field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDamageMitigatedOk() (*float64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetDamageMitigatedOk() (*float64, bool) {
 	if o == nil || IsNil(o.DamageMitigated) {
 		return nil, false
 	}
@@ -143,7 +143,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDamageMitigatedOk
 }
 
 // HasDamageMitigated returns a boolean if a field has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasDamageMitigated() bool {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) HasDamageMitigated() bool {
 	if o != nil && !IsNil(o.DamageMitigated) {
 		return true
 	}
@@ -152,12 +152,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) HasDamageMitigated()
 }
 
 // SetDamageMitigated gets a reference to the given float64 and assigns it to the DamageMitigated field.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetDamageMitigated(v float64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetDamageMitigated(v float64) {
 	o.DamageMitigated = &v
 }
 
 // GetDeaths returns the Deaths field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDeaths() int64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetDeaths() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -168,7 +168,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDeaths() int64 {
 
 // GetDeathsOk returns a tuple with the Deaths field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDeathsOk() (*int64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetDeathsOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -176,12 +176,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDeathsOk() (*int6
 }
 
 // SetDeaths sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetDeaths(v int64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetDeaths(v int64) {
 	o.Deaths = v
 }
 
 // GetDungeonClass returns the DungeonClass field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDungeonClass() SkyBlockProfileMemberDungeonsSelectedDungeonClass {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetDungeonClass() SkyBlockProfileMemberDungeonsSelectedDungeonClass {
 	if o == nil {
 		var ret SkyBlockProfileMemberDungeonsSelectedDungeonClass
 		return ret
@@ -192,7 +192,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDungeonClass() Sk
 
 // GetDungeonClassOk returns a tuple with the DungeonClass field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDungeonClassOk() (*SkyBlockProfileMemberDungeonsSelectedDungeonClass, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetDungeonClassOk() (*SkyBlockProfileMemberDungeonsSelectedDungeonClass, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -200,12 +200,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetDungeonClassOk() 
 }
 
 // SetDungeonClass sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetDungeonClass(v SkyBlockProfileMemberDungeonsSelectedDungeonClass) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetDungeonClass(v SkyBlockProfileMemberDungeonsSelectedDungeonClass) {
 	o.DungeonClass = v
 }
 
 // GetElapsedTime returns the ElapsedTime field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetElapsedTime() int64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetElapsedTime() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -216,7 +216,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetElapsedTime() int
 
 // GetElapsedTimeOk returns a tuple with the ElapsedTime field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetElapsedTimeOk() (*int64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetElapsedTimeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -224,12 +224,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetElapsedTimeOk() (
 }
 
 // SetElapsedTime sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetElapsedTime(v int64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetElapsedTime(v int64) {
 	o.ElapsedTime = v
 }
 
 // GetMobsKilled returns the MobsKilled field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetMobsKilled() int64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetMobsKilled() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -240,7 +240,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetMobsKilled() int6
 
 // GetMobsKilledOk returns a tuple with the MobsKilled field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetMobsKilledOk() (*int64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetMobsKilledOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -248,12 +248,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetMobsKilledOk() (*
 }
 
 // SetMobsKilled sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetMobsKilled(v int64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetMobsKilled(v int64) {
 	o.MobsKilled = v
 }
 
 // GetScoreBonus returns the ScoreBonus field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreBonus() int64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetScoreBonus() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -264,7 +264,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreBonus() int6
 
 // GetScoreBonusOk returns a tuple with the ScoreBonus field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreBonusOk() (*int64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetScoreBonusOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -272,12 +272,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreBonusOk() (*
 }
 
 // SetScoreBonus sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetScoreBonus(v int64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetScoreBonus(v int64) {
 	o.ScoreBonus = v
 }
 
 // GetScoreExploration returns the ScoreExploration field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreExploration() int64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetScoreExploration() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -288,7 +288,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreExploration(
 
 // GetScoreExplorationOk returns a tuple with the ScoreExploration field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreExplorationOk() (*int64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetScoreExplorationOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -296,12 +296,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreExplorationO
 }
 
 // SetScoreExploration sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetScoreExploration(v int64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetScoreExploration(v int64) {
 	o.ScoreExploration = v
 }
 
 // GetScoreSkill returns the ScoreSkill field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreSkill() int64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetScoreSkill() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -312,7 +312,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreSkill() int6
 
 // GetScoreSkillOk returns a tuple with the ScoreSkill field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreSkillOk() (*int64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetScoreSkillOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -320,12 +320,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreSkillOk() (*
 }
 
 // SetScoreSkill sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetScoreSkill(v int64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetScoreSkill(v int64) {
 	o.ScoreSkill = v
 }
 
 // GetScoreSpeed returns the ScoreSpeed field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreSpeed() int64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetScoreSpeed() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -336,7 +336,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreSpeed() int6
 
 // GetScoreSpeedOk returns a tuple with the ScoreSpeed field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreSpeedOk() (*int64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetScoreSpeedOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -344,12 +344,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetScoreSpeedOk() (*
 }
 
 // SetScoreSpeed sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetScoreSpeed(v int64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetScoreSpeed(v int64) {
 	o.ScoreSpeed = v
 }
 
 // GetSecretsFound returns the SecretsFound field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetSecretsFound() int64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetSecretsFound() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -360,7 +360,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetSecretsFound() in
 
 // GetSecretsFoundOk returns a tuple with the SecretsFound field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetSecretsFoundOk() (*int64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetSecretsFoundOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -368,12 +368,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetSecretsFoundOk() 
 }
 
 // SetSecretsFound sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetSecretsFound(v int64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetSecretsFound(v int64) {
 	o.SecretsFound = v
 }
 
 // GetTeammates returns the Teammates field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetTeammates() []string {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetTeammates() []string {
 	if o == nil {
 		var ret []string
 		return ret
@@ -384,7 +384,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetTeammates() []str
 
 // GetTeammatesOk returns a tuple with the Teammates field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetTeammatesOk() ([]string, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetTeammatesOk() ([]string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -392,12 +392,12 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetTeammatesOk() ([]
 }
 
 // SetTeammates sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetTeammates(v []string) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetTeammates(v []string) {
 	o.Teammates = v
 }
 
 // GetTimestamp returns the Timestamp field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetTimestamp() int64 {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetTimestamp() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -408,7 +408,7 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetTimestamp() int64
 
 // GetTimestampOk returns a tuple with the Timestamp field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetTimestampOk() (*int64, bool) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) GetTimestampOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -416,11 +416,11 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) GetTimestampOk() (*i
 }
 
 // SetTimestamp sets field value
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) SetTimestamp(v int64) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) SetTimestamp(v int64) {
 	o.Timestamp = v
 }
 
-func (o SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) MarshalJSON() ([]byte, error) {
+func (o SkyBlockProfileMemberDungeonsDungeonTypesBestRun) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -428,7 +428,7 @@ func (o SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) MarshalJSON() ([]byte
 	return json.Marshal(toSerialize)
 }
 
-func (o SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) ToMap() (map[string]interface{}, error) {
+func (o SkyBlockProfileMemberDungeonsDungeonTypesBestRun) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.AllyHealing) {
 		toSerialize["ally_healing"] = o.AllyHealing
@@ -451,7 +451,7 @@ func (o SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) ToMap() (map[string]i
 	return toSerialize, nil
 }
 
-func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) UnmarshalJSON(data []byte) (err error) {
+func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) UnmarshalJSON(data []byte) (err error) {
 	// This validates that all required properties are included in the JSON object
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
@@ -484,53 +484,53 @@ func (o *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) UnmarshalJSON(data [
 		}
 	}
 
-	varSkyBlockProfileMemberDungeonsDungeonTypesBestRuns := _SkyBlockProfileMemberDungeonsDungeonTypesBestRuns{}
+	varSkyBlockProfileMemberDungeonsDungeonTypesBestRun := _SkyBlockProfileMemberDungeonsDungeonTypesBestRun{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
 	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileMemberDungeonsDungeonTypesBestRuns)
+	err = decoder.Decode(&varSkyBlockProfileMemberDungeonsDungeonTypesBestRun)
 
 	if err != nil {
 		return err
 	}
 
-	*o = SkyBlockProfileMemberDungeonsDungeonTypesBestRuns(varSkyBlockProfileMemberDungeonsDungeonTypesBestRuns)
+	*o = SkyBlockProfileMemberDungeonsDungeonTypesBestRun(varSkyBlockProfileMemberDungeonsDungeonTypesBestRun)
 
 	return err
 }
 
-type NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRuns struct {
-	value *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns
+type NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRun struct {
+	value *SkyBlockProfileMemberDungeonsDungeonTypesBestRun
 	isSet bool
 }
 
-func (v NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRuns) Get() *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns {
+func (v NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRun) Get() *SkyBlockProfileMemberDungeonsDungeonTypesBestRun {
 	return v.value
 }
 
-func (v *NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRuns) Set(val *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) {
+func (v *NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRun) Set(val *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRuns) IsSet() bool {
+func (v NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRun) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRuns) Unset() {
+func (v *NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRun) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableSkyBlockProfileMemberDungeonsDungeonTypesBestRuns(val *SkyBlockProfileMemberDungeonsDungeonTypesBestRuns) *NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRuns {
-	return &NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRuns{value: val, isSet: true}
+func NewNullableSkyBlockProfileMemberDungeonsDungeonTypesBestRun(val *SkyBlockProfileMemberDungeonsDungeonTypesBestRun) *NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRun {
+	return &NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRun{value: val, isSet: true}
 }
 
-func (v NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRuns) MarshalJSON() ([]byte, error) {
+func (v NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRun) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRuns) UnmarshalJSON(src []byte) error {
+func (v *NullableSkyBlockProfileMemberDungeonsDungeonTypesBestRun) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

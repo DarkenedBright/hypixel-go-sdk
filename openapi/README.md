@@ -79,8 +79,8 @@ All URIs are relative to *https://api.hypixel.net*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SkyBlockAPI* | [**V2SkyblockProfileGet**](docs/SkyBlockAPI.md#v2skyblockprofileget) | **Get** /v2/skyblock/profile | Profile by UUID
-*SkyBlockAPI* | [**V2SkyblockProfilesGet**](docs/SkyBlockAPI.md#v2skyblockprofilesget) | **Get** /v2/skyblock/profiles | Profiles by player
+*SkyBlockAPI* | [**V2SkyblockProfileGet**](docs/SkyBlockAPI.md#v2skyblockprofileget) | **Get** /v2/skyblock/profile | 
+*SkyBlockAPI* | [**V2SkyblockProfilesGet**](docs/SkyBlockAPI.md#v2skyblockprofilesget) | **Get** /v2/skyblock/profiles | 
 
 
 ## Documentation For Models
@@ -99,6 +99,7 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileCommunityUpgradesUpgradeType](docs/SkyBlockProfileCommunityUpgradesUpgradeType.md)
  - [SkyBlockProfileCuteName](docs/SkyBlockProfileCuteName.md)
  - [SkyBlockProfileGameMode](docs/SkyBlockProfileGameMode.md)
+ - [SkyBlockProfileGet](docs/SkyBlockProfileGet.md)
  - [SkyBlockProfileMember](docs/SkyBlockProfileMember.md)
  - [SkyBlockProfileMemberAccessoryBagStorage](docs/SkyBlockProfileMemberAccessoryBagStorage.md)
  - [SkyBlockProfileMemberAccessoryBagStoragePower](docs/SkyBlockProfileMemberAccessoryBagStoragePower.md)
@@ -120,7 +121,7 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberDungeonsDungeonJournalJournalEntries](docs/SkyBlockProfileMemberDungeonsDungeonJournalJournalEntries.md)
  - [SkyBlockProfileMemberDungeonsDungeonJournalUnlockedJournalsInner](docs/SkyBlockProfileMemberDungeonsDungeonJournalUnlockedJournalsInner.md)
  - [SkyBlockProfileMemberDungeonsDungeonTypes](docs/SkyBlockProfileMemberDungeonsDungeonTypes.md)
- - [SkyBlockProfileMemberDungeonsDungeonTypesBestRuns](docs/SkyBlockProfileMemberDungeonsDungeonTypesBestRuns.md)
+ - [SkyBlockProfileMemberDungeonsDungeonTypesBestRun](docs/SkyBlockProfileMemberDungeonsDungeonTypesBestRun.md)
  - [SkyBlockProfileMemberDungeonsDungeonTypesType](docs/SkyBlockProfileMemberDungeonsDungeonTypesType.md)
  - [SkyBlockProfileMemberDungeonsDungeonTypesTypeData](docs/SkyBlockProfileMemberDungeonsDungeonTypesTypeData.md)
  - [SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner](docs/SkyBlockProfileMemberDungeonsDungeonsBlahBlahInner.md)
@@ -173,8 +174,8 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberInventoryBase64GzipData](docs/SkyBlockProfileMemberInventoryBase64GzipData.md)
  - [SkyBlockProfileMemberItemData](docs/SkyBlockProfileMemberItemData.md)
  - [SkyBlockProfileMemberJacobsContest](docs/SkyBlockProfileMemberJacobsContest.md)
- - [SkyBlockProfileMemberJacobsContestContestsValue](docs/SkyBlockProfileMemberJacobsContestContestsValue.md)
- - [SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal](docs/SkyBlockProfileMemberJacobsContestContestsValueClaimedMedal.md)
+ - [SkyBlockProfileMemberJacobsContestContest](docs/SkyBlockProfileMemberJacobsContestContest.md)
+ - [SkyBlockProfileMemberJacobsContestContestClaimedMedal](docs/SkyBlockProfileMemberJacobsContestContestClaimedMedal.md)
  - [SkyBlockProfileMemberJacobsContestMedalsInv](docs/SkyBlockProfileMemberJacobsContestMedalsInv.md)
  - [SkyBlockProfileMemberJacobsContestPerks](docs/SkyBlockProfileMemberJacobsContestPerks.md)
  - [SkyBlockProfileMemberJacobsContestPersonalBests](docs/SkyBlockProfileMemberJacobsContestPersonalBests.md)
@@ -379,12 +380,11 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberSlayerSlayerQuestType](docs/SkyBlockProfileMemberSlayerSlayerQuestType.md)
  - [SkyBlockProfileMemberTrophyFish](docs/SkyBlockProfileMemberTrophyFish.md)
  - [SkyBlockProfileMemberWinterPlayerData](docs/SkyBlockProfileMemberWinterPlayerData.md)
- - [V2SkyblockProfileGet200Response](docs/V2SkyblockProfileGet200Response.md)
+ - [SkyBlockProfilesGet](docs/SkyBlockProfilesGet.md)
  - [V2SkyblockProfileGet400Response](docs/V2SkyblockProfileGet400Response.md)
  - [V2SkyblockProfileGet403Response](docs/V2SkyblockProfileGet403Response.md)
  - [V2SkyblockProfileGet422Response](docs/V2SkyblockProfileGet422Response.md)
  - [V2SkyblockProfileGet429Response](docs/V2SkyblockProfileGet429Response.md)
- - [V2SkyblockProfilesGet200Response](docs/V2SkyblockProfilesGet200Response.md)
 
 
 ## Documentation For Authorization

@@ -16,38 +16,38 @@ import (
 	"fmt"
 )
 
-// checks if the V2SkyblockProfilesGet200Response type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &V2SkyblockProfilesGet200Response{}
+// checks if the SkyBlockProfilesGet type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &SkyBlockProfilesGet{}
 
-// V2SkyblockProfilesGet200Response struct for V2SkyblockProfilesGet200Response
-type V2SkyblockProfilesGet200Response struct {
+// SkyBlockProfilesGet struct for SkyBlockProfilesGet
+type SkyBlockProfilesGet struct {
 	Profiles []SkyBlockProfile `json:"profiles"`
 	Success  bool              `json:"success"`
 }
 
-type _V2SkyblockProfilesGet200Response V2SkyblockProfilesGet200Response
+type _SkyBlockProfilesGet SkyBlockProfilesGet
 
-// NewV2SkyblockProfilesGet200Response instantiates a new V2SkyblockProfilesGet200Response object
+// NewSkyBlockProfilesGet instantiates a new SkyBlockProfilesGet object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewV2SkyblockProfilesGet200Response(profiles []SkyBlockProfile, success bool) *V2SkyblockProfilesGet200Response {
-	this := V2SkyblockProfilesGet200Response{}
+func NewSkyBlockProfilesGet(profiles []SkyBlockProfile, success bool) *SkyBlockProfilesGet {
+	this := SkyBlockProfilesGet{}
 	this.Profiles = profiles
 	this.Success = success
 	return &this
 }
 
-// NewV2SkyblockProfilesGet200ResponseWithDefaults instantiates a new V2SkyblockProfilesGet200Response object
+// NewSkyBlockProfilesGetWithDefaults instantiates a new SkyBlockProfilesGet object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewV2SkyblockProfilesGet200ResponseWithDefaults() *V2SkyblockProfilesGet200Response {
-	this := V2SkyblockProfilesGet200Response{}
+func NewSkyBlockProfilesGetWithDefaults() *SkyBlockProfilesGet {
+	this := SkyBlockProfilesGet{}
 	return &this
 }
 
 // GetProfiles returns the Profiles field value
-func (o *V2SkyblockProfilesGet200Response) GetProfiles() []SkyBlockProfile {
+func (o *SkyBlockProfilesGet) GetProfiles() []SkyBlockProfile {
 	if o == nil {
 		var ret []SkyBlockProfile
 		return ret
@@ -58,7 +58,7 @@ func (o *V2SkyblockProfilesGet200Response) GetProfiles() []SkyBlockProfile {
 
 // GetProfilesOk returns a tuple with the Profiles field value
 // and a boolean to check if the value has been set.
-func (o *V2SkyblockProfilesGet200Response) GetProfilesOk() ([]SkyBlockProfile, bool) {
+func (o *SkyBlockProfilesGet) GetProfilesOk() ([]SkyBlockProfile, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -66,12 +66,12 @@ func (o *V2SkyblockProfilesGet200Response) GetProfilesOk() ([]SkyBlockProfile, b
 }
 
 // SetProfiles sets field value
-func (o *V2SkyblockProfilesGet200Response) SetProfiles(v []SkyBlockProfile) {
+func (o *SkyBlockProfilesGet) SetProfiles(v []SkyBlockProfile) {
 	o.Profiles = v
 }
 
 // GetSuccess returns the Success field value
-func (o *V2SkyblockProfilesGet200Response) GetSuccess() bool {
+func (o *SkyBlockProfilesGet) GetSuccess() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -82,7 +82,7 @@ func (o *V2SkyblockProfilesGet200Response) GetSuccess() bool {
 
 // GetSuccessOk returns a tuple with the Success field value
 // and a boolean to check if the value has been set.
-func (o *V2SkyblockProfilesGet200Response) GetSuccessOk() (*bool, bool) {
+func (o *SkyBlockProfilesGet) GetSuccessOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -90,11 +90,11 @@ func (o *V2SkyblockProfilesGet200Response) GetSuccessOk() (*bool, bool) {
 }
 
 // SetSuccess sets field value
-func (o *V2SkyblockProfilesGet200Response) SetSuccess(v bool) {
+func (o *SkyBlockProfilesGet) SetSuccess(v bool) {
 	o.Success = v
 }
 
-func (o V2SkyblockProfilesGet200Response) MarshalJSON() ([]byte, error) {
+func (o SkyBlockProfilesGet) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -102,14 +102,14 @@ func (o V2SkyblockProfilesGet200Response) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o V2SkyblockProfilesGet200Response) ToMap() (map[string]interface{}, error) {
+func (o SkyBlockProfilesGet) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["profiles"] = o.Profiles
 	toSerialize["success"] = o.Success
 	return toSerialize, nil
 }
 
-func (o *V2SkyblockProfilesGet200Response) UnmarshalJSON(data []byte) (err error) {
+func (o *SkyBlockProfilesGet) UnmarshalJSON(data []byte) (err error) {
 	// This validates that all required properties are included in the JSON object
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
@@ -132,53 +132,53 @@ func (o *V2SkyblockProfilesGet200Response) UnmarshalJSON(data []byte) (err error
 		}
 	}
 
-	varV2SkyblockProfilesGet200Response := _V2SkyblockProfilesGet200Response{}
+	varSkyBlockProfilesGet := _SkyBlockProfilesGet{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
 	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varV2SkyblockProfilesGet200Response)
+	err = decoder.Decode(&varSkyBlockProfilesGet)
 
 	if err != nil {
 		return err
 	}
 
-	*o = V2SkyblockProfilesGet200Response(varV2SkyblockProfilesGet200Response)
+	*o = SkyBlockProfilesGet(varSkyBlockProfilesGet)
 
 	return err
 }
 
-type NullableV2SkyblockProfilesGet200Response struct {
-	value *V2SkyblockProfilesGet200Response
+type NullableSkyBlockProfilesGet struct {
+	value *SkyBlockProfilesGet
 	isSet bool
 }
 
-func (v NullableV2SkyblockProfilesGet200Response) Get() *V2SkyblockProfilesGet200Response {
+func (v NullableSkyBlockProfilesGet) Get() *SkyBlockProfilesGet {
 	return v.value
 }
 
-func (v *NullableV2SkyblockProfilesGet200Response) Set(val *V2SkyblockProfilesGet200Response) {
+func (v *NullableSkyBlockProfilesGet) Set(val *SkyBlockProfilesGet) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableV2SkyblockProfilesGet200Response) IsSet() bool {
+func (v NullableSkyBlockProfilesGet) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableV2SkyblockProfilesGet200Response) Unset() {
+func (v *NullableSkyBlockProfilesGet) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableV2SkyblockProfilesGet200Response(val *V2SkyblockProfilesGet200Response) *NullableV2SkyblockProfilesGet200Response {
-	return &NullableV2SkyblockProfilesGet200Response{value: val, isSet: true}
+func NewNullableSkyBlockProfilesGet(val *SkyBlockProfilesGet) *NullableSkyBlockProfilesGet {
+	return &NullableSkyBlockProfilesGet{value: val, isSet: true}
 }
 
-func (v NullableV2SkyblockProfilesGet200Response) MarshalJSON() ([]byte, error) {
+func (v NullableSkyBlockProfilesGet) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableV2SkyblockProfilesGet200Response) UnmarshalJSON(src []byte) error {
+func (v *NullableSkyBlockProfilesGet) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

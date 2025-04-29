@@ -32,14 +32,12 @@ func (r ApiV2SkyblockProfileGetRequest) Profile(profile string) ApiV2SkyblockPro
 	return r
 }
 
-func (r ApiV2SkyblockProfileGetRequest) Execute() (*V2SkyblockProfileGet200Response, *http.Response, error) {
+func (r ApiV2SkyblockProfileGetRequest) Execute() (*SkyBlockProfileGet, *http.Response, error) {
 	return r.ApiService.V2SkyblockProfileGetExecute(r)
 }
 
 /*
-V2SkyblockProfileGet Profile by UUID
-
-SkyBlock profile data, such as stats, objectives etc. The data returned can differ depending on the players in-game API settings.
+V2SkyblockProfileGet Method for V2SkyblockProfileGet
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 	@return ApiV2SkyblockProfileGetRequest
@@ -53,13 +51,13 @@ func (a *SkyBlockAPIService) V2SkyblockProfileGet(ctx context.Context) ApiV2Skyb
 
 // Execute executes the request
 //
-//	@return V2SkyblockProfileGet200Response
-func (a *SkyBlockAPIService) V2SkyblockProfileGetExecute(r ApiV2SkyblockProfileGetRequest) (*V2SkyblockProfileGet200Response, *http.Response, error) {
+//	@return SkyBlockProfileGet
+func (a *SkyBlockAPIService) V2SkyblockProfileGetExecute(r ApiV2SkyblockProfileGetRequest) (*SkyBlockProfileGet, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *V2SkyblockProfileGet200Response
+		localVarReturnValue *SkyBlockProfileGet
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SkyBlockAPIService.V2SkyblockProfileGet")
@@ -198,12 +196,12 @@ func (r ApiV2SkyblockProfilesGetRequest) Uuid(uuid string) ApiV2SkyblockProfiles
 	return r
 }
 
-func (r ApiV2SkyblockProfilesGetRequest) Execute() (*V2SkyblockProfilesGet200Response, *http.Response, error) {
+func (r ApiV2SkyblockProfilesGetRequest) Execute() (*SkyBlockProfilesGet, *http.Response, error) {
 	return r.ApiService.V2SkyblockProfilesGetExecute(r)
 }
 
 /*
-V2SkyblockProfilesGet Profiles by player
+V2SkyblockProfilesGet Method for V2SkyblockProfilesGet
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 	@return ApiV2SkyblockProfilesGetRequest
@@ -217,13 +215,13 @@ func (a *SkyBlockAPIService) V2SkyblockProfilesGet(ctx context.Context) ApiV2Sky
 
 // Execute executes the request
 //
-//	@return V2SkyblockProfilesGet200Response
-func (a *SkyBlockAPIService) V2SkyblockProfilesGetExecute(r ApiV2SkyblockProfilesGetRequest) (*V2SkyblockProfilesGet200Response, *http.Response, error) {
+//	@return SkyBlockProfilesGet
+func (a *SkyBlockAPIService) V2SkyblockProfilesGetExecute(r ApiV2SkyblockProfilesGetRequest) (*SkyBlockProfilesGet, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *V2SkyblockProfilesGet200Response
+		localVarReturnValue *SkyBlockProfilesGet
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SkyBlockAPIService.V2SkyblockProfilesGet")

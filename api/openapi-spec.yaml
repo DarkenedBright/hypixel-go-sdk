@@ -112,6 +112,18 @@ components:
                 type: boolean
             type: object
       description: A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle.
+    SkyBlockProfileGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockProfileGet'
+      description: A successful response
+    SkyBlockProfilesGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockProfilesGet'
+      description: A successful response
   schemas:
     SkyBlockProfile:
       additionalProperties: false
@@ -258,6 +270,17 @@ components:
         - island_size
         - minion_slots
       type: string
+    SkyBlockProfileGet:
+      additionalProperties: false
+      properties:
+        profile:
+          $ref: '#/components/schemas/SkyBlockProfile'
+        success:
+          type: boolean
+      required:
+        - profile
+        - success
+      type: object
     SkyBlockProfileMember:
       additionalProperties: false
       properties:
@@ -713,7 +736,7 @@ components:
       required:
         - catacombs
       type: object
-    SkyBlockProfileMemberDungeonsDungeonTypesBestRuns:
+    SkyBlockProfileMemberDungeonsDungeonTypesBestRun:
       additionalProperties: false
       properties:
         ally_healing:
@@ -766,15 +789,17 @@ components:
         - teammates
         - timestamp
       type: object
+    SkyBlockProfileMemberDungeonsDungeonTypesBestRuns:
+      additionalProperties:
+        items:
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonTypesBestRun'
+        type: array
+      type: object
     SkyBlockProfileMemberDungeonsDungeonTypesType:
       additionalProperties: false
       properties:
         best_runs:
-          additionalProperties:
-            items:
-              $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonTypesBestRuns'
-            type: array
-          type: object
+          $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonTypesBestRuns'
         best_score:
           $ref: '#/components/schemas/SkyBlockProfileMemberDungeonsDungeonTypesTypeData'
         experience:
@@ -1607,9 +1632,7 @@ components:
         personal_vault_contents:
           $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
         sacks_counts:
-          additionalProperties:
-            type: integer
-          type: object
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventorySacksCounts'
         wardrobe_contents:
           $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
         wardrobe_equipped_slot:
@@ -1648,6 +1671,10 @@ components:
         - data
         - type
       type: object
+    SkyBlockProfileMemberInventorySacksCounts:
+      additionalProperties:
+        type: integer
+      type: object
     SkyBlockProfileMemberItemData:
       additionalProperties: false
       properties:
@@ -1676,29 +1703,31 @@ components:
         unique_brackets:
           $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContestUniqueBrackets'
       type: object
+    SkyBlockProfileMemberJacobsContestContest:
+      additionalProperties: false
+      properties:
+        claimed_medal:
+          enum:
+            - bronze
+            - diamond
+            - gold
+            - platinum
+            - silver
+          type: string
+        claimed_participants:
+          type: integer
+        claimed_position:
+          type: integer
+        claimed_rewards:
+          type: boolean
+        collected:
+          type: integer
+      required:
+        - collected
+      type: object
     SkyBlockProfileMemberJacobsContestContests:
       additionalProperties:
-        additionalProperties: false
-        properties:
-          claimed_medal:
-            enum:
-              - bronze
-              - diamond
-              - gold
-              - platinum
-              - silver
-            type: string
-          claimed_participants:
-            type: integer
-          claimed_position:
-            type: integer
-          claimed_rewards:
-            type: boolean
-          collected:
-            type: integer
-        required:
-          - collected
-        type: object
+        $ref: '#/components/schemas/SkyBlockProfileMemberJacobsContestContest'
       type: object
     SkyBlockProfileMemberJacobsContestMedalsInv:
       additionalProperties: false
@@ -3302,14 +3331,16 @@ components:
         last_call_incoming:
           type: integer
         specific:
-          additionalProperties:
-            oneOf:
-              - type: string
-              - type: boolean
-              - type: integer
-          type: object
+          $ref: '#/components/schemas/SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContactSpecific'
         talked_to:
           type: boolean
+      type: object
+    SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneContactDataContactSpecific:
+      additionalProperties:
+        oneOf:
+          - type: string
+          - type: boolean
+          - type: integer
       type: object
     SkyBlockProfileMemberNetherIslandPlayerDataAbiphoneGames:
       additionalProperties: false
@@ -5546,9 +5577,7 @@ components:
         exp:
           type: number
         extra:
-          additionalProperties:
-            type: number
-          type: object
+          $ref: '#/components/schemas/SkyBlockProfileMemberPetsDataPetExtra'
         heldItem:
           enum:
             - ALL_SKILLS_SUPER_BOOST
@@ -5653,6 +5682,10 @@ components:
               - SPIRIT
             type: string
           type: array
+      type: object
+    SkyBlockProfileMemberPetsDataPetExtra:
+      additionalProperties:
+        type: number
       type: object
     SkyBlockProfileMemberPetsDataPetType:
       enum:
@@ -7830,9 +7863,7 @@ components:
         crops_mined:
           type: number
         deaths:
-          additionalProperties:
-            type: number
-          type: object
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsDeaths'
         end_island:
           $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsEndIsland'
         gifts:
@@ -7846,9 +7877,7 @@ components:
         items_fished:
           $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsItemsFished'
         kills:
-          additionalProperties:
-            type: number
-          type: object
+          $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsKills'
         mythos:
           $ref: '#/components/schemas/SkyBlockProfileMemberPlayerStatsMythos'
         pets:
@@ -7936,6 +7965,10 @@ components:
           type: integer
       required:
         - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsDeaths:
+      additionalProperties:
+        type: number
       type: object
     SkyBlockProfileMemberPlayerStatsEndIsland:
       additionalProperties: false
@@ -8088,6 +8121,10 @@ components:
           type: number
       required:
         - total
+      type: object
+    SkyBlockProfileMemberPlayerStatsKills:
+      additionalProperties:
+        type: number
       type: object
     SkyBlockProfileMemberPlayerStatsMythos:
       additionalProperties: false
@@ -9541,6 +9578,19 @@ components:
       additionalProperties:
         $ref: '#/components/schemas/SkyBlockProfileMember'
       type: object
+    SkyBlockProfilesGet:
+      additionalProperties: false
+      properties:
+        profiles:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfile'
+          type: array
+        success:
+          type: boolean
+      required:
+        - profiles
+        - success
+      type: object
   securitySchemes:
     ApiKey:
       description: Obtained via the [Hypixel Developer Dashboard](https://developer.hypixel.net) when creating an application. You can also request higher limits for production applications in this dashboard.
@@ -9562,7 +9612,6 @@ openapi: 3.0.3
 paths:
   /v2/skyblock/profile:
     get:
-      description: SkyBlock profile data, such as stats, objectives etc. The data returned can differ depending on the players in-game API settings.
       parameters:
         - in: query
           name: profile
@@ -9571,20 +9620,7 @@ paths:
             type: string
       responses:
         '200':
-          content:
-            application/json:
-              schema:
-                additionalProperties: false
-                properties:
-                  profile:
-                    $ref: '#/components/schemas/SkyBlockProfile'
-                  success:
-                    type: boolean
-                required:
-                  - profile
-                  - success
-                type: object
-          description: A successful response
+          $ref: '#/components/responses/SkyBlockProfileGet'
         '400':
           $ref: '#/components/responses/DataMissing'
         '403':
@@ -9595,7 +9631,6 @@ paths:
           $ref: '#/components/responses/RateLimited'
       security:
         - ApiKey: []
-      summary: Profile by UUID
       tags:
         - SkyBlock
   /v2/skyblock/profiles:
@@ -9608,22 +9643,7 @@ paths:
             type: string
       responses:
         '200':
-          content:
-            application/json:
-              schema:
-                additionalProperties: false
-                properties:
-                  profiles:
-                    items:
-                      $ref: '#/components/schemas/SkyBlockProfile'
-                    type: array
-                  success:
-                    type: boolean
-                required:
-                  - profiles
-                  - success
-                type: object
-          description: A successful response
+          $ref: '#/components/responses/SkyBlockProfilesGet'
         '400':
           $ref: '#/components/responses/DataMissing'
         '403':
@@ -9634,7 +9654,6 @@ paths:
           $ref: '#/components/responses/RateLimited'
       security:
         - ApiKey: []
-      summary: Profiles by player
       tags:
         - SkyBlock
 servers:
