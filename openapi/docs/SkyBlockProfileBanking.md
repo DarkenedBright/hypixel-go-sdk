@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Balance** | Pointer to **float64** |  | [optional] 
-**Transactions** | Pointer to [**[]SkyBlockProfileBankingTransactionsInner**](SkyBlockProfileBankingTransactionsInner.md) |  | [optional] 
+**Balance** | **float64** |  | 
+**Transactions** | [**[]SkyBlockProfileBankingTransaction**](SkyBlockProfileBankingTransaction.md) |  | 
 
 ## Methods
 
 ### NewSkyBlockProfileBanking
 
-`func NewSkyBlockProfileBanking() *SkyBlockProfileBanking`
+`func NewSkyBlockProfileBanking(balance float64, transactions []SkyBlockProfileBankingTransaction, ) *SkyBlockProfileBanking`
 
 NewSkyBlockProfileBanking instantiates a new SkyBlockProfileBanking object
 This constructor will assign default values to properties that have it defined,
@@ -45,36 +45,26 @@ and a boolean to check if the value has been set.
 
 SetBalance sets Balance field to given value.
 
-### HasBalance
-
-`func (o *SkyBlockProfileBanking) HasBalance() bool`
-
-HasBalance returns a boolean if a field has been set.
 
 ### GetTransactions
 
-`func (o *SkyBlockProfileBanking) GetTransactions() []SkyBlockProfileBankingTransactionsInner`
+`func (o *SkyBlockProfileBanking) GetTransactions() []SkyBlockProfileBankingTransaction`
 
 GetTransactions returns the Transactions field if non-nil, zero value otherwise.
 
 ### GetTransactionsOk
 
-`func (o *SkyBlockProfileBanking) GetTransactionsOk() (*[]SkyBlockProfileBankingTransactionsInner, bool)`
+`func (o *SkyBlockProfileBanking) GetTransactionsOk() (*[]SkyBlockProfileBankingTransaction, bool)`
 
 GetTransactionsOk returns a tuple with the Transactions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTransactions
 
-`func (o *SkyBlockProfileBanking) SetTransactions(v []SkyBlockProfileBankingTransactionsInner)`
+`func (o *SkyBlockProfileBanking) SetTransactions(v []SkyBlockProfileBankingTransaction)`
 
 SetTransactions sets Transactions field to given value.
 
-### HasTransactions
-
-`func (o *SkyBlockProfileBanking) HasTransactions() bool`
-
-HasTransactions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

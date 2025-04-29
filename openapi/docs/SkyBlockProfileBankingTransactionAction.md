@@ -1,4 +1,4 @@
-# SkyBlockProfileBankingTransactionsInnerAction
+# SkyBlockProfileBankingTransactionAction
 
 ## Enum
 

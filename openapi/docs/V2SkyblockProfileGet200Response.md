@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Profile** | Pointer to [**SkyBlockProfile**](SkyBlockProfile.md) |  | [optional] 
-**Success** | Pointer to **bool** |  | [optional] 
+**Profile** | [**SkyBlockProfile**](SkyBlockProfile.md) |  | 
+**Success** | **bool** |  | 
 
 ## Methods
 
 ### NewV2SkyblockProfileGet200Response
 
-`func NewV2SkyblockProfileGet200Response() *V2SkyblockProfileGet200Response`
+`func NewV2SkyblockProfileGet200Response(profile SkyBlockProfile, success bool, ) *V2SkyblockProfileGet200Response`
 
 NewV2SkyblockProfileGet200Response instantiates a new V2SkyblockProfileGet200Response object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetProfile sets Profile field to given value.
 
-### HasProfile
-
-`func (o *V2SkyblockProfileGet200Response) HasProfile() bool`
-
-HasProfile returns a boolean if a field has been set.
 
 ### GetSuccess
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetSuccess sets Success field to given value.
 
-### HasSuccess
-
-`func (o *V2SkyblockProfileGet200Response) HasSuccess() bool`
-
-HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

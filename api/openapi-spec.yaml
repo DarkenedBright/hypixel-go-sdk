@@ -114,32 +114,37 @@ components:
       description: A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle.
   schemas:
     SkyBlockProfile:
+      additionalProperties: false
       properties:
         banking:
-          description: Information about the bank account for this profile, only present if the API banking setting is enabled
-          properties:
-            balance:
-              type: number
-            transactions:
-              items:
-                properties:
-                  action:
-                    enum:
-                      - DEPOSIT
-                      - WITHDRAW
-                    type: string
-                  amount:
-                    type: number
-                  initiator_name:
-                    type: string
-                  timestamp:
-                    type: integer
-                type: object
-              type: array
-          type: object
+          $ref: '#/components/schemas/SkyBlockProfileBanking'
         community_upgrades:
-          type: object
+          $ref: '#/components/schemas/SkyBlockProfileCommunityUpgrades'
+        created_at:
+          type: integer
         cute_name:
+          enum:
+            - Apple
+            - Banana
+            - Blueberry
+            - Coconut
+            - Cucumber
+            - Grapes
+            - Kiwi
+            - Lemon
+            - Lime
+            - Mango
+            - Orange
+            - Papaya
+            - Peach
+            - Pear
+            - Pineapple
+            - Pomegranate
+            - Raspberry
+            - Strawberry
+            - Tomato
+            - Watermelon
+            - Zucchini
           type: string
         game_mode:
           enum:
@@ -148,14 +153,111 @@ components:
             - island
           type: string
         members:
-          additionalProperties:
-            $ref: '#/components/schemas/SkyBlockProfileMember'
-          type: object
+          $ref: '#/components/schemas/SkyBlockProfileMembers'
         profile_id:
           format: uuid
           type: string
         selected:
           type: boolean
+      required:
+        - cute_name
+        - members
+        - profile_id
+        - selected
+      type: object
+    SkyBlockProfileBanking:
+      additionalProperties: false
+      properties:
+        balance:
+          type: number
+        transactions:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileBankingTransaction'
+          type: array
+      required:
+        - balance
+        - transactions
+      type: object
+    SkyBlockProfileBankingTransaction:
+      additionalProperties: false
+      properties:
+        action:
+          enum:
+            - DEPOSIT
+            - WITHDRAW
+          type: string
+        amount:
+          type: number
+        initiator_name:
+          type: string
+        timestamp:
+          type: integer
+      required:
+        - action
+        - amount
+        - initiator_name
+        - timestamp
+      type: object
+    SkyBlockProfileCommunityUpgrades:
+      additionalProperties: false
+      properties:
+        currently_upgrading:
+          $ref: '#/components/schemas/SkyBlockProfileCommunityUpgradesCurrentlyUpgrading'
+        upgrade_states:
+          items:
+            $ref: '#/components/schemas/SkyBlockProfileCommunityUpgradesUpgradeState'
+          type: array
+      required:
+        - upgrade_states
+      type: object
+    SkyBlockProfileCommunityUpgradesCurrentlyUpgrading:
+      additionalProperties: false
+      properties:
+        new_tier:
+          type: integer
+        start_ms:
+          type: integer
+        upgrade:
+          $ref: '#/components/schemas/SkyBlockProfileCommunityUpgradesUpgradeType'
+        who_started:
+          format: uuid
+          type: string
+      required:
+        - new_tier
+        - start_ms
+        - upgrade
+        - who_started
+      type: object
+    SkyBlockProfileCommunityUpgradesUpgradeState:
+      additionalProperties: false
+      properties:
+        claimed_by:
+          format: uuid
+          type: string
+        started_by:
+          format: uuid
+          type: string
+        started_ms:
+          type: integer
+        tier:
+          type: integer
+        upgrade:
+          $ref: '#/components/schemas/SkyBlockProfileCommunityUpgradesUpgradeType'
+      required:
+        - claimed_by
+        - started_by
+        - started_ms
+        - tier
+        - upgrade
+      type: object
+    SkyBlockProfileCommunityUpgradesUpgradeType:
+      enum:
+        - coins_allowance
+        - coop_slots
+        - guests_count
+        - island_size
+        - minion_slots
+      type: string
     SkyBlockProfileMember:
       additionalProperties: false
       properties:
@@ -9435,6 +9537,10 @@ components:
       required:
         - refined_jyrre_uses
       type: object
+    SkyBlockProfileMembers:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockProfileMember'
+      type: object
   securitySchemes:
     ApiKey:
       description: Obtained via the [Hypixel Developer Dashboard](https://developer.hypixel.net) when creating an application. You can also request higher limits for production applications in this dashboard.
@@ -9468,11 +9574,15 @@ paths:
           content:
             application/json:
               schema:
+                additionalProperties: false
                 properties:
                   profile:
                     $ref: '#/components/schemas/SkyBlockProfile'
                   success:
                     type: boolean
+                required:
+                  - profile
+                  - success
                 type: object
           description: A successful response
         '400':
@@ -9501,6 +9611,7 @@ paths:
           content:
             application/json:
               schema:
+                additionalProperties: false
                 properties:
                   profiles:
                     items:
@@ -9508,6 +9619,9 @@ paths:
                     type: array
                   success:
                     type: boolean
+                required:
+                  - profiles
+                  - success
                 type: object
           description: A successful response
         '400':

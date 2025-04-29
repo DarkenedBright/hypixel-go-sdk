@@ -11,24 +11,30 @@ API version: v2
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SkyBlockProfileBanking type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &SkyBlockProfileBanking{}
 
-// SkyBlockProfileBanking Information about the bank account for this profile, only present if the API banking setting is enabled
+// SkyBlockProfileBanking struct for SkyBlockProfileBanking
 type SkyBlockProfileBanking struct {
-	Balance      *float64                                  `json:"balance,omitempty"`
-	Transactions []SkyBlockProfileBankingTransactionsInner `json:"transactions,omitempty"`
+	Balance      float64                             `json:"balance"`
+	Transactions []SkyBlockProfileBankingTransaction `json:"transactions"`
 }
+
+type _SkyBlockProfileBanking SkyBlockProfileBanking
 
 // NewSkyBlockProfileBanking instantiates a new SkyBlockProfileBanking object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileBanking() *SkyBlockProfileBanking {
+func NewSkyBlockProfileBanking(balance float64, transactions []SkyBlockProfileBankingTransaction) *SkyBlockProfileBanking {
 	this := SkyBlockProfileBanking{}
+	this.Balance = balance
+	this.Transactions = transactions
 	return &this
 }
 
@@ -40,67 +46,51 @@ func NewSkyBlockProfileBankingWithDefaults() *SkyBlockProfileBanking {
 	return &this
 }
 
-// GetBalance returns the Balance field value if set, zero value otherwise.
+// GetBalance returns the Balance field value
 func (o *SkyBlockProfileBanking) GetBalance() float64 {
-	if o == nil || IsNil(o.Balance) {
+	if o == nil {
 		var ret float64
 		return ret
 	}
-	return *o.Balance
+
+	return o.Balance
 }
 
-// GetBalanceOk returns a tuple with the Balance field value if set, nil otherwise
+// GetBalanceOk returns a tuple with the Balance field value
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileBanking) GetBalanceOk() (*float64, bool) {
-	if o == nil || IsNil(o.Balance) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Balance, true
+	return &o.Balance, true
 }
 
-// HasBalance returns a boolean if a field has been set.
-func (o *SkyBlockProfileBanking) HasBalance() bool {
-	if o != nil && !IsNil(o.Balance) {
-		return true
-	}
-
-	return false
-}
-
-// SetBalance gets a reference to the given float64 and assigns it to the Balance field.
+// SetBalance sets field value
 func (o *SkyBlockProfileBanking) SetBalance(v float64) {
-	o.Balance = &v
+	o.Balance = v
 }
 
-// GetTransactions returns the Transactions field value if set, zero value otherwise.
-func (o *SkyBlockProfileBanking) GetTransactions() []SkyBlockProfileBankingTransactionsInner {
-	if o == nil || IsNil(o.Transactions) {
-		var ret []SkyBlockProfileBankingTransactionsInner
+// GetTransactions returns the Transactions field value
+func (o *SkyBlockProfileBanking) GetTransactions() []SkyBlockProfileBankingTransaction {
+	if o == nil {
+		var ret []SkyBlockProfileBankingTransaction
 		return ret
 	}
+
 	return o.Transactions
 }
 
-// GetTransactionsOk returns a tuple with the Transactions field value if set, nil otherwise
+// GetTransactionsOk returns a tuple with the Transactions field value
 // and a boolean to check if the value has been set.
-func (o *SkyBlockProfileBanking) GetTransactionsOk() ([]SkyBlockProfileBankingTransactionsInner, bool) {
-	if o == nil || IsNil(o.Transactions) {
+func (o *SkyBlockProfileBanking) GetTransactionsOk() ([]SkyBlockProfileBankingTransaction, bool) {
+	if o == nil {
 		return nil, false
 	}
 	return o.Transactions, true
 }
 
-// HasTransactions returns a boolean if a field has been set.
-func (o *SkyBlockProfileBanking) HasTransactions() bool {
-	if o != nil && !IsNil(o.Transactions) {
-		return true
-	}
-
-	return false
-}
-
-// SetTransactions gets a reference to the given []SkyBlockProfileBankingTransactionsInner and assigns it to the Transactions field.
-func (o *SkyBlockProfileBanking) SetTransactions(v []SkyBlockProfileBankingTransactionsInner) {
+// SetTransactions sets field value
+func (o *SkyBlockProfileBanking) SetTransactions(v []SkyBlockProfileBankingTransaction) {
 	o.Transactions = v
 }
 
@@ -114,13 +104,47 @@ func (o SkyBlockProfileBanking) MarshalJSON() ([]byte, error) {
 
 func (o SkyBlockProfileBanking) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Balance) {
-		toSerialize["balance"] = o.Balance
-	}
-	if !IsNil(o.Transactions) {
-		toSerialize["transactions"] = o.Transactions
-	}
+	toSerialize["balance"] = o.Balance
+	toSerialize["transactions"] = o.Transactions
 	return toSerialize, nil
+}
+
+func (o *SkyBlockProfileBanking) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"balance",
+		"transactions",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSkyBlockProfileBanking := _SkyBlockProfileBanking{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSkyBlockProfileBanking)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SkyBlockProfileBanking(varSkyBlockProfileBanking)
+
+	return err
 }
 
 type NullableSkyBlockProfileBanking struct {

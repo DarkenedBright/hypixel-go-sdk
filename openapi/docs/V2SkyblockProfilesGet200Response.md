@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Profiles** | Pointer to [**[]SkyBlockProfile**](SkyBlockProfile.md) |  | [optional] 
-**Success** | Pointer to **bool** |  | [optional] 
+**Profiles** | [**[]SkyBlockProfile**](SkyBlockProfile.md) |  | 
+**Success** | **bool** |  | 
 
 ## Methods
 
 ### NewV2SkyblockProfilesGet200Response
 
-`func NewV2SkyblockProfilesGet200Response() *V2SkyblockProfilesGet200Response`
+`func NewV2SkyblockProfilesGet200Response(profiles []SkyBlockProfile, success bool, ) *V2SkyblockProfilesGet200Response`
 
 NewV2SkyblockProfilesGet200Response instantiates a new V2SkyblockProfilesGet200Response object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetProfiles sets Profiles field to given value.
 
-### HasProfiles
-
-`func (o *V2SkyblockProfilesGet200Response) HasProfiles() bool`
-
-HasProfiles returns a boolean if a field has been set.
 
 ### GetSuccess
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetSuccess sets Success field to given value.
 
-### HasSuccess
-
-`func (o *V2SkyblockProfilesGet200Response) HasSuccess() bool`
-
-HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

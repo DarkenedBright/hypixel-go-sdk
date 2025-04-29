@@ -5,18 +5,19 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Banking** | Pointer to [**SkyBlockProfileBanking**](SkyBlockProfileBanking.md) |  | [optional] 
-**CommunityUpgrades** | Pointer to **map[string]interface{}** |  | [optional] 
-**CuteName** | Pointer to **string** |  | [optional] 
+**CommunityUpgrades** | Pointer to [**SkyBlockProfileCommunityUpgrades**](SkyBlockProfileCommunityUpgrades.md) |  | [optional] 
+**CreatedAt** | Pointer to **int64** |  | [optional] 
+**CuteName** | [**SkyBlockProfileCuteName**](SkyBlockProfileCuteName.md) |  | 
 **GameMode** | Pointer to [**SkyBlockProfileGameMode**](SkyBlockProfileGameMode.md) |  | [optional] 
-**Members** | Pointer to [**map[string]SkyBlockProfileMember**](SkyBlockProfileMember.md) |  | [optional] 
-**ProfileId** | Pointer to **string** |  | [optional] 
-**Selected** | Pointer to **bool** |  | [optional] 
+**Members** | [**map[string]SkyBlockProfileMember**](SkyBlockProfileMember.md) |  | 
+**ProfileId** | **string** |  | 
+**Selected** | **bool** |  | 
 
 ## Methods
 
 ### NewSkyBlockProfile
 
-`func NewSkyBlockProfile() *SkyBlockProfile`
+`func NewSkyBlockProfile(cuteName SkyBlockProfileCuteName, members map[string]SkyBlockProfileMember, profileId string, selected bool, ) *SkyBlockProfile`
 
 NewSkyBlockProfile instantiates a new SkyBlockProfile object
 This constructor will assign default values to properties that have it defined,
@@ -58,20 +59,20 @@ HasBanking returns a boolean if a field has been set.
 
 ### GetCommunityUpgrades
 
-`func (o *SkyBlockProfile) GetCommunityUpgrades() map[string]interface{}`
+`func (o *SkyBlockProfile) GetCommunityUpgrades() SkyBlockProfileCommunityUpgrades`
 
 GetCommunityUpgrades returns the CommunityUpgrades field if non-nil, zero value otherwise.
 
 ### GetCommunityUpgradesOk
 
-`func (o *SkyBlockProfile) GetCommunityUpgradesOk() (*map[string]interface{}, bool)`
+`func (o *SkyBlockProfile) GetCommunityUpgradesOk() (*SkyBlockProfileCommunityUpgrades, bool)`
 
 GetCommunityUpgradesOk returns a tuple with the CommunityUpgrades field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCommunityUpgrades
 
-`func (o *SkyBlockProfile) SetCommunityUpgrades(v map[string]interface{})`
+`func (o *SkyBlockProfile) SetCommunityUpgrades(v SkyBlockProfileCommunityUpgrades)`
 
 SetCommunityUpgrades sets CommunityUpgrades field to given value.
 
@@ -81,30 +82,50 @@ SetCommunityUpgrades sets CommunityUpgrades field to given value.
 
 HasCommunityUpgrades returns a boolean if a field has been set.
 
+### GetCreatedAt
+
+`func (o *SkyBlockProfile) GetCreatedAt() int64`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *SkyBlockProfile) GetCreatedAtOk() (*int64, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *SkyBlockProfile) SetCreatedAt(v int64)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *SkyBlockProfile) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
 ### GetCuteName
 
-`func (o *SkyBlockProfile) GetCuteName() string`
+`func (o *SkyBlockProfile) GetCuteName() SkyBlockProfileCuteName`
 
 GetCuteName returns the CuteName field if non-nil, zero value otherwise.
 
 ### GetCuteNameOk
 
-`func (o *SkyBlockProfile) GetCuteNameOk() (*string, bool)`
+`func (o *SkyBlockProfile) GetCuteNameOk() (*SkyBlockProfileCuteName, bool)`
 
 GetCuteNameOk returns a tuple with the CuteName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCuteName
 
-`func (o *SkyBlockProfile) SetCuteName(v string)`
+`func (o *SkyBlockProfile) SetCuteName(v SkyBlockProfileCuteName)`
 
 SetCuteName sets CuteName field to given value.
 
-### HasCuteName
-
-`func (o *SkyBlockProfile) HasCuteName() bool`
-
-HasCuteName returns a boolean if a field has been set.
 
 ### GetGameMode
 
@@ -150,11 +171,6 @@ and a boolean to check if the value has been set.
 
 SetMembers sets Members field to given value.
 
-### HasMembers
-
-`func (o *SkyBlockProfile) HasMembers() bool`
-
-HasMembers returns a boolean if a field has been set.
 
 ### GetProfileId
 
@@ -175,11 +191,6 @@ and a boolean to check if the value has been set.
 
 SetProfileId sets ProfileId field to given value.
 
-### HasProfileId
-
-`func (o *SkyBlockProfile) HasProfileId() bool`
-
-HasProfileId returns a boolean if a field has been set.
 
 ### GetSelected
 
@@ -200,11 +211,6 @@ and a boolean to check if the value has been set.
 
 SetSelected sets Selected field to given value.
 
-### HasSelected
-
-`func (o *SkyBlockProfile) HasSelected() bool`
-
-HasSelected returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
