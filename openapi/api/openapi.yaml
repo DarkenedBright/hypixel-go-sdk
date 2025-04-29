@@ -13,6 +13,34 @@ info:
 servers:
 - url: https://api.hypixel.net
 paths:
+  /v2/skyblock/news:
+    get:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SkyBlockNews'
+          description: A successful response
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
+          description: "Access is forbidden, usually due to an invalid API key being\
+            \ used."
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
+          description: "A request limit has been reached, usually this is due to the\
+            \ limit on the key being reached but can also be triggered by a global\
+            \ throttle."
+      security:
+      - ApiKey: []
+      tags:
+      - SkyBlock
   /v2/skyblock/profile:
     get:
       parameters:
@@ -41,7 +69,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_profile_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
@@ -54,7 +82,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_profile_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -90,7 +118,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_profile_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
@@ -103,7 +131,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_profile_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -126,7 +154,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StatusGet'
+                $ref: '#/components/schemas/Status'
           description: Get player status
         "400":
           content:
@@ -138,14 +166,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_profile_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_profile_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -166,7 +194,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_skyblock_profile_get_403_response'
+            $ref: '#/components/schemas/_v2_skyblock_news_get_403_response'
       description: "Access is forbidden, usually due to an invalid API key being used."
     InvalidPage:
       content:
@@ -202,9 +230,15 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_skyblock_profile_get_429_response'
+            $ref: '#/components/schemas/_v2_skyblock_news_get_429_response'
       description: "A request limit has been reached, usually this is due to the limit\
         \ on the key being reached but can also be triggered by a global throttle."
+    SkyBlockNewsGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockNews'
+      description: A successful response
     SkyBlockProfileGet:
       content:
         application/json:
@@ -221,9 +255,68 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/StatusGet'
+            $ref: '#/components/schemas/Status'
       description: Get player status
   schemas:
+    SkyBlockNews:
+      additionalProperties: false
+      example:
+        success: true
+        items:
+        - item:
+            material: material
+          link: link
+          text: text
+          title: title
+        - item:
+            material: material
+          link: link
+          text: text
+          title: title
+      properties:
+        items:
+          items:
+            $ref: '#/components/schemas/SkyBlockNewsElement'
+          type: array
+        success:
+          type: boolean
+      required:
+      - items
+      - success
+      type: object
+    SkyBlockNewsElement:
+      additionalProperties: false
+      example:
+        item:
+          material: material
+        link: link
+        text: text
+        title: title
+      properties:
+        item:
+          $ref: '#/components/schemas/SkyBlockNewsElementItem'
+        link:
+          type: string
+        text:
+          type: string
+        title:
+          type: string
+      required:
+      - item
+      - link
+      - text
+      - title
+      type: object
+    SkyBlockNewsElementItem:
+      additionalProperties: false
+      example:
+        material: material
+      properties:
+        material:
+          type: string
+      required:
+      - material
+      type: object
     SkyBlockProfile:
       additionalProperties: false
       example:
@@ -43475,7 +43568,7 @@ components:
       - profiles
       - success
       type: object
-    StatusGet:
+    Status:
       additionalProperties: false
       example:
         session:
@@ -43487,7 +43580,7 @@ components:
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         session:
-          $ref: '#/components/schemas/StatusGetSession'
+          $ref: '#/components/schemas/StatusSession'
         success:
           type: boolean
         uuid:
@@ -43498,7 +43591,7 @@ components:
       - success
       - uuid
       type: object
-    StatusGetSession:
+    StatusSession:
       additionalProperties: false
       example:
         mode: mode
@@ -43517,19 +43610,7 @@ components:
       required:
       - online
       type: object
-    _v2_skyblock_profile_get_400_response:
-      example:
-        success: false
-        cause: "Missing one or more fields [...]"
-      properties:
-        cause:
-          example: "Missing one or more fields [...]"
-          type: string
-        success:
-          example: false
-          type: boolean
-      type: object
-    _v2_skyblock_profile_get_403_response:
+    _v2_skyblock_news_get_403_response:
       example:
         success: false
         cause: Invalid API key
@@ -43541,19 +43622,7 @@ components:
           example: false
           type: boolean
       type: object
-    _v2_skyblock_profile_get_422_response:
-      example:
-        success: false
-        cause: Malformed UUID
-      properties:
-        cause:
-          example: Malformed UUID
-          type: string
-        success:
-          example: false
-          type: boolean
-      type: object
-    _v2_skyblock_profile_get_429_response:
+    _v2_skyblock_news_get_429_response:
       example:
         throttle: true
         success: false
@@ -43573,6 +43642,30 @@ components:
           type: boolean
         throttle:
           example: true
+          type: boolean
+      type: object
+    _v2_skyblock_profile_get_400_response:
+      example:
+        success: false
+        cause: "Missing one or more fields [...]"
+      properties:
+        cause:
+          example: "Missing one or more fields [...]"
+          type: string
+        success:
+          example: false
+          type: boolean
+      type: object
+    _v2_skyblock_profile_get_422_response:
+      example:
+        success: false
+        cause: Malformed UUID
+      properties:
+        cause:
+          example: Malformed UUID
+          type: string
+        success:
+          example: false
           type: boolean
       type: object
     SkyBlockProfile_cute_name:

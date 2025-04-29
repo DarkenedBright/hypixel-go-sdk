@@ -1,88 +1,88 @@
-# StatusGet
+# Status
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Session** | [**StatusGetSession**](StatusGetSession.md) |  | 
+**Session** | [**StatusSession**](StatusSession.md) |  | 
 **Success** | **bool** |  | 
 **Uuid** | **string** |  | 
 
 ## Methods
 
-### NewStatusGet
+### NewStatus
 
-`func NewStatusGet(session StatusGetSession, success bool, uuid string, ) *StatusGet`
+`func NewStatus(session StatusSession, success bool, uuid string, ) *Status`
 
-NewStatusGet instantiates a new StatusGet object
+NewStatus instantiates a new Status object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewStatusGetWithDefaults
+### NewStatusWithDefaults
 
-`func NewStatusGetWithDefaults() *StatusGet`
+`func NewStatusWithDefaults() *Status`
 
-NewStatusGetWithDefaults instantiates a new StatusGet object
+NewStatusWithDefaults instantiates a new Status object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetSession
 
-`func (o *StatusGet) GetSession() StatusGetSession`
+`func (o *Status) GetSession() StatusSession`
 
 GetSession returns the Session field if non-nil, zero value otherwise.
 
 ### GetSessionOk
 
-`func (o *StatusGet) GetSessionOk() (*StatusGetSession, bool)`
+`func (o *Status) GetSessionOk() (*StatusSession, bool)`
 
 GetSessionOk returns a tuple with the Session field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSession
 
-`func (o *StatusGet) SetSession(v StatusGetSession)`
+`func (o *Status) SetSession(v StatusSession)`
 
 SetSession sets Session field to given value.
 
 
 ### GetSuccess
 
-`func (o *StatusGet) GetSuccess() bool`
+`func (o *Status) GetSuccess() bool`
 
 GetSuccess returns the Success field if non-nil, zero value otherwise.
 
 ### GetSuccessOk
 
-`func (o *StatusGet) GetSuccessOk() (*bool, bool)`
+`func (o *Status) GetSuccessOk() (*bool, bool)`
 
 GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSuccess
 
-`func (o *StatusGet) SetSuccess(v bool)`
+`func (o *Status) SetSuccess(v bool)`
 
 SetSuccess sets Success field to given value.
 
 
 ### GetUuid
 
-`func (o *StatusGet) GetUuid() string`
+`func (o *Status) GetUuid() string`
 
 GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
 ### GetUuidOk
 
-`func (o *StatusGet) GetUuidOk() (*string, bool)`
+`func (o *Status) GetUuidOk() (*string, bool)`
 
 GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUuid
 
-`func (o *StatusGet) SetUuid(v string)`
+`func (o *Status) SetUuid(v string)`
 
 SetUuid sets Uuid field to given value.
 

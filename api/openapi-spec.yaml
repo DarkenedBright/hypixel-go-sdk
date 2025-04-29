@@ -112,6 +112,12 @@ components:
                 type: boolean
             type: object
       description: A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle.
+    SkyBlockNewsGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockNews'
+      description: A successful response
     SkyBlockProfileGet:
       content:
         application/json:
@@ -128,9 +134,47 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/StatusGet'
+            $ref: '#/components/schemas/Status'
       description: Get player status
   schemas:
+    SkyBlockNews:
+      additionalProperties: false
+      properties:
+        items:
+          items:
+            $ref: '#/components/schemas/SkyBlockNewsElement'
+          type: array
+        success:
+          type: boolean
+      required:
+        - items
+        - success
+      type: object
+    SkyBlockNewsElement:
+      additionalProperties: false
+      properties:
+        item:
+          $ref: '#/components/schemas/SkyBlockNewsElementItem'
+        link:
+          type: string
+        text:
+          type: string
+        title:
+          type: string
+      required:
+        - item
+        - link
+        - text
+        - title
+      type: object
+    SkyBlockNewsElementItem:
+      additionalProperties: false
+      properties:
+        material:
+          type: string
+      required:
+        - material
+      type: object
     SkyBlockProfile:
       additionalProperties: false
       properties:
@@ -9597,11 +9641,11 @@ components:
         - profiles
         - success
       type: object
-    StatusGet:
+    Status:
       additionalProperties: false
       properties:
         session:
-          $ref: '#/components/schemas/StatusGetSession'
+          $ref: '#/components/schemas/StatusSession'
         success:
           type: boolean
         uuid:
@@ -9612,7 +9656,7 @@ components:
         - success
         - uuid
       type: object
-    StatusGetSession:
+    StatusSession:
       additionalProperties: false
       properties:
         gameType:
@@ -9645,6 +9689,19 @@ info:
     url: https://api.hypixel.net/assets/images/logo.png
 openapi: 3.0.3
 paths:
+  /v2/skyblock/news:
+    get:
+      responses:
+        '200':
+          $ref: '#/components/responses/SkyBlockNewsGet'
+        '403':
+          $ref: '#/components/responses/InvalidKey'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+      security:
+        - ApiKey: []
+      tags:
+        - SkyBlock
   /v2/skyblock/profile:
     get:
       parameters:

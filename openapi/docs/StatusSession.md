@@ -1,4 +1,4 @@
-# StatusGetSession
+# StatusSession
 
 ## Properties
 
@@ -11,114 +11,114 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewStatusGetSession
+### NewStatusSession
 
-`func NewStatusGetSession(online bool, ) *StatusGetSession`
+`func NewStatusSession(online bool, ) *StatusSession`
 
-NewStatusGetSession instantiates a new StatusGetSession object
+NewStatusSession instantiates a new StatusSession object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewStatusGetSessionWithDefaults
+### NewStatusSessionWithDefaults
 
-`func NewStatusGetSessionWithDefaults() *StatusGetSession`
+`func NewStatusSessionWithDefaults() *StatusSession`
 
-NewStatusGetSessionWithDefaults instantiates a new StatusGetSession object
+NewStatusSessionWithDefaults instantiates a new StatusSession object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetGameType
 
-`func (o *StatusGetSession) GetGameType() string`
+`func (o *StatusSession) GetGameType() string`
 
 GetGameType returns the GameType field if non-nil, zero value otherwise.
 
 ### GetGameTypeOk
 
-`func (o *StatusGetSession) GetGameTypeOk() (*string, bool)`
+`func (o *StatusSession) GetGameTypeOk() (*string, bool)`
 
 GetGameTypeOk returns a tuple with the GameType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGameType
 
-`func (o *StatusGetSession) SetGameType(v string)`
+`func (o *StatusSession) SetGameType(v string)`
 
 SetGameType sets GameType field to given value.
 
 ### HasGameType
 
-`func (o *StatusGetSession) HasGameType() bool`
+`func (o *StatusSession) HasGameType() bool`
 
 HasGameType returns a boolean if a field has been set.
 
 ### GetMap
 
-`func (o *StatusGetSession) GetMap() string`
+`func (o *StatusSession) GetMap() string`
 
 GetMap returns the Map field if non-nil, zero value otherwise.
 
 ### GetMapOk
 
-`func (o *StatusGetSession) GetMapOk() (*string, bool)`
+`func (o *StatusSession) GetMapOk() (*string, bool)`
 
 GetMapOk returns a tuple with the Map field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMap
 
-`func (o *StatusGetSession) SetMap(v string)`
+`func (o *StatusSession) SetMap(v string)`
 
 SetMap sets Map field to given value.
 
 ### HasMap
 
-`func (o *StatusGetSession) HasMap() bool`
+`func (o *StatusSession) HasMap() bool`
 
 HasMap returns a boolean if a field has been set.
 
 ### GetMode
 
-`func (o *StatusGetSession) GetMode() string`
+`func (o *StatusSession) GetMode() string`
 
 GetMode returns the Mode field if non-nil, zero value otherwise.
 
 ### GetModeOk
 
-`func (o *StatusGetSession) GetModeOk() (*string, bool)`
+`func (o *StatusSession) GetModeOk() (*string, bool)`
 
 GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMode
 
-`func (o *StatusGetSession) SetMode(v string)`
+`func (o *StatusSession) SetMode(v string)`
 
 SetMode sets Mode field to given value.
 
 ### HasMode
 
-`func (o *StatusGetSession) HasMode() bool`
+`func (o *StatusSession) HasMode() bool`
 
 HasMode returns a boolean if a field has been set.
 
 ### GetOnline
 
-`func (o *StatusGetSession) GetOnline() bool`
+`func (o *StatusSession) GetOnline() bool`
 
 GetOnline returns the Online field if non-nil, zero value otherwise.
 
 ### GetOnlineOk
 
-`func (o *StatusGetSession) GetOnlineOk() (*bool, bool)`
+`func (o *StatusSession) GetOnlineOk() (*bool, bool)`
 
 GetOnlineOk returns a tuple with the Online field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOnline
 
-`func (o *StatusGetSession) SetOnline(v bool)`
+`func (o *StatusSession) SetOnline(v bool)`
 
 SetOnline sets Online field to given value.
 

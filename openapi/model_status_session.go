@@ -16,39 +16,39 @@ import (
 	"fmt"
 )
 
-// checks if the StatusGetSession type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &StatusGetSession{}
+// checks if the StatusSession type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &StatusSession{}
 
-// StatusGetSession struct for StatusGetSession
-type StatusGetSession struct {
+// StatusSession struct for StatusSession
+type StatusSession struct {
 	GameType *string `json:"gameType,omitempty"`
 	Map      *string `json:"map,omitempty"`
 	Mode     *string `json:"mode,omitempty"`
 	Online   bool    `json:"online"`
 }
 
-type _StatusGetSession StatusGetSession
+type _StatusSession StatusSession
 
-// NewStatusGetSession instantiates a new StatusGetSession object
+// NewStatusSession instantiates a new StatusSession object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewStatusGetSession(online bool) *StatusGetSession {
-	this := StatusGetSession{}
+func NewStatusSession(online bool) *StatusSession {
+	this := StatusSession{}
 	this.Online = online
 	return &this
 }
 
-// NewStatusGetSessionWithDefaults instantiates a new StatusGetSession object
+// NewStatusSessionWithDefaults instantiates a new StatusSession object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewStatusGetSessionWithDefaults() *StatusGetSession {
-	this := StatusGetSession{}
+func NewStatusSessionWithDefaults() *StatusSession {
+	this := StatusSession{}
 	return &this
 }
 
 // GetGameType returns the GameType field value if set, zero value otherwise.
-func (o *StatusGetSession) GetGameType() string {
+func (o *StatusSession) GetGameType() string {
 	if o == nil || IsNil(o.GameType) {
 		var ret string
 		return ret
@@ -58,7 +58,7 @@ func (o *StatusGetSession) GetGameType() string {
 
 // GetGameTypeOk returns a tuple with the GameType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *StatusGetSession) GetGameTypeOk() (*string, bool) {
+func (o *StatusSession) GetGameTypeOk() (*string, bool) {
 	if o == nil || IsNil(o.GameType) {
 		return nil, false
 	}
@@ -66,7 +66,7 @@ func (o *StatusGetSession) GetGameTypeOk() (*string, bool) {
 }
 
 // HasGameType returns a boolean if a field has been set.
-func (o *StatusGetSession) HasGameType() bool {
+func (o *StatusSession) HasGameType() bool {
 	if o != nil && !IsNil(o.GameType) {
 		return true
 	}
@@ -75,12 +75,12 @@ func (o *StatusGetSession) HasGameType() bool {
 }
 
 // SetGameType gets a reference to the given string and assigns it to the GameType field.
-func (o *StatusGetSession) SetGameType(v string) {
+func (o *StatusSession) SetGameType(v string) {
 	o.GameType = &v
 }
 
 // GetMap returns the Map field value if set, zero value otherwise.
-func (o *StatusGetSession) GetMap() string {
+func (o *StatusSession) GetMap() string {
 	if o == nil || IsNil(o.Map) {
 		var ret string
 		return ret
@@ -90,7 +90,7 @@ func (o *StatusGetSession) GetMap() string {
 
 // GetMapOk returns a tuple with the Map field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *StatusGetSession) GetMapOk() (*string, bool) {
+func (o *StatusSession) GetMapOk() (*string, bool) {
 	if o == nil || IsNil(o.Map) {
 		return nil, false
 	}
@@ -98,7 +98,7 @@ func (o *StatusGetSession) GetMapOk() (*string, bool) {
 }
 
 // HasMap returns a boolean if a field has been set.
-func (o *StatusGetSession) HasMap() bool {
+func (o *StatusSession) HasMap() bool {
 	if o != nil && !IsNil(o.Map) {
 		return true
 	}
@@ -107,12 +107,12 @@ func (o *StatusGetSession) HasMap() bool {
 }
 
 // SetMap gets a reference to the given string and assigns it to the Map field.
-func (o *StatusGetSession) SetMap(v string) {
+func (o *StatusSession) SetMap(v string) {
 	o.Map = &v
 }
 
 // GetMode returns the Mode field value if set, zero value otherwise.
-func (o *StatusGetSession) GetMode() string {
+func (o *StatusSession) GetMode() string {
 	if o == nil || IsNil(o.Mode) {
 		var ret string
 		return ret
@@ -122,7 +122,7 @@ func (o *StatusGetSession) GetMode() string {
 
 // GetModeOk returns a tuple with the Mode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *StatusGetSession) GetModeOk() (*string, bool) {
+func (o *StatusSession) GetModeOk() (*string, bool) {
 	if o == nil || IsNil(o.Mode) {
 		return nil, false
 	}
@@ -130,7 +130,7 @@ func (o *StatusGetSession) GetModeOk() (*string, bool) {
 }
 
 // HasMode returns a boolean if a field has been set.
-func (o *StatusGetSession) HasMode() bool {
+func (o *StatusSession) HasMode() bool {
 	if o != nil && !IsNil(o.Mode) {
 		return true
 	}
@@ -139,12 +139,12 @@ func (o *StatusGetSession) HasMode() bool {
 }
 
 // SetMode gets a reference to the given string and assigns it to the Mode field.
-func (o *StatusGetSession) SetMode(v string) {
+func (o *StatusSession) SetMode(v string) {
 	o.Mode = &v
 }
 
 // GetOnline returns the Online field value
-func (o *StatusGetSession) GetOnline() bool {
+func (o *StatusSession) GetOnline() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -155,7 +155,7 @@ func (o *StatusGetSession) GetOnline() bool {
 
 // GetOnlineOk returns a tuple with the Online field value
 // and a boolean to check if the value has been set.
-func (o *StatusGetSession) GetOnlineOk() (*bool, bool) {
+func (o *StatusSession) GetOnlineOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -163,11 +163,11 @@ func (o *StatusGetSession) GetOnlineOk() (*bool, bool) {
 }
 
 // SetOnline sets field value
-func (o *StatusGetSession) SetOnline(v bool) {
+func (o *StatusSession) SetOnline(v bool) {
 	o.Online = v
 }
 
-func (o StatusGetSession) MarshalJSON() ([]byte, error) {
+func (o StatusSession) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -175,7 +175,7 @@ func (o StatusGetSession) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o StatusGetSession) ToMap() (map[string]interface{}, error) {
+func (o StatusSession) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.GameType) {
 		toSerialize["gameType"] = o.GameType
@@ -190,7 +190,7 @@ func (o StatusGetSession) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-func (o *StatusGetSession) UnmarshalJSON(data []byte) (err error) {
+func (o *StatusSession) UnmarshalJSON(data []byte) (err error) {
 	// This validates that all required properties are included in the JSON object
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
@@ -212,53 +212,53 @@ func (o *StatusGetSession) UnmarshalJSON(data []byte) (err error) {
 		}
 	}
 
-	varStatusGetSession := _StatusGetSession{}
+	varStatusSession := _StatusSession{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
 	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varStatusGetSession)
+	err = decoder.Decode(&varStatusSession)
 
 	if err != nil {
 		return err
 	}
 
-	*o = StatusGetSession(varStatusGetSession)
+	*o = StatusSession(varStatusSession)
 
 	return err
 }
 
-type NullableStatusGetSession struct {
-	value *StatusGetSession
+type NullableStatusSession struct {
+	value *StatusSession
 	isSet bool
 }
 
-func (v NullableStatusGetSession) Get() *StatusGetSession {
+func (v NullableStatusSession) Get() *StatusSession {
 	return v.value
 }
 
-func (v *NullableStatusGetSession) Set(val *StatusGetSession) {
+func (v *NullableStatusSession) Set(val *StatusSession) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableStatusGetSession) IsSet() bool {
+func (v NullableStatusSession) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableStatusGetSession) Unset() {
+func (v *NullableStatusSession) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableStatusGetSession(val *StatusGetSession) *NullableStatusGetSession {
-	return &NullableStatusGetSession{value: val, isSet: true}
+func NewNullableStatusSession(val *StatusSession) *NullableStatusSession {
+	return &NullableStatusSession{value: val, isSet: true}
 }
 
-func (v NullableStatusGetSession) MarshalJSON() ([]byte, error) {
+func (v NullableStatusSession) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableStatusGetSession) UnmarshalJSON(src []byte) error {
+func (v *NullableStatusSession) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

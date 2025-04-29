@@ -80,6 +80,7 @@ All URIs are relative to *https://api.hypixel.net*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PlayerDataAPI* | [**V2StatusGet**](docs/PlayerDataAPI.md#v2statusget) | **Get** /v2/status | The current online status of a specific player
+*SkyBlockAPI* | [**V2SkyblockNewsGet**](docs/SkyBlockAPI.md#v2skyblocknewsget) | **Get** /v2/skyblock/news | 
 *SkyBlockAPI* | [**V2SkyblockProfileGet**](docs/SkyBlockAPI.md#v2skyblockprofileget) | **Get** /v2/skyblock/profile | 
 *SkyBlockAPI* | [**V2SkyblockProfilesGet**](docs/SkyBlockAPI.md#v2skyblockprofilesget) | **Get** /v2/skyblock/profiles | 
 
@@ -90,6 +91,9 @@ Class | Method | HTTP request | Description
  - [InlineObject1](docs/InlineObject1.md)
  - [InlineObject2](docs/InlineObject2.md)
  - [InlineObject3](docs/InlineObject3.md)
+ - [SkyBlockNews](docs/SkyBlockNews.md)
+ - [SkyBlockNewsElement](docs/SkyBlockNewsElement.md)
+ - [SkyBlockNewsElementItem](docs/SkyBlockNewsElementItem.md)
  - [SkyBlockProfile](docs/SkyBlockProfile.md)
  - [SkyBlockProfileBanking](docs/SkyBlockProfileBanking.md)
  - [SkyBlockProfileBankingTransaction](docs/SkyBlockProfileBankingTransaction.md)
@@ -382,12 +386,12 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfileMemberTrophyFish](docs/SkyBlockProfileMemberTrophyFish.md)
  - [SkyBlockProfileMemberWinterPlayerData](docs/SkyBlockProfileMemberWinterPlayerData.md)
  - [SkyBlockProfilesGet](docs/SkyBlockProfilesGet.md)
- - [StatusGet](docs/StatusGet.md)
- - [StatusGetSession](docs/StatusGetSession.md)
+ - [Status](docs/Status.md)
+ - [StatusSession](docs/StatusSession.md)
+ - [V2SkyblockNewsGet403Response](docs/V2SkyblockNewsGet403Response.md)
+ - [V2SkyblockNewsGet429Response](docs/V2SkyblockNewsGet429Response.md)
  - [V2SkyblockProfileGet400Response](docs/V2SkyblockProfileGet400Response.md)
- - [V2SkyblockProfileGet403Response](docs/V2SkyblockProfileGet403Response.md)
  - [V2SkyblockProfileGet422Response](docs/V2SkyblockProfileGet422Response.md)
- - [V2SkyblockProfileGet429Response](docs/V2SkyblockProfileGet429Response.md)
 
 
 ## Documentation For Authorization

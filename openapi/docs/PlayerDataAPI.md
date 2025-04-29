@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## V2StatusGet
 
-> StatusGet V2StatusGet(ctx).Uuid(uuid).Execute()
+> Status V2StatusGet(ctx).Uuid(uuid).Execute()
 
 The current online status of a specific player
 
@@ -36,7 +36,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `PlayerDataAPI.V2StatusGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2StatusGet`: StatusGet
+	// response from `V2StatusGet`: Status
 	fmt.Fprintf(os.Stdout, "Response from `PlayerDataAPI.V2StatusGet`: %v\n", resp)
 }
 ```
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StatusGet**](StatusGet.md)
+[**Status**](Status.md)
 
 ### Authorization
 

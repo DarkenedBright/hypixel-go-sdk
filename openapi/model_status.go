@@ -16,42 +16,42 @@ import (
 	"fmt"
 )
 
-// checks if the StatusGet type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &StatusGet{}
+// checks if the Status type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &Status{}
 
-// StatusGet struct for StatusGet
-type StatusGet struct {
-	Session StatusGetSession `json:"session"`
-	Success bool             `json:"success"`
-	Uuid    string           `json:"uuid"`
+// Status struct for Status
+type Status struct {
+	Session StatusSession `json:"session"`
+	Success bool          `json:"success"`
+	Uuid    string        `json:"uuid"`
 }
 
-type _StatusGet StatusGet
+type _Status Status
 
-// NewStatusGet instantiates a new StatusGet object
+// NewStatus instantiates a new Status object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewStatusGet(session StatusGetSession, success bool, uuid string) *StatusGet {
-	this := StatusGet{}
+func NewStatus(session StatusSession, success bool, uuid string) *Status {
+	this := Status{}
 	this.Session = session
 	this.Success = success
 	this.Uuid = uuid
 	return &this
 }
 
-// NewStatusGetWithDefaults instantiates a new StatusGet object
+// NewStatusWithDefaults instantiates a new Status object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewStatusGetWithDefaults() *StatusGet {
-	this := StatusGet{}
+func NewStatusWithDefaults() *Status {
+	this := Status{}
 	return &this
 }
 
 // GetSession returns the Session field value
-func (o *StatusGet) GetSession() StatusGetSession {
+func (o *Status) GetSession() StatusSession {
 	if o == nil {
-		var ret StatusGetSession
+		var ret StatusSession
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *StatusGet) GetSession() StatusGetSession {
 
 // GetSessionOk returns a tuple with the Session field value
 // and a boolean to check if the value has been set.
-func (o *StatusGet) GetSessionOk() (*StatusGetSession, bool) {
+func (o *Status) GetSessionOk() (*StatusSession, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,12 +68,12 @@ func (o *StatusGet) GetSessionOk() (*StatusGetSession, bool) {
 }
 
 // SetSession sets field value
-func (o *StatusGet) SetSession(v StatusGetSession) {
+func (o *Status) SetSession(v StatusSession) {
 	o.Session = v
 }
 
 // GetSuccess returns the Success field value
-func (o *StatusGet) GetSuccess() bool {
+func (o *Status) GetSuccess() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -84,7 +84,7 @@ func (o *StatusGet) GetSuccess() bool {
 
 // GetSuccessOk returns a tuple with the Success field value
 // and a boolean to check if the value has been set.
-func (o *StatusGet) GetSuccessOk() (*bool, bool) {
+func (o *Status) GetSuccessOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -92,12 +92,12 @@ func (o *StatusGet) GetSuccessOk() (*bool, bool) {
 }
 
 // SetSuccess sets field value
-func (o *StatusGet) SetSuccess(v bool) {
+func (o *Status) SetSuccess(v bool) {
 	o.Success = v
 }
 
 // GetUuid returns the Uuid field value
-func (o *StatusGet) GetUuid() string {
+func (o *Status) GetUuid() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -108,7 +108,7 @@ func (o *StatusGet) GetUuid() string {
 
 // GetUuidOk returns a tuple with the Uuid field value
 // and a boolean to check if the value has been set.
-func (o *StatusGet) GetUuidOk() (*string, bool) {
+func (o *Status) GetUuidOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -116,11 +116,11 @@ func (o *StatusGet) GetUuidOk() (*string, bool) {
 }
 
 // SetUuid sets field value
-func (o *StatusGet) SetUuid(v string) {
+func (o *Status) SetUuid(v string) {
 	o.Uuid = v
 }
 
-func (o StatusGet) MarshalJSON() ([]byte, error) {
+func (o Status) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -128,7 +128,7 @@ func (o StatusGet) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o StatusGet) ToMap() (map[string]interface{}, error) {
+func (o Status) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["session"] = o.Session
 	toSerialize["success"] = o.Success
@@ -136,7 +136,7 @@ func (o StatusGet) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-func (o *StatusGet) UnmarshalJSON(data []byte) (err error) {
+func (o *Status) UnmarshalJSON(data []byte) (err error) {
 	// This validates that all required properties are included in the JSON object
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
@@ -160,53 +160,53 @@ func (o *StatusGet) UnmarshalJSON(data []byte) (err error) {
 		}
 	}
 
-	varStatusGet := _StatusGet{}
+	varStatus := _Status{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
 	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varStatusGet)
+	err = decoder.Decode(&varStatus)
 
 	if err != nil {
 		return err
 	}
 
-	*o = StatusGet(varStatusGet)
+	*o = Status(varStatus)
 
 	return err
 }
 
-type NullableStatusGet struct {
-	value *StatusGet
+type NullableStatus struct {
+	value *Status
 	isSet bool
 }
 
-func (v NullableStatusGet) Get() *StatusGet {
+func (v NullableStatus) Get() *Status {
 	return v.value
 }
 
-func (v *NullableStatusGet) Set(val *StatusGet) {
+func (v *NullableStatus) Set(val *Status) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableStatusGet) IsSet() bool {
+func (v NullableStatus) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableStatusGet) Unset() {
+func (v *NullableStatus) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableStatusGet(val *StatusGet) *NullableStatusGet {
-	return &NullableStatusGet{value: val, isSet: true}
+func NewNullableStatus(val *Status) *NullableStatus {
+	return &NullableStatus{value: val, isSet: true}
 }
 
-func (v NullableStatusGet) MarshalJSON() ([]byte, error) {
+func (v NullableStatus) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableStatusGet) UnmarshalJSON(src []byte) error {
+func (v *NullableStatus) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

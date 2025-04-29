@@ -32,7 +32,7 @@ func (r ApiV2StatusGetRequest) Uuid(uuid string) ApiV2StatusGetRequest {
 	return r
 }
 
-func (r ApiV2StatusGetRequest) Execute() (*StatusGet, *http.Response, error) {
+func (r ApiV2StatusGetRequest) Execute() (*Status, *http.Response, error) {
 	return r.ApiService.V2StatusGetExecute(r)
 }
 
@@ -51,13 +51,13 @@ func (a *PlayerDataAPIService) V2StatusGet(ctx context.Context) ApiV2StatusGetRe
 
 // Execute executes the request
 //
-//	@return StatusGet
-func (a *PlayerDataAPIService) V2StatusGetExecute(r ApiV2StatusGetRequest) (*StatusGet, *http.Response, error) {
+//	@return Status
+func (a *PlayerDataAPIService) V2StatusGetExecute(r ApiV2StatusGetRequest) (*Status, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *StatusGet
+		localVarReturnValue *Status
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlayerDataAPIService.V2StatusGet")
@@ -140,7 +140,7 @@ func (a *PlayerDataAPIService) V2StatusGetExecute(r ApiV2StatusGetRequest) (*Sta
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 403 {
-			var v V2SkyblockProfileGet403Response
+			var v V2SkyblockNewsGet403Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -151,7 +151,7 @@ func (a *PlayerDataAPIService) V2StatusGetExecute(r ApiV2StatusGetRequest) (*Sta
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 429 {
-			var v V2SkyblockProfileGet429Response
+			var v V2SkyblockNewsGet429Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
