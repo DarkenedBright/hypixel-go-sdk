@@ -14,11 +14,11 @@ import (
 	"encoding/json"
 )
 
-// checks if the V2SkyblockGardenGet429Response type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &V2SkyblockGardenGet429Response{}
+// checks if the V2SkyblockBingoGet429Response type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &V2SkyblockBingoGet429Response{}
 
-// V2SkyblockGardenGet429Response struct for V2SkyblockGardenGet429Response
-type V2SkyblockGardenGet429Response struct {
+// V2SkyblockBingoGet429Response struct for V2SkyblockBingoGet429Response
+type V2SkyblockBingoGet429Response struct {
 	Cause *string `json:"cause,omitempty"`
 	// When this boolean exists and is true, the throttle occurring is a global throttle applied to all users
 	Global   *bool `json:"global,omitempty"`
@@ -26,25 +26,25 @@ type V2SkyblockGardenGet429Response struct {
 	Throttle *bool `json:"throttle,omitempty"`
 }
 
-// NewV2SkyblockGardenGet429Response instantiates a new V2SkyblockGardenGet429Response object
+// NewV2SkyblockBingoGet429Response instantiates a new V2SkyblockBingoGet429Response object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewV2SkyblockGardenGet429Response() *V2SkyblockGardenGet429Response {
-	this := V2SkyblockGardenGet429Response{}
+func NewV2SkyblockBingoGet429Response() *V2SkyblockBingoGet429Response {
+	this := V2SkyblockBingoGet429Response{}
 	return &this
 }
 
-// NewV2SkyblockGardenGet429ResponseWithDefaults instantiates a new V2SkyblockGardenGet429Response object
+// NewV2SkyblockBingoGet429ResponseWithDefaults instantiates a new V2SkyblockBingoGet429Response object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewV2SkyblockGardenGet429ResponseWithDefaults() *V2SkyblockGardenGet429Response {
-	this := V2SkyblockGardenGet429Response{}
+func NewV2SkyblockBingoGet429ResponseWithDefaults() *V2SkyblockBingoGet429Response {
+	this := V2SkyblockBingoGet429Response{}
 	return &this
 }
 
 // GetCause returns the Cause field value if set, zero value otherwise.
-func (o *V2SkyblockGardenGet429Response) GetCause() string {
+func (o *V2SkyblockBingoGet429Response) GetCause() string {
 	if o == nil || IsNil(o.Cause) {
 		var ret string
 		return ret
@@ -54,7 +54,7 @@ func (o *V2SkyblockGardenGet429Response) GetCause() string {
 
 // GetCauseOk returns a tuple with the Cause field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2SkyblockGardenGet429Response) GetCauseOk() (*string, bool) {
+func (o *V2SkyblockBingoGet429Response) GetCauseOk() (*string, bool) {
 	if o == nil || IsNil(o.Cause) {
 		return nil, false
 	}
@@ -62,7 +62,7 @@ func (o *V2SkyblockGardenGet429Response) GetCauseOk() (*string, bool) {
 }
 
 // HasCause returns a boolean if a field has been set.
-func (o *V2SkyblockGardenGet429Response) HasCause() bool {
+func (o *V2SkyblockBingoGet429Response) HasCause() bool {
 	if o != nil && !IsNil(o.Cause) {
 		return true
 	}
@@ -71,12 +71,12 @@ func (o *V2SkyblockGardenGet429Response) HasCause() bool {
 }
 
 // SetCause gets a reference to the given string and assigns it to the Cause field.
-func (o *V2SkyblockGardenGet429Response) SetCause(v string) {
+func (o *V2SkyblockBingoGet429Response) SetCause(v string) {
 	o.Cause = &v
 }
 
 // GetGlobal returns the Global field value if set, zero value otherwise.
-func (o *V2SkyblockGardenGet429Response) GetGlobal() bool {
+func (o *V2SkyblockBingoGet429Response) GetGlobal() bool {
 	if o == nil || IsNil(o.Global) {
 		var ret bool
 		return ret
@@ -86,7 +86,7 @@ func (o *V2SkyblockGardenGet429Response) GetGlobal() bool {
 
 // GetGlobalOk returns a tuple with the Global field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2SkyblockGardenGet429Response) GetGlobalOk() (*bool, bool) {
+func (o *V2SkyblockBingoGet429Response) GetGlobalOk() (*bool, bool) {
 	if o == nil || IsNil(o.Global) {
 		return nil, false
 	}
@@ -94,7 +94,7 @@ func (o *V2SkyblockGardenGet429Response) GetGlobalOk() (*bool, bool) {
 }
 
 // HasGlobal returns a boolean if a field has been set.
-func (o *V2SkyblockGardenGet429Response) HasGlobal() bool {
+func (o *V2SkyblockBingoGet429Response) HasGlobal() bool {
 	if o != nil && !IsNil(o.Global) {
 		return true
 	}
@@ -103,12 +103,12 @@ func (o *V2SkyblockGardenGet429Response) HasGlobal() bool {
 }
 
 // SetGlobal gets a reference to the given bool and assigns it to the Global field.
-func (o *V2SkyblockGardenGet429Response) SetGlobal(v bool) {
+func (o *V2SkyblockBingoGet429Response) SetGlobal(v bool) {
 	o.Global = &v
 }
 
 // GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *V2SkyblockGardenGet429Response) GetSuccess() bool {
+func (o *V2SkyblockBingoGet429Response) GetSuccess() bool {
 	if o == nil || IsNil(o.Success) {
 		var ret bool
 		return ret
@@ -118,7 +118,7 @@ func (o *V2SkyblockGardenGet429Response) GetSuccess() bool {
 
 // GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2SkyblockGardenGet429Response) GetSuccessOk() (*bool, bool) {
+func (o *V2SkyblockBingoGet429Response) GetSuccessOk() (*bool, bool) {
 	if o == nil || IsNil(o.Success) {
 		return nil, false
 	}
@@ -126,7 +126,7 @@ func (o *V2SkyblockGardenGet429Response) GetSuccessOk() (*bool, bool) {
 }
 
 // HasSuccess returns a boolean if a field has been set.
-func (o *V2SkyblockGardenGet429Response) HasSuccess() bool {
+func (o *V2SkyblockBingoGet429Response) HasSuccess() bool {
 	if o != nil && !IsNil(o.Success) {
 		return true
 	}
@@ -135,12 +135,12 @@ func (o *V2SkyblockGardenGet429Response) HasSuccess() bool {
 }
 
 // SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *V2SkyblockGardenGet429Response) SetSuccess(v bool) {
+func (o *V2SkyblockBingoGet429Response) SetSuccess(v bool) {
 	o.Success = &v
 }
 
 // GetThrottle returns the Throttle field value if set, zero value otherwise.
-func (o *V2SkyblockGardenGet429Response) GetThrottle() bool {
+func (o *V2SkyblockBingoGet429Response) GetThrottle() bool {
 	if o == nil || IsNil(o.Throttle) {
 		var ret bool
 		return ret
@@ -150,7 +150,7 @@ func (o *V2SkyblockGardenGet429Response) GetThrottle() bool {
 
 // GetThrottleOk returns a tuple with the Throttle field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2SkyblockGardenGet429Response) GetThrottleOk() (*bool, bool) {
+func (o *V2SkyblockBingoGet429Response) GetThrottleOk() (*bool, bool) {
 	if o == nil || IsNil(o.Throttle) {
 		return nil, false
 	}
@@ -158,7 +158,7 @@ func (o *V2SkyblockGardenGet429Response) GetThrottleOk() (*bool, bool) {
 }
 
 // HasThrottle returns a boolean if a field has been set.
-func (o *V2SkyblockGardenGet429Response) HasThrottle() bool {
+func (o *V2SkyblockBingoGet429Response) HasThrottle() bool {
 	if o != nil && !IsNil(o.Throttle) {
 		return true
 	}
@@ -167,11 +167,11 @@ func (o *V2SkyblockGardenGet429Response) HasThrottle() bool {
 }
 
 // SetThrottle gets a reference to the given bool and assigns it to the Throttle field.
-func (o *V2SkyblockGardenGet429Response) SetThrottle(v bool) {
+func (o *V2SkyblockBingoGet429Response) SetThrottle(v bool) {
 	o.Throttle = &v
 }
 
-func (o V2SkyblockGardenGet429Response) MarshalJSON() ([]byte, error) {
+func (o V2SkyblockBingoGet429Response) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -179,7 +179,7 @@ func (o V2SkyblockGardenGet429Response) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o V2SkyblockGardenGet429Response) ToMap() (map[string]interface{}, error) {
+func (o V2SkyblockBingoGet429Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cause) {
 		toSerialize["cause"] = o.Cause
@@ -196,38 +196,38 @@ func (o V2SkyblockGardenGet429Response) ToMap() (map[string]interface{}, error) 
 	return toSerialize, nil
 }
 
-type NullableV2SkyblockGardenGet429Response struct {
-	value *V2SkyblockGardenGet429Response
+type NullableV2SkyblockBingoGet429Response struct {
+	value *V2SkyblockBingoGet429Response
 	isSet bool
 }
 
-func (v NullableV2SkyblockGardenGet429Response) Get() *V2SkyblockGardenGet429Response {
+func (v NullableV2SkyblockBingoGet429Response) Get() *V2SkyblockBingoGet429Response {
 	return v.value
 }
 
-func (v *NullableV2SkyblockGardenGet429Response) Set(val *V2SkyblockGardenGet429Response) {
+func (v *NullableV2SkyblockBingoGet429Response) Set(val *V2SkyblockBingoGet429Response) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableV2SkyblockGardenGet429Response) IsSet() bool {
+func (v NullableV2SkyblockBingoGet429Response) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableV2SkyblockGardenGet429Response) Unset() {
+func (v *NullableV2SkyblockBingoGet429Response) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableV2SkyblockGardenGet429Response(val *V2SkyblockGardenGet429Response) *NullableV2SkyblockGardenGet429Response {
-	return &NullableV2SkyblockGardenGet429Response{value: val, isSet: true}
+func NewNullableV2SkyblockBingoGet429Response(val *V2SkyblockBingoGet429Response) *NullableV2SkyblockBingoGet429Response {
+	return &NullableV2SkyblockBingoGet429Response{value: val, isSet: true}
 }
 
-func (v NullableV2SkyblockGardenGet429Response) MarshalJSON() ([]byte, error) {
+func (v NullableV2SkyblockBingoGet429Response) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableV2SkyblockGardenGet429Response) UnmarshalJSON(src []byte) error {
+func (v *NullableV2SkyblockBingoGet429Response) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

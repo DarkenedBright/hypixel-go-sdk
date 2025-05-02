@@ -80,6 +80,7 @@ All URIs are relative to *https://api.hypixel.net*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PlayerDataAPI* | [**V2StatusGet**](docs/PlayerDataAPI.md#v2statusget) | **Get** /v2/status | The current online status of a specific player
+*SkyBlockAPI* | [**V2SkyblockBingoGet**](docs/SkyBlockAPI.md#v2skyblockbingoget) | **Get** /v2/skyblock/bingo | Bingo data by player
 *SkyBlockAPI* | [**V2SkyblockFiresalesGet**](docs/SkyBlockAPI.md#v2skyblockfiresalesget) | **Get** /v2/skyblock/firesales | Active/Upcoming Fire Sales
 *SkyBlockAPI* | [**V2SkyblockGardenGet**](docs/SkyBlockAPI.md#v2skyblockgardenget) | **Get** /v2/skyblock/garden | Garden data by profile ID
 *SkyBlockAPI* | [**V2SkyblockMuseumGet**](docs/SkyBlockAPI.md#v2skyblockmuseumget) | **Get** /v2/skyblock/museum | Museum data by profile ID
@@ -93,6 +94,9 @@ Class | Method | HTTP request | Description
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)
  - [InlineObject2](docs/InlineObject2.md)
+ - [SkyBlockBingo](docs/SkyBlockBingo.md)
+ - [SkyBlockBingoEvent](docs/SkyBlockBingoEvent.md)
+ - [SkyBlockBingoEventCompletedGoalsInner](docs/SkyBlockBingoEventCompletedGoalsInner.md)
  - [SkyBlockFireSale](docs/SkyBlockFireSale.md)
  - [SkyBlockFireSales](docs/SkyBlockFireSales.md)
  - [SkyBlockGarden](docs/SkyBlockGarden.md)
@@ -416,11 +420,12 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfilesGet](docs/SkyBlockProfilesGet.md)
  - [Status](docs/Status.md)
  - [StatusSession](docs/StatusSession.md)
- - [V2SkyblockGardenGet403Response](docs/V2SkyblockGardenGet403Response.md)
+ - [V2SkyblockBingoGet400Response](docs/V2SkyblockBingoGet400Response.md)
+ - [V2SkyblockBingoGet403Response](docs/V2SkyblockBingoGet403Response.md)
+ - [V2SkyblockBingoGet404Response](docs/V2SkyblockBingoGet404Response.md)
+ - [V2SkyblockBingoGet422Response](docs/V2SkyblockBingoGet422Response.md)
+ - [V2SkyblockBingoGet429Response](docs/V2SkyblockBingoGet429Response.md)
  - [V2SkyblockGardenGet404Response](docs/V2SkyblockGardenGet404Response.md)
- - [V2SkyblockGardenGet422Response](docs/V2SkyblockGardenGet422Response.md)
- - [V2SkyblockGardenGet429Response](docs/V2SkyblockGardenGet429Response.md)
- - [V2SkyblockProfileGet400Response](docs/V2SkyblockProfileGet400Response.md)
 
 
 ## Documentation For Authorization

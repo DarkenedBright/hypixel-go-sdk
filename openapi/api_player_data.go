@@ -129,7 +129,7 @@ func (a *PlayerDataAPIService) V2StatusGetExecute(r ApiV2StatusGetRequest) (*Sta
 			error: localVarHTTPResponse.Status,
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
-			var v V2SkyblockProfileGet400Response
+			var v V2SkyblockBingoGet400Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -140,7 +140,7 @@ func (a *PlayerDataAPIService) V2StatusGetExecute(r ApiV2StatusGetRequest) (*Sta
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 403 {
-			var v V2SkyblockGardenGet403Response
+			var v V2SkyblockBingoGet403Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -151,7 +151,7 @@ func (a *PlayerDataAPIService) V2StatusGetExecute(r ApiV2StatusGetRequest) (*Sta
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 429 {
-			var v V2SkyblockGardenGet429Response
+			var v V2SkyblockBingoGet429Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()

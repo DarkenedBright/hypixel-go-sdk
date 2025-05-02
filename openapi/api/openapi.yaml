@@ -13,6 +13,63 @@ info:
 servers:
 - url: https://api.hypixel.net
 paths:
+  /v2/skyblock/bingo:
+    get:
+      description: Bingo data for participated events of the provided player.
+      parameters:
+      - explode: true
+        in: query
+        name: uuid
+        required: false
+        schema:
+          format: uuid
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SkyBlockBingo'
+          description: A successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_400_response'
+          description: "Some data is missing, this is usually a field."
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_403_response'
+          description: "Access is forbidden, usually due to an invalid API key being\
+            \ used."
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_404_response'
+          description: No data could be found for the provided player uuid.
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_422_response'
+          description: Some data provided is invalid.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_429_response'
+          description: "A request limit has been reached, usually this is due to the\
+            \ limit on the key being reached but can also be triggered by a global\
+            \ throttle."
+      security:
+      - ApiKey: []
+      summary: Bingo data by player
+      tags:
+      - SkyBlock
   /v2/skyblock/firesales:
     get:
       description: Retrieve the currently active or upcoming Fire Sales for SkyBlock.
@@ -49,7 +106,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "404":
@@ -62,13 +119,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -101,20 +158,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -136,14 +193,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -173,26 +230,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_profile_get_400_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_400_response'
           description: "Some data is missing, this is usually a field."
         "403":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -222,26 +279,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_profile_get_400_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_400_response'
           description: "Some data is missing, this is usually a field."
         "403":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -270,20 +327,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_profile_get_400_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_400_response'
           description: "Some data is missing, this is usually a field."
         "403":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_bingo_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -298,13 +355,13 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_skyblock_profile_get_400_response'
+            $ref: '#/components/schemas/_v2_skyblock_bingo_get_400_response'
       description: "Some data is missing, this is usually a field."
     InvalidKey:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
+            $ref: '#/components/schemas/_v2_skyblock_bingo_get_403_response'
       description: "Access is forbidden, usually due to an invalid API key being used."
     InvalidPage:
       content:
@@ -316,7 +373,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_skyblock_garden_get_422_response'
+            $ref: '#/components/schemas/_v2_skyblock_bingo_get_422_response'
       description: Some data provided is invalid.
     MissingPage:
       content:
@@ -340,9 +397,21 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
+            $ref: '#/components/schemas/_v2_skyblock_bingo_get_429_response'
       description: "A request limit has been reached, usually this is due to the limit\
         \ on the key being reached but can also be triggered by a global throttle."
+    SkyBlockBingoGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockBingo'
+      description: A successful response
+    SkyBlockBingoNoResult:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/_v2_skyblock_bingo_get_404_response'
+      description: No data could be found for the provided player uuid.
     SkyBlockFireSalesGet:
       content:
         application/json:
@@ -386,6 +455,54 @@ components:
             $ref: '#/components/schemas/Status'
       description: Get player status
   schemas:
+    SkyBlockBingo:
+      additionalProperties: false
+      example:
+        success: true
+        events:
+        - completed_goals:
+          - APPLY_DUNGEON_STARS_5
+          - APPLY_DUNGEON_STARS_5
+          key: 0
+          points: 6
+        - completed_goals:
+          - APPLY_DUNGEON_STARS_5
+          - APPLY_DUNGEON_STARS_5
+          key: 0
+          points: 6
+      properties:
+        events:
+          items:
+            $ref: '#/components/schemas/SkyBlockBingoEvent'
+          type: array
+        success:
+          type: boolean
+      required:
+      - events
+      - success
+      type: object
+    SkyBlockBingoEvent:
+      additionalProperties: false
+      example:
+        completed_goals:
+        - APPLY_DUNGEON_STARS_5
+        - APPLY_DUNGEON_STARS_5
+        key: 0
+        points: 6
+      properties:
+        completed_goals:
+          items:
+            $ref: '#/components/schemas/SkyBlockBingoEvent_completed_goals_inner'
+          type: array
+        key:
+          type: integer
+        points:
+          type: integer
+      required:
+      - completed_goals
+      - key
+      - points
+      type: object
     SkyBlockFireSale:
       additionalProperties: false
       example:
@@ -56984,7 +57101,19 @@ components:
       required:
       - online
       type: object
-    _v2_skyblock_garden_get_403_response:
+    _v2_skyblock_bingo_get_400_response:
+      example:
+        success: false
+        cause: "Missing one or more fields [...]"
+      properties:
+        cause:
+          example: "Missing one or more fields [...]"
+          type: string
+        success:
+          example: false
+          type: boolean
+      type: object
+    _v2_skyblock_bingo_get_403_response:
       example:
         success: false
         cause: Invalid API key
@@ -56996,19 +57125,19 @@ components:
           example: false
           type: boolean
       type: object
-    _v2_skyblock_garden_get_404_response:
+    _v2_skyblock_bingo_get_404_response:
       example:
         success: false
-        cause: No result was found
+        cause: No bingo data could be found
       properties:
         cause:
-          example: No result was found
+          example: No bingo data could be found
           type: string
         success:
           example: false
           type: boolean
       type: object
-    _v2_skyblock_garden_get_422_response:
+    _v2_skyblock_bingo_get_422_response:
       example:
         success: false
         cause: Malformed UUID
@@ -57020,7 +57149,7 @@ components:
           example: false
           type: boolean
       type: object
-    _v2_skyblock_garden_get_429_response:
+    _v2_skyblock_bingo_get_429_response:
       example:
         throttle: true
         success: false
@@ -57042,18 +57171,255 @@ components:
           example: true
           type: boolean
       type: object
-    _v2_skyblock_profile_get_400_response:
+    _v2_skyblock_garden_get_404_response:
       example:
         success: false
-        cause: "Missing one or more fields [...]"
+        cause: No result was found
       properties:
         cause:
-          example: "Missing one or more fields [...]"
+          example: No result was found
           type: string
         success:
           example: false
           type: boolean
       type: object
+    SkyBlockBingoEvent_completed_goals_inner:
+      enum:
+      - APPLY_DUNGEON_STARS_5
+      - COLLECTION_LEVEL_5_40
+      - COLLECTION_LEVEL_7_5
+      - COLLECTION_LEVEL_7_7
+      - DUNGEON_CATACOMBS_1_230
+      - DUNGEON_CATACOMBS_1_270
+      - DUNGEON_CATACOMBS_2_250
+      - DUNGEON_CATACOMBS_2_300
+      - EQUIP_ARMADILLO_COMMON
+      - EQUIP_DOLPHIN_COMMON
+      - EQUIP_DOLPHIN_UNCOMMON
+      - EQUIP_ROCK_COMMON
+      - EQUIP_ROCK_UNCOMMON
+      - FIND_EXPERIMENT_PAIRS_1
+      - FIND_EXPERIMENT_PAIRS_3
+      - FIND_EXPERIMENT_PAIRS_5
+      - GARDEN_LEVEL_8
+      - GET_SKILL_alchemy_14
+      - GET_SKILL_alchemy_16
+      - GET_SKILL_alchemy_18
+      - GET_SKILL_alchemy_20
+      - GET_SKILL_alchemy_5
+      - GET_SKILL_combat_10
+      - GET_SKILL_combat_15
+      - GET_SKILL_combat_20
+      - GET_SKILL_combat_5
+      - GET_SKILL_enchanting_18
+      - GET_SKILL_enchanting_20
+      - GET_SKILL_enchanting_5
+      - GET_SKILL_farming_18
+      - GET_SKILL_farming_20
+      - GET_SKILL_farming_5
+      - GET_SKILL_foraging_10
+      - GET_SKILL_foraging_18
+      - GET_SKILL_foraging_20
+      - GET_SKILL_mining_10
+      - GET_SKILL_mining_20
+      - GOBLIN_QUICK_KILL
+      - JAKE_ANIMAL
+      - KILL_GOBLINS_RAID
+      - KILL_LOST_ADVENTURER
+      - KILL_TRAPPER_MOB
+      - OBTAIN_JACOB_BRONZE
+      - OBTAIN_JACOB_SILVER
+      - SECRET_GOAL_1
+      - SECRET_GOAL_10
+      - SECRET_GOAL_11
+      - SECRET_GOAL_12
+      - SECRET_GOAL_13
+      - SECRET_GOAL_14
+      - SECRET_GOAL_15
+      - SECRET_GOAL_16
+      - SECRET_GOAL_17
+      - SECRET_GOAL_18
+      - SECRET_GOAL_19
+      - SECRET_GOAL_2
+      - SECRET_GOAL_20
+      - SECRET_GOAL_3
+      - SECRET_GOAL_4
+      - SECRET_GOAL_5
+      - SECRET_GOAL_6
+      - SECRET_GOAL_7
+      - SECRET_GOAL_8
+      - SECRET_GOAL_9
+      - SOLVE_FETCHUR
+      - SOLVE_PUZZLER
+      - TARGET_PRACTICE
+      - UNLOCK_DUNGEON_CHEST_EMERALD
+      - UNLOCK_DUNGEON_CHEST_OBSIDIAN
+      - UNLOCK_DUNGEON_CHEST_WOOD
+      - UNLOCK_REFORGE_sighted
+      - UNLOCK_UNIQUE_COLLECTIONS_40
+      - abiphone_contacts
+      - bank_coins
+      - bestiary_level_3
+      - bestiary_level_5
+      - bestiary_level_6
+      - bestiary_level_7
+      - brew_potion_level
+      - catch_trophy_fish_15
+      - collect_powder_gemstone
+      - collect_powder_mithril
+      - collection_blaze_rod
+      - collection_bone
+      - collection_cactus
+      - collection_carrot_item
+      - collection_clay_ball
+      - collection_cobblestone
+      - collection_diamond
+      - collection_emerald
+      - collection_ender_pearl
+      - collection_ender_stone
+      - collection_feather
+      - collection_gemstone_collection
+      - collection_glowstone_dust
+      - collection_gold_ingot
+      - collection_gravel
+      - collection_hard_stone
+      - collection_ink_sack
+      - collection_ink_sack:3
+      - collection_iron_ingot
+      - collection_leather
+      - collection_log
+      - collection_log:1
+      - collection_log:2
+      - collection_log:3
+      - collection_log_2
+      - collection_log_2:1
+      - collection_melon
+      - collection_mithril_ore
+      - collection_mushroom_collection
+      - collection_mutton
+      - collection_obsidian
+      - collection_potato_item
+      - collection_prismarine_shard
+      - collection_rabbit
+      - collection_raw_chicken
+      - collection_raw_fish
+      - collection_raw_fish:1
+      - collection_raw_fish:2
+      - collection_redstone
+      - collection_rotten_flesh
+      - collection_sand
+      - collection_slime_ball
+      - collection_spider_eye
+      - collection_sponge
+      - collection_string
+      - collection_sugar_cane
+      - collection_sulphur
+      - collection_water_lily
+      - collection_wheat
+      - complete_commissions
+      - complete_nucleus
+      - consume_mushed_glowed_tonic
+      - consume_mushroomsoup_mystical
+      - consume_mushroomsoup_regular
+      - craft_any_pet
+      - craft_item_aspect_of_the_end
+      - craft_item_cleaver
+      - craft_item_diamond_spreading
+      - craft_item_emerald_ring
+      - craft_item_hot_potato_book
+      - craft_item_large_backpack
+      - craft_item_large_enchanted_chest
+      - craft_item_medium_backpack
+      - craft_item_piggy_bank
+      - craft_item_power_talisman
+      - craft_item_small_backpack
+      - craft_item_super_compactor_3000
+      - craft_minions
+      - deal_damage_one_hit
+      - dungeon_fairy_soul
+      - fairy_souls
+      - fish_coins
+      - fish_sea_creature_CARROT_KING
+      - fish_sea_creatures_timed
+      - forge_item
+      - fuel_time_minion
+      - kill_endermen_10_8
+      - kill_mobs_10000
+      - kill_mobs_15000
+      - kill_mobs_2500
+      - kill_mobs_5000
+      - kill_runic_mob
+      - kill_scatha
+      - mining_commission_100
+      - multi_enchant_ 7
+      - multi_enchant_RAIDER_AXE_10
+      - obtain_backpack
+      - obtain_crystal
+      - obtain_item_campfire_talisman_8
+      - obtain_item_cat_talisman
+      - obtain_item_cheetah_talisman
+      - obtain_item_dojo_blue_belt
+      - obtain_item_dragon_shortbow
+      - obtain_item_gemstone_mixture
+      - obtain_item_grand_exp_bottle
+      - obtain_item_great_carrot_candy
+      - obtain_item_jacobs_ticket
+      - obtain_item_lynx_talisman
+      - obtain_item_mobys_shears
+      - obtain_item_theoretical_hoe
+      - obtain_item_titanic_exp_bottle
+      - obtain_item_wedding_ring_2
+      - obtain_item_zombie_ring
+      - obtain_level_6_enchanted_book
+      - obtain_pet_level
+      - obtain_pets
+      - obtain_t11_minion
+      - obtain_t12_minion
+      - obtain_ultimate_enchanted_book
+      - one_hit_zealot
+      - reforge_dirty
+      - reforge_reinforced
+      - reforge_titanic
+      - reforge_warped
+      - salvage_dragon_armor
+      - simultaneous_potion_effect_15
+      - skill_average
+      - skyblock_level_50
+      - slayer_TWO_120
+      - slayer_TWO_80
+      - slayer_level
+      - spawn_golden_goblin
+      - spider_relic
+      - stat_attack_speed
+      - stat_critical_damage
+      - stat_ferocity
+      - stat_health
+      - stat_sea_creature_chance
+      - stat_strength
+      - stat_walk_speed
+      - summon_arachne
+      - training_weights
+      - unique_potion_bottles
+      - upgrade_pet
+      - use_exp_bottle
+      - visit_zones
+      - wear_accessories
+      - wear_armor_angler
+      - wear_armor_arachne
+      - wear_armor_ember
+      - wear_armor_end
+      - wear_armor_flame_breaker
+      - wear_armor_glacite
+      - wear_armor_lapis_armor
+      - wear_armor_tank_miner
+      - wear_equipment_4
+      - wear_unique_armor_12
+      - wear_unique_armor_15
+      - wear_unique_armor_18
+      - wear_unique_armor_4
+      - wear_unique_armor_7
+      - wear_unique_equipments
+      type: string
     SkyBlockGarden_unlocked_plots_ids_inner:
       enum:
       - advanced_1
