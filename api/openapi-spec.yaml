@@ -112,6 +112,12 @@ components:
                 type: boolean
             type: object
       description: A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle.
+    SkyBlockGardenGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockGardenGet'
+      description: A successful response
     SkyBlockMuseumGet:
       content:
         application/json:
@@ -143,6 +149,481 @@ components:
             $ref: '#/components/schemas/Status'
       description: Get player status
   schemas:
+    SkyBlockGarden:
+      additionalProperties: false
+      properties:
+        active_commissions:
+          $ref: '#/components/schemas/SkyBlockGardenActiveCommissions'
+        commission_data:
+          $ref: '#/components/schemas/SkyBlockGardenCommissionData'
+        composter_data:
+          $ref: '#/components/schemas/SkyBlockGardenComposterData'
+        crop_upgrade_levels:
+          $ref: '#/components/schemas/SkyBlockGardenCropUpgradeLevels'
+        garden_experience:
+          type: number
+        resources_collected:
+          $ref: '#/components/schemas/SkyBlockGardenResourcesCollected'
+        selected_barn_skin:
+          $ref: '#/components/schemas/SkyBlockGardenBarnSkin'
+        unlocked_barn_skins:
+          items:
+            $ref: '#/components/schemas/SkyBlockGardenBarnSkin'
+          type: array
+        unlocked_plots_ids:
+          items:
+            enum:
+              - advanced_1
+              - advanced_10
+              - advanced_11
+              - advanced_12
+              - advanced_2
+              - advanced_3
+              - advanced_4
+              - advanced_5
+              - advanced_6
+              - advanced_7
+              - advanced_8
+              - advanced_9
+              - beginner_1
+              - beginner_2
+              - beginner_3
+              - beginner_4
+              - expert_1
+              - expert_2
+              - expert_3
+              - expert_4
+              - intermediate_1
+              - intermediate_2
+              - intermediate_3
+              - intermediate_4
+            type: string
+          type: array
+        uuid:
+          format: uuid
+          type: string
+      required:
+        - commission_data
+        - composter_data
+        - unlocked_plots_ids
+        - uuid
+      type: object
+    SkyBlockGardenActiveCommissions:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommission'
+      type: object
+    SkyBlockGardenActiveCommissionsCommission:
+      additionalProperties: false
+      properties:
+        bonus_rewards:
+          items:
+            $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommissionBonusReward'
+          type: array
+        extra_rewards:
+          items:
+            $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommissionExtraReward'
+          type: array
+        position:
+          type: integer
+        requirement:
+          items:
+            $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommissionRequirement'
+          type: array
+        status:
+          enum:
+            - NOT_STARTED
+            - STARTED
+          type: string
+      required:
+        - position
+        - requirement
+        - status
+      type: object
+    SkyBlockGardenActiveCommissionsCommissionBonusReward:
+      additionalProperties: false
+      properties:
+        item_id:
+          enum:
+            - FLOWERING_BOUQUET
+            - FRUIT_BOWL
+            - GREEN_BANDANA
+            - OVERGROWN_GRASS
+          type: string
+      required:
+        - item_id
+      type: object
+    SkyBlockGardenActiveCommissionsCommissionExtraReward:
+      additionalProperties: false
+      properties:
+        amount:
+          type: integer
+        blue:
+          type: integer
+        candy:
+          enum:
+            - GREEN_CANDY
+            - PURPLE_CANDY
+          type: string
+        enchant:
+          type: string
+        green:
+          type: integer
+        item:
+          enum:
+            - CASHMERE_JACKET
+            - OXFORD_SHOES
+            - SATIN_TROUSERS
+            - VELVET_TOP_HAT
+          type: string
+        level:
+          type: integer
+        powder:
+          enum:
+            - GEMSTONE
+            - MITHRIL
+          type: string
+        red:
+          type: integer
+        rune:
+          type: string
+      type: object
+    SkyBlockGardenActiveCommissionsCommissionRequirement:
+      additionalProperties: false
+      properties:
+        amount:
+          type: integer
+        item:
+          type: string
+        original_amount:
+          type: integer
+        original_item:
+          type: string
+      required:
+        - amount
+        - item
+        - original_amount
+        - original_item
+      type: object
+    SkyBlockGardenBarnSkin:
+      enum:
+        - autumn_hut
+        - bamboo
+        - beach_ball
+        - beautifall_cabin
+        - butterfly
+        - cabin
+        - castle
+        - chocolate_factory
+        - cozy_cottage
+        - cube
+        - default_1
+        - default_2
+        - default_3
+        - default_4
+        - enchanted_nook
+        - end
+        - flowerpot
+        - frog
+        - hive
+        - jerry
+        - lucky
+        - main_street
+        - mansion_heights
+        - melon
+        - mushroom
+        - pesthunters_lair
+        - pinwheel_house
+        - sand_castle
+        - spring_barn
+        - tavern
+        - town_hall
+        - trading_post
+        - windmill
+        - winter_barn
+        - winter_homestead
+      type: string
+    SkyBlockGardenCommissionData:
+      additionalProperties: false
+      properties:
+        completed:
+          $ref: '#/components/schemas/SkyBlockGardenCommissionDataVisitorData'
+        total_completed:
+          type: integer
+        unique_npcs_served:
+          type: integer
+        visits:
+          $ref: '#/components/schemas/SkyBlockGardenCommissionDataVisitorData'
+      type: object
+    SkyBlockGardenCommissionDataVisitorData:
+      additionalProperties: false
+      properties:
+        adventurer:
+          type: integer
+        alchemist:
+          type: integer
+        andrew:
+          type: integer
+        anita:
+          type: integer
+        arthur:
+          type: integer
+        baker:
+          type: integer
+        banker_broadjaw:
+          type: integer
+        bartender:
+          type: integer
+        bear_pete:
+          type: integer
+        beth:
+          type: integer
+        dalbrek:
+          type: integer
+        disguised_rats:
+          type: integer
+        duke:
+          type: integer
+        dusk:
+          type: integer
+        emissary_carlton:
+          type: integer
+        emissary_ceanna:
+          type: integer
+        emissary_fraiser:
+          type: integer
+        emissary_sisko:
+          type: integer
+        emissary_wilson:
+          type: integer
+        farmer_jon:
+          type: integer
+        farmhand:
+          type: integer
+        fear_mongerer:
+          type: integer
+        felix:
+          type: integer
+        fisherman:
+          type: integer
+        fragilis:
+          type: integer
+        friendly_hiker:
+          type: integer
+        geonathan_greatforge:
+          type: integer
+        gimley:
+          type: integer
+        gold_forger:
+          type: integer
+        grandma_wolf:
+          type: integer
+        guy:
+          type: integer
+        gwendolyn:
+          type: integer
+        hornum:
+          type: integer
+        hungry_hiker:
+          type: integer
+        iron_forger:
+          type: integer
+        jack:
+          type: integer
+        jacob:
+          type: integer
+        jamie:
+          type: integer
+        jerry:
+          type: integer
+        jotraeline_greatforge:
+          type: integer
+        lazy_miner:
+          type: integer
+        leo:
+          type: integer
+        liam:
+          type: integer
+        librarian:
+          type: integer
+        lumberjack:
+          type: integer
+        lumina:
+          type: integer
+        lynn:
+          type: integer
+        madame_eleanor:
+          type: integer
+        maeve:
+          type: integer
+        mason:
+          type: integer
+        odawa:
+          type: integer
+        old_man_garry:
+          type: integer
+        oringo:
+          type: integer
+        pest_wrangler:
+          type: integer
+        plumber_joe:
+          type: integer
+        puzzler:
+          type: integer
+        queen_mismyla:
+          type: integer
+        ravenous_rhino:
+          type: integer
+        rhys:
+          type: integer
+        royal_resident_neighbour:
+          type: integer
+        royal_resident_peasant:
+          type: integer
+        royal_resident_reward:
+          type: integer
+        rusty:
+          type: integer
+        ryu:
+          type: integer
+        sargwyn:
+          type: integer
+        seraphine:
+          type: integer
+        seymour:
+          type: integer
+        shaggy:
+          type: integer
+        shifty:
+          type: integer
+        sirius:
+          type: integer
+        spaceman:
+          type: integer
+        stella:
+          type: integer
+        tammy:
+          type: integer
+        tarwen:
+          type: integer
+        terry:
+          type: integer
+        tia:
+          type: integer
+        tom:
+          type: integer
+        trevor:
+          type: integer
+        vex:
+          type: integer
+        vinyl_collector:
+          type: integer
+        weaponsmith:
+          type: integer
+        wizard:
+          type: integer
+        xalx:
+          type: integer
+        zog:
+          type: integer
+      type: object
+    SkyBlockGardenComposterData:
+      additionalProperties: false
+      properties:
+        compost_items:
+          type: integer
+        compost_units:
+          type: integer
+        conversion_ticks:
+          type: integer
+        fuel_units:
+          type: number
+        last_save:
+          type: integer
+        organic_matter:
+          type: number
+        upgrades:
+          $ref: '#/components/schemas/SkyBlockGardenComposterDataUpgrades'
+      required:
+        - compost_items
+        - compost_units
+        - conversion_ticks
+        - fuel_units
+        - last_save
+        - organic_matter
+      type: object
+    SkyBlockGardenComposterDataUpgrades:
+      additionalProperties: false
+      properties:
+        cost_reduction:
+          type: integer
+        fuel_cap:
+          type: integer
+        multi_drop:
+          type: integer
+        organic_matter_cap:
+          type: integer
+        speed:
+          type: integer
+      type: object
+    SkyBlockGardenCropUpgradeLevels:
+      additionalProperties: false
+      properties:
+        CACTUS:
+          type: integer
+        CARROT_ITEM:
+          type: integer
+        INK_SACK:3:
+          type: integer
+        MELON:
+          type: integer
+        MUSHROOM_COLLECTION:
+          type: integer
+        NETHER_STALK:
+          type: integer
+        POTATO_ITEM:
+          type: integer
+        PUMPKIN:
+          type: integer
+        SUGAR_CANE:
+          type: integer
+        WHEAT:
+          type: integer
+      type: object
+    SkyBlockGardenGet:
+      additionalProperties: false
+      properties:
+        garden:
+          $ref: '#/components/schemas/SkyBlockGarden'
+        success:
+          type: boolean
+      required:
+        - garden
+        - success
+      type: object
+    SkyBlockGardenResourcesCollected:
+      additionalProperties: false
+      properties:
+        CACTUS:
+          type: integer
+        CARROT_ITEM:
+          type: integer
+        INK_SACK:3:
+          type: integer
+        MELON:
+          type: integer
+        MUSHROOM_COLLECTION:
+          type: integer
+        NETHER_STALK:
+          type: integer
+        POTATO_ITEM:
+          type: integer
+        PUMPKIN:
+          type: integer
+        SUGAR_CANE:
+          type: integer
+        WHEAT:
+          type: integer
+      type: object
     SkyBlockMuseum:
       additionalProperties: false
       properties:
@@ -10856,6 +11337,31 @@ info:
     url: https://api.hypixel.net/assets/images/logo.png
 openapi: 3.0.3
 paths:
+  /v2/skyblock/garden:
+    get:
+      description: SkyBlock garden data for the provided profile.
+      parameters:
+        - in: query
+          name: profile
+          schema:
+            format: uuid
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/SkyBlockGardenGet'
+        '403':
+          $ref: '#/components/responses/InvalidKey'
+        '404':
+          $ref: '#/components/responses/NoResult'
+        '422':
+          $ref: '#/components/responses/MalformedData'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+      security:
+        - ApiKey: [ ]
+      summary: Garden data by profile ID
+      tags:
+        - SkyBlock
   /v2/skyblock/museum:
     get:
       description: SkyBlock museum data for all members of the provided profile. The data returned can differ depending on the players in-game API settings.

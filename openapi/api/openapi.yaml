@@ -13,6 +13,57 @@ info:
 servers:
 - url: https://api.hypixel.net
 paths:
+  /v2/skyblock/garden:
+    get:
+      description: SkyBlock garden data for the provided profile.
+      parameters:
+      - explode: true
+        in: query
+        name: profile
+        required: false
+        schema:
+          format: uuid
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SkyBlockGardenGet'
+          description: A successful response
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
+          description: "Access is forbidden, usually due to an invalid API key being\
+            \ used."
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_404_response'
+          description: The request responded with no result.
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_422_response'
+          description: Some data provided is invalid.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
+          description: "A request limit has been reached, usually this is due to the\
+            \ limit on the key being reached but can also be triggered by a global\
+            \ throttle."
+      security:
+      - ApiKey: []
+      summary: Garden data by profile ID
+      tags:
+      - SkyBlock
   /v2/skyblock/museum:
     get:
       description: SkyBlock museum data for all members of the provided profile. The
@@ -37,20 +88,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -72,14 +123,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -115,20 +166,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -164,20 +215,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "422":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_422_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_422_response'
           description: Some data provided is invalid.
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -212,14 +263,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_403_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
           description: "Access is forbidden, usually due to an invalid API key being\
             \ used."
         "429":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/_v2_skyblock_museum_get_429_response'
+                $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
           description: "A request limit has been reached, usually this is due to the\
             \ limit on the key being reached but can also be triggered by a global\
             \ throttle."
@@ -240,7 +291,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_skyblock_museum_get_403_response'
+            $ref: '#/components/schemas/_v2_skyblock_garden_get_403_response'
       description: "Access is forbidden, usually due to an invalid API key being used."
     InvalidPage:
       content:
@@ -252,7 +303,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_skyblock_museum_get_422_response'
+            $ref: '#/components/schemas/_v2_skyblock_garden_get_422_response'
       description: Some data provided is invalid.
     MissingPage:
       content:
@@ -264,21 +315,27 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/inline_object_2'
+            $ref: '#/components/schemas/_v2_skyblock_garden_get_404_response'
       description: The request responded with no result.
     NotPopulated:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/inline_object_3'
+            $ref: '#/components/schemas/inline_object_2'
       description: The data is not yet populated and should be available shortly
     RateLimited:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/_v2_skyblock_museum_get_429_response'
+            $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
       description: "A request limit has been reached, usually this is due to the limit\
         \ on the key being reached but can also be triggered by a global throttle."
+    SkyBlockGardenGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockGardenGet'
+      description: A successful response
     SkyBlockMuseumGet:
       content:
         application/json:
@@ -310,6 +367,1304 @@ components:
             $ref: '#/components/schemas/Status'
       description: Get player status
   schemas:
+    SkyBlockGarden:
+      additionalProperties: false
+      example:
+        garden_experience: 3.8008573585058016
+        selected_barn_skin: autumn_hut
+        unlocked_barn_skins:
+        - null
+        - null
+        commission_data:
+          visits:
+            sargwyn: 4
+            geonathan_greatforge: 3
+            duke: 9
+            seymour: 9
+            emissary_carlton: 6
+            dusk: 9
+            farmhand: 1
+            tia: 7
+            xalx: 3
+            queen_mismyla: 8
+            ryu: 6
+            dalbrek: 4
+            hornum: 0
+            grandma_wolf: 0
+            royal_resident_reward: 1
+            leo: 4
+            bartender: 6
+            jerry: 7
+            spaceman: 8
+            adventurer: 3
+            shifty: 3
+            emissary_sisko: 6
+            alchemist: 2
+            hungry_hiker: 4
+            vinyl_collector: 5
+            puzzler: 6
+            farmer_jon: 6
+            vex: 9
+            gold_forger: 7
+            baker: 1
+            lazy_miner: 3
+            emissary_wilson: 3
+            weaponsmith: 7
+            andrew: 4
+            royal_resident_peasant: 2
+            felix: 6
+            jamie: 3
+            lumina: 1
+            terry: 8
+            trevor: 3
+            odawa: 9
+            emissary_fraiser: 9
+            lynn: 4
+            arthur: 1
+            anita: 7
+            emissary_ceanna: 8
+            gimley: 3
+            shaggy: 1
+            guy: 7
+            madame_eleanor: 7
+            disguised_rats: 5
+            oringo: 7
+            sirius: 9
+            old_man_garry: 0
+            friendly_hiker: 6
+            mason: 0
+            tom: 3
+            zog: 2
+            ravenous_rhino: 4
+            beth: 1
+            liam: 0
+            jacob: 3
+            plumber_joe: 4
+            tammy: 5
+            fragilis: 5
+            jotraeline_greatforge: 5
+            rhys: 3
+            tarwen: 5
+            banker_broadjaw: 1
+            royal_resident_neighbour: 0
+            rusty: 8
+            gwendolyn: 6
+            librarian: 6
+            pest_wrangler: 5
+            bear_pete: 7
+            maeve: 9
+            jack: 7
+            stella: 0
+            fear_mongerer: 2
+            wizard: 0
+            seraphine: 8
+            iron_forger: 8
+            lumberjack: 4
+            fisherman: 6
+          total_completed: 3
+          completed:
+            sargwyn: 4
+            geonathan_greatforge: 3
+            duke: 9
+            seymour: 9
+            emissary_carlton: 6
+            dusk: 9
+            farmhand: 1
+            tia: 7
+            xalx: 3
+            queen_mismyla: 8
+            ryu: 6
+            dalbrek: 4
+            hornum: 0
+            grandma_wolf: 0
+            royal_resident_reward: 1
+            leo: 4
+            bartender: 6
+            jerry: 7
+            spaceman: 8
+            adventurer: 3
+            shifty: 3
+            emissary_sisko: 6
+            alchemist: 2
+            hungry_hiker: 4
+            vinyl_collector: 5
+            puzzler: 6
+            farmer_jon: 6
+            vex: 9
+            gold_forger: 7
+            baker: 1
+            lazy_miner: 3
+            emissary_wilson: 3
+            weaponsmith: 7
+            andrew: 4
+            royal_resident_peasant: 2
+            felix: 6
+            jamie: 3
+            lumina: 1
+            terry: 8
+            trevor: 3
+            odawa: 9
+            emissary_fraiser: 9
+            lynn: 4
+            arthur: 1
+            anita: 7
+            emissary_ceanna: 8
+            gimley: 3
+            shaggy: 1
+            guy: 7
+            madame_eleanor: 7
+            disguised_rats: 5
+            oringo: 7
+            sirius: 9
+            old_man_garry: 0
+            friendly_hiker: 6
+            mason: 0
+            tom: 3
+            zog: 2
+            ravenous_rhino: 4
+            beth: 1
+            liam: 0
+            jacob: 3
+            plumber_joe: 4
+            tammy: 5
+            fragilis: 5
+            jotraeline_greatforge: 5
+            rhys: 3
+            tarwen: 5
+            banker_broadjaw: 1
+            royal_resident_neighbour: 0
+            rusty: 8
+            gwendolyn: 6
+            librarian: 6
+            pest_wrangler: 5
+            bear_pete: 7
+            maeve: 9
+            jack: 7
+            stella: 0
+            fear_mongerer: 2
+            wizard: 0
+            seraphine: 8
+            iron_forger: 8
+            lumberjack: 4
+            fisherman: 6
+          unique_npcs_served: 8
+        resources_collected:
+          INK_SACK:3: 9
+          POTATO_ITEM: 9
+          CARROT_ITEM: 3
+          CACTUS: 1
+          SUGAR_CANE: 4
+          MUSHROOM_COLLECTION: 7
+          PUMPKIN: 1
+          NETHER_STALK: 7
+          WHEAT: 3
+          MELON: 7
+        composter_data:
+          organic_matter: 2.7977867356748476
+          fuel_units: 7.203794749804894
+          compost_items: 4
+          last_save: 4
+          conversion_ticks: 0
+          compost_units: 0
+          upgrades:
+            fuel_cap: 0
+            multi_drop: 2
+            cost_reduction: 9
+            organic_matter_cap: 6
+            speed: 4
+        crop_upgrade_levels:
+          INK_SACK:3: 1
+          POTATO_ITEM: 1
+          CARROT_ITEM: 9
+          CACTUS: 6
+          SUGAR_CANE: 5
+          MUSHROOM_COLLECTION: 3
+          PUMPKIN: 4
+          NETHER_STALK: 5
+          WHEAT: 5
+          MELON: 1
+        active_commissions:
+          key:
+            extra_rewards:
+            - red: 5
+              amount: 0
+              item: CASHMERE_JACKET
+              green: 1
+              blue: 6
+              candy: GREEN_CANDY
+              level: 5
+              enchant: enchant
+              powder: GEMSTONE
+              rune: rune
+            - red: 5
+              amount: 0
+              item: CASHMERE_JACKET
+              green: 1
+              blue: 6
+              candy: GREEN_CANDY
+              level: 5
+              enchant: enchant
+              powder: GEMSTONE
+              rune: rune
+            bonus_rewards:
+            - item_id: FLOWERING_BOUQUET
+            - item_id: FLOWERING_BOUQUET
+            position: 2
+            requirement:
+            - amount: 7
+              item: item
+              original_amount: 9
+              original_item: original_item
+            - amount: 7
+              item: item
+              original_amount: 9
+              original_item: original_item
+            status: NOT_STARTED
+        unlocked_plots_ids:
+        - advanced_1
+        - advanced_1
+        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        active_commissions:
+          additionalProperties:
+            $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommission'
+          type: object
+        commission_data:
+          $ref: '#/components/schemas/SkyBlockGardenCommissionData'
+        composter_data:
+          $ref: '#/components/schemas/SkyBlockGardenComposterData'
+        crop_upgrade_levels:
+          $ref: '#/components/schemas/SkyBlockGardenCropUpgradeLevels'
+        garden_experience:
+          type: number
+        resources_collected:
+          $ref: '#/components/schemas/SkyBlockGardenResourcesCollected'
+        selected_barn_skin:
+          $ref: '#/components/schemas/SkyBlockGardenBarnSkin'
+        unlocked_barn_skins:
+          items:
+            $ref: '#/components/schemas/SkyBlockGardenBarnSkin'
+          type: array
+        unlocked_plots_ids:
+          items:
+            $ref: '#/components/schemas/SkyBlockGarden_unlocked_plots_ids_inner'
+          type: array
+        uuid:
+          format: uuid
+          type: string
+      required:
+      - commission_data
+      - composter_data
+      - unlocked_plots_ids
+      - uuid
+      type: object
+    SkyBlockGardenActiveCommissions:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommission'
+      type: object
+    SkyBlockGardenActiveCommissionsCommission:
+      additionalProperties: false
+      example:
+        extra_rewards:
+        - red: 5
+          amount: 0
+          item: CASHMERE_JACKET
+          green: 1
+          blue: 6
+          candy: GREEN_CANDY
+          level: 5
+          enchant: enchant
+          powder: GEMSTONE
+          rune: rune
+        - red: 5
+          amount: 0
+          item: CASHMERE_JACKET
+          green: 1
+          blue: 6
+          candy: GREEN_CANDY
+          level: 5
+          enchant: enchant
+          powder: GEMSTONE
+          rune: rune
+        bonus_rewards:
+        - item_id: FLOWERING_BOUQUET
+        - item_id: FLOWERING_BOUQUET
+        position: 2
+        requirement:
+        - amount: 7
+          item: item
+          original_amount: 9
+          original_item: original_item
+        - amount: 7
+          item: item
+          original_amount: 9
+          original_item: original_item
+        status: NOT_STARTED
+      properties:
+        bonus_rewards:
+          items:
+            $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommissionBonusReward'
+          type: array
+        extra_rewards:
+          items:
+            $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommissionExtraReward'
+          type: array
+        position:
+          type: integer
+        requirement:
+          items:
+            $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommissionRequirement'
+          type: array
+        status:
+          $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommission_status'
+      required:
+      - position
+      - requirement
+      - status
+      type: object
+    SkyBlockGardenActiveCommissionsCommissionBonusReward:
+      additionalProperties: false
+      example:
+        item_id: FLOWERING_BOUQUET
+      properties:
+        item_id:
+          $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommissionBonusReward_item_id'
+      required:
+      - item_id
+      type: object
+    SkyBlockGardenActiveCommissionsCommissionExtraReward:
+      additionalProperties: false
+      example:
+        red: 5
+        amount: 0
+        item: CASHMERE_JACKET
+        green: 1
+        blue: 6
+        candy: GREEN_CANDY
+        level: 5
+        enchant: enchant
+        powder: GEMSTONE
+        rune: rune
+      properties:
+        amount:
+          type: integer
+        blue:
+          type: integer
+        candy:
+          $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommissionExtraReward_candy'
+        enchant:
+          type: string
+        green:
+          type: integer
+        item:
+          $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommissionExtraReward_item'
+        level:
+          type: integer
+        powder:
+          $ref: '#/components/schemas/SkyBlockGardenActiveCommissionsCommissionExtraReward_powder'
+        red:
+          type: integer
+        rune:
+          type: string
+      type: object
+    SkyBlockGardenActiveCommissionsCommissionRequirement:
+      additionalProperties: false
+      example:
+        amount: 7
+        item: item
+        original_amount: 9
+        original_item: original_item
+      properties:
+        amount:
+          type: integer
+        item:
+          type: string
+        original_amount:
+          type: integer
+        original_item:
+          type: string
+      required:
+      - amount
+      - item
+      - original_amount
+      - original_item
+      type: object
+    SkyBlockGardenBarnSkin:
+      enum:
+      - autumn_hut
+      - bamboo
+      - beach_ball
+      - beautifall_cabin
+      - butterfly
+      - cabin
+      - castle
+      - chocolate_factory
+      - cozy_cottage
+      - cube
+      - default_1
+      - default_2
+      - default_3
+      - default_4
+      - enchanted_nook
+      - end
+      - flowerpot
+      - frog
+      - hive
+      - jerry
+      - lucky
+      - main_street
+      - mansion_heights
+      - melon
+      - mushroom
+      - pesthunters_lair
+      - pinwheel_house
+      - sand_castle
+      - spring_barn
+      - tavern
+      - town_hall
+      - trading_post
+      - windmill
+      - winter_barn
+      - winter_homestead
+      type: string
+    SkyBlockGardenCommissionData:
+      additionalProperties: false
+      example:
+        visits:
+          sargwyn: 4
+          geonathan_greatforge: 3
+          duke: 9
+          seymour: 9
+          emissary_carlton: 6
+          dusk: 9
+          farmhand: 1
+          tia: 7
+          xalx: 3
+          queen_mismyla: 8
+          ryu: 6
+          dalbrek: 4
+          hornum: 0
+          grandma_wolf: 0
+          royal_resident_reward: 1
+          leo: 4
+          bartender: 6
+          jerry: 7
+          spaceman: 8
+          adventurer: 3
+          shifty: 3
+          emissary_sisko: 6
+          alchemist: 2
+          hungry_hiker: 4
+          vinyl_collector: 5
+          puzzler: 6
+          farmer_jon: 6
+          vex: 9
+          gold_forger: 7
+          baker: 1
+          lazy_miner: 3
+          emissary_wilson: 3
+          weaponsmith: 7
+          andrew: 4
+          royal_resident_peasant: 2
+          felix: 6
+          jamie: 3
+          lumina: 1
+          terry: 8
+          trevor: 3
+          odawa: 9
+          emissary_fraiser: 9
+          lynn: 4
+          arthur: 1
+          anita: 7
+          emissary_ceanna: 8
+          gimley: 3
+          shaggy: 1
+          guy: 7
+          madame_eleanor: 7
+          disguised_rats: 5
+          oringo: 7
+          sirius: 9
+          old_man_garry: 0
+          friendly_hiker: 6
+          mason: 0
+          tom: 3
+          zog: 2
+          ravenous_rhino: 4
+          beth: 1
+          liam: 0
+          jacob: 3
+          plumber_joe: 4
+          tammy: 5
+          fragilis: 5
+          jotraeline_greatforge: 5
+          rhys: 3
+          tarwen: 5
+          banker_broadjaw: 1
+          royal_resident_neighbour: 0
+          rusty: 8
+          gwendolyn: 6
+          librarian: 6
+          pest_wrangler: 5
+          bear_pete: 7
+          maeve: 9
+          jack: 7
+          stella: 0
+          fear_mongerer: 2
+          wizard: 0
+          seraphine: 8
+          iron_forger: 8
+          lumberjack: 4
+          fisherman: 6
+        total_completed: 3
+        completed:
+          sargwyn: 4
+          geonathan_greatforge: 3
+          duke: 9
+          seymour: 9
+          emissary_carlton: 6
+          dusk: 9
+          farmhand: 1
+          tia: 7
+          xalx: 3
+          queen_mismyla: 8
+          ryu: 6
+          dalbrek: 4
+          hornum: 0
+          grandma_wolf: 0
+          royal_resident_reward: 1
+          leo: 4
+          bartender: 6
+          jerry: 7
+          spaceman: 8
+          adventurer: 3
+          shifty: 3
+          emissary_sisko: 6
+          alchemist: 2
+          hungry_hiker: 4
+          vinyl_collector: 5
+          puzzler: 6
+          farmer_jon: 6
+          vex: 9
+          gold_forger: 7
+          baker: 1
+          lazy_miner: 3
+          emissary_wilson: 3
+          weaponsmith: 7
+          andrew: 4
+          royal_resident_peasant: 2
+          felix: 6
+          jamie: 3
+          lumina: 1
+          terry: 8
+          trevor: 3
+          odawa: 9
+          emissary_fraiser: 9
+          lynn: 4
+          arthur: 1
+          anita: 7
+          emissary_ceanna: 8
+          gimley: 3
+          shaggy: 1
+          guy: 7
+          madame_eleanor: 7
+          disguised_rats: 5
+          oringo: 7
+          sirius: 9
+          old_man_garry: 0
+          friendly_hiker: 6
+          mason: 0
+          tom: 3
+          zog: 2
+          ravenous_rhino: 4
+          beth: 1
+          liam: 0
+          jacob: 3
+          plumber_joe: 4
+          tammy: 5
+          fragilis: 5
+          jotraeline_greatforge: 5
+          rhys: 3
+          tarwen: 5
+          banker_broadjaw: 1
+          royal_resident_neighbour: 0
+          rusty: 8
+          gwendolyn: 6
+          librarian: 6
+          pest_wrangler: 5
+          bear_pete: 7
+          maeve: 9
+          jack: 7
+          stella: 0
+          fear_mongerer: 2
+          wizard: 0
+          seraphine: 8
+          iron_forger: 8
+          lumberjack: 4
+          fisherman: 6
+        unique_npcs_served: 8
+      properties:
+        completed:
+          $ref: '#/components/schemas/SkyBlockGardenCommissionDataVisitorData'
+        total_completed:
+          type: integer
+        unique_npcs_served:
+          type: integer
+        visits:
+          $ref: '#/components/schemas/SkyBlockGardenCommissionDataVisitorData'
+      type: object
+    SkyBlockGardenCommissionDataVisitorData:
+      additionalProperties: false
+      example:
+        sargwyn: 4
+        geonathan_greatforge: 3
+        duke: 9
+        seymour: 9
+        emissary_carlton: 6
+        dusk: 9
+        farmhand: 1
+        tia: 7
+        xalx: 3
+        queen_mismyla: 8
+        ryu: 6
+        dalbrek: 4
+        hornum: 0
+        grandma_wolf: 0
+        royal_resident_reward: 1
+        leo: 4
+        bartender: 6
+        jerry: 7
+        spaceman: 8
+        adventurer: 3
+        shifty: 3
+        emissary_sisko: 6
+        alchemist: 2
+        hungry_hiker: 4
+        vinyl_collector: 5
+        puzzler: 6
+        farmer_jon: 6
+        vex: 9
+        gold_forger: 7
+        baker: 1
+        lazy_miner: 3
+        emissary_wilson: 3
+        weaponsmith: 7
+        andrew: 4
+        royal_resident_peasant: 2
+        felix: 6
+        jamie: 3
+        lumina: 1
+        terry: 8
+        trevor: 3
+        odawa: 9
+        emissary_fraiser: 9
+        lynn: 4
+        arthur: 1
+        anita: 7
+        emissary_ceanna: 8
+        gimley: 3
+        shaggy: 1
+        guy: 7
+        madame_eleanor: 7
+        disguised_rats: 5
+        oringo: 7
+        sirius: 9
+        old_man_garry: 0
+        friendly_hiker: 6
+        mason: 0
+        tom: 3
+        zog: 2
+        ravenous_rhino: 4
+        beth: 1
+        liam: 0
+        jacob: 3
+        plumber_joe: 4
+        tammy: 5
+        fragilis: 5
+        jotraeline_greatforge: 5
+        rhys: 3
+        tarwen: 5
+        banker_broadjaw: 1
+        royal_resident_neighbour: 0
+        rusty: 8
+        gwendolyn: 6
+        librarian: 6
+        pest_wrangler: 5
+        bear_pete: 7
+        maeve: 9
+        jack: 7
+        stella: 0
+        fear_mongerer: 2
+        wizard: 0
+        seraphine: 8
+        iron_forger: 8
+        lumberjack: 4
+        fisherman: 6
+      properties:
+        adventurer:
+          type: integer
+        alchemist:
+          type: integer
+        andrew:
+          type: integer
+        anita:
+          type: integer
+        arthur:
+          type: integer
+        baker:
+          type: integer
+        banker_broadjaw:
+          type: integer
+        bartender:
+          type: integer
+        bear_pete:
+          type: integer
+        beth:
+          type: integer
+        dalbrek:
+          type: integer
+        disguised_rats:
+          type: integer
+        duke:
+          type: integer
+        dusk:
+          type: integer
+        emissary_carlton:
+          type: integer
+        emissary_ceanna:
+          type: integer
+        emissary_fraiser:
+          type: integer
+        emissary_sisko:
+          type: integer
+        emissary_wilson:
+          type: integer
+        farmer_jon:
+          type: integer
+        farmhand:
+          type: integer
+        fear_mongerer:
+          type: integer
+        felix:
+          type: integer
+        fisherman:
+          type: integer
+        fragilis:
+          type: integer
+        friendly_hiker:
+          type: integer
+        geonathan_greatforge:
+          type: integer
+        gimley:
+          type: integer
+        gold_forger:
+          type: integer
+        grandma_wolf:
+          type: integer
+        guy:
+          type: integer
+        gwendolyn:
+          type: integer
+        hornum:
+          type: integer
+        hungry_hiker:
+          type: integer
+        iron_forger:
+          type: integer
+        jack:
+          type: integer
+        jacob:
+          type: integer
+        jamie:
+          type: integer
+        jerry:
+          type: integer
+        jotraeline_greatforge:
+          type: integer
+        lazy_miner:
+          type: integer
+        leo:
+          type: integer
+        liam:
+          type: integer
+        librarian:
+          type: integer
+        lumberjack:
+          type: integer
+        lumina:
+          type: integer
+        lynn:
+          type: integer
+        madame_eleanor:
+          type: integer
+        maeve:
+          type: integer
+        mason:
+          type: integer
+        odawa:
+          type: integer
+        old_man_garry:
+          type: integer
+        oringo:
+          type: integer
+        pest_wrangler:
+          type: integer
+        plumber_joe:
+          type: integer
+        puzzler:
+          type: integer
+        queen_mismyla:
+          type: integer
+        ravenous_rhino:
+          type: integer
+        rhys:
+          type: integer
+        royal_resident_neighbour:
+          type: integer
+        royal_resident_peasant:
+          type: integer
+        royal_resident_reward:
+          type: integer
+        rusty:
+          type: integer
+        ryu:
+          type: integer
+        sargwyn:
+          type: integer
+        seraphine:
+          type: integer
+        seymour:
+          type: integer
+        shaggy:
+          type: integer
+        shifty:
+          type: integer
+        sirius:
+          type: integer
+        spaceman:
+          type: integer
+        stella:
+          type: integer
+        tammy:
+          type: integer
+        tarwen:
+          type: integer
+        terry:
+          type: integer
+        tia:
+          type: integer
+        tom:
+          type: integer
+        trevor:
+          type: integer
+        vex:
+          type: integer
+        vinyl_collector:
+          type: integer
+        weaponsmith:
+          type: integer
+        wizard:
+          type: integer
+        xalx:
+          type: integer
+        zog:
+          type: integer
+      type: object
+    SkyBlockGardenComposterData:
+      additionalProperties: false
+      example:
+        organic_matter: 2.7977867356748476
+        fuel_units: 7.203794749804894
+        compost_items: 4
+        last_save: 4
+        conversion_ticks: 0
+        compost_units: 0
+        upgrades:
+          fuel_cap: 0
+          multi_drop: 2
+          cost_reduction: 9
+          organic_matter_cap: 6
+          speed: 4
+      properties:
+        compost_items:
+          type: integer
+        compost_units:
+          type: integer
+        conversion_ticks:
+          type: integer
+        fuel_units:
+          type: number
+        last_save:
+          type: integer
+        organic_matter:
+          type: number
+        upgrades:
+          $ref: '#/components/schemas/SkyBlockGardenComposterDataUpgrades'
+      required:
+      - compost_items
+      - compost_units
+      - conversion_ticks
+      - fuel_units
+      - last_save
+      - organic_matter
+      type: object
+    SkyBlockGardenComposterDataUpgrades:
+      additionalProperties: false
+      example:
+        fuel_cap: 0
+        multi_drop: 2
+        cost_reduction: 9
+        organic_matter_cap: 6
+        speed: 4
+      properties:
+        cost_reduction:
+          type: integer
+        fuel_cap:
+          type: integer
+        multi_drop:
+          type: integer
+        organic_matter_cap:
+          type: integer
+        speed:
+          type: integer
+      type: object
+    SkyBlockGardenCropUpgradeLevels:
+      additionalProperties: false
+      example:
+        INK_SACK:3: 1
+        POTATO_ITEM: 1
+        CARROT_ITEM: 9
+        CACTUS: 6
+        SUGAR_CANE: 5
+        MUSHROOM_COLLECTION: 3
+        PUMPKIN: 4
+        NETHER_STALK: 5
+        WHEAT: 5
+        MELON: 1
+      properties:
+        CACTUS:
+          type: integer
+        CARROT_ITEM:
+          type: integer
+        INK_SACK:3:
+          type: integer
+        MELON:
+          type: integer
+        MUSHROOM_COLLECTION:
+          type: integer
+        NETHER_STALK:
+          type: integer
+        POTATO_ITEM:
+          type: integer
+        PUMPKIN:
+          type: integer
+        SUGAR_CANE:
+          type: integer
+        WHEAT:
+          type: integer
+      type: object
+    SkyBlockGardenGet:
+      additionalProperties: false
+      example:
+        success: true
+        garden:
+          garden_experience: 3.8008573585058016
+          selected_barn_skin: autumn_hut
+          unlocked_barn_skins:
+          - null
+          - null
+          commission_data:
+            visits:
+              sargwyn: 4
+              geonathan_greatforge: 3
+              duke: 9
+              seymour: 9
+              emissary_carlton: 6
+              dusk: 9
+              farmhand: 1
+              tia: 7
+              xalx: 3
+              queen_mismyla: 8
+              ryu: 6
+              dalbrek: 4
+              hornum: 0
+              grandma_wolf: 0
+              royal_resident_reward: 1
+              leo: 4
+              bartender: 6
+              jerry: 7
+              spaceman: 8
+              adventurer: 3
+              shifty: 3
+              emissary_sisko: 6
+              alchemist: 2
+              hungry_hiker: 4
+              vinyl_collector: 5
+              puzzler: 6
+              farmer_jon: 6
+              vex: 9
+              gold_forger: 7
+              baker: 1
+              lazy_miner: 3
+              emissary_wilson: 3
+              weaponsmith: 7
+              andrew: 4
+              royal_resident_peasant: 2
+              felix: 6
+              jamie: 3
+              lumina: 1
+              terry: 8
+              trevor: 3
+              odawa: 9
+              emissary_fraiser: 9
+              lynn: 4
+              arthur: 1
+              anita: 7
+              emissary_ceanna: 8
+              gimley: 3
+              shaggy: 1
+              guy: 7
+              madame_eleanor: 7
+              disguised_rats: 5
+              oringo: 7
+              sirius: 9
+              old_man_garry: 0
+              friendly_hiker: 6
+              mason: 0
+              tom: 3
+              zog: 2
+              ravenous_rhino: 4
+              beth: 1
+              liam: 0
+              jacob: 3
+              plumber_joe: 4
+              tammy: 5
+              fragilis: 5
+              jotraeline_greatforge: 5
+              rhys: 3
+              tarwen: 5
+              banker_broadjaw: 1
+              royal_resident_neighbour: 0
+              rusty: 8
+              gwendolyn: 6
+              librarian: 6
+              pest_wrangler: 5
+              bear_pete: 7
+              maeve: 9
+              jack: 7
+              stella: 0
+              fear_mongerer: 2
+              wizard: 0
+              seraphine: 8
+              iron_forger: 8
+              lumberjack: 4
+              fisherman: 6
+            total_completed: 3
+            completed:
+              sargwyn: 4
+              geonathan_greatforge: 3
+              duke: 9
+              seymour: 9
+              emissary_carlton: 6
+              dusk: 9
+              farmhand: 1
+              tia: 7
+              xalx: 3
+              queen_mismyla: 8
+              ryu: 6
+              dalbrek: 4
+              hornum: 0
+              grandma_wolf: 0
+              royal_resident_reward: 1
+              leo: 4
+              bartender: 6
+              jerry: 7
+              spaceman: 8
+              adventurer: 3
+              shifty: 3
+              emissary_sisko: 6
+              alchemist: 2
+              hungry_hiker: 4
+              vinyl_collector: 5
+              puzzler: 6
+              farmer_jon: 6
+              vex: 9
+              gold_forger: 7
+              baker: 1
+              lazy_miner: 3
+              emissary_wilson: 3
+              weaponsmith: 7
+              andrew: 4
+              royal_resident_peasant: 2
+              felix: 6
+              jamie: 3
+              lumina: 1
+              terry: 8
+              trevor: 3
+              odawa: 9
+              emissary_fraiser: 9
+              lynn: 4
+              arthur: 1
+              anita: 7
+              emissary_ceanna: 8
+              gimley: 3
+              shaggy: 1
+              guy: 7
+              madame_eleanor: 7
+              disguised_rats: 5
+              oringo: 7
+              sirius: 9
+              old_man_garry: 0
+              friendly_hiker: 6
+              mason: 0
+              tom: 3
+              zog: 2
+              ravenous_rhino: 4
+              beth: 1
+              liam: 0
+              jacob: 3
+              plumber_joe: 4
+              tammy: 5
+              fragilis: 5
+              jotraeline_greatforge: 5
+              rhys: 3
+              tarwen: 5
+              banker_broadjaw: 1
+              royal_resident_neighbour: 0
+              rusty: 8
+              gwendolyn: 6
+              librarian: 6
+              pest_wrangler: 5
+              bear_pete: 7
+              maeve: 9
+              jack: 7
+              stella: 0
+              fear_mongerer: 2
+              wizard: 0
+              seraphine: 8
+              iron_forger: 8
+              lumberjack: 4
+              fisherman: 6
+            unique_npcs_served: 8
+          resources_collected:
+            INK_SACK:3: 9
+            POTATO_ITEM: 9
+            CARROT_ITEM: 3
+            CACTUS: 1
+            SUGAR_CANE: 4
+            MUSHROOM_COLLECTION: 7
+            PUMPKIN: 1
+            NETHER_STALK: 7
+            WHEAT: 3
+            MELON: 7
+          composter_data:
+            organic_matter: 2.7977867356748476
+            fuel_units: 7.203794749804894
+            compost_items: 4
+            last_save: 4
+            conversion_ticks: 0
+            compost_units: 0
+            upgrades:
+              fuel_cap: 0
+              multi_drop: 2
+              cost_reduction: 9
+              organic_matter_cap: 6
+              speed: 4
+          crop_upgrade_levels:
+            INK_SACK:3: 1
+            POTATO_ITEM: 1
+            CARROT_ITEM: 9
+            CACTUS: 6
+            SUGAR_CANE: 5
+            MUSHROOM_COLLECTION: 3
+            PUMPKIN: 4
+            NETHER_STALK: 5
+            WHEAT: 5
+            MELON: 1
+          active_commissions:
+            key:
+              extra_rewards:
+              - red: 5
+                amount: 0
+                item: CASHMERE_JACKET
+                green: 1
+                blue: 6
+                candy: GREEN_CANDY
+                level: 5
+                enchant: enchant
+                powder: GEMSTONE
+                rune: rune
+              - red: 5
+                amount: 0
+                item: CASHMERE_JACKET
+                green: 1
+                blue: 6
+                candy: GREEN_CANDY
+                level: 5
+                enchant: enchant
+                powder: GEMSTONE
+                rune: rune
+              bonus_rewards:
+              - item_id: FLOWERING_BOUQUET
+              - item_id: FLOWERING_BOUQUET
+              position: 2
+              requirement:
+              - amount: 7
+                item: item
+                original_amount: 9
+                original_item: original_item
+              - amount: 7
+                item: item
+                original_amount: 9
+                original_item: original_item
+              status: NOT_STARTED
+          unlocked_plots_ids:
+          - advanced_1
+          - advanced_1
+          uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        garden:
+          $ref: '#/components/schemas/SkyBlockGarden'
+        success:
+          type: boolean
+      required:
+      - garden
+      - success
+      type: object
+    SkyBlockGardenResourcesCollected:
+      additionalProperties: false
+      example:
+        INK_SACK:3: 9
+        POTATO_ITEM: 9
+        CARROT_ITEM: 3
+        CACTUS: 1
+        SUGAR_CANE: 4
+        MUSHROOM_COLLECTION: 7
+        PUMPKIN: 1
+        NETHER_STALK: 7
+        WHEAT: 3
+        MELON: 7
+      properties:
+        CACTUS:
+          type: integer
+        CARROT_ITEM:
+          type: integer
+        INK_SACK:3:
+          type: integer
+        MELON:
+          type: integer
+        MUSHROOM_COLLECTION:
+          type: integer
+        NETHER_STALK:
+          type: integer
+        POTATO_ITEM:
+          type: integer
+        PUMPKIN:
+          type: integer
+        SUGAR_CANE:
+          type: integer
+        WHEAT:
+          type: integer
+      type: object
     SkyBlockMuseum:
       additionalProperties: false
       example:
@@ -55558,7 +56913,7 @@ components:
       required:
       - online
       type: object
-    _v2_skyblock_museum_get_403_response:
+    _v2_skyblock_garden_get_403_response:
       example:
         success: false
         cause: Invalid API key
@@ -55570,7 +56925,19 @@ components:
           example: false
           type: boolean
       type: object
-    _v2_skyblock_museum_get_422_response:
+    _v2_skyblock_garden_get_404_response:
+      example:
+        success: false
+        cause: No result was found
+      properties:
+        cause:
+          example: No result was found
+          type: string
+        success:
+          example: false
+          type: boolean
+      type: object
+    _v2_skyblock_garden_get_422_response:
       example:
         success: false
         cause: Malformed UUID
@@ -55582,7 +56949,7 @@ components:
           example: false
           type: boolean
       type: object
-    _v2_skyblock_museum_get_429_response:
+    _v2_skyblock_garden_get_429_response:
       example:
         throttle: true
         success: false
@@ -55616,6 +56983,62 @@ components:
           example: false
           type: boolean
       type: object
+    SkyBlockGarden_unlocked_plots_ids_inner:
+      enum:
+      - advanced_1
+      - advanced_10
+      - advanced_11
+      - advanced_12
+      - advanced_2
+      - advanced_3
+      - advanced_4
+      - advanced_5
+      - advanced_6
+      - advanced_7
+      - advanced_8
+      - advanced_9
+      - beginner_1
+      - beginner_2
+      - beginner_3
+      - beginner_4
+      - expert_1
+      - expert_2
+      - expert_3
+      - expert_4
+      - intermediate_1
+      - intermediate_2
+      - intermediate_3
+      - intermediate_4
+      type: string
+    SkyBlockGardenActiveCommissionsCommission_status:
+      enum:
+      - NOT_STARTED
+      - STARTED
+      type: string
+    SkyBlockGardenActiveCommissionsCommissionBonusReward_item_id:
+      enum:
+      - FLOWERING_BOUQUET
+      - FRUIT_BOWL
+      - GREEN_BANDANA
+      - OVERGROWN_GRASS
+      type: string
+    SkyBlockGardenActiveCommissionsCommissionExtraReward_candy:
+      enum:
+      - GREEN_CANDY
+      - PURPLE_CANDY
+      type: string
+    SkyBlockGardenActiveCommissionsCommissionExtraReward_item:
+      enum:
+      - CASHMERE_JACKET
+      - OXFORD_SHOES
+      - SATIN_TROUSERS
+      - VELVET_TOP_HAT
+      type: string
+    SkyBlockGardenActiveCommissionsCommissionExtraReward_powder:
+      enum:
+      - GEMSTONE
+      - MITHRIL
+      type: string
     SkyBlockMuseumMemberItem_featured_slot:
       enum:
       - armor_sets:0
@@ -58384,15 +59807,6 @@ components:
           type: boolean
       type: object
     inline_object_2:
-      properties:
-        cause:
-          example: No result was found
-          type: string
-        success:
-          example: false
-          type: boolean
-      type: object
-    inline_object_3:
       properties:
         cause:
           example: Leaderboard data has not yet been populated

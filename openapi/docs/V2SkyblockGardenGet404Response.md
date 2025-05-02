@@ -1,4 +1,4 @@
-# V2SkyblockMuseumGet422Response
+# V2SkyblockGardenGet404Response
 
 ## Properties
 
@@ -9,70 +9,70 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewV2SkyblockMuseumGet422Response
+### NewV2SkyblockGardenGet404Response
 
-`func NewV2SkyblockMuseumGet422Response() *V2SkyblockMuseumGet422Response`
+`func NewV2SkyblockGardenGet404Response() *V2SkyblockGardenGet404Response`
 
-NewV2SkyblockMuseumGet422Response instantiates a new V2SkyblockMuseumGet422Response object
+NewV2SkyblockGardenGet404Response instantiates a new V2SkyblockGardenGet404Response object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewV2SkyblockMuseumGet422ResponseWithDefaults
+### NewV2SkyblockGardenGet404ResponseWithDefaults
 
-`func NewV2SkyblockMuseumGet422ResponseWithDefaults() *V2SkyblockMuseumGet422Response`
+`func NewV2SkyblockGardenGet404ResponseWithDefaults() *V2SkyblockGardenGet404Response`
 
-NewV2SkyblockMuseumGet422ResponseWithDefaults instantiates a new V2SkyblockMuseumGet422Response object
+NewV2SkyblockGardenGet404ResponseWithDefaults instantiates a new V2SkyblockGardenGet404Response object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetCause
 
-`func (o *V2SkyblockMuseumGet422Response) GetCause() string`
+`func (o *V2SkyblockGardenGet404Response) GetCause() string`
 
 GetCause returns the Cause field if non-nil, zero value otherwise.
 
 ### GetCauseOk
 
-`func (o *V2SkyblockMuseumGet422Response) GetCauseOk() (*string, bool)`
+`func (o *V2SkyblockGardenGet404Response) GetCauseOk() (*string, bool)`
 
 GetCauseOk returns a tuple with the Cause field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCause
 
-`func (o *V2SkyblockMuseumGet422Response) SetCause(v string)`
+`func (o *V2SkyblockGardenGet404Response) SetCause(v string)`
 
 SetCause sets Cause field to given value.
 
 ### HasCause
 
-`func (o *V2SkyblockMuseumGet422Response) HasCause() bool`
+`func (o *V2SkyblockGardenGet404Response) HasCause() bool`
 
 HasCause returns a boolean if a field has been set.
 
 ### GetSuccess
 
-`func (o *V2SkyblockMuseumGet422Response) GetSuccess() bool`
+`func (o *V2SkyblockGardenGet404Response) GetSuccess() bool`
 
 GetSuccess returns the Success field if non-nil, zero value otherwise.
 
 ### GetSuccessOk
 
-`func (o *V2SkyblockMuseumGet422Response) GetSuccessOk() (*bool, bool)`
+`func (o *V2SkyblockGardenGet404Response) GetSuccessOk() (*bool, bool)`
 
 GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSuccess
 
-`func (o *V2SkyblockMuseumGet422Response) SetSuccess(v bool)`
+`func (o *V2SkyblockGardenGet404Response) SetSuccess(v bool)`
 
 SetSuccess sets Success field to given value.
 
 ### HasSuccess
 
-`func (o *V2SkyblockMuseumGet422Response) HasSuccess() bool`
+`func (o *V2SkyblockGardenGet404Response) HasSuccess() bool`
 
 HasSuccess returns a boolean if a field has been set.
 

@@ -1,4 +1,4 @@
-# InlineObject3
+# V2SkyblockGardenGet422Response
 
 ## Properties
 
@@ -9,70 +9,70 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewInlineObject3
+### NewV2SkyblockGardenGet422Response
 
-`func NewInlineObject3() *InlineObject3`
+`func NewV2SkyblockGardenGet422Response() *V2SkyblockGardenGet422Response`
 
-NewInlineObject3 instantiates a new InlineObject3 object
+NewV2SkyblockGardenGet422Response instantiates a new V2SkyblockGardenGet422Response object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewInlineObject3WithDefaults
+### NewV2SkyblockGardenGet422ResponseWithDefaults
 
-`func NewInlineObject3WithDefaults() *InlineObject3`
+`func NewV2SkyblockGardenGet422ResponseWithDefaults() *V2SkyblockGardenGet422Response`
 
-NewInlineObject3WithDefaults instantiates a new InlineObject3 object
+NewV2SkyblockGardenGet422ResponseWithDefaults instantiates a new V2SkyblockGardenGet422Response object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetCause
 
-`func (o *InlineObject3) GetCause() string`
+`func (o *V2SkyblockGardenGet422Response) GetCause() string`
 
 GetCause returns the Cause field if non-nil, zero value otherwise.
 
 ### GetCauseOk
 
-`func (o *InlineObject3) GetCauseOk() (*string, bool)`
+`func (o *V2SkyblockGardenGet422Response) GetCauseOk() (*string, bool)`
 
 GetCauseOk returns a tuple with the Cause field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCause
 
-`func (o *InlineObject3) SetCause(v string)`
+`func (o *V2SkyblockGardenGet422Response) SetCause(v string)`
 
 SetCause sets Cause field to given value.
 
 ### HasCause
 
-`func (o *InlineObject3) HasCause() bool`
+`func (o *V2SkyblockGardenGet422Response) HasCause() bool`
 
 HasCause returns a boolean if a field has been set.
 
 ### GetSuccess
 
-`func (o *InlineObject3) GetSuccess() bool`
+`func (o *V2SkyblockGardenGet422Response) GetSuccess() bool`
 
 GetSuccess returns the Success field if non-nil, zero value otherwise.
 
 ### GetSuccessOk
 
-`func (o *InlineObject3) GetSuccessOk() (*bool, bool)`
+`func (o *V2SkyblockGardenGet422Response) GetSuccessOk() (*bool, bool)`
 
 GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSuccess
 
-`func (o *InlineObject3) SetSuccess(v bool)`
+`func (o *V2SkyblockGardenGet422Response) SetSuccess(v bool)`
 
 SetSuccess sets Success field to given value.
 
 ### HasSuccess
 
-`func (o *InlineObject3) HasSuccess() bool`
+`func (o *V2SkyblockGardenGet422Response) HasSuccess() bool`
 
 HasSuccess returns a boolean if a field has been set.
 

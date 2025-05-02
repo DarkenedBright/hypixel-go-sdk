@@ -80,6 +80,7 @@ All URIs are relative to *https://api.hypixel.net*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PlayerDataAPI* | [**V2StatusGet**](docs/PlayerDataAPI.md#v2statusget) | **Get** /v2/status | The current online status of a specific player
+*SkyBlockAPI* | [**V2SkyblockGardenGet**](docs/SkyBlockAPI.md#v2skyblockgardenget) | **Get** /v2/skyblock/garden | Garden data by profile ID
 *SkyBlockAPI* | [**V2SkyblockMuseumGet**](docs/SkyBlockAPI.md#v2skyblockmuseumget) | **Get** /v2/skyblock/museum | Museum data by profile ID
 *SkyBlockAPI* | [**V2SkyblockNewsGet**](docs/SkyBlockAPI.md#v2skyblocknewsget) | **Get** /v2/skyblock/news | 
 *SkyBlockAPI* | [**V2SkyblockProfileGet**](docs/SkyBlockAPI.md#v2skyblockprofileget) | **Get** /v2/skyblock/profile | 
@@ -91,7 +92,25 @@ Class | Method | HTTP request | Description
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)
  - [InlineObject2](docs/InlineObject2.md)
- - [InlineObject3](docs/InlineObject3.md)
+ - [SkyBlockGarden](docs/SkyBlockGarden.md)
+ - [SkyBlockGardenActiveCommissionsCommission](docs/SkyBlockGardenActiveCommissionsCommission.md)
+ - [SkyBlockGardenActiveCommissionsCommissionBonusReward](docs/SkyBlockGardenActiveCommissionsCommissionBonusReward.md)
+ - [SkyBlockGardenActiveCommissionsCommissionBonusRewardItemId](docs/SkyBlockGardenActiveCommissionsCommissionBonusRewardItemId.md)
+ - [SkyBlockGardenActiveCommissionsCommissionExtraReward](docs/SkyBlockGardenActiveCommissionsCommissionExtraReward.md)
+ - [SkyBlockGardenActiveCommissionsCommissionExtraRewardCandy](docs/SkyBlockGardenActiveCommissionsCommissionExtraRewardCandy.md)
+ - [SkyBlockGardenActiveCommissionsCommissionExtraRewardItem](docs/SkyBlockGardenActiveCommissionsCommissionExtraRewardItem.md)
+ - [SkyBlockGardenActiveCommissionsCommissionExtraRewardPowder](docs/SkyBlockGardenActiveCommissionsCommissionExtraRewardPowder.md)
+ - [SkyBlockGardenActiveCommissionsCommissionRequirement](docs/SkyBlockGardenActiveCommissionsCommissionRequirement.md)
+ - [SkyBlockGardenActiveCommissionsCommissionStatus](docs/SkyBlockGardenActiveCommissionsCommissionStatus.md)
+ - [SkyBlockGardenBarnSkin](docs/SkyBlockGardenBarnSkin.md)
+ - [SkyBlockGardenCommissionData](docs/SkyBlockGardenCommissionData.md)
+ - [SkyBlockGardenCommissionDataVisitorData](docs/SkyBlockGardenCommissionDataVisitorData.md)
+ - [SkyBlockGardenComposterData](docs/SkyBlockGardenComposterData.md)
+ - [SkyBlockGardenComposterDataUpgrades](docs/SkyBlockGardenComposterDataUpgrades.md)
+ - [SkyBlockGardenCropUpgradeLevels](docs/SkyBlockGardenCropUpgradeLevels.md)
+ - [SkyBlockGardenGet](docs/SkyBlockGardenGet.md)
+ - [SkyBlockGardenResourcesCollected](docs/SkyBlockGardenResourcesCollected.md)
+ - [SkyBlockGardenUnlockedPlotsIdsInner](docs/SkyBlockGardenUnlockedPlotsIdsInner.md)
  - [SkyBlockMuseum](docs/SkyBlockMuseum.md)
  - [SkyBlockMuseumMember](docs/SkyBlockMuseumMember.md)
  - [SkyBlockMuseumMemberItem](docs/SkyBlockMuseumMemberItem.md)
@@ -394,9 +413,10 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfilesGet](docs/SkyBlockProfilesGet.md)
  - [Status](docs/Status.md)
  - [StatusSession](docs/StatusSession.md)
- - [V2SkyblockMuseumGet403Response](docs/V2SkyblockMuseumGet403Response.md)
- - [V2SkyblockMuseumGet422Response](docs/V2SkyblockMuseumGet422Response.md)
- - [V2SkyblockMuseumGet429Response](docs/V2SkyblockMuseumGet429Response.md)
+ - [V2SkyblockGardenGet403Response](docs/V2SkyblockGardenGet403Response.md)
+ - [V2SkyblockGardenGet404Response](docs/V2SkyblockGardenGet404Response.md)
+ - [V2SkyblockGardenGet422Response](docs/V2SkyblockGardenGet422Response.md)
+ - [V2SkyblockGardenGet429Response](docs/V2SkyblockGardenGet429Response.md)
  - [V2SkyblockProfileGet400Response](docs/V2SkyblockProfileGet400Response.md)
 
 

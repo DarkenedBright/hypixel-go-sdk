@@ -1504,62 +1504,6 @@
                     "SkyBlock"
                 ]
             }
-        },
-        "/v2/skyblock/garden": {
-            "get": {
-                "description": "SkyBlock garden data for the provided profile.",
-                "parameters": [
-                    {
-                        "in": "query",
-                        "name": "profile",
-                        "schema": {
-                            "format": "uuid",
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "garden": {
-                                            "$ref": "#/components/schemas/SkyBlockGarden"
-                                        },
-                                        "success": {
-                                            "type": "boolean"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        },
-                        "description": "A successful response"
-                    },
-                    "403": {
-                        "$ref": "#/components/responses/InvalidKey"
-                    },
-                    "404": {
-                        "$ref": "#/components/responses/NoResult"
-                    },
-                    "422": {
-                        "$ref": "#/components/responses/MalformedData"
-                    },
-                    "429": {
-                        "$ref": "#/components/responses/RateLimited"
-                    }
-                },
-                "security": [
-                    {
-                        "ApiKey": []
-                    }
-                ],
-                "summary": "Garden data by profile ID",
-                "tags": [
-                    "SkyBlock"
-                ]
-            }
         }
     }
 }

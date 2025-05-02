@@ -14,34 +14,34 @@ import (
 	"encoding/json"
 )
 
-// checks if the InlineObject3 type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &InlineObject3{}
+// checks if the V2SkyblockGardenGet422Response type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &V2SkyblockGardenGet422Response{}
 
-// InlineObject3 struct for InlineObject3
-type InlineObject3 struct {
+// V2SkyblockGardenGet422Response struct for V2SkyblockGardenGet422Response
+type V2SkyblockGardenGet422Response struct {
 	Cause   *string `json:"cause,omitempty"`
 	Success *bool   `json:"success,omitempty"`
 }
 
-// NewInlineObject3 instantiates a new InlineObject3 object
+// NewV2SkyblockGardenGet422Response instantiates a new V2SkyblockGardenGet422Response object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInlineObject3() *InlineObject3 {
-	this := InlineObject3{}
+func NewV2SkyblockGardenGet422Response() *V2SkyblockGardenGet422Response {
+	this := V2SkyblockGardenGet422Response{}
 	return &this
 }
 
-// NewInlineObject3WithDefaults instantiates a new InlineObject3 object
+// NewV2SkyblockGardenGet422ResponseWithDefaults instantiates a new V2SkyblockGardenGet422Response object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewInlineObject3WithDefaults() *InlineObject3 {
-	this := InlineObject3{}
+func NewV2SkyblockGardenGet422ResponseWithDefaults() *V2SkyblockGardenGet422Response {
+	this := V2SkyblockGardenGet422Response{}
 	return &this
 }
 
 // GetCause returns the Cause field value if set, zero value otherwise.
-func (o *InlineObject3) GetCause() string {
+func (o *V2SkyblockGardenGet422Response) GetCause() string {
 	if o == nil || IsNil(o.Cause) {
 		var ret string
 		return ret
@@ -51,7 +51,7 @@ func (o *InlineObject3) GetCause() string {
 
 // GetCauseOk returns a tuple with the Cause field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InlineObject3) GetCauseOk() (*string, bool) {
+func (o *V2SkyblockGardenGet422Response) GetCauseOk() (*string, bool) {
 	if o == nil || IsNil(o.Cause) {
 		return nil, false
 	}
@@ -59,7 +59,7 @@ func (o *InlineObject3) GetCauseOk() (*string, bool) {
 }
 
 // HasCause returns a boolean if a field has been set.
-func (o *InlineObject3) HasCause() bool {
+func (o *V2SkyblockGardenGet422Response) HasCause() bool {
 	if o != nil && !IsNil(o.Cause) {
 		return true
 	}
@@ -68,12 +68,12 @@ func (o *InlineObject3) HasCause() bool {
 }
 
 // SetCause gets a reference to the given string and assigns it to the Cause field.
-func (o *InlineObject3) SetCause(v string) {
+func (o *V2SkyblockGardenGet422Response) SetCause(v string) {
 	o.Cause = &v
 }
 
 // GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *InlineObject3) GetSuccess() bool {
+func (o *V2SkyblockGardenGet422Response) GetSuccess() bool {
 	if o == nil || IsNil(o.Success) {
 		var ret bool
 		return ret
@@ -83,7 +83,7 @@ func (o *InlineObject3) GetSuccess() bool {
 
 // GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InlineObject3) GetSuccessOk() (*bool, bool) {
+func (o *V2SkyblockGardenGet422Response) GetSuccessOk() (*bool, bool) {
 	if o == nil || IsNil(o.Success) {
 		return nil, false
 	}
@@ -91,7 +91,7 @@ func (o *InlineObject3) GetSuccessOk() (*bool, bool) {
 }
 
 // HasSuccess returns a boolean if a field has been set.
-func (o *InlineObject3) HasSuccess() bool {
+func (o *V2SkyblockGardenGet422Response) HasSuccess() bool {
 	if o != nil && !IsNil(o.Success) {
 		return true
 	}
@@ -100,11 +100,11 @@ func (o *InlineObject3) HasSuccess() bool {
 }
 
 // SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *InlineObject3) SetSuccess(v bool) {
+func (o *V2SkyblockGardenGet422Response) SetSuccess(v bool) {
 	o.Success = &v
 }
 
-func (o InlineObject3) MarshalJSON() ([]byte, error) {
+func (o V2SkyblockGardenGet422Response) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -112,7 +112,7 @@ func (o InlineObject3) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o InlineObject3) ToMap() (map[string]interface{}, error) {
+func (o V2SkyblockGardenGet422Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cause) {
 		toSerialize["cause"] = o.Cause
@@ -123,38 +123,38 @@ func (o InlineObject3) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableInlineObject3 struct {
-	value *InlineObject3
+type NullableV2SkyblockGardenGet422Response struct {
+	value *V2SkyblockGardenGet422Response
 	isSet bool
 }
 
-func (v NullableInlineObject3) Get() *InlineObject3 {
+func (v NullableV2SkyblockGardenGet422Response) Get() *V2SkyblockGardenGet422Response {
 	return v.value
 }
 
-func (v *NullableInlineObject3) Set(val *InlineObject3) {
+func (v *NullableV2SkyblockGardenGet422Response) Set(val *V2SkyblockGardenGet422Response) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableInlineObject3) IsSet() bool {
+func (v NullableV2SkyblockGardenGet422Response) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableInlineObject3) Unset() {
+func (v *NullableV2SkyblockGardenGet422Response) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableInlineObject3(val *InlineObject3) *NullableInlineObject3 {
-	return &NullableInlineObject3{value: val, isSet: true}
+func NewNullableV2SkyblockGardenGet422Response(val *V2SkyblockGardenGet422Response) *NullableV2SkyblockGardenGet422Response {
+	return &NullableV2SkyblockGardenGet422Response{value: val, isSet: true}
 }
 
-func (v NullableInlineObject3) MarshalJSON() ([]byte, error) {
+func (v NullableV2SkyblockGardenGet422Response) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableInlineObject3) UnmarshalJSON(src []byte) error {
+func (v *NullableV2SkyblockGardenGet422Response) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
