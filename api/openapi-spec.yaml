@@ -112,6 +112,12 @@ components:
                 type: boolean
             type: object
       description: A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle.
+    SkyBlockFireSalesGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockFireSales'
+      description: A successful response
     SkyBlockGardenGet:
       content:
         application/json:
@@ -149,6 +155,39 @@ components:
             $ref: '#/components/schemas/Status'
       description: Get player status
   schemas:
+    SkyBlockFireSale:
+      additionalProperties: false
+      properties:
+        amount:
+          type: integer
+        end:
+          type: integer
+        item_id:
+          type: string
+        price:
+          type: integer
+        start:
+          type: integer
+      required:
+        - amount
+        - end
+        - item_id
+        - price
+        - start
+      type: object
+    SkyBlockFireSales:
+      additionalProperties: false
+      properties:
+        sales:
+          items:
+            $ref: '#/components/schemas/SkyBlockFireSale'
+          type: array
+        success:
+          type: boolean
+      required:
+        - sales
+        - success
+      type: object
     SkyBlockGarden:
       additionalProperties: false
       properties:
@@ -11337,6 +11376,15 @@ info:
     url: https://api.hypixel.net/assets/images/logo.png
 openapi: 3.0.3
 paths:
+  /v2/skyblock/firesales:
+    get:
+      description: Retrieve the currently active or upcoming Fire Sales for SkyBlock.
+      responses:
+        '200':
+          $ref: '#/components/responses/SkyBlockFireSalesGet'
+      summary: Active/Upcoming Fire Sales
+      tags:
+        - SkyBlock
   /v2/skyblock/garden:
     get:
       description: SkyBlock garden data for the provided profile.

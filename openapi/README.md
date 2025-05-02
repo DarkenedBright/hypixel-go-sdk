@@ -80,6 +80,7 @@ All URIs are relative to *https://api.hypixel.net*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PlayerDataAPI* | [**V2StatusGet**](docs/PlayerDataAPI.md#v2statusget) | **Get** /v2/status | The current online status of a specific player
+*SkyBlockAPI* | [**V2SkyblockFiresalesGet**](docs/SkyBlockAPI.md#v2skyblockfiresalesget) | **Get** /v2/skyblock/firesales | Active/Upcoming Fire Sales
 *SkyBlockAPI* | [**V2SkyblockGardenGet**](docs/SkyBlockAPI.md#v2skyblockgardenget) | **Get** /v2/skyblock/garden | Garden data by profile ID
 *SkyBlockAPI* | [**V2SkyblockMuseumGet**](docs/SkyBlockAPI.md#v2skyblockmuseumget) | **Get** /v2/skyblock/museum | Museum data by profile ID
 *SkyBlockAPI* | [**V2SkyblockNewsGet**](docs/SkyBlockAPI.md#v2skyblocknewsget) | **Get** /v2/skyblock/news | 
@@ -92,6 +93,8 @@ Class | Method | HTTP request | Description
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)
  - [InlineObject2](docs/InlineObject2.md)
+ - [SkyBlockFireSale](docs/SkyBlockFireSale.md)
+ - [SkyBlockFireSales](docs/SkyBlockFireSales.md)
  - [SkyBlockGarden](docs/SkyBlockGarden.md)
  - [SkyBlockGardenActiveCommissionsCommission](docs/SkyBlockGardenActiveCommissionsCommission.md)
  - [SkyBlockGardenActiveCommissionsCommissionBonusReward](docs/SkyBlockGardenActiveCommissionsCommissionBonusReward.md)

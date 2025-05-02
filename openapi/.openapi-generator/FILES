@@ -12,6 +12,8 @@ docs/InlineObject1.md
 docs/InlineObject2.md
 docs/PlayerDataAPI.md
 docs/SkyBlockAPI.md
+docs/SkyBlockFireSale.md
+docs/SkyBlockFireSales.md
 docs/SkyBlockGarden.md
 docs/SkyBlockGardenActiveCommissionsCommission.md
 docs/SkyBlockGardenActiveCommissionsCommissionBonusReward.md
@@ -347,6 +349,8 @@ model__v2_skyblock_profile_get_400_response.go
 model_inline_object.go
 model_inline_object_1.go
 model_inline_object_2.go
+model_sky_block_fire_sale.go
+model_sky_block_fire_sales.go
 model_sky_block_garden.go
 model_sky_block_garden_active_commissions_commission.go
 model_sky_block_garden_active_commissions_commission_bonus_reward.go

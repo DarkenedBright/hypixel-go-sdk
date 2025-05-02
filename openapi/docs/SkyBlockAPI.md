@@ -4,12 +4,74 @@ All URIs are relative to *https://api.hypixel.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**V2SkyblockFiresalesGet**](SkyBlockAPI.md#V2SkyblockFiresalesGet) | **Get** /v2/skyblock/firesales | Active/Upcoming Fire Sales
 [**V2SkyblockGardenGet**](SkyBlockAPI.md#V2SkyblockGardenGet) | **Get** /v2/skyblock/garden | Garden data by profile ID
 [**V2SkyblockMuseumGet**](SkyBlockAPI.md#V2SkyblockMuseumGet) | **Get** /v2/skyblock/museum | Museum data by profile ID
 [**V2SkyblockNewsGet**](SkyBlockAPI.md#V2SkyblockNewsGet) | **Get** /v2/skyblock/news | 
 [**V2SkyblockProfileGet**](SkyBlockAPI.md#V2SkyblockProfileGet) | **Get** /v2/skyblock/profile | 
 [**V2SkyblockProfilesGet**](SkyBlockAPI.md#V2SkyblockProfilesGet) | **Get** /v2/skyblock/profiles | 
 
+
+
+## V2SkyblockFiresalesGet
+
+> SkyBlockFireSales V2SkyblockFiresalesGet(ctx).Execute()
+
+Active/Upcoming Fire Sales
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/DarkenedBright/hypixel-go-sdk"
+)
+
+func main() {
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.SkyBlockAPI.V2SkyblockFiresalesGet(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `SkyBlockAPI.V2SkyblockFiresalesGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V2SkyblockFiresalesGet`: SkyBlockFireSales
+	fmt.Fprintf(os.Stdout, "Response from `SkyBlockAPI.V2SkyblockFiresalesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV2SkyblockFiresalesGetRequest struct via the builder pattern
+
+
+### Return type
+
+[**SkyBlockFireSales**](SkyBlockFireSales.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## V2SkyblockGardenGet

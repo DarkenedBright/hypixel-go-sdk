@@ -13,6 +13,19 @@ info:
 servers:
 - url: https://api.hypixel.net
 paths:
+  /v2/skyblock/firesales:
+    get:
+      description: Retrieve the currently active or upcoming Fire Sales for SkyBlock.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SkyBlockFireSales'
+          description: A successful response
+      summary: Active/Upcoming Fire Sales
+      tags:
+      - SkyBlock
   /v2/skyblock/garden:
     get:
       description: SkyBlock garden data for the provided profile.
@@ -330,6 +343,12 @@ components:
             $ref: '#/components/schemas/_v2_skyblock_garden_get_429_response'
       description: "A request limit has been reached, usually this is due to the limit\
         \ on the key being reached but can also be triggered by a global throttle."
+    SkyBlockFireSalesGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockFireSales'
+      description: A successful response
     SkyBlockGardenGet:
       content:
         application/json:
@@ -367,6 +386,58 @@ components:
             $ref: '#/components/schemas/Status'
       description: Get player status
   schemas:
+    SkyBlockFireSale:
+      additionalProperties: false
+      example:
+        amount: 0
+        item_id: item_id
+        price: 1
+        start: 5
+        end: 6
+      properties:
+        amount:
+          type: integer
+        end:
+          type: integer
+        item_id:
+          type: string
+        price:
+          type: integer
+        start:
+          type: integer
+      required:
+      - amount
+      - end
+      - item_id
+      - price
+      - start
+      type: object
+    SkyBlockFireSales:
+      additionalProperties: false
+      example:
+        success: true
+        sales:
+        - amount: 0
+          item_id: item_id
+          price: 1
+          start: 5
+          end: 6
+        - amount: 0
+          item_id: item_id
+          price: 1
+          start: 5
+          end: 6
+      properties:
+        sales:
+          items:
+            $ref: '#/components/schemas/SkyBlockFireSale'
+          type: array
+        success:
+          type: boolean
+      required:
+      - sales
+      - success
+      type: object
     SkyBlockGarden:
       additionalProperties: false
       example:

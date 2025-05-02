@@ -1472,38 +1472,6 @@
                     "SkyBlock"
                 ]
             }
-        },
-        "/v2/skyblock/firesales": {
-            "get": {
-                "description": "Retrieve the currently active or upcoming Fire Sales for SkyBlock.",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "sales": {
-                                            "items": {
-                                                "$ref": "#/components/schemas/SkyBlockFireSale"
-                                            },
-                                            "type": "array"
-                                        },
-                                        "success": {
-                                            "type": "boolean"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        },
-                        "description": "A successful response"
-                    }
-                },
-                "summary": "Active/Upcoming Fire Sales",
-                "tags": [
-                    "SkyBlock"
-                ]
-            }
         }
     }
 }
