@@ -14,34 +14,34 @@ import (
 	"encoding/json"
 )
 
-// checks if the V2SkyblockNewsGet403Response type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &V2SkyblockNewsGet403Response{}
+// checks if the V2SkyblockMuseumGet422Response type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &V2SkyblockMuseumGet422Response{}
 
-// V2SkyblockNewsGet403Response struct for V2SkyblockNewsGet403Response
-type V2SkyblockNewsGet403Response struct {
+// V2SkyblockMuseumGet422Response struct for V2SkyblockMuseumGet422Response
+type V2SkyblockMuseumGet422Response struct {
 	Cause   *string `json:"cause,omitempty"`
 	Success *bool   `json:"success,omitempty"`
 }
 
-// NewV2SkyblockNewsGet403Response instantiates a new V2SkyblockNewsGet403Response object
+// NewV2SkyblockMuseumGet422Response instantiates a new V2SkyblockMuseumGet422Response object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewV2SkyblockNewsGet403Response() *V2SkyblockNewsGet403Response {
-	this := V2SkyblockNewsGet403Response{}
+func NewV2SkyblockMuseumGet422Response() *V2SkyblockMuseumGet422Response {
+	this := V2SkyblockMuseumGet422Response{}
 	return &this
 }
 
-// NewV2SkyblockNewsGet403ResponseWithDefaults instantiates a new V2SkyblockNewsGet403Response object
+// NewV2SkyblockMuseumGet422ResponseWithDefaults instantiates a new V2SkyblockMuseumGet422Response object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewV2SkyblockNewsGet403ResponseWithDefaults() *V2SkyblockNewsGet403Response {
-	this := V2SkyblockNewsGet403Response{}
+func NewV2SkyblockMuseumGet422ResponseWithDefaults() *V2SkyblockMuseumGet422Response {
+	this := V2SkyblockMuseumGet422Response{}
 	return &this
 }
 
 // GetCause returns the Cause field value if set, zero value otherwise.
-func (o *V2SkyblockNewsGet403Response) GetCause() string {
+func (o *V2SkyblockMuseumGet422Response) GetCause() string {
 	if o == nil || IsNil(o.Cause) {
 		var ret string
 		return ret
@@ -51,7 +51,7 @@ func (o *V2SkyblockNewsGet403Response) GetCause() string {
 
 // GetCauseOk returns a tuple with the Cause field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2SkyblockNewsGet403Response) GetCauseOk() (*string, bool) {
+func (o *V2SkyblockMuseumGet422Response) GetCauseOk() (*string, bool) {
 	if o == nil || IsNil(o.Cause) {
 		return nil, false
 	}
@@ -59,7 +59,7 @@ func (o *V2SkyblockNewsGet403Response) GetCauseOk() (*string, bool) {
 }
 
 // HasCause returns a boolean if a field has been set.
-func (o *V2SkyblockNewsGet403Response) HasCause() bool {
+func (o *V2SkyblockMuseumGet422Response) HasCause() bool {
 	if o != nil && !IsNil(o.Cause) {
 		return true
 	}
@@ -68,12 +68,12 @@ func (o *V2SkyblockNewsGet403Response) HasCause() bool {
 }
 
 // SetCause gets a reference to the given string and assigns it to the Cause field.
-func (o *V2SkyblockNewsGet403Response) SetCause(v string) {
+func (o *V2SkyblockMuseumGet422Response) SetCause(v string) {
 	o.Cause = &v
 }
 
 // GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *V2SkyblockNewsGet403Response) GetSuccess() bool {
+func (o *V2SkyblockMuseumGet422Response) GetSuccess() bool {
 	if o == nil || IsNil(o.Success) {
 		var ret bool
 		return ret
@@ -83,7 +83,7 @@ func (o *V2SkyblockNewsGet403Response) GetSuccess() bool {
 
 // GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2SkyblockNewsGet403Response) GetSuccessOk() (*bool, bool) {
+func (o *V2SkyblockMuseumGet422Response) GetSuccessOk() (*bool, bool) {
 	if o == nil || IsNil(o.Success) {
 		return nil, false
 	}
@@ -91,7 +91,7 @@ func (o *V2SkyblockNewsGet403Response) GetSuccessOk() (*bool, bool) {
 }
 
 // HasSuccess returns a boolean if a field has been set.
-func (o *V2SkyblockNewsGet403Response) HasSuccess() bool {
+func (o *V2SkyblockMuseumGet422Response) HasSuccess() bool {
 	if o != nil && !IsNil(o.Success) {
 		return true
 	}
@@ -100,11 +100,11 @@ func (o *V2SkyblockNewsGet403Response) HasSuccess() bool {
 }
 
 // SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *V2SkyblockNewsGet403Response) SetSuccess(v bool) {
+func (o *V2SkyblockMuseumGet422Response) SetSuccess(v bool) {
 	o.Success = &v
 }
 
-func (o V2SkyblockNewsGet403Response) MarshalJSON() ([]byte, error) {
+func (o V2SkyblockMuseumGet422Response) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -112,7 +112,7 @@ func (o V2SkyblockNewsGet403Response) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o V2SkyblockNewsGet403Response) ToMap() (map[string]interface{}, error) {
+func (o V2SkyblockMuseumGet422Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cause) {
 		toSerialize["cause"] = o.Cause
@@ -123,38 +123,38 @@ func (o V2SkyblockNewsGet403Response) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableV2SkyblockNewsGet403Response struct {
-	value *V2SkyblockNewsGet403Response
+type NullableV2SkyblockMuseumGet422Response struct {
+	value *V2SkyblockMuseumGet422Response
 	isSet bool
 }
 
-func (v NullableV2SkyblockNewsGet403Response) Get() *V2SkyblockNewsGet403Response {
+func (v NullableV2SkyblockMuseumGet422Response) Get() *V2SkyblockMuseumGet422Response {
 	return v.value
 }
 
-func (v *NullableV2SkyblockNewsGet403Response) Set(val *V2SkyblockNewsGet403Response) {
+func (v *NullableV2SkyblockMuseumGet422Response) Set(val *V2SkyblockMuseumGet422Response) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableV2SkyblockNewsGet403Response) IsSet() bool {
+func (v NullableV2SkyblockMuseumGet422Response) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableV2SkyblockNewsGet403Response) Unset() {
+func (v *NullableV2SkyblockMuseumGet422Response) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableV2SkyblockNewsGet403Response(val *V2SkyblockNewsGet403Response) *NullableV2SkyblockNewsGet403Response {
-	return &NullableV2SkyblockNewsGet403Response{value: val, isSet: true}
+func NewNullableV2SkyblockMuseumGet422Response(val *V2SkyblockMuseumGet422Response) *NullableV2SkyblockMuseumGet422Response {
+	return &NullableV2SkyblockMuseumGet422Response{value: val, isSet: true}
 }
 
-func (v NullableV2SkyblockNewsGet403Response) MarshalJSON() ([]byte, error) {
+func (v NullableV2SkyblockMuseumGet422Response) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableV2SkyblockNewsGet403Response) UnmarshalJSON(src []byte) error {
+func (v *NullableV2SkyblockMuseumGet422Response) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

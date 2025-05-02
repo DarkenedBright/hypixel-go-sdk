@@ -4,10 +4,77 @@ All URIs are relative to *https://api.hypixel.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**V2SkyblockMuseumGet**](SkyBlockAPI.md#V2SkyblockMuseumGet) | **Get** /v2/skyblock/museum | Museum data by profile ID
 [**V2SkyblockNewsGet**](SkyBlockAPI.md#V2SkyblockNewsGet) | **Get** /v2/skyblock/news | 
 [**V2SkyblockProfileGet**](SkyBlockAPI.md#V2SkyblockProfileGet) | **Get** /v2/skyblock/profile | 
 [**V2SkyblockProfilesGet**](SkyBlockAPI.md#V2SkyblockProfilesGet) | **Get** /v2/skyblock/profiles | 
 
+
+
+## V2SkyblockMuseumGet
+
+> SkyBlockMuseum V2SkyblockMuseumGet(ctx).Profile(profile).Execute()
+
+Museum data by profile ID
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/DarkenedBright/hypixel-go-sdk"
+)
+
+func main() {
+	profile := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.SkyBlockAPI.V2SkyblockMuseumGet(context.Background()).Profile(profile).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `SkyBlockAPI.V2SkyblockMuseumGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V2SkyblockMuseumGet`: SkyBlockMuseum
+	fmt.Fprintf(os.Stdout, "Response from `SkyBlockAPI.V2SkyblockMuseumGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV2SkyblockMuseumGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile** | **string** |  | 
+
+### Return type
+
+[**SkyBlockMuseum**](SkyBlockMuseum.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## V2SkyblockNewsGet

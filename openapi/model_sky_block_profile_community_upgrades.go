@@ -11,9 +11,7 @@ API version: v2
 package openapi
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 // checks if the SkyBlockProfileCommunityUpgrades type satisfies the MappedNullable interface at compile time
@@ -22,18 +20,15 @@ var _ MappedNullable = &SkyBlockProfileCommunityUpgrades{}
 // SkyBlockProfileCommunityUpgrades struct for SkyBlockProfileCommunityUpgrades
 type SkyBlockProfileCommunityUpgrades struct {
 	CurrentlyUpgrading *SkyBlockProfileCommunityUpgradesCurrentlyUpgrading `json:"currently_upgrading,omitempty"`
-	UpgradeStates      []SkyBlockProfileCommunityUpgradesUpgradeState      `json:"upgrade_states"`
+	UpgradeStates      []SkyBlockProfileCommunityUpgradesUpgradeState      `json:"upgrade_states,omitempty"`
 }
-
-type _SkyBlockProfileCommunityUpgrades SkyBlockProfileCommunityUpgrades
 
 // NewSkyBlockProfileCommunityUpgrades instantiates a new SkyBlockProfileCommunityUpgrades object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSkyBlockProfileCommunityUpgrades(upgradeStates []SkyBlockProfileCommunityUpgradesUpgradeState) *SkyBlockProfileCommunityUpgrades {
+func NewSkyBlockProfileCommunityUpgrades() *SkyBlockProfileCommunityUpgrades {
 	this := SkyBlockProfileCommunityUpgrades{}
-	this.UpgradeStates = upgradeStates
 	return &this
 }
 
@@ -77,26 +72,34 @@ func (o *SkyBlockProfileCommunityUpgrades) SetCurrentlyUpgrading(v SkyBlockProfi
 	o.CurrentlyUpgrading = &v
 }
 
-// GetUpgradeStates returns the UpgradeStates field value
+// GetUpgradeStates returns the UpgradeStates field value if set, zero value otherwise.
 func (o *SkyBlockProfileCommunityUpgrades) GetUpgradeStates() []SkyBlockProfileCommunityUpgradesUpgradeState {
-	if o == nil {
+	if o == nil || IsNil(o.UpgradeStates) {
 		var ret []SkyBlockProfileCommunityUpgradesUpgradeState
 		return ret
 	}
-
 	return o.UpgradeStates
 }
 
-// GetUpgradeStatesOk returns a tuple with the UpgradeStates field value
+// GetUpgradeStatesOk returns a tuple with the UpgradeStates field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SkyBlockProfileCommunityUpgrades) GetUpgradeStatesOk() ([]SkyBlockProfileCommunityUpgradesUpgradeState, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.UpgradeStates) {
 		return nil, false
 	}
 	return o.UpgradeStates, true
 }
 
-// SetUpgradeStates sets field value
+// HasUpgradeStates returns a boolean if a field has been set.
+func (o *SkyBlockProfileCommunityUpgrades) HasUpgradeStates() bool {
+	if o != nil && !IsNil(o.UpgradeStates) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpgradeStates gets a reference to the given []SkyBlockProfileCommunityUpgradesUpgradeState and assigns it to the UpgradeStates field.
 func (o *SkyBlockProfileCommunityUpgrades) SetUpgradeStates(v []SkyBlockProfileCommunityUpgradesUpgradeState) {
 	o.UpgradeStates = v
 }
@@ -114,45 +117,10 @@ func (o SkyBlockProfileCommunityUpgrades) ToMap() (map[string]interface{}, error
 	if !IsNil(o.CurrentlyUpgrading) {
 		toSerialize["currently_upgrading"] = o.CurrentlyUpgrading
 	}
-	toSerialize["upgrade_states"] = o.UpgradeStates
+	if !IsNil(o.UpgradeStates) {
+		toSerialize["upgrade_states"] = o.UpgradeStates
+	}
 	return toSerialize, nil
-}
-
-func (o *SkyBlockProfileCommunityUpgrades) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"upgrade_states",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err
-	}
-
-	for _, requiredProperty := range requiredProperties {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varSkyBlockProfileCommunityUpgrades := _SkyBlockProfileCommunityUpgrades{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varSkyBlockProfileCommunityUpgrades)
-
-	if err != nil {
-		return err
-	}
-
-	*o = SkyBlockProfileCommunityUpgrades(varSkyBlockProfileCommunityUpgrades)
-
-	return err
 }
 
 type NullableSkyBlockProfileCommunityUpgrades struct {

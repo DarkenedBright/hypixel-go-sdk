@@ -3,6 +3,8 @@
 ## Enum
 
 
+* `BACKWATER_BAYOU` (value: `"BACKWATER_BAYOU"`)
+
 * `CRIMSON_ISLE` (value: `"CRIMSON_ISLE"`)
 
 * `CRYSTAL_HOLLOWS` (value: `"CRYSTAL_HOLLOWS"`)

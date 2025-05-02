@@ -80,6 +80,7 @@ All URIs are relative to *https://api.hypixel.net*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PlayerDataAPI* | [**V2StatusGet**](docs/PlayerDataAPI.md#v2statusget) | **Get** /v2/status | The current online status of a specific player
+*SkyBlockAPI* | [**V2SkyblockMuseumGet**](docs/SkyBlockAPI.md#v2skyblockmuseumget) | **Get** /v2/skyblock/museum | Museum data by profile ID
 *SkyBlockAPI* | [**V2SkyblockNewsGet**](docs/SkyBlockAPI.md#v2skyblocknewsget) | **Get** /v2/skyblock/news | 
 *SkyBlockAPI* | [**V2SkyblockProfileGet**](docs/SkyBlockAPI.md#v2skyblockprofileget) | **Get** /v2/skyblock/profile | 
 *SkyBlockAPI* | [**V2SkyblockProfilesGet**](docs/SkyBlockAPI.md#v2skyblockprofilesget) | **Get** /v2/skyblock/profiles | 
@@ -91,6 +92,11 @@ Class | Method | HTTP request | Description
  - [InlineObject1](docs/InlineObject1.md)
  - [InlineObject2](docs/InlineObject2.md)
  - [InlineObject3](docs/InlineObject3.md)
+ - [SkyBlockMuseum](docs/SkyBlockMuseum.md)
+ - [SkyBlockMuseumMember](docs/SkyBlockMuseumMember.md)
+ - [SkyBlockMuseumMemberItem](docs/SkyBlockMuseumMemberItem.md)
+ - [SkyBlockMuseumMemberItemFeaturedSlot](docs/SkyBlockMuseumMemberItemFeaturedSlot.md)
+ - [SkyBlockMuseumMemberItems](docs/SkyBlockMuseumMemberItems.md)
  - [SkyBlockNews](docs/SkyBlockNews.md)
  - [SkyBlockNewsElement](docs/SkyBlockNewsElement.md)
  - [SkyBlockNewsElementItem](docs/SkyBlockNewsElementItem.md)
@@ -388,10 +394,10 @@ Class | Method | HTTP request | Description
  - [SkyBlockProfilesGet](docs/SkyBlockProfilesGet.md)
  - [Status](docs/Status.md)
  - [StatusSession](docs/StatusSession.md)
- - [V2SkyblockNewsGet403Response](docs/V2SkyblockNewsGet403Response.md)
- - [V2SkyblockNewsGet429Response](docs/V2SkyblockNewsGet429Response.md)
+ - [V2SkyblockMuseumGet403Response](docs/V2SkyblockMuseumGet403Response.md)
+ - [V2SkyblockMuseumGet422Response](docs/V2SkyblockMuseumGet422Response.md)
+ - [V2SkyblockMuseumGet429Response](docs/V2SkyblockMuseumGet429Response.md)
  - [V2SkyblockProfileGet400Response](docs/V2SkyblockProfileGet400Response.md)
- - [V2SkyblockProfileGet422Response](docs/V2SkyblockProfileGet422Response.md)
 
 
 ## Documentation For Authorization

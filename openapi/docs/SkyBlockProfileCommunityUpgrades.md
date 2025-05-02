@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CurrentlyUpgrading** | Pointer to [**SkyBlockProfileCommunityUpgradesCurrentlyUpgrading**](SkyBlockProfileCommunityUpgradesCurrentlyUpgrading.md) |  | [optional] 
-**UpgradeStates** | [**[]SkyBlockProfileCommunityUpgradesUpgradeState**](SkyBlockProfileCommunityUpgradesUpgradeState.md) |  | 
+**UpgradeStates** | Pointer to [**[]SkyBlockProfileCommunityUpgradesUpgradeState**](SkyBlockProfileCommunityUpgradesUpgradeState.md) |  | [optional] 
 
 ## Methods
 
 ### NewSkyBlockProfileCommunityUpgrades
 
-`func NewSkyBlockProfileCommunityUpgrades(upgradeStates []SkyBlockProfileCommunityUpgradesUpgradeState, ) *SkyBlockProfileCommunityUpgrades`
+`func NewSkyBlockProfileCommunityUpgrades() *SkyBlockProfileCommunityUpgrades`
 
 NewSkyBlockProfileCommunityUpgrades instantiates a new SkyBlockProfileCommunityUpgrades object
 This constructor will assign default values to properties that have it defined,
@@ -70,6 +70,11 @@ and a boolean to check if the value has been set.
 
 SetUpgradeStates sets UpgradeStates field to given value.
 
+### HasUpgradeStates
+
+`func (o *SkyBlockProfileCommunityUpgrades) HasUpgradeStates() bool`
+
+HasUpgradeStates returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

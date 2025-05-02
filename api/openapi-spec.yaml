@@ -112,6 +112,12 @@ components:
                 type: boolean
             type: object
       description: A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle.
+    SkyBlockMuseumGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockMuseum'
+      description: A successful response
     SkyBlockNewsGet:
       content:
         application/json:
@@ -137,6 +143,1169 @@ components:
             $ref: '#/components/schemas/Status'
       description: Get player status
   schemas:
+    SkyBlockMuseum:
+      additionalProperties: false
+      properties:
+        members:
+          $ref: '#/components/schemas/SkyBlockMuseumMembers'
+        success:
+          type: boolean
+      required:
+        - members
+        - success
+      type: object
+    SkyBlockMuseumMember:
+      additionalProperties: false
+      properties:
+        appraisal:
+          type: boolean
+        items:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItems'
+        special:
+          items:
+            $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+          type: array
+        value:
+          type: integer
+      required:
+        - appraisal
+        - items
+        - value
+      type: object
+    SkyBlockMuseumMemberItem:
+      additionalProperties: false
+      properties:
+        borrowing:
+          type: boolean
+        donated_time:
+          type: integer
+        featured_slot:
+          enum:
+            - armor_sets:0
+            - armor_sets:1
+            - armor_sets:10
+            - armor_sets:11
+            - armor_sets:12
+            - armor_sets:13
+            - armor_sets:14
+            - armor_sets:15
+            - armor_sets:16
+            - armor_sets:17
+            - armor_sets:18
+            - armor_sets:19
+            - armor_sets:2
+            - armor_sets:20
+            - armor_sets:21
+            - armor_sets:22
+            - armor_sets:23
+            - armor_sets:24
+            - armor_sets:3
+            - armor_sets:4
+            - armor_sets:5
+            - armor_sets:6
+            - armor_sets:7
+            - armor_sets:8
+            - armor_sets:9
+            - items:0
+            - items:1
+            - items:10
+            - items:11
+            - items:12
+            - items:13
+            - items:14
+            - items:15
+            - items:2
+            - items:3
+            - items:4
+            - items:5
+            - items:6
+            - items:7
+            - items:8
+            - items:9
+            - rarities:0
+            - rarities:1
+            - rarities:10
+            - rarities:11
+            - rarities:12
+            - rarities:13
+            - rarities:14
+            - rarities:15
+            - rarities:16
+            - rarities:17
+            - rarities:18
+            - rarities:19
+            - rarities:2
+            - rarities:20
+            - rarities:21
+            - rarities:3
+            - rarities:4
+            - rarities:5
+            - rarities:6
+            - rarities:7
+            - rarities:8
+            - rarities:9
+            - weapons:0
+            - weapons:1
+            - weapons:10
+            - weapons:11
+            - weapons:12
+            - weapons:13
+            - weapons:14
+            - weapons:15
+            - weapons:16
+            - weapons:17
+            - weapons:18
+            - weapons:19
+            - weapons:2
+            - weapons:20
+            - weapons:3
+            - weapons:4
+            - weapons:5
+            - weapons:6
+            - weapons:7
+            - weapons:8
+            - weapons:9
+          type: string
+        items:
+          $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
+      required:
+        - donated_time
+        - items
+      type: object
+    SkyBlockMuseumMemberItems:
+      additionalProperties: false
+      properties:
+        ADAPTIVE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ADVANCED_GARDENING_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ADVANCED_GARDENING_HOE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ALCHEMISTS_STAFF:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ALERT_FLARE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ANCIENT_CLOAK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ANGLER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ANNIHILATION_CLOAK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ARACHNE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ARACK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ARMADILLO_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ARMOR_OF_MAGMA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ARMOR_OF_THE_PACK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ARMOR_OF_YOG:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ARTISANAL_SHORTBOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ASPECT_OF_THE_DRAGON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ASPECT_OF_THE_END:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ASPECT_OF_THE_JERRY:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ASPECT_OF_THE_VOID:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ASTRAEA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ATOMSPLIT_KATANA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        AUGER_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        AURORA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        AXE_OF_THE_SHREDDED:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BACKWATER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BALLOON_SNAKE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BANDAGED_MITHRIL_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BASIC_GARDENING_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BASIC_GARDENING_HOE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BAT_PERSON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BAT_WAND:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BEE_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BERSERKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BIOHAZARD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BLADE_OF_THE_VOLCANO:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BLAZE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BLAZETEKK_HAM_RADIO:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BLOBFISH_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BONE_BOOMERANG:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BONE_NECKLACE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BONE_REAVER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BONZO_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BONZO_STAFF:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BOUNCY:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BOUQUET_OF_LIES:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BRONZE_HUNTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BURSTFIRE_DAGGER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        BURSTMAW_DAGGER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CACTUS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CACTUS_KNIFE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CELESTE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CELESTE_WAND:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CHALLENGE_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CHAMP_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CHEAP_TUXEDO:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CHICKEN_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CHUM_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CHUM_SINKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CLEAVER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CLOWNFISH_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        COCO_CHOPPER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        COMMON_HOOK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CONJURING_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        COW_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CREEPER_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CRIMSON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CRIMSON_HUNTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CROPIE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CROWN_OF_AVARICE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CROWN_OF_GREED:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CRYPT_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CRYPT_DREADLORD_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CRYSTAL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        CRYSTALLIZED_HEART:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DAEDALUS_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DARK_CLAYMORE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DARK_GOGGLES:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DEATH_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DECENT_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DELIRIUM_NECKLACE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DEMONLORD_GAUNTLET:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DESTRUCTION_CLOAK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIAMOND_BONZO_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIAMOND_HUNTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIAMOND_LIVID_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIAMOND_NECRON_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIAMOND_PROFESSOR_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIAMOND_SADAN_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIAMOND_SCARF_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIAMOND_THORN_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIVAN:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIVAN_DRILL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIVAN_PENDANT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DIVER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DOJO_BLACK_BELT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DOJO_BLUE_BELT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DOJO_BROWN_BELT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DOJO_GREEN_BELT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DOJO_WHITE_BELT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DOJO_YELLOW_BELT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DRAGONFADE_CLOAK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DRAGONFUSE_GLOVE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DRAGON_SHORTBOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        DWARVEN_HANDWARMERS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        EARTH_SHARD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        EDIBLE_MACE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        EFFICIENT_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ELEANOR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ELEGANT_TUXEDO:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        EMBER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        EMERALD_ARMOR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        EMERALD_BLADE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ENCHANTED_JACK_O_LANTERN:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ENCHANTED_TIME_CLOCK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        END:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ENDERMAN_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ENDER_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        END_STONE_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        END_STONE_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        END_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        EXPLOSIVE_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FAIRY:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FALLEN_STAR_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FANCY_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FANCY_TUXEDO:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FARMER_BOOTS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FARMER_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FARM_ARMOR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FARM_SUIT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FELTHORN_REAPER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FEL_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FERMENTO:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FERVOR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FESTIVE_SINKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FINAL_DESTINATION:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FINWAVE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FIREDUST_DAGGER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FIRE_FREEZE_STAFF:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FIRE_FURY_STAFF:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FIRE_VEIL_WAND:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FISHERMAN:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FISH_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FLAME_BREAKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FLAMING_FIST:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FLAMING_FLAY:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FLAMING_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FLINT_SHOVEL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FLORID_ZOMBIE_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FLOWER_OF_TRUTH:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FRACTURED_MITHRIL_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FROG_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FROZEN_AMULET:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FROZEN_BLAZE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FROZEN_SCYTHE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        FUNGI_CUTTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GARDEN_SCYTHE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GAUNTLET_OF_CONTAGION:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GEMSTONE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GEMSTONE_DRILL_1:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GEMSTONE_DRILL_2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GEMSTONE_DRILL_3:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GEMSTONE_DRILL_4:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GEMSTONE_GAUNTLET:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GHOST_BOOTS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GHOUL_BUSTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GIANTS_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GIANT_CLEAVER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GILLSPLASH:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GLACIAL_SCYTHE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GLACITE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GLACITE_CHISEL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GLOOMLOCK_GRIMOIRE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GLOSSY_MINERAL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOBLIN:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOLD_BONZO_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOLD_HUNTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOLD_LIVID_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOLD_NECRON_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOLD_PROFESSOR_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOLD_SADAN_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOLD_SCARF_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOLD_THORN_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOLEM_ARMOR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GOLEM_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GROWTH:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        GYROKINETIC_WAND:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HARDENED_DIAMOND:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HEARTFIRE_DAGGER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HEARTMAW_DAGGER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HEAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HEAVY:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HELLFIRE_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HOLLOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HOLLOW_WAND:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HOLY_DRAGON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HOTSPOT_HOOK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HOTSPOT_RADAR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HOTSPOT_SINKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HUNTER_KNIFE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HURRICANE_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HYPERION:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        HYPER_CLEAVER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ICE_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ICE_SPRAY_WAND:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ICHTHYIC:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ICY_SINKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        IMPLOSION_BELT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        INFERNO_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        INFINI_VACUUM:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        INFINI_VACUUM_HOOVERIUS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        INK_WAND:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ITEM_SPIRIT_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        JERRY_STAFF:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        JUJU_SHORTBOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        JUNGLE_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        JUNGLE_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        JUNK_SINKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        KALHUIKI_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        KRAMPUS_HELMET:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LAPIS_ARMOR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LAPIS_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LAST_BREATH:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LAVA_SEA_CREATURE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LAVA_SHELL_NECKLACE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LEAFLET:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LEAPING_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LEGEND_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LIVID_DAGGER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LOTUS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        LUMINOUS_BRACELET:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MACHINE_GUN_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MAGMA_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MAGMA_FISH_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MAGMA_LORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MAGMA_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MANA_FLUX_POWER_ORB:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MASTIFF:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MAWDUST_DAGGER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MELON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MELON_DICER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MELON_DICER_2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MELON_DICER_3:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MENDER_CROWN:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MENDER_FEDORA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MENDER_HELMET:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MERCENARY:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MERCENARY_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        METAL_CHESTPLATE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MIDAS_STAFF:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MIDAS_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MINERAL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MINER_OUTFIT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MITHRIL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MITHRIL_COAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MITHRIL_DRILL_1:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MITHRIL_DRILL_2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MITHRIL_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MOLTEN:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MONSTER_HUNTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MONSTER_RAIDER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MOSQUITO_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MUSHROOM:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        MUSIC_PANTS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        NECROMANCER_LORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        NECROMANCER_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        NECRON_BLADE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        NUTCRACKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        OBSIDIAN_CHESTPLATE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        OLD_DRAGON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ORNATE_ZOMBIE_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        OVERFLUX_POWER_ORB:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PARROT_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PARTY:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PELT_BELT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PERFECT_CHISEL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PERFECT_TIER_12:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PERFECT_TIER_13:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PESTHUNTERS_BELT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PESTHUNTERS_CLOAK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PESTHUNTERS_GLOVES:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PESTHUNTERS_NECKLACE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PEST_VEST:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PHANTOM_HOOK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PHANTOM_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PIGMAN_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PLASMAFLUX_POWER_ORB:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        POLISHED_TOPAZ_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        POOCH_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        POWER_WITHER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PRECURSOR_EYE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PRISMARINE_BLADE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PRISMARINE_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PRISMARINE_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PRISMARINE_SINKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PROMISING_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PROMISING_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PROMISING_SPADE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PROTECTOR_DRAGON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PUFFERFISH_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PUMPKIN:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PUMPKIN_DICER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PUMPKIN_DICER_2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PUMPKIN_DICER_3:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        PUMPKIN_LAUNCHER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RABBIT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RABBIT_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RADIANT_POWER_ORB:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RAGNAROCK_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RAIDER_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RAMPART:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RANCHERS_BOOTS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REAPER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REAPER_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REAPER_SCYTHE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REAPER_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RECLUSE_FANG:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REFINED_MITHRIL_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REFINED_TITANIUM_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REINFORCED_CHISEL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REKINDLED_EMBER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REVENANT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REVENANT_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        REVIVED_HEART:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RIFT_NECKLACE_OUTSIDE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ROD_OF_THE_SEA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ROGUE_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ROOKIE_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ROOKIE_HOE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ROOKIE_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ROSETTA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ROTTEN:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RUNAANS_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RUNIC_STAFF:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        RUSTY_TITANIUM_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SALMON_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SALMON_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SALMON_NEW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SAM_SCYTHE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SAVANA_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SCORPION_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SCORPION_FOIL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SCOURGE_CLOAK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SCOVILLE_BELT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SCULPTORS_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SCYLLA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SEYMOUR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SHADOW_ASSASSIN:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SHADOW_FURY:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SHADOW_GOGGLES:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SHAMAN_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SHARK_SCALE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SHIMMERING_LIGHT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SHREDDED_LINE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SILENT_DEATH:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SILK_EDGE_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SILVER_FANG:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SILVER_HUNTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SINSEEKER_SCYTHE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SKELETON_GRUNT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SKELETON_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SKELETON_LORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SKELETON_MASTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SKELETON_SOLDIER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SKELETOR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SKYMART_HYPER_VACUUM:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SKYMART_TURBO_VACUUM:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SKYMART_VACUUM:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SLIME_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SLIME_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SNIPER_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SNIPER_HELMET:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SNOWMAN_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SNOW_BLASTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SNOW_CANNON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SNOW_HOWITZER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SNOW_SUIT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SORROW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SOS_FLARE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SOULS_REBOUND:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SOULWEAVER_GLOVES:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SOUL_ESOWARD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SOUL_WHIP:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPEEDSTER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPEEDSTER_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPEEDY_LINE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPEED_WITHER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPIDER_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPIDER_QUEENS_STINGER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPIDER_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPIRIT_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPIRIT_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPONGE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPONGE_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPONGE_SINKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPOOKY:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SPRAYONATOR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SQUASH:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SQUEAKY_MOUSEMAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SQUID_BOOTS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SQUID_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SQUIRE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SQUIRE_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        STAFF_OF_THE_VOLCANO:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        STARLIGHT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        STARLIGHT_WAND:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        STARTER_LAVA_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        STEEL_CHESTPLATE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        STINGY_SINKER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        STONE_BLADE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        STONE_CHESTPLATE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        STONK_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        STRONG_DRAGON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SULPHUR_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SUMMONING_RING:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SUPERIOR_DRAGON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SUPER_CLEAVER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SUPER_COMPACTOR_3000:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SUPER_HEAVY:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SUPER_UNDEAD_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SWEET_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SWORD_OF_BAD_HEALTH:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SWORD_OF_REVELATIONS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SYNTHESIZER_V1:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SYNTHESIZER_V2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        SYNTHESIZER_V3:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TACTICAL_INSERTION:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TACTICIAN_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TANK_MINER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TANK_WITHER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TARANTULA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TERA_SHELL_NECKLACE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TERMINATOR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TERROR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_CANE_1:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_CANE_2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_CANE_3:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_CARROT_1:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_CARROT_2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_CARROT_3:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_POTATO_1:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_POTATO_2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_POTATO_3:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_WARTS_1:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_WARTS_2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_WARTS_3:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_WHEAT_1:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_WHEAT_2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THEORETICAL_HOE_WHEAT_3:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THE_SHREDDER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THORNS_BOOTS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        THUNDER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TIKI_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TITANIUM:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TITANIUM_DRILL_1:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TITANIUM_DRILL_2:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TITANIUM_DRILL_3:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TITANIUM_DRILL_4:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TITANIUM_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TITAN_LINE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TREASURE_HOOK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TREECAPITATOR_AXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        TRIBAL_SPEAR:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        UMBERELLA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        UNDEAD_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        UNDEAD_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        UNSTABLE_DRAGON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VALKYRIE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VAMPIRE_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VAMPIRE_WITCH_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VANQUISHED:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VENOMS_TOUCH:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VOIDEDGE_KATANA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VOIDWALKER_KATANA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VOID_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VOODOO_DOLL:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VOODOO_DOLL_WILTED:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        VORPAL_KATANA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WAND_OF_ATONEMENT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WAND_OF_HEALING:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WAND_OF_MENDING:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WAND_OF_RESTORATION:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WAND_OF_STRENGTH:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WARDEN_HELMET:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WARNING_FLARE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WATER_HYDRA_HEAD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WEIRDER_TUBA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WEIRD_TUBA:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WEREWOLF:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WINTER_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WISE_DRAGON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WISE_WITHER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WITCH_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WITHER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WITHER_BOW:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WITHER_CLOAK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        WITHER_GOGGLES:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        YETI_ROD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        YETI_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        YOUNG_DRAGON:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_COMMANDER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_COMMANDER_WHIP:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_HAT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_HEART:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_KNIGHT:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_KNIGHT_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_LORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_MASK:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_PICKAXE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_SOLDIER:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_SOLDIER_CUTLASS:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZOMBIE_SWORD:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+        ZORROS_CAPE:
+          $ref: '#/components/schemas/SkyBlockMuseumMemberItem'
+      type: object
+    SkyBlockMuseumMembers:
+      additionalProperties:
+        $ref: '#/components/schemas/SkyBlockMuseumMember'
+      type: object
     SkyBlockNews:
       additionalProperties: false
       properties:
@@ -269,8 +1438,6 @@ components:
           items:
             $ref: '#/components/schemas/SkyBlockProfileCommunityUpgradesUpgradeState'
           type: array
-      required:
-        - upgrade_states
       type: object
     SkyBlockProfileCommunityUpgradesCurrentlyUpgrading:
       additionalProperties: false
@@ -1066,6 +2233,7 @@ components:
           $ref: '#/components/schemas/SkyBlockProfileMemberEventsEasterRabbitHitmen'
         rabbit_hotspot_filer:
           enum:
+            - BACKWATER_BAYOU
             - CRIMSON_ISLE
             - CRYSTAL_HOLLOWS
             - DEEP_CAVERNS
@@ -1603,7 +2771,6 @@ components:
           type: boolean
         oldItem:
           $ref: '#/components/schemas/SkyBlockProfileMemberInventoryBase64GzipData'
-          nullable: true
         processTimeModifier:
           type: integer
         slot:
@@ -9689,6 +10856,29 @@ info:
     url: https://api.hypixel.net/assets/images/logo.png
 openapi: 3.0.3
 paths:
+  /v2/skyblock/museum:
+    get:
+      description: SkyBlock museum data for all members of the provided profile. The data returned can differ depending on the players in-game API settings.
+      parameters:
+        - in: query
+          name: profile
+          schema:
+            format: uuid
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/SkyBlockMuseumGet'
+        '403':
+          $ref: '#/components/responses/InvalidKey'
+        '422':
+          $ref: '#/components/responses/MalformedData'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+      security:
+        - ApiKey: [ ]
+      summary: Museum data by profile ID
+      tags:
+        - SkyBlock
   /v2/skyblock/news:
     get:
       responses:
@@ -9699,7 +10889,7 @@ paths:
         '429':
           $ref: '#/components/responses/RateLimited'
       security:
-        - ApiKey: []
+        - ApiKey: [ ]
       tags:
         - SkyBlock
   /v2/skyblock/profile:
@@ -9722,7 +10912,7 @@ paths:
         '429':
           $ref: '#/components/responses/RateLimited'
       security:
-        - ApiKey: []
+        - ApiKey: [ ]
       tags:
         - SkyBlock
   /v2/skyblock/profiles:
@@ -9745,7 +10935,7 @@ paths:
         '429':
           $ref: '#/components/responses/RateLimited'
       security:
-        - ApiKey: []
+        - ApiKey: [ ]
       tags:
         - SkyBlock
   /v2/status:
@@ -9766,7 +10956,7 @@ paths:
         '429':
           $ref: '#/components/responses/RateLimited'
       security:
-        - ApiKey: []
+        - ApiKey: [ ]
       summary: The current online status of a specific player
       tags:
         - Player Data

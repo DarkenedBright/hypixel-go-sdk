@@ -20,6 +20,7 @@ type SkyBlockProfileMemberEventsEasterRabbitHotspotFiler string
 
 // List of SkyBlockProfileMemberEventsEaster_rabbit_hotspot_filer
 const (
+	SKYBLOCKPROFILEMEMBEREVENTSEASTERRABBITHOTSPOTFILER_BACKWATER_BAYOU SkyBlockProfileMemberEventsEasterRabbitHotspotFiler = "BACKWATER_BAYOU"
 	SKYBLOCKPROFILEMEMBEREVENTSEASTERRABBITHOTSPOTFILER_CRIMSON_ISLE    SkyBlockProfileMemberEventsEasterRabbitHotspotFiler = "CRIMSON_ISLE"
 	SKYBLOCKPROFILEMEMBEREVENTSEASTERRABBITHOTSPOTFILER_CRYSTAL_HOLLOWS SkyBlockProfileMemberEventsEasterRabbitHotspotFiler = "CRYSTAL_HOLLOWS"
 	SKYBLOCKPROFILEMEMBEREVENTSEASTERRABBITHOTSPOTFILER_DEEP_CAVERNS    SkyBlockProfileMemberEventsEasterRabbitHotspotFiler = "DEEP_CAVERNS"
@@ -35,6 +36,7 @@ const (
 
 // All allowed values of SkyBlockProfileMemberEventsEasterRabbitHotspotFiler enum
 var AllowedSkyBlockProfileMemberEventsEasterRabbitHotspotFilerEnumValues = []SkyBlockProfileMemberEventsEasterRabbitHotspotFiler{
+	"BACKWATER_BAYOU",
 	"CRIMSON_ISLE",
 	"CRYSTAL_HOLLOWS",
 	"DEEP_CAVERNS",
