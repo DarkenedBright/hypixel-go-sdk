@@ -112,6 +112,12 @@ components:
                 type: boolean
             type: object
       description: A request limit has been reached, usually this is due to the limit on the key being reached but can also be triggered by a global throttle.
+    SkyBlockAuctionsEndedGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SkyBlockAuctionsEnded'
+      description: A successful response
     SkyBlockBazaarGet:
       content:
         application/json:
@@ -180,6 +186,59 @@ components:
             $ref: '#/components/schemas/Status'
       description: Get player status
   schemas:
+    SkyBlockAuctionsEnded:
+      additionalProperties: false
+      properties:
+        auctions:
+          items:
+            $ref: '#/components/schemas/SkyBlockAuctionsEndedAuction'
+          type: array
+        lastUpdated:
+          type: integer
+        success:
+          type: boolean
+      required:
+        - auctions
+        - lastUpdated
+        - success
+      type: object
+    SkyBlockAuctionsEndedAuction:
+      additionalProperties: false
+      properties:
+        auction_id:
+          format: uuid
+          type: string
+        bin:
+          type: boolean
+        buyer:
+          format: uuid
+          type: string
+        buyer_profile:
+          format: uuid
+          type: string
+        item_bytes:
+          type: string
+        price:
+          type: integer
+        seller:
+          format: uuid
+          type: string
+        seller_profile:
+          format: uuid
+          type: string
+        timestamp:
+          type: integer
+      required:
+        - auction_id
+        - bin
+        - buyer
+        - buyer_profile
+        - item_bytes
+        - price
+        - seller
+        - seller_profile
+        - timestamp
+      type: object
     SkyBlockBazaar:
       additionalProperties: false
       properties:
@@ -17650,6 +17709,15 @@ info:
     url: https://api.hypixel.net/assets/images/logo.png
 openapi: 3.0.3
 paths:
+  /v2/skyblock/auctions_ended:
+    get:
+      description: SkyBlock auctions which ended in the last 60 seconds.
+      responses:
+        '200':
+          $ref: '#/components/responses/SkyBlockAuctionsEndedGet'
+      summary: Recently ended auctions
+      tags:
+        - SkyBlock
   /v2/skyblock/bazaar:
     get:
       responses:

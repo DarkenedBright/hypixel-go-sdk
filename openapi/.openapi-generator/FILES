@@ -11,6 +11,8 @@ docs/InlineObject.md
 docs/InlineObject1.md
 docs/PlayerDataAPI.md
 docs/SkyBlockAPI.md
+docs/SkyBlockAuctionsEnded.md
+docs/SkyBlockAuctionsEndedAuction.md
 docs/SkyBlockBazaar.md
 docs/SkyBlockBazaarProductId.md
 docs/SkyBlockBazaarProducts.md
@@ -360,6 +362,8 @@ model__v2_skyblock_bingo_get_429_response.go
 model__v2_skyblock_garden_get_404_response.go
 model_inline_object.go
 model_inline_object_1.go
+model_sky_block_auctions_ended.go
+model_sky_block_auctions_ended_auction.go
 model_sky_block_bazaar.go
 model_sky_block_bazaar_product_id.go
 model_sky_block_bazaar_products.go

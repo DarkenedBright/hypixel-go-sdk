@@ -80,6 +80,7 @@ All URIs are relative to *https://api.hypixel.net*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PlayerDataAPI* | [**V2StatusGet**](docs/PlayerDataAPI.md#v2statusget) | **Get** /v2/status | The current online status of a specific player
+*SkyBlockAPI* | [**V2SkyblockAuctionsEndedGet**](docs/SkyBlockAPI.md#v2skyblockauctionsendedget) | **Get** /v2/skyblock/auctions_ended | Recently ended auctions
 *SkyBlockAPI* | [**V2SkyblockBazaarGet**](docs/SkyBlockAPI.md#v2skyblockbazaarget) | **Get** /v2/skyblock/bazaar | Bazaar
 *SkyBlockAPI* | [**V2SkyblockBingoGet**](docs/SkyBlockAPI.md#v2skyblockbingoget) | **Get** /v2/skyblock/bingo | Bingo data by player
 *SkyBlockAPI* | [**V2SkyblockFiresalesGet**](docs/SkyBlockAPI.md#v2skyblockfiresalesget) | **Get** /v2/skyblock/firesales | Active/Upcoming Fire Sales
@@ -94,6 +95,8 @@ Class | Method | HTTP request | Description
 
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)
+ - [SkyBlockAuctionsEnded](docs/SkyBlockAuctionsEnded.md)
+ - [SkyBlockAuctionsEndedAuction](docs/SkyBlockAuctionsEndedAuction.md)
  - [SkyBlockBazaar](docs/SkyBlockBazaar.md)
  - [SkyBlockBazaarProductId](docs/SkyBlockBazaarProductId.md)
  - [SkyBlockBazaarProducts](docs/SkyBlockBazaarProducts.md)
