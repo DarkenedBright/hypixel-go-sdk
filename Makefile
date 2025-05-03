@@ -23,6 +23,7 @@ generate:
 		--type-mappings=integer=int64,number=float64 \
 		--additional-properties=enumClassPrefix=true,useOneOfDiscriminatorLookup=true,withGoMod=false \
 		--inline-schema-options RESOLVE_INLINE_ENUMS=true \
+		--name-mappings LOG:2=LOG_COLON_2,LOG_2=LOG_UNDERSCORE_2 \
 		--output openapi \
 		> /dev/null; then \
 			echo " SUCCESS"; \

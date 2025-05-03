@@ -9,9 +9,14 @@ client.go
 configuration.go
 docs/InlineObject.md
 docs/InlineObject1.md
-docs/InlineObject2.md
 docs/PlayerDataAPI.md
 docs/SkyBlockAPI.md
+docs/SkyBlockBazaar.md
+docs/SkyBlockBazaarProductId.md
+docs/SkyBlockBazaarProducts.md
+docs/SkyBlockBazaarProductsProduct.md
+docs/SkyBlockBazaarProductsProductQuickStatus.md
+docs/SkyBlockBazaarProductsProductSummary.md
 docs/SkyBlockBingo.md
 docs/SkyBlockBingoEvent.md
 docs/SkyBlockBingoEventCompletedGoalsInner.md
@@ -338,6 +343,7 @@ docs/SkyBlockProfileMemberWinterPlayerData.md
 docs/SkyBlockProfilesGet.md
 docs/Status.md
 docs/StatusSession.md
+docs/V2SkyblockBazaarGet503Response.md
 docs/V2SkyblockBingoGet400Response.md
 docs/V2SkyblockBingoGet403Response.md
 docs/V2SkyblockBingoGet404Response.md
@@ -345,6 +351,7 @@ docs/V2SkyblockBingoGet422Response.md
 docs/V2SkyblockBingoGet429Response.md
 docs/V2SkyblockGardenGet404Response.md
 git_push.sh
+model__v2_skyblock_bazaar_get_503_response.go
 model__v2_skyblock_bingo_get_400_response.go
 model__v2_skyblock_bingo_get_403_response.go
 model__v2_skyblock_bingo_get_404_response.go
@@ -353,7 +360,12 @@ model__v2_skyblock_bingo_get_429_response.go
 model__v2_skyblock_garden_get_404_response.go
 model_inline_object.go
 model_inline_object_1.go
-model_inline_object_2.go
+model_sky_block_bazaar.go
+model_sky_block_bazaar_product_id.go
+model_sky_block_bazaar_products.go
+model_sky_block_bazaar_products_product.go
+model_sky_block_bazaar_products_product_quick_status.go
+model_sky_block_bazaar_products_product_summary.go
 model_sky_block_bingo.go
 model_sky_block_bingo_event.go
 model_sky_block_bingo_event_completed_goals_inner.go
